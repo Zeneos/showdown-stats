@@ -1,0 +1,142 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This project is a **Pokemon Showdown stats visualizer website** that will be hosted on GitHub Pages. The application downloads battle statistics from Smogon's public stats repository, processes the data, and presents it through a web interface.
+
+## Data Pipeline Architecture
+
+### Data Source
+- Primary source: `https://www.smogon.com/stats`
+- Data format: `.gz` compressed files containing battle statistics
+- Data structure: Navigate to newest data directory → `/chaos` subdirectory
+
+### Data Collection Workflow
+1. Scrape `https://www.smogon.com/stats` to identify the most recent stats period
+2. Navigate to the `/chaos` subdirectory for that period
+3. Download all `.gz` files from the chaos directory
+4. Extract relevant statistics from each file
+
+### Data Storage
+One SQLite database file per stats period (e.g., `data/2024-01.db`, `data/2024-02.db`) with schema:
+```sql
+CREATE TABLE formats (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,              -- e.g., "gen9ou"
+    num_battles INTEGER NOT NULL,
+    rating_threshold INTEGER NOT NULL,  -- e.g., 1500
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(name, rating_threshold)
+)
+```
+
+**Key design decisions:**
+- Separate database per time period for easier management and GitHub Pages deployment
+- Filename format is `[name]-[rating].json.gz` (e.g., "gen9ou-1500.json.gz")
+- `name` alone is not unique (same format can have multiple rating thresholds)
+- `(name, rating_threshold)` combination is unique within a period
+
+Downloaded `.gz` files are stored in `data/raw/`
+
+## Module Structure
+
+The project is organized into modular Python scripts in the `src/` directory:
+
+### src/scraper.py
+- `get_newest_stats_directory()`: Scrapes smogon.com/stats to find the most recent stats period
+- `get_chaos_files_list(stats_directory_url)`: Returns list of all .gz file URLs in the /chaos subdirectory
+
+### src/downloader.py
+- `download_gz_file(url, output_dir)`: Downloads a single .gz file
+- `download_all_files(file_urls, output_dir)`: Downloads multiple files with progress tracking
+
+### src/parser.py
+- `parse_gz_file(file_path)`: Decompresses .gz and parses JSON content
+- `extract_battle_count(data)`: Extracts "number of battles" from parsed data (handles various field name formats)
+- `parse_file_for_battles(file_path)`: Convenience function combining decompression and extraction
+
+### src/database.py
+- `StatsDatabase`: SQLite database class for managing battle statistics for a single time period
+- Key methods:
+  - `insert_stat(format_name, num_battles, rating_threshold)`: Insert/update a format's stats
+  - `get_all_stats()`: Retrieve all format statistics
+  - `get_stat_by_format(format_name, rating_threshold)`: Query specific format
+  - `get_total_battles()`: Sum of all battles in this period
+  - `get_formats_list()`: List of unique format names
+- `get_db_path_for_period(period)`: Helper to generate period-based database paths
+- `parse_filename_metadata(filename)`: Extract format name and rating from filename
+
+### main.py
+Orchestrates the full monthly update pipeline:
+1. Find newest stats directory (e.g., "2024-01")
+2. Get list of .gz files from /chaos
+3. Download all files to `data/raw/`
+4. Parse each file and extract battle counts
+5. Store results in period-specific SQLite database (e.g., `data/2024-01.db`)
+
+### notebook.ipynb
+Experimental notebook for testing and exploration (not used in production pipeline)
+
+## Dependencies
+
+Install dependencies with:
+```bash
+pip install -r requirements.txt
+```
+
+Required packages:
+- `requests` - HTTP library for downloading files
+- `beautifulsoup4` - HTML parsing for scraping directory listings
+
+Built-in modules used:
+- `gzip` - Decompressing .gz files
+- `json` - Parsing stats data
+- `sqlite3` - Database management
+
+## Development Commands
+
+### Monthly Data Update
+Run the full pipeline to download and process the latest stats:
+```bash
+python main.py
+```
+
+This will:
+- Download all .gz files from the newest stats period
+- Extract battle counts
+- Create/update a period-specific SQLite database (e.g., `data/2024-01.db`)
+
+### Testing Individual Components
+
+Test the scraper:
+```bash
+python src/scraper.py
+```
+
+Test the parser on a specific file:
+```bash
+python src/parser.py data/raw/gen9ou-1500.json.gz
+```
+
+Test the database:
+```bash
+python src/database.py
+```
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+## Architecture Notes
+
+The project follows a typical ETL (Extract, Transform, Load) pattern:
+1. **Extract**: Download `.gz` files from Smogon stats
+2. **Transform**: Parse stat files and extract relevant metrics
+3. **Load**: Store in local database and generate static visualizations
+4. **Deploy**: Publish static site to GitHub Pages
+
+Since GitHub Pages serves static content, the final output should be pre-generated HTML/CSS/JS files with embedded or linked JSON data files.
