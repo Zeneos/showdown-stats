@@ -7,6 +7,7 @@ import os
 import requests
 from pathlib import Path
 from typing import Optional
+from tqdm import tqdm
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -48,7 +49,7 @@ def download_gz_file(url: str, output_dir: str = "data") -> Optional[str]:
 
 def download_all_files(file_urls: list[str], output_dir: str = "data") -> list[str]:
     """
-    Downloads multiple .gz files.
+    Downloads multiple .gz files with progress bar.
 
     Args:
         file_urls: List of URLs to download
@@ -61,8 +62,8 @@ def download_all_files(file_urls: list[str], output_dir: str = "data") -> list[s
 
     logger.debug(f"Starting download of {len(file_urls)} files...")
 
-    for i, url in enumerate(file_urls, 1):
-        logger.debug(f"[{i}/{len(file_urls)}] Downloading {url}")
+    # Use tqdm for progress bar
+    for url in tqdm(file_urls, desc="Downloading files", unit="file"):
         file_path = download_gz_file(url, output_dir)
         if file_path:
             downloaded_files.append(file_path)
