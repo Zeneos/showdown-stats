@@ -9,6 +9,7 @@ from src.scraper import get_newest_stats_directory, get_chaos_files_list
 from src.downloader import download_all_files
 from src.parser import parse_file_for_battles, get_filename_from_path
 from src.database import StatsDatabase, parse_filename_metadata, get_db_path_for_period
+from src.export import export_database_to_json, export_all_periods
 
 
 def main():
@@ -17,7 +18,7 @@ def main():
     print("Pokemon Showdown Stats Update Pipeline")
     print("=" * 60)
 
-    print("\n[1/4] Finding newest stats directory...")
+    print("\n[1/5] Finding newest stats directory...")
     stats_dir = get_newest_stats_directory()
 
     if not stats_dir:
@@ -29,7 +30,7 @@ def main():
     stats_period = stats_dir.rstrip("/").split("/")[-1]
     print(f"✓ Stats period: {stats_period}")
 
-    print("\n[2/4] Fetching list of files from /chaos directory...")
+    print("\n[2/5] Fetching list of files from /chaos directory...")
     file_urls = get_chaos_files_list(stats_dir)
 
     if not file_urls:
@@ -38,7 +39,7 @@ def main():
 
     print(f"✓ Found {len(file_urls)} .gz files")
 
-    print("\n[3/4] Downloading files...")
+    print("\n[3/5] Downloading files...")
     downloaded_files = download_all_files(file_urls, output_dir="data/raw")
 
     if not downloaded_files:
@@ -47,7 +48,7 @@ def main():
 
     print(f"✓ Downloaded {len(downloaded_files)} files")
 
-    print("\n[4/4] Parsing files and updating database...")
+    print("\n[4/5] Parsing files and updating database...")
 
     db_path = get_db_path_for_period(stats_period)
     print(f"Database: {db_path}")
@@ -96,6 +97,21 @@ def main():
         print(f"Total battles: {db.get_total_battles():,}")
         print(f"Total format/rating combinations: {len(db.get_all_stats())}")
         print(f"Unique formats: {len(db.get_formats_list())}")
+
+    # Step 5: Export to JSON for website
+    print("\n[5/5] Exporting data for website...")
+    json_output = f"docs/{stats_period}.json"
+    export_success = export_database_to_json(db_path, json_output)
+
+    if export_success:
+        print(f"✓ Exported to {json_output}")
+
+        # Update the index file
+        print("Updating website index...")
+        exported_periods = export_all_periods()
+        print(f"✓ Website index updated with {len(exported_periods)} periods")
+    else:
+        print("✗ Failed to export data")
 
     print("\n✓ Pipeline complete!")
     return 0
