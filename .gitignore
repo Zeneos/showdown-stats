@@ -4,6 +4,9 @@
 data/
 *.db
 
+# Website directory (move to pages repo)
+docs/
+
 # Python
 __pycache__/
 *.py[cod]
