@@ -1,0 +1,682 @@
+{
+  "total_battles": 20975152,
+  "rating_thresholds": [
+    0,
+    1500,
+    1630,
+    1695,
+    1760,
+    1825
+  ],
+  "formats": [
+    {
+      "name": "gen1ou",
+      "total_battles": 59100,
+      "percentage": 0.28,
+      "by_rating": {
+        "0": 14775,
+        "1500": 14775,
+        "1630": 14775,
+        "1760": 14775
+      }
+    },
+    {
+      "name": "gen1ubers",
+      "total_battles": 17212,
+      "percentage": 0.08,
+      "by_rating": {
+        "0": 4303,
+        "1500": 4303,
+        "1630": 4303,
+        "1760": 4303
+      }
+    },
+    {
+      "name": "gen2ou",
+      "total_battles": 30272,
+      "percentage": 0.14,
+      "by_rating": {
+        "0": 7568,
+        "1500": 7568,
+        "1630": 7568,
+        "1760": 7568
+      }
+    },
+    {
+      "name": "gen3orrecolosseum",
+      "total_battles": 15356,
+      "percentage": 0.07,
+      "by_rating": {
+        "0": 3839,
+        "1500": 3839,
+        "1630": 3839,
+        "1760": 3839
+      }
+    },
+    {
+      "name": "gen3ou",
+      "total_battles": 761084,
+      "percentage": 3.63,
+      "by_rating": {
+        "0": 190271,
+        "1500": 190271,
+        "1630": 190271,
+        "1760": 190271
+      }
+    },
+    {
+      "name": "gen4ou",
+      "total_battles": 257084,
+      "percentage": 1.23,
+      "by_rating": {
+        "0": 64271,
+        "1500": 64271,
+        "1630": 64271,
+        "1760": 64271
+      }
+    },
+    {
+      "name": "gen5ou",
+      "total_battles": 157540,
+      "percentage": 0.75,
+      "by_rating": {
+        "0": 39385,
+        "1500": 39385,
+        "1630": 39385,
+        "1760": 39385
+      }
+    },
+    {
+      "name": "gen6doublesou",
+      "total_battles": 4988,
+      "percentage": 0.02,
+      "by_rating": {
+        "0": 1247,
+        "1500": 1247,
+        "1630": 1247,
+        "1760": 1247
+      }
+    },
+    {
+      "name": "gen6ou",
+      "total_battles": 147168,
+      "percentage": 0.7,
+      "by_rating": {
+        "0": 36792,
+        "1500": 36792,
+        "1630": 36792,
+        "1760": 36792
+      }
+    },
+    {
+      "name": "gen6vgc2014",
+      "total_battles": 4396,
+      "percentage": 0.02,
+      "by_rating": {
+        "0": 1099,
+        "1500": 1099,
+        "1630": 1099,
+        "1760": 1099
+      }
+    },
+    {
+      "name": "gen7doublesou",
+      "total_battles": 17040,
+      "percentage": 0.08,
+      "by_rating": {
+        "0": 4260,
+        "1500": 4260,
+        "1630": 4260,
+        "1760": 4260
+      }
+    },
+    {
+      "name": "gen7ou",
+      "total_battles": 332020,
+      "percentage": 1.58,
+      "by_rating": {
+        "0": 83005,
+        "1500": 83005,
+        "1630": 83005,
+        "1760": 83005
+      }
+    },
+    {
+      "name": "gen7purehackmons",
+      "total_battles": 89636,
+      "percentage": 0.43,
+      "by_rating": {
+        "0": 22409,
+        "1500": 22409,
+        "1630": 22409,
+        "1760": 22409
+      }
+    },
+    {
+      "name": "gen8doublesou",
+      "total_battles": 2912,
+      "percentage": 0.01,
+      "by_rating": {
+        "0": 728,
+        "1500": 728,
+        "1630": 728,
+        "1760": 728
+      }
+    },
+    {
+      "name": "gen8nationaldex",
+      "total_battles": 67460,
+      "percentage": 0.32,
+      "by_rating": {
+        "0": 16865,
+        "1500": 16865,
+        "1630": 16865,
+        "1760": 16865
+      }
+    },
+    {
+      "name": "gen8ou",
+      "total_battles": 73380,
+      "percentage": 0.35,
+      "by_rating": {
+        "0": 18345,
+        "1500": 18345,
+        "1630": 18345,
+        "1760": 18345
+      }
+    },
+    {
+      "name": "gen8uu",
+      "total_battles": 528,
+      "percentage": 0.0,
+      "by_rating": {
+        "0": 132,
+        "1500": 132,
+        "1630": 132,
+        "1760": 132
+      }
+    },
+    {
+      "name": "gen91v1",
+      "total_battles": 214100,
+      "percentage": 1.02,
+      "by_rating": {
+        "0": 53525,
+        "1500": 53525,
+        "1630": 53525,
+        "1760": 53525
+      }
+    },
+    {
+      "name": "gen92v2",
+      "total_battles": 1312,
+      "percentage": 0.01,
+      "by_rating": {
+        "0": 328,
+        "1500": 328,
+        "1630": 328,
+        "1760": 328
+      }
+    },
+    {
+      "name": "gen92v2doubles",
+      "total_battles": 18908,
+      "percentage": 0.09,
+      "by_rating": {
+        "0": 4727,
+        "1500": 4727,
+        "1630": 4727,
+        "1760": 4727
+      }
+    },
+    {
+      "name": "gen9almostanyability",
+      "total_battles": 104792,
+      "percentage": 0.5,
+      "by_rating": {
+        "0": 26198,
+        "1500": 26198,
+        "1630": 26198,
+        "1760": 26198
+      }
+    },
+    {
+      "name": "gen9anythinggoes",
+      "total_battles": 636232,
+      "percentage": 3.03,
+      "by_rating": {
+        "0": 159058,
+        "1500": 159058,
+        "1630": 159058,
+        "1760": 159058
+      }
+    },
+    {
+      "name": "gen9balancedhackmons",
+      "total_battles": 56652,
+      "percentage": 0.27,
+      "by_rating": {
+        "0": 14163,
+        "1500": 14163,
+        "1630": 14163,
+        "1760": 14163
+      }
+    },
+    {
+      "name": "gen9bssregj",
+      "total_battles": 104556,
+      "percentage": 0.5,
+      "by_rating": {
+        "0": 26139,
+        "1500": 26139,
+        "1630": 26139,
+        "1760": 26139
+      }
+    },
+    {
+      "name": "gen9camomons",
+      "total_battles": 1516,
+      "percentage": 0.01,
+      "by_rating": {
+        "0": 379,
+        "1500": 379,
+        "1630": 379,
+        "1760": 379
+      }
+    },
+    {
+      "name": "gen9cap",
+      "total_battles": 5456,
+      "percentage": 0.03,
+      "by_rating": {
+        "0": 1364,
+        "1500": 1364,
+        "1630": 1364,
+        "1760": 1364
+      }
+    },
+    {
+      "name": "gen9chatbats",
+      "total_battles": 1096,
+      "percentage": 0.01,
+      "by_rating": {
+        "0": 274,
+        "1500": 274,
+        "1630": 274,
+        "1760": 274
+      }
+    },
+    {
+      "name": "gen9convergence",
+      "total_battles": 180360,
+      "percentage": 0.86,
+      "by_rating": {
+        "0": 45090,
+        "1500": 45090,
+        "1630": 45090,
+        "1760": 45090
+      }
+    },
+    {
+      "name": "gen9doublesou",
+      "total_battles": 1041384,
+      "percentage": 4.96,
+      "by_rating": {
+        "0": 260346,
+        "1500": 260346,
+        "1695": 260346,
+        "1825": 260346
+      }
+    },
+    {
+      "name": "gen9doublesubers",
+      "total_battles": 334416,
+      "percentage": 1.59,
+      "by_rating": {
+        "0": 83604,
+        "1500": 83604,
+        "1630": 83604,
+        "1760": 83604
+      }
+    },
+    {
+      "name": "gen9doublesuu",
+      "total_battles": 101084,
+      "percentage": 0.48,
+      "by_rating": {
+        "0": 25271,
+        "1500": 25271,
+        "1630": 25271,
+        "1760": 25271
+      }
+    },
+    {
+      "name": "gen9fortemons",
+      "total_battles": 4864,
+      "percentage": 0.02,
+      "by_rating": {
+        "0": 1216,
+        "1500": 1216,
+        "1630": 1216,
+        "1760": 1216
+      }
+    },
+    {
+      "name": "gen9godlygift",
+      "total_battles": 3296,
+      "percentage": 0.02,
+      "by_rating": {
+        "0": 824,
+        "1500": 824,
+        "1630": 824,
+        "1760": 824
+      }
+    },
+    {
+      "name": "gen9lc",
+      "total_battles": 40912,
+      "percentage": 0.2,
+      "by_rating": {
+        "0": 10228,
+        "1500": 10228,
+        "1630": 10228,
+        "1760": 10228
+      }
+    },
+    {
+      "name": "gen9legendszaou",
+      "total_battles": 2316860,
+      "percentage": 11.05,
+      "by_rating": {
+        "0": 579215,
+        "1500": 579215,
+        "1630": 579215,
+        "1760": 579215
+      }
+    },
+    {
+      "name": "gen9metronomebattle",
+      "total_battles": 102520,
+      "percentage": 0.49,
+      "by_rating": {
+        "0": 25630,
+        "1500": 25630,
+        "1630": 25630,
+        "1760": 25630
+      }
+    },
+    {
+      "name": "gen9mixandmega",
+      "total_battles": 23716,
+      "percentage": 0.11,
+      "by_rating": {
+        "0": 5929,
+        "1500": 5929,
+        "1630": 5929,
+        "1760": 5929
+      }
+    },
+    {
+      "name": "gen9monotype",
+      "total_battles": 423736,
+      "percentage": 2.02,
+      "by_rating": {
+        "0": 105934,
+        "1500": 105934,
+        "1630": 105934,
+        "1760": 105934
+      }
+    },
+    {
+      "name": "gen9nationaldex",
+      "total_battles": 1946492,
+      "percentage": 9.28,
+      "by_rating": {
+        "0": 486623,
+        "1500": 486623,
+        "1630": 486623,
+        "1760": 486623
+      }
+    },
+    {
+      "name": "gen9nationaldexdoubles",
+      "total_battles": 327764,
+      "percentage": 1.56,
+      "by_rating": {
+        "0": 81941,
+        "1500": 81941,
+        "1630": 81941,
+        "1760": 81941
+      }
+    },
+    {
+      "name": "gen9nationaldexdoublesubers",
+      "total_battles": 65740,
+      "percentage": 0.31,
+      "by_rating": {
+        "0": 16435,
+        "1500": 16435,
+        "1630": 16435,
+        "1760": 16435
+      }
+    },
+    {
+      "name": "gen9nationaldexmonotype",
+      "total_battles": 89344,
+      "percentage": 0.43,
+      "by_rating": {
+        "0": 22336,
+        "1500": 22336,
+        "1630": 22336,
+        "1760": 22336
+      }
+    },
+    {
+      "name": "gen9nationaldexstabmons",
+      "total_battles": 220,
+      "percentage": 0.0,
+      "by_rating": {
+        "0": 55,
+        "1500": 55,
+        "1630": 55,
+        "1760": 55
+      }
+    },
+    {
+      "name": "gen9nationaldexubers",
+      "total_battles": 551816,
+      "percentage": 2.63,
+      "by_rating": {
+        "0": 137954,
+        "1500": 137954,
+        "1630": 137954,
+        "1760": 137954
+      }
+    },
+    {
+      "name": "gen9nationaldexuu",
+      "total_battles": 16996,
+      "percentage": 0.08,
+      "by_rating": {
+        "0": 4249,
+        "1500": 4249,
+        "1630": 4249,
+        "1760": 4249
+      }
+    },
+    {
+      "name": "gen9nu",
+      "total_battles": 62888,
+      "percentage": 0.3,
+      "by_rating": {
+        "0": 15722,
+        "1500": 15722,
+        "1630": 15722,
+        "1760": 15722
+      }
+    },
+    {
+      "name": "gen9ou",
+      "total_battles": 3768940,
+      "percentage": 17.97,
+      "by_rating": {
+        "0": 935985,
+        "1500": 935985,
+        "1695": 935985,
+        "1760": 25000,
+        "1825": 935985
+      }
+    },
+    {
+      "name": "gen9pu",
+      "total_battles": 69944,
+      "percentage": 0.33,
+      "by_rating": {
+        "0": 17486,
+        "1500": 17486,
+        "1630": 17486,
+        "1760": 17486
+      }
+    },
+    {
+      "name": "gen9ru",
+      "total_battles": 123296,
+      "percentage": 0.59,
+      "by_rating": {
+        "0": 30824,
+        "1500": 30824,
+        "1630": 30824,
+        "1760": 30824
+      }
+    },
+    {
+      "name": "gen9sharedpower",
+      "total_battles": 12804,
+      "percentage": 0.06,
+      "by_rating": {
+        "0": 3201,
+        "1500": 3201,
+        "1630": 3201,
+        "1760": 3201
+      }
+    },
+    {
+      "name": "gen9stabmons",
+      "total_battles": 3948,
+      "percentage": 0.02,
+      "by_rating": {
+        "0": 987,
+        "1500": 987,
+        "1630": 987,
+        "1760": 987
+      }
+    },
+    {
+      "name": "gen9ubers",
+      "total_battles": 477396,
+      "percentage": 2.28,
+      "by_rating": {
+        "0": 119349,
+        "1500": 119349,
+        "1630": 119349,
+        "1760": 119349
+      }
+    },
+    {
+      "name": "gen9uu",
+      "total_battles": 240036,
+      "percentage": 1.14,
+      "by_rating": {
+        "0": 60009,
+        "1500": 60009,
+        "1630": 60009,
+        "1760": 60009
+      }
+    },
+    {
+      "name": "gen9vgc2024regg",
+      "total_battles": 30000,
+      "percentage": 0.14,
+      "by_rating": {
+        "1500": 30000
+      }
+    },
+    {
+      "name": "gen9vgc2025regh",
+      "total_battles": 37404,
+      "percentage": 0.18,
+      "by_rating": {
+        "0": 9351,
+        "1500": 9351,
+        "1630": 9351,
+        "1760": 9351
+      }
+    },
+    {
+      "name": "gen9vgc2025reghbo3",
+      "total_battles": 2696,
+      "percentage": 0.01,
+      "by_rating": {
+        "0": 674,
+        "1500": 674,
+        "1630": 674,
+        "1760": 674
+      }
+    },
+    {
+      "name": "gen9vgc2025regj",
+      "total_battles": 800308,
+      "percentage": 3.82,
+      "by_rating": {
+        "0": 200077,
+        "1500": 200077,
+        "1630": 200077,
+        "1760": 200077
+      }
+    },
+    {
+      "name": "gen9vgc2026regf",
+      "total_battles": 3406712,
+      "percentage": 16.24,
+      "by_rating": {
+        "0": 851678,
+        "1500": 851678,
+        "1630": 851678,
+        "1760": 851678
+      }
+    },
+    {
+      "name": "gen9vgc2026regfbo3",
+      "total_battles": 1113676,
+      "percentage": 5.31,
+      "by_rating": {
+        "0": 278419,
+        "1500": 278419,
+        "1630": 278419,
+        "1760": 278419
+      }
+    },
+    {
+      "name": "gen9voltturnmayhem",
+      "total_battles": 41476,
+      "percentage": 0.2,
+      "by_rating": {
+        "0": 10369,
+        "1500": 10369,
+        "1630": 10369,
+        "1760": 10369
+      }
+    },
+    {
+      "name": "gen9zu",
+      "total_battles": 30312,
+      "percentage": 0.14,
+      "by_rating": {
+        "0": 7578,
+        "1500": 7578,
+        "1630": 7578,
+        "1760": 7578
+      }
+    }
+  ]
+}

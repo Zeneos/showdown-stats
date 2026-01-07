@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Showdown Battle Statistics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .stats-summary {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #495057;
+        }
+
+        select {
+            padding: 8px 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 6px;
+            background: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        select:hover {
+            border-color: #667eea;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: #495057;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        th:hover {
+            background-color: #e9ecef;
+        }
+
+        th.sortable::after {
+            content: ' ⇅';
+            opacity: 0.3;
+            font-size: 0.8em;
+        }
+
+        th.sort-asc::after {
+            content: ' ↑';
+            opacity: 1;
+            color: #667eea;
+        }
+
+        th.sort-desc::after {
+            content: ' ↓';
+            opacity: 1;
+            color: #667eea;
+        }
+
+        td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f1f3f5;
+        }
+
+        tbody tr {
+            transition: background-color 0.2s;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .format-name {
+            font-weight: 500;
+            color: #212529;
+        }
+
+        .percentage {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .battles {
+            color: #495057;
+            font-family: 'Courier New', monospace;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+            font-size: 1.2em;
+        }
+
+        .error {
+            text-align: center;
+            padding: 60px 20px;
+            color: #dc3545;
+            font-size: 1.2em;
+        }
+
+        footer {
+            padding: 20px 30px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9em;
+            border-top: 1px solid #dee2e6;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .stats-summary {
+                justify-content: space-between;
+            }
+
+            th, td {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokemon Showdown Battle Statistics</h1>
+            <p id="period-info">Loading latest stats...</p>
+        </header>
+
+        <div class="controls">
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">Total Battles</span>
+                    <span class="stat-value" id="total-battles">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Formats</span>
+                    <span class="stat-value" id="format-count">-</span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="rating-filter">Rating Filter:</label>
+                <select id="rating-filter">
+                </select>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="stats-table">
+                <thead>
+                    <tr>
+                        <th class="sortable" data-sort="name">Format Name</th>
+                        <th class="sortable" data-sort="percentage">Percentage</th>
+                        <th class="sortable" data-sort="battles">Total Battles</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td colspan="3" class="loading">Loading data...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            Data from <a href="https://www.smogon.com/stats" target="_blank">Smogon Stats</a>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
