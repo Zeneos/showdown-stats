@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="2xGHu34H9YjtQ91AVNtz-0yVOswkQGoSW8QOZx8hvCU" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Showdown Battle Statistics</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formats.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokemon Showdown Battle Statistics</h1>
+            <p id="period-info">Loading latest stats...</p>
+        </header>
+
+        <div class="controls">
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">Total Battles</span>
+                    <span class="stat-value" id="total-battles">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Formats</span>
+                    <span class="stat-value" id="format-count">-</span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="rating-filter">Rating Filter:</label>
+                <select id="rating-filter">
+                </select>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="stats-table">
+                <thead>
+                    <tr>
+                        <th class="sortable" data-sort="name">Format Name</th>
+                        <th class="sortable" data-sort="percentage">Percentage</th>
+                        <th class="sortable" data-sort="battles">Total Battles</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td colspan="3" class="loading">Loading data...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            Data from <a href="https://www.smogon.com/stats" target="_blank">Smogon Stats</a>
+        </footer>
+    </div>
+
+    <script src="formats.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* Home page specific styles */
+
+header {
+    /* Display & Box Model */
+    padding: 60px 30px;
+}
+
+header h1 {
+    /* Typography */
+    font-size: 3em;
+    font-weight: 700;
+}
+
+header p {
+    /* Typography */
+    font-size: 1.2em;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.content {
+    /* Display & Box Model */
+    padding: 50px 40px;
+}
+
+.description {
+    /* Display & Box Model */
+    margin-bottom: 40px;
+
+    /* Typography */
+    text-align: center;
+    color: #495057;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.links {
+    /* Display & Box Model */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.link-card {
+    /* Display & Box Model */
+    display: block;
+    padding: 25px 30px;
+    border-radius: 8px;
+
+    /* Typography */
+    color: white;
+    text-decoration: none;
+
+    /* Visual */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.link-card:hover {
+    /* Visual */
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+}
+
+.link-card h2 {
+    /* Display & Box Model */
+    margin-bottom: 8px;
+
+    /* Typography */
+    font-size: 1.5em;
+}
+
+.link-card p {
+    /* Typography */
+    font-size: 0.95em;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+footer {
+    /* Display & Box Model */
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        /* Typography */
+        font-size: 2em;
+    }
+
+    .content {
+        /* Display & Box Model */
+        padding: 30px 20px;
+    }
+
+    .description {
+        /* Typography */
+        font-size: 1em;
+    }
+}

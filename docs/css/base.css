@@ -1,0 +1,95 @@
+/* Base styles shared across all pages */
+
+* {
+    /* Display & Box Model */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Display & Box Model */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+
+    /* Typography */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+    /* Visual */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+    /* Display & Box Model */
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+
+    /* Visual */
+    background: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    /* Display & Box Model */
+    padding: 60px 30px;
+
+    /* Typography */
+    text-align: center;
+    color: white;
+
+    /* Visual */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+header h1 {
+    /* Display & Box Model */
+    margin-bottom: 10px;
+
+    /* Typography */
+    font-size: 2.5em;
+}
+
+header p {
+    /* Typography */
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+footer {
+    /* Display & Box Model */
+    padding: 20px 30px;
+    border-top: 1px solid #dee2e6;
+
+    /* Typography */
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+footer a {
+    /* Typography */
+    color: #667eea;
+    text-decoration: none;
+}
+
+footer a:hover {
+    /* Typography */
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        /* Typography */
+        font-size: 1.8em;
+    }
+
+    header p {
+        /* Typography */
+        font-size: 1em;
+    }
+}
