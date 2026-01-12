@@ -8,6 +8,7 @@ let currentRatingFilter = '0';
 document.addEventListener('DOMContentLoaded', async () => {
     await loadLatestData();
     setupEventListeners();
+    handleRouting();
 });
 
 // Load the latest stats data
@@ -38,8 +39,13 @@ async function loadLatestData() {
         // Populate rating filter dropdown
         populateRatingFilter();
 
-        // Render the table
-        renderTable();
+        // Check if we should render table or detail view
+        const formatName = getFormatFromUrl();
+        if (formatName) {
+            renderFormatDetail(formatName);
+        } else {
+            renderTable();
+        }
 
     } catch (error) {
         console.error('Error loading data:', error);
@@ -117,8 +123,8 @@ function renderTable() {
         let comparison = 0;
 
         switch (currentSort.column) {
-            case 'name':
-                comparison = a.name.localeCompare(b.name);
+            case 'format-name':
+                comparison = a.name.localeCompare(b.format_name);
                 break;
             case 'percentage':
                 comparison = a.percentage - b.percentage;
@@ -137,9 +143,10 @@ function renderTable() {
 
     formats.forEach(format => {
         const row = document.createElement('tr');
+        const formatLink = `?format=${encodeURIComponent(format.format_name)}`;
 
         row.innerHTML = `
-            <td class="format-name">${escapeHtml(format.name)}</td>
+            <td class="format-name"><a href="${formatLink}" class="format-link">${escapeHtml(format.format_name)}</a></td>
             <td class="percentage">${format.percentage.toFixed(2)}%</td>
             <td class="battles">${formatNumber(format.total_battles)}</td>
         `;
@@ -199,4 +206,79 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+// Get format name from URL query parameter
+function getFormatFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('format');
+}
+
+// Handle routing based on URL
+function handleRouting() {
+    const formatName = getFormatFromUrl();
+    if (formatName) {
+        renderFormatDetail(formatName);
+    }
+}
+
+// Render detail view for a specific format
+function renderFormatDetail(formatName) {
+    if (!statsData) return;
+
+    const format = statsData.formats.find(f => f.format_name === formatName);
+    
+    if (!format) {
+        const container = document.getElementById('table-container');
+        if (container) container.style.display = 'none';
+        const detailDiv = document.getElementById('format-detail');
+        if (detailDiv) {
+            detailDiv.style.display = 'block';
+            detailDiv.innerHTML = `
+                <div class="error">
+                    <p>Format "${escapeHtml(formatName)}" not found.</p>
+                    <a href="./">Back to all formats</a>
+                </div>
+            `;
+        }
+        return;
+    }
+
+    // Hide table, show detail
+    const container = document.getElementById('table-container');
+    if (container) container.style.display = 'none';
+    const detailDiv = document.getElementById('format-detail');
+    if (detailDiv) detailDiv.style.display = 'block';
+
+    // Update header
+    const periodInfo = document.getElementById('period-info');
+    if (periodInfo) periodInfo.textContent = `${escapeHtml(formatName)} - Stats Period: Latest`;
+
+    // Render format detail content
+    const detailContent = document.getElementById('detail-content');
+    if (detailContent) {
+        detailContent.innerHTML = `
+            <div class="format-header">
+                <h2>${escapeHtml(format.format_name)}</h2>
+                <p>Total Battles: <strong>${formatNumber(format.total_battles)}</strong></p>
+                <p>Overall Percentage: <strong>${format.percentage.toFixed(2)}%</strong></p>
+            </div>
+            <div class="rating-breakdown">
+                <h3>Rating Breakdown</h3>
+                <div class="rating-table">
+                    ${Object.entries(format.by_rating)
+                        .map(([rating, battles]) => `
+                            <div class="rating-row">
+                                <span class="rating-label">Rating ${rating}+</span>
+                                <span class="rating-battles">${formatNumber(battles)} battles</span>
+                            </div>
+                        `)
+                        .join('')}
+                </div>
+            </div>
+            <div class="detail-actions">
+                <a href="./" class="back-link">← Back to all formats</a>
+            </div>
+        `;
+    }
 }
