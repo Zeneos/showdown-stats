@@ -1,0 +1,4820 @@
+{
+  "format_name": "gen8uu",
+  "elo_cutoff": 1760,
+  "pokemon": [
+    {
+      "pokemon_name": "Amoonguss",
+      "usage_count": 32,
+      "usage_pct": 20.46,
+      "viability_json": [
+        15,
+        72,
+        72,
+        65
+      ],
+      "abilities_json": {
+        "regenerator": 0.665185566217795
+      },
+      "items_json": {
+        "rockyhelmet": 0.5568937970970027,
+        "blacksludge": 0.001594999651928275,
+        "ejectbutton": 0.003654936868046854,
+        "focussash": 0.10304183260081717
+      },
+      "spreads_json": {
+        "Bold:252/0/220/0/36/0": 0.5572044233094517,
+        "Bold:252/0/252/0/4/0": 0.001284373439479236,
+        "Bold:248/0/212/0/48/0": 0.003654936868046854,
+        "Calm:252/0/0/4/252/0": 0.0,
+        "Sassy:252/0/4/0/252/0": 0.10304183260081717,
+        "Bold:252/0/240/0/12/4": 0.0,
+        "Bold:248/0/224/0/36/0": 0.0,
+        "Modest:248/0/0/252/8/0": 0.0,
+        "Calm:248/0/0/8/252/0": 0.0
+      },
+      "moves_json": {
+        "spore": 0.665185566217795,
+        "gigadrain": 0.5584887967489311,
+        "sludgebomb": 0.5621437336169779,
+        "foulplay": 0.6639011927783158,
+        "protect": 0.001284373439479236,
+        "seedbomb": 0.003654936868046854,
+        "clearsmog": 0.10304183260081717,
+        "toxic": 0.10304183260081717,
+        "energyball": 0.0,
+        "substitute": 0.0,
+        "synthesis": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.665185566217795
+      },
+      "happiness_json": {
+        "255": 0.665185566217795
+      },
+      "teammates_json": {
+        "Lycanroc-Dusk": 0.1725299920715736,
+        "Salamence": 0.17284061828402264,
+        "Scizor": 0.5288637988675449,
+        "Hydreigon": 0.42710633970620704,
+        "Hippowdon": 0.2755718246723908,
+        "Excadrill": 0.10798114290834326,
+        "Chansey": 0.001284373439479236,
+        "Darmanitan": 0.25457634763463344,
+        "Swampert": 0.001284373439479236,
+        "Primarina": 0.25360260040760324,
+        "Mandibuzz": 0.2532919741951542,
+        "Politoed": 0.003654936868046854,
+        "Kingdra": 0.003654936868046854,
+        "Gyarados": 0.003654936868046854,
+        "Tornadus": 0.003654936868046854,
+        "Celesteela": 0.0,
+        "Thundurus-Therian": 0.0,
+        "Rotom-Wash": 0.0,
+        "Azelf": 0.0,
+        "Conkeldurr": 0.0,
+        "Nihilego": 0.0,
+        "Diggersby": 0.0,
+        "Skarmory": 0.0,
+        "Nidoking": 0.10304183260081717,
+        "Araquanid": 0.10304183260081717,
+        "Krookodile": 0.0,
+        "Slowking": 0.0,
+        "Mamoswine": 0.0003106262124490389,
+        "Chandelure": 0.0,
+        "Umbreon": 0.0,
+        "Bewear": 0.0,
+        "Slurpuff": 0.0,
+        "Tentacruel": 0.0,
+        "Crobat": 0.0,
+        "Scolipede": 0.0,
+        "Salazzle": 0.0,
+        "Stakataka": 0.0,
+        "Reuniclus": 0.0,
+        "Zarude": 0.0,
+        "Raikou": 0.0003106262124490389,
+        "Cobalion": 0.0003106262124490389
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Araquanid",
+      "usage_count": 4,
+      "usage_pct": 3.95,
+      "viability_json": [
+        2,
+        64,
+        64,
+        64
+      ],
+      "abilities_json": {
+        "waterbubble": 0.10310247540113598
+      },
+      "items_json": {
+        "leftovers": 6.064280031881086e-05,
+        "sitrusberry": 0.10304183260081717
+      },
+      "spreads_json": {
+        "Bold:252/0/252/4/0/0": 6.064280031881086e-05,
+        "Brave:252/252/4/0/0/0": 0.10304183260081717
+      },
+      "moves_json": {
+        "infestation": 6.064280031881086e-05,
+        "stickyweb": 0.10310247540113598,
+        "scald": 6.064280031881086e-05,
+        "toxic": 0.10310247540113598,
+        "liquidation": 0.10304183260081717,
+        "leechlife": 0.10304183260081717
+      },
+      "tera_json": {
+        "nothing": 0.10310247540113598
+      },
+      "happiness_json": {
+        "255": 0.10310247540113598
+      },
+      "teammates_json": {
+        "Thundurus-Therian": 6.064280031881086e-05,
+        "Darmanitan": 6.064280031881086e-05,
+        "Mamoswine": 6.064280031881086e-05,
+        "Azumarill": 6.064280031881086e-05,
+        "Hatterene": 6.064280031881086e-05,
+        "Nidoking": 0.10304183260081717,
+        "Amoonguss": 0.10304183260081717,
+        "Hippowdon": 0.10304183260081717,
+        "Scizor": 0.10304183260081717,
+        "Excadrill": 0.10304183260081717
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Azelf",
+      "usage_count": 7,
+      "usage_pct": 0.27,
+      "viability_json": [
+        6,
+        67,
+        67,
+        65
+      ],
+      "abilities_json": {
+        "levitate": 0.007178085673669454
+      },
+      "items_json": {
+        "expertbelt": 0.0,
+        "focussash": 0.007178085673669454
+      },
+      "spreads_json": {
+        "Naive:0/4/0/252/0/252": 0.0,
+        "Naive:0/252/0/4/0/252": 1.40394507130992e-09,
+        "Jolly:0/252/0/0/4/252": 0.0,
+        "Timid:0/0/4/252/0/252": 0.007178084269724383
+      },
+      "moves_json": {
+        "psychic": 0.0,
+        "flamethrower": 0.007178084269724383,
+        "knockoff": 0.0,
+        "uturn": 0.0,
+        "stealthrock": 0.007178085673669454,
+        "taunt": 0.007178085673669454,
+        "explosion": 0.007178085673669454,
+        "fireblast": 1.40394507130992e-09,
+        "zenheadbutt": 0.0,
+        "energyball": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.007178085673669454
+      },
+      "happiness_json": {
+        "255": 0.007178085673669454
+      },
+      "teammates_json": {
+        "Vanilluxe": 0.0,
+        "Salamence": 1.40394507130992e-09,
+        "Excadrill": 0.0,
+        "Slowking": 0.0,
+        "Zarude": 0.0,
+        "Grimmsnarl": 1.40394507130992e-09,
+        "Cloyster": 0.007178085673669454,
+        "Nihilego": 1.40394507130992e-09,
+        "Scizor": 1.40394507130992e-09,
+        "Amoonguss": 0.0,
+        "Conkeldurr": 0.007178084269724383,
+        "Darmanitan": 0.0,
+        "Rotom-Wash": 0.0,
+        "Chansey": 0.0,
+        "Primarina": 0.0,
+        "Diggersby": 0.0,
+        "Skarmory": 0.0,
+        "Indeedee": 0.0,
+        "Crustle": 0.0,
+        "Crawdaunt": 0.0,
+        "Clawitzer": 0.0,
+        "Kingler": 0.0,
+        "Celesteela": 0.007178084269724383,
+        "Azumarill": 0.007178084269724383,
+        "Polteageist": 0.007178084269724383
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Azumarill",
+      "usage_count": 11,
+      "usage_pct": 7.26,
+      "viability_json": [
+        4,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "hugepower": 0.18959441005165206
+      },
+      "items_json": {
+        "sitrusberry": 0.01762842740473025,
+        "choiceband": 0.1719659826469218
+      },
+      "spreads_json": {
+        "Adamant:4/252/0/0/0/252": 0.0,
+        "Adamant:252/252/0/0/4/0": 0.17202662544724062,
+        "Adamant:0/252/4/0/0/252": 0.01756778460441144
+      },
+      "moves_json": {
+        "playrough": 0.18959441005165206,
+        "knockoff": 0.18953376725133325,
+        "aquajet": 0.18959441005165206,
+        "bellydrum": 0.01762842740473025,
+        "waterfall": 6.064280031881086e-05,
+        "liquidation": 0.1719659826469218
+      },
+      "tera_json": {
+        "nothing": 0.18959441005165206
+      },
+      "happiness_json": {
+        "255": 0.18959441005165206
+      },
+      "teammates_json": {
+        "Politoed": 0.0,
+        "Diggersby": 0.0,
+        "Tentacruel": 0.0,
+        "Jirachi": 0.0,
+        "Keldeo": 0.0,
+        "Araquanid": 6.064280031881086e-05,
+        "Thundurus-Therian": 6.064280031881086e-05,
+        "Darmanitan": 0.17202662544724062,
+        "Mamoswine": 6.064280031881086e-05,
+        "Hatterene": 6.064280031881086e-05,
+        "Celesteela": 0.18953376725133325,
+        "Chansey": 0.1719659826469218,
+        "Conkeldurr": 0.18953376725133325,
+        "Nidoking": 0.1719659826469218,
+        "Excadrill": 0.010389700334687058,
+        "Cloyster": 0.01756778460441144,
+        "Polteageist": 0.01756778460441144,
+        "Azelf": 0.007178084269724383
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Bewear",
+      "usage_count": 8,
+      "usage_pct": 0.08,
+      "viability_json": [
+        3,
+        56,
+        56,
+        56
+      ],
+      "abilities_json": {
+        "unnerve": 0.002144175920214819
+      },
+      "items_json": {
+        "choiceband": 0.002144175920214819,
+        "choicescarf": 0.0
+      },
+      "spreads_json": {
+        "Adamant:252/252/0/0/4/0": 0.002144175920214819,
+        "Jolly:0/252/0/0/4/252": 0.0
+      },
+      "moves_json": {
+        "closecombat": 0.002144175920214819,
+        "earthquake": 0.002144175920214819,
+        "doubleedge": 0.002144175920214819,
+        "thunderpunch": 0.002144175920214819,
+        "icepunch": 0.0,
+        "highhorsepower": 0.0,
+        "darkestlariat": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.002144175920214819
+      },
+      "happiness_json": {
+        "255": 0.002144175920214819
+      },
+      "teammates_json": {
+        "Darmanitan": 0.0019408016558463692,
+        "Haxorus": 0.0019969140390287965,
+        "Krookodile": 0.0019969140390287965,
+        "Xurkitree": 0.0019969140390287965,
+        "Golisopod": 0.0019969140390287965,
+        "Amoonguss": 0.0,
+        "Mamoswine": 0.0,
+        "Chandelure": 0.0,
+        "Umbreon": 0.0,
+        "Slurpuff": 0.0,
+        "Salazzle": 5.6112383182427283e-05,
+        "Tentacruel": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Blastoise",
+      "usage_count": 29,
+      "usage_pct": 2.84,
+      "viability_json": [
+        1,
+        65,
+        65,
+        65
+      ],
+      "abilities_json": {
+        "torrent": 0.09173654006253751
+      },
+      "items_json": {
+        "whiteherb": 0.09173654006253751
+      },
+      "spreads_json": {
+        "Modest:0/0/0/252/4/252": 0.09173654006253751
+      },
+      "moves_json": {
+        "shellsmash": 0.09173654006253751,
+        "surf": 0.09173654006253751,
+        "icebeam": 0.09173654006253751,
+        "darkpulse": 0.09173654006253751
+      },
+      "tera_json": {
+        "nothing": 0.09173654006253751
+      },
+      "happiness_json": {
+        "255": 0.09173654006253751
+      },
+      "teammates_json": {
+        "Froslass": 0.07412302377975577,
+        "Slurpuff": 0.07412302377975577,
+        "Cloyster": 0.07412302377975577,
+        "Mimikyu": 0.07412302377975577,
+        "Slowbro-Galar": 0.07412302377975577
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Bronzong",
+      "usage_count": 5,
+      "usage_pct": 0.22,
+      "viability_json": [
+        1,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "levitate": 0.005859276696694116
+      },
+      "items_json": {
+        "leftovers": 0.005859276696694116
+      },
+      "spreads_json": {
+        "Bold:252/0/128/0/128/0": 0.005859276696694116
+      },
+      "moves_json": {
+        "stealthrock": 0.005859276696694116,
+        "psychic": 0.005859276696694116,
+        "toxic": 0.005859276696694116,
+        "protect": 0.005859276696694116
+      },
+      "tera_json": {
+        "nothing": 0.005859276696694116
+      },
+      "happiness_json": {
+        "255": 0.005859276696694116
+      },
+      "teammates_json": {
+        "Umbreon": 0.005859276696694116,
+        "Crobat": 0.005859276696694116,
+        "Milotic": 0.005859276696694116,
+        "Golurk": 0.005859276696694116,
+        "Sylveon": 0.005859276696694116
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Celesteela",
+      "usage_count": 60,
+      "usage_pct": 9.1,
+      "viability_json": [
+        18,
+        74,
+        74,
+        59
+      ],
+      "abilities_json": {
+        "beastboost": 0.2467684279239285
+      },
+      "items_json": {
+        "powerherb": 0.06302390252506679,
+        "leftovers": 0.1837445253988617,
+        "nothing": 0.0
+      },
+      "spreads_json": {
+        "Modest:0/0/0/252/4/252": 0.03921310877236167,
+        "Sassy:248/0/0/0/252/8": 0.007610531772960505,
+        "Impish:252/0/136/0/120/0": 8.84313733351405e-11,
+        "Serious:0/0/0/252/6/252": 0.023810793752705117,
+        "Sassy:252/0/0/0/244/12": 1.0822972615898152e-06,
+        "Bold:252/0/252/4/0/0": 0.1719659826469218,
+        "Calm:252/0/36/0/220/0": 0.0,
+        "Sassy:252/4/0/0/252/0": 0.004166928593286434,
+        "Quiet:252/4/0/252/0/0": 0.0,
+        "Modest:252/0/0/252/4/0": 0.0,
+        "Sassy:252/0/4/0/252/0": 0.0
+      },
+      "moves_json": {
+        "meteorbeam": 0.06302390252506679,
+        "airslash": 0.06302390252506679,
+        "autotomize": 0.06302390252506679,
+        "flamethrower": 0.24181969135301018,
+        "heavyslam": 0.011778542751939902,
+        "leechseed": 0.1837445253988617,
+        "protect": 0.1837445253988617,
+        "fireblast": 0.004948736570918322,
+        "toxic": 0.1719659826469218,
+        "doubleedge": 0.0,
+        "explosion": 0.0,
+        "steelbeam": 0.0,
+        "hyperbeam": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.2467684279239285
+      },
+      "happiness_json": {
+        "255": 0.2467684279239285
+      },
+      "teammates_json": {
+        "Excadrill": 0.02931593510063507,
+        "Cloyster": 0.017602067401012,
+        "Mimikyu": 3.4282796600559884e-05,
+        "Salamence": 0.023874971336866335,
+        "Thundurus-Therian": 0.01892623467751664,
+        "Torkoal": 0.005308447256405058,
+        "Hatterene": 0.005308447256405058,
+        "Darmanitan": 0.19226461903026903,
+        "Venusaur": 0.005308447256405058,
+        "Swampert": 0.005308447256405058,
+        "Scolipede": 0.004948736570918322,
+        "Necrozma": 0.004948736570918322,
+        "Conkeldurr": 0.19822832733188345,
+        "Toxtricity": 0.004948736570918322,
+        "Chansey": 0.17196598273535318,
+        "Rotom-Wash": 8.84313733351405e-11,
+        "Primarina": 8.84313733351405e-11,
+        "Krookodile": 0.01889195188091608,
+        "Keldeo": 0.01889195188091608,
+        "Inteleon": 0.014990189126942166,
+        "Reuniclus": 0.014990189126942166,
+        "Regieleki": 0.014990189126942166,
+        "Scizor": 0.01873601263657404,
+        "Gyarados": 0.0,
+        "Hippowdon": 0.0037458235096318737,
+        "Amoonguss": 0.0,
+        "Slowking": 0.0037458235096318737,
+        "Hydreigon": 0.0037458235096318737,
+        "Azumarill": 0.18953376725133325,
+        "Nidoking": 0.1719659826469218,
+        "Polteageist": 0.01756778460441144,
+        "Mandibuzz": 0.0,
+        "Chandelure": 0.0,
+        "Flygon": 0.0,
+        "Leafeon": 0.0,
+        "Tangrowth": 0.0,
+        "Moltres": 0.0,
+        "Mamoswine": 0.0,
+        "Zygarde-10%": 0.0,
+        "Azelf": 0.007178084269724383,
+        "Nihilego": 0.0,
+        "Tentacruel": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Chandelure",
+      "usage_count": 34,
+      "usage_pct": 0.15,
+      "viability_json": [
+        4,
+        56,
+        56,
+        56
+      ],
+      "abilities_json": {
+        "flashfire": 0.003943233885366382
+      },
+      "items_json": {
+        "choicescarf": 0.003943233885366382,
+        "heavydutyboots": 0.0,
+        "toxicorb": 0.0
+      },
+      "spreads_json": {
+        "Timid:4/0/0/252/0/252": 3.773997780953664e-11,
+        "Hasty:0/4/0/252/0/252": 0.0,
+        "Timid:0/0/0/252/4/252": 0.003943233847626404
+      },
+      "moves_json": {
+        "flamethrower": 3.773997780953664e-11,
+        "shadowball": 0.003943233885366382,
+        "energyball": 0.003943233885366382,
+        "psychic": 0.003943233885366382,
+        "calmmind": 0.0,
+        "gigaimpact": 0.0,
+        "overheat": 0.0,
+        "hyperbeam": 0.0,
+        "darkpulse": 0.003943233847626404,
+        "willowisp": 0.0,
+        "trick": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.003943233885366382
+      },
+      "happiness_json": {
+        "255": 0.003943233885366382
+      },
+      "teammates_json": {
+        "Skarmory": 1.5436929512446795e-11,
+        "Umbreon": 2.7108260081121216e-11,
+        "Vaporeon": 2.7108260081121216e-11,
+        "Sylveon": 2.7108260081121216e-11,
+        "Shedinja": 2.7108260081121216e-11,
+        "Mandibuzz": 0.0,
+        "Rotom-Wash": 0.0,
+        "Celesteela": 0.0,
+        "Flygon": 0.0,
+        "Leafeon": 0.0,
+        "Amoonguss": 0.0,
+        "Mamoswine": 0.0,
+        "Bewear": 0.0,
+        "Slurpuff": 0.0,
+        "Tentacruel": 0.0,
+        "Stakataka": 0.0,
+        "Reuniclus": 0.0,
+        "Registeel": 1.167133056867442e-11,
+        "Torkoal": 0.003943233847626404,
+        "Venusaur": 0.003943233847626404,
+        "Snorlax": 0.003943233847626404,
+        "Marowak-Alola": 0.003943233847626404,
+        "Zoroark": 0.003943233847626404
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Chansey",
+      "usage_count": 84,
+      "usage_pct": 19.09,
+      "viability_json": [
+        16,
+        74,
+        74,
+        63
+      ],
+      "abilities_json": {
+        "naturalcure": 0.8292539505922554
+      },
+      "items_json": {
+        "eviolite": 0.8292539505922554
+      },
+      "spreads_json": {
+        "Bold:4/0/252/0/252/0": 1.8934918067925466e-06,
+        "Bold:248/0/252/0/8/0": 0.7790987321943077,
+        "Bold:252/0/252/0/4/0": 0.035099046365534015,
+        "Relaxed:252/0/0/0/252/0": 0.0001563309550048353,
+        "Bold:248/0/252/8/0/0": 0.0,
+        "Bold:56/0/252/0/200/0": 0.014897947585601978,
+        "Bold:248/0/216/0/44/0": 0.0
+      },
+      "moves_json": {
+        "seismictoss": 0.8292539505922554,
+        "thunderwave": 1.8934918067925466e-06,
+        "softboiled": 0.8290976196372506,
+        "teleport": 0.20835129585531048,
+        "toxic": 0.6572860744535268,
+        "stealthrock": 0.7779706897098333,
+        "healbell": 8.84313733351405e-11,
+        "aromatherapy": 0.014897947585601978,
+        "wish": 0.0,
+        "rest": 0.0001563309550048353,
+        "thunder": 0.0,
+        "raindance": 0.0,
+        "healingwish": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.8292539505922554
+      },
+      "happiness_json": {
+        "255": 0.8292539505922554
+      },
+      "teammates_json": {
+        "Milotic": 1.8806378478397612e-06,
+        "Hippowdon": 1.8806378478397612e-06,
+        "Scizor": 0.032331053225409634,
+        "Skarmory": 1.8806378478397612e-06,
+        "Reuniclus": 1.8800987535150249e-06,
+        "Excadrill": 0.03366384509974313,
+        "Amoonguss": 0.001284373439479236,
+        "Hydreigon": 0.0014407043944840714,
+        "Darmanitan": 0.17612602704889518,
+        "Swampert": 0.001284373439479236,
+        "Salamence": 0.2929447961425282,
+        "Registeel": 0.28998667918757665,
+        "Rotom-Wash": 0.289986679276008,
+        "Conkeldurr": 0.46498466375199743,
+        "Diggersby": 0.28998667918757665,
+        "Celesteela": 0.17196598273535318,
+        "Primarina": 4.09484075925004e-07,
+        "Nidoking": 0.17484165360941595,
+        "Tangrowth": 0.035097567055223045,
+        "Slowking": 8.351284542240656e-07,
+        "Azelf": 0.0,
+        "Regieleki": 0.0,
+        "Zygarde-10%": 0.0,
+        "Azumarill": 0.1719659826469218,
+        "Keldeo": 5.390943247363111e-10,
+        "Thundurus-Therian": 0.032297025667806456,
+        "Rotom-Heat": 0.032223140616827683,
+        "Durant": 0.0,
+        "Crobat": 0.0,
+        "Togekiss": 0.0,
+        "Scolipede": 5.0298984270724656e-05,
+        "Jellicent": 0.0,
+        "Lycanroc-Dusk": 0.0,
+        "Politoed": 0.0,
+        "Ludicolo": 0.0,
+        "Omastar": 0.0,
+        "Toxicroak": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Charizard",
+      "usage_count": 2,
+      "usage_pct": 0.08,
+      "viability_json": [
+        2,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "solarpower": 0.0020655807415508876
+      },
+      "items_json": {
+        "choicescarf": 0.0020655807415508876
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.0020655807415508876
+      },
+      "moves_json": {
+        "flamethrower": 0.0020655807415508876,
+        "fireblast": 0.0020655807415508876,
+        "overheat": 0.0020655807415508876,
+        "scorchingsands": 0.0020655807415508876
+      },
+      "tera_json": {
+        "nothing": 0.0020655807415508876
+      },
+      "happiness_json": {
+        "255": 0.0020655807415508876
+      },
+      "teammates_json": {
+        "Torkoal": 0.0020655807415508876,
+        "Venusaur": 0.0020655807415508876,
+        "Darmanitan": 0.0020655807415508876,
+        "Cobalion": 0.0020655807415508876,
+        "Hatterene": 0.0020655807415508876
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cloyster",
+      "usage_count": 43,
+      "usage_pct": 3.51,
+      "viability_json": [
+        3,
+        67,
+        67,
+        67
+      ],
+      "abilities_json": {
+        "skilllink": 0.10933866859903413
+      },
+      "items_json": {
+        "focussash": 0.017602067401012,
+        "whiteherb": 0.09173660119802213
+      },
+      "spreads_json": {
+        "Adamant:0/252/0/0/4/252": 0.017602067401012,
+        "Naughty:0/252/0/4/0/252": 0.09173654006253751,
+        "Jolly:0/252/4/0/0/252": 6.113548461916807e-08
+      },
+      "moves_json": {
+        "shellsmash": 0.10933866859903413,
+        "iceshard": 0.01760212853649662,
+        "iciclespear": 0.10933866859903413,
+        "rockblast": 0.10933866859903413,
+        "hydropump": 0.09173654006253751
+      },
+      "tera_json": {
+        "nothing": 0.10933866859903413
+      },
+      "happiness_json": {
+        "255": 0.10933866859903413
+      },
+      "teammates_json": {
+        "Excadrill": 0.010423983131287617,
+        "Celesteela": 0.017602067401012,
+        "Mimikyu": 0.07415730657635633,
+        "Salamence": 3.4284200545631194e-05,
+        "Thundurus-Therian": 3.4282796600559884e-05,
+        "Froslass": 0.07412302377975577,
+        "Slurpuff": 0.07412302377975577,
+        "Blastoise": 0.07412302377975577,
+        "Slowbro-Galar": 0.07412302377975577,
+        "Ribombee": 3.688606364793401e-09,
+        "Polteageist": 0.017567788293017805,
+        "Lycanroc-Dusk": 3.688606364793401e-09,
+        "Nihilego": 5.092551436103321e-09,
+        "Scizor": 5.092551436103321e-09,
+        "Azelf": 0.007178085673669454,
+        "Grimmsnarl": 1.40394507130992e-09,
+        "Conkeldurr": 0.01756778460441144,
+        "Azumarill": 0.01756778460441144
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cobalion",
+      "usage_count": 20,
+      "usage_pct": 5.22,
+      "viability_json": [
+        8,
+        67,
+        67,
+        65
+      ],
+      "abilities_json": {
+        "justified": 0.2219736045576745
+      },
+      "items_json": {
+        "chopleberry": 0.21001395332878908,
+        "shucaberry": 0.0058369706712728675,
+        "leftovers": 0.00581205434516352,
+        "rockyhelmet": 0.0003106262124490389
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.2140959694709601,
+        "Jolly:0/252/4/0/0/252": 0.00581205434516352,
+        "Jolly:0/252/8/0/0/248": 0.0020655807415508876,
+        "Jolly:0/252/0/0/44/212": 0.0
+      },
+      "moves_json": {
+        "swordsdance": 0.21613663388640164,
+        "ironhead": 0.22166297834522547,
+        "closecombat": 0.2219736045576745,
+        "stoneedge": 0.21990802381612362,
+        "megahorn": 0.0,
+        "stealthrock": 0.006147596883721906,
+        "substitute": 0.0020655807415508876,
+        "voltswitch": 0.0,
+        "taunt": 0.0,
+        "sacredsword": 0.0,
+        "roar": 0.0,
+        "zenheadbutt": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.2219736045576745
+      },
+      "happiness_json": {
+        "255": 0.2219736045576745
+      },
+      "teammates_json": {
+        "Salamence": 0.1284956822382899,
+        "Skarmory": 0.12818505602584085,
+        "Polteageist": 0.12818505602584085,
+        "Diggersby": 0.12818505602584085,
+        "Zarude": 0.12818505602584085,
+        "Krookodile": 0.0,
+        "Gyarados": 0.0,
+        "Necrozma": 0.0,
+        "Scolipede": 0.0,
+        "Hydreigon": 0.00581205434516352,
+        "Crobat": 0.00581205434516352,
+        "Tangrowth": 0.00581205434516352,
+        "Rotom-Wash": 0.00581205434516352,
+        "Hippowdon": 0.00581205434516352,
+        "Torkoal": 0.0020655807415508876,
+        "Venusaur": 0.0020655807415508876,
+        "Darmanitan": 0.0020655807415508876,
+        "Charizard": 0.0020655807415508876,
+        "Hatterene": 0.0020655807415508876,
+        "Raikou": 0.0003106262124490389,
+        "Amoonguss": 0.0003106262124490389,
+        "Primarina": 0.0003106262124490389,
+        "Mamoswine": 0.0003106262124490389,
+        "Swampert": 0.0,
+        "Regieleki": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Conkeldurr",
+      "usage_count": 76,
+      "usage_pct": 19.0,
+      "viability_json": [
+        14,
+        74,
+        74,
+        67
+      ],
+      "abilities_json": {
+        "guts": 0.8272165032183985,
+        "ironfist": 0.0
+      },
+      "items_json": {
+        "flameorb": 0.8272165032183985,
+        "assaultvest": 0.0
+      },
+      "spreads_json": {
+        "Adamant:0/252/0/0/4/252": 0.19660092230068804,
+        "Adamant:0/252/16/0/60/180": 0.6058483761079068,
+        "Adamant:0/252/4/0/0/252": 0.0028761606571010567,
+        "Adamant:252/252/0/0/4/0": 0.004166928593286434,
+        "Adamant:4/252/0/0/0/252": 0.01756778460441144,
+        "Adamant:252/252/0/0/0/0": 0.0001563309550048353,
+        "Brave:252/252/0/0/4/0": 0.0
+      },
+      "moves_json": {
+        "drainpunch": 0.8272165032183985,
+        "facade": 0.8270601722633937,
+        "icepunch": 0.022516521175329762,
+        "machpunch": 0.8272165032183985,
+        "knockoff": 0.8046999820430687,
+        "earthquake": 0.0001563309550048353,
+        "closecombat": 0.0,
+        "thunderpunch": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.8272165032183985
+      },
+      "happiness_json": {
+        "255": 0.8272165032183985
+      },
+      "teammates_json": {
+        "Scolipede": 0.004999035555189046,
+        "Celesteela": 0.19822832733188345,
+        "Necrozma": 0.004948736570918322,
+        "Toxtricity": 0.004948736570918322,
+        "Salamence": 0.30268096073339423,
+        "Chansey": 0.46498466375199743,
+        "Registeel": 0.28998667918757665,
+        "Rotom-Wash": 0.28998667918757665,
+        "Diggersby": 0.28998667918757665,
+        "Darmanitan": 0.17484190851781067,
+        "Nidoking": 0.17484190851781067,
+        "Tangrowth": 0.002874426438395361,
+        "Keldeo": 0.00478717319998434,
+        "Mamoswine": 0.00478717319998434,
+        "Klefki": 0.00478717319998434,
+        "Regieleki": 0.00478717319998434,
+        "Slowking": 0.0037469135464808234,
+        "Primarina": 6.643040392773081e-07,
+        "Hydreigon": 0.003902154464636709,
+        "Hippowdon": 0.0037458235096318737,
+        "Scizor": 0.0038518554803659844,
+        "Azelf": 0.007178084269724383,
+        "Amoonguss": 0.0,
+        "Azumarill": 0.18953376725133325,
+        "Excadrill": 0.010546031289691893,
+        "Cloyster": 0.01756778460441144,
+        "Polteageist": 0.01756778460441144,
+        "Thundurus-Therian": 7.388505097877252e-05,
+        "Jellicent": 0.0,
+        "Lycanroc-Dusk": 0.0,
+        "Porygon2": 0.0,
+        "Crawdaunt": 0.0,
+        "Cresselia": 0.0,
+        "Hatterene": 0.0,
+        "Marowak-Alola": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Crawdaunt",
+      "usage_count": 3,
+      "usage_pct": 0.01,
+      "viability_json": [
+        3,
+        46,
+        46,
+        46
+      ],
+      "abilities_json": {
+        "adaptability": 0.000296737855173812
+      },
+      "items_json": {
+        "lifeorb": 0.000296737855173812,
+        "choiceband": 0.0
+      },
+      "spreads_json": {
+        "Brave:248/252/0/0/8/0": 0.000296737855173812,
+        "Adamant:252/252/0/0/4/0": 0.0,
+        "Brave:252/252/0/0/4/0": 0.0
+      },
+      "moves_json": {
+        "swordsdance": 0.000296737855173812,
+        "crabhammer": 0.000296737855173812,
+        "knockoff": 0.000296737855173812,
+        "aquajet": 0.000296737855173812,
+        "closecombat": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.000296737855173812
+      },
+      "happiness_json": {
+        "255": 0.000296737855173812
+      },
+      "teammates_json": {
+        "Hatterene": 0.000296737855173812,
+        "Marowak-Alola": 0.000296737855173812,
+        "Glastrier": 0.000296737855173812,
+        "Stakataka": 0.000296737855173812,
+        "Cresselia": 0.000296737855173812,
+        "Azelf": 0.0,
+        "Indeedee": 0.0,
+        "Crustle": 0.0,
+        "Clawitzer": 0.0,
+        "Kingler": 0.0,
+        "Porygon2": 0.0,
+        "Conkeldurr": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cresselia",
+      "usage_count": 2,
+      "usage_pct": 0.01,
+      "viability_json": [
+        2,
+        43,
+        43,
+        43
+      ],
+      "abilities_json": {
+        "levitate": 0.000296737855173812
+      },
+      "items_json": {
+        "mentalherb": 0.000296737855173812,
+        "leftovers": 0.0
+      },
+      "spreads_json": {
+        "Relaxed:252/0/252/0/4/0": 0.000296737855173812,
+        "Sassy:252/0/0/4/252/0": 0.0
+      },
+      "moves_json": {
+        "trickroom": 0.000296737855173812,
+        "icebeam": 0.000296737855173812,
+        "moonlight": 0.000296737855173812,
+        "lunardance": 0.000296737855173812,
+        "moonblast": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.000296737855173812
+      },
+      "happiness_json": {
+        "255": 0.000296737855173812
+      },
+      "teammates_json": {
+        "Hatterene": 0.000296737855173812,
+        "Marowak-Alola": 0.000296737855173812,
+        "Glastrier": 0.000296737855173812,
+        "Stakataka": 0.000296737855173812,
+        "Crawdaunt": 0.000296737855173812,
+        "Porygon2": 0.0,
+        "Conkeldurr": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Crobat",
+      "usage_count": 22,
+      "usage_pct": 0.72,
+      "viability_json": [
+        9,
+        69,
+        69,
+        67
+      ],
+      "abilities_json": {
+        "infiltrator": 0.005859277061185997,
+        "innerfocus": 0.012911605760163147
+      },
+      "items_json": {
+        "heavydutyboots": 0.011671331406349517,
+        "blacksludge": 0.0070995514149996275,
+        "nothing": 0.0,
+        "choiceband": 0.0
+      },
+      "spreads_json": {
+        "Jolly:160/96/0/0/0/252": 0.005859276696694116,
+        "Jolly:0/252/0/0/4/252": 3.644918811218645e-10,
+        "Jolly:224/0/16/0/16/252": 0.0070995514149996275,
+        "Hasty:0/252/0/4/0/252": 0.0,
+        "Jolly:0/252/4/0/0/252": 0.00581205434516352
+      },
+      "moves_json": {
+        "bravebird": 0.018770882821349144,
+        "defog": 0.012958828111693743,
+        "uturn": 0.011671331406349517,
+        "roost": 0.018770882821349144,
+        "taunt": 0.005812054709655401,
+        "toxic": 0.0070995514149996275,
+        "acrobatics": 0.0,
+        "sludgebomb": 0.0,
+        "crosspoison": 0.0,
+        "poisonfang": 0.0,
+        "dualwingbeat": 0.0,
+        "quickattack": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.018770882821349144
+      },
+      "happiness_json": {
+        "255": 0.018770882821349144
+      },
+      "teammates_json": {
+        "Umbreon": 0.005859276696694116,
+        "Milotic": 0.005859276696694116,
+        "Golurk": 0.005859276696694116,
+        "Sylveon": 0.005859276696694116,
+        "Bronzong": 0.005859276696694116,
+        "Hydreigon": 0.005812054709655401,
+        "Mamoswine": 3.644918811218645e-10,
+        "Scizor": 3.644918811218645e-10,
+        "Nihilego": 3.644918811218645e-10,
+        "Rotom-Wash": 0.005812054709655401,
+        "Zarude": 0.0070995514149996275,
+        "Moltres": 0.0070995514149996275,
+        "Xurkitree": 0.0070995514149996275,
+        "Silvally-Fairy": 0.0070995514149996275,
+        "Swampert": 0.0070995514149996275,
+        "Gyarados": 0.0,
+        "Necrozma": 0.0,
+        "Obstagoon": 0.0,
+        "Lucario": 0.0,
+        "Steelix": 0.0,
+        "Cobalion": 0.00581205434516352,
+        "Tangrowth": 0.00581205434516352,
+        "Hippowdon": 0.00581205434516352,
+        "Amoonguss": 0.0,
+        "Scolipede": 0.0,
+        "Salazzle": 0.0,
+        "Tentacruel": 0.0,
+        "Durant": 0.0,
+        "Darmanitan": 0.0,
+        "Chansey": 0.0,
+        "Nidoking": 0.0,
+        "Togekiss": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Darmanitan",
+      "usage_count": 81,
+      "usage_pct": 66.4,
+      "viability_json": [
+        19,
+        81,
+        81,
+        69
+      ],
+      "abilities_json": {
+        "sheerforce": 2.6055196882586578
+      },
+      "items_json": {
+        "choicescarf": 0.24199290360104958,
+        "choiceband": 0.40700140782053995,
+        "lifeorb": 1.9565253768370678
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 2.5930313371588154,
+        "Adamant:0/252/0/0/4/252": 0.00200144445616518,
+        "Jolly:0/252/4/0/0/252": 0.007610531772960505,
+        "Adamant:0/252/0/0/0/252": 0.0028761606571010567,
+        "Jolly:4/252/0/0/0/252": 1.4286573590815976e-09,
+        "Jolly:0/252/0/0/0/252": 2.127847990029963e-07,
+        "Adamant:4/252/0/0/0/252": 1.5909495942878493e-13
+      },
+      "moves_json": {
+        "flareblitz": 2.605519475473859,
+        "earthquake": 0.6489943104071774,
+        "trick": 0.001284373439479236,
+        "uturn": 2.605459045458179,
+        "hammerarm": 6.064280031881086e-05,
+        "zenheadbutt": 0.01672294902754512,
+        "rockslide": 2.5827812968120187,
+        "superpower": 0.0027900545369468066,
+        "firepunch": 1.9565253768370678,
+        "ironhead": 1.0144119988453326e-09,
+        "stoneedge": 0.0019408016580269583,
+        "fireblast": 2.127847990029963e-07,
+        "focuspunch": 2.127847990029963e-07
+      },
+      "tera_json": {
+        "nothing": 2.6055196882586578
+      },
+      "happiness_json": {
+        "255": 2.6055196882586578
+      },
+      "teammates_json": {
+        "Excadrill": 0.001284373439479236,
+        "Amoonguss": 0.25457634763463344,
+        "Hydreigon": 1.4779654764784818,
+        "Chansey": 0.17612602704889518,
+        "Swampert": 0.05612461010746789,
+        "Araquanid": 6.064280031881086e-05,
+        "Thundurus-Therian": 6.064280031881086e-05,
+        "Mamoswine": 6.064280031881086e-05,
+        "Azumarill": 0.17202662544724062,
+        "Hatterene": 1.2308237996421232,
+        "Torkoal": 1.2307631582698804,
+        "Venusaur": 1.2307631582700393,
+        "Celesteela": 0.19226461903026903,
+        "Salamence": 0.0028759272976838224,
+        "Nidoking": 0.17484190851781067,
+        "Conkeldurr": 0.17484190851781067,
+        "Tangrowth": 0.008678940933522172,
+        "Primarina": 0.2532926384991935,
+        "Mandibuzz": 0.2532919741951542,
+        "Scizor": 1.4916712921659445,
+        "Inteleon": 0.014990189126942166,
+        "Reuniclus": 0.014990189126942166,
+        "Regieleki": 0.014990189126942166,
+        "Slowking": 0.006784139840390502,
+        "Zygarde-10%": 0.0009785353084147408,
+        "Umbreon": 0.0009785353084147408,
+        "Rotom-Wash": 0.0007679625015157843,
+        "Raikou": 0.0009785353084147408,
+        "Slowbro-Galar": 0.00021057280689895652,
+        "Azelf": 0.0,
+        "Xurkitree": 0.0019408030840818435,
+        "Ninetales": 1.42823547433224e-09,
+        "Rotom-Heat": 0.005804514495126811,
+        "Jirachi": 0.005804514495126811,
+        "Skarmory": 0.005804514495126811,
+        "Haxorus": 0.0019408016558463692,
+        "Krookodile": 0.0019408016574459785,
+        "Golisopod": 0.0019408016558463692,
+        "Bewear": 0.0019408016558463692,
+        "Tapu Bulu": 0.04953178941158359,
+        "Magneton": 0.04953178941158359,
+        "Salazzle": 0.04953178941158359,
+        "Klefki": 0.04953178941158359,
+        "Charizard": 0.0020655807415508876,
+        "Cobalion": 0.0020655807415508876,
+        "Durant": 0.0,
+        "Crobat": 0.0,
+        "Togekiss": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Diggersby",
+      "usage_count": 31,
+      "usage_pct": 16.02,
+      "viability_json": [
+        7,
+        69,
+        69,
+        65
+      ],
+      "abilities_json": {
+        "hugepower": 0.813796748695145
+      },
+      "items_json": {
+        "choicescarf": 0.6058483761079068,
+        "lifeorb": 0.2079483725872382
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.813796748695145
+      },
+      "moves_json": {
+        "earthquake": 0.813796748695145,
+        "bodyslam": 0.813796748695145,
+        "uturn": 0.6058483761079068,
+        "spikes": 0.0,
+        "foulplay": 0.6058483761079068,
+        "swordsdance": 0.2079483725872382,
+        "quickattack": 0.2079483725872382,
+        "knockoff": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.813796748695145
+      },
+      "happiness_json": {
+        "255": 0.813796748695145
+      },
+      "teammates_json": {
+        "Politoed": 0.0,
+        "Azumarill": 0.0,
+        "Tentacruel": 0.0,
+        "Jirachi": 0.0,
+        "Keldeo": 0.0,
+        "Chansey": 0.28998667918757665,
+        "Salamence": 0.4181717352134175,
+        "Registeel": 0.28998667918757665,
+        "Rotom-Wash": 0.28998667918757665,
+        "Conkeldurr": 0.28998667918757665,
+        "Skarmory": 0.12818505602584085,
+        "Polteageist": 0.12818505602584085,
+        "Cobalion": 0.12818505602584085,
+        "Zarude": 0.12818505602584085,
+        "Primarina": 0.0,
+        "Nihilego": 0.0,
+        "Amoonguss": 0.0,
+        "Azelf": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Excadrill",
+      "usage_count": 32,
+      "usage_pct": 6.5,
+      "viability_json": [
+        12,
+        67,
+        67,
+        64
+      ],
+      "abilities_json": {
+        "moldbreaker": 0.07155355885178272,
+        "sandrush": 0.10304183260081717
+      },
+      "items_json": {
+        "leftovers": 0.028906435103667416,
+        "focussash": 0.010423983131287617,
+        "lifeorb": 0.10304183260081717,
+        "choicescarf": 0.032223140616827683
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.06774229094029965,
+        "Jolly:0/252/0/0/0/252": 8.84313733351405e-11,
+        "Jolly:28/0/0/0/228/252": 0.003654936868046854,
+        "Adamant:0/252/4/0/0/252": 0.10304183260081717,
+        "Jolly:252/252/0/0/0/4": 0.0001563309550048353
+      },
+      "moves_json": {
+        "earthquake": 0.1745953914525999,
+        "ironhead": 0.16417140832131227,
+        "rapidspin": 0.1423722508357722,
+        "swordsdance": 0.1281369998814329,
+        "stealthrock": 0.046302060616162155,
+        "rocktomb": 0.010423983131287617,
+        "toxic": 0.0001563309550048353,
+        "rockslide": 0.032223140616827683
+      },
+      "tera_json": {
+        "nothing": 0.1745953914525999
+      },
+      "happiness_json": {
+        "255": 0.1745953914525999
+      },
+      "teammates_json": {
+        "Amoonguss": 0.10798114290834326,
+        "Hydreigon": 0.0014407043944840714,
+        "Chansey": 0.03366384509974313,
+        "Darmanitan": 0.001284373439479236,
+        "Swampert": 0.001284373439479236,
+        "Celesteela": 0.02931593510063507,
+        "Cloyster": 0.010423983131287617,
+        "Mimikyu": 3.4282796600559884e-05,
+        "Salamence": 0.019008680669974076,
+        "Thundurus-Therian": 0.051223260345323096,
+        "Scizor": 0.13537100518837897,
+        "Skarmory": 0.0,
+        "Keldeo": 0.01889195188091608,
+        "Rotom-Wash": 8.84313733351405e-11,
+        "Primarina": 8.84313733351405e-11,
+        "Krookodile": 0.01889195188091608,
+        "Politoed": 0.003654936868046854,
+        "Kingdra": 0.003654936868046854,
+        "Gyarados": 0.003654936868046854,
+        "Tornadus": 0.003654936868046854,
+        "Vanilluxe": 0.0,
+        "Azelf": 0.0,
+        "Slowking": 0.0,
+        "Zarude": 0.0,
+        "Nidoking": 0.10304183260081717,
+        "Araquanid": 0.10304183260081717,
+        "Hippowdon": 0.10304183260081717,
+        "Conkeldurr": 0.010546031289691893,
+        "Azumarill": 0.010389700334687058,
+        "Polteageist": 0.010389700334687058,
+        "Tangrowth": 0.032223140616827683,
+        "Rotom-Heat": 0.032223140616827683,
+        "Scolipede": 5.0298984270724656e-05
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Froslass",
+      "usage_count": 34,
+      "usage_pct": 2.84,
+      "viability_json": [
+        2,
+        65,
+        65,
+        65
+      ],
+      "abilities_json": {
+        "cursedbody": 0.09173654006253751
+      },
+      "items_json": {
+        "focussash": 0.09173654006253751
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.09173654006253751,
+        "Timid:0/0/4/252/0/252": 0.0
+      },
+      "moves_json": {
+        "spikes": 0.09173654006253751,
+        "icywind": 0.09173654006253751,
+        "taunt": 0.09173654006253751,
+        "willowisp": 0.09173654006253751,
+        "destinybond": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.09173654006253751
+      },
+      "happiness_json": {
+        "255": 0.09173654006253751
+      },
+      "teammates_json": {
+        "Slurpuff": 0.07412302377975577,
+        "Cloyster": 0.07412302377975577,
+        "Blastoise": 0.07412302377975577,
+        "Mimikyu": 0.07412302377975577,
+        "Slowbro-Galar": 0.07412302377975577,
+        "Rotom-Frost": 0.0,
+        "Haxorus": 0.0,
+        "Barbaracle": 0.0,
+        "Polteageist": 0.0,
+        "Indeedee": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Glastrier",
+      "usage_count": 1,
+      "usage_pct": 0.01,
+      "viability_json": [
+        1,
+        43,
+        43,
+        43
+      ],
+      "abilities_json": {
+        "chillingneigh": 0.000296737855173812
+      },
+      "items_json": {
+        "heavydutyboots": 0.000296737855173812
+      },
+      "spreads_json": {
+        "Brave:248/252/0/0/8/0": 0.000296737855173812
+      },
+      "moves_json": {
+        "swordsdance": 0.000296737855173812,
+        "iciclecrash": 0.000296737855173812,
+        "closecombat": 0.000296737855173812,
+        "highhorsepower": 0.000296737855173812
+      },
+      "tera_json": {
+        "nothing": 0.000296737855173812
+      },
+      "happiness_json": {
+        "255": 0.000296737855173812
+      },
+      "teammates_json": {
+        "Hatterene": 0.000296737855173812,
+        "Marowak-Alola": 0.000296737855173812,
+        "Stakataka": 0.000296737855173812,
+        "Cresselia": 0.000296737855173812,
+        "Crawdaunt": 0.000296737855173812
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Golisopod",
+      "usage_count": 4,
+      "usage_pct": 0.08,
+      "viability_json": [
+        1,
+        50,
+        50,
+        50
+      ],
+      "abilities_json": {
+        "emergencyexit": 0.002144175920214819
+      },
+      "items_json": {
+        "lifeorb": 0.002144175920214819
+      },
+      "spreads_json": {
+        "Adamant:252/252/0/0/4/0": 0.002144175920214819
+      },
+      "moves_json": {
+        "firstimpression": 0.002144175920214819,
+        "aquajet": 0.002144175920214819,
+        "drillrun": 0.002144175920214819,
+        "liquidation": 0.002144175920214819
+      },
+      "tera_json": {
+        "nothing": 0.002144175920214819
+      },
+      "happiness_json": {
+        "255": 0.002144175920214819
+      },
+      "teammates_json": {
+        "Darmanitan": 0.0019408016558463692,
+        "Haxorus": 0.0019969140390287965,
+        "Krookodile": 0.0019969140390287965,
+        "Xurkitree": 0.0019969140390287965,
+        "Bewear": 0.0019969140390287965,
+        "Salazzle": 5.6112383182427283e-05
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Golurk",
+      "usage_count": 5,
+      "usage_pct": 0.22,
+      "viability_json": [
+        1,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "ironfist": 0.005859276696694116
+      },
+      "items_json": {
+        "choiceband": 0.005859276696694116
+      },
+      "spreads_json": {
+        "Adamant:252/252/0/0/0/4": 0.005859276696694116
+      },
+      "moves_json": {
+        "poltergeist": 0.005859276696694116,
+        "thunderpunch": 0.005859276696694116,
+        "icepunch": 0.005859276696694116,
+        "earthquake": 0.005859276696694116
+      },
+      "tera_json": {
+        "nothing": 0.005859276696694116
+      },
+      "happiness_json": {
+        "255": 0.005859276696694116
+      },
+      "teammates_json": {
+        "Umbreon": 0.005859276696694116,
+        "Crobat": 0.005859276696694116,
+        "Milotic": 0.005859276696694116,
+        "Sylveon": 0.005859276696694116,
+        "Bronzong": 0.005859276696694116
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Gyarados",
+      "usage_count": 9,
+      "usage_pct": 0.14,
+      "viability_json": [
+        6,
+        55,
+        55,
+        52
+      ],
+      "abilities_json": {
+        "moxie": 0.003654936868046854,
+        "intimidate": 0.0
+      },
+      "items_json": {
+        "leftovers": 0.003654936868046854,
+        "mysticwater": 0.0,
+        "nothing": 0.0,
+        "focussash": 0.0
+      },
+      "spreads_json": {
+        "Adamant:0/252/0/0/4/252": 0.003654936868046854,
+        "Jolly:0/252/0/0/4/252": 0.0,
+        "Hasty:0/252/0/4/0/252": 0.0,
+        "Hardy:68/208/52/32/60/56": 0.0
+      },
+      "moves_json": {
+        "substitute": 0.003654936868046854,
+        "dragondance": 0.003654936868046854,
+        "waterfall": 0.003654936868046854,
+        "bounce": 0.003654936868046854,
+        "icefang": 0.0,
+        "powerwhip": 0.0,
+        "taunt": 0.0,
+        "aquatail": 0.0,
+        "hydropump": 0.0,
+        "icebeam": 0.0,
+        "earthquake": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.003654936868046854
+      },
+      "happiness_json": {
+        "255": 0.003654936868046854
+      },
+      "teammates_json": {
+        "Excadrill": 0.003654936868046854,
+        "Politoed": 0.003654936868046854,
+        "Kingdra": 0.003654936868046854,
+        "Tornadus": 0.003654936868046854,
+        "Amoonguss": 0.003654936868046854,
+        "Hippowdon": 0.0,
+        "Celesteela": 0.0,
+        "Thundurus-Therian": 0.0,
+        "Rotom-Wash": 0.0,
+        "Krookodile": 0.0,
+        "Salamence": 0.0,
+        "Cobalion": 0.0,
+        "Necrozma": 0.0,
+        "Scolipede": 0.0,
+        "Obstagoon": 0.0,
+        "Lucario": 0.0,
+        "Steelix": 0.0,
+        "Crobat": 0.0,
+        "Grimmsnarl": 0.0,
+        "Reuniclus": 0.0,
+        "Aggron": 0.0,
+        "Rotom-Heat": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Hatterene",
+      "usage_count": 26,
+      "usage_pct": 47.16,
+      "viability_json": [
+        11,
+        81,
+        81,
+        62
+      ],
+      "abilities_json": {
+        "magicbounce": 1.9704079444598817
+      },
+      "items_json": {
+        "leftovers": 1.9701112066047077,
+        "focussash": 0.000296737855173812,
+        "choicespecs": 0.0
+      },
+      "spreads_json": {
+        "Modest:252/0/0/252/4/0": 6.064280031881086e-05,
+        "Bold:252/0/236/0/0/20": 0.007610531772960505,
+        "Quiet:252/0/0/252/4/0": 0.000296737855173812,
+        "Bold:252/0/244/0/0/12": 1.9576210741817084,
+        "Modest:252/0/0/228/0/28": 0.004818957849720196,
+        "Quiet:92/0/0/120/252/44": 0.0
+      },
+      "moves_json": {
+        "calmmind": 1.9701112066047077,
+        "drainingkiss": 1.9701112066047077,
+        "psychic": 6.064280031881086e-05,
+        "shadowball": 6.064280031881086e-05,
+        "psyshock": 1.970050563804389,
+        "mysticalfire": 1.9692516043149224,
+        "trickroom": 0.000296737855173812,
+        "mistyexplosion": 0.000296737855173812,
+        "healingwish": 0.000296737855173812,
+        "thunderwave": 0.0010956973446403784,
+        "darkpulse": 0.0,
+        "dazzlinggleam": 0.0,
+        "expandingforce": 0.0
+      },
+      "tera_json": {
+        "nothing": 1.9704079444598817
+      },
+      "happiness_json": {
+        "255": 1.9704079444598817
+      },
+      "teammates_json": {
+        "Araquanid": 6.064280031881086e-05,
+        "Thundurus-Therian": 6.064280031881086e-05,
+        "Darmanitan": 1.2308237996421232,
+        "Mamoswine": 6.064280031881086e-05,
+        "Azumarill": 6.064280031881086e-05,
+        "Torkoal": 1.2307631568418045,
+        "Venusaur": 1.2307631568418045,
+        "Swampert": 0.005308447256405058,
+        "Celesteela": 0.005308447256405058,
+        "Marowak-Alola": 0.000296737855173812,
+        "Glastrier": 0.000296737855173812,
+        "Stakataka": 0.000296737855173812,
+        "Cresselia": 0.000296737855173812,
+        "Crawdaunt": 0.000296737855173812,
+        "Hydreigon": 1.223389128843848,
+        "Scizor": 1.223389128843848,
+        "Charizard": 0.0020655807415508876,
+        "Cobalion": 0.0020655807415508876,
+        "Porygon2": 0.0,
+        "Conkeldurr": 0.0,
+        "Regieleki": 0.0,
+        "Skarmory": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Haxorus",
+      "usage_count": 9,
+      "usage_pct": 0.08,
+      "viability_json": [
+        2,
+        62,
+        62,
+        62
+      ],
+      "abilities_json": {
+        "moldbreaker": 0.002144175920214819
+      },
+      "items_json": {
+        "choicescarf": 0.002144175920214819,
+        "lumberry": 0.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.002144175920214819
+      },
+      "moves_json": {
+        "outrage": 0.002144175920214819,
+        "closecombat": 0.002144175920214819,
+        "earthquake": 0.002144175920214819,
+        "poisonjab": 0.002144175920214819,
+        "dragondance": 0.0,
+        "firstimpression": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.002144175920214819
+      },
+      "happiness_json": {
+        "255": 0.002144175920214819
+      },
+      "teammates_json": {
+        "Darmanitan": 0.0019408016558463692,
+        "Krookodile": 0.0019969140390287965,
+        "Xurkitree": 0.0019969140390287965,
+        "Golisopod": 0.0019969140390287965,
+        "Bewear": 0.0019969140390287965,
+        "Salazzle": 5.6112383182427283e-05,
+        "Froslass": 0.0,
+        "Rotom-Frost": 0.0,
+        "Barbaracle": 0.0,
+        "Polteageist": 0.0,
+        "Indeedee": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Hippowdon",
+      "usage_count": 47,
+      "usage_pct": 10.92,
+      "viability_json": [
+        10,
+        68,
+        68,
+        67
+      ],
+      "abilities_json": {
+        "sandstream": 0.28555378217258265
+      },
+      "items_json": {
+        "leftovers": 0.18251194957176547,
+        "smoothrock": 0.10304183260081717
+      },
+      "spreads_json": {
+        "Impish:252/8/32/0/216/0": 0.17253188433605393,
+        "Impish:252/0/252/0/4/0": 0.0,
+        "Impish:252/0/36/0/220/0": 0.004168010890548024,
+        "Relaxed:252/0/248/0/8/0": 0.10304183260081717,
+        "Impish:252/8/32/0/212/4": 0.00581205434516352,
+        "Impish:252/0/112/0/144/0": 0.0
+      },
+      "moves_json": {
+        "stealthrock": 0.28555378217258265,
+        "earthquake": 0.28555378217258265,
+        "roar": 1.8922644803298638e-06,
+        "slackoff": 0.28555378217258265,
+        "whirlwind": 0.1725299920715736,
+        "toxic": 0.009980065235711544,
+        "yawn": 0.10304183260081717
+      },
+      "tera_json": {
+        "nothing": 0.28555378217258265
+      },
+      "happiness_json": {
+        "255": 0.28555378217258265
+      },
+      "teammates_json": {
+        "Milotic": 1.8806378478397612e-06,
+        "Scizor": 0.2793195288198705,
+        "Chansey": 1.8806378478397612e-06,
+        "Skarmory": 1.8806378478397612e-06,
+        "Reuniclus": 1.8800987535150249e-06,
+        "Amoonguss": 0.2755718246723908,
+        "Lycanroc-Dusk": 0.1725299920715736,
+        "Salamence": 0.1725299920715736,
+        "Hydreigon": 0.182087869926369,
+        "Gyarados": 0.0,
+        "Celesteela": 0.0037458235096318737,
+        "Thundurus-Therian": 0.0,
+        "Rotom-Wash": 0.00581205434516352,
+        "Slowking": 0.0037458235096318737,
+        "Conkeldurr": 0.0037458235096318737,
+        "Nidoking": 0.10304183260081717,
+        "Araquanid": 0.10304183260081717,
+        "Excadrill": 0.10304183260081717,
+        "Keldeo": 5.390943247363111e-10,
+        "Crobat": 0.00581205434516352,
+        "Cobalion": 0.00581205434516352,
+        "Tangrowth": 0.00581205434516352
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Hydreigon",
+      "usage_count": 48,
+      "usage_pct": 63.59,
+      "viability_json": [
+        16,
+        81,
+        81,
+        67
+      ],
+      "abilities_json": {
+        "levitate": 2.528689231166367
+      },
+      "items_json": {
+        "choicespecs": 0.178342046781229,
+        "leftovers": 0.001284373439479236,
+        "choicescarf": 2.349062810945659,
+        "expertbelt": 0.0,
+        "wiseglasses": 0.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.5661952562443318,
+        "Hasty:0/0/0/252/4/252": 1.9565253768370678,
+        "Hardy:0/0/128/252/128/0": 0.0,
+        "Timid:0/0/4/252/0/252": 0.005812267129962523,
+        "Modest:0/0/0/252/0/252": 0.0001563309550048353
+      },
+      "moves_json": {
+        "dracometeor": 2.5272483139870836,
+        "darkpulse": 2.528689231166367,
+        "flamethrower": 0.17849837773623384,
+        "uturn": 2.5214362592774284,
+        "dragonpulse": 0.0014409171792830744,
+        "substitute": 0.001284373439479236,
+        "nastyplot": 0.001284373439479236,
+        "fireblast": 2.3447382563153067,
+        "defog": 0.004168010890548024,
+        "flashcannon": 0.00015633131949671641,
+        "dragonbreath": 0.0,
+        "sleeptalk": 0.00581205434516352,
+        "earthpower": 2.127847990029963e-07,
+        "headsmash": 2.127847990029963e-07
+      },
+      "tera_json": {
+        "nothing": 2.528689231166367
+      },
+      "happiness_json": {
+        "255": 2.528689231166367
+      },
+      "teammates_json": {
+        "Amoonguss": 0.42710633970620704,
+        "Lycanroc-Dusk": 0.1725299920715736,
+        "Salamence": 0.17261243797559966,
+        "Scizor": 1.6530629509554342,
+        "Hippowdon": 0.182087869926369,
+        "Excadrill": 0.0014407043944840714,
+        "Chansey": 0.0014407043944840714,
+        "Darmanitan": 1.4779654764784818,
+        "Swampert": 0.001284373439479236,
+        "Primarina": 0.2532919741951542,
+        "Mandibuzz": 0.2532919741951542,
+        "Torkoal": 1.223389128843848,
+        "Venusaur": 1.223389128843848,
+        "Hatterene": 1.223389128843848,
+        "Slowking": 0.0037458235096318737,
+        "Celesteela": 0.0037458235096318737,
+        "Conkeldurr": 0.003902154464636709,
+        "Mamoswine": 3.644918811218645e-10,
+        "Crobat": 0.005812054709655401,
+        "Nihilego": 3.644918811218645e-10,
+        "Rotom-Wash": 0.005812054709655401,
+        "Pangoro": 0.0,
+        "Regieleki": 0.0,
+        "Regigigas": 0.0,
+        "Guzzlord": 0.0,
+        "Accelgor": 0.0,
+        "Cobalion": 0.00581205434516352,
+        "Tangrowth": 0.00581205434516352,
+        "Thundurus-Therian": 7.388505097877252e-05,
+        "Scolipede": 5.0298984270724656e-05,
+        "Jellicent": 0.0,
+        "Nidoking": 0.0,
+        "Skarmory": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Inteleon",
+      "usage_count": 4,
+      "usage_pct": 0.57,
+      "viability_json": [
+        2,
+        56,
+        56,
+        56
+      ],
+      "abilities_json": {
+        "sniper": 0.01666230480043135
+      },
+      "items_json": {
+        "heavydutyboots": 0.01666230480043135,
+        "choicescarf": 0.0
+      },
+      "spreads_json": {
+        "Hasty:0/4/0/252/0/252": 0.01666230480043135,
+        "Hardy:4/0/0/252/0/252": 0.0
+      },
+      "moves_json": {
+        "snipeshot": 0.01666230480043135,
+        "aquajet": 0.01666230480043135,
+        "icebeam": 0.01666230480043135,
+        "focusenergy": 0.01666230480043135,
+        "uturn": 0.0,
+        "raindance": 0.0,
+        "hydropump": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.01666230480043135
+      },
+      "happiness_json": {
+        "255": 0.01666230480043135
+      },
+      "teammates_json": {
+        "Celesteela": 0.014990189126942166,
+        "Darmanitan": 0.014990189126942166,
+        "Reuniclus": 0.014990189126942166,
+        "Regieleki": 0.014990189126942166,
+        "Scizor": 0.014990189126942166
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Jirachi",
+      "usage_count": 6,
+      "usage_pct": 0.22,
+      "viability_json": [
+        2,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "serenegrace": 0.005804514495126811
+      },
+      "items_json": {
+        "leftovers": 0.005804514495126811
+      },
+      "spreads_json": {
+        "Jolly:252/0/0/0/40/216": 0.0,
+        "Jolly:252/4/0/0/0/252": 0.005804514495126811
+      },
+      "moves_json": {
+        "ironhead": 0.005804514495126811,
+        "stealthrock": 0.0,
+        "uturn": 0.0,
+        "zenheadbutt": 0.0,
+        "substitute": 0.005804514495126811,
+        "firepunch": 0.005804514495126811,
+        "toxic": 0.005804514495126811
+      },
+      "tera_json": {
+        "nothing": 0.005804514495126811
+      },
+      "happiness_json": {
+        "255": 0.005804514495126811
+      },
+      "teammates_json": {
+        "Politoed": 0.0,
+        "Azumarill": 0.0,
+        "Diggersby": 0.0,
+        "Tentacruel": 0.0,
+        "Keldeo": 0.0,
+        "Rotom-Heat": 0.005804514495126811,
+        "Tangrowth": 0.005804514495126811,
+        "Slowking": 0.005804514495126811,
+        "Darmanitan": 0.005804514495126811,
+        "Skarmory": 0.005804514495126811
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Keldeo",
+      "usage_count": 12,
+      "usage_pct": 0.91,
+      "viability_json": [
+        6,
+        59,
+        59,
+        54
+      ],
+      "abilities_json": {
+        "justified": 0.02859797449554491
+      },
+      "items_json": {
+        "choicespecs": 0.00478717433887943,
+        "leftovers": 0.02381080015666548,
+        "lifeorb": 0.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.00478717319998434,
+        "Timid:252/0/4/0/0/252": 0.023810793752705117,
+        "Timid:0/0/0/252/0/252": 7.542855451347918e-09
+      },
+      "moves_json": {
+        "hydropump": 0.00478717319998434,
+        "secretsword": 0.02859797449554491,
+        "icywind": 0.00478717319998434,
+        "flipturn": 0.00478717433887943,
+        "airslash": 1.1388950893476135e-09,
+        "surf": 0.02381080129556057,
+        "calmmind": 0.02381080015666548,
+        "substitute": 0.02381080015666548,
+        "scald": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.02859797449554491
+      },
+      "happiness_json": {
+        "255": 0.02859797449554491
+      },
+      "teammates_json": {
+        "Scizor": 5.390943247363111e-10,
+        "Salamence": 0.02367912508090042,
+        "Excadrill": 0.01889195188091608,
+        "Skarmory": 5.390943247363111e-10,
+        "Rotom-Wash": 0.0,
+        "Politoed": 0.0,
+        "Azumarill": 0.0,
+        "Diggersby": 0.0,
+        "Tentacruel": 0.0,
+        "Jirachi": 0.0,
+        "Krookodile": 0.01889195188091608,
+        "Celesteela": 0.01889195188091608,
+        "Thundurus-Therian": 0.01889195188091608,
+        "Mamoswine": 0.00478717319998434,
+        "Conkeldurr": 0.00478717319998434,
+        "Klefki": 0.00478717319998434,
+        "Regieleki": 0.00478717319998434,
+        "Salazzle": 0.0,
+        "Slowking": 0.0,
+        "Tangrowth": 0.0,
+        "Milotic": 5.390943247363111e-10,
+        "Hippowdon": 5.390943247363111e-10,
+        "Chansey": 5.390943247363111e-10
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Kingdra",
+      "usage_count": 2,
+      "usage_pct": 0.14,
+      "viability_json": [
+        1,
+        52,
+        52,
+        52
+      ],
+      "abilities_json": {
+        "swiftswim": 0.003654936868046854
+      },
+      "items_json": {
+        "choicespecs": 0.003654936868046854
+      },
+      "spreads_json": {
+        "Modest:0/4/0/252/0/252": 0.003654936868046854
+      },
+      "moves_json": {
+        "flipturn": 0.003654936868046854,
+        "hurricane": 0.003654936868046854,
+        "hydropump": 0.003654936868046854,
+        "dracometeor": 0.003654936868046854
+      },
+      "tera_json": {
+        "nothing": 0.003654936868046854
+      },
+      "happiness_json": {
+        "255": 0.003654936868046854
+      },
+      "teammates_json": {
+        "Excadrill": 0.003654936868046854,
+        "Politoed": 0.003654936868046854,
+        "Gyarados": 0.003654936868046854,
+        "Tornadus": 0.003654936868046854,
+        "Amoonguss": 0.003654936868046854
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Klefki",
+      "usage_count": 4,
+      "usage_pct": 2.08,
+      "viability_json": [
+        3,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "prankster": 0.054318962611567934
+      },
+      "items_json": {
+        "leftovers": 0.054318962611567934,
+        "ejectbutton": 0.0
+      },
+      "spreads_json": {
+        "Calm:252/0/0/0/240/16": 0.00478717319998434,
+        "Impish:252/0/20/0/236/0": 0.0,
+        "Impish:248/8/252/0/0/0": 0.04953178941158359
+      },
+      "moves_json": {
+        "lightscreen": 0.00478717319998434,
+        "spikes": 0.00478717319998434,
+        "thunderwave": 0.054318962611567934,
+        "foulplay": 0.00478717319998434,
+        "playrough": 0.04953178941158359,
+        "defog": 0.04953178941158359,
+        "sunnyday": 0.04953178941158359
+      },
+      "tera_json": {
+        "nothing": 0.054318962611567934
+      },
+      "happiness_json": {
+        "255": 0.054318962611567934
+      },
+      "teammates_json": {
+        "Keldeo": 0.00478717319998434,
+        "Mamoswine": 0.00478717319998434,
+        "Salamence": 0.00478717319998434,
+        "Conkeldurr": 0.00478717319998434,
+        "Regieleki": 0.00478717319998434,
+        "Slowking": 0.0,
+        "Salazzle": 0.04953178941158359,
+        "Thundurus-Therian": 0.0,
+        "Zygarde-10%": 0.0,
+        "Snorlax": 0.0,
+        "Swampert": 0.04953178941158359,
+        "Tapu Bulu": 0.04953178941158359,
+        "Darmanitan": 0.04953178941158359,
+        "Magneton": 0.04953178941158359
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Krookodile",
+      "usage_count": 44,
+      "usage_pct": 0.8,
+      "viability_json": [
+        8,
+        59,
+        59,
+        58
+      ],
+      "abilities_json": {
+        "moxie": 0.002144184299000207,
+        "intimidate": 0.023810793752705117
+      },
+      "items_json": {
+        "choicescarf": 0.002144184299000207,
+        "rockyhelmet": 0.023810793752705117,
+        "leftovers": 0.0
+      },
+      "spreads_json": {
+        "Jolly:4/252/0/0/0/252": 8.360407144358817e-09,
+        "Impish:252/4/252/0/0/0": 0.023810793752705117,
+        "Jolly:80/176/0/0/0/252": 0.0,
+        "Jolly:0/252/0/0/4/252": 0.0,
+        "Adamant:4/252/0/0/0/252": 1.8378243371586223e-11,
+        "Adamant:0/252/0/0/4/252": 0.002144175920214819,
+        "Jolly:80/0/204/0/0/224": 0.0
+      },
+      "moves_json": {
+        "knockoff": 0.025954978051705324,
+        "taunt": 0.02381080202289093,
+        "closecombat": 8.378785387730403e-09,
+        "earthquake": 0.025954978051705324,
+        "stealthrock": 0.023810793752705117,
+        "stoneedge": 0.002144176028814393,
+        "crunch": 0.002144175920214819
+      },
+      "tera_json": {
+        "nothing": 0.025954978051705324
+      },
+      "happiness_json": {
+        "255": 0.025954978051705324
+      },
+      "teammates_json": {
+        "Venusaur": 5.107210099275505e-09,
+        "Ninetales": 5.107210099275505e-09,
+        "Torkoal": 5.107051004316077e-09,
+        "Salamence": 0.018891956986685665,
+        "Xurkitree": 0.0019969191462388958,
+        "Celesteela": 0.01889195188091608,
+        "Excadrill": 0.01889195188091608,
+        "Thundurus-Therian": 0.01889195188091608,
+        "Keldeo": 0.01889195188091608,
+        "Primarina": 0.0,
+        "Gyarados": 0.0,
+        "Cobalion": 0.0,
+        "Necrozma": 0.0,
+        "Scolipede": 0.0,
+        "Scizor": 0.0,
+        "Slowking": 0.0,
+        "Amoonguss": 0.0,
+        "Darmanitan": 0.0019408016574459785,
+        "Haxorus": 0.0019969140390287965,
+        "Golisopod": 0.0019969140390287965,
+        "Bewear": 0.0019969140390287965,
+        "Salazzle": 5.6112383182427283e-05,
+        "Zarude": 0.0,
+        "Tangrowth": 0.0,
+        "Nihilego": 0.0,
+        "Tentacruel": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Lycanroc-Dusk",
+      "usage_count": 12,
+      "usage_pct": 6.61,
+      "viability_json": [
+        5,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "toughclaws": 0.18742799938871513
+      },
+      "items_json": {
+        "choiceband": 0.1725299920715736,
+        "lifeorb": 0.014898007317141526,
+        "focussash": 0.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.18742793965717558,
+        "Jolly:0/252/4/0/0/252": 5.973153954785815e-08,
+        "Hardy:0/252/0/0/0/252": 0.0
+      },
+      "moves_json": {
+        "stoneedge": 0.18742799938871513,
+        "closecombat": 0.18742799938871513,
+        "psychicfangs": 0.18742793965717558,
+        "accelerock": 0.18742799938871513,
+        "swordsdance": 5.973153954785815e-08,
+        "drillrun": 0.0,
+        "playrough": 0.0,
+        "ironhead": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.18742799938871513
+      },
+      "happiness_json": {
+        "255": 0.18742799938871513
+      },
+      "teammates_json": {
+        "Amoonguss": 0.1725299920715736,
+        "Salamence": 0.1725299920715736,
+        "Scizor": 0.17252999576017997,
+        "Hydreigon": 0.1725299920715736,
+        "Hippowdon": 0.1725299920715736,
+        "Ribombee": 3.688606364793401e-09,
+        "Cloyster": 3.688606364793401e-09,
+        "Polteageist": 3.688606364793401e-09,
+        "Nihilego": 3.688606364793401e-09,
+        "Obstagoon": 0.0,
+        "Wishiwashi": 0.0,
+        "Machamp": 0.0,
+        "Togekiss": 0.0,
+        "Zarude": 0.0,
+        "Jellicent": 0.0,
+        "Nidoking": 0.0,
+        "Chansey": 0.0,
+        "Conkeldurr": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Magneton",
+      "usage_count": 1,
+      "usage_pct": 1.9,
+      "viability_json": [
+        1,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "magnetpull": 0.04953178941158359
+      },
+      "items_json": {
+        "eviolite": 0.04953178941158359
+      },
+      "spreads_json": {
+        "Modest:160/0/0/252/96/0": 0.04953178941158359
+      },
+      "moves_json": {
+        "voltswitch": 0.04953178941158359,
+        "thunderwave": 0.04953178941158359,
+        "thunderbolt": 0.04953178941158359,
+        "flashcannon": 0.04953178941158359
+      },
+      "tera_json": {
+        "nothing": 0.04953178941158359
+      },
+      "happiness_json": {
+        "255": 0.04953178941158359
+      },
+      "teammates_json": {
+        "Swampert": 0.04953178941158359,
+        "Tapu Bulu": 0.04953178941158359,
+        "Darmanitan": 0.04953178941158359,
+        "Salazzle": 0.04953178941158359,
+        "Klefki": 0.04953178941158359
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Mamoswine",
+      "usage_count": 15,
+      "usage_pct": 0.2,
+      "viability_json": [
+        9,
+        64,
+        64,
+        60
+      ],
+      "abilities_json": {
+        "thickfat": 0.0106847870360679,
+        "oblivious": 0.0003106262124490389
+      },
+      "items_json": {
+        "focussash": 6.0643164810691985e-05,
+        "leftovers": 0.00478717319998434,
+        "assaultvest": 0.0,
+        "lifeorb": 0.0058369706712728675,
+        "choiceband": 0.0,
+        "nevermeltice": 0.0003106262124490389
+      },
+      "spreads_json": {
+        "Adamant:0/252/180/0/4/64": 6.064280031881086e-05,
+        "Adamant:0/252/0/0/4/252": 0.005097799412433379,
+        "Jolly:0/252/4/0/0/252": 3.644918811218645e-10,
+        "Jolly:0/252/0/0/4/252": 0.0058369706712728675
+      },
+      "moves_json": {
+        "stealthrock": 0.004847816364795032,
+        "earthquake": 0.010995413248516939,
+        "iceshard": 0.006208240048532598,
+        "iciclecrash": 0.010995413248516939,
+        "knockoff": 0.010934770083706247
+      },
+      "tera_json": {
+        "nothing": 0.010995413248516939
+      },
+      "happiness_json": {
+        "255": 0.010995413248516939
+      },
+      "teammates_json": {
+        "Araquanid": 6.064280031881086e-05,
+        "Thundurus-Therian": 6.064280031881086e-05,
+        "Darmanitan": 6.064280031881086e-05,
+        "Azumarill": 6.064280031881086e-05,
+        "Hatterene": 6.064280031881086e-05,
+        "Keldeo": 0.00478717319998434,
+        "Salamence": 0.005097799412433379,
+        "Conkeldurr": 0.00478717319998434,
+        "Klefki": 0.00478717319998434,
+        "Regieleki": 0.00478717319998434,
+        "Hydreigon": 3.644918811218645e-10,
+        "Scizor": 3.644918811218645e-10,
+        "Crobat": 3.644918811218645e-10,
+        "Nihilego": 3.644918811218645e-10,
+        "Rotom-Wash": 3.644918811218645e-10,
+        "Amoonguss": 0.0003106262124490389,
+        "Chandelure": 0.0,
+        "Umbreon": 0.0,
+        "Bewear": 0.0,
+        "Slurpuff": 0.0,
+        "Celesteela": 0.0,
+        "Slowking": 0.0,
+        "Tangrowth": 0.0,
+        "Moltres": 0.0,
+        "Zygarde-10%": 0.0,
+        "Tentacruel": 0.0,
+        "Scolipede": 0.0,
+        "Salazzle": 0.0,
+        "Stakataka": 0.0,
+        "Reuniclus": 0.0,
+        "Raikou": 0.0003106262124490389,
+        "Primarina": 0.0003106262124490389,
+        "Cobalion": 0.0003106262124490389
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Mandibuzz",
+      "usage_count": 6,
+      "usage_pct": 9.7,
+      "viability_json": [
+        3,
+        72,
+        72,
+        72
+      ],
+      "abilities_json": {
+        "overcoat": 0.3992617526110312,
+        "bigpecks": 0.0
+      },
+      "items_json": {
+        "heavydutyboots": 0.3992617526110312
+      },
+      "spreads_json": {
+        "Impish:248/0/164/0/0/96": 0.3992617526110312,
+        "Jolly:0/252/0/0/4/252": 0.0
+      },
+      "moves_json": {
+        "roost": 0.3992617526110312,
+        "foulplay": 0.3992617526110312,
+        "defog": 0.3992617526110312,
+        "uturn": 0.3992617526110312,
+        "bravebird": 0.0,
+        "gigaimpact": 0.0,
+        "knockoff": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.3992617526110312
+      },
+      "happiness_json": {
+        "255": 0.3992617526110312
+      },
+      "teammates_json": {
+        "Darmanitan": 0.2532919741951542,
+        "Amoonguss": 0.2532919741951542,
+        "Primarina": 0.2532919741951542,
+        "Hydreigon": 0.2532919741951542,
+        "Scizor": 0.2532919741951542,
+        "Chandelure": 0.0,
+        "Rotom-Wash": 0.0,
+        "Celesteela": 0.0,
+        "Flygon": 0.0,
+        "Leafeon": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Marowak-Alola",
+      "usage_count": 4,
+      "usage_pct": 0.16,
+      "viability_json": [
+        3,
+        53,
+        53,
+        53
+      ],
+      "abilities_json": {
+        "rockhead": 0.000296737855173812,
+        "lightningrod": 0.003943233847626404
+      },
+      "items_json": {
+        "thickclub": 0.004239971702800216
+      },
+      "spreads_json": {
+        "Brave:248/252/0/0/8/0": 0.000296737855173812,
+        "Adamant:248/252/0/0/8/0": 0.003943233847626404
+      },
+      "moves_json": {
+        "swordsdance": 0.000296737855173812,
+        "flareblitz": 0.004239971702800216,
+        "poltergeist": 0.000296737855173812,
+        "earthquake": 0.000296737855173812,
+        "bonemerang": 0.003943233847626404,
+        "knockoff": 0.003943233847626404,
+        "shadowbone": 0.003943233847626404
+      },
+      "tera_json": {
+        "nothing": 0.004239971702800216
+      },
+      "happiness_json": {
+        "255": 0.004239971702800216
+      },
+      "teammates_json": {
+        "Hatterene": 0.000296737855173812,
+        "Glastrier": 0.000296737855173812,
+        "Stakataka": 0.000296737855173812,
+        "Cresselia": 0.000296737855173812,
+        "Crawdaunt": 0.000296737855173812,
+        "Porygon2": 0.0,
+        "Conkeldurr": 0.0,
+        "Torkoal": 0.003943233847626404,
+        "Venusaur": 0.003943233847626404,
+        "Snorlax": 0.003943233847626404,
+        "Chandelure": 0.003943233847626404,
+        "Zoroark": 0.003943233847626404
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Milotic",
+      "usage_count": 22,
+      "usage_pct": 0.22,
+      "viability_json": [
+        3,
+        64,
+        64,
+        64
+      ],
+      "abilities_json": {
+        "marvelscale": 0.011698139632447313
+      },
+      "items_json": {
+        "flameorb": 0.0058611689611744455,
+        "leftovers": 0.0058369706712728675
+      },
+      "spreads_json": {
+        "Bold:252/0/62/0/196/0": 1.8922644803298638e-06,
+        "Bold:252/0/252/0/4/0": 0.005859276696694116,
+        "Calm:252/0/192/0/64/0": 0.0058369706712728675
+      },
+      "moves_json": {
+        "scald": 0.011698139632447313,
+        "recover": 0.011698139632447313,
+        "toxic": 0.0058611689611744455,
+        "haze": 0.011698139632447313,
+        "icebeam": 0.0058369706712728675
+      },
+      "tera_json": {
+        "nothing": 0.011698139632447313
+      },
+      "happiness_json": {
+        "255": 0.011698139632447313
+      },
+      "teammates_json": {
+        "Hippowdon": 1.8806378478397612e-06,
+        "Scizor": 1.8806378478397612e-06,
+        "Chansey": 1.8806378478397612e-06,
+        "Skarmory": 1.8806378478397612e-06,
+        "Reuniclus": 1.8800987535150249e-06,
+        "Umbreon": 0.005859276696694116,
+        "Crobat": 0.005859276696694116,
+        "Golurk": 0.005859276696694116,
+        "Sylveon": 0.005859276696694116,
+        "Bronzong": 0.005859276696694116,
+        "Keldeo": 5.390943247363111e-10
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Mimikyu",
+      "usage_count": 36,
+      "usage_pct": 2.84,
+      "viability_json": [
+        2,
+        65,
+        65,
+        65
+      ],
+      "abilities_json": {
+        "disguise": 0.09177082285913807
+      },
+      "items_json": {
+        "redcard": 0.062268492081320126,
+        "lifeorb": 0.029502330777817942
+      },
+      "spreads_json": {
+        "Adamant:0/252/0/0/4/252": 3.4282796600559884e-05,
+        "Jolly:0/252/0/0/4/252": 0.09173654006253751
+      },
+      "moves_json": {
+        "swordsdance": 0.09177082285913807,
+        "shadowclaw": 3.4282796600559884e-05,
+        "shadowsneak": 0.09177082285913807,
+        "drainpunch": 3.4282796600559884e-05,
+        "playrough": 0.09173654006253751,
+        "woodhammer": 0.09173654006253751
+      },
+      "tera_json": {
+        "nothing": 0.09177082285913807
+      },
+      "happiness_json": {
+        "255": 0.09177082285913807
+      },
+      "teammates_json": {
+        "Excadrill": 3.4282796600559884e-05,
+        "Celesteela": 3.4282796600559884e-05,
+        "Cloyster": 0.07415730657635633,
+        "Salamence": 3.4282796600559884e-05,
+        "Thundurus-Therian": 3.4282796600559884e-05,
+        "Froslass": 0.07412302377975577,
+        "Slurpuff": 0.07412302377975577,
+        "Blastoise": 0.07412302377975577,
+        "Slowbro-Galar": 0.07412302377975577
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Moltres",
+      "usage_count": 3,
+      "usage_pct": 0.27,
+      "viability_json": [
+        2,
+        54,
+        54,
+        54
+      ],
+      "abilities_json": {
+        "flamebody": 0.0070995514149996275
+      },
+      "items_json": {
+        "heavydutyboots": 0.0070995514149996275
+      },
+      "spreads_json": {
+        "Modest:144/0/36/252/76/0": 0.0070995514149996275,
+        "Timid:0/0/0/252/4/252": 0.0
+      },
+      "moves_json": {
+        "flamethrower": 0.0070995514149996275,
+        "airslash": 0.0070995514149996275,
+        "uturn": 0.0070995514149996275,
+        "roost": 0.0070995514149996275,
+        "hurricane": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.0070995514149996275
+      },
+      "happiness_json": {
+        "255": 0.0070995514149996275
+      },
+      "teammates_json": {
+        "Crobat": 0.0070995514149996275,
+        "Zarude": 0.0070995514149996275,
+        "Xurkitree": 0.0070995514149996275,
+        "Silvally-Fairy": 0.0070995514149996275,
+        "Swampert": 0.0070995514149996275,
+        "Celesteela": 0.0,
+        "Slowking": 0.0,
+        "Tangrowth": 0.0,
+        "Mamoswine": 0.0,
+        "Zygarde-10%": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Necrozma",
+      "usage_count": 6,
+      "usage_pct": 0.19,
+      "viability_json": [
+        3,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "prismarmor": 0.004948736570918322
+      },
+      "items_json": {
+        "powerherb": 0.004948736570918322,
+        "lumberry": 0.0,
+        "nothing": 0.0
+      },
+      "spreads_json": {
+        "Modest:4/0/0/252/0/252": 0.004948736570918322,
+        "Naughty:0/252/0/8/0/248": 0.0,
+        "Modest:252/0/0/252/4/0": 0.0
+      },
+      "moves_json": {
+        "meteorbeam": 0.004948736570918322,
+        "photongeyser": 0.004948736570918322,
+        "heatwave": 0.004948736570918322,
+        "autotomize": 0.004948736570918322,
+        "dragondance": 0.0,
+        "xscissor": 0.0,
+        "psychic": 0.0,
+        "prismaticlaser": 0.0,
+        "powergem": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.004948736570918322
+      },
+      "happiness_json": {
+        "255": 0.004948736570918322
+      },
+      "teammates_json": {
+        "Scolipede": 0.004948736570918322,
+        "Celesteela": 0.004948736570918322,
+        "Conkeldurr": 0.004948736570918322,
+        "Toxtricity": 0.004948736570918322,
+        "Salamence": 0.004948736570918322,
+        "Krookodile": 0.0,
+        "Gyarados": 0.0,
+        "Cobalion": 0.0,
+        "Obstagoon": 0.0,
+        "Lucario": 0.0,
+        "Steelix": 0.0,
+        "Crobat": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Nidoking",
+      "usage_count": 32,
+      "usage_pct": 10.64,
+      "viability_json": [
+        5,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "sheerforce": 0.292781923490442
+      },
+      "items_json": {
+        "lifeorb": 0.292781923490442
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.10591799325791823,
+        "Modest:0/0/0/252/4/252": 0.1868639302325238,
+        "Timid:0/4/0/252/0/252": 0.0
+      },
+      "moves_json": {
+        "sludgewave": 0.292781923490442,
+        "earthpower": 0.292781923490442,
+        "icebeam": 0.10591799325791823,
+        "flamethrower": 0.017774108242703035,
+        "thunderbolt": 0.275007815247739,
+        "fireblast": 0.1719659826469218,
+        "sludgebomb": 0.0,
+        "suckerpunch": 0.0,
+        "stealthrock": 0.014897947585601978
+      },
+      "tera_json": {
+        "nothing": 0.292781923490442
+      },
+      "happiness_json": {
+        "255": 0.292781923490442
+      },
+      "teammates_json": {
+        "Darmanitan": 0.17484190851781067,
+        "Salamence": 0.0028759258708888624,
+        "Conkeldurr": 0.17484190851781067,
+        "Tangrowth": 0.002874426438395361,
+        "Chansey": 0.17484165360941595,
+        "Slowking": 1.0900368489497048e-06,
+        "Primarina": 6.643040392773081e-07,
+        "Amoonguss": 0.10304183260081717,
+        "Araquanid": 0.10304183260081717,
+        "Hippowdon": 0.10304183260081717,
+        "Scizor": 0.10304183260081717,
+        "Excadrill": 0.10304183260081717,
+        "Azumarill": 0.1719659826469218,
+        "Celesteela": 0.1719659826469218,
+        "Durant": 0.0,
+        "Crobat": 0.0,
+        "Togekiss": 0.0,
+        "Jellicent": 0.0,
+        "Lycanroc-Dusk": 0.0,
+        "Hydreigon": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Politoed",
+      "usage_count": 5,
+      "usage_pct": 0.14,
+      "viability_json": [
+        3,
+        52,
+        52,
+        52
+      ],
+      "abilities_json": {
+        "drizzle": 0.003654936868046854
+      },
+      "items_json": {
+        "damprock": 0.003654936868046854
+      },
+      "spreads_json": {
+        "Bold:248/0/252/0/8/0": 0.0,
+        "Bold:252/0/176/80/0/0": 0.003654936868046854,
+        "Calm:248/0/20/0/240/0": 0.0
+      },
+      "moves_json": {
+        "scald": 0.003654936868046854,
+        "icebeam": 0.003654936868046854,
+        "sleeptalk": 0.0,
+        "rest": 0.0,
+        "encore": 0.003654936868046854,
+        "toxic": 0.003654936868046854,
+        "weatherball": 0.0,
+        "earthpower": 0.0,
+        "haze": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.003654936868046854
+      },
+      "happiness_json": {
+        "255": 0.003654936868046854
+      },
+      "teammates_json": {
+        "Azumarill": 0.0,
+        "Diggersby": 0.0,
+        "Tentacruel": 0.0,
+        "Jirachi": 0.0,
+        "Keldeo": 0.0,
+        "Excadrill": 0.003654936868046854,
+        "Kingdra": 0.003654936868046854,
+        "Gyarados": 0.003654936868046854,
+        "Tornadus": 0.003654936868046854,
+        "Amoonguss": 0.003654936868046854,
+        "Chansey": 0.0,
+        "Thundurus-Therian": 0.0,
+        "Ludicolo": 0.0,
+        "Omastar": 0.0,
+        "Toxicroak": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Polteageist",
+      "usage_count": 17,
+      "usage_pct": 5.58,
+      "viability_json": [
+        4,
+        67,
+        67,
+        67
+      ],
+      "abilities_json": {
+        "weakarmor": 0.22551621692318918
+      },
+      "items_json": {
+        "focussash": 0.01756784433595099,
+        "airballoon": 0.2079483725872382,
+        "whiteherb": 0.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.01756784433595099,
+        "Timid:0/0/0/236/20/252": 0.2079483725872382,
+        "Timid:0/0/4/252/0/252": 0.0
+      },
+      "moves_json": {
+        "shellsmash": 0.22551621692318918,
+        "shadowball": 0.22551621692318918,
+        "gigadrain": 0.20794843231877774,
+        "storedpower": 0.22551621692318918,
+        "substitute": 0.01756778460441144
+      },
+      "tera_json": {
+        "nothing": 0.22551621692318918
+      },
+      "happiness_json": {
+        "255": 0.22551621692318918
+      },
+      "teammates_json": {
+        "Salamence": 0.12818505602584085,
+        "Skarmory": 0.12818505602584085,
+        "Diggersby": 0.12818505602584085,
+        "Cobalion": 0.12818505602584085,
+        "Zarude": 0.12818505602584085,
+        "Ribombee": 3.688606364793401e-09,
+        "Cloyster": 0.017567788293017805,
+        "Lycanroc-Dusk": 3.688606364793401e-09,
+        "Nihilego": 3.688606364793401e-09,
+        "Scizor": 3.688606364793401e-09,
+        "Excadrill": 0.010389700334687058,
+        "Conkeldurr": 0.01756778460441144,
+        "Celesteela": 0.01756778460441144,
+        "Azumarill": 0.01756778460441144,
+        "Azelf": 0.007178084269724383,
+        "Froslass": 0.0,
+        "Rotom-Frost": 0.0,
+        "Haxorus": 0.0,
+        "Barbaracle": 0.0,
+        "Indeedee": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Primarina",
+      "usage_count": 13,
+      "usage_pct": 9.71,
+      "viability_json": [
+        8,
+        72,
+        72,
+        59
+      ],
+      "abilities_json": {
+        "liquidvoice": 0.0003106263008804122,
+        "torrent": 0.3843649169004797
+      },
+      "items_json": {
+        "choicespecs": 8.84313733351405e-11,
+        "leftovers": 0.3846753303281297,
+        "lifeorb": 2.127847990029963e-07,
+        "choicescarf": 0.0
+      },
+      "spreads_json": {
+        "Modest:196/0/0/252/0/60": 8.84313733351405e-11,
+        "Modest:212/0/0/160/0/136": 0.3843638050254292,
+        "Bold:252/0/252/0/0/0": 8.990902514716126e-07,
+        "Modest:252/0/0/252/4/0": 0.0,
+        "Modest:0/0/4/252/0/252": 2.127847990029963e-07,
+        "Bold:252/0/252/0/4/0": 0.0003106262124490389,
+        "Hardy:0/0/0/252/4/252": 0.0
+      },
+      "moves_json": {
+        "hypervoice": 8.84313733351405e-11,
+        "moonblast": 0.3846755432013601,
+        "icebeam": 0.38436444929571734,
+        "psychic": 8.84313733351405e-11,
+        "scald": 0.38436466199208497,
+        "substitute": 0.3843638050254292,
+        "toxic": 6.441818567459734e-07,
+        "hydropump": 0.0,
+        "rest": 0.0003108811208437645,
+        "snore": 0.0003108811208437645,
+        "calmmind": 0.0003110939056427675,
+        "blizzard": 2.127847990029963e-07,
+        "sparklingaria": 0.0,
+        "drainingkiss": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.3846755432013601
+      },
+      "happiness_json": {
+        "255": 0.3846755432013601
+      },
+      "teammates_json": {
+        "Chansey": 4.09484075925004e-07,
+        "Celesteela": 8.84313733351405e-11,
+        "Excadrill": 8.84313733351405e-11,
+        "Rotom-Wash": 8.84313733351405e-11,
+        "Salamence": 0.0003112906049196895,
+        "Darmanitan": 0.2532926384991935,
+        "Amoonguss": 0.25360260040760324,
+        "Hydreigon": 0.2532919741951542,
+        "Mandibuzz": 0.2532919741951542,
+        "Scizor": 0.2532919741951542,
+        "Nidoking": 6.643040392773081e-07,
+        "Conkeldurr": 6.643040392773081e-07,
+        "Nihilego": 0.0,
+        "Diggersby": 0.0,
+        "Skarmory": 0.0,
+        "Azelf": 0.0,
+        "Krookodile": 0.0,
+        "Thundurus-Therian": 0.0,
+        "Slowking": 2.549083947256392e-07,
+        "Raikou": 0.0003106262124490389,
+        "Cobalion": 0.0003106262124490389,
+        "Mamoswine": 0.0003106262124490389
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Raikou",
+      "usage_count": 4,
+      "usage_pct": 0.05,
+      "viability_json": [
+        1,
+        46,
+        46,
+        46
+      ],
+      "abilities_json": {
+        "pressure": 0.0009785353084147408,
+        "innerfocus": 0.0003106262124490389
+      },
+      "items_json": {
+        "choicespecs": 0.0009785353084147408,
+        "heavydutyboots": 0.0003106262124490389
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.0012891615208637797
+      },
+      "moves_json": {
+        "voltswitch": 0.0012891615208637797,
+        "thunderbolt": 0.0012891615208637797,
+        "scald": 0.0012891615208637797,
+        "aurasphere": 0.0009785353084147408,
+        "calmmind": 0.0003106262124490389
+      },
+      "tera_json": {
+        "nothing": 0.0012891615208637797
+      },
+      "happiness_json": {
+        "255": 0.0012891615208637797
+      },
+      "teammates_json": {
+        "Zygarde-10%": 0.0009785353084147408,
+        "Slowking": 0.0009785353084147408,
+        "Umbreon": 0.0009785353084147408,
+        "Darmanitan": 0.0009785353084147408,
+        "Rotom-Wash": 0.0007679625015157843,
+        "Slowbro-Galar": 0.00021057280689895652,
+        "Amoonguss": 0.0003106262124490389,
+        "Primarina": 0.0003106262124490389,
+        "Cobalion": 0.0003106262124490389,
+        "Salamence": 0.0003106262124490389,
+        "Mamoswine": 0.0003106262124490389
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Regieleki",
+      "usage_count": 11,
+      "usage_pct": 0.76,
+      "viability_json": [
+        6,
+        59,
+        59,
+        56
+      ],
+      "abilities_json": {
+        "transistor": 0.02144947800041569
+      },
+      "items_json": {
+        "heavydutyboots": 0.02144947800041569,
+        "choicespecs": 0.0,
+        "aguavberry": 0.0,
+        "lifeorb": 0.0,
+        "assaultvest": 0.0
+      },
+      "spreads_json": {
+        "Hasty:0/4/0/252/0/252": 0.00478717319998434,
+        "Jolly:252/4/0/0/0/252": 0.01666230480043135,
+        "Timid:0/0/0/252/4/252": 0.0,
+        "Modest:0/0/0/252/0/252": 0.0,
+        "Modest:0/0/0/252/4/252": 0.0,
+        "Timid:0/0/36/208/32/232": 0.0
+      },
+      "moves_json": {
+        "rapidspin": 0.02144947800041569,
+        "voltswitch": 0.02144947800041569,
+        "thunderbolt": 0.00478717319998434,
+        "extremespeed": 0.00478717319998434,
+        "thunderwave": 0.01666230480043135,
+        "explosion": 0.01666230480043135,
+        "ancientpower": 0.0,
+        "hyperbeam": 0.0,
+        "substitute": 0.0,
+        "protect": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.02144947800041569
+      },
+      "happiness_json": {
+        "255": 0.02144947800041569
+      },
+      "teammates_json": {
+        "Keldeo": 0.00478717319998434,
+        "Mamoswine": 0.00478717319998434,
+        "Salamence": 0.00478717319998434,
+        "Conkeldurr": 0.00478717319998434,
+        "Klefki": 0.00478717319998434,
+        "Celesteela": 0.014990189126942166,
+        "Darmanitan": 0.014990189126942166,
+        "Inteleon": 0.014990189126942166,
+        "Reuniclus": 0.014990189126942166,
+        "Scizor": 0.014990189126942166,
+        "Skarmory": 0.0,
+        "Chansey": 0.0,
+        "Zygarde-10%": 0.0,
+        "Swampert": 0.0,
+        "Slowking": 0.0,
+        "Pangoro": 0.0,
+        "Regigigas": 0.0,
+        "Hydreigon": 0.0,
+        "Guzzlord": 0.0,
+        "Accelgor": 0.0,
+        "Cobalion": 0.0,
+        "Hatterene": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Registeel",
+      "usage_count": 44,
+      "usage_pct": 11.11,
+      "viability_json": [
+        5,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "clearbody": 0.6058483761302098
+      },
+      "items_json": {
+        "chestoberry": 0.6058483761079068,
+        "assaultvest": 2.2303048297089845e-11
+      },
+      "spreads_json": {
+        "Bold:248/0/216/0/0/44": 0.6058483761079068,
+        "Careful:252/0/4/0/252/0": 3.35187433364581e-12,
+        "Careful:252/0/252/0/0/0": 1.8951173963444035e-11
+      },
+      "moves_json": {
+        "amnesia": 0.6058483761079068,
+        "irondefense": 0.6058483761079068,
+        "rest": 0.6058483761079068,
+        "bodypress": 0.6058483761302098,
+        "ironhead": 2.2303048297089845e-11,
+        "earthquake": 2.2303048297089845e-11,
+        "explosion": 2.2303048297089845e-11
+      },
+      "tera_json": {
+        "nothing": 0.6058483761302098
+      },
+      "happiness_json": {
+        "255": 0.6058483761302098
+      },
+      "teammates_json": {
+        "Chansey": 0.28998667918757665,
+        "Salamence": 0.28998667918757665,
+        "Rotom-Wash": 0.28998667918757665,
+        "Conkeldurr": 0.28998667918757665,
+        "Diggersby": 0.28998667918757665,
+        "Umbreon": 1.167133056867442e-11,
+        "Vaporeon": 1.167133056867442e-11,
+        "Sylveon": 1.167133056867442e-11,
+        "Shedinja": 1.167133056867442e-11,
+        "Chandelure": 1.167133056867442e-11
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Reuniclus",
+      "usage_count": 21,
+      "usage_pct": 0.57,
+      "viability_json": [
+        5,
+        56,
+        56,
+        56
+      ],
+      "abilities_json": {
+        "magicguard": 0.016664190660951317,
+        "regenerator": 0.0
+      },
+      "items_json": {
+        "leftovers": 1.8858605199678635e-06,
+        "colburberry": 0.01666230480043135
+      },
+      "spreads_json": {
+        "Bold:252/0/198/60/0/0": 1.8858605199678635e-06,
+        "Bold:248/0/244/0/0/16": 0.01666230480043135,
+        "Hardy:64/64/40/44/52/40": 0.0,
+        "Calm:252/0/252/4/0/0": 0.0
+      },
+      "moves_json": {
+        "acidarmor": 1.8858605199678635e-06,
+        "calmmind": 0.016664190660951317,
+        "recover": 0.016664190660951317,
+        "storedpower": 1.8858605199678635e-06,
+        "psyshock": 0.01666230480043135,
+        "focusblast": 0.01666230480043135,
+        "futuresight": 0.0,
+        "toxic": 0.0,
+        "reflect": 0.0,
+        "knockoff": 0.0,
+        "expandingforce": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.016664190660951317
+      },
+      "happiness_json": {
+        "255": 0.016664190660951317
+      },
+      "teammates_json": {
+        "Milotic": 1.8800987535150249e-06,
+        "Hippowdon": 1.8800987535150249e-06,
+        "Scizor": 0.014992069225695681,
+        "Chansey": 1.8800987535150249e-06,
+        "Skarmory": 1.8800987535150249e-06,
+        "Celesteela": 0.014990189126942166,
+        "Darmanitan": 0.014990189126942166,
+        "Inteleon": 0.014990189126942166,
+        "Regieleki": 0.014990189126942166,
+        "Gyarados": 0.0,
+        "Grimmsnarl": 0.0,
+        "Lucario": 0.0,
+        "Aggron": 0.0,
+        "Rotom-Heat": 0.0,
+        "Amoonguss": 0.0,
+        "Chandelure": 0.0,
+        "Mamoswine": 0.0,
+        "Umbreon": 0.0,
+        "Stakataka": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Rotom-Heat",
+      "usage_count": 11,
+      "usage_pct": 1.46,
+      "viability_json": [
+        3,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "levitate": 0.038027655111954495
+      },
+      "items_json": {
+        "heavydutyboots": 0.038027655111954495
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.005804514495126811,
+        "Timid:144/84/56/80/52/68": 0.0,
+        "Timid:252/0/104/0/0/152": 0.032223140616827683
+      },
+      "moves_json": {
+        "voltswitch": 0.038027655111954495,
+        "overheat": 0.038027655111954495,
+        "painsplit": 0.038027655111954495,
+        "defog": 0.038027655111954495,
+        "willowisp": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.038027655111954495
+      },
+      "happiness_json": {
+        "255": 0.038027655111954495
+      },
+      "teammates_json": {
+        "Tangrowth": 0.038027655111954495,
+        "Slowking": 0.005804514495126811,
+        "Darmanitan": 0.005804514495126811,
+        "Jirachi": 0.005804514495126811,
+        "Skarmory": 0.005804514495126811,
+        "Gyarados": 0.0,
+        "Grimmsnarl": 0.0,
+        "Lucario": 0.0,
+        "Reuniclus": 0.0,
+        "Aggron": 0.0,
+        "Thundurus-Therian": 0.032223140616827683,
+        "Scizor": 0.032223140616827683,
+        "Chansey": 0.032223140616827683,
+        "Excadrill": 0.032223140616827683
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Rotom-Wash",
+      "usage_count": 38,
+      "usage_pct": 11.36,
+      "viability_json": [
+        12,
+        69,
+        69,
+        61
+      ],
+      "abilities_json": {
+        "levitate": 0.6124283934075093
+      },
+      "items_json": {
+        "leftovers": 0.006580016846679304,
+        "rockyhelmet": 0.6058483761079068,
+        "heavydutyboots": 4.52923254457005e-10,
+        "assaultvest": 0.0
+      },
+      "spreads_json": {
+        "Bold:248/0/172/0/0/88": 0.0,
+        "Bold:248/0/40/0/0/220": 0.6058483761079068,
+        "Timid:248/0/44/0/0/216": 8.84313733351405e-11,
+        "Timid:248/0/0/0/8/252": 0.0007679625015157843,
+        "Bold:252/0/252/0/4/0": 0.0,
+        "Timid:0/0/0/252/4/252": 3.644918811218645e-10,
+        "Bold:248/0/44/0/0/216": 0.00581205434516352,
+        "Calm:248/0/0/8/252/0": 0.0
+      },
+      "moves_json": {
+        "voltswitch": 0.6124283934075093,
+        "hydropump": 0.6124283934075093,
+        "painsplit": 0.6116604305415017,
+        "willowisp": 0.49928286373904496,
+        "defog": 0.11391349180548827,
+        "thunderbolt": 3.644918811218645e-10,
+        "trick": 3.644918811218645e-10,
+        "discharge": 0.0,
+        "protect": 0.0,
+        "substitute": 0.0,
+        "rest": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.6124283934075093
+      },
+      "happiness_json": {
+        "255": 0.6124283934075093
+      },
+      "teammates_json": {
+        "Scizor": 3.644918811218645e-10,
+        "Salamence": 0.289986679276008,
+        "Excadrill": 8.84313733351405e-11,
+        "Skarmory": 0.0,
+        "Keldeo": 0.0,
+        "Chansey": 0.289986679276008,
+        "Registeel": 0.28998667918757665,
+        "Conkeldurr": 0.28998667918757665,
+        "Diggersby": 0.28998667918757665,
+        "Celesteela": 8.84313733351405e-11,
+        "Primarina": 8.84313733351405e-11,
+        "Zygarde-10%": 0.0007679625015157843,
+        "Slowking": 0.0007679625015157843,
+        "Umbreon": 0.0007679625015157843,
+        "Darmanitan": 0.0007679625015157843,
+        "Raikou": 0.0007679625015157843,
+        "Gyarados": 0.0,
+        "Hippowdon": 0.00581205434516352,
+        "Thundurus-Therian": 0.0,
+        "Amoonguss": 0.0,
+        "Hydreigon": 0.005812054709655401,
+        "Mamoswine": 3.644918811218645e-10,
+        "Crobat": 0.005812054709655401,
+        "Nihilego": 3.644918811218645e-10,
+        "Azelf": 0.0,
+        "Cobalion": 0.00581205434516352,
+        "Tangrowth": 0.00581205434516352,
+        "Mandibuzz": 0.0,
+        "Chandelure": 0.0,
+        "Flygon": 0.0,
+        "Leafeon": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Salamence",
+      "usage_count": 101,
+      "usage_pct": 23.85,
+      "viability_json": [
+        21,
+        69,
+        69,
+        65
+      ],
+      "abilities_json": {
+        "intimidate": 0.7816476104326636,
+        "moxie": 0.24152936072361547
+      },
+      "items_json": {
+        "heavydutyboots": 0.7865139015117798,
+        "lumberry": 0.23179344913654387,
+        "leftovers": 0.004869619104010403,
+        "lifeorb": 1.40394507130992e-09
+      },
+      "spreads_json": {
+        "Jolly:4/252/0/0/0/252": 9.391175892492498e-09,
+        "Impish:252/0/160/0/0/96": 0.1725299920715736,
+        "Naive:0/252/0/4/0/252": 3.4282796600559884e-05,
+        "Adamant:0/252/0/0/4/252": 0.0,
+        "Jolly:0/252/0/0/4/252": 0.23670790291086163,
+        "Timid:252/0/80/16/0/160": 0.6058483761079068,
+        "Naughty:0/252/0/0/4/252": 8.84313733351405e-11,
+        "Bold:252/0/252/0/0/0": 0.0028761606571010567,
+        "Jolly:0/252/0/4/0/252": 0.00478717319998434,
+        "Timid:0/0/0/252/4/252": 0.0,
+        "Jolly:0/252/4/0/0/252": 1.40394507130992e-09,
+        "Hasty:4/252/0/0/0/252": 4.1222386615302753e-10,
+        "Jolly:0/252/0/0/0/252": 8.244590402606278e-05,
+        "Timid:4/0/0/252/0/252": 0.0,
+        "Bold:252/0/192/0/44/20": 0.0003106262124490389
+      },
+      "moves_json": {
+        "dualwingbeat": 0.9067279262821298,
+        "dragonclaw": 0.004787181665179607,
+        "earthquake": 0.2416118161072488,
+        "dragondance": 0.24161181600067072,
+        "flamethrower": 0.7815991829372362,
+        "roost": 0.7815651550490303,
+        "defog": 0.6684196257450579,
+        "outrage": 0.2367421857074622,
+        "hurricane": 0.11602168996107354,
+        "wish": 0.11314552930397248,
+        "dracometeor": 2.549083947256392e-07,
+        "firefang": 1.40394507130992e-09,
+        "fireblast": 1.5332139446933013e-09,
+        "crunch": 8.244590402606278e-05,
+        "bodyslam": 8.244590402606278e-05,
+        "toxic": 0.0003106262124490389
+      },
+      "tera_json": {
+        "nothing": 1.0231769711562793
+      },
+      "happiness_json": {
+        "255": 1.0231769711562793
+      },
+      "teammates_json": {
+        "Venusaur": 6.532405449899414e-09,
+        "Ninetales": 6.532405449899414e-09,
+        "Torkoal": 6.532246354939986e-09,
+        "Xurkitree": 6.532405449899414e-09,
+        "Krookodile": 0.018891956986685665,
+        "Amoonguss": 0.17284061828402264,
+        "Lycanroc-Dusk": 0.1725299920715736,
+        "Scizor": 0.17261243937954474,
+        "Hydreigon": 0.17261243797559966,
+        "Hippowdon": 0.1725299920715736,
+        "Excadrill": 0.019008680669974076,
+        "Celesteela": 0.023874971336866335,
+        "Cloyster": 3.4284200545631194e-05,
+        "Mimikyu": 3.4282796600559884e-05,
+        "Thundurus-Therian": 0.01892623467751664,
+        "Skarmory": 0.12818505602584085,
+        "Keldeo": 0.02367912508090042,
+        "Rotom-Wash": 0.289986679276008,
+        "Scolipede": 0.004948736570918322,
+        "Necrozma": 0.004948736570918322,
+        "Conkeldurr": 0.30268096073339423,
+        "Toxtricity": 0.004948736570918322,
+        "Chansey": 0.2929447961425282,
+        "Registeel": 0.28998667918757665,
+        "Diggersby": 0.4181717352134175,
+        "Primarina": 0.0003112906049196895,
+        "Darmanitan": 0.0028759272976838224,
+        "Nidoking": 0.0028759258708888624,
+        "Tangrowth": 0.002874426438395361,
+        "Mamoswine": 0.005097799412433379,
+        "Klefki": 0.00478717319998434,
+        "Regieleki": 0.00478717319998434,
+        "Polteageist": 0.12818505602584085,
+        "Cobalion": 0.1284956822382899,
+        "Zarude": 0.12818505602584085,
+        "Salazzle": 0.0,
+        "Slowking": 1.0900368489497048e-06,
+        "Vanilluxe": 0.0,
+        "Azelf": 1.40394507130992e-09,
+        "Grimmsnarl": 1.40394507130992e-09,
+        "Nihilego": 1.40394507130992e-09,
+        "Gyarados": 0.0,
+        "Raikou": 0.0003106262124490389
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Salazzle",
+      "usage_count": 8,
+      "usage_pct": 1.9,
+      "viability_json": [
+        5,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "corrosion": 0.04973516367595204
+      },
+      "items_json": {
+        "heavydutyboots": 0.04953178941158359,
+        "choicespecs": 0.00020337426436844996
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.04973516367595204
+      },
+      "moves_json": {
+        "flamethrower": 0.04953178941158359,
+        "sludgewave": 0.04973516367595204,
+        "toxic": 0.04973516367595204,
+        "nastyplot": 0.04953178941158359,
+        "taunt": 0.0,
+        "fireblast": 0.00020337426436844996,
+        "dragonpulse": 0.00020337426436844996,
+        "willowisp": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.04973516367595204
+      },
+      "happiness_json": {
+        "255": 0.04973516367595204
+      },
+      "teammates_json": {
+        "Slowking": 0.0,
+        "Klefki": 0.04953178941158359,
+        "Thundurus-Therian": 0.0,
+        "Zygarde-10%": 0.0,
+        "Snorlax": 0.0,
+        "Keldeo": 0.0,
+        "Salamence": 0.0,
+        "Scizor": 0.0,
+        "Tangrowth": 0.0,
+        "Haxorus": 5.6112383182427283e-05,
+        "Krookodile": 5.6112383182427283e-05,
+        "Xurkitree": 5.6112383182427283e-05,
+        "Golisopod": 5.6112383182427283e-05,
+        "Bewear": 5.6112383182427283e-05,
+        "Swampert": 0.04953178941158359,
+        "Tapu Bulu": 0.04953178941158359,
+        "Darmanitan": 0.04953178941158359,
+        "Magneton": 0.04953178941158359,
+        "Crobat": 0.0,
+        "Amoonguss": 0.0,
+        "Mamoswine": 0.0,
+        "Scolipede": 0.0,
+        "Tentacruel": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Scizor",
+      "usage_count": 70,
+      "usage_pct": 69.07,
+      "viability_json": [
+        18,
+        81,
+        81,
+        65
+      ],
+      "abilities_json": {
+        "technician": 2.673471736954391
+      },
+      "items_json": {
+        "choiceband": 1.8934033754192114e-06,
+        "heavydutyboots": 0.6137963278576197,
+        "lifeorb": 2.7428477550328623e-07,
+        "assaultvest": 1.9565253768370678,
+        "safetygoggles": 0.0,
+        "leftovers": 0.10314786457155128
+      },
+      "spreads_json": {
+        "Adamant:252/252/0/0/0/0": 0.00010792537410952985,
+        "Adamant:248/16/104/0/140/0": 0.5971340230571882,
+        "Adamant:248/16/244/0/0/0": 0.0,
+        "Adamant:0/252/4/0/0/252": 6.149997650028993e-08,
+        "Brave:252/252/0/0/4/0": 1.9565253768370678,
+        "Adamant:0/252/0/0/4/252": 0.01666230480043135,
+        "Sassy:252/0/4/0/252/0": 0.01593551313722341,
+        "Relaxed:252/0/252/0/4/0": 0.08710631946359376,
+        "Adamant:248/212/32/0/0/16": 0.0,
+        "Jolly:0/252/0/0/4/252": 2.127847990029963e-07
+      },
+      "moves_json": {
+        "uturn": 2.656703187398426,
+        "knockoff": 0.7126723172560397,
+        "bulletpunch": 2.6734715241695914,
+        "superpower": 1.9565272691015483,
+        "roost": 0.7168381604584368,
+        "swordsdance": 0.020830377190955873,
+        "wingattack": 1.9565253768370678,
+        "aerialace": 0.00010603197073411064,
+        "assurance": 0.00010603197073411064,
+        "brickbreak": 0.00010603197073411064,
+        "dualwingbeat": 2.139236940923439e-07,
+        "sandtomb": 2.127847990029963e-07,
+        "ironhead": 2.127847990029963e-07
+      },
+      "tera_json": {
+        "nothing": 2.673471736954391
+      },
+      "happiness_json": {
+        "255": 2.673471736954391
+      },
+      "teammates_json": {
+        "Milotic": 1.8806378478397612e-06,
+        "Hippowdon": 0.2793195288198705,
+        "Chansey": 0.032331053225409634,
+        "Skarmory": 1.8806378478397612e-06,
+        "Reuniclus": 0.014992069225695681,
+        "Amoonguss": 0.5288637988675449,
+        "Lycanroc-Dusk": 0.17252999576017997,
+        "Salamence": 0.17261243937954474,
+        "Hydreigon": 1.6530629509554342,
+        "Excadrill": 0.13537100518837897,
+        "Keldeo": 5.390943247363111e-10,
+        "Rotom-Wash": 3.644918811218645e-10,
+        "Darmanitan": 1.4916712921659445,
+        "Primarina": 0.2532919741951542,
+        "Mandibuzz": 0.2532919741951542,
+        "Torkoal": 1.223389128843848,
+        "Venusaur": 1.223389128843848,
+        "Hatterene": 1.223389128843848,
+        "Celesteela": 0.01873601263657404,
+        "Inteleon": 0.014990189126942166,
+        "Regieleki": 0.014990189126942166,
+        "Salazzle": 0.0,
+        "Slowking": 0.0037458235096318737,
+        "Tangrowth": 0.032223140616827683,
+        "Conkeldurr": 0.0038518554803659844,
+        "Ribombee": 3.688606364793401e-09,
+        "Cloyster": 5.092551436103321e-09,
+        "Polteageist": 3.688606364793401e-09,
+        "Nihilego": 5.457043317225185e-09,
+        "Azelf": 1.40394507130992e-09,
+        "Grimmsnarl": 1.40394507130992e-09,
+        "Mamoswine": 3.644918811218645e-10,
+        "Crobat": 3.644918811218645e-10,
+        "Nidoking": 0.10304183260081717,
+        "Araquanid": 0.10304183260081717,
+        "Krookodile": 0.0,
+        "Thundurus-Therian": 0.03224672668353573,
+        "Rotom-Heat": 0.032223140616827683,
+        "Zarude": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Scolipede",
+      "usage_count": 9,
+      "usage_pct": 0.19,
+      "viability_json": [
+        5,
+        60,
+        60,
+        60
+      ],
+      "abilities_json": {
+        "speedboost": 0.004999035555189046
+      },
+      "items_json": {
+        "focussash": 0.004948736570918322,
+        "blacksludge": 5.0298984270724656e-05
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.004948736570918322,
+        "Jolly:0/132/124/0/0/252": 0.0,
+        "Adamant:0/252/0/0/4/252": 0.0,
+        "Jolly:0/252/0/0/0/252": 5.0298984270724656e-05
+      },
+      "moves_json": {
+        "spikes": 0.004948736570918322,
+        "poisonjab": 0.004999035555189046,
+        "endeavor": 0.004948736570918322,
+        "earthquake": 0.004999035555189046,
+        "swordsdance": 0.0,
+        "megahorn": 0.0,
+        "toxicspikes": 5.0298984270724656e-05,
+        "protect": 5.0298984270724656e-05
+      },
+      "tera_json": {
+        "nothing": 0.004999035555189046
+      },
+      "happiness_json": {
+        "255": 0.004999035555189046
+      },
+      "teammates_json": {
+        "Celesteela": 0.004948736570918322,
+        "Necrozma": 0.004948736570918322,
+        "Conkeldurr": 0.004999035555189046,
+        "Toxtricity": 0.004948736570918322,
+        "Salamence": 0.004948736570918322,
+        "Krookodile": 0.0,
+        "Gyarados": 0.0,
+        "Cobalion": 0.0,
+        "Crobat": 0.0,
+        "Amoonguss": 0.0,
+        "Mamoswine": 0.0,
+        "Salazzle": 0.0,
+        "Tentacruel": 0.0,
+        "Chansey": 5.0298984270724656e-05,
+        "Excadrill": 5.0298984270724656e-05,
+        "Thundurus-Therian": 5.0298984270724656e-05,
+        "Hydreigon": 5.0298984270724656e-05
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Silvally-Fairy",
+      "usage_count": 2,
+      "usage_pct": 0.27,
+      "viability_json": [
+        1,
+        54,
+        54,
+        54
+      ],
+      "abilities_json": {
+        "rkssystem": 0.0070995514149996275
+      },
+      "items_json": {
+        "fairymemory": 0.0070995514149996275
+      },
+      "spreads_json": {
+        "Adamant:128/252/64/0/64/0": 0.0070995514149996275
+      },
+      "moves_json": {
+        "multiattack": 0.0070995514149996275,
+        "uturn": 0.0070995514149996275,
+        "doubleedge": 0.0070995514149996275,
+        "facade": 0.0070995514149996275
+      },
+      "tera_json": {
+        "nothing": 0.0070995514149996275
+      },
+      "happiness_json": {
+        "255": 0.0070995514149996275
+      },
+      "teammates_json": {
+        "Crobat": 0.0070995514149996275,
+        "Zarude": 0.0070995514149996275,
+        "Moltres": 0.0070995514149996275,
+        "Xurkitree": 0.0070995514149996275,
+        "Swampert": 0.0070995514149996275
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Skarmory",
+      "usage_count": 39,
+      "usage_pct": 5.13,
+      "viability_json": [
+        8,
+        65,
+        65,
+        59
+      ],
+      "abilities_json": {
+        "sturdy": 0.21375478050117735
+      },
+      "items_json": {
+        "rockyhelmet": 0.00580640791393916,
+        "custapberry": 0.2079483725872382,
+        "leftovers": 0.0
+      },
+      "spreads_json": {
+        "Impish:252/0/32/0/224/0": 1.8922644803298638e-06,
+        "Impish:252/0/160/0/0/96": 0.005804514495126811,
+        "Impish:252/4/252/0/0/0": 1.5436929512446795e-11,
+        "Jolly:0/252/0/0/4/252": 0.2079483725872382,
+        "Bold:252/0/160/0/0/96": 0.0,
+        "Impish:252/0/252/0/4/0": 0.0,
+        "Adamant:232/252/0/0/0/24": 0.0,
+        "Impish:252/76/180/0/0/0": 1.1388950893476135e-09
+      },
+      "moves_json": {
+        "defog": 1.8922644803298638e-06,
+        "roost": 0.00580640791393916,
+        "bodypress": 0.00580640791393916,
+        "irondefense": 1.8934033754192114e-06,
+        "bravebird": 0.20794837372613328,
+        "spikes": 0.213752887082365,
+        "toxic": 0.005804514495126811,
+        "ironhead": 1.5436929512446795e-11,
+        "whirlwind": 1.5436929512446795e-11,
+        "stealthrock": 0.2079483725872382,
+        "taunt": 0.2079483725872382
+      },
+      "tera_json": {
+        "nothing": 0.21375478050117735
+      },
+      "happiness_json": {
+        "255": 0.21375478050117735
+      },
+      "teammates_json": {
+        "Milotic": 1.8806378478397612e-06,
+        "Hippowdon": 1.8806378478397612e-06,
+        "Scizor": 1.8806378478397612e-06,
+        "Chansey": 1.8806378478397612e-06,
+        "Reuniclus": 1.8800987535150249e-06,
+        "Salamence": 0.12818505602584085,
+        "Excadrill": 0.0,
+        "Keldeo": 5.390943247363111e-10,
+        "Rotom-Wash": 0.0,
+        "Umbreon": 1.5436929512446795e-11,
+        "Vaporeon": 1.5436929512446795e-11,
+        "Sylveon": 1.5436929512446795e-11,
+        "Shedinja": 1.5436929512446795e-11,
+        "Chandelure": 1.5436929512446795e-11,
+        "Polteageist": 0.12818505602584085,
+        "Diggersby": 0.12818505602584085,
+        "Cobalion": 0.12818505602584085,
+        "Zarude": 0.12818505602584085,
+        "Primarina": 0.0,
+        "Nihilego": 0.0,
+        "Amoonguss": 0.0,
+        "Azelf": 0.0,
+        "Regieleki": 0.0,
+        "Zygarde-10%": 0.0,
+        "Swampert": 0.0,
+        "Slowking": 0.005804514495126811,
+        "Rotom-Heat": 0.005804514495126811,
+        "Tangrowth": 0.005804514495126811,
+        "Darmanitan": 0.005804514495126811,
+        "Jirachi": 0.005804514495126811,
+        "Hatterene": 0.0,
+        "Hydreigon": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Slowbro-Galar",
+      "usage_count": 30,
+      "usage_pct": 2.85,
+      "viability_json": [
+        2,
+        65,
+        65,
+        65
+      ],
+      "abilities_json": {
+        "quickdraw": 0.09194711286943646
+      },
+      "items_json": {
+        "quickclaw": 0.09194711286943646
+      },
+      "spreads_json": {
+        "Modest:252/0/0/252/4/0": 0.09194711286943646
+      },
+      "moves_json": {
+        "nastyplot": 0.09194711286943646,
+        "sludgebomb": 0.09194711286943646,
+        "psychic": 0.09194711286943646,
+        "flamethrower": 0.09173654006253751,
+        "psyshock": 0.00021057280689895652
+      },
+      "tera_json": {
+        "nothing": 0.09194711286943646
+      },
+      "happiness_json": {
+        "255": 0.09194711286943646
+      },
+      "teammates_json": {
+        "Froslass": 0.07412302377975577,
+        "Slurpuff": 0.07412302377975577,
+        "Cloyster": 0.07412302377975577,
+        "Blastoise": 0.07412302377975577,
+        "Mimikyu": 0.07412302377975577,
+        "Zygarde-10%": 0.00021057280689895652,
+        "Slowking": 0.00021057280689895652,
+        "Umbreon": 0.00021057280689895652,
+        "Darmanitan": 0.00021057280689895652,
+        "Raikou": 0.00021057280689895652
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Slowking",
+      "usage_count": 43,
+      "usage_pct": 0.4,
+      "viability_json": [
+        12,
+        65,
+        65,
+        59
+      ],
+      "abilities_json": {
+        "regenerator": 0.010952150730938526
+      },
+      "items_json": {
+        "colburberry": 0.010951060694089576,
+        "rockyhelmet": 8.351284542240656e-07,
+        "heavydutyboots": 2.549083947256392e-07
+      },
+      "spreads_json": {
+        "Bold:248/0/252/0/8/0": 0.0,
+        "Relaxed:248/0/252/0/8/0": 0.005805349623581035,
+        "Bold:248/0/200/0/60/0": 0.0009785353084147408,
+        "Bold:252/0/252/4/0/0": 1.0822972615898152e-06,
+        "Relaxed:252/0/252/0/4/0": 0.0,
+        "Impish:252/4/252/0/0/0": 0.0,
+        "Sassy:252/0/200/0/56/0": 0.0,
+        "Relaxed:252/0/252/4/0/0": 0.004166928593286434,
+        "Sassy:252/0/136/0/120/0": 2.549083947256392e-07
+      },
+      "moves_json": {
+        "scald": 0.010952150730938526,
+        "futuresight": 0.005146546198962765,
+        "slackoff": 0.010952150730938526,
+        "teleport": 0.010952150730938526,
+        "psychic": 0.005805349623581035,
+        "lightscreen": 0.0,
+        "dragontail": 0.0,
+        "thunderwave": 2.549083947256392e-07
+      },
+      "tera_json": {
+        "nothing": 0.010952150730938526
+      },
+      "happiness_json": {
+        "255": 0.010952150730938526
+      },
+      "teammates_json": {
+        "Salazzle": 0.0,
+        "Klefki": 0.0,
+        "Thundurus-Therian": 0.0,
+        "Zygarde-10%": 0.0009785353084147408,
+        "Snorlax": 0.0,
+        "Keldeo": 0.0,
+        "Salamence": 1.0900368489497048e-06,
+        "Scizor": 0.0037458235096318737,
+        "Tangrowth": 0.005804514495126811,
+        "Darmanitan": 0.006784139840390502,
+        "Nidoking": 1.0900368489497048e-06,
+        "Conkeldurr": 0.0037469135464808234,
+        "Chansey": 8.351284542240656e-07,
+        "Umbreon": 0.0009785353084147408,
+        "Rotom-Wash": 0.0007679625015157843,
+        "Raikou": 0.0009785353084147408,
+        "Slowbro-Galar": 0.00021057280689895652,
+        "Hydreigon": 0.0037458235096318737,
+        "Celesteela": 0.0037458235096318737,
+        "Hippowdon": 0.0037458235096318737,
+        "Vanilluxe": 0.0,
+        "Excadrill": 0.0,
+        "Azelf": 0.0,
+        "Zarude": 0.0,
+        "Skarmory": 0.005804514495126811,
+        "Regieleki": 0.0,
+        "Swampert": 0.0,
+        "Rotom-Heat": 0.005804514495126811,
+        "Jirachi": 0.005804514495126811,
+        "Krookodile": 0.0,
+        "Amoonguss": 0.0,
+        "Primarina": 2.549083947256392e-07,
+        "Moltres": 0.0,
+        "Mamoswine": 0.0,
+        "Nihilego": 0.0,
+        "Tentacruel": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Slurpuff",
+      "usage_count": 31,
+      "usage_pct": 2.84,
+      "viability_json": [
+        2,
+        65,
+        65,
+        65
+      ],
+      "abilities_json": {
+        "unburden": 0.09173654006253751
+      },
+      "items_json": {
+        "sitrusberry": 0.09173654006253751
+      },
+      "spreads_json": {
+        "Adamant:4/252/0/0/0/252": 0.09173654006253751
+      },
+      "moves_json": {
+        "bellydrum": 0.09173654006253751,
+        "playrough": 0.09173654006253751,
+        "drainpunch": 0.09173654006253751,
+        "facade": 0.09173654006253751
+      },
+      "tera_json": {
+        "nothing": 0.09173654006253751
+      },
+      "happiness_json": {
+        "255": 0.09173654006253751
+      },
+      "teammates_json": {
+        "Froslass": 0.07412302377975577,
+        "Cloyster": 0.07412302377975577,
+        "Blastoise": 0.07412302377975577,
+        "Mimikyu": 0.07412302377975577,
+        "Slowbro-Galar": 0.07412302377975577,
+        "Amoonguss": 0.0,
+        "Mamoswine": 0.0,
+        "Chandelure": 0.0,
+        "Umbreon": 0.0,
+        "Bewear": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Snorlax",
+      "usage_count": 4,
+      "usage_pct": 0.15,
+      "viability_json": [
+        2,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "thickfat": 0.0,
+        "immunity": 0.003943233847626404
+      },
+      "items_json": {
+        "leftovers": 0.003943233847626404
+      },
+      "spreads_json": {
+        "Careful:10/0/246/0/252/0": 0.0,
+        "Careful:252/4/0/0/252/0": 0.003943233847626404
+      },
+      "moves_json": {
+        "bodyslam": 0.0,
+        "darkestlariat": 0.0,
+        "curse": 0.003943233847626404,
+        "rest": 0.003943233847626404,
+        "sleeptalk": 0.003943233847626404,
+        "heatcrash": 0.003943233847626404
+      },
+      "tera_json": {
+        "nothing": 0.003943233847626404
+      },
+      "happiness_json": {
+        "255": 0.003943233847626404
+      },
+      "teammates_json": {
+        "Slowking": 0.0,
+        "Salazzle": 0.0,
+        "Klefki": 0.0,
+        "Thundurus-Therian": 0.0,
+        "Zygarde-10%": 0.0,
+        "Torkoal": 0.003943233847626404,
+        "Venusaur": 0.003943233847626404,
+        "Marowak-Alola": 0.003943233847626404,
+        "Chandelure": 0.003943233847626404,
+        "Zoroark": 0.003943233847626404
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Stakataka",
+      "usage_count": 3,
+      "usage_pct": 0.01,
+      "viability_json": [
+        2,
+        56,
+        56,
+        56
+      ],
+      "abilities_json": {
+        "beastboost": 0.000296737855173812
+      },
+      "items_json": {
+        "shucaberry": 0.000296737855173812,
+        "ironball": 0.0
+      },
+      "spreads_json": {
+        "Lonely:252/252/0/0/4/0": 0.000296737855173812,
+        "Sassy:252/4/0/0/252/0": 0.0
+      },
+      "moves_json": {
+        "trickroom": 0.000296737855173812,
+        "gyroball": 0.000296737855173812,
+        "stoneedge": 0.000296737855173812,
+        "heatcrash": 0.000296737855173812,
+        "stealthrock": 0.0,
+        "irondefense": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.000296737855173812
+      },
+      "happiness_json": {
+        "255": 0.000296737855173812
+      },
+      "teammates_json": {
+        "Hatterene": 0.000296737855173812,
+        "Marowak-Alola": 0.000296737855173812,
+        "Glastrier": 0.000296737855173812,
+        "Cresselia": 0.000296737855173812,
+        "Crawdaunt": 0.000296737855173812,
+        "Amoonguss": 0.0,
+        "Chandelure": 0.0,
+        "Mamoswine": 0.0,
+        "Umbreon": 0.0,
+        "Reuniclus": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Swampert",
+      "usage_count": 21,
+      "usage_pct": 2.42,
+      "viability_json": [
+        7,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "damp": 0.008383924854478864,
+        "torrent": 0.0571423211845441
+      },
+      "items_json": {
+        "leftovers": 0.06552624603902296,
+        "heavydutyboots": 0.0
+      },
+      "spreads_json": {
+        "Careful:252/4/0/0/252/0": 0.001284373439479236,
+        "Sassy:252/0/144/0/112/0": 0.007610531772960505,
+        "Quiet:148/16/56/232/56/0": 0.0070995514149996275,
+        "Adamant:252/252/0/0/4/0": 0.0,
+        "Careful:248/16/16/0/228/0": 0.04953178941158359
+      },
+      "moves_json": {
+        "earthquake": 0.06552624603902296,
+        "flipturn": 0.058426694624023334,
+        "toxic": 0.058426694624023334,
+        "stealthrock": 0.06552624603902296,
+        "scald": 0.0070995514149996275,
+        "icebeam": 0.0070995514149996275,
+        "hammerarm": 0.0,
+        "waterfall": 0.0,
+        "icepunch": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.06552624603902296
+      },
+      "happiness_json": {
+        "255": 0.06552624603902296
+      },
+      "teammates_json": {
+        "Excadrill": 0.001284373439479236,
+        "Amoonguss": 0.001284373439479236,
+        "Hydreigon": 0.001284373439479236,
+        "Chansey": 0.001284373439479236,
+        "Darmanitan": 0.05612461010746789,
+        "Torkoal": 0.005308447256405058,
+        "Hatterene": 0.005308447256405058,
+        "Venusaur": 0.005308447256405058,
+        "Celesteela": 0.005308447256405058,
+        "Crobat": 0.0070995514149996275,
+        "Zarude": 0.0070995514149996275,
+        "Moltres": 0.0070995514149996275,
+        "Xurkitree": 0.0070995514149996275,
+        "Silvally-Fairy": 0.0070995514149996275,
+        "Skarmory": 0.0,
+        "Regieleki": 0.0,
+        "Zygarde-10%": 0.0,
+        "Slowking": 0.0,
+        "Tapu Bulu": 0.04953178941158359,
+        "Magneton": 0.04953178941158359,
+        "Salazzle": 0.04953178941158359,
+        "Klefki": 0.04953178941158359,
+        "Cobalion": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Sylveon",
+      "usage_count": 30,
+      "usage_pct": 0.22,
+      "viability_json": [
+        2,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "pixilate": 3.773997780953664e-11,
+        "cutecharm": 0.005859276696694116
+      },
+      "items_json": {
+        "assaultvest": 3.773997780953664e-11,
+        "leftovers": 0.005859276696694116
+      },
+      "spreads_json": {
+        "Modest:252/0/0/252/0/4": 3.773997780953664e-11,
+        "Bold:252/0/80/36/0/140": 0.005859276696694116
+      },
+      "moves_json": {
+        "hypervoice": 3.773997780953664e-11,
+        "mysticalfire": 0.0058592767344340935,
+        "psyshock": 3.773997780953664e-11,
+        "quickattack": 3.773997780953664e-11,
+        "calmmind": 0.005859276696694116,
+        "drainingkiss": 0.005859276696694116,
+        "substitute": 0.005859276696694116
+      },
+      "tera_json": {
+        "nothing": 0.0058592767344340935
+      },
+      "happiness_json": {
+        "255": 0.0058592767344340935
+      },
+      "teammates_json": {
+        "Skarmory": 1.5436929512446795e-11,
+        "Umbreon": 0.005859276723802376,
+        "Vaporeon": 2.7108260081121216e-11,
+        "Shedinja": 2.7108260081121216e-11,
+        "Chandelure": 2.7108260081121216e-11,
+        "Crobat": 0.005859276696694116,
+        "Milotic": 0.005859276696694116,
+        "Golurk": 0.005859276696694116,
+        "Bronzong": 0.005859276696694116,
+        "Registeel": 1.167133056867442e-11
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tangrowth",
+      "usage_count": 29,
+      "usage_pct": 1.79,
+      "viability_json": [
+        7,
+        67,
+        67,
+        61
+      ],
+      "abilities_json": {
+        "regenerator": 0.046714135895513376
+      },
+      "items_json": {
+        "rockyhelmet": 0.040902081550349856,
+        "assaultvest": 0.00581205434516352
+      },
+      "spreads_json": {
+        "Relaxed:244/0/252/0/12/0": 0.002874426438395361,
+        "Relaxed:252/0/96/0/160/0": 0.0,
+        "Relaxed:252/0/252/0/4/0": 0.038027655111954495,
+        "Relaxed:252/0/92/0/160/4": 0.00581205434516352
+      },
+      "moves_json": {
+        "gigadrain": 0.040902081550349856,
+        "knockoff": 0.046714135895513376,
+        "leechseed": 0.002874426438395361,
+        "toxic": 0.002874426438395361,
+        "sludgebomb": 0.043839709457118015,
+        "earthquake": 0.0,
+        "sleeppowder": 0.038027655111954495,
+        "powerwhip": 0.00581205434516352,
+        "focusblast": 0.00581205434516352
+      },
+      "tera_json": {
+        "nothing": 0.046714135895513376
+      },
+      "happiness_json": {
+        "255": 0.046714135895513376
+      },
+      "teammates_json": {
+        "Darmanitan": 0.008678940933522172,
+        "Salamence": 0.002874426438395361,
+        "Nidoking": 0.002874426438395361,
+        "Conkeldurr": 0.002874426438395361,
+        "Chansey": 0.035097567055223045,
+        "Keldeo": 0.0,
+        "Salazzle": 0.0,
+        "Scizor": 0.032223140616827683,
+        "Slowking": 0.005804514495126811,
+        "Rotom-Heat": 0.038027655111954495,
+        "Jirachi": 0.005804514495126811,
+        "Skarmory": 0.005804514495126811,
+        "Hydreigon": 0.00581205434516352,
+        "Crobat": 0.00581205434516352,
+        "Cobalion": 0.00581205434516352,
+        "Rotom-Wash": 0.00581205434516352,
+        "Hippowdon": 0.00581205434516352,
+        "Celesteela": 0.0,
+        "Moltres": 0.0,
+        "Mamoswine": 0.0,
+        "Zygarde-10%": 0.0,
+        "Thundurus-Therian": 0.032223140616827683,
+        "Excadrill": 0.032223140616827683,
+        "Nihilego": 0.0,
+        "Tentacruel": 0.0,
+        "Krookodile": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tapu Bulu",
+      "usage_count": 1,
+      "usage_pct": 1.9,
+      "viability_json": [
+        1,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "grassysurge": 0.04953178941158359
+      },
+      "items_json": {
+        "leftovers": 0.04953178941158359
+      },
+      "spreads_json": {
+        "Adamant:160/252/96/0/0/0": 0.04953178941158359
+      },
+      "moves_json": {
+        "hornleech": 0.04953178941158359,
+        "darkestlariat": 0.04953178941158359,
+        "bulkup": 0.04953178941158359,
+        "zenheadbutt": 0.04953178941158359
+      },
+      "tera_json": {
+        "nothing": 0.04953178941158359
+      },
+      "happiness_json": {
+        "255": 0.04953178941158359
+      },
+      "teammates_json": {
+        "Swampert": 0.04953178941158359,
+        "Darmanitan": 0.04953178941158359,
+        "Magneton": 0.04953178941158359,
+        "Salazzle": 0.04953178941158359,
+        "Klefki": 0.04953178941158359
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Thundurus-Therian",
+      "usage_count": 28,
+      "usage_pct": 1.96,
+      "viability_json": [
+        10,
+        59,
+        59,
+        57
+      ],
+      "abilities_json": {
+        "voltabsorb": 0.056202745017430944
+      },
+      "items_json": {
+        "heavydutyboots": 0.05606821716613336,
+        "choicespecs": 0.00013452785129758338
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.032318066213747054,
+        "Timid:0/0/4/252/0/252": 0.023810793752705117,
+        "Timid:0/0/0/252/0/252": 0.0,
+        "Hasty:0/4/0/252/0/252": 0.0,
+        "Modest:0/0/0/252/0/252": 7.388505097877252e-05,
+        "Timid:0/4/0/252/0/252": 0.0
+      },
+      "moves_json": {
+        "nastyplot": 3.4282796600559884e-05,
+        "grassknot": 0.05606821716613336,
+        "psychic": 0.03239195126472583,
+        "thunderbolt": 0.023845076549305677,
+        "voltswitch": 0.056168462220830384,
+        "sludgewave": 0.00013452785129758338,
+        "darkpulse": 6.064280031881086e-05,
+        "focusblast": 0.0560339343695328,
+        "knockoff": 0.0,
+        "discharge": 7.388505097877252e-05,
+        "thunder": 0.0,
+        "weatherball": 0.0,
+        "uturn": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.056202745017430944
+      },
+      "happiness_json": {
+        "255": 0.056202745017430944
+      },
+      "teammates_json": {
+        "Excadrill": 0.051223260345323096,
+        "Celesteela": 0.01892623467751664,
+        "Cloyster": 3.4282796600559884e-05,
+        "Mimikyu": 3.4282796600559884e-05,
+        "Salamence": 0.01892623467751664,
+        "Araquanid": 6.064280031881086e-05,
+        "Darmanitan": 6.064280031881086e-05,
+        "Mamoswine": 6.064280031881086e-05,
+        "Azumarill": 6.064280031881086e-05,
+        "Hatterene": 6.064280031881086e-05,
+        "Krookodile": 0.01889195188091608,
+        "Keldeo": 0.01889195188091608,
+        "Slowking": 0.0,
+        "Salazzle": 0.0,
+        "Klefki": 0.0,
+        "Zygarde-10%": 0.0,
+        "Snorlax": 0.0,
+        "Gyarados": 0.0,
+        "Hippowdon": 0.0,
+        "Rotom-Wash": 0.0,
+        "Amoonguss": 0.0,
+        "Primarina": 0.0,
+        "Scizor": 0.03224672668353573,
+        "Tangrowth": 0.032223140616827683,
+        "Chansey": 0.032297025667806456,
+        "Rotom-Heat": 0.032223140616827683,
+        "Conkeldurr": 7.388505097877252e-05,
+        "Hydreigon": 7.388505097877252e-05,
+        "Scolipede": 5.0298984270724656e-05,
+        "Politoed": 0.0,
+        "Ludicolo": 0.0,
+        "Omastar": 0.0,
+        "Toxicroak": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Torkoal",
+      "usage_count": 50,
+      "usage_pct": 47.29,
+      "viability_json": [
+        8,
+        81,
+        81,
+        63
+      ],
+      "abilities_json": {
+        "drought": 1.9739938074572778
+      },
+      "items_json": {
+        "choicespecs": 9.805262157769334e-09,
+        "heatrock": 1.9739937976520157
+      },
+      "spreads_json": {
+        "Modest:4/0/232/252/0/0": 8.35387176101321e-09,
+        "Bold:248/0/252/0/8/0": 0.007610531772960505,
+        "Bold:252/0/252/4/0/0": 1.956525376861822,
+        "Quiet:248/8/0/252/0/0": 0.005914655194360574,
+        "Modest:4/0/252/252/0/0": 1.4266358649983601e-09,
+        "Modest:248/0/0/252/8/0": 0.003943233847626404
+      },
+      "moves_json": {
+        "flamethrower": 9.805262157769334e-09,
+        "bodypress": 9.805262157769334e-09,
+        "stealthrock": 1.9663832742329268,
+        "solarbeam": 9.805262157769334e-09,
+        "lavaplume": 1.9680791424576554,
+        "rapidspin": 1.9739937976520157,
+        "sleeptalk": 0.007610531772960505,
+        "rest": 0.007610531772960505,
+        "yawn": 1.9576210741817084,
+        "overheat": 0.005914655194360574,
+        "explosion": 0.004818957849720196,
+        "scorchingsands": 1.4513903967561248e-09,
+        "clearsmog": 0.003943233847626404
+      },
+      "tera_json": {
+        "nothing": 1.9739938074572778
+      },
+      "happiness_json": {
+        "255": 1.9739938074572778
+      },
+      "teammates_json": {
+        "Venusaur": 1.2347063972231176,
+        "Ninetales": 6.533686869314437e-09,
+        "Salamence": 6.532246354939986e-09,
+        "Xurkitree": 6.533686869314437e-09,
+        "Krookodile": 5.107051004316077e-09,
+        "Hatterene": 1.2307631568418045,
+        "Darmanitan": 1.2307631582698804,
+        "Swampert": 0.005308447256405058,
+        "Celesteela": 0.005308447256405058,
+        "Hydreigon": 1.223389128843848,
+        "Scizor": 1.223389128843848,
+        "Charizard": 0.0020655807415508876,
+        "Cobalion": 0.0020655807415508876,
+        "Snorlax": 0.003943233847626404,
+        "Marowak-Alola": 0.003943233847626404,
+        "Chandelure": 0.003943233847626404,
+        "Zoroark": 0.003943233847626404
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tornadus",
+      "usage_count": 2,
+      "usage_pct": 0.14,
+      "viability_json": [
+        1,
+        52,
+        52,
+        52
+      ],
+      "abilities_json": {
+        "prankster": 0.003654936868046854
+      },
+      "items_json": {
+        "choicespecs": 0.003654936868046854
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.003654936868046854
+      },
+      "moves_json": {
+        "hurricane": 0.003654936868046854,
+        "weatherball": 0.003654936868046854,
+        "uturn": 0.003654936868046854,
+        "knockoff": 0.003654936868046854
+      },
+      "tera_json": {
+        "nothing": 0.003654936868046854
+      },
+      "happiness_json": {
+        "255": 0.003654936868046854
+      },
+      "teammates_json": {
+        "Excadrill": 0.003654936868046854,
+        "Politoed": 0.003654936868046854,
+        "Kingdra": 0.003654936868046854,
+        "Gyarados": 0.003654936868046854,
+        "Amoonguss": 0.003654936868046854
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Toxtricity",
+      "usage_count": 3,
+      "usage_pct": 0.19,
+      "viability_json": [
+        1,
+        50,
+        50,
+        50
+      ],
+      "abilities_json": {
+        "punkrock": 0.004948736570918322
+      },
+      "items_json": {
+        "silkscarf": 0.004948736570918322
+      },
+      "spreads_json": {
+        "Rash:0/0/0/252/4/252": 0.004948736570918322
+      },
+      "moves_json": {
+        "overdrive": 0.004948736570918322,
+        "boomburst": 0.004948736570918322,
+        "drainpunch": 0.004948736570918322,
+        "shiftgear": 0.004948736570918322
+      },
+      "tera_json": {
+        "nothing": 0.004948736570918322
+      },
+      "happiness_json": {
+        "255": 0.004948736570918322
+      },
+      "teammates_json": {
+        "Scolipede": 0.004948736570918322,
+        "Celesteela": 0.004948736570918322,
+        "Necrozma": 0.004948736570918322,
+        "Conkeldurr": 0.004948736570918322,
+        "Salamence": 0.004948736570918322
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Umbreon",
+      "usage_count": 39,
+      "usage_pct": 0.26,
+      "viability_json": [
+        5,
+        56,
+        56,
+        56
+      ],
+      "abilities_json": {
+        "synchronize": 0.0009785353461547186,
+        "innerfocus": 0.005859276696694116
+      },
+      "items_json": {
+        "leftovers": 0.006837812042848834
+      },
+      "spreads_json": {
+        "Impish:252/0/152/0/104/0": 3.773997780953664e-11,
+        "Calm:252/0/0/0/252/0": 0.005859276696694116,
+        "Careful:248/0/120/0/140/0": 0.0009785353084147408,
+        "Calm:252/0/4/0/252/0": 0.0
+      },
+      "moves_json": {
+        "foulplay": 0.006837812042848834,
+        "toxic": 3.773997780953664e-11,
+        "healbell": 0.006837812042848834,
+        "wish": 0.006837812042848834,
+        "protect": 0.0068378120051088565
+      },
+      "tera_json": {
+        "nothing": 0.006837812042848834
+      },
+      "happiness_json": {
+        "255": 0.006837812042848834
+      },
+      "teammates_json": {
+        "Skarmory": 1.5436929512446795e-11,
+        "Vaporeon": 2.7108260081121216e-11,
+        "Sylveon": 0.005859276723802376,
+        "Shedinja": 2.7108260081121216e-11,
+        "Chandelure": 2.7108260081121216e-11,
+        "Crobat": 0.005859276696694116,
+        "Milotic": 0.005859276696694116,
+        "Golurk": 0.005859276696694116,
+        "Bronzong": 0.005859276696694116,
+        "Zygarde-10%": 0.0009785353084147408,
+        "Slowking": 0.0009785353084147408,
+        "Darmanitan": 0.0009785353084147408,
+        "Rotom-Wash": 0.0007679625015157843,
+        "Raikou": 0.0009785353084147408,
+        "Slowbro-Galar": 0.00021057280689895652,
+        "Amoonguss": 0.0,
+        "Mamoswine": 0.0,
+        "Bewear": 0.0,
+        "Slurpuff": 0.0,
+        "Tentacruel": 0.0,
+        "Stakataka": 0.0,
+        "Reuniclus": 0.0,
+        "Registeel": 1.167133056867442e-11
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Venusaur",
+      "usage_count": 52,
+      "usage_pct": 47.29,
+      "viability_json": [
+        8,
+        81,
+        81,
+        63
+      ],
+      "abilities_json": {
+        "chlorophyll": 1.9739938064430247,
+        "overgrow": 1.0144119988453326e-09
+      },
+      "items_json": {
+        "leftovers": 9.803118705686842e-09,
+        "lifeorb": 1.9700505638066916,
+        "assaultvest": 0.003943233847626404
+      },
+      "spreads_json": {
+        "Timid:4/0/0/252/0/252": 9.780666720970999e-09,
+        "Modest:0/0/0/252/4/252": 1.9680791424576554,
+        "Modest:0/0/4/252/0/252": 0.005914655194360574,
+        "Hasty:4/0/0/252/0/252": 2.4754531757764653e-11
+      },
+      "moves_json": {
+        "growth": 1.9700505736098102,
+        "sludgebomb": 1.9739938074574368,
+        "energyball": 9.782688215054236e-09,
+        "weatherball": 1.9700505736098102,
+        "gigadrain": 1.9739937976520157,
+        "petalblizzard": 2.2733037674527168e-11,
+        "solarbeam": 0.003943233847626404,
+        "earthpower": 0.003943233847626404
+      },
+      "tera_json": {
+        "nothing": 1.9739938074574368
+      },
+      "happiness_json": {
+        "255": 1.9739938074574368
+      },
+      "teammates_json": {
+        "Ninetales": 6.5338459642738655e-09,
+        "Torkoal": 1.2347063972231176,
+        "Salamence": 6.532405449899414e-09,
+        "Xurkitree": 6.5338459642738655e-09,
+        "Krookodile": 5.107210099275505e-09,
+        "Hatterene": 1.2307631568418045,
+        "Darmanitan": 1.2307631582700393,
+        "Swampert": 0.005308447256405058,
+        "Celesteela": 0.005308447256405058,
+        "Hydreigon": 1.223389128843848,
+        "Scizor": 1.223389128843848,
+        "Charizard": 0.0020655807415508876,
+        "Cobalion": 0.0020655807415508876,
+        "Snorlax": 0.003943233847626404,
+        "Marowak-Alola": 0.003943233847626404,
+        "Chandelure": 0.003943233847626404,
+        "Zoroark": 0.003943233847626404
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Xurkitree",
+      "usage_count": 36,
+      "usage_pct": 0.35,
+      "viability_json": [
+        3,
+        58,
+        58,
+        58
+      ],
+      "abilities_json": {
+        "beastboost": 0.0092437371406357
+      },
+      "items_json": {
+        "choicescarf": 0.0092437371406357
+      },
+      "spreads_json": {
+        "Timid:4/0/0/252/0/252": 0.00709956122042088,
+        "Timid:0/0/0/252/4/252": 0.002144175920214819
+      },
+      "moves_json": {
+        "voltswitch": 0.0092437371406357,
+        "discharge": 9.780666720970999e-09,
+        "energyball": 0.0092437371406357,
+        "dazzlinggleam": 0.00924373571384074,
+        "thunderbolt": 0.009243727359968978,
+        "sunnyday": 1.426794959957789e-09
+      },
+      "tera_json": {
+        "nothing": 0.0092437371406357
+      },
+      "happiness_json": {
+        "255": 0.0092437371406357
+      },
+      "teammates_json": {
+        "Venusaur": 6.5338459642738655e-09,
+        "Ninetales": 6.5338459642738655e-09,
+        "Torkoal": 6.533686869314437e-09,
+        "Salamence": 6.532405449899414e-09,
+        "Krookodile": 0.0019969191462388958,
+        "Crobat": 0.0070995514149996275,
+        "Zarude": 0.0070995514149996275,
+        "Moltres": 0.0070995514149996275,
+        "Silvally-Fairy": 0.0070995514149996275,
+        "Swampert": 0.0070995514149996275,
+        "Darmanitan": 0.0019408030840818435,
+        "Haxorus": 0.0019969140390287965,
+        "Golisopod": 0.0019969140390287965,
+        "Bewear": 0.0019969140390287965,
+        "Salazzle": 5.6112383182427283e-05
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Zarude",
+      "usage_count": 12,
+      "usage_pct": 5.18,
+      "viability_json": [
+        5,
+        65,
+        65,
+        65
+      ],
+      "abilities_json": {
+        "leafguard": 0.21504792400223782
+      },
+      "items_json": {
+        "leftovers": 0.2079483725872382,
+        "heavydutyboots": 0.0,
+        "choicescarf": 0.0070995514149996275,
+        "rockyhelmet": 0.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.2079483725872382,
+        "Adamant:4/244/4/0/4/252": 0.0070995514149996275,
+        "Jolly:180/140/0/0/0/188": 0.0
+      },
+      "moves_json": {
+        "bulkup": 0.2079483725872382,
+        "encore": 0.2079483725872382,
+        "darkestlariat": 0.2079483725872382,
+        "drainpunch": 0.2079483725872382,
+        "powerwhip": 0.0,
+        "uturn": 0.0070995514149996275,
+        "junglehealing": 0.0,
+        "crunch": 0.0070995514149996275,
+        "closecombat": 0.0070995514149996275,
+        "seedbomb": 0.0070995514149996275,
+        "lowkick": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.21504792400223782
+      },
+      "happiness_json": {
+        "255": 0.21504792400223782
+      },
+      "teammates_json": {
+        "Salamence": 0.12818505602584085,
+        "Skarmory": 0.12818505602584085,
+        "Polteageist": 0.12818505602584085,
+        "Diggersby": 0.12818505602584085,
+        "Cobalion": 0.12818505602584085,
+        "Vanilluxe": 0.0,
+        "Excadrill": 0.0,
+        "Azelf": 0.0,
+        "Slowking": 0.0,
+        "Crobat": 0.0070995514149996275,
+        "Moltres": 0.0070995514149996275,
+        "Xurkitree": 0.0070995514149996275,
+        "Silvally-Fairy": 0.0070995514149996275,
+        "Swampert": 0.0070995514149996275,
+        "Obstagoon": 0.0,
+        "Wishiwashi": 0.0,
+        "Machamp": 0.0,
+        "Lycanroc-Dusk": 0.0,
+        "Togekiss": 0.0,
+        "Amoonguss": 0.0,
+        "Scizor": 0.0,
+        "Krookodile": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Zoroark",
+      "usage_count": 2,
+      "usage_pct": 0.15,
+      "viability_json": [
+        1,
+        53,
+        53,
+        53
+      ],
+      "abilities_json": {
+        "illusion": 0.003943233847626404
+      },
+      "items_json": {
+        "airballoon": 0.003943233847626404
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.003943233847626404
+      },
+      "moves_json": {
+        "nastyplot": 0.003943233847626404,
+        "substitute": 0.003943233847626404,
+        "darkpulse": 0.003943233847626404,
+        "shadowball": 0.003943233847626404
+      },
+      "tera_json": {
+        "nothing": 0.003943233847626404
+      },
+      "happiness_json": {
+        "255": 0.003943233847626404
+      },
+      "teammates_json": {
+        "Torkoal": 0.003943233847626404,
+        "Venusaur": 0.003943233847626404,
+        "Snorlax": 0.003943233847626404,
+        "Marowak-Alola": 0.003943233847626404,
+        "Chandelure": 0.003943233847626404
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Zygarde-10%",
+      "usage_count": 10,
+      "usage_pct": 0.04,
+      "viability_json": [
+        4,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "aurabreak": 0.0009785353084147408
+      },
+      "items_json": {
+        "choiceband": 0.0,
+        "lifeorb": 0.0009785353084147408,
+        "heavydutyboots": 0.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.0,
+        "Timid:0/0/0/252/4/252": 0.0009785353084147408
+      },
+      "moves_json": {
+        "thousandarrows": 0.00021057280689895652,
+        "extremespeed": 0.0,
+        "crunch": 0.0009785353084147408,
+        "dragondance": 0.0009785353084147408,
+        "glare": 0.0009785353084147408,
+        "thousandwaves": 0.0007679625015157843,
+        "coil": 0.0,
+        "stoneedge": 0.0,
+        "outrage": 0.0,
+        "superpower": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.0009785353084147408
+      },
+      "happiness_json": {
+        "255": 0.0009785353084147408
+      },
+      "teammates_json": {
+        "Slowking": 0.0009785353084147408,
+        "Salazzle": 0.0,
+        "Klefki": 0.0,
+        "Thundurus-Therian": 0.0,
+        "Snorlax": 0.0,
+        "Umbreon": 0.0009785353084147408,
+        "Darmanitan": 0.0009785353084147408,
+        "Rotom-Wash": 0.0007679625015157843,
+        "Raikou": 0.0009785353084147408,
+        "Slowbro-Galar": 0.00021057280689895652,
+        "Skarmory": 0.0,
+        "Regieleki": 0.0,
+        "Chansey": 0.0,
+        "Swampert": 0.0,
+        "Celesteela": 0.0,
+        "Tangrowth": 0.0,
+        "Moltres": 0.0,
+        "Mamoswine": 0.0
+      },
+      "counters_json": {}
+    }
+  ]
+}

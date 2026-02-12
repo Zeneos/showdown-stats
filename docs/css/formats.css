@@ -201,6 +201,133 @@ tbody tr:hover {
     font-size: 1.2em;
 }
 
+/* Format detail view styles */
+#format-detail {
+    /* Display & Box Model */
+    padding: 20px 30px;
+}
+
+#detail-content {
+    /* Display & Box Model */
+    max-width: 800px;
+}
+
+.format-header {
+    /* Display & Box Model */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.format-header h2 {
+    /* Typography */
+    font-size: 2em;
+    color: #212529;
+    margin-bottom: 15px;
+}
+
+.format-header p {
+    /* Display & Box Model */
+    margin: 10px 0;
+
+    /* Typography */
+    font-size: 1.1em;
+    color: #495057;
+}
+
+.rating-breakdown {
+    /* Display & Box Model */
+    margin-bottom: 30px;
+}
+
+.rating-breakdown h3 {
+    /* Typography */
+    font-size: 1.3em;
+    color: #212529;
+    margin-bottom: 15px;
+}
+
+.rating-table {
+    /* Display & Box Model */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-row {
+    /* Display & Box Model */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+
+    /* Visual */
+    background: #f8f9fa;
+}
+
+.rating-label {
+    /* Typography */
+    font-weight: 500;
+    color: #495057;
+}
+
+.rating-battles {
+    /* Typography */
+    font-weight: 600;
+    color: #007bff;
+}
+
+.detail-actions {
+    /* Display & Box Model */
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+}
+
+.back-link {
+    /* Display & Box Model */
+    display: inline-block;
+    padding: 10px 15px;
+    
+    /* Visual */
+    background: #e7f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 4px;
+    
+    /* Typography */
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+    
+    /* Interaction */
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    /* Visual */
+    background: #0056b3;
+    
+    /* Typography */
+    color: white;
+}
+
+.format-link {
+    /* Typography */
+    color: #0056b3;
+    text-decoration: none;
+    
+    /* Interaction */
+    transition: color 0.2s ease;
+}
+
+.format-link:hover {
+    /* Typography */
+    color: #0056b3;
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .controls {
         /* Display & Box Model */
@@ -217,5 +344,22 @@ tbody tr:hover {
     td {
         /* Display & Box Model */
         padding: 10px 15px;
+    }
+
+    .rating-row {
+        /* Display & Box Model */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    #format-detail {
+        /* Display & Box Model */
+        padding: 15px;
+    }
+
+    .format-header h2 {
+        /* Typography */
+        font-size: 1.5em;
     }
 }
