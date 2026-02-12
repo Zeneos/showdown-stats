@@ -256,6 +256,108 @@ tbody tr:hover {
     color: #495057;
 }
 
+.help-tooltip {
+    /* Display & Box Model */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+
+    /* Visual */
+    border-radius: 50%;
+    background: #e9ecef;
+    color: #495057;
+    cursor: help;
+
+    /* Typography */
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.usage-header {
+    /* Display & Box Model */
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.help-tooltip {
+    /* Positioning */
+    position: relative;
+}
+
+.help-tooltip::after {
+    /* Positioning */
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%);
+    z-index: 20;
+
+    /* Display & Box Model */
+    width: max-content;
+    max-width: 280px;
+    padding: 10px 12px;
+
+    /* Visual */
+    background: #1f2937;
+    color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+
+    /* Typography */
+    font-size: 0.85em;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: left;
+
+    /* Content */
+    content: attr(data-tooltip);
+
+    /* Interaction */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.help-tooltip::before {
+    /* Positioning */
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 4px);
+    transform: translateX(-50%);
+    z-index: 21;
+
+    /* Display & Box Model */
+    width: 0;
+    height: 0;
+
+    /* Visual */
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #1f2937;
+
+    /* Content */
+    content: '';
+
+    /* Interaction */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.help-tooltip:hover::after,
+.help-tooltip:focus::after,
+.help-tooltip:hover::before,
+.help-tooltip:focus::before {
+    /* Interaction */
+    opacity: 1;
+    transform: translateX(-50%) translateY(-2px);
+}
+
 .pokemon-breakdown {
     /* Display & Box Model */
     margin-bottom: 30px;
@@ -298,10 +400,38 @@ tbody tr:hover {
     color: #495057;
 }
 
+.pokemon-meta {
+    /* Visual */
+    background: #d6f5d6;
+}
+
+.pokemon-name-cell {
+    /* Display & Box Model */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pokemon-sprite {
+    /* Display & Box Model */
+    width: 48px;
+    height: 48px;
+
+    /* Visual */
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
 .pokemon-usage,
 .pokemon-count {
     /* Typography */
     font-variant-numeric: tabular-nums;
+}
+
+.pokemon-meta-usage {
+    /* Typography */
+    color: #e76f00;
+    font-weight: 600;
 }
 
 .detail-actions {

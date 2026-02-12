@@ -4,6 +4,12 @@ let statsData = null;
 let currentSort = { column: 'battles', direction: 'desc' };
 let currentRatingFilter = 'all';
 let pokemonSort = { column: 'usage_pct', direction: 'desc' };
+const spriteShowdownBase = '../assets/sprites/showdown';
+const spriteOriginalBase = '../assets/sprites/original';
+const spritePlaceholder = `${spriteOriginalBase}/0.png`;
+const metaUsageThreshold = 4.52;
+const metaEncounterBattles = 15;
+const metaEncounterProbability = 0.5;
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', async () => {
@@ -247,6 +253,42 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
+function sanitizeSpriteName(name) {
+    if (!name) return '';
+    return name
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[<>:"/\\|?*]/g, '-')
+        .replace(/[\s.]+$/g, '')
+        .trim();
+}
+
+function encodePathSegment(path) {
+    return path
+        .split('/')
+        .map(segment => encodeURIComponent(segment))
+        .join('/');
+}
+
+function getPokemonSpritePaths(pokemonName) {
+    const safeName = sanitizeSpriteName(pokemonName);
+    if (!safeName) return spritePlaceholder;
+
+    const showdown = `${spriteShowdownBase}/${encodePathSegment(`${safeName}.gif`)}`;
+    const original = `${spriteOriginalBase}/${encodePathSegment(`${safeName}.png`)}`;
+    return { showdown, original, placeholder: spritePlaceholder };
+}
+
+function getEncounterProbability(usagePct, battles) {
+    const p = Math.max(0, Math.min(usagePct / 100, 1));
+    return 1 - Math.pow(1 - p, battles);
+}
+
+function isMetaPokemon(usagePct) {
+    if (usagePct < metaUsageThreshold) return false;
+    return getEncounterProbability(usagePct, metaEncounterBattles) >= metaEncounterProbability;
+}
+
 // Get format name from URL query parameter
 function getFormatFromUrl() {
     const params = new URLSearchParams(window.location.search);
@@ -312,13 +354,25 @@ async function renderFormatDetail(formatName, ratingOverride) {
 
         const sortedPokemon = sortPokemonList(pokemonData.pokemon);
         const pokemonRows = sortedPokemon
-            .map(pokemon => `
-                <tr>
-                    <td class="pokemon-name">${escapeHtml(pokemon.pokemon_name)}</td>
-                    <td class="pokemon-usage">${pokemon.usage_pct.toFixed(2)}%</td>
+            .map(pokemon => {
+                const spritePaths = getPokemonSpritePaths(pokemon.pokemon_name);
+                const showdownSrc = typeof spritePaths === 'string' ? spritePaths : spritePaths.showdown;
+                const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
+                const placeholderSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.placeholder;
+                const isMeta = isMetaPokemon(pokemon.usage_pct);
+                return `
+                <tr class="${isMeta ? 'pokemon-meta' : ''}">
+                    <td class="pokemon-name">
+                        <span class="pokemon-name-cell">
+                            <img class="pokemon-sprite" src="${showdownSrc}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${placeholderSrc}';};this.src='${originalSrc}';">
+                            <span>${escapeHtml(pokemon.pokemon_name)}</span>
+                        </span>
+                    </td>
+                    <td class="pokemon-usage ${isMeta ? 'pokemon-meta-usage' : ''}">${pokemon.usage_pct.toFixed(2)}%</td>
                     <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
                 </tr>
-            `)
+            `;
+            })
             .join('');
 
         detailContent.innerHTML = `
@@ -326,10 +380,13 @@ async function renderFormatDetail(formatName, ratingOverride) {
                 <h2>${escapeHtml(getFormatName(format))}</h2>
                 <p>Total Battles: <strong>${formatNumber(format.total_battles)}</strong></p>
                 <p>Overall Percentage: <strong>${format.percentage.toFixed(2)}%</strong></p>
-                <p>Pokemon Usage: <strong>${formatPokemonRatingLabel(pokemonData.elo_cutoff, rating)}</strong></p>
+                <p>
+                    Pokemon Usage:
+                    <strong>${formatPokemonRatingLabel(pokemonData.elo_cutoff, rating)}</strong>
+                        <span class="help-tooltip" aria-label="Meta criteria" data-tooltip="Pokemon with at least 4.52% weighted usage are highlighted. For OU/UU/RU/NU/PU formats, a Pokemon is truly in their tier if a typical competitive player is more than 50% likely to encounter it at least once in a day of playing (15 battles).">?</span>
+                </p>
             </div>
             <div class="pokemon-breakdown">
-                <h3>Pokemon Usage</h3>
                 <div class="pokemon-table-wrapper">
                     <table class="pokemon-table">
                         <thead>
