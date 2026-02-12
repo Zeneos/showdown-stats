@@ -147,6 +147,27 @@ th.sort-desc::after {
     opacity: 1;
 }
 
+.pokemon-sortable::after {
+    /* Typography */
+    content: ' ⇅';
+    font-size: 0.8em;
+    opacity: 0.3;
+}
+
+.pokemon-sort-asc::after {
+    /* Typography */
+    content: ' ↑';
+    color: #667eea;
+    opacity: 1;
+}
+
+.pokemon-sort-desc::after {
+    /* Typography */
+    content: ' ↓';
+    color: #667eea;
+    opacity: 1;
+}
+
 td {
     /* Display & Box Model */
     padding: 15px 20px;
@@ -235,48 +256,52 @@ tbody tr:hover {
     color: #495057;
 }
 
-.rating-breakdown {
+.pokemon-breakdown {
     /* Display & Box Model */
     margin-bottom: 30px;
 }
 
-.rating-breakdown h3 {
+.pokemon-breakdown h3 {
     /* Typography */
     font-size: 1.3em;
     color: #212529;
     margin-bottom: 15px;
 }
 
-.rating-table {
+.pokemon-table-wrapper {
     /* Display & Box Model */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    overflow-x: auto;
 }
 
-.rating-row {
+.pokemon-table {
     /* Display & Box Model */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 15px;
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
+    width: 100%;
+    border-collapse: collapse;
+}
 
+.pokemon-table th,
+.pokemon-table td {
+    /* Display & Box Model */
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+
+    /* Typography */
+    text-align: left;
+}
+
+.pokemon-table th {
     /* Visual */
     background: #f8f9fa;
-}
 
-.rating-label {
     /* Typography */
-    font-weight: 500;
+    font-weight: 600;
     color: #495057;
 }
 
-.rating-battles {
+.pokemon-usage,
+.pokemon-count {
     /* Typography */
-    font-weight: 600;
-    color: #007bff;
+    font-variant-numeric: tabular-nums;
 }
 
 .detail-actions {
@@ -346,16 +371,15 @@ tbody tr:hover {
         padding: 10px 15px;
     }
 
-    .rating-row {
-        /* Display & Box Model */
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-
     #format-detail {
         /* Display & Box Model */
         padding: 15px;
+    }
+
+    .pokemon-table th,
+    .pokemon-table td {
+        /* Display & Box Model */
+        padding: 10px 12px;
     }
 
     .format-header h2 {
