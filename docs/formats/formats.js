@@ -2,7 +2,8 @@
 
 let statsData = null;
 let currentSort = { column: 'battles', direction: 'desc' };
-let currentRatingFilter = '0';
+let currentRatingFilter = 'all';
+let pokemonSort = { column: 'usage_pct', direction: 'desc' };
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', async () => {
@@ -36,14 +37,13 @@ async function loadLatestData() {
         document.getElementById('total-battles').textContent = formatNumber(statsData.total_battles);
         document.getElementById('format-count').textContent = statsData.formats.length;
 
-        // Populate rating filter dropdown
-        populateRatingFilter();
-
         // Check if we should render table or detail view
         const formatName = getFormatFromUrl();
         if (formatName) {
+            populateRatingFilter(formatName);
             renderFormatDetail(formatName);
         } else {
+            populateRatingFilter();
             renderTable();
         }
 
@@ -60,17 +60,50 @@ async function loadLatestData() {
 }
 
 // Populate the rating filter dropdown
-function populateRatingFilter() {
+function populateRatingFilter(formatName) {
     const filterSelect = document.getElementById('rating-filter');
+    if (!filterSelect) return;
 
-    // Add options for each rating threshold
-    if (statsData && statsData.rating_thresholds) {
-        statsData.rating_thresholds.forEach(rating => {
+    filterSelect.innerHTML = '';
+
+    const allOption = document.createElement('option');
+    allOption.value = 'all';
+    allOption.textContent = 'All ratings';
+    filterSelect.appendChild(allOption);
+
+    let ratings = [];
+    if (formatName && statsData) {
+        const format = statsData.formats.find(f => getFormatKey(f) === formatName);
+        if (format && format.by_rating) {
+            ratings = Object.keys(format.by_rating);
+        }
+    } else if (statsData && statsData.formats) {
+        const ratingSet = new Set();
+        statsData.formats.forEach(format => {
+            if (!format.by_rating) return;
+            Object.keys(format.by_rating).forEach(rating => ratingSet.add(rating));
+        });
+        ratings = Array.from(ratingSet);
+    }
+
+    ratings
+        .map(rating => parseInt(rating, 10))
+        .filter(rating => !Number.isNaN(rating))
+        .sort((a, b) => a - b)
+        .forEach(rating => {
             const option = document.createElement('option');
-            option.value = rating;
+            option.value = String(rating);
             option.textContent = `Rating ${rating}+`;
             filterSelect.appendChild(option);
         });
+
+    if (currentRatingFilter) {
+        filterSelect.value = currentRatingFilter;
+    }
+
+    if (!filterSelect.value) {
+        currentRatingFilter = 'all';
+        filterSelect.value = 'all';
     }
 }
 
@@ -81,8 +114,8 @@ function renderTable() {
     let formats = [...statsData.formats];
 
     // Apply rating filter
-    if (currentRatingFilter !== '0') {
-        const rating = parseInt(currentRatingFilter);
+    if (currentRatingFilter !== 'all') {
+        const rating = parseInt(currentRatingFilter, 10);
         formats = formats
             .map(format => {
                 let battles = format.by_rating[rating];
@@ -124,7 +157,7 @@ function renderTable() {
 
         switch (currentSort.column) {
             case 'format-name':
-                comparison = a.name.localeCompare(b.format_name);
+                comparison = getFormatName(a).localeCompare(getFormatName(b));
                 break;
             case 'percentage':
                 comparison = a.percentage - b.percentage;
@@ -143,10 +176,11 @@ function renderTable() {
 
     formats.forEach(format => {
         const row = document.createElement('tr');
-        const formatLink = `?format=${encodeURIComponent(format.format_name)}`;
+        const formatKey = getFormatKey(format);
+        const formatLink = `?format=${encodeURIComponent(formatKey)}`;
 
         row.innerHTML = `
-            <td class="format-name"><a href="${formatLink}" class="format-link">${escapeHtml(format.format_name)}</a></td>
+            <td class="format-name"><a href="${formatLink}" class="format-link">${escapeHtml(getFormatName(format))}</a></td>
             <td class="percentage">${format.percentage.toFixed(2)}%</td>
             <td class="battles">${formatNumber(format.total_battles)}</td>
         `;
@@ -171,7 +205,7 @@ function setupEventListeners() {
             } else {
                 // New column, default to descending
                 currentSort.column = column;
-                currentSort.direction = column === 'name' ? 'asc' : 'desc';
+                currentSort.direction = column === 'format-name' ? 'asc' : 'desc';
             }
 
             renderTable();
@@ -181,7 +215,12 @@ function setupEventListeners() {
     // Rating filter
     document.getElementById('rating-filter').addEventListener('change', (e) => {
         currentRatingFilter = e.target.value;
-        renderTable();
+        const formatName = getFormatFromUrl();
+        if (formatName) {
+            renderFormatDetail(formatName);
+        } else {
+            renderTable();
+        }
     });
 }
 
@@ -223,10 +262,10 @@ function handleRouting() {
 }
 
 // Render detail view for a specific format
-function renderFormatDetail(formatName) {
+async function renderFormatDetail(formatName, ratingOverride) {
     if (!statsData) return;
 
-    const format = statsData.formats.find(f => f.format_name === formatName);
+    const format = statsData.formats.find(f => getFormatKey(f) === formatName);
     
     if (!format) {
         const container = document.getElementById('table-container');
@@ -252,33 +291,158 @@ function renderFormatDetail(formatName) {
 
     // Update header
     const periodInfo = document.getElementById('period-info');
-    if (periodInfo) periodInfo.textContent = `${escapeHtml(formatName)} - Stats Period: Latest`;
+    if (periodInfo) periodInfo.textContent = `${escapeHtml(getFormatName(format))} - Stats Period: Latest`;
+
+    populateRatingFilter(getFormatKey(format));
+    const rating = ratingOverride || currentRatingFilter || 'all';
+    const pokemonData = await loadPokemonData(getFormatKey(format), rating);
 
     // Render format detail content
     const detailContent = document.getElementById('detail-content');
     if (detailContent) {
+        if (!pokemonData || !Array.isArray(pokemonData.pokemon)) {
+            detailContent.innerHTML = `
+                <div class="error">
+                    <p>Pokemon data for "${escapeHtml(getFormatName(format))}" could not be loaded.</p>
+                    <a href="./" class="back-link">← Back to all formats</a>
+                </div>
+            `;
+            return;
+        }
+
+        const sortedPokemon = sortPokemonList(pokemonData.pokemon);
+        const pokemonRows = sortedPokemon
+            .map(pokemon => `
+                <tr>
+                    <td class="pokemon-name">${escapeHtml(pokemon.pokemon_name)}</td>
+                    <td class="pokemon-usage">${pokemon.usage_pct.toFixed(2)}%</td>
+                    <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
+                </tr>
+            `)
+            .join('');
+
         detailContent.innerHTML = `
             <div class="format-header">
-                <h2>${escapeHtml(format.format_name)}</h2>
+                <h2>${escapeHtml(getFormatName(format))}</h2>
                 <p>Total Battles: <strong>${formatNumber(format.total_battles)}</strong></p>
                 <p>Overall Percentage: <strong>${format.percentage.toFixed(2)}%</strong></p>
+                <p>Pokemon Usage: <strong>${formatPokemonRatingLabel(pokemonData.elo_cutoff, rating)}</strong></p>
             </div>
-            <div class="rating-breakdown">
-                <h3>Rating Breakdown</h3>
-                <div class="rating-table">
-                    ${Object.entries(format.by_rating)
-                        .map(([rating, battles]) => `
-                            <div class="rating-row">
-                                <span class="rating-label">Rating ${rating}+</span>
-                                <span class="rating-battles">${formatNumber(battles)} battles</span>
-                            </div>
-                        `)
-                        .join('')}
+            <div class="pokemon-breakdown">
+                <h3>Pokemon Usage</h3>
+                <div class="pokemon-table-wrapper">
+                    <table class="pokemon-table">
+                        <thead>
+                            <tr>
+                                <th class="pokemon-sortable" data-sort="pokemon_name">Pokemon</th>
+                                <th class="pokemon-sortable" data-sort="usage_pct">Usage %</th>
+                                <th class="pokemon-sortable" data-sort="usage_count">Usage Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${pokemonRows}
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="detail-actions">
                 <a href="./" class="back-link">← Back to all formats</a>
             </div>
         `;
+
+        setupPokemonSortListeners(getFormatKey(format), rating);
+        updatePokemonSortIndicators();
     }
+}
+
+function getFormatName(format) {
+    return format.format_name || format.name || '';
+}
+
+function getFormatKey(format) {
+    return format.format_name || format.name || '';
+}
+
+async function loadPokemonData(formatName, rating) {
+    const ratingValue = rating === 'all' ? '0' : rating || '0';
+    const requestedPath = `formats/${encodeURIComponent(formatName)}/${ratingValue}.json`;
+
+    try {
+        const response = await fetch(requestedPath);
+        if (response.ok) {
+            return await response.json();
+        }
+    } catch (error) {
+        console.error('Error loading pokemon data:', error);
+    }
+
+    if (ratingValue !== '0') {
+        try {
+            const fallbackResponse = await fetch(`formats/${encodeURIComponent(formatName)}/0.json`);
+            if (fallbackResponse.ok) {
+                return await fallbackResponse.json();
+            }
+        } catch (error) {
+            console.error('Error loading fallback pokemon data:', error);
+        }
+    }
+
+    return null;
+}
+
+function sortPokemonList(pokemonList) {
+    const sorted = [...pokemonList];
+    sorted.sort((a, b) => {
+        let comparison = 0;
+        switch (pokemonSort.column) {
+            case 'pokemon_name':
+                comparison = a.pokemon_name.localeCompare(b.pokemon_name);
+                break;
+            case 'usage_count':
+                comparison = a.usage_count - b.usage_count;
+                break;
+            case 'usage_pct':
+            default:
+                comparison = a.usage_pct - b.usage_pct;
+                break;
+        }
+        return pokemonSort.direction === 'asc' ? comparison : -comparison;
+    });
+    return sorted;
+}
+
+function setupPokemonSortListeners(formatName, rating) {
+    document.querySelectorAll('.pokemon-sortable').forEach(th => {
+        th.addEventListener('click', () => {
+            const column = th.dataset.sort;
+            if (pokemonSort.column === column) {
+                pokemonSort.direction = pokemonSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                pokemonSort.column = column;
+                pokemonSort.direction = column === 'pokemon_name' ? 'asc' : 'desc';
+            }
+
+            renderFormatDetail(formatName, rating);
+        });
+    });
+}
+
+function updatePokemonSortIndicators() {
+    document.querySelectorAll('.pokemon-sortable').forEach(th => {
+        th.classList.remove('pokemon-sort-asc', 'pokemon-sort-desc');
+
+        if (th.dataset.sort === pokemonSort.column) {
+            th.classList.add(`pokemon-sort-${pokemonSort.direction}`);
+        }
+    });
+}
+
+function formatPokemonRatingLabel(eloCutoff, ratingFilter) {
+    if (ratingFilter === 'all') {
+        return 'All ratings';
+    }
+    if (eloCutoff === undefined || eloCutoff === null) {
+        return `Rating ${escapeHtml(String(ratingFilter))}+`;
+    }
+    return `Rating ${escapeHtml(String(eloCutoff))}+`;
 }
