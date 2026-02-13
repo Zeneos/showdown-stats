@@ -360,13 +360,16 @@ async function renderFormatDetail(formatName, ratingOverride) {
                 const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
                 const placeholderSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.placeholder;
                 const isMeta = isMetaPokemon(pokemon.usage_pct);
+                const pokemonLink = getPokemonLink(getFormatKey(format), pokemon.pokemon_name, rating);
                 return `
                 <tr class="${isMeta ? 'pokemon-meta' : ''}">
                     <td class="pokemon-name">
-                        <span class="pokemon-name-cell">
-                            <img class="pokemon-sprite" src="${showdownSrc}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${placeholderSrc}';};this.src='${originalSrc}';">
-                            <span>${escapeHtml(pokemon.pokemon_name)}</span>
-                        </span>
+                        <a class="pokemon-link" href="${pokemonLink}">
+                            <span class="pokemon-name-cell">
+                                <img class="pokemon-sprite" src="${showdownSrc}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${placeholderSrc}';};this.src='${originalSrc}';">
+                                <span>${escapeHtml(pokemon.pokemon_name)}</span>
+                            </span>
+                        </a>
                     </td>
                     <td class="pokemon-usage ${isMeta ? 'pokemon-meta-usage' : ''}">${pokemon.usage_pct.toFixed(2)}%</td>
                     <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
@@ -383,7 +386,7 @@ async function renderFormatDetail(formatName, ratingOverride) {
                 <p>
                     Pokemon Usage:
                     <strong>${formatPokemonRatingLabel(pokemonData.elo_cutoff, rating)}</strong>
-                        <span class="help-tooltip" aria-label="Meta criteria" data-tooltip="Pokemon with at least 4.52% weighted usage are highlighted. For OU/UU/RU/NU/PU formats, a Pokemon is truly in their tier if a typical competitive player is more than 50% likely to encounter it at least once in a day of playing (15 battles).">?</span>
+                    <span class="help-tooltip" aria-label="Meta criteria" data-tooltip="Pokemon with at least 4.52% weighted usage are highlighted. For OU/UU/RU/NU/PU formats, a Pokemon is truly in their tier if a typical competitive player is more than 50% likely to encounter it at least once in a day of playing (15 battles)." tabindex="0">?</span>
                 </p>
             </div>
             <div class="pokemon-breakdown">
@@ -418,6 +421,16 @@ function getFormatName(format) {
 
 function getFormatKey(format) {
     return format.format_name || format.name || '';
+}
+
+function getPokemonLink(formatName, pokemonName, rating) {
+    const params = new URLSearchParams();
+    params.set('format', formatName);
+    params.set('pokemon', pokemonName);
+    if (rating && rating !== 'all') {
+        params.set('rating', rating);
+    }
+    return `pokemon.html?${params.toString()}`;
 }
 
 async function loadPokemonData(formatName, rating) {
