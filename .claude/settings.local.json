@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:localhost)",
+      "Bash(curl:*)",
+      "Bash(for dir in gen1ou gen9vgc2026regf gen9nationaldex)",
+      "Bash(do echo \"=== $dir ===\")",
+      "Bash(done)"
+    ]
+  }
+}

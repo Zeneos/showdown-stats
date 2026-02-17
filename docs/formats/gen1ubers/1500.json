@@ -1,5 +1,1286 @@
 {
   "format_name": "gen1ubers",
   "elo_cutoff": 1500,
-  "pokemon": []
+  "pokemon": [
+    {
+      "pokemon_name": "Alakazam",
+      "usage_count": 8,
+      "usage_pct": 13.01,
+      "viability_json": [
+        3,
+        60,
+        60,
+        60
+      ],
+      "abilities_json": {
+        "noability": 7.839903567919029
+      },
+      "items_json": {
+        "nothing": 7.839903567919029
+      },
+      "spreads_json": {
+        "Serious:252/0/252/252/252/252": 7.086514062737905,
+        "Serious:252/252/252/252/252/252": 0.7533895051811237
+      },
+      "moves_json": {
+        "seismictoss": 6.434148771883819,
+        "thunderwave": 7.839903567919029,
+        "recover": 7.839903567919029,
+        "psychic": 7.839903567919029,
+        "counter": 0.6523652908540858,
+        "kinesis": 0.7533895051811237
+      },
+      "tera_json": {
+        "nothing": 7.839903567919029
+      },
+      "happiness_json": {
+        "255": 7.839903567919029
+      },
+      "teammates_json": {
+        "Exeggutor": 5.752958515809873,
+        "Mew": 5.752958515809873,
+        "Mewtwo": 5.752958515809873,
+        "Slowbro": 4.999569010628749,
+        "Tauros": 4.999569010628749,
+        "Rhydon": 0.6523652908540858,
+        "Dugtrio": 0.6523652908540858,
+        "Persian": 0.6523652908540858,
+        "Gengar": 0.6523652908540858,
+        "Tentacruel": 0.6523652908540858,
+        "Jynx": 0.7533895051811237,
+        "Snorlax": 0.7533895051811237
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Articuno",
+      "usage_count": 1,
+      "usage_pct": 2.03,
+      "viability_json": [
+        1,
+        75,
+        75,
+        75
+      ],
+      "abilities_json": {
+        "noability": 0.9999999972857507
+      },
+      "items_json": {
+        "nothing": 0.9999999972857507
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.9999999972857507
+      },
+      "moves_json": {
+        "agility": 0.9999999972857507,
+        "blizzard": 0.9999999972857507,
+        "reflect": 0.9999999972857507,
+        "hyperbeam": 0.9999999972857507
+      },
+      "tera_json": {
+        "nothing": 0.9999999972857507
+      },
+      "happiness_json": {
+        "255": 0.9999999972857507
+      },
+      "teammates_json": {
+        "Jynx": 0.9999999972857507,
+        "Mewtwo": 0.9999999972857507,
+        "Mew": 0.9999999972857507,
+        "Tauros": 0.9999999972857507,
+        "Exeggutor": 0.9999999972857507
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Bulbasaur",
+      "usage_count": 0,
+      "usage_pct": 0.54,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 0.26730009233185864
+      },
+      "items_json": {
+        "nothing": 0.26730009233185864
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.26730009233185864
+      },
+      "moves_json": {
+        "razorleaf": 0.26730009233185864,
+        "sleeppowder": 0.26730009233185864,
+        "leechseed": 0.26730009233185864,
+        "solarbeam": 0.26730009233185864
+      },
+      "tera_json": {
+        "nothing": 0.26730009233185864
+      },
+      "happiness_json": {
+        "255": 0.26730009233185864
+      },
+      "teammates_json": {
+        "Charizard": 0.26730009233185864,
+        "Butterfree": 0.26730009233185864,
+        "Pikachu": 0.26730009233185864,
+        "Squirtle": 0.26730009233185864,
+        "Pidgeotto": 0.26730009233185864
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Butterfree",
+      "usage_count": 0,
+      "usage_pct": 0.54,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 0.26730009233185864
+      },
+      "items_json": {
+        "nothing": 0.26730009233185864
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.26730009233185864
+      },
+      "moves_json": {
+        "sleeppowder": 0.26730009233185864,
+        "megadrain": 0.26730009233185864,
+        "psychic": 0.26730009233185864,
+        "reflect": 0.26730009233185864
+      },
+      "tera_json": {
+        "nothing": 0.26730009233185864
+      },
+      "happiness_json": {
+        "255": 0.26730009233185864
+      },
+      "teammates_json": {
+        "Charizard": 0.26730009233185864,
+        "Bulbasaur": 0.26730009233185864,
+        "Pikachu": 0.26730009233185864,
+        "Squirtle": 0.26730009233185864,
+        "Pidgeotto": 0.26730009233185864
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Chansey",
+      "usage_count": 12,
+      "usage_pct": 22.25,
+      "viability_json": [
+        14,
+        70,
+        70,
+        68
+      ],
+      "abilities_json": {
+        "noability": 12.467067300097378
+      },
+      "items_json": {
+        "nothing": 12.467067300097378
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/48": 0.006207894076677378,
+        "Serious:252/252/252/252/252/252": 9.619217728467442,
+        "Serious:252/0/252/252/252/252": 2.8416416775532594
+      },
+      "moves_json": {
+        "lightscreen": 0.6818392470486436,
+        "icebeam": 7.115476927491172,
+        "thunderwave": 10.196954158449703,
+        "hyperbeam": 0.006207894076677378,
+        "sing": 8.274972438826298,
+        "seismictoss": 6.728815826164656,
+        "softboiled": 12.4608594060207,
+        "counter": 1.280367135909354,
+        "psychic": 0.648507594601369,
+        "reflect": 0.6318595413079853,
+        "thunderbolt": 1.8424090304929566
+      },
+      "tera_json": {
+        "nothing": 12.467067300097378
+      },
+      "happiness_json": {
+        "255": 12.467067300097378
+      },
+      "teammates_json": {
+        "Tauros": 8.112125184234051,
+        "Mewtwo": 10.95376686178731,
+        "Mew": 10.321907320479324,
+        "Snorlax": 9.934427872659198,
+        "Exeggutor": 8.360052426051297,
+        "Gengar": 3.2291211253733865,
+        "Electrode": 1.594481788675709,
+        "Jynx": 0.6318595413079853,
+        "Rhydon": 0.6318595413079853,
+        "Zapdos": 0.9992326470603028
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Charizard",
+      "usage_count": 0,
+      "usage_pct": 0.54,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 0.26730009233185864
+      },
+      "items_json": {
+        "nothing": 0.26730009233185864
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.26730009233185864
+      },
+      "moves_json": {
+        "flamethrower": 0.26730009233185864,
+        "seismictoss": 0.26730009233185864,
+        "swordsdance": 0.26730009233185864,
+        "earthquake": 0.26730009233185864
+      },
+      "tera_json": {
+        "nothing": 0.26730009233185864
+      },
+      "happiness_json": {
+        "255": 0.26730009233185864
+      },
+      "teammates_json": {
+        "Bulbasaur": 0.26730009233185864,
+        "Butterfree": 0.26730009233185864,
+        "Pikachu": 0.26730009233185864,
+        "Squirtle": 0.26730009233185864,
+        "Pidgeotto": 0.26730009233185864
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cloyster",
+      "usage_count": 19,
+      "usage_pct": 37.65,
+      "viability_json": [
+        3,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "noability": 18.53920163576157
+      },
+      "items_json": {
+        "nothing": 18.53920163576157
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 18.53920163576157
+      },
+      "moves_json": {
+        "blizzard": 16.53969648000308,
+        "rest": 17.540983151173588,
+        "clamp": 18.53920163576157,
+        "explosion": 18.53920163576157,
+        "hyperbeam": 0.9982184845879811,
+        "icebeam": 1.9995051557584902
+      },
+      "tera_json": {
+        "nothing": 18.53920163576157
+      },
+      "happiness_json": {
+        "255": 18.53920163576157
+      },
+      "teammates_json": {
+        "Gengar": 16.53969648000308,
+        "Exeggutor": 16.53969648000308,
+        "Mew": 18.53920163576157,
+        "Mewtwo": 18.53920163576157,
+        "Snorlax": 17.540983151173588,
+        "Tauros": 2.9977236403464715,
+        "Jynx": 1.9995051557584902
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Dodrio",
+      "usage_count": 0,
+      "usage_pct": 0.78,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "noability": 0.38185862332246046
+      },
+      "items_json": {
+        "nothing": 0.38185862332246046
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.38185862332246046
+      },
+      "moves_json": {
+        "bodyslam": 0.38185862332246046,
+        "drillpeck": 0.38185862332246046,
+        "hyperbeam": 0.38185862332246046,
+        "toxic": 0.38185862332246046
+      },
+      "tera_json": {
+        "nothing": 0.38185862332246046
+      },
+      "happiness_json": {
+        "255": 0.38185862332246046
+      },
+      "teammates_json": {
+        "Mewtwo": 0.38185862332246046,
+        "Rhydon": 0.38185862332246046,
+        "Gengar": 0.38185862332246046,
+        "Snorlax": 0.38185862332246046,
+        "Lapras": 0.38185862332246046
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Dugtrio",
+      "usage_count": 1,
+      "usage_pct": 1.33,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "noability": 0.6523652908540858
+      },
+      "items_json": {
+        "nothing": 0.6523652908540858
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.6523652908540858
+      },
+      "moves_json": {
+        "earthquake": 0.6523652908540858,
+        "slash": 0.6523652908540858,
+        "rockslide": 0.6523652908540858,
+        "hyperbeam": 0.6523652908540858
+      },
+      "tera_json": {
+        "nothing": 0.6523652908540858
+      },
+      "happiness_json": {
+        "255": 0.6523652908540858
+      },
+      "teammates_json": {
+        "Rhydon": 0.6523652908540858,
+        "Alakazam": 0.6523652908540858,
+        "Persian": 0.6523652908540858,
+        "Gengar": 0.6523652908540858,
+        "Tentacruel": 0.6523652908540858
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Electrode",
+      "usage_count": 2,
+      "usage_pct": 3.24,
+      "viability_json": [
+        2,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "noability": 1.594481788675709
+      },
+      "items_json": {
+        "nothing": 1.594481788675709
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.594481788675709
+      },
+      "moves_json": {
+        "thunderwave": 1.594481788675709,
+        "thunderbolt": 1.594481788675709,
+        "explosion": 1.594481788675709,
+        "toxic": 0.9626222473677238,
+        "flash": 0.6318595413079853
+      },
+      "tera_json": {
+        "nothing": 1.594481788675709
+      },
+      "happiness_json": {
+        "255": 1.594481788675709
+      },
+      "teammates_json": {
+        "Chansey": 1.594481788675709,
+        "Mewtwo": 1.594481788675709,
+        "Mew": 0.9626222473677238,
+        "Tauros": 1.594481788675709,
+        "Snorlax": 0.9626222473677238,
+        "Jynx": 0.6318595413079853,
+        "Rhydon": 0.6318595413079853
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Exeggutor",
+      "usage_count": 45,
+      "usage_pct": 86.0,
+      "viability_json": [
+        21,
+        76,
+        76,
+        65
+      ],
+      "abilities_json": {
+        "noability": 44.76113307810187
+      },
+      "items_json": {
+        "nothing": 44.76113307810187
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 44.76113307810187
+      },
+      "moves_json": {
+        "psychic": 44.373653630281744,
+        "sleeppowder": 44.76113307810187,
+        "stunspore": 42.531244599788785,
+        "explosion": 44.76113307810187,
+        "megadrain": 0.3874794478201272,
+        "toxic": 0.3874794478201272,
+        "doubleedge": 1.8424090304929566
+      },
+      "tera_json": {
+        "nothing": 44.76113307810187
+      },
+      "happiness_json": {
+        "255": 44.76113307810187
+      },
+      "teammates_json": {
+        "Zapdos": 7.074458139924531,
+        "Mew": 42.342349016460396,
+        "Mewtwo": 42.342349016460396,
+        "Persian": 4.506039787029821,
+        "Tauros": 24.20507248537122,
+        "Gengar": 18.97961257484239,
+        "Snorlax": 26.882623938000755,
+        "Cloyster": 16.53969648000308,
+        "Chansey": 8.360052426051297,
+        "Alakazam": 5.752958515809873,
+        "Slowbro": 8.412923002189194,
+        "Jynx": 4.327147479312856,
+        "Articuno": 0.9999999972857507,
+        "Rhydon": 0.9864622235604171
+      },
+      "counters_json": {
+        "Exeggutor": [
+          23.466994983344904,
+          0.380201771003198,
+          0.10020825349479363
+        ]
+      }
+    },
+    {
+      "pokemon_name": "Gengar",
+      "usage_count": 22,
+      "usage_pct": 42.68,
+      "viability_json": [
+        9,
+        70,
+        70,
+        69
+      ],
+      "abilities_json": {
+        "noability": 22.012302367366512
+      },
+      "items_json": {
+        "nothing": 22.012302367366512
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 20.978078453189966,
+        "Serious:252/0/252/252/252/252": 1.0342239141765464
+      },
+      "moves_json": {
+        "hypnosis": 21.359937076512427,
+        "explosion": 20.59059900536984,
+        "thunderbolt": 20.625590272486082,
+        "nightshade": 19.591365774082565,
+        "confuseray": 1.3867126791074011,
+        "megadrain": 1.0342239141765464,
+        "psychic": 2.4209360090569763,
+        "substitute": 0.6523652908540858,
+        "toxic": 0.3874794478201272
+      },
+      "tera_json": {
+        "nothing": 22.012302367366512
+      },
+      "happiness_json": {
+        "255": 22.012302367366512
+      },
+      "teammates_json": {
+        "Exeggutor": 18.97961257484239,
+        "Mew": 19.97884522190269,
+        "Mewtwo": 20.360703845225153,
+        "Snorlax": 18.764978296290817,
+        "Cloyster": 16.53969648000308,
+        "Tauros": 1.5957255489343343,
+        "Rhydon": 1.0342239141765464,
+        "Dugtrio": 0.6523652908540858,
+        "Alakazam": 0.6523652908540858,
+        "Persian": 0.6523652908540858,
+        "Tentacruel": 0.6523652908540858,
+        "Zapdos": 1.209260263586529,
+        "Lapras": 0.38185862332246046,
+        "Dodrio": 0.38185862332246046,
+        "Chansey": 3.2291211253733865
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Jynx",
+      "usage_count": 8,
+      "usage_pct": 16.16,
+      "viability_json": [
+        6,
+        76,
+        76,
+        74
+      ],
+      "abilities_json": {
+        "noability": 7.956048986818247
+      },
+      "items_json": {
+        "nothing": 7.956048986818247
+      },
+      "spreads_json": {
+        "Serious:252/252/196/252/252/252": 0.9999999972857507,
+        "Serious:252/252/252/252/252/252": 6.956048989532496
+      },
+      "moves_json": {
+        "lovelykiss": 7.956048986818247,
+        "blizzard": 7.956048986818247,
+        "bodyslam": 1.9975368077246651,
+        "counter": 6.318280718058365,
+        "psychic": 5.205122673912457,
+        "rest": 2.3911577739410053
+      },
+      "tera_json": {
+        "nothing": 7.956048986818247
+      },
+      "happiness_json": {
+        "255": 7.956048986818247
+      },
+      "teammates_json": {
+        "Mewtwo": 7.956048986818247,
+        "Mew": 7.324189445510261,
+        "Tauros": 7.202659481637123,
+        "Exeggutor": 4.327147479312856,
+        "Articuno": 0.9999999972857507,
+        "Snorlax": 3.6864211812521273,
+        "Slowbro": 0.9999999982125014,
+        "Cloyster": 1.9995051557584902,
+        "Alakazam": 0.7533895051811237,
+        "Electrode": 0.6318595413079853,
+        "Chansey": 0.6318595413079853,
+        "Rhydon": 1.6293963517469,
+        "Zapdos": 0.6402314583209673,
+        "Starmie": 0.9975368104389145
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Lapras",
+      "usage_count": 0,
+      "usage_pct": 0.78,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "noability": 0.38185862332246046
+      },
+      "items_json": {
+        "nothing": 0.38185862332246046
+      },
+      "spreads_json": {
+        "Serious:252/0/252/252/252/252": 0.38185862332246046
+      },
+      "moves_json": {
+        "surf": 0.38185862332246046,
+        "blizzard": 0.38185862332246046,
+        "thunderbolt": 0.38185862332246046,
+        "psychic": 0.38185862332246046
+      },
+      "tera_json": {
+        "nothing": 0.38185862332246046
+      },
+      "happiness_json": {
+        "255": 0.38185862332246046
+      },
+      "teammates_json": {
+        "Mewtwo": 0.38185862332246046,
+        "Rhydon": 0.38185862332246046,
+        "Gengar": 0.38185862332246046,
+        "Snorlax": 0.38185862332246046,
+        "Dodrio": 0.38185862332246046
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Mew",
+      "usage_count": 51,
+      "usage_pct": 96.07,
+      "viability_json": [
+        26,
+        76,
+        76,
+        68
+      ],
+      "abilities_json": {
+        "noability": 50.71926317001458
+      },
+      "items_json": {
+        "nothing": 50.71926317001458
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 50.71926317001458
+      },
+      "moves_json": {
+        "thunderwave": 13.398233586475486,
+        "swordsdance": 47.09130870582861,
+        "earthquake": 43.706390161478076,
+        "explosion": 15.418166210447845,
+        "bodyslam": 24.05931146971524,
+        "softboiled": 38.903004410437056,
+        "hyperbeam": 8.90569755511246,
+        "psychic": 1.3874794451058778,
+        "reflect": 5.380001512798927,
+        "transform": 2.6279544669002126,
+        "selfdestruct": 1.9995051557584902
+      },
+      "tera_json": {
+        "nothing": 50.71926317001458
+      },
+      "happiness_json": {
+        "255": 50.71926317001458
+      },
+      "teammates_json": {
+        "Zapdos": 8.073690786984834,
+        "Exeggutor": 42.342349016460396,
+        "Mewtwo": 47.30124587708583,
+        "Persian": 4.506039787029821,
+        "Tauros": 28.164736698936345,
+        "Gengar": 19.97884522190269,
+        "Snorlax": 30.84398398818727,
+        "Cloyster": 18.53920163576157,
+        "Chansey": 10.321907320479324,
+        "Alakazam": 5.752958515809873,
+        "Slowbro": 8.412923002189194,
+        "Jynx": 7.324189445510261,
+        "Articuno": 0.9999999972857507,
+        "Rhydon": 1.9839990339993316,
+        "Electrode": 0.9626222473677238,
+        "Starmie": 0.9975368104389145
+      },
+      "counters_json": {
+        "Mewtwo": [
+          23.29022164293737,
+          0.38045817353485145,
+          0.10060092279258635
+        ]
+      }
+    },
+    {
+      "pokemon_name": "Mewtwo",
+      "usage_count": 52,
+      "usage_pct": 98.13,
+      "viability_json": [
+        28,
+        76,
+        76,
+        68
+      ],
+      "abilities_json": {
+        "noability": 51.73298133464503
+      },
+      "items_json": {
+        "nothing": 51.73298133464503
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 42.08810268538536,
+        "Serious:252/0/252/252/252/252": 9.644878649259653
+      },
+      "moves_json": {
+        "amnesia": 22.307016434922108,
+        "icebeam": 17.013305971516257,
+        "psychic": 39.752317327133646,
+        "recover": 29.502926629926783,
+        "selfdestruct": 22.215569771375062,
+        "blizzard": 30.25413389021242,
+        "thunderwave": 29.403874815365224,
+        "thunderbolt": 10.811768245702565,
+        "barrier": 2.9977236403464715,
+        "fireblast": 0.38185862332246046,
+        "bodyslam": 0.3874794478201272,
+        "substitute": 0.6318595413079853,
+        "rest": 0.6318595413079853,
+        "thunder": 0.6402314583209673
+      },
+      "tera_json": {
+        "nothing": 51.73298133464503
+      },
+      "happiness_json": {
+        "255": 51.73298133464503
+      },
+      "teammates_json": {
+        "Zapdos": 8.073690786984834,
+        "Exeggutor": 42.342349016460396,
+        "Mew": 47.30124587708583,
+        "Persian": 4.506039787029821,
+        "Tauros": 28.79659624024433,
+        "Gengar": 20.360703845225153,
+        "Snorlax": 31.225842611509727,
+        "Cloyster": 18.53920163576157,
+        "Chansey": 10.95376686178731,
+        "Alakazam": 5.752958515809873,
+        "Slowbro": 8.412923002189194,
+        "Jynx": 7.956048986818247,
+        "Articuno": 0.9999999972857507,
+        "Rhydon": 2.9977171986297773,
+        "Lapras": 0.38185862332246046,
+        "Dodrio": 0.38185862332246046,
+        "Electrode": 1.594481788675709,
+        "Starmie": 0.9975368104389145
+      },
+      "counters_json": {
+        "Mew": [
+          23.29022164293737,
+          0.41113235285565025,
+          0.10195601753101043
+        ],
+        "Mewtwo": [
+          24.364397688419334,
+          0.47511103895638,
+          0.10117039377069971
+        ]
+      }
+    },
+    {
+      "pokemon_name": "Persian",
+      "usage_count": 6,
+      "usage_pct": 10.48,
+      "viability_json": [
+        2,
+        54,
+        54,
+        54
+      ],
+      "abilities_json": {
+        "noability": 5.6285421712475125
+      },
+      "items_json": {
+        "nothing": 5.6285421712475125
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 5.6285421712475125
+      },
+      "moves_json": {
+        "thunderbolt": 4.976176880393426,
+        "slash": 5.6285421712475125,
+        "bubblebeam": 5.6285421712475125,
+        "mimic": 4.976176880393426,
+        "hyperbeam": 0.6523652908540858,
+        "thunder": 0.6523652908540858
+      },
+      "tera_json": {
+        "nothing": 5.6285421712475125
+      },
+      "happiness_json": {
+        "255": 5.6285421712475125
+      },
+      "teammates_json": {
+        "Zapdos": 4.506039787029821,
+        "Exeggutor": 4.506039787029821,
+        "Mew": 4.506039787029821,
+        "Mewtwo": 4.506039787029821,
+        "Tauros": 4.506039787029821,
+        "Rhydon": 0.6523652908540858,
+        "Dugtrio": 0.6523652908540858,
+        "Alakazam": 0.6523652908540858,
+        "Gengar": 0.6523652908540858,
+        "Tentacruel": 0.6523652908540858
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Pidgeotto",
+      "usage_count": 0,
+      "usage_pct": 0.54,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 0.26730009233185864
+      },
+      "items_json": {
+        "nothing": 0.26730009233185864
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.26730009233185864
+      },
+      "moves_json": {
+        "mirrormove": 0.26730009233185864,
+        "quickattack": 0.26730009233185864,
+        "skyattack": 0.26730009233185864,
+        "wingattack": 0.26730009233185864
+      },
+      "tera_json": {
+        "nothing": 0.26730009233185864
+      },
+      "happiness_json": {
+        "255": 0.26730009233185864
+      },
+      "teammates_json": {
+        "Charizard": 0.26730009233185864,
+        "Bulbasaur": 0.26730009233185864,
+        "Butterfree": 0.26730009233185864,
+        "Pikachu": 0.26730009233185864,
+        "Squirtle": 0.26730009233185864
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Pikachu",
+      "usage_count": 0,
+      "usage_pct": 0.54,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 0.26730009233185864
+      },
+      "items_json": {
+        "nothing": 0.26730009233185864
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.26730009233185864
+      },
+      "moves_json": {
+        "quickattack": 0.26730009233185864,
+        "thunderbolt": 0.26730009233185864,
+        "surf": 0.26730009233185864,
+        "thunderwave": 0.26730009233185864
+      },
+      "tera_json": {
+        "nothing": 0.26730009233185864
+      },
+      "happiness_json": {
+        "255": 0.26730009233185864
+      },
+      "teammates_json": {
+        "Charizard": 0.26730009233185864,
+        "Bulbasaur": 0.26730009233185864,
+        "Butterfree": 0.26730009233185864,
+        "Squirtle": 0.26730009233185864,
+        "Pidgeotto": 0.26730009233185864
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Rhydon",
+      "usage_count": 4,
+      "usage_pct": 7.41,
+      "viability_json": [
+        5,
+        70,
+        70,
+        70
+      ],
+      "abilities_json": {
+        "noability": 3.650082489483863
+      },
+      "items_json": {
+        "nothing": 3.650082489483863
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 3.650082489483863
+      },
+      "moves_json": {
+        "earthquake": 3.650082489483863,
+        "bodyslam": 3.650082489483863,
+        "substitute": 2.6158585753073167,
+        "rockslide": 2.6525456790449486,
+        "hyperbeam": 0.6523652908540858,
+        "submission": 0.38185862332246046,
+        "tailwhip": 0.9975368104389145
+      },
+      "tera_json": {
+        "nothing": 3.650082489483863
+      },
+      "happiness_json": {
+        "255": 3.650082489483863
+      },
+      "teammates_json": {
+        "Tauros": 2.6158585753073167,
+        "Snorlax": 1.3683208468828776,
+        "Mewtwo": 2.9977171986297773,
+        "Mew": 1.9839990339993316,
+        "Exeggutor": 0.9864622235604171,
+        "Dugtrio": 0.6523652908540858,
+        "Alakazam": 0.6523652908540858,
+        "Persian": 0.6523652908540858,
+        "Gengar": 1.0342239141765464,
+        "Tentacruel": 0.6523652908540858,
+        "Lapras": 0.38185862332246046,
+        "Dodrio": 0.38185862332246046,
+        "Electrode": 0.6318595413079853,
+        "Jynx": 1.6293963517469,
+        "Chansey": 0.6318595413079853,
+        "Starmie": 0.9975368104389145
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Slowbro",
+      "usage_count": 11,
+      "usage_pct": 17.09,
+      "viability_json": [
+        5,
+        76,
+        76,
+        76
+      ],
+      "abilities_json": {
+        "noability": 10.846735994731537
+      },
+      "items_json": {
+        "nothing": 10.846735994731537
+      },
+      "spreads_json": {
+        "Serious:252/0/252/252/252/252": 6.434148771883819,
+        "Serious:252/252/252/252/252/252": 4.412587222847718
+      },
+      "moves_json": {
+        "surf": 10.846735994731537,
+        "amnesia": 10.846735994731537,
+        "rest": 10.846735994731537,
+        "psychic": 6.434148771883819,
+        "thunderwave": 4.412587222847718
+      },
+      "tera_json": {
+        "nothing": 10.846735994731537
+      },
+      "happiness_json": {
+        "255": 10.846735994731537
+      },
+      "teammates_json": {
+        "Alakazam": 4.999569010628749,
+        "Exeggutor": 8.412923002189194,
+        "Mew": 8.412923002189194,
+        "Mewtwo": 8.412923002189194,
+        "Tauros": 8.412923002189194,
+        "Jynx": 0.9999999982125014,
+        "Snorlax": 0.6951947153004252,
+        "Zapdos": 1.7181592780475174
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Snorlax",
+      "usage_count": 33,
+      "usage_pct": 63.42,
+      "viability_json": [
+        19,
+        74,
+        74,
+        69
+      ],
+      "abilities_json": {
+        "noability": 32.7391430498198
+      },
+      "items_json": {
+        "nothing": 32.7391430498198
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 32.7391430498198
+      },
+      "moves_json": {
+        "hyperbeam": 28.56579092507624,
+        "earthquake": 28.304591450019338,
+        "bodyslam": 32.7391430498198,
+        "selfdestruct": 32.7391430498198,
+        "rest": 0.9864622235604171,
+        "reflect": 2.9859673793189074,
+        "rockslide": 0.38185862332246046,
+        "counter": 0.6951947153004252,
+        "surf": 0.7533895051811237,
+        "headbutt": 0.9626222473677238,
+        "blizzard": 1.8424090304929566
+      },
+      "tera_json": {
+        "nothing": 32.7391430498198
+      },
+      "happiness_json": {
+        "255": 32.7391430498198
+      },
+      "teammates_json": {
+        "Gengar": 18.764978296290817,
+        "Exeggutor": 26.882623938000755,
+        "Mew": 30.84398398818727,
+        "Mewtwo": 31.225842611509727,
+        "Cloyster": 17.540983151173588,
+        "Tauros": 11.707474810037784,
+        "Chansey": 9.934427872659198,
+        "Rhydon": 1.3683208468828776,
+        "Jynx": 3.6864211812521273,
+        "Lapras": 0.38185862332246046,
+        "Dodrio": 0.38185862332246046,
+        "Slowbro": 0.6951947153004252,
+        "Alakazam": 0.7533895051811237,
+        "Electrode": 0.9626222473677238,
+        "Zapdos": 0.9992326470603028
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Squirtle",
+      "usage_count": 0,
+      "usage_pct": 0.54,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 0.26730009233185864
+      },
+      "items_json": {
+        "nothing": 0.26730009233185864
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.26730009233185864
+      },
+      "moves_json": {
+        "icebeam": 0.26730009233185864,
+        "hydropump": 0.26730009233185864,
+        "substitute": 0.26730009233185864,
+        "skullbash": 0.26730009233185864
+      },
+      "tera_json": {
+        "nothing": 0.26730009233185864
+      },
+      "happiness_json": {
+        "255": 0.26730009233185864
+      },
+      "teammates_json": {
+        "Charizard": 0.26730009233185864,
+        "Bulbasaur": 0.26730009233185864,
+        "Butterfree": 0.26730009233185864,
+        "Pikachu": 0.26730009233185864,
+        "Pidgeotto": 0.26730009233185864
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Starmie",
+      "usage_count": 1,
+      "usage_pct": 2.03,
+      "viability_json": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "abilities_json": {
+        "noability": 0.9975368104389145
+      },
+      "items_json": {
+        "nothing": 0.9975368104389145
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 0.9975368104389145
+      },
+      "moves_json": {
+        "thunderwave": 0.9975368104389145,
+        "surf": 0.9975368104389145,
+        "blizzard": 0.9975368104389145,
+        "recover": 0.9975368104389145
+      },
+      "tera_json": {
+        "nothing": 0.9975368104389145
+      },
+      "happiness_json": {
+        "255": 0.9975368104389145
+      },
+      "teammates_json": {
+        "Jynx": 0.9975368104389145,
+        "Mewtwo": 0.9975368104389145,
+        "Mew": 0.9975368104389145,
+        "Tauros": 0.9975368104389145,
+        "Rhydon": 0.9975368104389145
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tauros",
+      "usage_count": 31,
+      "usage_pct": 58.49,
+      "viability_json": [
+        23,
+        76,
+        76,
+        67
+      ],
+      "abilities_json": {
+        "noability": 31.215380301885798
+      },
+      "items_json": {
+        "nothing": 31.215380301885798
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 31.215380301885798
+      },
+      "moves_json": {
+        "blizzard": 19.00984893505068,
+        "bodyslam": 30.82790085406567,
+        "earthquake": 27.64162232775406,
+        "hyperbeam": 31.215380301885798,
+        "stomp": 3.541914378459462,
+        "thunderbolt": 11.332152630680737,
+        "leer": 0.9052223318266513,
+        "icebeam": 0.3874794478201272
+      },
+      "tera_json": {
+        "nothing": 31.215380301885798
+      },
+      "happiness_json": {
+        "255": 31.215380301885798
+      },
+      "teammates_json": {
+        "Zapdos": 7.074458139924531,
+        "Exeggutor": 24.20507248537122,
+        "Mew": 28.164736698936345,
+        "Mewtwo": 28.79659624024433,
+        "Persian": 4.506039787029821,
+        "Chansey": 8.112125184234051,
+        "Snorlax": 11.707474810037784,
+        "Alakazam": 4.999569010628749,
+        "Slowbro": 8.412923002189194,
+        "Jynx": 7.202659481637123,
+        "Articuno": 0.9999999972857507,
+        "Rhydon": 2.6158585753073167,
+        "Gengar": 1.5957255489343343,
+        "Cloyster": 2.9977236403464715,
+        "Electrode": 1.594481788675709,
+        "Starmie": 0.9975368104389145
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tentacruel",
+      "usage_count": 1,
+      "usage_pct": 1.33,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "noability": 0.6523652908540858
+      },
+      "items_json": {
+        "nothing": 0.6523652908540858
+      },
+      "spreads_json": {
+        "Serious:252/0/252/252/252/252": 0.6523652908540858
+      },
+      "moves_json": {
+        "blizzard": 0.6523652908540858,
+        "surf": 0.6523652908540858,
+        "barrier": 0.6523652908540858,
+        "icebeam": 0.6523652908540858
+      },
+      "tera_json": {
+        "nothing": 0.6523652908540858
+      },
+      "happiness_json": {
+        "255": 0.6523652908540858
+      },
+      "teammates_json": {
+        "Rhydon": 0.6523652908540858,
+        "Dugtrio": 0.6523652908540858,
+        "Alakazam": 0.6523652908540858,
+        "Persian": 0.6523652908540858,
+        "Gengar": 0.6523652908540858
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Zapdos",
+      "usage_count": 9,
+      "usage_pct": 16.4,
+      "viability_json": [
+        5,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "noability": 8.54382788034844
+      },
+      "items_json": {
+        "nothing": 8.54382788034844
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 8.54382788034844
+      },
+      "moves_json": {
+        "thunderwave": 8.54382788034844,
+        "drillpeck": 8.54382788034844,
+        "thunderbolt": 8.54382788034844,
+        "agility": 6.825668602300922,
+        "hyperbeam": 1.7181592780475174
+      },
+      "tera_json": {
+        "nothing": 8.54382788034844
+      },
+      "happiness_json": {
+        "255": 8.54382788034844
+      },
+      "teammates_json": {
+        "Exeggutor": 7.074458139924531,
+        "Mew": 8.073690786984834,
+        "Mewtwo": 8.073690786984834,
+        "Persian": 4.506039787029821,
+        "Tauros": 7.074458139924531,
+        "Gengar": 1.209260263586529,
+        "Snorlax": 0.9992326470603028,
+        "Chansey": 0.9992326470603028,
+        "Slowbro": 1.7181592780475174,
+        "Jynx": 0.6402314583209673
+      },
+      "counters_json": {}
+    }
+  ]
 }
