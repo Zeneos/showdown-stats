@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Detail</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formats.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokemon Showdown Battle Statistics</h1>
+            <p id="period-info">Loading latest stats...</p>
+        </header>
+
+        <div id="pokemon-detail" class="pokemon-detail">
+            <div class="pokemon-detail-header">
+                <div class="pokemon-detail-identity">
+                    <img id="pokemon-sprite" class="pokemon-detail-sprite" alt="" loading="lazy">
+                    <div>
+                        <h2 id="pokemon-name">Loading...</h2>
+                        <p id="pokemon-format"></p>
+                        <p id="pokemon-usage"></p>
+                    </div>
+                </div>
+                <div class="pokemon-detail-actions">
+                    <a id="back-to-format" class="back-link" href="./">Back to format</a>
+                    <a class="back-link" href="./">← Back to all formats</a>
+                </div>
+            </div>
+
+            <div id="pokemon-detail-grid" class="pokemon-detail-grid"></div>
+        </div>
+
+        <div id="pokemon-error" class="error" style="display: none;"></div>
+
+        <footer>
+            Data from <a href="https://www.smogon.com/stats" target="_blank">Smogon Stats</a>
+        </footer>
+    </div>
+
+    <script src="pokemon.js"></script>
+</body>
+</html>
