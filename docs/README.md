@@ -38,3 +38,19 @@ Optional Node.js script (if Node is installed):
 ```bash
 node ./scripts/update-base-stats.mjs
 ```
+
+## Refreshing Move Data
+
+Move metadata (type, PP, base power, accuracy, priority, description) is stored locally in `docs/assets/move-data.json`.
+
+To regenerate this file from Pokemon Showdown data:
+
+```powershell
+.\scripts\update-move-data.ps1
+```
+
+Optional Node.js script (if Node is installed):
+
+```bash
+node ./scripts/update-move-data.mjs
+```

@@ -4,6 +4,8 @@ const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
 const maxBaseStat = 255;
+const maxBaseStatTotal = 800;
+const highestCurrentBst = 780;
 const baseStatLabels = [
     ['hp', 'HP'],
     ['atk', 'Atk'],
@@ -17,6 +19,8 @@ const countersSortState = {
     direction: 'desc'
 };
 let baseStatsMapPromise = null;
+let moveDataMapPromise = null;
+let moveDataMap = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     loadPokemonDetail();
@@ -59,6 +63,7 @@ async function loadPokemonDetail() {
     }
 
     const baseStats = await loadBaseStatsForPokemon(entry.pokemon_name);
+    moveDataMap = await loadMoveDataMap();
 
     const detail = document.getElementById('pokemon-detail');
     if (detail) detail.style.display = 'block';
@@ -106,10 +111,10 @@ async function loadPokemonDetail() {
 
     grid.innerHTML = [
         renderBaseStatsSection('Base Stats', baseStats),
-        renderMapSection('Abilities', entry.abilities_json),
-        renderMapSection('Items', entry.items_json),
-        renderMapSection('Spreads', entry.spreads_json),
         renderMapSection('Moves', entry.moves_json),
+        renderMapSection('Spreads', entry.spreads_json),
+        renderMapSection('Items', entry.items_json),
+        renderMapSection('Abilities', entry.abilities_json),
         renderMapSection('Tera Types', entry.tera_json),
         renderMapSection('Teammates', entry.teammates_json),
         renderCountersSection('Checks and Counters', entry.counters_json, countersSortState)
@@ -143,30 +148,38 @@ async function loadBaseStatsMap() {
     return baseStatsMapPromise;
 }
 
+async function loadMoveDataMap() {
+    if (!moveDataMapPromise) {
+        moveDataMapPromise = fetch('../assets/move-data.json')
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .then(data => (data && data.moves ? data.moves : null))
+            .catch(error => {
+                console.error('Error loading move data:', error);
+                return null;
+            });
+    }
+
+    return moveDataMapPromise;
+}
+
 function renderBaseStatsSection(title, baseStats) {
     if (!baseStats || typeof baseStats !== 'object') return '';
-
-    const rows = baseStatLabels
-        .map(([key, label]) => {
-            const value = Number(baseStats[key]);
-            if (Number.isNaN(value)) return '';
-            const width = Math.max(0, Math.min(100, (value / maxBaseStat) * 100));
-            return `
-                <li class="base-stats-row">
-                    <span class="base-stats-label">${label}</span>
-                    <div class="base-stats-track" role="img" aria-label="${label} base stat ${value}">
-                        <span class="base-stats-fill" style="width: ${width.toFixed(2)}%"></span>
-                    </div>
-                    <span class="base-stats-value">${value}</span>
-                </li>
-            `;
-        })
-        .join('');
 
     const bstValue = Number(baseStats.bst);
     const bst = Number.isNaN(bstValue)
         ? baseStatLabels.reduce((sum, [key]) => sum + (Number(baseStats[key]) || 0), 0)
         : bstValue;
+
+    const rows = baseStatLabels
+        .map(([key, label]) => {
+            const value = Number(baseStats[key]);
+            if (Number.isNaN(value)) return '';
+            return renderBaseStatRow(label, value, maxBaseStat);
+        })
+        .join('') + renderBaseStatRow('BST', bst, maxBaseStatTotal, getBstTier(bst));
 
     return `
         <section class="pokemon-detail-section">
@@ -174,9 +187,46 @@ function renderBaseStatsSection(title, baseStats) {
             <ul class="base-stats-list">
                 ${rows}
             </ul>
-            <p class="base-stats-bst">BST: <strong>${bst}</strong></p>
         </section>
     `;
+}
+
+function renderBaseStatRow(label, value, maxValue, tierOverride = null) {
+    const safeValue = Number.isFinite(value) ? value : 0;
+    const safeMax = Number.isFinite(maxValue) && maxValue > 0 ? maxValue : maxBaseStat;
+    const percentage = Math.max(0, Math.min(100, (safeValue / safeMax) * 100));
+    const tier = Number.isFinite(tierOverride) ? tierOverride : getBaseStatTier(percentage);
+
+    return `
+        <li class="base-stats-row">
+            <span class="base-stats-label">${label}</span>
+            <div class="base-stats-track" role="img" aria-label="${label} base stat ${safeValue}">
+                <span class="base-stats-fill stat-tier-${tier}" style="width: ${percentage.toFixed(2)}%"></span>
+            </div>
+            <span class="base-stats-value stat-tier-text-${tier}">${safeValue}</span>
+        </li>
+    `;
+}
+
+function getBaseStatTier(percentage) {
+    if (percentage < 20) return 1;
+    if (percentage < 30) return 2;
+    if (percentage < 40) return 3;
+    if (percentage < 50) return 4;
+    if (percentage < 60) return 5;
+    return 6;
+}
+
+function getBstTier(bstValue) {
+    const bst = Math.max(0, Number(bstValue) || 0);
+    // Use BST-specific tiers: 600+ is pseudo/legendary territory and ~780 is current highest.
+    if (bst < 300) return 1;
+    if (bst < 400) return 2;
+    if (bst < 500) return 3;
+    if (bst < 600) return 4;
+    if (bst < 700) return 5;
+    if (bst >= highestCurrentBst) return 6;
+    return 6;
 }
 
 function findPokemonEntry(pokemonList, pokemonName) {
@@ -196,14 +246,24 @@ function renderMapSection(title, map) {
     if (entries.length === 0) return '';
 
     const total = entries.reduce((sum, [, value]) => sum + value, 0);
+    const limitedTitles = new Set(['Items', 'Spreads', 'Moves']);
+    const visibleEntries = limitedTitles.has(title) ? entries.slice(0, 25) : entries;
 
-    const rows = entries
-        .map(([key, value]) => `
+    const rows = visibleEntries
+        .map(([key, value]) => {
+            const firstCell = title === 'Moves'
+                ? renderMoveNameCell(key)
+                : title === 'Spreads'
+                    ? escapeHtml(formatSpreadLabel(key))
+                : escapeHtml(key);
+
+            return `
             <tr>
-                <td>${escapeHtml(key)}</td>
+                <td>${firstCell}</td>
                 <td class="detail-value">${total > 0 ? ((value / total) * 100).toFixed(2) : '0.00'}%</td>
             </tr>
-        `)
+        `;
+        })
         .join('');
 
     const wideClass = title === 'Spreads' ? ' pokemon-detail-section--wide' : '';
@@ -217,6 +277,59 @@ function renderMapSection(title, map) {
             </table>
         </section>
     `;
+}
+
+function formatSpreadLabel(text) {
+    return String(text || '')
+        .replace(/:\s*/g, ': ')
+        .replace(/\s*\/\s*/g, ' / ');
+}
+
+function renderMoveNameCell(moveName) {
+    const moveInfo = getMoveDataByName(moveName);
+    const displayName = moveInfo && moveInfo.name ? String(moveInfo.name) : String(moveName);
+    const hasType = moveInfo && moveInfo.type;
+    const typeText = hasType ? String(moveInfo.type) : '???';
+    const typeClass = hasType ? `move-type-${toId(typeText)}` : 'move-type-unknown';
+
+    const pp = formatMoveStatValue(moveInfo ? moveInfo.pp : null);
+    const bp = formatMoveStatValue(moveInfo ? moveInfo.basePower : null);
+    const acc = formatMoveAccuracy(moveInfo ? moveInfo.accuracy : null);
+    const pri = formatMovePriority(moveInfo ? moveInfo.priority : null);
+    const priMeta = pri ? ` | Prio ${pri}` : '';
+    const description = moveInfo && moveInfo.description ? String(moveInfo.description) : '';
+
+    return `
+        <div class="move-cell">
+            <div class="move-title-row">
+                <span class="move-type-icon ${typeClass}" aria-label="Move type ${escapeHtml(typeText)}">${escapeHtml(typeText)}</span>
+                <span class="move-name">${escapeHtml(displayName)}</span>
+            </div>
+            <div class="move-meta">PP ${pp} | BP ${bp} | Acc ${acc}${priMeta}</div>
+            ${description ? `<div class="move-description" title="${escapeHtml(description)}">${escapeHtml(description)}</div>` : ''}
+        </div>
+    `;
+}
+
+function getMoveDataByName(moveName) {
+    if (!moveDataMap || !moveName) return null;
+    return moveDataMap[toId(moveName)] || null;
+}
+
+function formatMoveStatValue(value) {
+    const num = Number(value);
+    return Number.isFinite(num) ? String(num) : '--';
+}
+
+function formatMoveAccuracy(value) {
+    if (value === true) return '--';
+    return formatMoveStatValue(value);
+}
+
+function formatMovePriority(value) {
+    const num = Number(value);
+    if (!Number.isFinite(num) || num === 0) return '';
+    return num > 0 ? `+${num}` : String(num);
 }
 
 function renderArraySection(title, items) {
