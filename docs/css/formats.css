@@ -399,6 +399,28 @@ tbody tr:hover {
     gap: 3px;
 }
 
+.item-cell {
+    /* Display & Box Model */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-sprite {
+    /* Display & Box Model */
+    width: 20px;
+    height: 20px;
+
+    /* Visual */
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.item-name {
+    /* Typography */
+    color: #1f2933;
+}
+
 .move-title-row {
     /* Display & Box Model */
     display: flex;
@@ -973,7 +995,8 @@ html[data-theme='dark'] .base-stats-value,
 html[data-theme='dark'] .pokemon-link,
 html[data-theme='dark'] .pokemon-table th,
 html[data-theme='dark'] .pokemon-table td,
-html[data-theme='dark'] .move-name {
+html[data-theme='dark'] .move-name,
+html[data-theme='dark'] .item-name {
     color: #e5e7eb;
 }
 

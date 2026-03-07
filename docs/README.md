@@ -54,3 +54,15 @@ Optional Node.js script (if Node is installed):
 ```bash
 node ./scripts/update-move-data.mjs
 ```
+
+## Refreshing Item Name Map
+
+Item-to-sprite mappings are stored locally in `docs/assets/item-name-map.json`.
+
+This map links normalized item IDs from stats JSON to item sprite filenames in `docs/assets/sprites/items/`.
+
+To regenerate this file from local item sprites:
+
+```powershell
+.\scripts\update-item-name-map.ps1
+```

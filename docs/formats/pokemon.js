@@ -3,6 +3,8 @@
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
+const itemSpriteBase = '../assets/sprites/items';
+const itemSpriteFallback = `${itemSpriteBase}/unknown.png`;
 const maxBaseStat = 255;
 const maxBaseStatTotal = 800;
 const highestCurrentBst = 780;
@@ -21,6 +23,8 @@ const countersSortState = {
 let baseStatsMapPromise = null;
 let moveDataMapPromise = null;
 let moveDataMap = null;
+let itemNameMapPromise = null;
+let itemNameMap = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     loadPokemonDetail();
@@ -64,6 +68,7 @@ async function loadPokemonDetail() {
 
     const baseStats = await loadBaseStatsForPokemon(entry.pokemon_name);
     moveDataMap = await loadMoveDataMap();
+    itemNameMap = await loadItemNameMap();
 
     const detail = document.getElementById('pokemon-detail');
     if (detail) detail.style.display = 'block';
@@ -165,6 +170,23 @@ async function loadMoveDataMap() {
     return moveDataMapPromise;
 }
 
+async function loadItemNameMap() {
+    if (!itemNameMapPromise) {
+        itemNameMapPromise = fetch('../assets/item-name-map.json')
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .then(data => (data && data.items ? data.items : null))
+            .catch(error => {
+                console.error('Error loading item name map:', error);
+                return null;
+            });
+    }
+
+    return itemNameMapPromise;
+}
+
 function renderBaseStatsSection(title, baseStats) {
     if (!baseStats || typeof baseStats !== 'object') return '';
 
@@ -219,7 +241,7 @@ function getBaseStatTier(percentage) {
 
 function getBstTier(bstValue) {
     const bst = Math.max(0, Number(bstValue) || 0);
-    // Use BST-specific tiers: 600+ is pseudo/legendary territory and ~780 is current highest.
+    // Use BST-specific tiers: 600 is pseudo/legendary territory and ~780 is current highest.
     if (bst < 300) return 1;
     if (bst < 400) return 2;
     if (bst < 500) return 3;
@@ -253,6 +275,8 @@ function renderMapSection(title, map) {
         .map(([key, value]) => {
             const firstCell = title === 'Moves'
                 ? renderMoveNameCell(key)
+                : title === 'Items'
+                    ? renderItemNameCell(key)
                 : title === 'Spreads'
                     ? escapeHtml(formatSpreadLabel(key))
                 : escapeHtml(key);
@@ -309,6 +333,46 @@ function renderMoveNameCell(moveName) {
             ${description ? `<div class="move-description" title="${escapeHtml(description)}">${escapeHtml(description)}</div>` : ''}
         </div>
     `;
+}
+
+function renderItemNameCell(itemName) {
+    const itemInfo = getItemDataByName(itemName);
+    const spriteFile = itemInfo && itemInfo.file ? String(itemInfo.file) : `${toKebabCase(itemName)}.png`;
+    const displayName = formatItemNameFromFile(spriteFile) || String(itemName);
+    const spriteSrc = `${itemSpriteBase}/${spriteFile}`;
+
+    return `
+        <div class="item-cell">
+            <img class="item-sprite" src="${escapeHtml(spriteSrc)}" alt="${escapeHtml(displayName)}" loading="lazy" onerror="this.onerror=null;this.src='${escapeHtml(itemSpriteFallback)}';">
+            <span class="item-name">${escapeHtml(displayName)}</span>
+        </div>
+    `;
+}
+
+function getItemDataByName(itemName) {
+    if (!itemNameMap || !itemName) return null;
+    return itemNameMap[toId(itemName)] || null;
+}
+
+function toKebabCase(text) {
+    return String(text || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+function formatItemNameFromFile(fileName) {
+    const base = String(fileName || '').replace(/\.png$/i, '');
+    const spaced = base.replace(/[-_]+/g, ' ').trim();
+    if (!spaced) return '';
+
+    return spaced
+        .split(/\s+/)
+        .map(word => {
+            const lower = word.toLowerCase();
+            return lower.charAt(0).toUpperCase() + lower.slice(1);
+        })
+        .join(' ');
 }
 
 function getMoveDataByName(moveName) {
