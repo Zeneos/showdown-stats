@@ -425,6 +425,63 @@ tbody tr:hover {
     color: #495057;
 }
 
+.base-stats-list {
+    /* Display & Box Model */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.base-stats-row {
+    /* Display & Box Model */
+    display: grid;
+    grid-template-columns: 42px 1fr 36px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.base-stats-label,
+.base-stats-value {
+    /* Typography */
+    font-size: 0.9em;
+    font-variant-numeric: tabular-nums;
+    color: #495057;
+}
+
+.base-stats-value {
+    /* Typography */
+    text-align: right;
+}
+
+.base-stats-track {
+    /* Display & Box Model */
+    height: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+
+    /* Visual */
+    background: #e9ecef;
+}
+
+.base-stats-fill {
+    /* Display & Box Model */
+    display: block;
+    height: 100%;
+
+    /* Visual */
+    background: linear-gradient(90deg, #5dbf9a 0%, #2f9976 100%);
+}
+
+.base-stats-bst {
+    /* Display & Box Model */
+    margin: 10px 0 0;
+
+    /* Typography */
+    font-size: 0.92em;
+    color: #495057;
+}
+
 .format-header {
     /* Display & Box Model */
     margin-bottom: 30px;

@@ -22,3 +22,19 @@ Then open http://localhost:8000 in your browser.
 ## Deployment
 
 This site is automatically deployed via GitHub Pages from the `docs/` directory.
+
+## Refreshing Base Stats Data
+
+Pokemon base stats are stored locally in `docs/assets/base-stats.json`.
+
+To regenerate this file from Pokemon Showdown data:
+
+```powershell
+.\scripts\update-base-stats.ps1
+```
+
+Optional Node.js script (if Node is installed):
+
+```bash
+node ./scripts/update-base-stats.mjs
+```

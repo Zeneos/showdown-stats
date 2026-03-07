@@ -3,10 +3,20 @@
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
+const maxBaseStat = 255;
+const baseStatLabels = [
+    ['hp', 'HP'],
+    ['atk', 'Atk'],
+    ['def', 'Def'],
+    ['spa', 'SpA'],
+    ['spd', 'SpD'],
+    ['spe', 'Spe']
+];
 const countersSortState = {
     key: 'rate',
     direction: 'desc'
 };
+let baseStatsMapPromise = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     loadPokemonDetail();
@@ -47,6 +57,8 @@ async function loadPokemonDetail() {
         showError(`Pokemon "${escapeHtml(pokemonName)}" not found in this format.`);
         return;
     }
+
+    const baseStats = await loadBaseStatsForPokemon(entry.pokemon_name);
 
     const detail = document.getElementById('pokemon-detail');
     if (detail) detail.style.display = 'block';
@@ -93,6 +105,7 @@ async function loadPokemonDetail() {
     if (!grid) return;
 
     grid.innerHTML = [
+        renderBaseStatsSection('Base Stats', baseStats),
         renderMapSection('Abilities', entry.abilities_json),
         renderMapSection('Items', entry.items_json),
         renderMapSection('Spreads', entry.spreads_json),
@@ -105,6 +118,65 @@ async function loadPokemonDetail() {
         .join('');
 
     attachCountersSortHandlers(entry.counters_json);
+}
+
+async function loadBaseStatsForPokemon(pokemonName) {
+    const map = await loadBaseStatsMap();
+    if (!map) return null;
+    return map[toId(pokemonName)] || null;
+}
+
+async function loadBaseStatsMap() {
+    if (!baseStatsMapPromise) {
+        baseStatsMapPromise = fetch('../assets/base-stats.json')
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .then(data => (data && data.pokemon ? data.pokemon : null))
+            .catch(error => {
+                console.error('Error loading base stats:', error);
+                return null;
+            });
+    }
+
+    return baseStatsMapPromise;
+}
+
+function renderBaseStatsSection(title, baseStats) {
+    if (!baseStats || typeof baseStats !== 'object') return '';
+
+    const rows = baseStatLabels
+        .map(([key, label]) => {
+            const value = Number(baseStats[key]);
+            if (Number.isNaN(value)) return '';
+            const width = Math.max(0, Math.min(100, (value / maxBaseStat) * 100));
+            return `
+                <li class="base-stats-row">
+                    <span class="base-stats-label">${label}</span>
+                    <div class="base-stats-track" role="img" aria-label="${label} base stat ${value}">
+                        <span class="base-stats-fill" style="width: ${width.toFixed(2)}%"></span>
+                    </div>
+                    <span class="base-stats-value">${value}</span>
+                </li>
+            `;
+        })
+        .join('');
+
+    const bstValue = Number(baseStats.bst);
+    const bst = Number.isNaN(bstValue)
+        ? baseStatLabels.reduce((sum, [key]) => sum + (Number(baseStats[key]) || 0), 0)
+        : bstValue;
+
+    return `
+        <section class="pokemon-detail-section">
+            <h3>${escapeHtml(title)}</h3>
+            <ul class="base-stats-list">
+                ${rows}
+            </ul>
+            <p class="base-stats-bst">BST: <strong>${bst}</strong></p>
+        </section>
+    `;
 }
 
 function findPokemonEntry(pokemonList, pokemonName) {
@@ -331,4 +403,10 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+function toId(text) {
+    return String(text || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '');
 }
