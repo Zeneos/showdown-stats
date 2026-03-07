@@ -3,6 +3,7 @@
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
+const typeSpriteBase = '../assets/sprites/types';
 const itemSpriteBase = '../assets/sprites/items';
 const itemSpriteFallback = `${itemSpriteBase}/unknown.png`;
 const maxBaseStat = 255;
@@ -16,6 +17,26 @@ const baseStatLabels = [
     ['spd', 'SpD'],
     ['spe', 'Spe']
 ];
+const typeSpriteIndexById = {
+    normal: 1,
+    fighting: 2,
+    flying: 3,
+    poison: 4,
+    ground: 5,
+    rock: 6,
+    bug: 7,
+    ghost: 8,
+    steel: 9,
+    fire: 10,
+    water: 11,
+    grass: 12,
+    electric: 13,
+    psychic: 14,
+    ice: 15,
+    dragon: 16,
+    dark: 17,
+    fairy: 18
+};
 const countersSortState = {
     key: 'rate',
     direction: 'desc'
@@ -277,6 +298,8 @@ function renderMapSection(title, map) {
                 ? renderMoveNameCell(key)
                 : title === 'Items'
                     ? renderItemNameCell(key)
+                : title === 'Tera Types'
+                    ? renderTeraTypeCell(key)
                 : title === 'Spreads'
                     ? escapeHtml(formatSpreadLabel(key))
                 : escapeHtml(key);
@@ -314,7 +337,7 @@ function renderMoveNameCell(moveName) {
     const displayName = moveInfo && moveInfo.name ? String(moveInfo.name) : String(moveName);
     const hasType = moveInfo && moveInfo.type;
     const typeText = hasType ? String(moveInfo.type) : '???';
-    const typeClass = hasType ? `move-type-${toId(typeText)}` : 'move-type-unknown';
+    const typeSpriteSrc = getTypeSpriteSrc(typeText);
 
     const pp = formatMoveStatValue(moveInfo ? moveInfo.pp : null);
     const bp = formatMoveStatValue(moveInfo ? moveInfo.basePower : null);
@@ -326,13 +349,50 @@ function renderMoveNameCell(moveName) {
     return `
         <div class="move-cell">
             <div class="move-title-row">
-                <span class="move-type-icon ${typeClass}" aria-label="Move type ${escapeHtml(typeText)}">${escapeHtml(typeText)}</span>
+                ${typeSpriteSrc
+            ? `<img class="move-type-sprite" src="${escapeHtml(typeSpriteSrc)}" alt="${escapeHtml(typeText)}" loading="lazy">`
+            : `<span class="move-type-icon move-type-unknown" aria-label="Move type ${escapeHtml(typeText)}">${escapeHtml(typeText)}</span>`}
                 <span class="move-name">${escapeHtml(displayName)}</span>
             </div>
             <div class="move-meta">PP ${pp} | BP ${bp} | Acc ${acc}${priMeta}</div>
             ${description ? `<div class="move-description" title="${escapeHtml(description)}">${escapeHtml(description)}</div>` : ''}
         </div>
     `;
+}
+
+function getTypeSpriteSrc(typeName) {
+    const typeId = toId(typeName);
+    const spriteIndex = typeSpriteIndexById[typeId];
+    if (!spriteIndex) return null;
+    return `${typeSpriteBase}/${spriteIndex}.png`;
+}
+
+function renderTeraTypeCell(typeName) {
+    const displayName = formatTypeLabel(typeName);
+    const typeSpriteSrc = getTypeSpriteSrc(typeName);
+
+    return `
+        <div class="tera-type-cell">
+            ${typeSpriteSrc
+            ? `<img class="tera-type-sprite" src="${escapeHtml(typeSpriteSrc)}" alt="${escapeHtml(displayName)}" loading="lazy">`
+            : `<span class="move-type-icon move-type-unknown" aria-label="Type ${escapeHtml(displayName)}">${escapeHtml(displayName)}</span>`}
+            <span class="tera-type-name">${escapeHtml(displayName)}</span>
+        </div>
+    `;
+}
+
+function formatTypeLabel(typeName) {
+    const raw = String(typeName || '').trim();
+    if (!raw) return '???';
+
+    return raw
+        .replace(/[-_]+/g, ' ')
+        .split(/\s+/)
+        .map(word => {
+            const lower = word.toLowerCase();
+            return lower.charAt(0).toUpperCase() + lower.slice(1);
+        })
+        .join(' ');
 }
 
 function renderItemNameCell(itemName) {

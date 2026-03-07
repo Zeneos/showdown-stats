@@ -194,6 +194,7 @@ tbody tr:hover {
     /* Typography */
     color: #667eea;
     font-weight: 600;
+    text-align: center;
 }
 
 .battles {
@@ -342,7 +343,7 @@ tbody tr:hover {
     /* Typography */
     text-align: left;
     font-size: 0.92em;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .detail-table th:first-child,
@@ -390,6 +391,8 @@ tbody tr:hover {
     /* Typography */
     font-variant-numeric: tabular-nums;
     color: #495057;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .move-cell {
@@ -408,8 +411,8 @@ tbody tr:hover {
 
 .item-sprite {
     /* Display & Box Model */
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
 
     /* Visual */
     image-rendering: pixelated;
@@ -417,6 +420,29 @@ tbody tr:hover {
 }
 
 .item-name {
+    /* Typography */
+    color: #1f2933;
+}
+
+.tera-type-cell {
+    /* Display & Box Model */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tera-type-sprite {
+    /* Display & Box Model */
+    width: 52px;
+    height: 14px;
+    flex: 0 0 auto;
+
+    /* Visual */
+    object-fit: contain;
+    image-rendering: auto;
+}
+
+.tera-type-name {
     /* Typography */
     color: #1f2933;
 }
@@ -475,6 +501,17 @@ tbody tr:hover {
 
     /* Visual */
     border: 1px solid transparent;
+}
+
+.move-type-sprite {
+    /* Display & Box Model */
+    width: 60px;
+    height: 18px;
+    flex: 0 0 auto;
+
+    /* Visual */
+    object-fit: contain;
+    image-rendering: auto;
 }
 
 .move-type-unknown {
@@ -970,7 +1007,7 @@ tbody tr:hover {
 .pokemon-usage,
 .pokemon-count {
     /* Typography */
-    text-align: right;
+    text-align: center;
 }
 
 .pokemon-meta-usage {
@@ -996,7 +1033,8 @@ html[data-theme='dark'] .pokemon-link,
 html[data-theme='dark'] .pokemon-table th,
 html[data-theme='dark'] .pokemon-table td,
 html[data-theme='dark'] .move-name,
-html[data-theme='dark'] .item-name {
+html[data-theme='dark'] .item-name,
+html[data-theme='dark'] .tera-type-name {
     color: #e5e7eb;
 }
 
