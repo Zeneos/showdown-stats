@@ -287,13 +287,19 @@ tbody tr:hover {
     width: min(100%, 420px);
 }
 
+.pokemon-detail-section--full {
+    /* Display & Box Model */
+    flex: 1 1 880px;
+    width: min(100%, 880px);
+}
+
 .pokemon-detail-section {
     /* Display & Box Model */
     flex: 0 1 420px;
     width: min(100%, 420px);
     border: 1px solid #e5e7eb;
     border-radius: 8px;
-    padding: 12px 14px;
+    padding: 10px 12px;
 
     /* Visual */
     background: #fdfdfd;
@@ -315,7 +321,7 @@ tbody tr:hover {
 .detail-table tbody {
     /* Display & Box Model */
     display: block;
-    max-height: 320px;
+    max-height: 250px;
     overflow-y: auto;
 }
 
@@ -359,10 +365,54 @@ tbody tr:hover {
     color: #495057;
 }
 
+.counters-sort-btn {
+    /* Display & Box Model */
+    padding: 0;
+    border: 0;
+
+    /* Visual */
+    background: transparent;
+    cursor: pointer;
+
+    /* Typography */
+    color: inherit;
+    font: inherit;
+    font-weight: 600;
+}
+
+.counters-sort-btn:hover {
+    /* Typography */
+    color: #343a40;
+}
+
 .detail-value {
     /* Typography */
     font-variant-numeric: tabular-nums;
     color: #495057;
+}
+
+.detail-table--counters th:first-child,
+.detail-table--counters td:first-child {
+    /* Display & Box Model */
+    width: 32%;
+}
+
+.detail-table--counters th:nth-child(2),
+.detail-table--counters td:nth-child(2) {
+    /* Display & Box Model */
+    width: 48%;
+
+    /* Typography */
+    text-align: right;
+}
+
+.detail-table--counters th:nth-child(3),
+.detail-table--counters td:nth-child(3) {
+    /* Display & Box Model */
+    width: 20%;
+
+    /* Typography */
+    text-align: right;
 }
 
 .detail-list {

@@ -3,6 +3,10 @@
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
+const countersSortState = {
+    key: 'rate',
+    direction: 'desc'
+};
 
 document.addEventListener('DOMContentLoaded', () => {
     loadPokemonDetail();
@@ -93,11 +97,14 @@ async function loadPokemonDetail() {
         renderMapSection('Items', entry.items_json),
         renderMapSection('Spreads', entry.spreads_json),
         renderMapSection('Moves', entry.moves_json),
+        renderMapSection('Tera Types', entry.tera_json),
         renderMapSection('Teammates', entry.teammates_json),
-        renderArraySection('Viability', entry.viability_json)
+        renderCountersSection('Checks and Counters', entry.counters_json, countersSortState)
     ]
         .filter(Boolean)
         .join('');
+
+    attachCountersSortHandlers(entry.counters_json);
 }
 
 function findPokemonEntry(pokemonList, pokemonName) {
@@ -132,12 +139,6 @@ function renderMapSection(title, map) {
         <section class="pokemon-detail-section${wideClass}">
             <h3>${escapeHtml(title)}</h3>
             <table class="detail-table">
-                <thead>
-                    <tr>
-                        <th>${escapeHtml(title)}</th>
-                        <th>Usage %</th>
-                    </tr>
-                </thead>
                 <tbody>
                     ${rows}
                 </tbody>
@@ -157,6 +158,98 @@ function renderArraySection(title, items) {
             </ul>
         </section>
     `;
+}
+
+function renderCountersSection(title, counters, sortState) {
+    if (!counters || typeof counters !== 'object') return '';
+
+    const entries = Object.entries(counters)
+        .map(([name, values]) => {
+            if (!Array.isArray(values) || values.length < 3) return null;
+            const [count, rate, variance] = values.map(Number);
+            if ([count, rate, variance].some(Number.isNaN)) return null;
+            return { name, count, rate, variance };
+        })
+        .filter(Boolean);
+
+    if (entries.length === 0) return '';
+
+    const totalCount = entries.reduce((sum, entry) => sum + entry.count, 0);
+
+    // Keep variance in ranking to prefer reliable check rates.
+    const sortedEntries = [...entries].sort((a, b) => {
+        const direction = sortState.direction === 'asc' ? 1 : -1;
+        if (sortState.key === 'count') {
+            if (a.count === b.count) return a.name.localeCompare(b.name) * direction;
+            return (a.count - b.count) * direction;
+        }
+
+        const aScore = a.rate - a.variance;
+        const bScore = b.rate - b.variance;
+        if (aScore === bScore) return (a.count - b.count) * direction;
+        return (aScore - bScore) * direction;
+    });
+
+    const rows = sortedEntries
+        .map(({ name, count, rate }) => {
+            const countPct = totalCount > 0 ? (count / totalCount) * 100 : 0;
+            return `
+            <tr>
+                <td>${escapeHtml(name)}</td>
+                <td class="detail-value">${(rate * 100).toFixed(2)}%</td>
+                <td class="detail-value">${countPct.toFixed(2)}%</td>
+            </tr>
+        `;
+        })
+        .join('');
+
+    const rateArrow = getSortArrow(sortState, 'rate');
+    const countArrow = getSortArrow(sortState, 'count');
+
+    return `
+        <section id="counters-section" class="pokemon-detail-section pokemon-detail-section--full">
+            <h3>${escapeHtml(title)}</h3>
+            <table class="detail-table detail-table--counters">
+                <thead>
+                    <tr>
+                        <th>Pokemon</th>
+                        <th><button type="button" class="counters-sort-btn" data-sort-key="rate">Check/Counter ${rateArrow}</button></th>
+                        <th><button type="button" class="counters-sort-btn" data-sort-key="count">Match Count ${countArrow}</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${rows}
+                </tbody>
+            </table>
+        </section>
+    `;
+}
+
+function attachCountersSortHandlers(counters) {
+    const buttons = document.querySelectorAll('.counters-sort-btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const key = button.dataset.sortKey;
+            if (!key) return;
+
+            if (countersSortState.key === key) {
+                countersSortState.direction = countersSortState.direction === 'desc' ? 'asc' : 'desc';
+            } else {
+                countersSortState.key = key;
+                countersSortState.direction = 'desc';
+            }
+
+            const section = document.getElementById('counters-section');
+            if (!section) return;
+            section.outerHTML = renderCountersSection('Checks and Counters', counters, countersSortState);
+            attachCountersSortHandlers(counters);
+        });
+    });
+}
+
+function getSortArrow(sortState, key) {
+    if (sortState.key !== key) return '⇅';
+    return sortState.direction === 'asc' ? '↑' : '↓';
 }
 
 function getPokemonSpritePaths(pokemonName) {
