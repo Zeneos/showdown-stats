@@ -274,13 +274,23 @@ tbody tr:hover {
 
 .pokemon-detail-grid {
     /* Display & Box Model */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 20px;
+}
+
+.pokemon-detail-section--wide {
+    /* Display & Box Model */
+    flex: 0 1 420px;
+    width: min(100%, 420px);
 }
 
 .pokemon-detail-section {
     /* Display & Box Model */
+    flex: 0 1 420px;
+    width: min(100%, 420px);
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     padding: 12px 14px;
@@ -302,6 +312,21 @@ tbody tr:hover {
     border-collapse: collapse;
 }
 
+.detail-table tbody {
+    /* Display & Box Model */
+    display: block;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.detail-table thead,
+.detail-table tbody tr {
+    /* Display & Box Model */
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
 .detail-table th,
 .detail-table td {
     /* Display & Box Model */
@@ -311,6 +336,21 @@ tbody tr:hover {
     /* Typography */
     text-align: left;
     font-size: 0.92em;
+}
+
+.detail-table th:first-child,
+.detail-table td:first-child {
+    /* Display & Box Model */
+    width: 70%;
+}
+
+.detail-table th:last-child,
+.detail-table td:last-child {
+    /* Display & Box Model */
+    width: 30%;
+
+    /* Typography */
+    text-align: right;
 }
 
 .detail-table th {
@@ -474,12 +514,14 @@ tbody tr:hover {
 
 .pokemon-table-wrapper {
     /* Display & Box Model */
+    display: block;
     overflow-x: auto;
 }
 
 .pokemon-table {
     /* Display & Box Model */
-    width: 100%;
+    width: min(100%, 980px);
+    margin: 0 auto;
     border-collapse: collapse;
 }
 
@@ -543,6 +585,14 @@ tbody tr:hover {
 .pokemon-count {
     /* Typography */
     font-variant-numeric: tabular-nums;
+}
+
+.pokemon-table th[data-sort="usage_pct"],
+.pokemon-table th[data-sort="usage_count"],
+.pokemon-usage,
+.pokemon-count {
+    /* Typography */
+    text-align: right;
 }
 
 .pokemon-meta-usage {

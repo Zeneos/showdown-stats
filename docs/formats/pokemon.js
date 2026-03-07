@@ -116,23 +116,26 @@ function renderMapSection(title, map) {
 
     if (entries.length === 0) return '';
 
+    const total = entries.reduce((sum, [, value]) => sum + value, 0);
+
     const rows = entries
         .map(([key, value]) => `
             <tr>
                 <td>${escapeHtml(key)}</td>
-                <td class="detail-value">${formatNumber(value)}</td>
+                <td class="detail-value">${total > 0 ? ((value / total) * 100).toFixed(2) : '0.00'}%</td>
             </tr>
         `)
         .join('');
 
+    const wideClass = title === 'Spreads' ? ' pokemon-detail-section--wide' : '';
     return `
-        <section class="pokemon-detail-section">
+        <section class="pokemon-detail-section${wideClass}">
             <h3>${escapeHtml(title)}</h3>
             <table class="detail-table">
                 <thead>
                     <tr>
                         <th>${escapeHtml(title)}</th>
-                        <th>Usage</th>
+                        <th>Usage %</th>
                     </tr>
                 </thead>
                 <tbody>

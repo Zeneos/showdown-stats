@@ -24,7 +24,7 @@ body {
 
 .container {
     /* Display & Box Model */
-    max-width: 1200px;
+    width: min(96vw, 1400px);
     margin: 0 auto;
     overflow: hidden;
     border-radius: 12px;
@@ -91,5 +91,17 @@ footer a:hover {
     header p {
         /* Typography */
         font-size: 1em;
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        /* Display & Box Model */
+        padding: 30px 40px;
+    }
+
+    .container {
+        /* Display & Box Model */
+        width: min(94vw, 1600px);
     }
 }
