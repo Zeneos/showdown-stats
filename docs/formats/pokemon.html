@@ -23,13 +23,20 @@
                             <h2 id="pokemon-name">Loading...</h2>
                             <div id="pokemon-types" class="pokemon-types-row" aria-label="Pokemon types"></div>
                         </div>
-                        <p id="pokemon-format"></p>
                         <p id="pokemon-usage"></p>
+                        <p id="pokemon-ranking"></p>
                     </div>
                 </div>
                 <div class="pokemon-detail-actions">
+                    <div class="pokemon-format-switch">
+                        <div class="pokemon-format-meta">
+                            <label for="pokemon-format-select">Format</label>
+                            <span id="pokemon-format-current" class="pokemon-format-current">-</span>
+                        </div>
+                        <input id="pokemon-format-select" type="text" list="pokemon-format-options" aria-label="Search or select format" placeholder="Search formats..." autocomplete="off">
+                        <datalist id="pokemon-format-options"></datalist>
+                    </div>
                     <a id="back-to-format" class="back-link" href="./">Back to format</a>
-                    <a class="back-link" href="./">← Back to all formats</a>
                 </div>
             </div>
 

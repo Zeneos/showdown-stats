@@ -243,7 +243,7 @@ tbody tr:hover {
     /* Display & Box Model */
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 25px;
@@ -294,8 +294,57 @@ tbody tr:hover {
 .pokemon-detail-actions {
     /* Display & Box Model */
     display: flex;
+    align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+#pokemon-usage,
+#pokemon-ranking {
+    /* Typography */
+    margin: 2px 0;
+}
+
+.pokemon-format-switch {
+    /* Display & Box Model */
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.pokemon-format-meta {
+    /* Display & Box Model */
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.pokemon-format-switch label {
+    /* Typography */
+    font-weight: 600;
+    color: #334155;
+}
+
+.pokemon-format-current {
+    /* Typography */
+    color: #475569;
+    font-size: 0.9em;
+}
+
+#pokemon-format-select {
+    /* Display & Box Model */
+    min-width: 180px;
+    max-width: 200px;
+    padding: 7px 10px;
+
+    /* Visual */
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #f8fafc;
+
+    /* Typography */
+    color: #1f2937;
 }
 
 .pokemon-detail-grid {
@@ -1244,6 +1293,20 @@ html[data-theme='dark'] .back-link {
 html[data-theme='dark'] .back-link:hover {
     background: #2563eb;
     color: #f8fafc;
+}
+
+html[data-theme='dark'] .pokemon-format-switch label {
+    color: #e2e8f0;
+}
+
+html[data-theme='dark'] .pokemon-format-current {
+    color: #94a3b8;
+}
+
+html[data-theme='dark'] #pokemon-format-select {
+    background: #111827;
+    border-color: #475569;
+    color: #e2e8f0;
 }
 
 html[data-theme='dark'] .format-link,

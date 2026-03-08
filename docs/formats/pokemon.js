@@ -68,10 +68,13 @@ async function loadPokemonDetail() {
         return;
     }
 
+    let latestPeriod = '';
+
     try {
         const indexResponse = await fetch('../index.json');
         if (indexResponse.ok) {
             const index = await indexResponse.json();
+            latestPeriod = String(index.latest || '');
             const periodInfo = document.getElementById('period-info');
             if (periodInfo) {
                 periodInfo.textContent = `Stats Period: ${index.latest}`;
@@ -87,10 +90,23 @@ async function loadPokemonDetail() {
         return;
     }
 
-    const entry = findPokemonEntry(pokemonData.pokemon, pokemonName);
+    let entry = findPokemonEntry(pokemonData.pokemon, pokemonName);
     if (!entry) {
-        showError(`Pokemon "${escapeHtml(pokemonName)}" not found in this format.`);
-        return;
+        entry = getMostUsedPokemonEntry(pokemonData.pokemon);
+        if (!entry) {
+            showError(`Pokemon data for format "${escapeHtml(formatName)}" is empty.`);
+            return;
+        }
+
+        // Keep URL in sync when we auto-fallback to the most-used Pokemon.
+        const nextParams = new URLSearchParams();
+        nextParams.set('format', formatName);
+        nextParams.set('pokemon', entry.pokemon_name);
+        if (rating && rating !== 'all') {
+            nextParams.set('rating', rating);
+        }
+        const nextUrl = `${window.location.pathname || 'pokemon.html'}?${nextParams.toString()}`;
+        window.history.replaceState({}, '', nextUrl);
     }
 
     const baseStats = await loadBaseStatsForPokemon(entry.pokemon_name);
@@ -127,14 +143,21 @@ async function loadPokemonDetail() {
         typesEl.innerHTML = renderPokemonHeaderTypes(types);
     }
 
-    const formatEl = document.getElementById('pokemon-format');
-    if (formatEl) formatEl.textContent = `Format: ${displayFormatName}`;
+    await populateFormatSwitcher(entry.pokemon_name, formatName, displayFormatName, rating, latestPeriod);
 
     const usageEl = document.getElementById('pokemon-usage');
     if (usageEl) {
         const usagePct = entry.usage_pct !== undefined ? entry.usage_pct.toFixed(2) : '0.00';
         const usageCount = entry.usage_count !== undefined ? formatNumber(entry.usage_count) : '0';
         usageEl.textContent = `Usage: ${usagePct}% (${usageCount} battles)`;
+    }
+
+    const rankingEl = document.getElementById('pokemon-ranking');
+    if (rankingEl) {
+        const monthlyRank = getPokemonMonthlyRank(pokemonData.pokemon, entry.pokemon_name);
+        rankingEl.textContent = monthlyRank > 0
+            ? `Monthly Ranking: #${monthlyRank}`
+            : 'Monthly Ranking: --';
     }
 
     const backLink = document.getElementById('back-to-format');
@@ -258,6 +281,116 @@ async function loadFormatNameMap() {
     return formatNameMapPromise;
 }
 
+async function populateFormatSwitcher(pokemonName, currentFormatKey, currentFormatDisplayName, rating, latestPeriod) {
+    const inputEl = document.getElementById('pokemon-format-select');
+    const listEl = document.getElementById('pokemon-format-options');
+    const currentEl = document.getElementById('pokemon-format-current');
+    if (!inputEl || !listEl) return;
+
+    inputEl.disabled = true;
+    inputEl.value = '';
+    inputEl.placeholder = 'Search Formats';
+    listEl.innerHTML = '<option value="Loading formats..."></option>';
+    if (currentEl) currentEl.textContent = currentFormatDisplayName;
+
+    const options = await loadAllFormatOptions(latestPeriod);
+    const available = options.length > 0
+        ? options
+        : [{ key: currentFormatKey, displayName: currentFormatDisplayName }];
+
+    listEl.innerHTML = available
+        .map(option => `<option value="${escapeHtml(option.displayName)}"></option>`)
+        .join('');
+
+    inputEl.disabled = available.length === 0;
+    inputEl.placeholder = 'Search Formats';
+
+    const navigateToSelection = () => {
+        const nextFormat = resolveFormatKeyFromInput(inputEl.value, available);
+        if (!nextFormat || nextFormat === currentFormatKey) return;
+
+        const params = new URLSearchParams();
+        params.set('format', nextFormat);
+        params.set('pokemon', pokemonName);
+        if (rating && rating !== 'all') {
+            params.set('rating', rating);
+        }
+
+        const path = window.location.pathname || 'pokemon.html';
+        window.location.href = `${path}?${params.toString()}`;
+    };
+
+    inputEl.onchange = navigateToSelection;
+    inputEl.onkeydown = event => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            navigateToSelection();
+        }
+    };
+}
+
+function resolveFormatKeyFromInput(inputValue, options) {
+    const raw = String(inputValue || '').trim();
+    if (!raw || !Array.isArray(options)) return '';
+
+    const normalized = raw.toLowerCase();
+    const byDisplay = options.find(option => String(option.displayName || '').toLowerCase() === normalized);
+    if (byDisplay) return byDisplay.key;
+
+    const byKey = options.find(option => String(option.key || '').toLowerCase() === normalized);
+    if (byKey) return byKey.key;
+
+    return '';
+}
+
+async function loadAllFormatOptions(latestPeriod) {
+    if (!latestPeriod) return [];
+
+    try {
+        const response = await fetch(`${encodeURIComponent(latestPeriod)}.json`);
+        if (!response.ok) return [];
+
+        const latestData = await response.json();
+        if (!latestData || !Array.isArray(latestData.formats)) return [];
+
+        return latestData.formats
+            .map(format => ({
+                key: getFormatKey(format),
+                totalBattles: Number(format.total_battles) || 0,
+                displayName: getDisplayFormatName(getFormatKey(format))
+            }))
+            .filter(format => Boolean(format.key))
+            .sort((a, b) => {
+                if (b.totalBattles !== a.totalBattles) return b.totalBattles - a.totalBattles;
+                return a.displayName.localeCompare(b.displayName);
+            });
+    } catch (error) {
+        console.error('Error loading format options:', error);
+        return [];
+    }
+}
+
+function getMostUsedPokemonEntry(pokemonList) {
+    if (!Array.isArray(pokemonList) || pokemonList.length === 0) return null;
+
+    return [...pokemonList]
+        .filter(p => p && typeof p === 'object')
+        .sort((a, b) => {
+            const usageDiff = Number(b.usage_pct || 0) - Number(a.usage_pct || 0);
+            if (usageDiff !== 0) return usageDiff;
+
+            const countDiff = Number(b.usage_count || 0) - Number(a.usage_count || 0);
+            if (countDiff !== 0) return countDiff;
+
+            return String(a.pokemon_name || '').localeCompare(String(b.pokemon_name || ''));
+        })[0] || null;
+}
+
+function getFormatKey(format) {
+    if (!format || typeof format !== 'object') return '';
+    return String(format.format_name || format.name || '').trim();
+}
+
 function getDisplayFormatName(formatName) {
     const key = String(formatName || '').trim();
     if (key && formatNameMap && formatNameMap[key]) {
@@ -328,6 +461,26 @@ function getBstTier(bstValue) {
     if (bst < 700) return 5;
     if (bst >= highestCurrentBst) return 6;
     return 6;
+}
+
+function getPokemonMonthlyRank(pokemonList, pokemonName) {
+    if (!Array.isArray(pokemonList) || !pokemonName) return 0;
+
+    const ranked = [...pokemonList]
+        .filter(p => p && typeof p === 'object')
+        .sort((a, b) => {
+            const usageDiff = Number(b.usage_pct || 0) - Number(a.usage_pct || 0);
+            if (usageDiff !== 0) return usageDiff;
+
+            const countDiff = Number(b.usage_count || 0) - Number(a.usage_count || 0);
+            if (countDiff !== 0) return countDiff;
+
+            return String(a.pokemon_name || '').localeCompare(String(b.pokemon_name || ''));
+        });
+
+    const targetName = String(pokemonName || '').toLowerCase();
+    const index = ranked.findIndex(p => String(p.pokemon_name || '').toLowerCase() === targetName);
+    return index >= 0 ? index + 1 : 0;
 }
 
 function findPokemonEntry(pokemonList, pokemonName) {
