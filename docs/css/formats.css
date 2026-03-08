@@ -424,6 +424,29 @@ tbody tr:hover {
     color: #1f2933;
 }
 
+.pokemon-inline-cell {
+    /* Display & Box Model */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pokemon-inline-icon {
+    /* Display & Box Model */
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+
+    /* Visual */
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.pokemon-inline-name {
+    /* Typography */
+    color: #1f2933;
+}
+
 .tera-type-cell {
     /* Display & Box Model */
     display: inline-flex;
@@ -639,6 +662,11 @@ tbody tr:hover {
 .detail-table--counters td:first-child {
     /* Display & Box Model */
     width: 32%;
+}
+
+.detail-table--counters tbody {
+    /* Display & Box Model */
+    max-height: 220px;
 }
 
 .detail-table--counters th:nth-child(2),
@@ -1034,7 +1062,8 @@ html[data-theme='dark'] .pokemon-table th,
 html[data-theme='dark'] .pokemon-table td,
 html[data-theme='dark'] .move-name,
 html[data-theme='dark'] .item-name,
-html[data-theme='dark'] .tera-type-name {
+html[data-theme='dark'] .tera-type-name,
+html[data-theme='dark'] .pokemon-inline-name {
     color: #e5e7eb;
 }
 

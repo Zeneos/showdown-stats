@@ -3,6 +3,7 @@
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
+const iconSpriteBase = '../assets/sprites/icons';
 const typeSpriteBase = '../assets/sprites/types';
 const itemSpriteBase = '../assets/sprites/items';
 const itemSpriteFallback = `${itemSpriteBase}/unknown.png`;
@@ -294,12 +295,17 @@ function renderMapSection(title, map) {
 
     const rows = visibleEntries
         .map(([key, value]) => {
+            const percentage = total > 0 ? (value / total) * 100 : 0;
+            if (roundsToDisplayedZero(percentage)) return '';
+
             const firstCell = title === 'Moves'
                 ? renderMoveNameCell(key)
                 : title === 'Items'
                     ? renderItemNameCell(key)
                 : title === 'Tera Types'
                     ? renderTeraTypeCell(key)
+                : title === 'Teammates'
+                    ? renderPokemonIconNameCell(key)
                 : title === 'Spreads'
                     ? escapeHtml(formatSpreadLabel(key))
                 : escapeHtml(key);
@@ -307,11 +313,14 @@ function renderMapSection(title, map) {
             return `
             <tr>
                 <td>${firstCell}</td>
-                <td class="detail-value">${total > 0 ? ((value / total) * 100).toFixed(2) : '0.00'}%</td>
+                <td class="detail-value">${percentage.toFixed(2)}%</td>
             </tr>
         `;
         })
+        .filter(Boolean)
         .join('');
+
+    if (!rows) return '';
 
     const wideClass = title === 'Spreads' ? ' pokemon-detail-section--wide' : '';
     return `
@@ -409,6 +418,43 @@ function renderItemNameCell(itemName) {
     `;
 }
 
+function renderPokemonIconNameCell(pokemonName) {
+    const displayName = String(pokemonName || 'Unknown');
+    const preferredSlug = getPokemonIconSlug(pokemonName, true);
+    const fallbackSlug = getPokemonIconSlug(pokemonName, false);
+    const iconSrc = preferredSlug ? `${iconSpriteBase}/${preferredSlug}.png` : '';
+    const fallbackSrc = fallbackSlug && fallbackSlug !== preferredSlug
+        ? `${iconSpriteBase}/${fallbackSlug}.png`
+        : '';
+    const onErrorCode = fallbackSrc
+        ? `this.onerror=null;this.src='${escapeHtml(fallbackSrc)}';`
+        : "this.style.display='none';";
+
+    return `
+        <div class="pokemon-inline-cell">
+            ${iconSrc
+            ? `<img class="pokemon-inline-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(displayName)}" loading="lazy" onerror="${onErrorCode}">`
+            : ''}
+            <span class="pokemon-inline-name">${escapeHtml(displayName)}</span>
+        </div>
+    `;
+}
+
+function getPokemonIconSlug(pokemonName, preferRegionalAdjective) {
+    const base = toKebabCase(pokemonName);
+    if (!base) return '';
+
+    if (!preferRegionalAdjective) {
+        return base;
+    }
+
+    return base
+        .replace(/-hisui/g, '-hisuian')
+        .replace(/-alola/g, '-alolan')
+        .replace(/-galar/g, '-galarian')
+        .replace(/-paldea/g, '-paldean');
+}
+
 function getItemDataByName(itemName) {
     if (!itemNameMap || !itemName) return null;
     return itemNameMap[toId(itemName)] || null;
@@ -416,6 +462,8 @@ function getItemDataByName(itemName) {
 
 function toKebabCase(text) {
     return String(text || '')
+    // Keep name fragments together for forms like Pa'u -> pau.
+    .replace(/[\u2019'`,]/g, '')
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
@@ -454,6 +502,12 @@ function formatMovePriority(value) {
     const num = Number(value);
     if (!Number.isFinite(num) || num === 0) return '';
     return num > 0 ? `+${num}` : String(num);
+}
+
+function roundsToDisplayedZero(value) {
+    const num = Number(value);
+    if (!Number.isFinite(num)) return true;
+    return Number(num.toFixed(2)) === 0;
 }
 
 function renderArraySection(title, items) {
@@ -501,16 +555,22 @@ function renderCountersSection(title, counters, sortState) {
 
     const rows = sortedEntries
         .map(({ name, count, rate }) => {
+            const ratePct = rate * 100;
             const countPct = totalCount > 0 ? (count / totalCount) * 100 : 0;
+            if (roundsToDisplayedZero(ratePct) || roundsToDisplayedZero(countPct)) return '';
+
             return `
             <tr>
-                <td>${escapeHtml(name)}</td>
-                <td class="detail-value">${(rate * 100).toFixed(2)}%</td>
+                <td>${renderPokemonIconNameCell(name)}</td>
+                <td class="detail-value">${ratePct.toFixed(2)}%</td>
                 <td class="detail-value">${countPct.toFixed(2)}%</td>
             </tr>
         `;
         })
+        .filter(Boolean)
         .join('');
+
+    if (!rows) return '';
 
     const rateArrow = getSortArrow(sortState, 'rate');
     const countArrow = getSortArrow(sortState, 'count');

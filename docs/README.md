@@ -23,6 +23,14 @@ Then open http://localhost:8000 in your browser.
 
 This site is automatically deployed via GitHub Pages from the `docs/` directory.
 
+## Asset Attribution
+
+Pokemon sprite assets and Pokemon images used in this project are sourced from:
+
+- https://github.com/PokeAPI/sprites
+- https://github.com/remokon/gen-9-sprites
+
+
 ## Refreshing Base Stats Data
 
 Pokemon base stats are stored locally in `docs/assets/base-stats.json`.
@@ -65,4 +73,16 @@ To regenerate this file from local item sprites:
 
 ```powershell
 .\scripts\update-item-name-map.ps1
+```
+
+## Refreshing Icon Name Sprites
+
+Pokemon icon sprites can be generated with name-based filenames in `docs/assets/sprites/icons/`.
+
+This uses `docs/assets/sprites/name-map.json` to map dex-number icon files to normalized name files (for example, `great-tusk.png`).
+
+To regenerate these name-based icon files:
+
+```powershell
+.\scripts\update-icon-name-sprites.ps1
 ```

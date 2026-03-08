@@ -1,14 +1,17 @@
 {
     "meta":  {
-                 "generatedAt":  "2026-03-07T06:09:00.1857247-08:00",
+                 "generatedAt":  "2026-03-08T04:12:07.0608219-07:00",
                  "source":  "local-item-sprites",
                  "spritesDir":  "docs/assets/sprites/items",
-                 "totalMappings":  844
+                 "totalMappings":  908
              },
     "items":  {
                   "abilitycapsule":  {
                                          "file":  "ability-capsule.png"
                                      },
+                  "abilityshield":  {
+                                        "file":  "ability-shield.png"
+                                    },
                   "abilityurge":  {
                                       "file":  "ability-urge.png"
                                   },
@@ -18,6 +21,9 @@
                   "absolite":  {
                                    "file":  "absolite.png"
                                },
+                  "absolitez":  {
+                                    "file":  "absolite-z.png"
+                                },
                   "absorbbulb":  {
                                      "file":  "absorb-bulb.png"
                                  },
@@ -108,9 +114,15 @@
                   "banettite":  {
                                     "file":  "banettite.png"
                                 },
+                  "barbaracite":  {
+                                      "file":  "barbaracite.png"
+                                  },
                   "basementkey":  {
                                       "file":  "basement-key.png"
                                   },
+                  "baxcalibrite":  {
+                                       "file":  "baxcalibrite.png"
+                                   },
                   "beadmail":  {
                                    "file":  "bead-mail.png"
                                },
@@ -213,6 +225,12 @@
                   "blukberry":  {
                                     "file":  "bluk-berry.png"
                                 },
+                  "blunderpolicy":  {
+                                        "file":  "blunder-policy.png"
+                                    },
+                  "boosterenergy":  {
+                                        "file":  "booster-energy.png"
+                                    },
                   "boostmulch":  {
                                      "file":  "boost-mulch.png"
                                  },
@@ -276,6 +294,9 @@
                   "cellbattery":  {
                                       "file":  "cell-battery.png"
                                   },
+                  "chandelurite":  {
+                                       "file":  "chandelurite.png"
+                                   },
                   "charcoal":  {
                                    "file":  "charcoal.png"
                                },
@@ -294,6 +315,9 @@
                   "cherishball":  {
                                       "file":  "cherish-ball.png"
                                   },
+                  "chesnaughtite":  {
+                                        "file":  "chesnaughtite.png"
+                                    },
                   "chestoberry":  {
                                       "file":  "chesto-berry.png"
                                   },
@@ -302,6 +326,9 @@
                                   },
                   "chilldrive":  {
                                      "file":  "chill-drive.png"
+                                 },
+                  "chimechite":  {
+                                     "file":  "chimechite.png"
                                  },
                   "choiceband":  {
                                      "file":  "choice-band.png"
@@ -321,9 +348,15 @@
                   "cleansetag":  {
                                      "file":  "cleanse-tag.png"
                                  },
+                  "clearamulet":  {
+                                      "file":  "clear-amulet.png"
+                                  },
                   "clearbell":  {
                                     "file":  "clear-bell.png"
                                 },
+                  "clefablite":  {
+                                     "file":  "clefablite.png"
+                                 },
                   "cleverwing":  {
                                      "file":  "clever-wing.png"
                                  },
@@ -351,6 +384,9 @@
                   "contestpass":  {
                                       "file":  "contest-pass.png"
                                   },
+                  "cornerstonemask":  {
+                                          "file":  "cornerstone-mask.png"
+                                      },
                   "cornnberry":  {
                                      "file":  "cornn-berry.png"
                                  },
@@ -365,6 +401,12 @@
                               },
                   "coverfossil":  {
                                       "file":  "cover-fossil.png"
+                                  },
+                  "covertcloak":  {
+                                      "file":  "covert-cloak.png"
+                                  },
+                  "crabominite":  {
+                                      "file":  "crabominite.png"
                                   },
                   "custapberry":  {
                                       "file":  "custap-berry.png"
@@ -383,6 +425,9 @@
                                  },
                   "darkmemory":  {
                                      "file":  "dark-memory.png"
+                                 },
+                  "darkranite":  {
+                                     "file":  "darkranite.png"
                                  },
                   "darkstone":  {
                                     "file":  "dark-stone.png"
@@ -483,6 +528,9 @@
                   "deepseatooth":  {
                                        "file":  "deep-sea-tooth.png"
                                    },
+                  "delphoxite":  {
+                                     "file":  "delphoxite.png"
+                                 },
                   "destinyknot":  {
                                       "file":  "destiny-knot.png"
                                   },
@@ -531,12 +579,18 @@
                   "dracoplate":  {
                                      "file":  "draco-plate.png"
                                  },
+                  "dragalgite":  {
+                                     "file":  "dragalgite.png"
+                                 },
                   "dragonfang":  {
                                      "file":  "dragon-fang.png"
                                  },
                   "dragongem":  {
                                     "file":  "dragon-gem.png"
                                 },
+                  "dragoninite":  {
+                                      "file":  "dragoninite.png"
+                                  },
                   "dragoniumz":  {
                                      "file":  "dragonium-z--held.png"
                                  },
@@ -549,6 +603,9 @@
                   "dragonskull":  {
                                       "file":  "dragon-skull.png"
                                   },
+                  "drampanite":  {
+                                     "file":  "drampanite.png"
+                                 },
                   "dreadplate":  {
                                      "file":  "dread-plate.png"
                                  },
@@ -582,12 +639,18 @@
                   "earthplate":  {
                                      "file":  "earth-plate.png"
                                  },
+                  "eelektrossite":  {
+                                        "file":  "eelektrossite.png"
+                                    },
                   "eeviumz":  {
                                   "file":  "eevium-z--held.png"
                               },
                   "ejectbutton":  {
                                       "file":  "eject-button.png"
                                   },
+                  "ejectpack":  {
+                                    "file":  "eject-pack.png"
+                                },
                   "electirizer":  {
                                       "file":  "electirizer.png"
                                   },
@@ -609,6 +672,9 @@
                   "elixir":  {
                                  "file":  "elixir.png"
                              },
+                  "emboarite":  {
+                                    "file":  "emboarite.png"
+                                },
                   "energypowder":  {
                                        "file":  "energy-powder.png"
                                    },
@@ -642,6 +708,9 @@
                   "eviolite":  {
                                    "file":  "eviolite.png"
                                },
+                  "excadrite":  {
+                                    "file":  "excadrite.png"
+                                },
                   "expertbelt":  {
                                      "file":  "expert-belt.png"
                                  },
@@ -657,12 +726,18 @@
                   "fairiumz":  {
                                    "file":  "fairium-z--held.png"
                                },
+                  "fairyfeather":  {
+                                       "file":  "fairy-feather.png"
+                                   },
                   "fairygem":  {
                                    "file":  "fairy-gem.png"
                                },
                   "fairymemory":  {
                                       "file":  "fairy-memory.png"
                                   },
+                  "falinksite":  {
+                                     "file":  "falinksite.png"
+                                 },
                   "famechecker":  {
                                       "file":  "fame-checker.png"
                                   },
@@ -675,6 +750,9 @@
                   "favoredmail":  {
                                       "file":  "favored-mail.png"
                                   },
+                  "feraligite":  {
+                                     "file":  "feraligite.png"
+                                 },
                   "festivalticket":  {
                                          "file":  "festival-ticket.png"
                                      },
@@ -720,6 +798,9 @@
                   "floatstone":  {
                                      "file":  "float-stone.png"
                                  },
+                  "floettite":  {
+                                    "file":  "floettite.png"
+                                },
                   "fluffytail":  {
                                      "file":  "fluffy-tail.png"
                                  },
@@ -747,6 +828,9 @@
                   "friendball":  {
                                      "file":  "friend-ball.png"
                                  },
+                  "froslassite":  {
+                                      "file":  "froslassite.png"
+                                  },
                   "fullheal":  {
                                    "file":  "full-heal.png"
                                },
@@ -768,6 +852,9 @@
                   "garchompite":  {
                                       "file":  "garchompite.png"
                                   },
+                  "garchompitez":  {
+                                       "file":  "garchompite-z.png"
+                                   },
                   "gardevoirite":  {
                                        "file":  "gardevoirite.png"
                                    },
@@ -792,6 +879,9 @@
                   "glalitite":  {
                                     "file":  "glalitite.png"
                                 },
+                  "glimmoranite":  {
+                                       "file":  "glimmoranite.png"
+                                   },
                   "glittermail":  {
                                       "file":  "glitter-mail.png"
                                   },
@@ -806,6 +896,12 @@
                                     },
                   "goldteeth":  {
                                     "file":  "gold-teeth.png"
+                                },
+                  "golisopite":  {
+                                     "file":  "golisopite.png"
+                                 },
+                  "golurkite":  {
+                                    "file":  "golurkite.png"
                                 },
                   "goodrod":  {
                                   "file":  "good-rod.png"
@@ -858,6 +954,9 @@
                   "greetmail":  {
                                     "file":  "greet-mail.png"
                                 },
+                  "greninjite":  {
+                                     "file":  "greninjite.png"
+                                 },
                   "grepaberry":  {
                                      "file":  "grepa-berry.png"
                                  },
@@ -897,6 +996,9 @@
                   "hardstone":  {
                                     "file":  "hard-stone.png"
                                 },
+                  "hawluchanite":  {
+                                       "file":  "hawluchanite.png"
+                                   },
                   "healball":  {
                                    "file":  "heal-ball.png"
                                },
@@ -906,11 +1008,17 @@
                   "healthwing":  {
                                      "file":  "health-wing.png"
                                  },
+                  "hearthflamemask":  {
+                                          "file":  "hearthflame-mask.png"
+                                      },
                   "heartmail":  {
                                     "file":  "heart-mail.png"
                                 },
                   "heartscale":  {
                                      "file":  "heart-scale.png"
+                                 },
+                  "heatranite":  {
+                                     "file":  "heatranite.png"
                                  },
                   "heatrock":  {
                                    "file":  "heat-rock.png"
@@ -918,6 +1026,9 @@
                   "heavyball":  {
                                     "file":  "heavy-ball.png"
                                 },
+                  "heavydutyboots":  {
+                                         "file":  "heavy-duty-boots.png"
+                                     },
                   "helixfossil":  {
                                       "file":  "helix-fossil.png"
                                   },
@@ -1185,6 +1296,9 @@
                   "likemail":  {
                                    "file":  "like-mail.png"
                                },
+                  "loadeddice":  {
+                                     "file":  "loaded-dice.png"
+                                 },
                   "lockcapsule":  {
                                       "file":  "lock-capsule.png"
                                   },
@@ -1206,6 +1320,9 @@
                   "lucarionite":  {
                                       "file":  "lucarionite.png"
                                   },
+                  "lucarionitez":  {
+                                       "file":  "lucarionite-z.png"
+                                   },
                   "luckincense":  {
                                       "file":  "luck-incense.png"
                                   },
@@ -1251,6 +1368,9 @@
                   "machobrace":  {
                                      "file":  "macho-brace.png"
                                  },
+                  "magearnite":  {
+                                     "file":  "magearnite.png"
+                                 },
                   "magmaemblem":  {
                                       "file":  "magma-emblem.png"
                                   },
@@ -1275,6 +1395,9 @@
                   "makeupbag":  {
                                     "file":  "makeup-bag.png"
                                 },
+                  "malamarite":  {
+                                     "file":  "malamarite.png"
+                                 },
                   "manectite":  {
                                     "file":  "manectite.png"
                                 },
@@ -1338,6 +1461,9 @@
                   "megaglove":  {
                                     "file":  "mega-glove.png"
                                 },
+                  "meganiumite":  {
+                                      "file":  "meganiumite.png"
+                                  },
                   "megapendant":  {
                                       "file":  "mega-pendant.png"
                                   },
@@ -1356,6 +1482,9 @@
                   "mentalherb":  {
                                      "file":  "mental-herb.png"
                                  },
+                  "meowsticite":  {
+                                      "file":  "meowsticite.png"
+                                  },
                   "metagrossite":  {
                                        "file":  "metagrossite.png"
                                    },
@@ -1395,6 +1524,9 @@
                   "miracleseed":  {
                                       "file":  "miracle-seed.png"
                                   },
+                  "mirrorherb":  {
+                                     "file":  "mirror-herb.png"
+                                 },
                   "mistyseed":  {
                                     "file":  "misty-seed.png"
                                 },
@@ -1713,6 +1845,9 @@
                   "psychiumz":  {
                                     "file":  "psychium-z--held.png"
                                 },
+                  "punchingglove":  {
+                                        "file":  "punching-glove.png"
+                                    },
                   "pureincense":  {
                                       "file":  "pure-incense.png"
                                   },
@@ -1722,6 +1857,9 @@
                   "purplepetal":  {
                                       "file":  "purple-petal.png"
                                   },
+                  "pyroarite":  {
+                                    "file":  "pyroarite.png"
+                                },
                   "qualotberry":  {
                                       "file":  "qualot-berry.png"
                                   },
@@ -1740,6 +1878,12 @@
                   "ragecandybar":  {
                                        "file":  "rage-candy-bar.png"
                                    },
+                  "raichunitex":  {
+                                      "file":  "raichunite-x.png"
+                                  },
+                  "raichunitey":  {
+                                      "file":  "raichunite-y.png"
+                                  },
                   "rainbowflower":  {
                                         "file":  "rainbow-flower.png"
                                     },
@@ -1890,6 +2034,9 @@
                   "rollerskates":  {
                                        "file":  "roller-skates.png"
                                    },
+                  "roomservice":  {
+                                      "file":  "room-service.png"
+                                  },
                   "rootfossil":  {
                                      "file":  "root-fossil.png"
                                  },
@@ -1944,6 +2091,12 @@
                   "rulebook":  {
                                    "file":  "rule-book.png"
                                },
+                  "rustedshield":  {
+                                       "file":  "rusted-shield.png"
+                                   },
+                  "rustedsword":  {
+                                      "file":  "rusted-sword.png"
+                                  },
                   "sablenite":  {
                                     "file":  "sablenite.png"
                                 },
@@ -1980,9 +2133,18 @@
                   "scizorite":  {
                                     "file":  "scizorite.png"
                                 },
+                  "scolipite":  {
+                                    "file":  "scolipite.png"
+                                },
                   "scopelens":  {
                                     "file":  "scope-lens.png"
                                 },
+                  "scovillainite":  {
+                                        "file":  "scovillainite.png"
+                                    },
+                  "scraftinite":  {
+                                      "file":  "scraftinite.png"
+                                  },
                   "seaincense":  {
                                      "file":  "sea-incense.png"
                                  },
@@ -2049,6 +2211,9 @@
                   "sitrusberry":  {
                                       "file":  "sitrus-berry.png"
                                   },
+                  "skarmorite":  {
+                                     "file":  "skarmorite.png"
+                                 },
                   "skullfossil":  {
                                       "file":  "skull-fossil.png"
                                   },
@@ -2130,11 +2295,17 @@
                   "stablemulch":  {
                                       "file":  "stable-mulch.png"
                                   },
+                  "staraptite":  {
+                                     "file":  "staraptite.png"
+                                 },
                   "stardust":  {
                                    "file":  "stardust.png"
                                },
                   "starfberry":  {
                                      "file":  "starf-berry.png"
+                                 },
+                  "starminite":  {
+                                     "file":  "starminite.png"
                                  },
                   "starpiece":  {
                                     "file":  "star-piece.png"
@@ -2211,6 +2382,9 @@
                   "tapuniumz":  {
                                     "file":  "tapunium-z--held.png"
                                 },
+                  "tatsugirinite":  {
+                                        "file":  "tatsugirinite.png"
+                                    },
                   "tea":  {
                               "file":  "tea.png"
                           },
@@ -2226,6 +2400,9 @@
                   "thickclub":  {
                                     "file":  "thick-club.png"
                                 },
+                  "throatspray":  {
+                                      "file":  "throat-spray.png"
+                                  },
                   "thunderstone":  {
                                        "file":  "thunder-stone.png"
                                    },
@@ -2346,9 +2523,15 @@
                   "upgrade":  {
                                   "file":  "up-grade.png"
                               },
+                  "utilityumbrella":  {
+                                          "file":  "utility-umbrella.png"
+                                      },
                   "venusaurite":  {
                                       "file":  "venusaurite.png"
                                   },
+                  "victreebelite":  {
+                                        "file":  "victreebelite.png"
+                                    },
                   "vsrecorder":  {
                                      "file":  "vs-recorder.png"
                                  },
@@ -2384,6 +2567,9 @@
                                },
                   "weaknesspolicy":  {
                                          "file":  "weakness-policy.png"
+                                     },
+                  "wellspringmask":  {
+                                         "file":  "wellspring-mask.png"
                                      },
                   "wepearberry":  {
                                       "file":  "wepear-berry.png"
@@ -2523,6 +2709,9 @@
                   "zapplate":  {
                                    "file":  "zap-plate.png"
                                },
+                  "zeraorite":  {
+                                    "file":  "zeraorite.png"
+                                },
                   "zinc":  {
                                "file":  "zinc.png"
                            },
@@ -2537,6 +2726,9 @@
                             },
                   "zygardecube":  {
                                       "file":  "zygarde-cube.png"
-                                  }
+                                  },
+                  "zygardite":  {
+                                    "file":  "zygardite.png"
+                                }
               }
 }
