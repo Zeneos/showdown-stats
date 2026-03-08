@@ -63,6 +63,22 @@ Optional Node.js script (if Node is installed):
 node ./scripts/update-move-data.mjs
 ```
 
+## Refreshing Ability Data
+
+Ability metadata (name and description) is stored locally in `docs/assets/ability-data.json`.
+
+To regenerate this file from Pokemon Showdown data:
+
+```powershell
+.\scripts\update-ability-data.ps1
+```
+
+Optional Node.js script (if Node is installed):
+
+```bash
+node ./scripts/update-ability-data.mjs
+```
+
 ## Refreshing Item Name Map
 
 Item-to-sprite mappings are stored locally in `docs/assets/item-name-map.json`.
@@ -86,3 +102,12 @@ To regenerate these name-based icon files:
 ```powershell
 .\scripts\update-icon-name-sprites.ps1
 ```
+
+## TODO
+- finish adding icons to the pokemon teammates and counter tables
+- remove pokemon list page, just put that stuff on the pokemon page and use it as a search function and have usage page link straight to pokemon page
+- add styling, background, logos, banner art stuff, copyright, contact, kofi/social media links maybe
+- bonus features for after "soft launch": viewing past months data instead of current, view current live data 
+(ur backend stuff), prepare for champions specific stuff for the launch in april
+- fun shiny variations for pokemon sprites/icons/banner art to sometimes load into the site
+- team builder features: better teammate sets for team archetypes, team weakness calculator

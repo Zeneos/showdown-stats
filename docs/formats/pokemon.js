@@ -4,6 +4,7 @@ const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
 const iconSpriteBase = '../assets/sprites/icons';
+const mysteryDungeonSpriteBase = '../assets/sprites/mystery-dungeon';
 const typeSpriteBase = '../assets/sprites/types';
 const itemSpriteBase = '../assets/sprites/items';
 const itemSpriteFallback = `${itemSpriteBase}/unknown.png`;
@@ -45,6 +46,8 @@ const countersSortState = {
 let baseStatsMapPromise = null;
 let moveDataMapPromise = null;
 let moveDataMap = null;
+let abilityDataMapPromise = null;
+let abilityDataMap = null;
 let itemNameMapPromise = null;
 let itemNameMap = null;
 
@@ -90,6 +93,7 @@ async function loadPokemonDetail() {
 
     const baseStats = await loadBaseStatsForPokemon(entry.pokemon_name);
     moveDataMap = await loadMoveDataMap();
+    abilityDataMap = await loadAbilityDataMap();
     itemNameMap = await loadItemNameMap();
 
     const detail = document.getElementById('pokemon-detail');
@@ -209,6 +213,23 @@ async function loadItemNameMap() {
     return itemNameMapPromise;
 }
 
+async function loadAbilityDataMap() {
+    if (!abilityDataMapPromise) {
+        abilityDataMapPromise = fetch('../assets/ability-data.json')
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .then(data => (data && data.abilities ? data.abilities : null))
+            .catch(error => {
+                console.error('Error loading ability data:', error);
+                return null;
+            });
+    }
+
+    return abilityDataMapPromise;
+}
+
 function renderBaseStatsSection(title, baseStats) {
     if (!baseStats || typeof baseStats !== 'object') return '';
 
@@ -302,10 +323,15 @@ function renderMapSection(title, map) {
                 ? renderMoveNameCell(key)
                 : title === 'Items'
                     ? renderItemNameCell(key)
+                : title === 'Abilities'
+                    ? renderAbilityNameCell(key)
                 : title === 'Tera Types'
                     ? renderTeraTypeCell(key)
                 : title === 'Teammates'
-                    ? renderPokemonIconNameCell(key)
+                    ? renderPokemonIconNameCell(key, {
+                        spriteBase: mysteryDungeonSpriteBase,
+                        fallbackBase: iconSpriteBase
+                    })
                 : title === 'Spreads'
                     ? escapeHtml(formatSpreadLabel(key))
                 : escapeHtml(key);
@@ -418,22 +444,43 @@ function renderItemNameCell(itemName) {
     `;
 }
 
-function renderPokemonIconNameCell(pokemonName) {
+function renderAbilityNameCell(abilityName) {
+    const abilityInfo = getAbilityDataByName(abilityName);
+    const displayName = abilityInfo && abilityInfo.name ? String(abilityInfo.name) : String(abilityName || 'Unknown');
+    const description = abilityInfo && abilityInfo.description ? String(abilityInfo.description) : '';
+
+    return `
+        <div class="ability-cell">
+            <span class="ability-name">${escapeHtml(displayName)}</span>
+            ${description ? `<div class="ability-description" title="${escapeHtml(description)}">${escapeHtml(description)}</div>` : ''}
+        </div>
+    `;
+}
+
+function renderPokemonIconNameCell(pokemonName, options = {}) {
     const displayName = String(pokemonName || 'Unknown');
+    const spriteBase = options.spriteBase || iconSpriteBase;
+    const fallbackBase = options.fallbackBase || iconSpriteBase;
     const preferredSlug = getPokemonIconSlug(pokemonName, true);
     const fallbackSlug = getPokemonIconSlug(pokemonName, false);
-    const iconSrc = preferredSlug ? `${iconSpriteBase}/${preferredSlug}.png` : '';
-    const fallbackSrc = fallbackSlug && fallbackSlug !== preferredSlug
-        ? `${iconSpriteBase}/${fallbackSlug}.png`
-        : '';
-    const onErrorCode = fallbackSrc
-        ? `this.onerror=null;this.src='${escapeHtml(fallbackSrc)}';`
+    const candidateSources = [
+        preferredSlug ? `${spriteBase}/${preferredSlug}.png` : '',
+        fallbackSlug && fallbackSlug !== preferredSlug ? `${spriteBase}/${fallbackSlug}.png` : '',
+        fallbackBase !== spriteBase && preferredSlug ? `${fallbackBase}/${preferredSlug}.png` : '',
+        fallbackBase !== spriteBase && fallbackSlug && fallbackSlug !== preferredSlug ? `${fallbackBase}/${fallbackSlug}.png` : ''
+    ].filter(Boolean);
+
+    const sources = [...new Set(candidateSources)];
+    const iconSrc = sources[0] || '';
+    const fallbackSources = sources.slice(1).join('|');
+    const onErrorCode = fallbackSources
+        ? "const fallbacks=(this.dataset.fallbacks||'').split('|').filter(Boolean);if(!fallbacks.length){this.onerror=null;this.style.display='none';return;}this.src=fallbacks.shift();this.dataset.fallbacks=fallbacks.join('|');"
         : "this.style.display='none';";
 
     return `
         <div class="pokemon-inline-cell">
             ${iconSrc
-            ? `<img class="pokemon-inline-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(displayName)}" loading="lazy" onerror="${onErrorCode}">`
+            ? `<img class="pokemon-inline-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(displayName)}" loading="lazy" data-fallbacks="${escapeHtml(fallbackSources)}" onerror="${onErrorCode}">`
             : ''}
             <span class="pokemon-inline-name">${escapeHtml(displayName)}</span>
         </div>
@@ -486,6 +533,11 @@ function formatItemNameFromFile(fileName) {
 function getMoveDataByName(moveName) {
     if (!moveDataMap || !moveName) return null;
     return moveDataMap[toId(moveName)] || null;
+}
+
+function getAbilityDataByName(abilityName) {
+    if (!abilityDataMap || !abilityName) return null;
+    return abilityDataMap[toId(abilityName)] || null;
 }
 
 function formatMoveStatValue(value) {

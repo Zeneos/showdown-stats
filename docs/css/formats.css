@@ -395,7 +395,8 @@ tbody tr:hover {
     vertical-align: middle;
 }
 
-.move-cell {
+.move-cell,
+.ability-cell {
     /* Display & Box Model */
     display: flex;
     flex-direction: column;
@@ -478,7 +479,8 @@ tbody tr:hover {
     min-width: 0;
 }
 
-.move-name {
+.move-name,
+.ability-name {
     /* Typography */
     color: #1f2933;
     font-weight: 500;
@@ -491,7 +493,8 @@ tbody tr:hover {
     font-variant-numeric: tabular-nums;
 }
 
-.move-description {
+.move-description,
+.ability-description {
     /* Typography */
     font-size: 0.79em;
     line-height: 1.2;
@@ -1113,6 +1116,14 @@ html[data-theme='dark'] .counters-sort-btn {
     color: #f3f4f6;
 }
 
+html[data-theme='dark'] .ability-name {
+    color: #f3f4f6;
+}
+
+html[data-theme='dark'] .detail-table--counters thead th {
+    color: #f3f4f6;
+}
+
 html[data-theme='dark'] .format-header,
 html[data-theme='dark'] .pokemon-table td,
 html[data-theme='dark'] .pokemon-table th {
@@ -1123,6 +1134,7 @@ html[data-theme='dark'] .format-header p,
 html[data-theme='dark'] .base-stats-bst,
 html[data-theme='dark'] .move-meta,
 html[data-theme='dark'] .move-description,
+html[data-theme='dark'] .ability-description,
 html[data-theme='dark'] .detail-list {
     color: #94a3b8;
 }
