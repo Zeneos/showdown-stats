@@ -467,6 +467,29 @@ tr.pokemon-nav-row:focus-visible {
     object-fit: contain;
 }
 
+@keyframes pokemon-icon-bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+}
+
+.detail-table--counters .pokemon-inline-icon {
+    /* Animation */
+    animation: pokemon-icon-bounce 0.8s linear infinite;
+    will-change: transform;
+}
+
+.detail-table--counters tr.pokemon-nav-row:hover .pokemon-inline-icon,
+.detail-table--counters tr.pokemon-nav-row:focus-visible .pokemon-inline-icon {
+    /* Animation */
+    animation-duration: 0.3s;
+}
+
 .pokemon-inline-name {
     /* Typography */
     color: #1f2933;
