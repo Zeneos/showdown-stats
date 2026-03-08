@@ -117,6 +117,12 @@ async function loadPokemonDetail() {
     const nameEl = document.getElementById('pokemon-name');
     if (nameEl) nameEl.textContent = entry.pokemon_name;
 
+    const typesEl = document.getElementById('pokemon-types');
+    if (typesEl) {
+        const types = baseStats && Array.isArray(baseStats.types) ? baseStats.types : [];
+        typesEl.innerHTML = renderPokemonHeaderTypes(types);
+    }
+
     const formatEl = document.getElementById('pokemon-format');
     if (formatEl) formatEl.textContent = `Format: ${formatName}`;
 
@@ -419,6 +425,24 @@ function renderTeraTypeCell(typeName) {
             <span class="tera-type-name">${escapeHtml(displayName)}</span>
         </div>
     `;
+}
+
+function renderPokemonHeaderTypes(types) {
+    if (!Array.isArray(types) || types.length === 0) return '';
+
+    return types
+        .slice(0, 2)
+        .map(typeName => {
+            const displayName = formatTypeLabel(typeName);
+            const typeSpriteSrc = getTypeSpriteSrc(typeName);
+
+            if (typeSpriteSrc) {
+                return `<img class="pokemon-header-type-sprite" src="${escapeHtml(typeSpriteSrc)}" alt="${escapeHtml(displayName)}" loading="lazy">`;
+            }
+
+            return `<span class="move-type-icon move-type-unknown" aria-label="Type ${escapeHtml(displayName)}">${escapeHtml(displayName)}</span>`;
+        })
+        .join('');
 }
 
 function formatTypeLabel(typeName) {

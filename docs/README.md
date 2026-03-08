@@ -33,7 +33,7 @@ Pokemon sprite assets and Pokemon images used in this project are sourced from:
 
 ## Refreshing Base Stats Data
 
-Pokemon base stats are stored locally in `docs/assets/base-stats.json`.
+Pokemon base stats and types are stored locally in `docs/assets/base-stats.json`.
 
 To regenerate this file from Pokemon Showdown data:
 
@@ -111,3 +111,4 @@ To regenerate these name-based icon files:
 (ur backend stuff), prepare for champions specific stuff for the launch in april
 - fun shiny variations for pokemon sprites/icons/banner art to sometimes load into the site
 - team builder features: better teammate sets for team archetypes, team weakness calculator
+- dynamic stat visualizer: hovering over spreads changes the stats of the pokemon in real time

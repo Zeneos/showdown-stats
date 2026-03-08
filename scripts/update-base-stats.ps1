@@ -31,8 +31,14 @@ foreach ($property in ($pokedex.PSObject.Properties | Sort-Object Name)) {
 
     if (-not $isValid) { continue }
 
+    $types = @()
+    if ($entry.PSObject.Properties.Name -contains 'types' -and $entry.types) {
+        $types = @($entry.types | ForEach-Object { [string]$_ })
+    }
+
     $pokemon[$id] = [ordered]@{
         name = [string]($entry.name)
+        types = $types
         hp = $values[0]
         atk = $values[1]
         def = $values[2]

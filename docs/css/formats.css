@@ -266,6 +266,31 @@ tbody tr:hover {
     object-fit: contain;
 }
 
+.pokemon-name-row {
+    /* Display & Box Model */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pokemon-types-row {
+    /* Display & Box Model */
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pokemon-header-type-sprite {
+    /* Display & Box Model */
+    width: 60px;
+    height: 18px;
+
+    /* Visual */
+    object-fit: contain;
+    image-rendering: auto;
+}
+
 .pokemon-detail-actions {
     /* Display & Box Model */
     display: flex;

@@ -25,9 +25,11 @@ async function main() {
     const { hp, atk, def, spa, spd, spe } = entry.baseStats;
     const values = [hp, atk, def, spa, spd, spe].map(Number);
     if (values.some(Number.isNaN)) continue;
+    const types = Array.isArray(entry.types) ? entry.types.map(type => String(type)) : [];
 
     pokemon[id] = {
       name: String(entry.name || id),
+      types,
       hp: values[0],
       atk: values[1],
       def: values[2],
