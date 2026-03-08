@@ -432,6 +432,30 @@ tbody tr:hover {
     gap: 8px;
 }
 
+.pokemon-inline-link,
+.pokemon-inline-link:visited {
+    /* Typography */
+    color: inherit;
+    text-decoration: none;
+}
+
+.pokemon-inline-link:hover .pokemon-inline-name,
+.pokemon-inline-link:focus-visible .pokemon-inline-name {
+    /* Typography */
+    text-decoration: underline;
+}
+
+tr.pokemon-nav-row {
+    /* Visual */
+    cursor: pointer;
+}
+
+tr.pokemon-nav-row:focus-visible {
+    /* Visual */
+    outline: 2px solid #3b82f6;
+    outline-offset: -2px;
+}
+
 .pokemon-inline-icon {
     /* Display & Box Model */
     width: 40px;

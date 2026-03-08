@@ -154,6 +154,7 @@ async function loadPokemonDetail() {
         .join('');
 
     attachCountersSortHandlers(entry.counters_json);
+    attachPokemonRowNavigationHandlers();
 }
 
 async function loadBaseStatsForPokemon(pokemonName) {
@@ -318,6 +319,10 @@ function renderMapSection(title, map) {
         .map(([key, value]) => {
             const percentage = total > 0 ? (value / total) * 100 : 0;
             if (roundsToDisplayedZero(percentage)) return '';
+            const rowHref = title === 'Teammates' ? getPokemonDetailHref(key) : '';
+            const rowAttrs = rowHref
+                ? ` class="pokemon-nav-row" data-href="${escapeHtml(rowHref)}" tabindex="0" role="link" aria-label="View ${escapeHtml(String(key || 'Pokemon'))} details"`
+                : '';
 
             const firstCell = title === 'Moves'
                 ? renderMoveNameCell(key)
@@ -337,7 +342,7 @@ function renderMapSection(title, map) {
                 : escapeHtml(key);
 
             return `
-            <tr>
+            <tr${rowAttrs}>
                 <td>${firstCell}</td>
                 <td class="detail-value">${percentage.toFixed(2)}%</td>
             </tr>
@@ -459,6 +464,7 @@ function renderAbilityNameCell(abilityName) {
 
 function renderPokemonIconNameCell(pokemonName, options = {}) {
     const displayName = String(pokemonName || 'Unknown');
+    const href = getPokemonDetailHref(pokemonName);
     const spriteBase = options.spriteBase || iconSpriteBase;
     const fallbackBase = options.fallbackBase || iconSpriteBase;
     const preferredSlug = getPokemonIconSlug(pokemonName, true);
@@ -478,13 +484,30 @@ function renderPokemonIconNameCell(pokemonName, options = {}) {
         : "this.style.display='none';";
 
     return `
-        <div class="pokemon-inline-cell">
+        <a class="pokemon-inline-cell pokemon-inline-link" href="${escapeHtml(href)}" aria-label="View ${escapeHtml(displayName)} details">
             ${iconSrc
             ? `<img class="pokemon-inline-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(displayName)}" loading="lazy" data-fallbacks="${escapeHtml(fallbackSources)}" onerror="${onErrorCode}">`
             : ''}
             <span class="pokemon-inline-name">${escapeHtml(displayName)}</span>
-        </div>
+        </a>
     `;
+}
+
+function getPokemonDetailHref(pokemonName) {
+    const name = String(pokemonName || '').trim();
+    if (!name) return window.location.pathname || 'pokemon.html';
+
+    const currentParams = new URLSearchParams(window.location.search);
+    const nextParams = new URLSearchParams();
+    const format = currentParams.get('format');
+    const rating = currentParams.get('rating');
+
+    if (format) nextParams.set('format', format);
+    nextParams.set('pokemon', name);
+    if (rating && rating !== 'all') nextParams.set('rating', rating);
+
+    const path = window.location.pathname || 'pokemon.html';
+    return `${path}?${nextParams.toString()}`;
 }
 
 function getPokemonIconSlug(pokemonName, preferRegionalAdjective) {
@@ -610,9 +633,10 @@ function renderCountersSection(title, counters, sortState) {
             const ratePct = rate * 100;
             const countPct = totalCount > 0 ? (count / totalCount) * 100 : 0;
             if (roundsToDisplayedZero(ratePct) || roundsToDisplayedZero(countPct)) return '';
+            const rowHref = getPokemonDetailHref(name);
 
             return `
-            <tr>
+            <tr class="pokemon-nav-row" data-href="${escapeHtml(rowHref)}" tabindex="0" role="link" aria-label="View ${escapeHtml(String(name || 'Pokemon'))} details">
                 <td>${renderPokemonIconNameCell(name)}</td>
                 <td class="detail-value">${ratePct.toFixed(2)}%</td>
                 <td class="detail-value">${countPct.toFixed(2)}%</td>
@@ -664,6 +688,33 @@ function attachCountersSortHandlers(counters) {
             if (!section) return;
             section.outerHTML = renderCountersSection('Checks and Counters', counters, countersSortState);
             attachCountersSortHandlers(counters);
+            attachPokemonRowNavigationHandlers();
+        });
+    });
+}
+
+function attachPokemonRowNavigationHandlers() {
+    const rows = document.querySelectorAll('tr.pokemon-nav-row[data-href]');
+    rows.forEach(row => {
+        if (row.dataset.navBound === '1') return;
+        row.dataset.navBound = '1';
+
+        const navigate = () => {
+            const href = row.dataset.href;
+            if (!href) return;
+            window.location.href = href;
+        };
+
+        row.addEventListener('click', event => {
+            if (event.target && event.target.closest('a, button')) return;
+            navigate();
+        });
+
+        row.addEventListener('keydown', event => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                navigate();
+            }
         });
     });
 }
