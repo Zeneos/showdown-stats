@@ -1,0 +1,1301 @@
+{
+  "format_name": "gen1ubers",
+  "elo_cutoff": 0,
+  "pokemon": [
+    {
+      "pokemon_name": "Alakazam",
+      "usage_count": 13,
+      "usage_pct": 15.15,
+      "viability_json": [
+        3,
+        60,
+        60,
+        60
+      ],
+      "abilities_json": {
+        "noability": 13.0
+      },
+      "items_json": {
+        "nothing": 13.0
+      },
+      "spreads_json": {
+        "Serious:252/0/252/252/252/252": 12.0,
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "seismictoss": 10.0,
+        "thunderwave": 13.0,
+        "recover": 13.0,
+        "psychic": 13.0,
+        "counter": 2.0,
+        "kinesis": 1.0
+      },
+      "tera_json": {
+        "nothing": 13.0
+      },
+      "happiness_json": {
+        "255": 13.0
+      },
+      "teammates_json": {
+        "Exeggutor": 8.0,
+        "Mew": 8.0,
+        "Mewtwo": 8.0,
+        "Slowbro": 7.0,
+        "Tauros": 7.0,
+        "Rhydon": 2.0,
+        "Dugtrio": 2.0,
+        "Persian": 2.0,
+        "Gengar": 2.0,
+        "Tentacruel": 2.0,
+        "Jynx": 1.0,
+        "Snorlax": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Articuno",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        75,
+        75,
+        75
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "agility": 1.0,
+        "blizzard": 1.0,
+        "reflect": 1.0,
+        "hyperbeam": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Jynx": 1.0,
+        "Mewtwo": 1.0,
+        "Mew": 1.0,
+        "Tauros": 1.0,
+        "Exeggutor": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Bulbasaur",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "razorleaf": 1.0,
+        "sleeppowder": 1.0,
+        "leechseed": 1.0,
+        "solarbeam": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Charizard": 1.0,
+        "Butterfree": 1.0,
+        "Pikachu": 1.0,
+        "Squirtle": 1.0,
+        "Pidgeotto": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Butterfree",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "sleeppowder": 1.0,
+        "megadrain": 1.0,
+        "psychic": 1.0,
+        "reflect": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Charizard": 1.0,
+        "Bulbasaur": 1.0,
+        "Pikachu": 1.0,
+        "Squirtle": 1.0,
+        "Pidgeotto": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Chansey",
+      "usage_count": 18,
+      "usage_pct": 24.24,
+      "viability_json": [
+        14,
+        70,
+        70,
+        68
+      ],
+      "abilities_json": {
+        "noability": 18.0
+      },
+      "items_json": {
+        "nothing": 18.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/48": 1.0,
+        "Serious:252/252/252/252/252/252": 14.0,
+        "Serious:252/0/252/252/252/252": 3.0
+      },
+      "moves_json": {
+        "lightscreen": 2.0,
+        "icebeam": 12.0,
+        "thunderwave": 14.0,
+        "hyperbeam": 1.0,
+        "sing": 10.0,
+        "seismictoss": 8.0,
+        "softboiled": 17.0,
+        "counter": 3.0,
+        "psychic": 1.0,
+        "reflect": 2.0,
+        "thunderbolt": 2.0
+      },
+      "tera_json": {
+        "nothing": 18.0
+      },
+      "happiness_json": {
+        "255": 18.0
+      },
+      "teammates_json": {
+        "Tauros": 13.0,
+        "Mewtwo": 16.0,
+        "Mew": 14.0,
+        "Snorlax": 13.0,
+        "Exeggutor": 12.0,
+        "Gengar": 4.0,
+        "Electrode": 3.0,
+        "Jynx": 2.0,
+        "Rhydon": 2.0,
+        "Zapdos": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Charizard",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "flamethrower": 1.0,
+        "seismictoss": 1.0,
+        "swordsdance": 1.0,
+        "earthquake": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Bulbasaur": 1.0,
+        "Butterfree": 1.0,
+        "Pikachu": 1.0,
+        "Squirtle": 1.0,
+        "Pidgeotto": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cloyster",
+      "usage_count": 19,
+      "usage_pct": 28.79,
+      "viability_json": [
+        3,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "noability": 19.0
+      },
+      "items_json": {
+        "nothing": 19.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 19.0
+      },
+      "moves_json": {
+        "blizzard": 17.0,
+        "rest": 18.0,
+        "clamp": 19.0,
+        "explosion": 19.0,
+        "hyperbeam": 1.0,
+        "icebeam": 2.0
+      },
+      "tera_json": {
+        "nothing": 19.0
+      },
+      "happiness_json": {
+        "255": 19.0
+      },
+      "teammates_json": {
+        "Gengar": 17.0,
+        "Exeggutor": 17.0,
+        "Mew": 19.0,
+        "Mewtwo": 19.0,
+        "Snorlax": 18.0,
+        "Tauros": 3.0,
+        "Jynx": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Dodrio",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "bodyslam": 1.0,
+        "drillpeck": 1.0,
+        "hyperbeam": 1.0,
+        "toxic": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Mewtwo": 1.0,
+        "Rhydon": 1.0,
+        "Gengar": 1.0,
+        "Snorlax": 1.0,
+        "Lapras": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Dugtrio",
+      "usage_count": 2,
+      "usage_pct": 3.03,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "noability": 2.0
+      },
+      "items_json": {
+        "nothing": 2.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 2.0
+      },
+      "moves_json": {
+        "earthquake": 2.0,
+        "slash": 2.0,
+        "rockslide": 2.0,
+        "hyperbeam": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Rhydon": 2.0,
+        "Alakazam": 2.0,
+        "Persian": 2.0,
+        "Gengar": 2.0,
+        "Tentacruel": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Electrode",
+      "usage_count": 3,
+      "usage_pct": 4.55,
+      "viability_json": [
+        2,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "noability": 3.0
+      },
+      "items_json": {
+        "nothing": 3.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 3.0
+      },
+      "moves_json": {
+        "thunderwave": 3.0,
+        "thunderbolt": 3.0,
+        "explosion": 3.0,
+        "toxic": 1.0,
+        "flash": 2.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Chansey": 3.0,
+        "Mewtwo": 3.0,
+        "Mew": 1.0,
+        "Tauros": 3.0,
+        "Snorlax": 1.0,
+        "Jynx": 2.0,
+        "Rhydon": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Exeggutor",
+      "usage_count": 60,
+      "usage_pct": 83.33,
+      "viability_json": [
+        21,
+        76,
+        76,
+        65
+      ],
+      "abilities_json": {
+        "noability": 60.0
+      },
+      "items_json": {
+        "nothing": 60.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 60.0
+      },
+      "moves_json": {
+        "psychic": 59.0,
+        "sleeppowder": 60.0,
+        "stunspore": 57.0,
+        "explosion": 60.0,
+        "megadrain": 1.0,
+        "toxic": 1.0,
+        "doubleedge": 2.0
+      },
+      "tera_json": {
+        "nothing": 60.0
+      },
+      "happiness_json": {
+        "255": 60.0
+      },
+      "teammates_json": {
+        "Zapdos": 13.0,
+        "Mew": 55.0,
+        "Mewtwo": 55.0,
+        "Persian": 8.0,
+        "Tauros": 36.0,
+        "Gengar": 21.0,
+        "Snorlax": 31.0,
+        "Cloyster": 17.0,
+        "Chansey": 12.0,
+        "Alakazam": 8.0,
+        "Slowbro": 12.0,
+        "Jynx": 5.0,
+        "Articuno": 1.0,
+        "Rhydon": 1.0
+      },
+      "counters_json": {
+        "Mewtwo": [
+          25.0,
+          0.64,
+          0.096
+        ],
+        "Exeggutor": [
+          36.0,
+          0.3888888888888889,
+          0.08124967025363077
+        ]
+      }
+    },
+    {
+      "pokemon_name": "Gengar",
+      "usage_count": 26,
+      "usage_pct": 37.88,
+      "viability_json": [
+        9,
+        70,
+        70,
+        69
+      ],
+      "abilities_json": {
+        "noability": 26.0
+      },
+      "items_json": {
+        "nothing": 26.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 23.0,
+        "Serious:252/0/252/252/252/252": 3.0
+      },
+      "moves_json": {
+        "hypnosis": 24.0,
+        "explosion": 22.0,
+        "thunderbolt": 24.0,
+        "nightshade": 21.0,
+        "confuseray": 2.0,
+        "megadrain": 3.0,
+        "psychic": 5.0,
+        "substitute": 2.0,
+        "toxic": 1.0
+      },
+      "tera_json": {
+        "nothing": 26.0
+      },
+      "happiness_json": {
+        "255": 26.0
+      },
+      "teammates_json": {
+        "Exeggutor": 21.0,
+        "Mew": 22.0,
+        "Mewtwo": 23.0,
+        "Snorlax": 20.0,
+        "Cloyster": 17.0,
+        "Tauros": 3.0,
+        "Rhydon": 3.0,
+        "Dugtrio": 2.0,
+        "Alakazam": 2.0,
+        "Persian": 2.0,
+        "Tentacruel": 2.0,
+        "Zapdos": 2.0,
+        "Lapras": 1.0,
+        "Dodrio": 1.0,
+        "Chansey": 4.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Jynx",
+      "usage_count": 10,
+      "usage_pct": 15.15,
+      "viability_json": [
+        6,
+        76,
+        76,
+        74
+      ],
+      "abilities_json": {
+        "noability": 10.0
+      },
+      "items_json": {
+        "nothing": 10.0
+      },
+      "spreads_json": {
+        "Serious:252/252/196/252/252/252": 1.0,
+        "Serious:252/252/252/252/252/252": 9.0
+      },
+      "moves_json": {
+        "lovelykiss": 10.0,
+        "blizzard": 10.0,
+        "bodyslam": 2.0,
+        "counter": 8.0,
+        "psychic": 7.0,
+        "rest": 3.0
+      },
+      "tera_json": {
+        "nothing": 10.0
+      },
+      "happiness_json": {
+        "255": 10.0
+      },
+      "teammates_json": {
+        "Mewtwo": 10.0,
+        "Mew": 8.0,
+        "Tauros": 9.0,
+        "Exeggutor": 5.0,
+        "Articuno": 1.0,
+        "Snorlax": 4.0,
+        "Slowbro": 1.0,
+        "Cloyster": 2.0,
+        "Alakazam": 1.0,
+        "Electrode": 2.0,
+        "Chansey": 2.0,
+        "Rhydon": 3.0,
+        "Zapdos": 1.0,
+        "Starmie": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Lapras",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/0/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "surf": 1.0,
+        "blizzard": 1.0,
+        "thunderbolt": 1.0,
+        "psychic": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Mewtwo": 1.0,
+        "Rhydon": 1.0,
+        "Gengar": 1.0,
+        "Snorlax": 1.0,
+        "Dodrio": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Mew",
+      "usage_count": 66,
+      "usage_pct": 90.91,
+      "viability_json": [
+        26,
+        76,
+        76,
+        68
+      ],
+      "abilities_json": {
+        "noability": 66.0
+      },
+      "items_json": {
+        "nothing": 66.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 66.0
+      },
+      "moves_json": {
+        "thunderwave": 19.0,
+        "swordsdance": 62.0,
+        "earthquake": 58.0,
+        "explosion": 22.0,
+        "bodyslam": 27.0,
+        "softboiled": 49.0,
+        "hyperbeam": 14.0,
+        "psychic": 2.0,
+        "reflect": 6.0,
+        "transform": 3.0,
+        "selfdestruct": 2.0
+      },
+      "tera_json": {
+        "nothing": 66.0
+      },
+      "happiness_json": {
+        "255": 66.0
+      },
+      "teammates_json": {
+        "Zapdos": 14.0,
+        "Exeggutor": 55.0,
+        "Mewtwo": 60.0,
+        "Persian": 8.0,
+        "Tauros": 40.0,
+        "Gengar": 22.0,
+        "Snorlax": 35.0,
+        "Cloyster": 19.0,
+        "Chansey": 14.0,
+        "Alakazam": 8.0,
+        "Slowbro": 12.0,
+        "Jynx": 8.0,
+        "Articuno": 1.0,
+        "Rhydon": 2.0,
+        "Electrode": 1.0,
+        "Starmie": 1.0
+      },
+      "counters_json": {
+        "Mewtwo": [
+          33.0,
+          0.3333333333333333,
+          0.08206099398622183
+        ],
+        "Mew": [
+          28.0,
+          0.39285714285714285,
+          0.09229618630166095
+        ]
+      }
+    },
+    {
+      "pokemon_name": "Mewtwo",
+      "usage_count": 69,
+      "usage_pct": 95.45,
+      "viability_json": [
+        28,
+        76,
+        76,
+        68
+      ],
+      "abilities_json": {
+        "noability": 69.0
+      },
+      "items_json": {
+        "nothing": 69.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 55.0,
+        "Serious:252/0/252/252/252/252": 14.0
+      },
+      "moves_json": {
+        "amnesia": 33.0,
+        "icebeam": 25.0,
+        "psychic": 55.0,
+        "recover": 43.0,
+        "selfdestruct": 24.0,
+        "blizzard": 37.0,
+        "thunderwave": 35.0,
+        "thunderbolt": 14.0,
+        "barrier": 3.0,
+        "fireblast": 1.0,
+        "bodyslam": 1.0,
+        "substitute": 2.0,
+        "rest": 2.0,
+        "thunder": 1.0
+      },
+      "tera_json": {
+        "nothing": 69.0
+      },
+      "happiness_json": {
+        "255": 69.0
+      },
+      "teammates_json": {
+        "Zapdos": 14.0,
+        "Exeggutor": 55.0,
+        "Mew": 60.0,
+        "Persian": 8.0,
+        "Tauros": 42.0,
+        "Gengar": 23.0,
+        "Snorlax": 36.0,
+        "Cloyster": 19.0,
+        "Chansey": 16.0,
+        "Alakazam": 8.0,
+        "Slowbro": 12.0,
+        "Jynx": 10.0,
+        "Articuno": 1.0,
+        "Rhydon": 5.0,
+        "Lapras": 1.0,
+        "Dodrio": 1.0,
+        "Electrode": 3.0,
+        "Starmie": 1.0
+      },
+      "counters_json": {
+        "Exeggutor": [
+          25.0,
+          0.2,
+          0.08
+        ],
+        "Mew": [
+          33.0,
+          0.45454545454545453,
+          0.08667841720414475
+        ],
+        "Mewtwo": [
+          38.0,
+          0.47368421052631576,
+          0.08099829095409113
+        ]
+      }
+    },
+    {
+      "pokemon_name": "Persian",
+      "usage_count": 11,
+      "usage_pct": 15.15,
+      "viability_json": [
+        2,
+        54,
+        54,
+        54
+      ],
+      "abilities_json": {
+        "noability": 11.0
+      },
+      "items_json": {
+        "nothing": 11.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 11.0
+      },
+      "moves_json": {
+        "thunderbolt": 9.0,
+        "slash": 11.0,
+        "bubblebeam": 11.0,
+        "mimic": 9.0,
+        "hyperbeam": 2.0,
+        "thunder": 2.0
+      },
+      "tera_json": {
+        "nothing": 11.0
+      },
+      "happiness_json": {
+        "255": 11.0
+      },
+      "teammates_json": {
+        "Zapdos": 8.0,
+        "Exeggutor": 8.0,
+        "Mew": 8.0,
+        "Mewtwo": 8.0,
+        "Tauros": 8.0,
+        "Rhydon": 2.0,
+        "Dugtrio": 2.0,
+        "Alakazam": 2.0,
+        "Gengar": 2.0,
+        "Tentacruel": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Pidgeotto",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "mirrormove": 1.0,
+        "quickattack": 1.0,
+        "skyattack": 1.0,
+        "wingattack": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Charizard": 1.0,
+        "Bulbasaur": 1.0,
+        "Butterfree": 1.0,
+        "Pikachu": 1.0,
+        "Squirtle": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Pikachu",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "quickattack": 1.0,
+        "thunderbolt": 1.0,
+        "surf": 1.0,
+        "thunderwave": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Charizard": 1.0,
+        "Bulbasaur": 1.0,
+        "Butterfree": 1.0,
+        "Squirtle": 1.0,
+        "Pidgeotto": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Rhydon",
+      "usage_count": 7,
+      "usage_pct": 10.61,
+      "viability_json": [
+        5,
+        70,
+        70,
+        70
+      ],
+      "abilities_json": {
+        "noability": 7.0
+      },
+      "items_json": {
+        "nothing": 7.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 7.0
+      },
+      "moves_json": {
+        "earthquake": 7.0,
+        "bodyslam": 7.0,
+        "substitute": 4.0,
+        "rockslide": 6.0,
+        "hyperbeam": 2.0,
+        "submission": 1.0,
+        "tailwhip": 1.0
+      },
+      "tera_json": {
+        "nothing": 7.0
+      },
+      "happiness_json": {
+        "255": 7.0
+      },
+      "teammates_json": {
+        "Tauros": 4.0,
+        "Snorlax": 2.0,
+        "Mewtwo": 5.0,
+        "Mew": 2.0,
+        "Exeggutor": 1.0,
+        "Dugtrio": 2.0,
+        "Alakazam": 2.0,
+        "Persian": 2.0,
+        "Gengar": 3.0,
+        "Tentacruel": 2.0,
+        "Lapras": 1.0,
+        "Dodrio": 1.0,
+        "Electrode": 2.0,
+        "Jynx": 3.0,
+        "Chansey": 2.0,
+        "Starmie": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Slowbro",
+      "usage_count": 16,
+      "usage_pct": 18.18,
+      "viability_json": [
+        5,
+        76,
+        76,
+        76
+      ],
+      "abilities_json": {
+        "noability": 16.0
+      },
+      "items_json": {
+        "nothing": 16.0
+      },
+      "spreads_json": {
+        "Serious:252/0/252/252/252/252": 10.0,
+        "Serious:252/252/252/252/252/252": 6.0
+      },
+      "moves_json": {
+        "surf": 16.0,
+        "amnesia": 16.0,
+        "rest": 16.0,
+        "psychic": 10.0,
+        "thunderwave": 6.0
+      },
+      "tera_json": {
+        "nothing": 16.0
+      },
+      "happiness_json": {
+        "255": 16.0
+      },
+      "teammates_json": {
+        "Alakazam": 7.0,
+        "Exeggutor": 12.0,
+        "Mew": 12.0,
+        "Mewtwo": 12.0,
+        "Tauros": 12.0,
+        "Jynx": 1.0,
+        "Snorlax": 1.0,
+        "Zapdos": 3.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Snorlax",
+      "usage_count": 38,
+      "usage_pct": 54.55,
+      "viability_json": [
+        19,
+        74,
+        74,
+        69
+      ],
+      "abilities_json": {
+        "noability": 38.0
+      },
+      "items_json": {
+        "nothing": 38.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 38.0
+      },
+      "moves_json": {
+        "hyperbeam": 33.0,
+        "earthquake": 33.0,
+        "bodyslam": 38.0,
+        "selfdestruct": 38.0,
+        "rest": 1.0,
+        "reflect": 3.0,
+        "rockslide": 1.0,
+        "counter": 1.0,
+        "surf": 1.0,
+        "headbutt": 1.0,
+        "blizzard": 2.0
+      },
+      "tera_json": {
+        "nothing": 38.0
+      },
+      "happiness_json": {
+        "255": 38.0
+      },
+      "teammates_json": {
+        "Gengar": 20.0,
+        "Exeggutor": 31.0,
+        "Mew": 35.0,
+        "Mewtwo": 36.0,
+        "Cloyster": 18.0,
+        "Tauros": 15.0,
+        "Chansey": 13.0,
+        "Rhydon": 2.0,
+        "Jynx": 4.0,
+        "Lapras": 1.0,
+        "Dodrio": 1.0,
+        "Slowbro": 1.0,
+        "Alakazam": 1.0,
+        "Electrode": 1.0,
+        "Zapdos": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Squirtle",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "icebeam": 1.0,
+        "hydropump": 1.0,
+        "substitute": 1.0,
+        "skullbash": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Charizard": 1.0,
+        "Bulbasaur": 1.0,
+        "Butterfree": 1.0,
+        "Pikachu": 1.0,
+        "Pidgeotto": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Starmie",
+      "usage_count": 1,
+      "usage_pct": 1.52,
+      "viability_json": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "abilities_json": {
+        "noability": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 1.0
+      },
+      "moves_json": {
+        "thunderwave": 1.0,
+        "surf": 1.0,
+        "blizzard": 1.0,
+        "recover": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Jynx": 1.0,
+        "Mewtwo": 1.0,
+        "Mew": 1.0,
+        "Tauros": 1.0,
+        "Rhydon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tauros",
+      "usage_count": 47,
+      "usage_pct": 63.64,
+      "viability_json": [
+        23,
+        76,
+        76,
+        67
+      ],
+      "abilities_json": {
+        "noability": 47.0
+      },
+      "items_json": {
+        "nothing": 47.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 47.0
+      },
+      "moves_json": {
+        "blizzard": 28.0,
+        "bodyslam": 46.0,
+        "earthquake": 43.0,
+        "hyperbeam": 47.0,
+        "stomp": 6.0,
+        "thunderbolt": 15.0,
+        "leer": 2.0,
+        "icebeam": 1.0
+      },
+      "tera_json": {
+        "nothing": 47.0
+      },
+      "happiness_json": {
+        "255": 47.0
+      },
+      "teammates_json": {
+        "Zapdos": 13.0,
+        "Exeggutor": 36.0,
+        "Mew": 40.0,
+        "Mewtwo": 42.0,
+        "Persian": 8.0,
+        "Chansey": 13.0,
+        "Snorlax": 15.0,
+        "Alakazam": 7.0,
+        "Slowbro": 12.0,
+        "Jynx": 9.0,
+        "Articuno": 1.0,
+        "Rhydon": 4.0,
+        "Gengar": 3.0,
+        "Cloyster": 3.0,
+        "Electrode": 3.0,
+        "Starmie": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tentacruel",
+      "usage_count": 2,
+      "usage_pct": 3.03,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "noability": 2.0
+      },
+      "items_json": {
+        "nothing": 2.0
+      },
+      "spreads_json": {
+        "Serious:252/0/252/252/252/252": 2.0
+      },
+      "moves_json": {
+        "blizzard": 2.0,
+        "surf": 2.0,
+        "barrier": 2.0,
+        "icebeam": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Rhydon": 2.0,
+        "Dugtrio": 2.0,
+        "Alakazam": 2.0,
+        "Persian": 2.0,
+        "Gengar": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Zapdos",
+      "usage_count": 15,
+      "usage_pct": 21.21,
+      "viability_json": [
+        5,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "noability": 15.0
+      },
+      "items_json": {
+        "nothing": 15.0
+      },
+      "spreads_json": {
+        "Serious:252/252/252/252/252/252": 15.0
+      },
+      "moves_json": {
+        "thunderwave": 15.0,
+        "drillpeck": 15.0,
+        "thunderbolt": 15.0,
+        "agility": 12.0,
+        "hyperbeam": 3.0
+      },
+      "tera_json": {
+        "nothing": 15.0
+      },
+      "happiness_json": {
+        "255": 15.0
+      },
+      "teammates_json": {
+        "Exeggutor": 13.0,
+        "Mew": 14.0,
+        "Mewtwo": 14.0,
+        "Persian": 8.0,
+        "Tauros": 13.0,
+        "Gengar": 2.0,
+        "Snorlax": 1.0,
+        "Chansey": 1.0,
+        "Slowbro": 3.0,
+        "Jynx": 1.0
+      },
+      "counters_json": {}
+    }
+  ]
+}

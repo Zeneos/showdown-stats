@@ -1,0 +1,3592 @@
+{
+  "format_name": "gen5lc",
+  "elo_cutoff": 0,
+  "pokemon": [
+    {
+      "pokemon_name": "Abra",
+      "usage_count": 21,
+      "usage_pct": 32.76,
+      "viability_json": [
+        12,
+        70,
+        70,
+        61
+      ],
+      "abilities_json": {
+        "magicguard": 20.0,
+        "innerfocus": 1.0
+      },
+      "items_json": {
+        "focussash": 18.0,
+        "lifeorb": 3.0
+      },
+      "spreads_json": {
+        "Modest:76/0/0/236/0/196": 1.0,
+        "Timid:0/36/0/240/0/200": 4.0,
+        "Timid:0/0/0/240/0/200": 8.0,
+        "Timid:0/0/0/236/76/196": 6.0,
+        "Timid:0/0/68/240/0/200": 1.0,
+        "Modest:0/0/0/252/0/250": 1.0
+      },
+      "moves_json": {
+        "psychic": 21.0,
+        "hiddenpowerfire": 5.0,
+        "reflect": 1.0,
+        "lightscreen": 1.0,
+        "knockoff": 6.0,
+        "hiddenpowerfighting": 12.0,
+        "shadowball": 14.0,
+        "encore": 5.0,
+        "chargebeam": 4.0,
+        "hiddenpowerice": 1.0,
+        "protect": 10.0,
+        "energyball": 3.0,
+        "hiddenpowerelectric": 1.0
+      },
+      "tera_json": {
+        "nothing": 21.0
+      },
+      "happiness_json": {
+        "255": 21.0
+      },
+      "teammates_json": {
+        "Chinchou": 1.0,
+        "Ferroseed": 4.0,
+        "Clamperl": 2.0,
+        "Timburr": 1.0,
+        "Larvesta": 1.0,
+        "Diglett": 6.0,
+        "Carvanha": 4.0,
+        "Gastly": 11.0,
+        "Deino": 1.0,
+        "Elekid": 1.0,
+        "Mienfoo": 8.0,
+        "Vullaby": 2.0,
+        "Lickitung": 3.0,
+        "Hippopotas": 1.0,
+        "Houndour": 1.0,
+        "Frillish": 3.0,
+        "Cranidos": 1.0,
+        "Staryu": 3.0,
+        "Porygon": 7.0,
+        "Magnemite": 3.0,
+        "Onix": 4.0,
+        "Axew": 4.0,
+        "Doduo": 2.0,
+        "Trubbish": 1.0,
+        "Duskull": 1.0,
+        "Dwebble": 2.0,
+        "Tentacool": 1.0,
+        "Voltorb": 1.0,
+        "Pawniard": 1.0,
+        "Geodude": 1.0,
+        "Snover": 2.0,
+        "Drilbur": 2.0,
+        "Drifloon": 2.0,
+        "Omanyte": 1.0,
+        "Munchlax": 1.0,
+        "Cottonee": 1.0,
+        "Slowpoke": 1.0,
+        "Archen": 1.0,
+        "Anorith": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Anorith",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        1,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "battlearmor": 2.0
+      },
+      "items_json": {
+        "eviolite": 2.0
+      },
+      "spreads_json": {
+        "Impish:76/0/116/0/196/76": 2.0
+      },
+      "moves_json": {
+        "rapidspin": 2.0,
+        "stealthrock": 2.0,
+        "xscissor": 2.0,
+        "knockoff": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Mienfoo": 2.0,
+        "Carvanha": 2.0,
+        "Abra": 2.0,
+        "Gastly": 2.0,
+        "Lickitung": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Archen",
+      "usage_count": 4,
+      "usage_pct": 6.9,
+      "viability_json": [
+        3,
+        46,
+        46,
+        46
+      ],
+      "abilities_json": {
+        "defeatist": 4.0
+      },
+      "items_json": {
+        "flyinggem": 3.0,
+        "focussash": 1.0
+      },
+      "spreads_json": {
+        "Jolly:76/180/0/0/0/196": 3.0,
+        "Jolly:0/252/0/0/0/252": 1.0
+      },
+      "moves_json": {
+        "acrobatics": 4.0,
+        "earthquake": 3.0,
+        "stealthrock": 2.0,
+        "roost": 3.0,
+        "stoneedge": 1.0,
+        "aquatail": 1.0,
+        "dragonclaw": 1.0,
+        "rockslide": 1.0
+      },
+      "tera_json": {
+        "nothing": 4.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Porygon": 2.0,
+        "Staryu": 2.0,
+        "Mienfoo": 3.0,
+        "Diglett": 3.0,
+        "Gastly": 2.0,
+        "Cottonee": 1.0,
+        "Voltorb": 1.0,
+        "Munchlax": 1.0,
+        "Pawniard": 1.0,
+        "Abra": 1.0,
+        "Ferroseed": 1.0,
+        "Slowpoke": 1.0,
+        "Axew": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Aron",
+      "usage_count": 4,
+      "usage_pct": 5.17,
+      "viability_json": [
+        2,
+        71,
+        71,
+        71
+      ],
+      "abilities_json": {
+        "rockhead": 3.0,
+        "sturdy": 1.0
+      },
+      "items_json": {
+        "lifeorb": 3.0,
+        "liechiberry": 1.0
+      },
+      "spreads_json": {
+        "Jolly:36/196/36/0/36/196": 2.0,
+        "Jolly:0/196/0/0/116/196": 2.0
+      },
+      "moves_json": {
+        "headsmash": 3.0,
+        "earthquake": 4.0,
+        "ironhead": 4.0,
+        "rockpolish": 3.0,
+        "rockslide": 1.0,
+        "autotomize": 1.0
+      },
+      "tera_json": {
+        "nothing": 4.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Buneary": 1.0,
+        "Woobat": 1.0,
+        "Dratini": 1.0,
+        "Dwebble": 2.0,
+        "Swinub": 1.0,
+        "Treecko": 1.0,
+        "Onix": 1.0,
+        "Pansage": 1.0,
+        "Wailmer": 1.0,
+        "Riolu": 1.0,
+        "Geodude": 1.0,
+        "Tirtouga": 1.0,
+        "Pineco": 1.0,
+        "Magnemite": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Axew",
+      "usage_count": 5,
+      "usage_pct": 6.9,
+      "viability_json": [
+        3,
+        70,
+        70,
+        70
+      ],
+      "abilities_json": {
+        "moldbreaker": 5.0
+      },
+      "items_json": {
+        "choicescarf": 4.0,
+        "lifeorb": 1.0
+      },
+      "spreads_json": {
+        "Jolly:68/220/0/0/0/220": 4.0,
+        "Serious:0/252/0/0/0/252": 1.0
+      },
+      "moves_json": {
+        "aquatail": 4.0,
+        "superpower": 5.0,
+        "dualchop": 4.0,
+        "outrage": 4.0,
+        "xscissor": 1.0,
+        "dragonclaw": 1.0,
+        "poisonjab": 1.0
+      },
+      "tera_json": {
+        "nothing": 5.0
+      },
+      "happiness_json": {
+        "255": 5.0
+      },
+      "teammates_json": {
+        "Porygon": 3.0,
+        "Magnemite": 3.0,
+        "Onix": 3.0,
+        "Abra": 4.0,
+        "Gastly": 3.0,
+        "Diglett": 1.0,
+        "Ferroseed": 1.0,
+        "Slowpoke": 1.0,
+        "Archen": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Bronzor",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "levitate": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Bold:140/0/148/84/68/12": 1.0
+      },
+      "moves_json": {
+        "calmmind": 1.0,
+        "rest": 1.0,
+        "sleeptalk": 1.0,
+        "psychic": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Diglett": 1.0,
+        "Snover": 1.0,
+        "Frillish": 1.0,
+        "Vullaby": 1.0,
+        "Magnemite": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Buneary",
+      "usage_count": 10,
+      "usage_pct": 15.52,
+      "viability_json": [
+        2,
+        70,
+        70,
+        70
+      ],
+      "abilities_json": {
+        "limber": 9.0,
+        "klutz": 1.0
+      },
+      "items_json": {
+        "lifeorb": 9.0,
+        "flameorb": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/228/4/0/0/236": 10.0
+      },
+      "moves_json": {
+        "fakeout": 10.0,
+        "quickattack": 9.0,
+        "return": 10.0,
+        "thunderpunch": 9.0,
+        "jumpkick": 1.0,
+        "switcheroo": 1.0
+      },
+      "tera_json": {
+        "nothing": 10.0
+      },
+      "happiness_json": {
+        "255": 10.0
+      },
+      "teammates_json": {
+        "Dwebble": 4.0,
+        "Mienfoo": 3.0,
+        "Foongus": 3.0,
+        "Cranidos": 3.0,
+        "Vullaby": 3.0,
+        "Woobat": 1.0,
+        "Aron": 1.0,
+        "Dratini": 1.0,
+        "Swinub": 1.0,
+        "Stunky": 5.0,
+        "Shellder": 5.0,
+        "Diglett": 5.0,
+        "Cottonee": 5.0,
+        "Gastly": 5.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Carvanha",
+      "usage_count": 8,
+      "usage_pct": 12.07,
+      "viability_json": [
+        6,
+        66,
+        66,
+        59
+      ],
+      "abilities_json": {
+        "speedboost": 8.0
+      },
+      "items_json": {
+        "lifeorb": 8.0
+      },
+      "spreads_json": {
+        "Modest:0/0/0/240/0/240": 3.0,
+        "Adamant:0/196/0/0/36/236": 1.0,
+        "Adamant:0/196/36/0/36/236": 4.0
+      },
+      "moves_json": {
+        "hydropump": 3.0,
+        "darkpulse": 3.0,
+        "hiddenpowerfire": 3.0,
+        "protect": 8.0,
+        "crunch": 5.0,
+        "waterfall": 5.0,
+        "zenheadbutt": 5.0
+      },
+      "tera_json": {
+        "nothing": 8.0
+      },
+      "happiness_json": {
+        "255": 8.0
+      },
+      "teammates_json": {
+        "Mienfoo": 5.0,
+        "Vullaby": 1.0,
+        "Frillish": 1.0,
+        "Hippopotas": 1.0,
+        "Ferroseed": 2.0,
+        "Diglett": 2.0,
+        "Abra": 4.0,
+        "Gastly": 5.0,
+        "Deino": 1.0,
+        "Clamperl": 1.0,
+        "Natu": 1.0,
+        "Drilbur": 2.0,
+        "Porygon": 2.0,
+        "Woobat": 1.0,
+        "Omanyte": 2.0,
+        "Anorith": 2.0,
+        "Lickitung": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Chinchou",
+      "usage_count": 6,
+      "usage_pct": 8.62,
+      "viability_json": [
+        3,
+        67,
+        67,
+        67
+      ],
+      "abilities_json": {
+        "voltabsorb": 6.0
+      },
+      "items_json": {
+        "eviolite": 4.0,
+        "choicescarf": 2.0
+      },
+      "spreads_json": {
+        "Bold:236/0/132/68/68/0": 1.0,
+        "Calm:236/0/0/0/228/0": 3.0,
+        "Timid:0/0/52/228/0/220": 1.0,
+        "Timid:0/0/52/232/0/220": 1.0
+      },
+      "moves_json": {
+        "discharge": 1.0,
+        "scald": 1.0,
+        "toxic": 4.0,
+        "thunderwave": 1.0,
+        "surf": 3.0,
+        "voltswitch": 5.0,
+        "protect": 3.0,
+        "hydropump": 2.0,
+        "thunderbolt": 1.0,
+        "icebeam": 2.0,
+        "hiddenpowergrass": 1.0
+      },
+      "tera_json": {
+        "nothing": 6.0
+      },
+      "happiness_json": {
+        "255": 6.0
+      },
+      "teammates_json": {
+        "Ferroseed": 4.0,
+        "Clamperl": 1.0,
+        "Timburr": 1.0,
+        "Abra": 1.0,
+        "Larvesta": 1.0,
+        "Mienfoo": 3.0,
+        "Taillow": 3.0,
+        "Ponyta": 3.0,
+        "Natu": 4.0,
+        "Wingull": 1.0,
+        "Drilbur": 1.0,
+        "Porygon": 1.0,
+        "Croagunk": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Clamperl",
+      "usage_count": 3,
+      "usage_pct": 5.17,
+      "viability_json": [
+        3,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "shellarmor": 2.0,
+        "rattled": 1.0
+      },
+      "items_json": {
+        "deepseatooth": 3.0
+      },
+      "spreads_json": {
+        "Calm:236/0/0/168/0/100": 1.0,
+        "Timid:0/0/0/248/76/180": 1.0,
+        "Timid:0/0/4/248/76/180": 1.0
+      },
+      "moves_json": {
+        "shellsmash": 3.0,
+        "surf": 3.0,
+        "icebeam": 1.0,
+        "hiddenpowergrass": 2.0,
+        "protect": 1.0,
+        "hiddenpowerelectric": 1.0,
+        "substitute": 1.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Chinchou": 1.0,
+        "Ferroseed": 1.0,
+        "Timburr": 1.0,
+        "Abra": 2.0,
+        "Larvesta": 1.0,
+        "Diglett": 2.0,
+        "Carvanha": 1.0,
+        "Gastly": 2.0,
+        "Deino": 1.0,
+        "Mienfoo": 1.0,
+        "Natu": 1.0,
+        "Porygon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cottonee",
+      "usage_count": 8,
+      "usage_pct": 12.07,
+      "viability_json": [
+        3,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "prankster": 8.0
+      },
+      "items_json": {
+        "eviolite": 8.0
+      },
+      "spreads_json": {
+        "Bold:36/0/196/0/196/76": 1.0,
+        "Bold:196/0/196/0/116/0": 1.0,
+        "Bold:36/0/196/0/196/68": 2.0,
+        "Bold:36/0/196/64/196/0": 4.0
+      },
+      "moves_json": {
+        "substitute": 1.0,
+        "leechseed": 7.0,
+        "stunspore": 8.0,
+        "encore": 2.0,
+        "memento": 1.0,
+        "taunt": 7.0,
+        "protect": 2.0,
+        "hiddenpowerfire": 4.0
+      },
+      "tera_json": {
+        "nothing": 8.0
+      },
+      "happiness_json": {
+        "255": 8.0
+      },
+      "teammates_json": {
+        "Archen": 1.0,
+        "Voltorb": 1.0,
+        "Mienfoo": 1.0,
+        "Munchlax": 2.0,
+        "Pawniard": 1.0,
+        "Doduo": 1.0,
+        "Diglett": 6.0,
+        "Dwebble": 1.0,
+        "Abra": 1.0,
+        "Stunky": 5.0,
+        "Buneary": 5.0,
+        "Shellder": 5.0,
+        "Gastly": 5.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cranidos",
+      "usage_count": 4,
+      "usage_pct": 6.9,
+      "viability_json": [
+        2,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "moldbreaker": 3.0,
+        "sheerforce": 1.0
+      },
+      "items_json": {
+        "choicescarf": 3.0,
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Adamant:60/236/0/0/0/212": 3.0,
+        "Adamant:220/236/0/0/0/52": 1.0
+      },
+      "moves_json": {
+        "headsmash": 3.0,
+        "pursuit": 3.0,
+        "earthquake": 3.0,
+        "zenheadbutt": 4.0,
+        "rockpolish": 1.0,
+        "rockslide": 1.0,
+        "firepunch": 1.0
+      },
+      "tera_json": {
+        "nothing": 4.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Dwebble": 3.0,
+        "Mienfoo": 3.0,
+        "Foongus": 3.0,
+        "Vullaby": 3.0,
+        "Buneary": 3.0,
+        "Hippopotas": 1.0,
+        "Houndour": 1.0,
+        "Frillish": 1.0,
+        "Ferroseed": 1.0,
+        "Abra": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Croagunk",
+      "usage_count": 2,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        67,
+        67,
+        67
+      ],
+      "abilities_json": {
+        "dryskin": 2.0
+      },
+      "items_json": {
+        "eviolite": 2.0
+      },
+      "spreads_json": {
+        "Relaxed:212/28/196/28/36/0": 2.0
+      },
+      "moves_json": {
+        "drainpunch": 2.0,
+        "vacuumwave": 2.0,
+        "shadowball": 2.0,
+        "knockoff": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Wingull": 1.0,
+        "Chinchou": 1.0,
+        "Drilbur": 1.0,
+        "Porygon": 1.0,
+        "Natu": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cubchoo",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "rattled": 1.0
+      },
+      "items_json": {
+        "choiceband": 1.0
+      },
+      "spreads_json": {
+        "Hardy:156/25/35/36/60/65": 1.0
+      },
+      "moves_json": {
+        "icebeam": 1.0,
+        "icepunch": 1.0,
+        "surf": 1.0,
+        "protect": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Tirtouga": 1.0,
+        "Oshawott": 1.0,
+        "empty": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Deino",
+      "usage_count": 8,
+      "usage_pct": 13.79,
+      "viability_json": [
+        3,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "hustle": 8.0
+      },
+      "items_json": {
+        "choicescarf": 8.0
+      },
+      "spreads_json": {
+        "Jolly:0/236/0/0/36/212": 6.0,
+        "Jolly:20/236/36/0/0/212": 2.0
+      },
+      "moves_json": {
+        "outrage": 8.0,
+        "crunch": 8.0,
+        "superpower": 8.0,
+        "zenheadbutt": 5.0,
+        "icefang": 1.0,
+        "headsmash": 2.0
+      },
+      "tera_json": {
+        "nothing": 8.0
+      },
+      "happiness_json": {
+        "255": 8.0
+      },
+      "teammates_json": {
+        "Ferroseed": 5.0,
+        "Gastly": 6.0,
+        "Mienfoo": 7.0,
+        "Slowpoke": 5.0,
+        "Magnemite": 5.0,
+        "Diglett": 1.0,
+        "Abra": 1.0,
+        "Carvanha": 1.0,
+        "Clamperl": 1.0,
+        "Grimer": 2.0,
+        "Golett": 2.0,
+        "Porygon": 2.0,
+        "Staryu": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Diglett",
+      "usage_count": 25,
+      "usage_pct": 37.93,
+      "viability_json": [
+        12,
+        69,
+        69,
+        60
+      ],
+      "abilities_json": {
+        "arenatrap": 24.0,
+        "sandforce": 1.0
+      },
+      "items_json": {
+        "airballoon": 9.0,
+        "eviolite": 2.0,
+        "lifeorb": 8.0,
+        "choicescarf": 5.0,
+        "focussash": 1.0
+      },
+      "spreads_json": {
+        "Jolly:36/236/0/0/0/236": 19.0,
+        "Jolly:36/156/4/0/76/236": 1.0,
+        "Careful:36/156/4/0/156/156": 4.0,
+        "Jolly:0/252/0/0/0/252": 1.0
+      },
+      "moves_json": {
+        "earthquake": 25.0,
+        "pursuit": 7.0,
+        "rockslide": 11.0,
+        "suckerpunch": 7.0,
+        "beatup": 21.0,
+        "stealthrock": 10.0,
+        "memento": 10.0,
+        "substitute": 2.0,
+        "finalgambit": 1.0,
+        "aerialace": 1.0,
+        "toxic": 2.0,
+        "protect": 1.0,
+        "bodyslam": 1.0,
+        "shadowclaw": 1.0
+      },
+      "tera_json": {
+        "nothing": 25.0
+      },
+      "happiness_json": {
+        "255": 25.0
+      },
+      "teammates_json": {
+        "Porygon": 10.0,
+        "Archen": 3.0,
+        "Staryu": 5.0,
+        "Mienfoo": 11.0,
+        "Gastly": 13.0,
+        "Snover": 4.0,
+        "Frillish": 1.0,
+        "Vullaby": 6.0,
+        "Magnemite": 1.0,
+        "Bronzor": 1.0,
+        "Abra": 6.0,
+        "Carvanha": 2.0,
+        "Deino": 1.0,
+        "Clamperl": 2.0,
+        "Natu": 7.0,
+        "Drilbur": 1.0,
+        "Venipede": 1.0,
+        "Munchlax": 2.0,
+        "Phanpy": 1.0,
+        "Drifloon": 1.0,
+        "Lileep": 1.0,
+        "Doduo": 1.0,
+        "Cottonee": 6.0,
+        "Dwebble": 1.0,
+        "Stunky": 5.0,
+        "Buneary": 5.0,
+        "Shellder": 5.0,
+        "Ferroseed": 2.0,
+        "Pawniard": 1.0,
+        "Timburr": 1.0,
+        "Tirtouga": 1.0,
+        "Slowpoke": 1.0,
+        "Axew": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Doduo",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        2,
+        61,
+        61,
+        61
+      ],
+      "abilities_json": {
+        "tangledfeet": 2.0
+      },
+      "items_json": {
+        "choiceband": 2.0
+      },
+      "spreads_json": {
+        "Jolly:0/236/0/0/0/236": 2.0
+      },
+      "moves_json": {
+        "bravebird": 2.0,
+        "frustration": 1.0,
+        "pursuit": 1.0,
+        "quickattack": 2.0,
+        "return": 1.0,
+        "drillpeck": 1.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "0": 1.0,
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Mienfoo": 1.0,
+        "Abra": 2.0,
+        "Trubbish": 1.0,
+        "Onix": 1.0,
+        "Duskull": 1.0,
+        "Munchlax": 1.0,
+        "Cottonee": 1.0,
+        "Diglett": 1.0,
+        "Dwebble": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Dratini",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        70,
+        70,
+        70
+      ],
+      "abilities_json": {
+        "shedskin": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Impish:188/4/156/0/116/36": 1.0
+      },
+      "moves_json": {
+        "dragonrush": 1.0,
+        "waterfall": 1.0,
+        "dragondance": 1.0,
+        "rest": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Buneary": 1.0,
+        "Woobat": 1.0,
+        "Aron": 1.0,
+        "Dwebble": 1.0,
+        "Swinub": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Drifloon",
+      "usage_count": 5,
+      "usage_pct": 5.17,
+      "viability_json": [
+        4,
+        66,
+        66,
+        66
+      ],
+      "abilities_json": {
+        "aftermath": 1.0,
+        "unburden": 4.0
+      },
+      "items_json": {
+        "eviolite": 1.0,
+        "flyinggem": 4.0
+      },
+      "spreads_json": {
+        "Timid:0/0/88/196/8/196": 1.0,
+        "Lonely:0/196/0/116/0/196": 2.0,
+        "Jolly:36/196/4/0/4/196": 1.0,
+        "Naughty:36/200/4/120/0/116": 1.0
+      },
+      "moves_json": {
+        "hex": 1.0,
+        "willowisp": 5.0,
+        "destinybond": 1.0,
+        "hiddenpowerfighting": 1.0,
+        "acrobatics": 4.0,
+        "shadowball": 3.0,
+        "substitute": 2.0,
+        "memento": 1.0,
+        "suckerpunch": 1.0,
+        "hiddenpowerground": 1.0
+      },
+      "tera_json": {
+        "nothing": 5.0
+      },
+      "happiness_json": {
+        "255": 5.0
+      },
+      "teammates_json": {
+        "Venipede": 1.0,
+        "Munchlax": 1.0,
+        "Phanpy": 1.0,
+        "Diglett": 1.0,
+        "Lileep": 1.0,
+        "Snover": 2.0,
+        "Drilbur": 2.0,
+        "Porygon": 2.0,
+        "Abra": 2.0,
+        "Frillish": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Drilbur",
+      "usage_count": 8,
+      "usage_pct": 8.62,
+      "viability_json": [
+        6,
+        67,
+        67,
+        66
+      ],
+      "abilities_json": {
+        "moldbreaker": 8.0
+      },
+      "items_json": {
+        "eviolite": 8.0
+      },
+      "spreads_json": {
+        "Jolly:0/236/36/0/0/212": 3.0,
+        "Jolly:36/156/0/0/76/212": 3.0,
+        "Jolly:196/0/196/0/0/52": 2.0
+      },
+      "moves_json": {
+        "earthquake": 8.0,
+        "rockslide": 6.0,
+        "rapidspin": 5.0,
+        "stealthrock": 8.0,
+        "toxic": 3.0,
+        "rocktomb": 2.0
+      },
+      "tera_json": {
+        "nothing": 8.0
+      },
+      "happiness_json": {
+        "255": 8.0
+      },
+      "teammates_json": {
+        "Carvanha": 2.0,
+        "Natu": 2.0,
+        "Mienfoo": 1.0,
+        "Porygon": 5.0,
+        "Diglett": 1.0,
+        "Snover": 2.0,
+        "Drifloon": 2.0,
+        "Abra": 2.0,
+        "Frillish": 2.0,
+        "Gastly": 1.0,
+        "Woobat": 1.0,
+        "Omanyte": 1.0,
+        "Wingull": 1.0,
+        "Chinchou": 1.0,
+        "Croagunk": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Duskull",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        2,
+        47,
+        47,
+        47
+      ],
+      "abilities_json": {
+        "levitate": 2.0
+      },
+      "items_json": {
+        "eviolite": 2.0
+      },
+      "spreads_json": {
+        "Calm:196/0/196/0/116/0": 2.0
+      },
+      "moves_json": {
+        "willowisp": 2.0,
+        "substitute": 2.0,
+        "painsplit": 2.0,
+        "icywind": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Mienfoo": 1.0,
+        "Abra": 1.0,
+        "Doduo": 1.0,
+        "Trubbish": 1.0,
+        "Onix": 1.0,
+        "Elekid": 1.0,
+        "Joltik": 1.0,
+        "Pansage": 1.0,
+        "Spearow": 1.0,
+        "Glameow": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Dwebble",
+      "usage_count": 7,
+      "usage_pct": 12.07,
+      "viability_json": [
+        3,
+        71,
+        71,
+        71
+      ],
+      "abilities_json": {
+        "weakarmor": 4.0,
+        "sturdy": 3.0
+      },
+      "items_json": {
+        "eviolite": 4.0,
+        "liechiberry": 1.0,
+        "oranberry": 2.0
+      },
+      "spreads_json": {
+        "Jolly:36/236/0/0/0/236": 3.0,
+        "Adamant:36/236/0/0/0/236": 4.0
+      },
+      "moves_json": {
+        "stealthrock": 4.0,
+        "spikes": 4.0,
+        "rockblast": 7.0,
+        "knockoff": 3.0,
+        "shellsmash": 3.0,
+        "earthquake": 3.0,
+        "xscissor": 3.0,
+        "counter": 1.0
+      },
+      "tera_json": {
+        "nothing": 7.0
+      },
+      "happiness_json": {
+        "255": 7.0
+      },
+      "teammates_json": {
+        "Mienfoo": 3.0,
+        "Foongus": 3.0,
+        "Cranidos": 3.0,
+        "Vullaby": 3.0,
+        "Buneary": 4.0,
+        "Tentacool": 1.0,
+        "Voltorb": 1.0,
+        "Abra": 2.0,
+        "Pawniard": 1.0,
+        "Geodude": 2.0,
+        "Woobat": 1.0,
+        "Aron": 2.0,
+        "Dratini": 1.0,
+        "Swinub": 1.0,
+        "Doduo": 1.0,
+        "Munchlax": 1.0,
+        "Cottonee": 1.0,
+        "Diglett": 1.0,
+        "Tirtouga": 1.0,
+        "Pineco": 1.0,
+        "Magnemite": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Elekid",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        2,
+        58,
+        58,
+        58
+      ],
+      "abilities_json": {
+        "static": 1.0,
+        "vitalspirit": 1.0
+      },
+      "items_json": {
+        "lifeorb": 2.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/236/0/236": 1.0,
+        "Jolly:0/252/0/0/0/236": 1.0
+      },
+      "moves_json": {
+        "psychic": 1.0,
+        "voltswitch": 1.0,
+        "thunderbolt": 1.0,
+        "hiddenpowerice": 1.0,
+        "wildcharge": 1.0,
+        "icepunch": 1.0,
+        "crosschop": 1.0,
+        "firepunch": 1.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Mienfoo": 1.0,
+        "Vullaby": 1.0,
+        "Abra": 1.0,
+        "Gastly": 1.0,
+        "Lickitung": 1.0,
+        "Duskull": 1.0,
+        "Joltik": 1.0,
+        "Pansage": 1.0,
+        "Spearow": 1.0,
+        "Glameow": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Ferroseed",
+      "usage_count": 18,
+      "usage_pct": 24.14,
+      "viability_json": [
+        10,
+        66,
+        66,
+        66
+      ],
+      "abilities_json": {
+        "ironbarbs": 18.0
+      },
+      "items_json": {
+        "eviolite": 18.0
+      },
+      "spreads_json": {
+        "Impish:244/0/108/0/148/0": 1.0,
+        "Bold:0/0/188/0/228/36": 5.0,
+        "Bold:164/0/108/4/228/0": 6.0,
+        "Impish:84/36/108/0/228/36": 3.0,
+        "Calm:84/0/188/8/152/36": 1.0,
+        "Bold:84/0/108/4/228/36": 1.0,
+        "Serious:252/0/128/0/128/0": 1.0
+      },
+      "moves_json": {
+        "stealthrock": 12.0,
+        "spikes": 17.0,
+        "thunderwave": 14.0,
+        "ironhead": 1.0,
+        "leechseed": 5.0,
+        "gigadrain": 8.0,
+        "thunderbolt": 6.0,
+        "bulletseed": 3.0,
+        "hiddenpowerground": 1.0,
+        "endeavor": 1.0,
+        "curse": 1.0,
+        "explosion": 1.0,
+        "gyroball": 1.0,
+        "poisonjab": 1.0
+      },
+      "tera_json": {
+        "nothing": 18.0
+      },
+      "happiness_json": {
+        "255": 18.0
+      },
+      "teammates_json": {
+        "Chinchou": 4.0,
+        "Clamperl": 1.0,
+        "Timburr": 1.0,
+        "Abra": 4.0,
+        "Larvesta": 1.0,
+        "Deino": 5.0,
+        "Gastly": 7.0,
+        "Mienfoo": 11.0,
+        "Slowpoke": 6.0,
+        "Magnemite": 5.0,
+        "Vullaby": 1.0,
+        "Frillish": 2.0,
+        "Hippopotas": 2.0,
+        "Carvanha": 2.0,
+        "Houndour": 1.0,
+        "Cranidos": 1.0,
+        "Omanyte": 1.0,
+        "Taillow": 3.0,
+        "Ponyta": 3.0,
+        "Natu": 4.0,
+        "Pawniard": 1.0,
+        "Diglett": 2.0,
+        "Archen": 1.0,
+        "Axew": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Foongus",
+      "usage_count": 3,
+      "usage_pct": 5.17,
+      "viability_json": [
+        1,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "regenerator": 3.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Calm:0/0/236/0/236/0": 3.0
+      },
+      "moves_json": {
+        "hiddenpowerfire": 3.0,
+        "synthesis": 3.0,
+        "gigadrain": 3.0,
+        "sludgebomb": 3.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Dwebble": 3.0,
+        "Mienfoo": 3.0,
+        "Cranidos": 3.0,
+        "Vullaby": 3.0,
+        "Buneary": 3.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Frillish",
+      "usage_count": 5,
+      "usage_pct": 8.62,
+      "viability_json": [
+        4,
+        66,
+        66,
+        66
+      ],
+      "abilities_json": {
+        "cursedbody": 5.0
+      },
+      "items_json": {
+        "eviolite": 5.0
+      },
+      "spreads_json": {
+        "Modest:156/0/36/76/236/0": 2.0,
+        "Bold:236/0/116/76/76/0": 1.0,
+        "Bold:76/0/196/0/76/116": 2.0
+      },
+      "moves_json": {
+        "scald": 3.0,
+        "recover": 5.0,
+        "willowisp": 5.0,
+        "shadowball": 4.0,
+        "gigadrain": 1.0,
+        "taunt": 2.0
+      },
+      "tera_json": {
+        "nothing": 5.0
+      },
+      "happiness_json": {
+        "255": 5.0
+      },
+      "teammates_json": {
+        "Mienfoo": 1.0,
+        "Vullaby": 2.0,
+        "Hippopotas": 2.0,
+        "Ferroseed": 2.0,
+        "Carvanha": 1.0,
+        "Diglett": 1.0,
+        "Snover": 3.0,
+        "Magnemite": 1.0,
+        "Bronzor": 1.0,
+        "Houndour": 1.0,
+        "Cranidos": 1.0,
+        "Abra": 3.0,
+        "Drilbur": 2.0,
+        "Porygon": 2.0,
+        "Drifloon": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Gastly",
+      "usage_count": 30,
+      "usage_pct": 46.55,
+      "viability_json": [
+        13,
+        70,
+        70,
+        59
+      ],
+      "abilities_json": {
+        "levitate": 30.0
+      },
+      "items_json": {
+        "choicespecs": 6.0,
+        "eviolite": 11.0,
+        "choicescarf": 3.0,
+        "lifeorb": 4.0,
+        "blacksludge": 6.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 5.0,
+        "Timid:116/0/36/116/0/196": 5.0,
+        "Timid:36/0/40/200/0/200": 3.0,
+        "Timid:0/0/0/200/80/200": 3.0,
+        "Hasty:0/76/36/196/0/196": 2.0,
+        "Naive:0/40/0/196/0/196": 3.0,
+        "Modest:0/0/36/252/24/196": 1.0,
+        "Timid:0/0/36/196/76/196": 6.0,
+        "Timid:116/0/36/120/0/200": 1.0,
+        "Timid:116/0/40/120/32/200": 1.0
+      },
+      "moves_json": {
+        "shadowball": 26.0,
+        "sludgebomb": 27.0,
+        "thunderbolt": 9.0,
+        "trick": 14.0,
+        "painsplit": 3.0,
+        "willowisp": 17.0,
+        "knockoff": 3.0,
+        "substitute": 5.0,
+        "hiddenpowerfighting": 8.0,
+        "suckerpunch": 5.0,
+        "energyball": 1.0,
+        "ominouswind": 1.0,
+        "hex": 1.0
+      },
+      "tera_json": {
+        "nothing": 30.0
+      },
+      "happiness_json": {
+        "255": 30.0
+      },
+      "teammates_json": {
+        "Ferroseed": 7.0,
+        "Deino": 6.0,
+        "Mienfoo": 17.0,
+        "Slowpoke": 5.0,
+        "Magnemite": 9.0,
+        "Porygon": 9.0,
+        "Archen": 2.0,
+        "Staryu": 5.0,
+        "Diglett": 13.0,
+        "Abra": 11.0,
+        "Carvanha": 5.0,
+        "Clamperl": 2.0,
+        "Elekid": 1.0,
+        "Vullaby": 3.0,
+        "Lickitung": 3.0,
+        "Onix": 4.0,
+        "Axew": 3.0,
+        "Woobat": 1.0,
+        "Drilbur": 1.0,
+        "Omanyte": 2.0,
+        "Stunky": 5.0,
+        "Buneary": 5.0,
+        "Shellder": 5.0,
+        "Cottonee": 5.0,
+        "Pawniard": 1.0,
+        "Natu": 2.0,
+        "Anorith": 2.0,
+        "Growlithe": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Geodude",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        2,
+        71,
+        71,
+        71
+      ],
+      "abilities_json": {
+        "sturdy": 2.0
+      },
+      "items_json": {
+        "custapberry": 1.0,
+        "liechiberry": 1.0
+      },
+      "spreads_json": {
+        "Adamant:36/240/36/0/0/196": 1.0,
+        "Jolly:0/196/0/0/0/196": 1.0
+      },
+      "moves_json": {
+        "earthquake": 2.0,
+        "firepunch": 1.0,
+        "counter": 1.0,
+        "stealthrock": 1.0,
+        "stoneedge": 1.0,
+        "suckerpunch": 1.0,
+        "rockpolish": 1.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Dwebble": 2.0,
+        "Tentacool": 1.0,
+        "Voltorb": 1.0,
+        "Abra": 1.0,
+        "Pawniard": 1.0,
+        "Tirtouga": 1.0,
+        "Pineco": 1.0,
+        "Magnemite": 1.0,
+        "Aron": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Glameow",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        42,
+        42,
+        42
+      ],
+      "abilities_json": {
+        "limber": 1.0
+      },
+      "items_json": {
+        "lifeorb": 1.0
+      },
+      "spreads_json": {
+        "Naive:0/240/20/0/0/240": 1.0
+      },
+      "moves_json": {
+        "workup": 1.0,
+        "return": 1.0,
+        "suckerpunch": 1.0,
+        "hiddenpowerfire": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Duskull": 1.0,
+        "Elekid": 1.0,
+        "Joltik": 1.0,
+        "Pansage": 1.0,
+        "Spearow": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Golett",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        1,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "ironfist": 2.0
+      },
+      "items_json": {
+        "eviolite": 2.0
+      },
+      "spreads_json": {
+        "Adamant:44/244/196/0/0/0": 2.0
+      },
+      "moves_json": {
+        "stealthrock": 2.0,
+        "earthquake": 2.0,
+        "drainpunch": 2.0,
+        "icepunch": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Grimer": 2.0,
+        "Porygon": 2.0,
+        "Staryu": 2.0,
+        "Mienfoo": 2.0,
+        "Deino": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Grimer",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        1,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "stickyhold": 2.0
+      },
+      "items_json": {
+        "eviolite": 2.0
+      },
+      "spreads_json": {
+        "Impish:116/196/116/0/36/0": 2.0
+      },
+      "moves_json": {
+        "gunkshot": 2.0,
+        "firepunch": 2.0,
+        "shadowsneak": 2.0,
+        "painsplit": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Golett": 2.0,
+        "Porygon": 2.0,
+        "Staryu": 2.0,
+        "Mienfoo": 2.0,
+        "Deino": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Growlithe",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        57,
+        57,
+        57
+      ],
+      "abilities_json": {
+        "justified": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/196/0/0/116/196": 1.0
+      },
+      "moves_json": {
+        "flareblitz": 1.0,
+        "closecombat": 1.0,
+        "wildcharge": 1.0,
+        "outrage": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Gastly": 1.0,
+        "Onix": 1.0,
+        "Magnemite": 1.0,
+        "Mienfoo": 1.0,
+        "Vullaby": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Hippopotas",
+      "usage_count": 3,
+      "usage_pct": 3.45,
+      "viability_json": [
+        3,
+        66,
+        66,
+        66
+      ],
+      "abilities_json": {
+        "sandstream": 3.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Careful:132/20/132/0/180/20": 1.0,
+        "Careful:212/100/0/0/180/0": 1.0,
+        "Impish:132/20/212/0/100/20": 1.0
+      },
+      "moves_json": {
+        "earthquake": 3.0,
+        "stealthrock": 2.0,
+        "slackoff": 3.0,
+        "crunch": 2.0,
+        "curse": 1.0,
+        "whirlwind": 1.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Mienfoo": 1.0,
+        "Vullaby": 1.0,
+        "Frillish": 2.0,
+        "Ferroseed": 2.0,
+        "Carvanha": 1.0,
+        "Houndour": 1.0,
+        "Cranidos": 1.0,
+        "Abra": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Houndour",
+      "usage_count": 2,
+      "usage_pct": 1.72,
+      "viability_json": [
+        2,
+        60,
+        60,
+        60
+      ],
+      "abilities_json": {
+        "flashfire": 1.0,
+        "earlybird": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0,
+        "lifeorb": 1.0
+      },
+      "spreads_json": {
+        "Jolly:236/36/0/0/0/236": 1.0,
+        "Lonely:0/196/0/36/36/236": 1.0
+      },
+      "moves_json": {
+        "willowisp": 1.0,
+        "firefang": 1.0,
+        "pursuit": 1.0,
+        "suckerpunch": 2.0,
+        "crunch": 1.0,
+        "fireblast": 1.0,
+        "protect": 1.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Hippopotas": 1.0,
+        "Frillish": 1.0,
+        "Cranidos": 1.0,
+        "Ferroseed": 1.0,
+        "Abra": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Joltik",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        42,
+        42,
+        42
+      ],
+      "abilities_json": {
+        "swarm": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Modest:0/0/36/220/0/236": 1.0
+      },
+      "moves_json": {
+        "voltswitch": 1.0,
+        "thunderbolt": 1.0,
+        "bugbuzz": 1.0,
+        "gigadrain": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Duskull": 1.0,
+        "Elekid": 1.0,
+        "Pansage": 1.0,
+        "Spearow": 1.0,
+        "Glameow": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Larvesta",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        54,
+        54,
+        54
+      ],
+      "abilities_json": {
+        "flamebody": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Adamant:156/156/156/0/0/36": 1.0
+      },
+      "moves_json": {
+        "willowisp": 1.0,
+        "flareblitz": 1.0,
+        "uturn": 1.0,
+        "morningsun": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Chinchou": 1.0,
+        "Ferroseed": 1.0,
+        "Clamperl": 1.0,
+        "Timburr": 1.0,
+        "Abra": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Lickitung",
+      "usage_count": 3,
+      "usage_pct": 5.17,
+      "viability_json": [
+        1,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "owntempo": 3.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Hardy:36/0/236/0/236/0": 3.0
+      },
+      "moves_json": {
+        "knockoff": 3.0,
+        "wish": 3.0,
+        "protect": 3.0,
+        "dragontail": 3.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Elekid": 1.0,
+        "Mienfoo": 3.0,
+        "Vullaby": 1.0,
+        "Abra": 3.0,
+        "Gastly": 3.0,
+        "Anorith": 2.0,
+        "Carvanha": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Lileep",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        58,
+        58,
+        58
+      ],
+      "abilities_json": {
+        "stormdrain": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Bold:148/0/224/28/64/16": 1.0
+      },
+      "moves_json": {
+        "gigadrain": 1.0,
+        "ancientpower": 1.0,
+        "recover": 1.0,
+        "hiddenpowerfire": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Venipede": 1.0,
+        "Munchlax": 1.0,
+        "Phanpy": 1.0,
+        "Drifloon": 1.0,
+        "Diglett": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Magnemite",
+      "usage_count": 11,
+      "usage_pct": 18.97,
+      "viability_json": [
+        5,
+        71,
+        71,
+        71
+      ],
+      "abilities_json": {
+        "magnetpull": 10.0,
+        "sturdy": 1.0
+      },
+      "items_json": {
+        "choicescarf": 8.0,
+        "shedshell": 1.0,
+        "salacberry": 1.0,
+        "choicespecs": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/240/0/240": 6.0,
+        "Hasty:0/0/0/240/0/240": 3.0,
+        "Timid:0/0/36/236/0/236": 1.0,
+        "Modest:0/0/0/236/236/0": 1.0
+      },
+      "moves_json": {
+        "voltswitch": 10.0,
+        "hiddenpowerfire": 9.0,
+        "flashcannon": 11.0,
+        "thunderbolt": 7.0,
+        "toxic": 1.0,
+        "explosion": 3.0,
+        "hiddenpowergrass": 1.0,
+        "chargebeam": 1.0,
+        "hiddenpowerice": 1.0
+      },
+      "tera_json": {
+        "nothing": 11.0
+      },
+      "happiness_json": {
+        "255": 11.0
+      },
+      "teammates_json": {
+        "Ferroseed": 5.0,
+        "Deino": 5.0,
+        "Gastly": 9.0,
+        "Mienfoo": 6.0,
+        "Slowpoke": 5.0,
+        "Diglett": 1.0,
+        "Snover": 1.0,
+        "Frillish": 1.0,
+        "Vullaby": 2.0,
+        "Bronzor": 1.0,
+        "Porygon": 3.0,
+        "Onix": 4.0,
+        "Abra": 3.0,
+        "Axew": 3.0,
+        "Geodude": 1.0,
+        "Tirtouga": 1.0,
+        "Dwebble": 1.0,
+        "Pineco": 1.0,
+        "Aron": 1.0,
+        "Growlithe": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Mienfoo",
+      "usage_count": 35,
+      "usage_pct": 55.17,
+      "viability_json": [
+        16,
+        69,
+        69,
+        60
+      ],
+      "abilities_json": {
+        "regenerator": 34.0,
+        "innerfocus": 1.0
+      },
+      "items_json": {
+        "eviolite": 34.0,
+        "expertbelt": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/236/36/0/0/236": 8.0,
+        "Impish:156/0/116/0/196/0": 6.0,
+        "Jolly:0/0/36/0/196/236": 8.0,
+        "Impish:156/0/116/0/116/76": 3.0,
+        "Impish:76/0/196/0/196/0": 2.0,
+        "Jolly:0/236/0/0/36/236": 1.0,
+        "Adamant:0/236/36/0/196/40": 4.0,
+        "Jolly:76/76/36/0/36/236": 1.0,
+        "Impish:76/40/196/0/196/0": 1.0,
+        "Adamant:0/236/36/0/196/0": 1.0
+      },
+      "moves_json": {
+        "uturn": 35.0,
+        "highjumpkick": 30.0,
+        "fakeout": 16.0,
+        "swordsdance": 11.0,
+        "knockoff": 26.0,
+        "payback": 2.0,
+        "lowsweep": 2.0,
+        "taunt": 7.0,
+        "drainpunch": 6.0,
+        "stoneedge": 4.0,
+        "rockslide": 1.0
+      },
+      "tera_json": {
+        "nothing": 35.0
+      },
+      "happiness_json": {
+        "255": 35.0
+      },
+      "teammates_json": {
+        "Ferroseed": 11.0,
+        "Deino": 7.0,
+        "Gastly": 17.0,
+        "Slowpoke": 5.0,
+        "Magnemite": 6.0,
+        "Vullaby": 10.0,
+        "Frillish": 1.0,
+        "Hippopotas": 1.0,
+        "Carvanha": 5.0,
+        "Porygon": 11.0,
+        "Archen": 3.0,
+        "Staryu": 7.0,
+        "Diglett": 11.0,
+        "Elekid": 1.0,
+        "Abra": 8.0,
+        "Lickitung": 3.0,
+        "Natu": 9.0,
+        "Drilbur": 1.0,
+        "Dwebble": 3.0,
+        "Foongus": 3.0,
+        "Cranidos": 3.0,
+        "Buneary": 3.0,
+        "Cottonee": 1.0,
+        "Voltorb": 1.0,
+        "Munchlax": 1.0,
+        "Pawniard": 2.0,
+        "Doduo": 1.0,
+        "Trubbish": 1.0,
+        "Onix": 2.0,
+        "Duskull": 1.0,
+        "Grimer": 2.0,
+        "Golett": 2.0,
+        "Omanyte": 1.0,
+        "Taillow": 3.0,
+        "Ponyta": 3.0,
+        "Chinchou": 3.0,
+        "Snover": 3.0,
+        "Anorith": 2.0,
+        "Clamperl": 1.0,
+        "Growlithe": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Munchlax",
+      "usage_count": 3,
+      "usage_pct": 5.17,
+      "viability_json": [
+        2,
+        61,
+        61,
+        61
+      ],
+      "abilities_json": {
+        "thickfat": 3.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Adamant:0/236/36/0/236/0": 1.0,
+        "Careful:236/0/36/0/236/0": 2.0
+      },
+      "moves_json": {
+        "return": 1.0,
+        "firepunch": 2.0,
+        "earthquake": 1.0,
+        "pursuit": 1.0,
+        "bodyslam": 2.0,
+        "whirlwind": 1.0,
+        "rest": 2.0,
+        "sleeptalk": 1.0,
+        "curse": 1.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Archen": 1.0,
+        "Cottonee": 2.0,
+        "Voltorb": 1.0,
+        "Mienfoo": 1.0,
+        "Pawniard": 1.0,
+        "Venipede": 1.0,
+        "Phanpy": 1.0,
+        "Drifloon": 1.0,
+        "Diglett": 2.0,
+        "Lileep": 1.0,
+        "Doduo": 1.0,
+        "Dwebble": 1.0,
+        "Abra": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Natu",
+      "usage_count": 13,
+      "usage_pct": 18.97,
+      "viability_json": [
+        5,
+        67,
+        67,
+        67
+      ],
+      "abilities_json": {
+        "magicbounce": 13.0
+      },
+      "items_json": {
+        "eviolite": 13.0
+      },
+      "spreads_json": {
+        "Timid:36/0/156/36/76/196": 7.0,
+        "Bold:196/0/156/44/76/36": 5.0,
+        "Calm:196/0/236/36/4/36": 1.0
+      },
+      "moves_json": {
+        "psychic": 13.0,
+        "roost": 13.0,
+        "uturn": 9.0,
+        "heatwave": 9.0,
+        "calmmind": 5.0,
+        "gigadrain": 3.0
+      },
+      "tera_json": {
+        "nothing": 13.0
+      },
+      "happiness_json": {
+        "255": 13.0
+      },
+      "teammates_json": {
+        "Carvanha": 1.0,
+        "Drilbur": 2.0,
+        "Mienfoo": 9.0,
+        "Porygon": 7.0,
+        "Diglett": 7.0,
+        "Taillow": 3.0,
+        "Ponyta": 3.0,
+        "Chinchou": 4.0,
+        "Ferroseed": 4.0,
+        "Gastly": 2.0,
+        "Pawniard": 1.0,
+        "Vullaby": 4.0,
+        "Timburr": 1.0,
+        "Tirtouga": 1.0,
+        "Snover": 3.0,
+        "Wingull": 1.0,
+        "Croagunk": 1.0,
+        "Clamperl": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Omanyte",
+      "usage_count": 3,
+      "usage_pct": 3.45,
+      "viability_json": [
+        2,
+        51,
+        51,
+        51
+      ],
+      "abilities_json": {
+        "weakarmor": 1.0,
+        "shellarmor": 2.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Modest:0/0/0/196/76/236": 1.0,
+        "Modest:76/0/0/196/0/236": 2.0
+      },
+      "moves_json": {
+        "toxicspikes": 1.0,
+        "shellsmash": 3.0,
+        "scald": 1.0,
+        "earthpower": 1.0,
+        "hydropump": 2.0,
+        "hiddenpowergrass": 2.0,
+        "icebeam": 2.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Gastly": 2.0,
+        "Woobat": 1.0,
+        "Porygon": 1.0,
+        "Drilbur": 1.0,
+        "Carvanha": 2.0,
+        "Mienfoo": 1.0,
+        "Ferroseed": 1.0,
+        "Abra": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Onix",
+      "usage_count": 7,
+      "usage_pct": 10.34,
+      "viability_json": [
+        4,
+        70,
+        70,
+        70
+      ],
+      "abilities_json": {
+        "weakarmor": 3.0,
+        "sturdy": 2.0,
+        "rockhead": 2.0
+      },
+      "items_json": {
+        "oranberry": 3.0,
+        "eviolite": 3.0,
+        "custapberry": 1.0
+      },
+      "spreads_json": {
+        "Jolly:76/236/0/0/0/196": 3.0,
+        "Impish:236/0/116/0/156/0": 1.0,
+        "Naive:0/236/196/0/0/76": 2.0,
+        "Adamant:0/236/0/0/76/196": 1.0
+      },
+      "moves_json": {
+        "stealthrock": 5.0,
+        "rockblast": 3.0,
+        "earthquake": 7.0,
+        "taunt": 3.0,
+        "dragontail": 1.0,
+        "stoneedge": 2.0,
+        "toxic": 2.0,
+        "curse": 2.0,
+        "doubleedge": 2.0,
+        "explosion": 1.0
+      },
+      "tera_json": {
+        "nothing": 7.0
+      },
+      "happiness_json": {
+        "255": 7.0
+      },
+      "teammates_json": {
+        "Porygon": 3.0,
+        "Magnemite": 4.0,
+        "Abra": 4.0,
+        "Gastly": 4.0,
+        "Axew": 3.0,
+        "Mienfoo": 2.0,
+        "Doduo": 1.0,
+        "Trubbish": 1.0,
+        "Duskull": 1.0,
+        "Treecko": 1.0,
+        "Aron": 1.0,
+        "Pansage": 1.0,
+        "Wailmer": 1.0,
+        "Riolu": 1.0,
+        "Growlithe": 1.0,
+        "Vullaby": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Oshawott",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "torrent": 1.0
+      },
+      "items_json": {
+        "nothing": 1.0
+      },
+      "spreads_json": {
+        "Hardy:50/50/50/50/50/50": 1.0
+      },
+      "moves_json": {
+        "aquajet": 1.0,
+        "icebeam": 1.0,
+        "razorshell": 1.0,
+        "protect": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Tirtouga": 1.0,
+        "Cubchoo": 1.0,
+        "empty": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Pansage",
+      "usage_count": 3,
+      "usage_pct": 3.45,
+      "viability_json": [
+        2,
+        42,
+        42,
+        42
+      ],
+      "abilities_json": {
+        "gluttony": 3.0
+      },
+      "items_json": {
+        "wiseglasses": 2.0,
+        "focussash": 1.0
+      },
+      "spreads_json": {
+        "Modest:0/0/0/252/216/8": 2.0,
+        "Timid:0/0/0/252/0/244": 1.0
+      },
+      "moves_json": {
+        "nastyplot": 3.0,
+        "energyball": 3.0,
+        "leechseed": 2.0,
+        "hiddenpowerrock": 2.0,
+        "leafstorm": 1.0,
+        "hiddenpowerfire": 1.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Treecko": 1.0,
+        "Onix": 1.0,
+        "Aron": 1.0,
+        "Wailmer": 1.0,
+        "Riolu": 1.0,
+        "Duskull": 1.0,
+        "Elekid": 1.0,
+        "Joltik": 1.0,
+        "Spearow": 1.0,
+        "Glameow": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Pawniard",
+      "usage_count": 3,
+      "usage_pct": 5.17,
+      "viability_json": [
+        3,
+        60,
+        60,
+        60
+      ],
+      "abilities_json": {
+        "defiant": 3.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Jolly:0/156/196/0/116/36": 1.0,
+        "Jolly:0/156/36/0/116/196": 2.0
+      },
+      "moves_json": {
+        "swordsdance": 2.0,
+        "suckerpunch": 3.0,
+        "ironhead": 3.0,
+        "substitute": 1.0,
+        "nightslash": 2.0,
+        "stealthrock": 1.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Archen": 1.0,
+        "Cottonee": 1.0,
+        "Voltorb": 2.0,
+        "Mienfoo": 2.0,
+        "Munchlax": 1.0,
+        "Dwebble": 1.0,
+        "Tentacool": 1.0,
+        "Abra": 1.0,
+        "Geodude": 1.0,
+        "Ferroseed": 1.0,
+        "Gastly": 1.0,
+        "Natu": 1.0,
+        "Diglett": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Phanpy",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        58,
+        58,
+        58
+      ],
+      "abilities_json": {
+        "pickup": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Careful:196/0/116/0/196/0": 1.0
+      },
+      "moves_json": {
+        "stealthrock": 1.0,
+        "earthquake": 1.0,
+        "roar": 1.0,
+        "knockoff": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Venipede": 1.0,
+        "Munchlax": 1.0,
+        "Drifloon": 1.0,
+        "Diglett": 1.0,
+        "Lileep": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Pineco",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        71,
+        71,
+        71
+      ],
+      "abilities_json": {
+        "sturdy": 1.0
+      },
+      "items_json": {
+        "custapberry": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/236/0/0/0/236": 1.0
+      },
+      "moves_json": {
+        "stealthrock": 1.0,
+        "spikes": 1.0,
+        "rapidspin": 1.0,
+        "explosion": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Geodude": 1.0,
+        "Tirtouga": 1.0,
+        "Dwebble": 1.0,
+        "Magnemite": 1.0,
+        "Aron": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Ponyta",
+      "usage_count": 3,
+      "usage_pct": 5.17,
+      "viability_json": [
+        1,
+        65,
+        65,
+        65
+      ],
+      "abilities_json": {
+        "flamebody": 3.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Jolly:0/236/76/0/0/196": 3.0
+      },
+      "moves_json": {
+        "willowisp": 3.0,
+        "morningsun": 3.0,
+        "flareblitz": 3.0,
+        "wildcharge": 3.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Mienfoo": 3.0,
+        "Taillow": 3.0,
+        "Chinchou": 3.0,
+        "Natu": 3.0,
+        "Ferroseed": 3.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Porygon",
+      "usage_count": 21,
+      "usage_pct": 32.76,
+      "viability_json": [
+        7,
+        70,
+        70,
+        61
+      ],
+      "abilities_json": {
+        "trace": 21.0
+      },
+      "items_json": {
+        "eviolite": 21.0
+      },
+      "spreads_json": {
+        "Modest:156/0/36/156/0/116": 2.0,
+        "Calm:236/0/196/0/76/0": 4.0,
+        "Modest:76/0/36/236/0/116": 3.0,
+        "Calm:156/0/196/76/76/0": 2.0,
+        "Calm:156/0/116/0/236/0": 4.0,
+        "Sassy:0/0/116/120/236/36": 1.0,
+        "Calm:236/0/36/0/236/0": 1.0,
+        "Calm:156/0/36/80/236/0": 4.0
+      },
+      "moves_json": {
+        "thunderbolt": 9.0,
+        "psychic": 14.0,
+        "thunderwave": 12.0,
+        "recover": 18.0,
+        "hiddenpowerfire": 2.0,
+        "icebeam": 2.0,
+        "triattack": 12.0,
+        "chargebeam": 3.0,
+        "agility": 3.0,
+        "blizzard": 2.0,
+        "trickroom": 1.0,
+        "toxic": 6.0
+      },
+      "tera_json": {
+        "nothing": 21.0
+      },
+      "happiness_json": {
+        "255": 21.0
+      },
+      "teammates_json": {
+        "Archen": 2.0,
+        "Staryu": 6.0,
+        "Mienfoo": 11.0,
+        "Diglett": 10.0,
+        "Gastly": 9.0,
+        "Carvanha": 2.0,
+        "Natu": 7.0,
+        "Drilbur": 5.0,
+        "Abra": 7.0,
+        "Magnemite": 3.0,
+        "Onix": 3.0,
+        "Axew": 3.0,
+        "Snover": 5.0,
+        "Drifloon": 2.0,
+        "Frillish": 2.0,
+        "Grimer": 2.0,
+        "Golett": 2.0,
+        "Deino": 2.0,
+        "Woobat": 1.0,
+        "Omanyte": 1.0,
+        "Vullaby": 4.0,
+        "Timburr": 1.0,
+        "Tirtouga": 1.0,
+        "Wingull": 1.0,
+        "Chinchou": 1.0,
+        "Croagunk": 1.0,
+        "Clamperl": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Riolu",
+      "usage_count": 2,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "steadfast": 2.0
+      },
+      "items_json": {
+        "firegem": 2.0
+      },
+      "spreads_json": {
+        "Adamant:0/196/116/0/196/0": 2.0
+      },
+      "moves_json": {
+        "brickbreak": 2.0,
+        "swordsdance": 2.0,
+        "drainpunch": 2.0,
+        "earthquake": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Treecko": 1.0,
+        "Onix": 1.0,
+        "Aron": 1.0,
+        "Pansage": 1.0,
+        "Wailmer": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Shellder",
+      "usage_count": 6,
+      "usage_pct": 8.62,
+      "viability_json": [
+        1,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "skilllink": 6.0
+      },
+      "items_json": {
+        "eviolite": 6.0
+      },
+      "spreads_json": {
+        "Adamant:0/236/36/0/0/196": 3.0,
+        "Jolly:0/236/36/0/0/196": 3.0
+      },
+      "moves_json": {
+        "shellsmash": 6.0,
+        "iciclespear": 6.0,
+        "rockblast": 6.0,
+        "iceshard": 6.0
+      },
+      "tera_json": {
+        "nothing": 6.0
+      },
+      "happiness_json": {
+        "255": 6.0
+      },
+      "teammates_json": {
+        "Stunky": 5.0,
+        "Buneary": 5.0,
+        "Diglett": 5.0,
+        "Cottonee": 5.0,
+        "Gastly": 5.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Slowpoke",
+      "usage_count": 6,
+      "usage_pct": 10.34,
+      "viability_json": [
+        2,
+        56,
+        56,
+        56
+      ],
+      "abilities_json": {
+        "regenerator": 5.0,
+        "oblivious": 1.0
+      },
+      "items_json": {
+        "eviolite": 6.0
+      },
+      "spreads_json": {
+        "Bold:0/0/236/36/196/0": 5.0,
+        "Serious:252/0/0/0/252/0": 1.0
+      },
+      "moves_json": {
+        "thunderwave": 5.0,
+        "scald": 5.0,
+        "slackoff": 5.0,
+        "icebeam": 3.0,
+        "psychic": 2.0,
+        "aquatail": 1.0,
+        "earthquake": 1.0,
+        "curse": 1.0,
+        "doubleedge": 1.0
+      },
+      "tera_json": {
+        "nothing": 6.0
+      },
+      "happiness_json": {
+        "255": 6.0
+      },
+      "teammates_json": {
+        "Ferroseed": 6.0,
+        "Deino": 5.0,
+        "Gastly": 5.0,
+        "Mienfoo": 5.0,
+        "Magnemite": 5.0,
+        "Abra": 1.0,
+        "Diglett": 1.0,
+        "Archen": 1.0,
+        "Axew": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Snover",
+      "usage_count": 7,
+      "usage_pct": 10.34,
+      "viability_json": [
+        3,
+        61,
+        61,
+        61
+      ],
+      "abilities_json": {
+        "snowwarning": 7.0
+      },
+      "items_json": {
+        "eviolite": 7.0
+      },
+      "spreads_json": {
+        "Timid:36/20/36/180/36/196": 1.0,
+        "Modest:36/0/36/184/120/116": 2.0,
+        "Timid:36/20/36/184/36/196": 4.0
+      },
+      "moves_json": {
+        "blizzard": 7.0,
+        "gigadrain": 7.0,
+        "protect": 7.0,
+        "iceshard": 5.0,
+        "hiddenpowerground": 2.0
+      },
+      "tera_json": {
+        "nothing": 7.0
+      },
+      "happiness_json": {
+        "255": 7.0
+      },
+      "teammates_json": {
+        "Diglett": 4.0,
+        "Frillish": 3.0,
+        "Vullaby": 4.0,
+        "Magnemite": 1.0,
+        "Bronzor": 1.0,
+        "Drilbur": 2.0,
+        "Porygon": 5.0,
+        "Drifloon": 2.0,
+        "Abra": 2.0,
+        "Mienfoo": 3.0,
+        "Natu": 3.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Spearow",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        42,
+        42,
+        42
+      ],
+      "abilities_json": {
+        "sniper": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Adamant:36/200/36/0/36/196": 1.0
+      },
+      "moves_json": {
+        "drillpeck": 1.0,
+        "return": 1.0,
+        "uturn": 1.0,
+        "pursuit": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Duskull": 1.0,
+        "Elekid": 1.0,
+        "Joltik": 1.0,
+        "Pansage": 1.0,
+        "Glameow": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Staryu",
+      "usage_count": 8,
+      "usage_pct": 12.07,
+      "viability_json": [
+        5,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "naturalcure": 8.0
+      },
+      "items_json": {
+        "eviolite": 8.0
+      },
+      "spreads_json": {
+        "Timid:36/0/0/200/0/240": 2.0,
+        "Timid:116/0/156/0/0/236": 2.0,
+        "Timid:196/0/0/0/76/236": 1.0,
+        "Timid:0/0/76/196/0/236": 2.0,
+        "Timid:116/0/0/0/156/236": 1.0
+      },
+      "moves_json": {
+        "surf": 2.0,
+        "thunderbolt": 5.0,
+        "hiddenpowerfire": 2.0,
+        "recover": 8.0,
+        "scald": 4.0,
+        "rapidspin": 4.0,
+        "icebeam": 1.0,
+        "hydropump": 2.0,
+        "gravity": 2.0,
+        "thunder": 2.0
+      },
+      "tera_json": {
+        "nothing": 8.0
+      },
+      "happiness_json": {
+        "255": 8.0
+      },
+      "teammates_json": {
+        "Porygon": 6.0,
+        "Archen": 2.0,
+        "Mienfoo": 7.0,
+        "Diglett": 5.0,
+        "Gastly": 5.0,
+        "Abra": 3.0,
+        "Vullaby": 1.0,
+        "Grimer": 2.0,
+        "Golett": 2.0,
+        "Deino": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Stunky",
+      "usage_count": 6,
+      "usage_pct": 8.62,
+      "viability_json": [
+        1,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "aftermath": 6.0
+      },
+      "items_json": {
+        "shedshell": 6.0
+      },
+      "spreads_json": {
+        "Hasty:12/252/0/0/0/244": 3.0,
+        "Hasty:12/92/0/108/0/244": 2.0,
+        "Hasty:12/12/0/188/0/244": 1.0
+      },
+      "moves_json": {
+        "explosion": 2.0,
+        "pursuit": 6.0,
+        "fireblast": 6.0,
+        "suckerpunch": 4.0,
+        "memento": 2.0,
+        "darkpulse": 2.0,
+        "sludgebomb": 2.0
+      },
+      "tera_json": {
+        "nothing": 6.0
+      },
+      "happiness_json": {
+        "255": 6.0
+      },
+      "teammates_json": {
+        "Buneary": 5.0,
+        "Shellder": 5.0,
+        "Diglett": 5.0,
+        "Cottonee": 5.0,
+        "Gastly": 5.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Swinub",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        70,
+        70,
+        70
+      ],
+      "abilities_json": {
+        "thickfat": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Relaxed:196/0/196/0/116/0": 1.0
+      },
+      "moves_json": {
+        "earthquake": 1.0,
+        "icywind": 1.0,
+        "iceshard": 1.0,
+        "stealthrock": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Buneary": 1.0,
+        "Woobat": 1.0,
+        "Aron": 1.0,
+        "Dratini": 1.0,
+        "Dwebble": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Taillow",
+      "usage_count": 3,
+      "usage_pct": 5.17,
+      "viability_json": [
+        1,
+        65,
+        65,
+        65
+      ],
+      "abilities_json": {
+        "guts": 3.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Jolly:0/236/0/0/36/236": 3.0
+      },
+      "moves_json": {
+        "bravebird": 3.0,
+        "pursuit": 3.0,
+        "quickattack": 3.0,
+        "uturn": 3.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Mienfoo": 3.0,
+        "Ponyta": 3.0,
+        "Chinchou": 3.0,
+        "Natu": 3.0,
+        "Ferroseed": 3.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tentacool",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        60,
+        60,
+        60
+      ],
+      "abilities_json": {
+        "liquidooze": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Calm:196/0/76/0/196/36": 1.0
+      },
+      "moves_json": {
+        "toxicspikes": 1.0,
+        "rapidspin": 1.0,
+        "scald": 1.0,
+        "knockoff": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Dwebble": 1.0,
+        "Voltorb": 1.0,
+        "Abra": 1.0,
+        "Pawniard": 1.0,
+        "Geodude": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Timburr",
+      "usage_count": 3,
+      "usage_pct": 3.45,
+      "viability_json": [
+        3,
+        66,
+        66,
+        66
+      ],
+      "abilities_json": {
+        "guts": 3.0
+      },
+      "items_json": {
+        "eviolite": 3.0
+      },
+      "spreads_json": {
+        "Adamant:156/116/0/0/236/0": 1.0,
+        "Adamant:0/196/0/0/156/156": 1.0,
+        "Careful:0/116/156/0/236/0": 1.0
+      },
+      "moves_json": {
+        "bulkup": 3.0,
+        "machpunch": 3.0,
+        "drainpunch": 3.0,
+        "stoneedge": 1.0,
+        "thunderpunch": 1.0,
+        "payback": 1.0
+      },
+      "tera_json": {
+        "nothing": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Chinchou": 1.0,
+        "Ferroseed": 1.0,
+        "Clamperl": 1.0,
+        "Abra": 1.0,
+        "Larvesta": 1.0,
+        "Vullaby": 1.0,
+        "Porygon": 1.0,
+        "Tirtouga": 1.0,
+        "Natu": 1.0,
+        "Diglett": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tirtouga",
+      "usage_count": 4,
+      "usage_pct": 5.17,
+      "viability_json": [
+        4,
+        71,
+        71,
+        71
+      ],
+      "abilities_json": {
+        "solidrock": 3.0,
+        "sturdy": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0,
+        "lifeorb": 1.0,
+        "eviolite": 1.0,
+        "oranberry": 1.0
+      },
+      "spreads_json": {
+        "Hardy:50/50/50/50/50/50": 1.0,
+        "Adamant:84/212/12/0/0/180": 1.0,
+        "Adamant:4/212/92/0/20/180": 1.0,
+        "Adamant:4/212/12/0/76/180": 1.0
+      },
+      "moves_json": {
+        "blizzard": 1.0,
+        "aquajet": 2.0,
+        "irondefense": 1.0,
+        "icebeam": 1.0,
+        "shellsmash": 3.0,
+        "stoneedge": 3.0,
+        "aquatail": 1.0,
+        "substitute": 1.0,
+        "stealthrock": 1.0,
+        "waterfall": 2.0
+      },
+      "tera_json": {
+        "nothing": 4.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Oshawott": 1.0,
+        "Cubchoo": 1.0,
+        "empty": 0.0,
+        "Vullaby": 1.0,
+        "Porygon": 1.0,
+        "Timburr": 1.0,
+        "Natu": 1.0,
+        "Diglett": 1.0,
+        "Geodude": 1.0,
+        "Dwebble": 1.0,
+        "Pineco": 1.0,
+        "Magnemite": 1.0,
+        "Aron": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Treecko",
+      "usage_count": 2,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "overgrow": 2.0
+      },
+      "items_json": {
+        "grassgem": 2.0
+      },
+      "spreads_json": {
+        "Adamant:0/236/36/236/0/0": 2.0
+      },
+      "moves_json": {
+        "acrobatics": 2.0,
+        "leafstorm": 2.0,
+        "leechseed": 2.0,
+        "thunderpunch": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Onix": 1.0,
+        "Aron": 1.0,
+        "Pansage": 1.0,
+        "Wailmer": 1.0,
+        "Riolu": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Trubbish",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        47,
+        47,
+        47
+      ],
+      "abilities_json": {
+        "stickyhold": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Impish:116/36/180/0/20/156": 1.0
+      },
+      "moves_json": {
+        "drainpunch": 1.0,
+        "spikes": 1.0,
+        "painsplit": 1.0,
+        "rockblast": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Mienfoo": 1.0,
+        "Abra": 1.0,
+        "Doduo": 1.0,
+        "Onix": 1.0,
+        "Duskull": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Venipede",
+      "usage_count": 1,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        58,
+        58,
+        58
+      ],
+      "abilities_json": {
+        "poisonpoint": 1.0
+      },
+      "items_json": {
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Jolly:196/0/44/0/44/220": 1.0
+      },
+      "moves_json": {
+        "spikes": 1.0,
+        "toxicspikes": 1.0,
+        "endeavor": 1.0,
+        "toxic": 1.0
+      },
+      "tera_json": {
+        "nothing": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Munchlax": 1.0,
+        "Phanpy": 1.0,
+        "Drifloon": 1.0,
+        "Diglett": 1.0,
+        "Lileep": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Voltorb",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        2,
+        60,
+        60,
+        60
+      ],
+      "abilities_json": {
+        "static": 2.0
+      },
+      "items_json": {
+        "lifeorb": 1.0,
+        "eviolite": 1.0
+      },
+      "spreads_json": {
+        "Hasty:36/36/0/236/0/200": 1.0,
+        "Timid:196/0/116/0/0/196": 1.0
+      },
+      "moves_json": {
+        "thunderbolt": 1.0,
+        "hiddenpowerice": 1.0,
+        "voltswitch": 2.0,
+        "explosion": 1.0,
+        "thunderwave": 1.0,
+        "foulplay": 1.0,
+        "taunt": 1.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Archen": 1.0,
+        "Cottonee": 1.0,
+        "Mienfoo": 1.0,
+        "Munchlax": 1.0,
+        "Pawniard": 2.0,
+        "Dwebble": 1.0,
+        "Tentacool": 1.0,
+        "Abra": 1.0,
+        "Geodude": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Vullaby",
+      "usage_count": 13,
+      "usage_pct": 20.69,
+      "viability_json": [
+        7,
+        69,
+        69,
+        66
+      ],
+      "abilities_json": {
+        "weakarmor": 12.0,
+        "overcoat": 1.0
+      },
+      "items_json": {
+        "eviolite": 13.0
+      },
+      "spreads_json": {
+        "Adamant:0/236/76/0/0/196": 3.0,
+        "Impish:0/0/236/0/236/36": 1.0,
+        "Impish:116/76/0/0/236/36": 3.0,
+        "Modest:0/0/76/236/0/196": 5.0,
+        "Bold:0/0/236/0/236/36": 1.0
+      },
+      "moves_json": {
+        "bravebird": 7.0,
+        "knockoff": 7.0,
+        "uturn": 3.0,
+        "roost": 7.0,
+        "taunt": 1.0,
+        "whirlwind": 5.0,
+        "airslash": 5.0,
+        "darkpulse": 5.0,
+        "heatwave": 5.0,
+        "nastyplot": 5.0,
+        "toxic": 1.0,
+        "foulplay": 1.0
+      },
+      "tera_json": {
+        "nothing": 13.0
+      },
+      "happiness_json": {
+        "255": 13.0
+      },
+      "teammates_json": {
+        "Mienfoo": 10.0,
+        "Frillish": 2.0,
+        "Hippopotas": 1.0,
+        "Ferroseed": 1.0,
+        "Carvanha": 1.0,
+        "Diglett": 6.0,
+        "Snover": 4.0,
+        "Magnemite": 2.0,
+        "Bronzor": 1.0,
+        "Elekid": 1.0,
+        "Abra": 2.0,
+        "Gastly": 3.0,
+        "Lickitung": 1.0,
+        "Dwebble": 3.0,
+        "Foongus": 3.0,
+        "Cranidos": 3.0,
+        "Buneary": 3.0,
+        "Staryu": 1.0,
+        "Porygon": 4.0,
+        "Timburr": 1.0,
+        "Tirtouga": 1.0,
+        "Natu": 4.0,
+        "Growlithe": 1.0,
+        "Onix": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Wailmer",
+      "usage_count": 2,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        41,
+        41,
+        41
+      ],
+      "abilities_json": {
+        "waterveil": 2.0
+      },
+      "items_json": {
+        "choicescarf": 2.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/200/76/196": 2.0
+      },
+      "moves_json": {
+        "waterspout": 2.0,
+        "hydropump": 2.0,
+        "icebeam": 2.0,
+        "hiddenpowergrass": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Treecko": 1.0,
+        "Onix": 1.0,
+        "Aron": 1.0,
+        "Pansage": 1.0,
+        "Riolu": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Wingull",
+      "usage_count": 2,
+      "usage_pct": 1.72,
+      "viability_json": [
+        1,
+        67,
+        67,
+        67
+      ],
+      "abilities_json": {
+        "raindish": 2.0
+      },
+      "items_json": {
+        "lifeorb": 2.0
+      },
+      "spreads_json": {
+        "Timid:36/0/0/236/0/236": 2.0
+      },
+      "moves_json": {
+        "scald": 2.0,
+        "icebeam": 2.0,
+        "raindance": 2.0,
+        "hurricane": 2.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Chinchou": 1.0,
+        "Drilbur": 1.0,
+        "Porygon": 1.0,
+        "Natu": 1.0,
+        "Croagunk": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Woobat",
+      "usage_count": 2,
+      "usage_pct": 3.45,
+      "viability_json": [
+        2,
+        70,
+        70,
+        70
+      ],
+      "abilities_json": {
+        "simple": 1.0,
+        "klutz": 1.0
+      },
+      "items_json": {
+        "rockyhelmet": 1.0,
+        "flameorb": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/236/92/180": 1.0,
+        "Timid:0/0/92/236/0/180": 1.0
+      },
+      "moves_json": {
+        "calmmind": 1.0,
+        "storedpower": 1.0,
+        "toxic": 1.0,
+        "heatwave": 2.0,
+        "psychic": 1.0,
+        "uturn": 1.0,
+        "trick": 1.0
+      },
+      "tera_json": {
+        "nothing": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Gastly": 1.0,
+        "Porygon": 1.0,
+        "Drilbur": 1.0,
+        "Carvanha": 1.0,
+        "Omanyte": 1.0,
+        "Buneary": 1.0,
+        "Aron": 1.0,
+        "Dratini": 1.0,
+        "Dwebble": 1.0,
+        "Swinub": 1.0
+      },
+      "counters_json": {}
+    }
+  ]
+}

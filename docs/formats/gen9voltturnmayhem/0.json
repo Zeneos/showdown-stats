@@ -1,0 +1,3023 @@
+{
+  "format_name": "gen9voltturnmayhem",
+  "elo_cutoff": 0,
+  "pokemon": [
+    {
+      "pokemon_name": "Arcanine-Hisui",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        56,
+        56,
+        56
+      ],
+      "abilities_json": {
+        "rockhead": 1.0
+      },
+      "items_json": {
+        "choiceband": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 1.0
+      },
+      "moves_json": {
+        "headsmash": 1.0,
+        "flareblitz": 1.0,
+        "extremespeed": 1.0,
+        "gigaimpact": 1.0
+      },
+      "tera_json": {
+        "normal": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Glimmora": 1.0,
+        "Dragapult": 1.0,
+        "Zamazenta": 1.0,
+        "Hatterene": 1.0,
+        "Porygon-Z": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Azumarill",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        62,
+        62,
+        62
+      ],
+      "abilities_json": {
+        "hugepower": 1.0
+      },
+      "items_json": {
+        "choiceband": 1.0
+      },
+      "spreads_json": {
+        "Adamant:4/252/0/0/0/252": 1.0
+      },
+      "moves_json": {
+        "liquidation": 1.0,
+        "aquajet": 1.0,
+        "playrough": 1.0,
+        "superpower": 1.0
+      },
+      "tera_json": {
+        "water": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Tinkaton": 1.0,
+        "Gholdengo": 1.0,
+        "Noivern": 1.0,
+        "Porygon-Z": 1.0,
+        "Glimmora": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Charizard",
+      "usage_count": 2,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "abilities_json": {
+        "solarpower": 2.0
+      },
+      "items_json": {
+        "choicescarf": 2.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 2.0
+      },
+      "moves_json": {
+        "blastburn": 2.0,
+        "solarbeam": 2.0,
+        "scorchingsands": 2.0,
+        "weatherball": 2.0
+      },
+      "tera_json": {
+        "fire": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Torkoal": 1.0,
+        "Iron Moth": 1.0,
+        "Great Tusk": 1.0,
+        "Corviknight": 1.0,
+        "Roaring Moon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cinderace",
+      "usage_count": 2,
+      "usage_pct": 7.69,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "libero": 2.0
+      },
+      "items_json": {
+        "choiceband": 2.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/0/252": 2.0
+      },
+      "moves_json": {
+        "flareblitz": 2.0,
+        "highjumpkick": 2.0,
+        "courtchange": 1.0,
+        "gigaimpact": 2.0,
+        "suckerpunch": 1.0
+      },
+      "tera_json": {
+        "fire": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Roaring Moon": 2.0,
+        "Ting-Lu": 1.0,
+        "Greninja": 2.0,
+        "Cyclizar": 2.0,
+        "Toxapex": 2.0,
+        "Slaking": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Comfey",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "naturalcure": 1.0
+      },
+      "items_json": {
+        "heavydutyboots": 1.0
+      },
+      "spreads_json": {
+        "Bold:252/0/252/4/0/0": 1.0
+      },
+      "moves_json": {
+        "protect": 1.0,
+        "leechseed": 1.0,
+        "drainingkiss": 1.0,
+        "calmmind": 1.0
+      },
+      "tera_json": {
+        "fairy": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Sceptile": 1.0,
+        "Tinkaton": 1.0,
+        "Torkoal": 1.0,
+        "Slowking-Galar": 1.0,
+        "Lanturn": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Corviknight",
+      "usage_count": 6,
+      "usage_pct": 15.38,
+      "viability_json": [
+        3,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "mirrorarmor": 4.0,
+        "pressure": 2.0
+      },
+      "items_json": {
+        "rockyhelmet": 3.0,
+        "heavydutyboots": 3.0
+      },
+      "spreads_json": {
+        "Impish:4/8/152/0/244/0": 1.0,
+        "Careful:252/0/0/0/252/4": 2.0,
+        "Impish:248/8/252/0/0/0": 3.0
+      },
+      "moves_json": {
+        "roost": 6.0,
+        "defog": 4.0,
+        "bravebird": 6.0,
+        "ironhead": 1.0,
+        "reflect": 2.0,
+        "heavyslam": 2.0,
+        "bodypress": 3.0
+      },
+      "tera_json": {
+        "flying": 3.0,
+        "grass": 3.0
+      },
+      "happiness_json": {
+        "255": 6.0
+      },
+      "teammates_json": {
+        "Indeedee": 3.0,
+        "Hydrapple": 1.0,
+        "Primarina": 3.0,
+        "Haxorus": 1.0,
+        "Yanmega": 1.0,
+        "Torkoal": 1.0,
+        "Iron Moth": 1.0,
+        "Charizard": 1.0,
+        "Great Tusk": 1.0,
+        "Roaring Moon": 1.0,
+        "Zamazenta": 2.0,
+        "Ting-Lu": 2.0,
+        "Slaking": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Cyclizar",
+      "usage_count": 7,
+      "usage_pct": 23.08,
+      "viability_json": [
+        3,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "regenerator": 7.0
+      },
+      "items_json": {
+        "choicescarf": 2.0,
+        "heavydutyboots": 4.0,
+        "assaultvest": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/4/0/0/252": 2.0,
+        "Jolly:0/252/0/0/4/252": 4.0,
+        "Timid:0/0/0/252/4/252": 1.0
+      },
+      "moves_json": {
+        "outrage": 6.0,
+        "gigaimpact": 6.0,
+        "rapidspin": 7.0,
+        "knockoff": 6.0,
+        "dracometeor": 1.0,
+        "overheat": 1.0,
+        "hyperbeam": 1.0
+      },
+      "tera_json": {
+        "dragon": 7.0
+      },
+      "happiness_json": {
+        "255": 7.0
+      },
+      "teammates_json": {
+        "Roaring Moon": 2.0,
+        "Ting-Lu": 1.0,
+        "Greninja": 3.0,
+        "Cinderace": 2.0,
+        "Toxapex": 5.0,
+        "Slaking": 1.0,
+        "Dragapult": 3.0,
+        "Lokix": 4.0,
+        "Glimmora": 3.0,
+        "Gholdengo": 4.0,
+        "Scizor": 1.0,
+        "Muk-Alola": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Dragapult",
+      "usage_count": 8,
+      "usage_pct": 26.92,
+      "viability_json": [
+        4,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "infiltrator": 8.0
+      },
+      "items_json": {
+        "choicespecs": 7.0,
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/4/0/252/0/252": 2.0,
+        "Hasty:0/252/0/0/4/252": 1.0,
+        "Timid:0/0/0/252/4/252": 5.0
+      },
+      "moves_json": {
+        "dracometeor": 7.0,
+        "shadowball": 7.0,
+        "hyperbeam": 2.0,
+        "suckerpunch": 2.0,
+        "outrage": 1.0,
+        "hex": 1.0,
+        "psychicfangs": 1.0,
+        "thunderwave": 1.0,
+        "flamethrower": 5.0,
+        "thunderbolt": 4.0,
+        "uturn": 1.0
+      },
+      "tera_json": {
+        "normal": 2.0,
+        "fairy": 1.0,
+        "dragon": 4.0,
+        "ghost": 1.0
+      },
+      "happiness_json": {
+        "255": 8.0
+      },
+      "teammates_json": {
+        "Galvantula": 2.0,
+        "Great Tusk": 2.0,
+        "Kleavor": 2.0,
+        "Ninetales": 2.0,
+        "Toxapex": 5.0,
+        "Hoopa-Unbound": 1.0,
+        "Slaking": 1.0,
+        "Gliscor": 1.0,
+        "Weezing-Galar": 1.0,
+        "Sneasler": 1.0,
+        "Lokix": 3.0,
+        "Glimmora": 4.0,
+        "Gholdengo": 3.0,
+        "Cyclizar": 3.0,
+        "Zamazenta": 1.0,
+        "Hatterene": 1.0,
+        "Porygon-Z": 1.0,
+        "Arcanine-Hisui": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Enamorus",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        76,
+        76,
+        76
+      ],
+      "abilities_json": {
+        "contrary": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/0/252": 1.0
+      },
+      "moves_json": {
+        "moonblast": 1.0,
+        "earthpower": 1.0,
+        "mysticalfire": 1.0,
+        "healingwish": 1.0
+      },
+      "tera_json": {
+        "fairy": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Iron Valiant": 1.0,
+        "Toxapex": 1.0,
+        "Iron Treads": 1.0,
+        "Gholdengo": 1.0,
+        "Samurott-Hisui": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Flareon",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        44,
+        44,
+        44
+      ],
+      "abilities_json": {
+        "flashfire": 1.0
+      },
+      "items_json": {
+        "flameplate": 1.0
+      },
+      "spreads_json": {
+        "Lonely:252/252/0/4/0/0": 1.0
+      },
+      "moves_json": {
+        "flareblitz": 1.0,
+        "quickattack": 1.0,
+        "firespin": 1.0,
+        "babydolleyes": 1.0
+      },
+      "tera_json": {
+        "fire": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Umbreon": 1.0,
+        "Leafeon": 1.0,
+        "Sylveon": 1.0,
+        "Vaporeon": 1.0,
+        "Jolteon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Galvantula",
+      "usage_count": 3,
+      "usage_pct": 11.54,
+      "viability_json": [
+        2,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "compoundeyes": 2.0,
+        "swarm": 1.0
+      },
+      "items_json": {
+        "focussash": 3.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/0/252": 2.0,
+        "Hasty:0/4/0/252/0/252": 1.0
+      },
+      "moves_json": {
+        "thunder": 3.0,
+        "gigadrain": 2.0,
+        "protect": 2.0,
+        "stickyweb": 3.0,
+        "bugbuzz": 1.0,
+        "suckerpunch": 1.0
+      },
+      "tera_json": {
+        "grass": 2.0,
+        "bug": 1.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Dragapult": 2.0,
+        "Great Tusk": 2.0,
+        "Kleavor": 2.0,
+        "Ninetales": 2.0,
+        "Toxapex": 2.0,
+        "Pelipper": 1.0,
+        "Talonflame": 1.0,
+        "Gholdengo": 1.0,
+        "Glimmora": 1.0,
+        "Sylveon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Garchomp",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        43,
+        43,
+        43
+      ],
+      "abilities_json": {
+        "roughskin": 1.0
+      },
+      "items_json": {
+        "rockyhelmet": 1.0
+      },
+      "spreads_json": {
+        "Naive:0/252/0/4/0/252": 1.0
+      },
+      "moves_json": {
+        "dracometeor": 1.0,
+        "earthquake": 1.0,
+        "ironhead": 1.0,
+        "liquidation": 1.0
+      },
+      "tera_json": {
+        "dragon": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Iron Crown": 1.0,
+        "Ninetales": 1.0,
+        "Gholdengo": 1.0,
+        "Tornadus": 1.0,
+        "Ogerpon-Wellspring": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Gholdengo",
+      "usage_count": 11,
+      "usage_pct": 38.46,
+      "viability_json": [
+        8,
+        76,
+        76,
+        67
+      ],
+      "abilities_json": {
+        "goodasgold": 11.0
+      },
+      "items_json": {
+        "choicespecs": 2.0,
+        "airballoon": 2.0,
+        "choicescarf": 7.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 8.0,
+        "Timid:4/0/0/252/0/252": 1.0,
+        "Bold:252/0/196/0/0/60": 1.0,
+        "Modest:252/0/0/252/0/0": 1.0
+      },
+      "moves_json": {
+        "makeitrain": 11.0,
+        "shadowball": 10.0,
+        "trick": 2.0,
+        "thunderbolt": 5.0,
+        "nastyplot": 1.0,
+        "recover": 3.0,
+        "focusblast": 3.0,
+        "thunder": 1.0,
+        "hex": 1.0,
+        "thunderwave": 2.0,
+        "psyshock": 4.0,
+        "hyperbeam": 1.0
+      },
+      "tera_json": {
+        "steel": 7.0,
+        "fairy": 1.0,
+        "stellar": 1.0,
+        "flying": 1.0,
+        "normal": 1.0
+      },
+      "happiness_json": {
+        "255": 11.0
+      },
+      "teammates_json": {
+        "Weezing-Galar": 1.0,
+        "Hydrapple": 1.0,
+        "Toxapex": 5.0,
+        "Landorus-Therian": 1.0,
+        "Typhlosion-Hisui": 1.0,
+        "Iron Valiant": 1.0,
+        "Iron Treads": 1.0,
+        "Enamorus": 1.0,
+        "Samurott-Hisui": 2.0,
+        "Pelipper": 1.0,
+        "Talonflame": 1.0,
+        "Galvantula": 1.0,
+        "Glimmora": 5.0,
+        "Sylveon": 1.0,
+        "Iron Crown": 1.0,
+        "Ninetales": 1.0,
+        "Tornadus": 1.0,
+        "Ogerpon-Wellspring": 1.0,
+        "Garchomp": 1.0,
+        "Quaquaval": 1.0,
+        "Kleavor": 1.0,
+        "Rillaboom": 1.0,
+        "Tornadus-Therian": 1.0,
+        "Dragapult": 3.0,
+        "Lokix": 4.0,
+        "Cyclizar": 4.0,
+        "Tinkaton": 1.0,
+        "Azumarill": 1.0,
+        "Noivern": 1.0,
+        "Porygon-Z": 1.0,
+        "Greninja": 1.0,
+        "Scizor": 1.0,
+        "Muk-Alola": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Glimmora",
+      "usage_count": 7,
+      "usage_pct": 23.08,
+      "viability_json": [
+        4,
+        62,
+        62,
+        62
+      ],
+      "abilities_json": {
+        "toxicdebris": 7.0
+      },
+      "items_json": {
+        "focussash": 7.0
+      },
+      "spreads_json": {
+        "Naive:252/4/0/0/0/252": 1.0,
+        "Naive:112/0/0/144/0/252": 4.0,
+        "Timid:4/0/0/252/0/252": 1.0,
+        "Timid:0/0/4/252/0/252": 1.0
+      },
+      "moves_json": {
+        "spikyshield": 2.0,
+        "mortalspin": 7.0,
+        "stealthrock": 7.0,
+        "earthpower": 6.0,
+        "powergem": 5.0,
+        "spikes": 1.0
+      },
+      "tera_json": {
+        "flying": 1.0,
+        "rock": 5.0,
+        "ghost": 1.0
+      },
+      "happiness_json": {
+        "255": 7.0
+      },
+      "teammates_json": {
+        "Pelipper": 1.0,
+        "Talonflame": 1.0,
+        "Galvantula": 1.0,
+        "Gholdengo": 5.0,
+        "Sylveon": 1.0,
+        "Dragapult": 4.0,
+        "Lokix": 3.0,
+        "Toxapex": 3.0,
+        "Cyclizar": 3.0,
+        "Tinkaton": 1.0,
+        "Azumarill": 1.0,
+        "Noivern": 1.0,
+        "Porygon-Z": 2.0,
+        "Zamazenta": 1.0,
+        "Hatterene": 1.0,
+        "Arcanine-Hisui": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Gliscor",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        51,
+        51,
+        51
+      ],
+      "abilities_json": {
+        "poisonheal": 1.0
+      },
+      "items_json": {
+        "toxicorb": 1.0
+      },
+      "spreads_json": {
+        "Impish:252/0/252/0/4/0": 1.0
+      },
+      "moves_json": {
+        "knockoff": 1.0,
+        "protect": 1.0,
+        "fling": 1.0,
+        "stealthrock": 1.0
+      },
+      "tera_json": {
+        "water": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Hoopa-Unbound": 1.0,
+        "Slaking": 1.0,
+        "Weezing-Galar": 1.0,
+        "Sneasler": 1.0,
+        "Dragapult": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Great Tusk",
+      "usage_count": 6,
+      "usage_pct": 19.23,
+      "viability_json": [
+        3,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "protosynthesis": 6.0
+      },
+      "items_json": {
+        "choiceband": 2.0,
+        "heavydutyboots": 4.0
+      },
+      "spreads_json": {
+        "Jolly:248/4/4/0/0/252": 2.0,
+        "Careful:0/252/0/0/252/4": 2.0,
+        "Jolly:0/252/0/0/4/252": 2.0
+      },
+      "moves_json": {
+        "headlongrush": 4.0,
+        "closecombat": 4.0,
+        "knockoff": 4.0,
+        "rapidspin": 6.0,
+        "stealthrock": 2.0,
+        "earthquake": 2.0,
+        "icespinner": 2.0
+      },
+      "tera_json": {
+        "steel": 2.0,
+        "ground": 2.0,
+        "water": 2.0
+      },
+      "happiness_json": {
+        "255": 6.0
+      },
+      "teammates_json": {
+        "Galvantula": 2.0,
+        "Dragapult": 2.0,
+        "Kleavor": 2.0,
+        "Ninetales": 2.0,
+        "Toxapex": 2.0,
+        "Torkoal": 1.0,
+        "Iron Moth": 1.0,
+        "Charizard": 1.0,
+        "Corviknight": 1.0,
+        "Roaring Moon": 1.0,
+        "Kingambit": 2.0,
+        "Hydrapple": 2.0,
+        "Ursaluna": 2.0,
+        "Landorus-Therian": 2.0,
+        "Lokix": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Greninja",
+      "usage_count": 5,
+      "usage_pct": 19.23,
+      "viability_json": [
+        3,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "protean": 5.0
+      },
+      "items_json": {
+        "choicescarf": 2.0,
+        "choicespecs": 3.0
+      },
+      "spreads_json": {
+        "Naive:0/252/0/4/0/252": 2.0,
+        "Timid:0/0/0/252/4/252": 3.0
+      },
+      "moves_json": {
+        "gigaimpact": 2.0,
+        "grassknot": 2.0,
+        "icepunch": 1.0,
+        "liquidation": 2.0,
+        "icebeam": 3.0,
+        "hydrocannon": 3.0,
+        "watershuriken": 3.0,
+        "sludgewave": 2.0,
+        "hyperbeam": 1.0,
+        "darkpulse": 1.0
+      },
+      "tera_json": {
+        "water": 5.0
+      },
+      "happiness_json": {
+        "255": 5.0
+      },
+      "teammates_json": {
+        "Roaring Moon": 2.0,
+        "Ting-Lu": 1.0,
+        "Cinderace": 2.0,
+        "Cyclizar": 3.0,
+        "Toxapex": 2.0,
+        "Slaking": 1.0,
+        "Samurott-Hisui": 2.0,
+        "Kleavor": 2.0,
+        "Landorus-Therian": 2.0,
+        "Zoroark-Hisui": 2.0,
+        "Porygon-Z": 2.0,
+        "Lokix": 1.0,
+        "Gholdengo": 1.0,
+        "Scizor": 1.0,
+        "Muk-Alola": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Hatterene",
+      "usage_count": 2,
+      "usage_pct": 3.85,
+      "viability_json": [
+        2,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "magicbounce": 2.0
+      },
+      "items_json": {
+        "heavydutyboots": 1.0,
+        "ejectbutton": 1.0
+      },
+      "spreads_json": {
+        "Quiet:252/0/0/252/4/0": 1.0,
+        "Bold:252/0/200/0/0/56": 1.0
+      },
+      "moves_json": {
+        "drainingkiss": 1.0,
+        "psychicnoise": 2.0,
+        "nuzzle": 2.0,
+        "painsplit": 1.0,
+        "healingwish": 1.0,
+        "dazzlinggleam": 1.0
+      },
+      "tera_json": {
+        "dark": 1.0,
+        "steel": 1.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Glimmora": 1.0,
+        "Dragapult": 1.0,
+        "Zamazenta": 1.0,
+        "Porygon-Z": 1.0,
+        "Arcanine-Hisui": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Haxorus",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "moldbreaker": 1.0
+      },
+      "items_json": {
+        "choiceband": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 1.0
+      },
+      "moves_json": {
+        "xscissor": 1.0,
+        "outrage": 1.0,
+        "ironhead": 1.0,
+        "earthquake": 1.0
+      },
+      "tera_json": {
+        "steel": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Indeedee": 1.0,
+        "Hydrapple": 1.0,
+        "Primarina": 1.0,
+        "Corviknight": 1.0,
+        "Yanmega": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Hoopa-Unbound",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        51,
+        51,
+        51
+      ],
+      "abilities_json": {
+        "magician": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Hasty:0/4/0/252/0/252": 1.0
+      },
+      "moves_json": {
+        "psychic": 1.0,
+        "thunderbolt": 1.0,
+        "hyperspacefury": 1.0,
+        "focusblast": 1.0
+      },
+      "tera_json": {
+        "fairy": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Slaking": 1.0,
+        "Gliscor": 1.0,
+        "Weezing-Galar": 1.0,
+        "Sneasler": 1.0,
+        "Dragapult": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Hydrapple",
+      "usage_count": 4,
+      "usage_pct": 15.38,
+      "viability_json": [
+        3,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "regenerator": 4.0
+      },
+      "items_json": {
+        "lifeorb": 1.0,
+        "assaultvest": 1.0,
+        "widelens": 2.0
+      },
+      "spreads_json": {
+        "Modest:56/0/192/252/8/0": 1.0,
+        "Sassy:252/0/0/4/252/0": 1.0,
+        "Quiet:248/8/0/252/0/0": 2.0
+      },
+      "moves_json": {
+        "leafstorm": 4.0,
+        "dracometeor": 4.0,
+        "protect": 1.0,
+        "earthpower": 4.0,
+        "dragontail": 1.0,
+        "gyroball": 2.0
+      },
+      "tera_json": {
+        "grass": 1.0,
+        "steel": 3.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Indeedee": 1.0,
+        "Primarina": 1.0,
+        "Haxorus": 1.0,
+        "Corviknight": 1.0,
+        "Yanmega": 1.0,
+        "Weezing-Galar": 1.0,
+        "Toxapex": 1.0,
+        "Landorus-Therian": 3.0,
+        "Gholdengo": 1.0,
+        "Typhlosion-Hisui": 1.0,
+        "Kingambit": 2.0,
+        "Ursaluna": 2.0,
+        "Great Tusk": 2.0,
+        "Lokix": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Indeedee",
+      "usage_count": 4,
+      "usage_pct": 11.54,
+      "viability_json": [
+        2,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "psychicsurge": 4.0
+      },
+      "items_json": {
+        "laggingtail": 1.0,
+        "choicescarf": 3.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 4.0
+      },
+      "moves_json": {
+        "expandingforce": 4.0,
+        "trick": 1.0,
+        "protect": 1.0,
+        "hypervoice": 4.0,
+        "dazzlinggleam": 3.0,
+        "encore": 3.0
+      },
+      "tera_json": {
+        "psychic": 1.0,
+        "fairy": 3.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Hydrapple": 1.0,
+        "Primarina": 3.0,
+        "Haxorus": 1.0,
+        "Corviknight": 3.0,
+        "Yanmega": 1.0,
+        "Zamazenta": 2.0,
+        "Ting-Lu": 2.0,
+        "Slaking": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Iron Crown",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        43,
+        43,
+        43
+      ],
+      "abilities_json": {
+        "quarkdrive": 1.0
+      },
+      "items_json": {
+        "choicespecs": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 1.0
+      },
+      "moves_json": {
+        "tachyoncutter": 1.0,
+        "futuresight": 1.0,
+        "psychicnoise": 1.0,
+        "airslash": 1.0
+      },
+      "tera_json": {
+        "steel": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Ninetales": 1.0,
+        "Gholdengo": 1.0,
+        "Tornadus": 1.0,
+        "Ogerpon-Wellspring": 1.0,
+        "Garchomp": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Iron Moth",
+      "usage_count": 2,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "abilities_json": {
+        "quarkdrive": 2.0
+      },
+      "items_json": {
+        "choicescarf": 2.0
+      },
+      "spreads_json": {
+        "Modest:48/0/0/252/0/208": 2.0
+      },
+      "moves_json": {
+        "overheat": 2.0,
+        "sludgewave": 2.0,
+        "solarbeam": 2.0,
+        "discharge": 2.0
+      },
+      "tera_json": {
+        "fire": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Torkoal": 1.0,
+        "Charizard": 1.0,
+        "Great Tusk": 1.0,
+        "Corviknight": 1.0,
+        "Roaring Moon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Iron Treads",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        76,
+        76,
+        76
+      ],
+      "abilities_json": {
+        "quarkdrive": 1.0
+      },
+      "items_json": {
+        "leftovers": 1.0
+      },
+      "spreads_json": {
+        "Jolly:196/60/0/0/0/252": 1.0
+      },
+      "moves_json": {
+        "stealthrock": 1.0,
+        "earthquake": 1.0,
+        "rapidspin": 1.0,
+        "knockoff": 1.0
+      },
+      "tera_json": {
+        "ghost": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Iron Valiant": 1.0,
+        "Toxapex": 1.0,
+        "Enamorus": 1.0,
+        "Gholdengo": 1.0,
+        "Samurott-Hisui": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Iron Valiant",
+      "usage_count": 2,
+      "usage_pct": 3.85,
+      "viability_json": [
+        2,
+        76,
+        76,
+        76
+      ],
+      "abilities_json": {
+        "quarkdrive": 2.0
+      },
+      "items_json": {
+        "heavydutyboots": 1.0,
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Naive:0/4/0/252/0/252": 1.0,
+        "Timid:0/0/0/252/4/252": 1.0
+      },
+      "moves_json": {
+        "protect": 1.0,
+        "moonblast": 2.0,
+        "vacuumwave": 2.0,
+        "knockoff": 1.0,
+        "aurasphere": 1.0,
+        "encore": 1.0
+      },
+      "tera_json": {
+        "normal": 1.0,
+        "fairy": 1.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Toxapex": 1.0,
+        "Iron Treads": 1.0,
+        "Enamorus": 1.0,
+        "Gholdengo": 1.0,
+        "Samurott-Hisui": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Jolteon",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        44,
+        44,
+        44
+      ],
+      "abilities_json": {
+        "voltabsorb": 1.0
+      },
+      "items_json": {
+        "zapplate": 1.0
+      },
+      "spreads_json": {
+        "Hasty:0/252/0/4/0/252": 1.0
+      },
+      "moves_json": {
+        "thunder": 1.0,
+        "quickattack": 1.0,
+        "pinmissile": 1.0,
+        "babydolleyes": 1.0
+      },
+      "tera_json": {
+        "electric": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Umbreon": 1.0,
+        "Leafeon": 1.0,
+        "Sylveon": 1.0,
+        "Vaporeon": 1.0,
+        "Flareon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Kingambit",
+      "usage_count": 3,
+      "usage_pct": 7.69,
+      "viability_json": [
+        2,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "supremeoverlord": 3.0
+      },
+      "items_json": {
+        "blackglasses": 3.0
+      },
+      "spreads_json": {
+        "Adamant:252/252/0/0/0/4": 1.0,
+        "Adamant:252/252/0/0/4/0": 2.0
+      },
+      "moves_json": {
+        "kowtowcleave": 3.0,
+        "suckerpunch": 3.0,
+        "protect": 3.0,
+        "stealthrock": 1.0,
+        "ironhead": 2.0
+      },
+      "tera_json": {
+        "dark": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Hydrapple": 2.0,
+        "Ursaluna": 2.0,
+        "Great Tusk": 2.0,
+        "Landorus-Therian": 2.0,
+        "Lokix": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Kleavor",
+      "usage_count": 5,
+      "usage_pct": 19.23,
+      "viability_json": [
+        3,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "sharpness": 5.0
+      },
+      "items_json": {
+        "widelens": 2.0,
+        "heavydutyboots": 1.0,
+        "choicescarf": 2.0
+      },
+      "spreads_json": {
+        "Jolly:4/252/0/0/0/252": 2.0,
+        "Jolly:0/252/0/0/4/252": 3.0
+      },
+      "moves_json": {
+        "stoneaxe": 5.0,
+        "nightslash": 4.0,
+        "lunge": 2.0,
+        "protect": 2.0,
+        "xscissor": 3.0,
+        "quickattack": 1.0,
+        "closecombat": 3.0
+      },
+      "tera_json": {
+        "dark": 4.0,
+        "bug": 1.0
+      },
+      "happiness_json": {
+        "255": 5.0
+      },
+      "teammates_json": {
+        "Galvantula": 2.0,
+        "Dragapult": 2.0,
+        "Great Tusk": 2.0,
+        "Ninetales": 2.0,
+        "Toxapex": 2.0,
+        "Samurott-Hisui": 3.0,
+        "Quaquaval": 1.0,
+        "Gholdengo": 1.0,
+        "Rillaboom": 1.0,
+        "Tornadus-Therian": 1.0,
+        "Landorus-Therian": 2.0,
+        "Greninja": 2.0,
+        "Zoroark-Hisui": 2.0,
+        "Porygon-Z": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Landorus-Therian",
+      "usage_count": 5,
+      "usage_pct": 19.23,
+      "viability_json": [
+        3,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "intimidate": 5.0
+      },
+      "items_json": {
+        "choicescarf": 1.0,
+        "heavydutyboots": 2.0,
+        "choiceband": 2.0
+      },
+      "spreads_json": {
+        "Naive:0/252/0/4/0/252": 3.0,
+        "Adamant:252/252/0/0/4/0": 2.0
+      },
+      "moves_json": {
+        "stealthrock": 3.0,
+        "earthquake": 5.0,
+        "terablast": 5.0,
+        "taunt": 1.0,
+        "smackdown": 2.0,
+        "hammerarm": 2.0,
+        "gigaimpact": 2.0
+      },
+      "tera_json": {
+        "flying": 3.0,
+        "fire": 2.0
+      },
+      "happiness_json": {
+        "255": 5.0
+      },
+      "teammates_json": {
+        "Weezing-Galar": 1.0,
+        "Hydrapple": 3.0,
+        "Toxapex": 1.0,
+        "Gholdengo": 1.0,
+        "Typhlosion-Hisui": 1.0,
+        "Kingambit": 2.0,
+        "Ursaluna": 2.0,
+        "Great Tusk": 2.0,
+        "Lokix": 2.0,
+        "Samurott-Hisui": 2.0,
+        "Kleavor": 2.0,
+        "Greninja": 2.0,
+        "Zoroark-Hisui": 2.0,
+        "Porygon-Z": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Lanturn",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "waterabsorb": 1.0
+      },
+      "items_json": {
+        "shellbell": 1.0
+      },
+      "spreads_json": {
+        "Modest:252/0/0/252/4/0": 1.0
+      },
+      "moves_json": {
+        "icywind": 1.0,
+        "terablast": 1.0,
+        "dazzlinggleam": 1.0,
+        "electroweb": 1.0
+      },
+      "tera_json": {
+        "ground": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Comfey": 1.0,
+        "Sceptile": 1.0,
+        "Tinkaton": 1.0,
+        "Torkoal": 1.0,
+        "Slowking-Galar": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Leafeon",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        44,
+        44,
+        44
+      ],
+      "abilities_json": {
+        "leafguard": 1.0
+      },
+      "items_json": {
+        "meadowplate": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 1.0
+      },
+      "moves_json": {
+        "leafblade": 1.0,
+        "quickattack": 1.0,
+        "xscissor": 1.0,
+        "babydolleyes": 1.0
+      },
+      "tera_json": {
+        "grass": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Umbreon": 1.0,
+        "Sylveon": 1.0,
+        "Vaporeon": 1.0,
+        "Jolteon": 1.0,
+        "Flareon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Lokix",
+      "usage_count": 7,
+      "usage_pct": 23.08,
+      "viability_json": [
+        3,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "tintedlens": 7.0
+      },
+      "items_json": {
+        "choiceband": 6.0,
+        "heavydutyboots": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 7.0
+      },
+      "moves_json": {
+        "suckerpunch": 6.0,
+        "firstimpression": 7.0,
+        "knockoff": 7.0,
+        "axekick": 4.0,
+        "leechlife": 3.0,
+        "protect": 1.0
+      },
+      "tera_json": {
+        "bug": 7.0
+      },
+      "happiness_json": {
+        "255": 7.0
+      },
+      "teammates_json": {
+        "Dragapult": 3.0,
+        "Toxapex": 3.0,
+        "Glimmora": 3.0,
+        "Gholdengo": 4.0,
+        "Cyclizar": 4.0,
+        "Kingambit": 2.0,
+        "Hydrapple": 2.0,
+        "Ursaluna": 2.0,
+        "Great Tusk": 2.0,
+        "Landorus-Therian": 2.0,
+        "Greninja": 1.0,
+        "Scizor": 1.0,
+        "Muk-Alola": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Muk-Alola",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "poisontouch": 1.0
+      },
+      "items_json": {
+        "leftovers": 1.0
+      },
+      "spreads_json": {
+        "Careful:252/0/112/0/144/0": 1.0
+      },
+      "moves_json": {
+        "protect": 1.0,
+        "knockoff": 1.0,
+        "poisonjab": 1.0,
+        "drainpunch": 1.0
+      },
+      "tera_json": {
+        "poison": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Lokix": 1.0,
+        "Gholdengo": 1.0,
+        "Greninja": 1.0,
+        "Scizor": 1.0,
+        "Cyclizar": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Ninetales",
+      "usage_count": 3,
+      "usage_pct": 11.54,
+      "viability_json": [
+        2,
+        69,
+        69,
+        69
+      ],
+      "abilities_json": {
+        "drought": 3.0
+      },
+      "items_json": {
+        "choicespecs": 3.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 2.0,
+        "Hasty:0/4/0/252/0/252": 1.0
+      },
+      "moves_json": {
+        "overheat": 3.0,
+        "solarbeam": 3.0,
+        "psyshock": 2.0,
+        "scorchingsands": 3.0,
+        "quickattack": 1.0
+      },
+      "tera_json": {
+        "grass": 2.0,
+        "fire": 1.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Galvantula": 2.0,
+        "Dragapult": 2.0,
+        "Great Tusk": 2.0,
+        "Kleavor": 2.0,
+        "Toxapex": 2.0,
+        "Iron Crown": 1.0,
+        "Gholdengo": 1.0,
+        "Tornadus": 1.0,
+        "Ogerpon-Wellspring": 1.0,
+        "Garchomp": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Noivern",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        62,
+        62,
+        62
+      ],
+      "abilities_json": {
+        "frisk": 1.0
+      },
+      "items_json": {
+        "choicespecs": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/0/4/252/0/252": 1.0
+      },
+      "moves_json": {
+        "boomburst": 1.0,
+        "dracometeor": 1.0,
+        "airslash": 1.0,
+        "flamethrower": 1.0
+      },
+      "tera_json": {
+        "normal": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Tinkaton": 1.0,
+        "Azumarill": 1.0,
+        "Gholdengo": 1.0,
+        "Porygon-Z": 1.0,
+        "Glimmora": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Ogerpon-Wellspring",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        43,
+        43,
+        43
+      ],
+      "abilities_json": {
+        "waterabsorb": 1.0
+      },
+      "items_json": {
+        "wellspringmask": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 1.0
+      },
+      "moves_json": {
+        "ivycudgel": 1.0,
+        "spikyshield": 1.0,
+        "hornleech": 1.0,
+        "quickattack": 1.0
+      },
+      "tera_json": {
+        "water": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Iron Crown": 1.0,
+        "Ninetales": 1.0,
+        "Gholdengo": 1.0,
+        "Tornadus": 1.0,
+        "Garchomp": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Pelipper",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        39,
+        39,
+        39
+      ],
+      "abilities_json": {
+        "drizzle": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 1.0
+      },
+      "moves_json": {
+        "hurricane": 1.0,
+        "icebeam": 1.0,
+        "weatherball": 1.0,
+        "quickattack": 1.0
+      },
+      "tera_json": {
+        "ground": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Talonflame": 1.0,
+        "Galvantula": 1.0,
+        "Gholdengo": 1.0,
+        "Glimmora": 1.0,
+        "Sylveon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Porygon-Z",
+      "usage_count": 4,
+      "usage_pct": 15.38,
+      "viability_json": [
+        3,
+        62,
+        62,
+        62
+      ],
+      "abilities_json": {
+        "adaptability": 3.0,
+        "download": 1.0
+      },
+      "items_json": {
+        "choicescarf": 4.0
+      },
+      "spreads_json": {
+        "Timid:4/0/0/252/0/252": 1.0,
+        "Timid:0/0/4/252/0/252": 1.0,
+        "Timid:0/0/0/252/4/252": 2.0
+      },
+      "moves_json": {
+        "hyperbeam": 4.0,
+        "icebeam": 4.0,
+        "thunderbolt": 3.0,
+        "thunderwave": 1.0,
+        "shadowball": 3.0,
+        "terablast": 1.0
+      },
+      "tera_json": {
+        "normal": 1.0,
+        "ground": 1.0,
+        "ghost": 2.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Tinkaton": 1.0,
+        "Azumarill": 1.0,
+        "Gholdengo": 1.0,
+        "Noivern": 1.0,
+        "Glimmora": 2.0,
+        "Dragapult": 1.0,
+        "Zamazenta": 1.0,
+        "Hatterene": 1.0,
+        "Arcanine-Hisui": 1.0,
+        "Samurott-Hisui": 2.0,
+        "Kleavor": 2.0,
+        "Landorus-Therian": 2.0,
+        "Greninja": 2.0,
+        "Zoroark-Hisui": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Primarina",
+      "usage_count": 4,
+      "usage_pct": 11.54,
+      "viability_json": [
+        2,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "torrent": 4.0
+      },
+      "items_json": {
+        "choicespecs": 4.0
+      },
+      "spreads_json": {
+        "Modest:96/0/0/252/0/4": 1.0,
+        "Modest:252/0/0/252/4/0": 3.0
+      },
+      "moves_json": {
+        "hydrocannon": 4.0,
+        "moonblast": 4.0,
+        "energyball": 4.0,
+        "icebeam": 1.0,
+        "psychicnoise": 3.0
+      },
+      "tera_json": {
+        "steel": 1.0,
+        "water": 3.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Indeedee": 3.0,
+        "Hydrapple": 1.0,
+        "Haxorus": 1.0,
+        "Corviknight": 3.0,
+        "Yanmega": 1.0,
+        "Zamazenta": 2.0,
+        "Ting-Lu": 2.0,
+        "Slaking": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Quaquaval",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "moxie": 1.0
+      },
+      "items_json": {
+        "heavydutyboots": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 1.0
+      },
+      "moves_json": {
+        "aquastep": 1.0,
+        "closecombat": 1.0,
+        "roost": 1.0,
+        "rapidspin": 1.0
+      },
+      "tera_json": {
+        "water": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Samurott-Hisui": 1.0,
+        "Kleavor": 1.0,
+        "Gholdengo": 1.0,
+        "Rillaboom": 1.0,
+        "Tornadus-Therian": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Rillaboom",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "grassysurge": 1.0
+      },
+      "items_json": {
+        "choiceband": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 1.0
+      },
+      "moves_json": {
+        "grassyglide": 1.0,
+        "knockoff": 1.0,
+        "woodhammer": 1.0,
+        "highhorsepower": 1.0
+      },
+      "tera_json": {
+        "grass": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Samurott-Hisui": 1.0,
+        "Quaquaval": 1.0,
+        "Kleavor": 1.0,
+        "Gholdengo": 1.0,
+        "Tornadus-Therian": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Roaring Moon",
+      "usage_count": 4,
+      "usage_pct": 11.54,
+      "viability_json": [
+        2,
+        64,
+        64,
+        64
+      ],
+      "abilities_json": {
+        "protosynthesis": 4.0
+      },
+      "items_json": {
+        "choiceband": 2.0,
+        "choicescarf": 2.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 2.0,
+        "Jolly:0/252/4/0/0/252": 2.0
+      },
+      "moves_json": {
+        "outrage": 4.0,
+        "earthquake": 3.0,
+        "knockoff": 4.0,
+        "gigaimpact": 2.0,
+        "scaleshot": 1.0,
+        "dragondance": 2.0
+      },
+      "tera_json": {
+        "steel": 2.0,
+        "dragon": 2.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Torkoal": 1.0,
+        "Iron Moth": 1.0,
+        "Charizard": 1.0,
+        "Great Tusk": 1.0,
+        "Corviknight": 1.0,
+        "Ting-Lu": 1.0,
+        "Greninja": 2.0,
+        "Cinderace": 2.0,
+        "Cyclizar": 2.0,
+        "Toxapex": 2.0,
+        "Slaking": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Samurott-Hisui",
+      "usage_count": 4,
+      "usage_pct": 15.38,
+      "viability_json": [
+        3,
+        76,
+        76,
+        76
+      ],
+      "abilities_json": {
+        "sharpness": 4.0
+      },
+      "items_json": {
+        "heavydutyboots": 1.0,
+        "choicescarf": 3.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 4.0
+      },
+      "moves_json": {
+        "ceaselessedge": 4.0,
+        "suckerpunch": 3.0,
+        "knockoff": 3.0,
+        "protect": 1.0,
+        "razorshell": 3.0,
+        "sacredsword": 1.0,
+        "aquajet": 1.0
+      },
+      "tera_json": {
+        "ghost": 3.0,
+        "water": 1.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Iron Valiant": 1.0,
+        "Toxapex": 1.0,
+        "Iron Treads": 1.0,
+        "Enamorus": 1.0,
+        "Gholdengo": 2.0,
+        "Quaquaval": 1.0,
+        "Kleavor": 3.0,
+        "Rillaboom": 1.0,
+        "Tornadus-Therian": 1.0,
+        "Landorus-Therian": 2.0,
+        "Greninja": 2.0,
+        "Zoroark-Hisui": 2.0,
+        "Porygon-Z": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Sceptile",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "unburden": 1.0
+      },
+      "items_json": {
+        "whiteherb": 1.0
+      },
+      "spreads_json": {
+        "Lonely:0/252/0/4/0/252": 1.0
+      },
+      "moves_json": {
+        "leafstorm": 1.0,
+        "dragondance": 1.0,
+        "scaleshot": 1.0,
+        "gigaimpact": 1.0
+      },
+      "tera_json": {
+        "grass": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Comfey": 1.0,
+        "Tinkaton": 1.0,
+        "Torkoal": 1.0,
+        "Slowking-Galar": 1.0,
+        "Lanturn": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Scizor",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "technician": 1.0
+      },
+      "items_json": {
+        "choiceband": 1.0
+      },
+      "spreads_json": {
+        "Adamant:248/252/0/0/8/0": 1.0
+      },
+      "moves_json": {
+        "knockoff": 1.0,
+        "bulletpunch": 1.0,
+        "bugbite": 1.0,
+        "gigaimpact": 1.0
+      },
+      "tera_json": {
+        "steel": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Lokix": 1.0,
+        "Gholdengo": 1.0,
+        "Greninja": 1.0,
+        "Cyclizar": 1.0,
+        "Muk-Alola": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Slaking",
+      "usage_count": 5,
+      "usage_pct": 15.38,
+      "viability_json": [
+        3,
+        57,
+        57,
+        57
+      ],
+      "abilities_json": {
+        "truant": 5.0
+      },
+      "items_json": {
+        "choicescarf": 1.0,
+        "choiceband": 4.0
+      },
+      "spreads_json": {
+        "Naive:0/252/0/4/0/252": 1.0,
+        "Adamant:0/252/4/0/0/252": 1.0,
+        "Jolly:0/252/0/0/4/252": 3.0
+      },
+      "moves_json": {
+        "gigaimpact": 5.0,
+        "knockoff": 4.0,
+        "earthquake": 5.0,
+        "thunderbolt": 1.0,
+        "gunkshot": 1.0,
+        "outrage": 1.0,
+        "thunderpunch": 3.0
+      },
+      "tera_json": {
+        "normal": 2.0,
+        "fairy": 3.0
+      },
+      "happiness_json": {
+        "255": 5.0
+      },
+      "teammates_json": {
+        "Hoopa-Unbound": 1.0,
+        "Gliscor": 1.0,
+        "Weezing-Galar": 1.0,
+        "Sneasler": 1.0,
+        "Dragapult": 1.0,
+        "Roaring Moon": 1.0,
+        "Greninja": 1.0,
+        "Cinderace": 1.0,
+        "Cyclizar": 1.0,
+        "Toxapex": 1.0,
+        "Primarina": 2.0,
+        "Zamazenta": 2.0,
+        "Ting-Lu": 2.0,
+        "Corviknight": 2.0,
+        "Indeedee": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Slowking-Galar",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        45,
+        45,
+        45
+      ],
+      "abilities_json": {
+        "regenerator": 1.0
+      },
+      "items_json": {
+        "sitrusberry": 1.0
+      },
+      "spreads_json": {
+        "Modest:252/0/0/252/4/0": 1.0
+      },
+      "moves_json": {
+        "belch": 1.0,
+        "chillyreception": 1.0,
+        "calmmind": 1.0,
+        "curse": 1.0
+      },
+      "tera_json": {
+        "ghost": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Comfey": 1.0,
+        "Sceptile": 1.0,
+        "Tinkaton": 1.0,
+        "Torkoal": 1.0,
+        "Lanturn": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Sneasler",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        51,
+        51,
+        51
+      ],
+      "abilities_json": {
+        "poisontouch": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Adamant:4/252/0/0/0/252": 1.0
+      },
+      "moves_json": {
+        "upperhand": 1.0,
+        "throatchop": 1.0,
+        "closecombat": 1.0,
+        "direclaw": 1.0
+      },
+      "tera_json": {
+        "fighting": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Hoopa-Unbound": 1.0,
+        "Slaking": 1.0,
+        "Gliscor": 1.0,
+        "Weezing-Galar": 1.0,
+        "Dragapult": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Sylveon",
+      "usage_count": 2,
+      "usage_pct": 7.69,
+      "viability_json": [
+        2,
+        44,
+        44,
+        44
+      ],
+      "abilities_json": {
+        "pixilate": 1.0,
+        "cutecharm": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0,
+        "pixieplate": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 1.0,
+        "Quiet:252/4/0/252/0/0": 1.0
+      },
+      "moves_json": {
+        "hyperbeam": 1.0,
+        "psychic": 1.0,
+        "copycat": 1.0,
+        "quickattack": 2.0,
+        "moonblast": 1.0,
+        "shadowball": 1.0,
+        "babydolleyes": 1.0
+      },
+      "tera_json": {
+        "fairy": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Pelipper": 1.0,
+        "Talonflame": 1.0,
+        "Galvantula": 1.0,
+        "Gholdengo": 1.0,
+        "Glimmora": 1.0,
+        "Umbreon": 1.0,
+        "Leafeon": 1.0,
+        "Vaporeon": 1.0,
+        "Jolteon": 1.0,
+        "Flareon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Talonflame",
+      "usage_count": 2,
+      "usage_pct": 3.85,
+      "viability_json": [
+        2,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "galewings": 2.0
+      },
+      "items_json": {
+        "heavydutyboots": 2.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 2.0
+      },
+      "moves_json": {
+        "defog": 2.0,
+        "hurricane": 2.0,
+        "overheat": 2.0,
+        "protect": 1.0,
+        "hyperbeam": 1.0
+      },
+      "tera_json": {
+        "dragon": 1.0,
+        "ground": 1.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Pelipper": 1.0,
+        "Galvantula": 1.0,
+        "Gholdengo": 1.0,
+        "Glimmora": 1.0,
+        "Sylveon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Ting-Lu",
+      "usage_count": 4,
+      "usage_pct": 11.54,
+      "viability_json": [
+        2,
+        57,
+        57,
+        57
+      ],
+      "abilities_json": {
+        "vesselofruin": 4.0
+      },
+      "items_json": {
+        "assaultvest": 1.0,
+        "chestoberry": 3.0
+      },
+      "spreads_json": {
+        "Impish:248/0/252/0/8/0": 1.0,
+        "Adamant:252/252/0/0/4/0": 3.0
+      },
+      "moves_json": {
+        "earthquake": 4.0,
+        "throatchop": 4.0,
+        "stompingtantrum": 1.0,
+        "stealthrock": 1.0,
+        "rest": 3.0,
+        "sleeptalk": 3.0
+      },
+      "tera_json": {
+        "dark": 1.0,
+        "poison": 3.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Roaring Moon": 1.0,
+        "Greninja": 1.0,
+        "Cinderace": 1.0,
+        "Cyclizar": 1.0,
+        "Toxapex": 1.0,
+        "Primarina": 2.0,
+        "Zamazenta": 2.0,
+        "Corviknight": 2.0,
+        "Indeedee": 2.0,
+        "Slaking": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tinkaton",
+      "usage_count": 2,
+      "usage_pct": 7.69,
+      "viability_json": [
+        2,
+        62,
+        62,
+        62
+      ],
+      "abilities_json": {
+        "moldbreaker": 1.0,
+        "owntempo": 1.0
+      },
+      "items_json": {
+        "choiceband": 1.0,
+        "assaultvest": 1.0
+      },
+      "spreads_json": {
+        "Jolly:4/252/0/0/0/252": 1.0,
+        "Hasty:0/252/0/4/0/252": 1.0
+      },
+      "moves_json": {
+        "gigatonhammer": 2.0,
+        "playrough": 1.0,
+        "knockoff": 1.0,
+        "icehammer": 1.0,
+        "drainingkiss": 1.0,
+        "skillswap": 1.0,
+        "swordsdance": 1.0
+      },
+      "tera_json": {
+        "steel": 1.0,
+        "fairy": 1.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Azumarill": 1.0,
+        "Gholdengo": 1.0,
+        "Noivern": 1.0,
+        "Porygon-Z": 1.0,
+        "Glimmora": 1.0,
+        "Comfey": 1.0,
+        "Sceptile": 1.0,
+        "Torkoal": 1.0,
+        "Slowking-Galar": 1.0,
+        "Lanturn": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Torkoal",
+      "usage_count": 3,
+      "usage_pct": 7.69,
+      "viability_json": [
+        2,
+        64,
+        64,
+        64
+      ],
+      "abilities_json": {
+        "drought": 3.0
+      },
+      "items_json": {
+        "heatrock": 2.0,
+        "lifeorb": 1.0
+      },
+      "spreads_json": {
+        "Sassy:248/0/0/8/252/0": 2.0,
+        "Modest:0/0/0/252/4/252": 1.0
+      },
+      "moves_json": {
+        "overheat": 2.0,
+        "rapidspin": 2.0,
+        "stealthrock": 2.0,
+        "willowisp": 2.0,
+        "shellsmash": 1.0,
+        "hyperbeam": 1.0,
+        "sludgebomb": 1.0,
+        "solarbeam": 1.0
+      },
+      "tera_json": {
+        "fire": 3.0
+      },
+      "happiness_json": {
+        "255": 3.0
+      },
+      "teammates_json": {
+        "Iron Moth": 1.0,
+        "Charizard": 1.0,
+        "Great Tusk": 1.0,
+        "Corviknight": 1.0,
+        "Roaring Moon": 1.0,
+        "Comfey": 1.0,
+        "Sceptile": 1.0,
+        "Tinkaton": 1.0,
+        "Slowking-Galar": 1.0,
+        "Lanturn": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tornadus",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        43,
+        43,
+        43
+      ],
+      "abilities_json": {
+        "prankster": 1.0
+      },
+      "items_json": {
+        "covertcloak": 1.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 1.0
+      },
+      "moves_json": {
+        "bleakwindstorm": 1.0,
+        "weatherball": 1.0,
+        "tailwind": 1.0,
+        "metronome": 1.0
+      },
+      "tera_json": {
+        "flying": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Iron Crown": 1.0,
+        "Ninetales": 1.0,
+        "Gholdengo": 1.0,
+        "Ogerpon-Wellspring": 1.0,
+        "Garchomp": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tornadus-Therian",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        55,
+        55,
+        55
+      ],
+      "abilities_json": {
+        "regenerator": 1.0
+      },
+      "items_json": {
+        "heavydutyboots": 1.0
+      },
+      "spreads_json": {
+        "Hasty:0/4/0/252/0/252": 1.0
+      },
+      "moves_json": {
+        "bleakwindstorm": 1.0,
+        "focusblast": 1.0,
+        "knockoff": 1.0,
+        "taunt": 1.0
+      },
+      "tera_json": {
+        "flying": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Samurott-Hisui": 1.0,
+        "Quaquaval": 1.0,
+        "Kleavor": 1.0,
+        "Gholdengo": 1.0,
+        "Rillaboom": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Toxapex",
+      "usage_count": 11,
+      "usage_pct": 34.62,
+      "viability_json": [
+        6,
+        76,
+        76,
+        69
+      ],
+      "abilities_json": {
+        "merciless": 2.0,
+        "regenerator": 9.0
+      },
+      "items_json": {
+        "rockyhelmet": 3.0,
+        "leftovers": 5.0,
+        "assaultvest": 1.0,
+        "blacksludge": 2.0
+      },
+      "spreads_json": {
+        "Sassy:252/0/4/0/252/0": 3.0,
+        "Relaxed:252/0/252/0/4/0": 1.0,
+        "Relaxed:248/0/252/0/8/0": 3.0,
+        "Careful:232/8/160/0/108/0": 4.0
+      },
+      "moves_json": {
+        "lunge": 2.0,
+        "painsplit": 2.0,
+        "banefulbunker": 8.0,
+        "bodyslam": 2.0,
+        "pounce": 2.0,
+        "chillingwater": 2.0,
+        "smackdown": 1.0,
+        "recover": 3.0,
+        "acidspray": 2.0,
+        "icywind": 1.0,
+        "sludgebomb": 1.0,
+        "liquidation": 6.0,
+        "toxic": 6.0,
+        "toxicspikes": 2.0,
+        "poisonjab": 4.0
+      },
+      "tera_json": {
+        "fairy": 2.0,
+        "grass": 1.0,
+        "bug": 1.0,
+        "steel": 1.0,
+        "poison": 6.0
+      },
+      "happiness_json": {
+        "255": 11.0
+      },
+      "teammates_json": {
+        "Galvantula": 2.0,
+        "Dragapult": 5.0,
+        "Great Tusk": 2.0,
+        "Kleavor": 2.0,
+        "Ninetales": 2.0,
+        "Weezing-Galar": 1.0,
+        "Hydrapple": 1.0,
+        "Landorus-Therian": 1.0,
+        "Gholdengo": 5.0,
+        "Typhlosion-Hisui": 1.0,
+        "Iron Valiant": 1.0,
+        "Iron Treads": 1.0,
+        "Enamorus": 1.0,
+        "Samurott-Hisui": 1.0,
+        "Roaring Moon": 2.0,
+        "Ting-Lu": 1.0,
+        "Greninja": 2.0,
+        "Cinderace": 2.0,
+        "Cyclizar": 5.0,
+        "Slaking": 1.0,
+        "Lokix": 3.0,
+        "Glimmora": 3.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Typhlosion-Hisui",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        67,
+        67,
+        67
+      ],
+      "abilities_json": {
+        "blaze": 1.0
+      },
+      "items_json": {
+        "heavydutyboots": 1.0
+      },
+      "spreads_json": {
+        "Hasty:0/4/0/252/0/252": 1.0
+      },
+      "moves_json": {
+        "blastburn": 1.0,
+        "quickattack": 1.0,
+        "infernalparade": 1.0,
+        "willowisp": 1.0
+      },
+      "tera_json": {
+        "fire": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Weezing-Galar": 1.0,
+        "Hydrapple": 1.0,
+        "Toxapex": 1.0,
+        "Landorus-Therian": 1.0,
+        "Gholdengo": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Umbreon",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        44,
+        44,
+        44
+      ],
+      "abilities_json": {
+        "synchronize": 1.0
+      },
+      "items_json": {
+        "dreadplate": 1.0
+      },
+      "spreads_json": {
+        "Quiet:252/4/0/252/0/0": 1.0
+      },
+      "moves_json": {
+        "darkpulse": 1.0,
+        "quickattack": 1.0,
+        "psychic": 1.0,
+        "babydolleyes": 1.0
+      },
+      "tera_json": {
+        "dark": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Leafeon": 1.0,
+        "Sylveon": 1.0,
+        "Vaporeon": 1.0,
+        "Jolteon": 1.0,
+        "Flareon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Ursaluna",
+      "usage_count": 2,
+      "usage_pct": 7.69,
+      "viability_json": [
+        1,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "guts": 2.0
+      },
+      "items_json": {
+        "flameorb": 2.0
+      },
+      "spreads_json": {
+        "Adamant:248/252/0/0/8/0": 2.0
+      },
+      "moves_json": {
+        "facade": 2.0,
+        "taunt": 2.0,
+        "crunch": 2.0,
+        "headlongrush": 2.0
+      },
+      "tera_json": {
+        "normal": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Kingambit": 2.0,
+        "Hydrapple": 2.0,
+        "Great Tusk": 2.0,
+        "Landorus-Therian": 2.0,
+        "Lokix": 2.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Vaporeon",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        44,
+        44,
+        44
+      ],
+      "abilities_json": {
+        "waterabsorb": 1.0
+      },
+      "items_json": {
+        "splashplate": 1.0
+      },
+      "spreads_json": {
+        "Mild:248/8/0/252/0/0": 1.0
+      },
+      "moves_json": {
+        "hydropump": 1.0,
+        "quickattack": 1.0,
+        "aurorabeam": 1.0,
+        "babydolleyes": 1.0
+      },
+      "tera_json": {
+        "water": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Umbreon": 1.0,
+        "Leafeon": 1.0,
+        "Sylveon": 1.0,
+        "Jolteon": 1.0,
+        "Flareon": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Weezing-Galar",
+      "usage_count": 2,
+      "usage_pct": 7.69,
+      "viability_json": [
+        2,
+        67,
+        67,
+        67
+      ],
+      "abilities_json": {
+        "neutralizinggas": 2.0
+      },
+      "items_json": {
+        "heavydutyboots": 1.0,
+        "leftovers": 1.0
+      },
+      "spreads_json": {
+        "Bold:252/0/252/0/4/0": 2.0
+      },
+      "moves_json": {
+        "defog": 2.0,
+        "willowisp": 2.0,
+        "painsplit": 1.0,
+        "dazzlinggleam": 1.0,
+        "toxicspikes": 1.0,
+        "hyperbeam": 1.0
+      },
+      "tera_json": {
+        "dark": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Hydrapple": 1.0,
+        "Toxapex": 1.0,
+        "Landorus-Therian": 1.0,
+        "Gholdengo": 1.0,
+        "Typhlosion-Hisui": 1.0,
+        "Hoopa-Unbound": 1.0,
+        "Slaking": 1.0,
+        "Gliscor": 1.0,
+        "Sneasler": 1.0,
+        "Dragapult": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Yanmega",
+      "usage_count": 1,
+      "usage_pct": 3.85,
+      "viability_json": [
+        1,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "tintedlens": 1.0
+      },
+      "items_json": {
+        "choicescarf": 1.0
+      },
+      "spreads_json": {
+        "Modest:0/0/0/252/4/252": 1.0
+      },
+      "moves_json": {
+        "bugbuzz": 1.0,
+        "airslash": 1.0,
+        "terablast": 1.0,
+        "shadowball": 1.0
+      },
+      "tera_json": {
+        "dragon": 1.0
+      },
+      "happiness_json": {
+        "255": 1.0
+      },
+      "teammates_json": {
+        "Indeedee": 1.0,
+        "Hydrapple": 1.0,
+        "Primarina": 1.0,
+        "Haxorus": 1.0,
+        "Corviknight": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Zamazenta",
+      "usage_count": 4,
+      "usage_pct": 11.54,
+      "viability_json": [
+        2,
+        57,
+        57,
+        57
+      ],
+      "abilities_json": {
+        "dauntlessshield": 4.0
+      },
+      "items_json": {
+        "heavydutyboots": 3.0,
+        "choiceband": 1.0
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 4.0
+      },
+      "moves_json": {
+        "closecombat": 4.0,
+        "psychicfangs": 4.0,
+        "crunch": 4.0,
+        "wildcharge": 3.0,
+        "heavyslam": 1.0
+      },
+      "tera_json": {
+        "poison": 3.0,
+        "dark": 1.0
+      },
+      "happiness_json": {
+        "255": 4.0
+      },
+      "teammates_json": {
+        "Primarina": 2.0,
+        "Ting-Lu": 2.0,
+        "Corviknight": 2.0,
+        "Indeedee": 2.0,
+        "Slaking": 2.0,
+        "Glimmora": 1.0,
+        "Dragapult": 1.0,
+        "Hatterene": 1.0,
+        "Porygon-Z": 1.0,
+        "Arcanine-Hisui": 1.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Zoroark-Hisui",
+      "usage_count": 2,
+      "usage_pct": 7.69,
+      "viability_json": [
+        1,
+        53,
+        53,
+        53
+      ],
+      "abilities_json": {
+        "illusion": 2.0
+      },
+      "items_json": {
+        "choicespecs": 2.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 2.0
+      },
+      "moves_json": {
+        "hyperbeam": 2.0,
+        "shadowball": 2.0,
+        "flamethrower": 2.0,
+        "terablast": 2.0
+      },
+      "tera_json": {
+        "ground": 2.0
+      },
+      "happiness_json": {
+        "255": 2.0
+      },
+      "teammates_json": {
+        "Samurott-Hisui": 2.0,
+        "Kleavor": 2.0,
+        "Landorus-Therian": 2.0,
+        "Greninja": 2.0,
+        "Porygon-Z": 2.0
+      },
+      "counters_json": {}
+    }
+  ]
+}
