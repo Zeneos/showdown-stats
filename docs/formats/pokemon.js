@@ -50,6 +50,8 @@ let abilityDataMapPromise = null;
 let abilityDataMap = null;
 let itemNameMapPromise = null;
 let itemNameMap = null;
+let formatNameMapPromise = null;
+let formatNameMap = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     loadPokemonDetail();
@@ -95,11 +97,13 @@ async function loadPokemonDetail() {
     moveDataMap = await loadMoveDataMap();
     abilityDataMap = await loadAbilityDataMap();
     itemNameMap = await loadItemNameMap();
+    formatNameMap = await loadFormatNameMap();
+    const displayFormatName = getDisplayFormatName(formatName);
 
     const detail = document.getElementById('pokemon-detail');
     if (detail) detail.style.display = 'block';
 
-    document.title = `${entry.pokemon_name} - ${formatName}`;
+    document.title = `${entry.pokemon_name} - ${displayFormatName}`;
 
     const sprite = document.getElementById('pokemon-sprite');
     const spritePaths = getPokemonSpritePaths(entry.pokemon_name);
@@ -124,7 +128,7 @@ async function loadPokemonDetail() {
     }
 
     const formatEl = document.getElementById('pokemon-format');
-    if (formatEl) formatEl.textContent = `Format: ${formatName}`;
+    if (formatEl) formatEl.textContent = `Format: ${displayFormatName}`;
 
     const usageEl = document.getElementById('pokemon-usage');
     if (usageEl) {
@@ -235,6 +239,31 @@ async function loadAbilityDataMap() {
     }
 
     return abilityDataMapPromise;
+}
+
+async function loadFormatNameMap() {
+    if (!formatNameMapPromise) {
+        formatNameMapPromise = fetch('../assets/format-name-map.json')
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .then(data => (data && data.formats ? data.formats : null))
+            .catch(error => {
+                console.error('Error loading format name map:', error);
+                return null;
+            });
+    }
+
+    return formatNameMapPromise;
+}
+
+function getDisplayFormatName(formatName) {
+    const key = String(formatName || '').trim();
+    if (key && formatNameMap && formatNameMap[key]) {
+        return String(formatNameMap[key]);
+    }
+    return key;
 }
 
 function renderBaseStatsSection(title, baseStats) {

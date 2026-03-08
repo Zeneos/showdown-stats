@@ -4,6 +4,8 @@ let statsData = null;
 let currentSort = { column: 'battles', direction: 'desc' };
 let currentRatingFilter = 'all';
 let pokemonSort = { column: 'usage_pct', direction: 'desc' };
+let formatNameMapPromise = null;
+let formatNameMap = null;
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
@@ -37,6 +39,7 @@ async function loadLatestData() {
         }
 
         statsData = await dataResponse.json();
+        formatNameMap = await loadFormatNameMap();
 
         // Update UI
         document.getElementById('period-info').textContent = `Stats Period: ${latestPeriod}`;
@@ -416,7 +419,9 @@ async function renderFormatDetail(formatName, ratingOverride) {
 }
 
 function getFormatName(format) {
-    return format.format_name || format.name || '';
+    const fallback = format.format_name || format.name || '';
+    const key = getFormatKey(format);
+    return getDisplayFormatName(key, fallback);
 }
 
 function getFormatKey(format) {
@@ -431,6 +436,31 @@ function getPokemonLink(formatName, pokemonName, rating) {
         params.set('rating', rating);
     }
     return `pokemon.html?${params.toString()}`;
+}
+
+async function loadFormatNameMap() {
+    if (!formatNameMapPromise) {
+        formatNameMapPromise = fetch('../assets/format-name-map.json')
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .then(data => (data && data.formats ? data.formats : null))
+            .catch(error => {
+                console.error('Error loading format name map:', error);
+                return null;
+            });
+    }
+
+    return formatNameMapPromise;
+}
+
+function getDisplayFormatName(formatKey, fallbackName = '') {
+    const key = String(formatKey || '').trim();
+    if (key && formatNameMap && formatNameMap[key]) {
+        return String(formatNameMap[key]);
+    }
+    return String(fallbackName || key);
 }
 
 async function loadPokemonData(formatName, rating) {

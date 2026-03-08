@@ -91,6 +91,18 @@ To regenerate this file from local item sprites:
 .\scripts\update-item-name-map.ps1
 ```
 
+## Refreshing Format Name Map
+
+Format display-name mappings are stored locally in `docs/assets/format-name-map.json`.
+
+This map controls how format IDs are shown in the UI. The generator pulls official display names from Pokemon Showdown's `config/formats.ts` and falls back to identity mapping for unmatched entries (for example, `gen9vgc2026regf: gen9vgc2026regf`) so you can manually edit labels afterward.
+
+To regenerate this map from the latest stats period:
+
+```powershell
+.\scripts\update-format-name-map.ps1
+```
+
 ## Refreshing Icon Name Sprites
 
 Pokemon icon sprites can be generated with name-based filenames in `docs/assets/sprites/icons/`.
