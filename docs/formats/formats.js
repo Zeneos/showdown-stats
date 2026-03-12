@@ -43,7 +43,10 @@ async function loadLatestData() {
         formatNameMap = await loadFormatNameMap();
 
         // Update UI
-        document.getElementById('period-info').textContent = `Stats Period: ${latestPeriod}`;
+        const usageDateEl = document.getElementById('usage-stats-date');
+        if (usageDateEl) {
+            usageDateEl.textContent = `Latest usage stats data from ${latestPeriod}`;
+        }
         document.getElementById('total-battles').textContent = formatNumber(statsData.total_battles);
         document.getElementById('format-count').textContent = statsData.formats.length;
 
@@ -67,17 +70,12 @@ async function loadLatestData() {
     }
 }
 
-// Populate the rating filter dropdown
+// Populate the segmented rating filter buttons.
 function populateRatingFilter(formatName) {
-    const filterSelect = document.getElementById('rating-filter');
-    if (!filterSelect) return;
+    const filterContainer = document.getElementById('rating-filter');
+    if (!filterContainer) return;
 
-    filterSelect.innerHTML = '';
-
-    const allOption = document.createElement('option');
-    allOption.value = 'all';
-    allOption.textContent = 'All ratings';
-    filterSelect.appendChild(allOption);
+    filterContainer.innerHTML = '';
 
     let ratings = [];
     if (formatName && statsData) {
@@ -94,24 +92,55 @@ function populateRatingFilter(formatName) {
         ratings = Array.from(ratingSet);
     }
 
-    ratings
+    const parsedRatings = ratings
         .map(rating => parseInt(rating, 10))
         .filter(rating => !Number.isNaN(rating))
-        .sort((a, b) => a - b)
-        .forEach(rating => {
-            const option = document.createElement('option');
-            option.value = String(rating);
-            option.textContent = `Rating ${rating}+`;
-            filterSelect.appendChild(option);
-        });
+        .sort((a, b) => a - b);
 
-    if (currentRatingFilter) {
-        filterSelect.value = currentRatingFilter;
-    }
+    const visibleRatings = parsedRatings.length > 3
+        ? parsedRatings.slice(-3)
+        : parsedRatings;
 
-    if (!filterSelect.value) {
-        currentRatingFilter = 'all';
-        filterSelect.value = 'all';
+    const options = [
+        { value: 'all', label: 'All' },
+        ...visibleRatings.map(rating => ({ value: String(rating), label: `${rating}+` }))
+    ];
+
+    const activeValue = options.some(option => option.value === currentRatingFilter)
+        ? currentRatingFilter
+        : 'all';
+    currentRatingFilter = activeValue;
+
+    for (const option of options) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'pokemon-rating-btn';
+        button.dataset.value = option.value;
+        button.textContent = option.label;
+        button.setAttribute('aria-pressed', option.value === activeValue ? 'true' : 'false');
+
+        if (option.value === activeValue) {
+            button.classList.add('is-active');
+        }
+
+        button.onclick = () => {
+            const nextRating = option.value || 'all';
+            if (nextRating === currentRatingFilter) return;
+
+            currentRatingFilter = nextRating;
+            if (selectedFormatKey) {
+                populateRatingFilter(selectedFormatKey);
+            } else {
+                populateRatingFilter();
+            }
+            renderTable();
+            if (selectedFormatKey) {
+                renderFormatDetail(selectedFormatKey);
+                updateSelectionInUrl();
+            }
+        };
+
+        filterContainer.appendChild(button);
     }
 }
 
@@ -236,18 +265,7 @@ function setupEventListeners() {
         });
     });
 
-    // Rating filter
-    document.getElementById('rating-filter').addEventListener('change', (e) => {
-        currentRatingFilter = e.target.value;
-        if (selectedFormatKey) {
-            populateRatingFilter(selectedFormatKey);
-        }
-        renderTable();
-        if (selectedFormatKey) {
-            renderFormatDetail(selectedFormatKey);
-            updateSelectionInUrl();
-        }
-    });
+    // Rating filter uses segmented buttons built in populateRatingFilter().
 }
 
 // Update sort indicator classes on table headers
@@ -271,6 +289,12 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+function toId(text) {
+    return String(text || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '');
 }
 
 function sanitizeSpriteName(name) {
@@ -395,8 +419,9 @@ async function renderFormatDetail(formatName, ratingOverride) {
     }
 
     const sortedPokemon = sortPokemonList(pokemonData.pokemon);
+    const monthlyRankMap = buildMonthlyRankMapByUsagePct(pokemonData.pokemon);
     const pokemonRows = sortedPokemon
-        .map((pokemon, index) => {
+        .map((pokemon) => {
             const spritePaths = getPokemonSpritePaths(pokemon.pokemon_name);
             const showdownSrc = typeof spritePaths === 'string' ? spritePaths : spritePaths.showdown;
             const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
@@ -406,6 +431,7 @@ async function renderFormatDetail(formatName, ratingOverride) {
                 ? 'pokemon-meta-usage'
                 : (pokemon.usage_pct < 1 ? 'pokemon-low-usage' : 'pokemon-mid-usage');
             const pokemonLink = getPokemonLink(getFormatKey(format), pokemon.pokemon_name, rating);
+            const monthlyRank = monthlyRankMap.get(toId(pokemon.pokemon_name)) || 0;
             return `
             <tr class="${isMeta ? 'pokemon-meta' : ''}">
                 <td class="pokemon-name">
@@ -418,7 +444,7 @@ async function renderFormatDetail(formatName, ratingOverride) {
                 </td>
                 <td class="pokemon-usage ${usageClass}">${pokemon.usage_pct.toFixed(2)}%</td>
                 <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
-                <td class="pokemon-rank">${index + 1}</td>
+                <td class="pokemon-rank">${monthlyRank > 0 ? monthlyRank : '--'}</td>
             </tr>
         `;
         })
@@ -442,8 +468,8 @@ async function renderFormatDetail(formatName, ratingOverride) {
                         <tr>
                             <th class="pokemon-sortable" data-sort="pokemon_name">Pokemon</th>
                             <th class="pokemon-sortable" data-sort="usage_pct">Usage %</th>
-                            <th class="pokemon-sortable" data-sort="usage_count">Usage Count</th>
-                            <th>Rank</th>
+                            <th class="pokemon-sortable" data-sort="usage_count">Total Usage Count</th>
+                            <th>Monthly Rank</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -549,6 +575,27 @@ function sortPokemonList(pokemonList) {
         return pokemonSort.direction === 'asc' ? comparison : -comparison;
     });
     return sorted;
+}
+
+function buildMonthlyRankMapByUsagePct(pokemonList) {
+    const ranked = [...pokemonList]
+        .filter(pokemon => pokemon && typeof pokemon === 'object')
+        .sort((a, b) => {
+            const usageDiff = Number(b.usage_pct || 0) - Number(a.usage_pct || 0);
+            if (usageDiff !== 0) return usageDiff;
+
+            const countDiff = Number(b.usage_count || 0) - Number(a.usage_count || 0);
+            if (countDiff !== 0) return countDiff;
+
+            return String(a.pokemon_name || '').localeCompare(String(b.pokemon_name || ''));
+        });
+
+    const rankMap = new Map();
+    ranked.forEach((pokemon, index) => {
+        rankMap.set(toId(pokemon.pokemon_name), index + 1);
+    });
+
+    return rankMap;
 }
 
 function setupPokemonSortListeners(formatName, rating) {

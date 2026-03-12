@@ -80,9 +80,9 @@ async function loadPokemonDetail() {
         if (indexResponse.ok) {
             const index = await indexResponse.json();
             latestPeriod = String(index.latest || '');
-            const periodInfo = document.getElementById('period-info');
-            if (periodInfo) {
-                periodInfo.textContent = `Stats Period: ${index.latest}`;
+            const usageDateEl = document.getElementById('usage-stats-date');
+            if (usageDateEl) {
+                usageDateEl.textContent = `Usage stats data from ${index.latest}`;
             }
         }
     } catch (error) {
