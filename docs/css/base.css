@@ -8,9 +8,13 @@
 }
 
 :root {
-    --page-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --container-bg: #ffffff;
-    --container-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    --page-parallax-image: url('../assets/Backgrounds/EX.jpg');
+    --page-bg: linear-gradient(135deg, rgba(102, 126, 234, 0.38) 0%, rgba(118, 75, 162, 0.38) 100%);
+    --page-tint: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(244, 247, 255, 0) 100%);
+    --container-bg: linear-gradient(165deg, rgba(255, 255, 255, 0.74) 0%, rgba(247, 250, 255, 0.64) 52%, rgba(241, 246, 255, 0.72) 100%);
+    --container-border: transparent;
+    --container-inner-glow: rgba(255, 255, 255, 0.34);
+    --container-shadow: 0 24px 70px rgba(15, 23, 42, 0.3), 0 0 30px rgba(37, 99, 235, 0.14);
     --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --header-text: #ffffff;
     --text-primary: #212529;
@@ -24,9 +28,12 @@
 }
 
 html[data-theme='dark'] {
-    --page-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    --container-bg: #0f172a;
-    --container-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    --page-bg: linear-gradient(135deg, rgba(15, 23, 42, 0.48) 0%, rgba(30, 41, 59, 0.52) 100%);
+    --page-tint: linear-gradient(135deg, rgba(2, 6, 23, 0.36) 0%, rgba(15, 23, 42, 0.42) 100%);
+    --container-bg: linear-gradient(165deg, rgba(15, 23, 42, 0.68) 0%, rgba(15, 23, 42, 0.6) 52%, rgba(17, 28, 49, 0.66) 100%);
+    --container-border: rgba(100, 116, 139, 0.38);
+    --container-inner-glow: rgba(148, 163, 184, 0.08);
+    --container-shadow: 0 24px 72px rgba(0, 0, 0, 0.62), 0 0 28px rgba(59, 130, 246, 0.18);
     --header-bg: linear-gradient(135deg, #1d4ed8 0%, #312e81 100%);
     --header-text: #e5e7eb;
     --text-primary: #f3f4f6;
@@ -51,7 +58,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 
     /* Visual */
-    background: var(--page-bg);
+    background-color: #667eea;
+    background-image: var(--page-tint), var(--page-bg), var(--page-parallax-image);
+    background-size: cover, cover, 420px 420px;
+    background-position: center center, center center, center top;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-attachment: fixed, fixed, fixed;
     color: var(--text-primary);
     transition: background 0.25s ease, color 0.25s ease;
 }
@@ -64,9 +76,11 @@ body {
     border-radius: 12px;
 
     /* Visual */
+    border: 1px solid var(--container-border);
     background: var(--container-bg);
+    backdrop-filter: blur(3px) saturate(112%);
     box-shadow: var(--container-shadow);
-    transition: background 0.25s ease, box-shadow 0.25s ease;
+    transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 header {
@@ -94,6 +108,7 @@ header p {
     font-size: 1.1em;
     opacity: 0.9;
 }
+
 
 footer {
     /* Display & Box Model */
@@ -188,6 +203,11 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    body {
+        background-attachment: scroll, scroll, scroll;
+        background-size: cover, cover, 420px 420px;
+    }
+
     header h1 {
         /* Typography */
         font-size: 1.8em;

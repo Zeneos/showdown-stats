@@ -11,7 +11,7 @@
     border-bottom: 1px solid #dee2e6;
 
     /* Visual */
-    background: #f8f9fa;
+    background: transparent;
 }
 
 .stats-summary {
@@ -1636,7 +1636,7 @@ body.js-tooltip-enabled .help-tooltip::before {
 }
 
 html[data-theme='dark'] .controls {
-    background: #111827;
+    background: transparent;
     border-bottom-color: #334155;
 }
 
