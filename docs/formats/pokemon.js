@@ -446,6 +446,18 @@ function populatePokemonSwitcher(currentPokemonName, formatName, currentRating, 
         }
 
         openMenu();
+
+        // When opening the unfiltered list, keep the current selection in view
+        // so the picker starts near the selected Pokemon instead of the top.
+        if (!shouldFilter) {
+            requestAnimationFrame(() => {
+                const activeOption = menuEl.querySelector('.pokemon-picker-option.is-active');
+                if (activeOption) {
+                    const optionOffsetTop = activeOption.offsetTop;
+                    menuEl.scrollTop = Math.max(0, optionOffsetTop);
+                }
+            });
+        }
     };
 
     closeMenu();

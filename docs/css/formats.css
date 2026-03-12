@@ -95,10 +95,14 @@ select:focus {
     grid-template-columns: minmax(360px, 1fr) minmax(520px, 1.3fr);
     gap: 16px;
     padding: 16px;
+    align-items: stretch;
 }
 
 .formats-pane,
 .pokemon-pane {
+    /* Display & Box Model */
+    min-height: 0;
+
     /* Visual */
     border: 1px solid #dee2e6;
     border-radius: 10px;
@@ -107,11 +111,17 @@ select:focus {
 
 .formats-pane {
     /* Display & Box Model */
-    overflow: hidden;
+    max-height: min(100vh, 1280px);
+    overflow: auto;
 }
 
 .pokemon-pane {
     /* Display & Box Model */
+    max-height: min(100vh, 1280px);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
     padding: 20px 24px;
 }
 
@@ -231,7 +241,6 @@ tbody tr:hover {
 .battles {
     /* Typography */
     color: #495057;
-    font-family: 'Courier New', monospace;
 }
 
 .loading {
@@ -263,6 +272,10 @@ tbody tr:hover {
 #detail-content {
     /* Display & Box Model */
     max-width: none;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .pokemon-detail {
@@ -1207,7 +1220,9 @@ tr.pokemon-nav-row:focus-visible {
 .format-header {
     /* Display & Box Model */
     margin-bottom: 30px;
-    padding-bottom: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
     border-bottom: 2px solid #dee2e6;
 }
 
@@ -1223,7 +1238,7 @@ tr.pokemon-nav-row:focus-visible {
     margin: 10px 0;
 
     /* Typography */
-    font-size: 1.1em;
+    font-size: 1em;
     color: #495057;
 }
 
@@ -1258,6 +1273,7 @@ tr.pokemon-nav-row:focus-visible {
 .help-tooltip {
     /* Positioning */
     position: relative;
+    z-index: 50;
 }
 
 .help-tooltip::after {
@@ -1266,7 +1282,7 @@ tr.pokemon-nav-row:focus-visible {
     left: 50%;
     bottom: calc(100% + 10px);
     transform: translateX(-50%);
-    z-index: 20;
+    z-index: 9999;
 
     /* Display & Box Model */
     width: max-content;
@@ -1300,7 +1316,7 @@ tr.pokemon-nav-row:focus-visible {
     left: 50%;
     bottom: calc(100% + 4px);
     transform: translateX(-50%);
-    z-index: 21;
+    z-index: 10000;
 
     /* Display & Box Model */
     width: 0;
@@ -1329,9 +1345,51 @@ tr.pokemon-nav-row:focus-visible {
     transform: translateX(-50%) translateY(-2px);
 }
 
+body.js-tooltip-enabled .help-tooltip::after,
+body.js-tooltip-enabled .help-tooltip::before {
+    content: none;
+}
+
+#global-help-tooltip {
+    /* Positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2147483647;
+
+    /* Display & Box Model */
+    max-width: min(360px, calc(100vw - 16px));
+    padding: 10px 12px;
+
+    /* Visual */
+    background: #1f2937;
+    color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
+
+    /* Typography */
+    font-size: 0.85em;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: left;
+
+    /* Interaction */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.12s ease;
+}
+
+#global-help-tooltip.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 .pokemon-breakdown {
     /* Display & Box Model */
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    flex: 1 1 auto;
+    min-height: 0;
 }
 
 .pokemon-breakdown h3 {
@@ -1344,7 +1402,11 @@ tr.pokemon-nav-row:focus-visible {
 .pokemon-table-wrapper {
     /* Display & Box Model */
     display: block;
+    height: 100%;
     overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .pokemon-table {
@@ -1352,6 +1414,7 @@ tr.pokemon-nav-row:focus-visible {
     width: min(100%, 980px);
     margin: 0 auto;
     border-collapse: collapse;
+    overflow: visible;
 }
 
 .pokemon-table th,
@@ -1362,6 +1425,10 @@ tr.pokemon-nav-row:focus-visible {
 
     /* Typography */
     text-align: left;
+
+    /* Positioning */
+    position: relative;
+    overflow: visible;
 }
 
 .pokemon-table th {
@@ -1805,6 +1872,25 @@ html[data-theme='dark'] .format-link:hover {
 
     .pokemon-pane {
         padding: 16px;
+        max-height: 120vh;
+        overflow: auto;
+    }
+
+    .formats-pane {
+        max-height: 72vh;
+        overflow: auto;
+    }
+
+    #detail-content,
+    .pokemon-breakdown {
+        height: auto;
+        min-height: 0;
+    }
+
+    .pokemon-table-wrapper {
+        max-height: 120vh;
+        overflow-x: auto;
+        overflow-y: auto;
     }
 
     .pokemon-detail-actions {
@@ -1836,5 +1922,19 @@ html[data-theme='dark'] .format-link:hover {
         width: fit-content;
         margin: 0 auto;
         align-self: center;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        overflow-x: auto;
+    }
+
+    .container {
+        overflow-x: auto;
+    }
+
+    .formats-split-layout {
+        min-width:500px;
     }
 }
