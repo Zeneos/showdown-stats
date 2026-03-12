@@ -363,6 +363,9 @@ async function renderFormatDetail(formatName, ratingOverride) {
                 const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
                 const placeholderSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.placeholder;
                 const isMeta = isMetaPokemon(pokemon.usage_pct);
+                const usageClass = isMeta
+                    ? 'pokemon-meta-usage'
+                    : (pokemon.usage_pct < 1 ? 'pokemon-low-usage' : 'pokemon-mid-usage');
                 const pokemonLink = getPokemonLink(getFormatKey(format), pokemon.pokemon_name, rating);
                 return `
                 <tr class="${isMeta ? 'pokemon-meta' : ''}">
@@ -374,7 +377,7 @@ async function renderFormatDetail(formatName, ratingOverride) {
                             </span>
                         </a>
                     </td>
-                    <td class="pokemon-usage ${isMeta ? 'pokemon-meta-usage' : ''}">${pokemon.usage_pct.toFixed(2)}%</td>
+                    <td class="pokemon-usage ${usageClass}">${pokemon.usage_pct.toFixed(2)}%</td>
                     <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
                 </tr>
             `;

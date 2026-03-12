@@ -8,7 +8,7 @@ const mysteryDungeonSpriteBase = '../assets/sprites/mystery-dungeon';
 const typeSpriteBase = '../assets/sprites/types';
 const itemSpriteBase = '../assets/sprites/items';
 const itemSpriteFallback = `${itemSpriteBase}/unknown.png`;
-const maxBaseStat = 255;
+const maxBaseStat = 220;
 const maxBaseStatTotal = 800;
 const highestCurrentBst = 780;
 const baseStatLabels = [
@@ -43,6 +43,9 @@ const countersSortState = {
     key: 'rate',
     direction: 'desc'
 };
+const metaUsageThreshold = 4.52;
+const metaEncounterBattles = 15;
+const metaEncounterProbability = 0.5;
 let baseStatsMapPromise = null;
 let moveDataMapPromise = null;
 let moveDataMap = null;
@@ -52,6 +55,8 @@ let itemNameMapPromise = null;
 let itemNameMap = null;
 let formatNameMapPromise = null;
 let formatNameMap = null;
+const latestFormatsDataCache = {};
+let pokemonPickerOutsideClickHandler = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     loadPokemonDetail();
@@ -143,21 +148,33 @@ async function loadPokemonDetail() {
         typesEl.innerHTML = renderPokemonHeaderTypes(types);
     }
 
+    populatePokemonSwitcher(entry.pokemon_name, formatName, rating, pokemonData.pokemon);
+    await populateRatingFilter(formatName, rating, entry.pokemon_name, latestPeriod);
     await populateFormatSwitcher(entry.pokemon_name, formatName, displayFormatName, rating, latestPeriod);
 
     const usageEl = document.getElementById('pokemon-usage');
+    const isMeta = isMetaPokemon(entry.usage_pct);
     if (usageEl) {
         const usagePct = entry.usage_pct !== undefined ? entry.usage_pct.toFixed(2) : '0.00';
         const usageCount = entry.usage_count !== undefined ? formatNumber(entry.usage_count) : '0';
-        usageEl.textContent = `Usage: ${usagePct}% (${usageCount} battles)`;
+        const usageTierClass = getUsageTierClass(entry.usage_pct);
+        const usageClassAttr = usageTierClass ? ` class="${usageTierClass}"` : '';
+        const metaTooltip = isMeta
+            ? ` <span class="help-tooltip" aria-label="Meta criteria" data-tooltip="Pokemon with at least 4.52% weighted usage are highlighted. For OU/UU/RU/NU/PU formats, a Pokemon is truly in their tier if a typical competitive player is more than 50% likely to encounter it at least once in a day of playing (15 battles)." tabindex="0">?</span>`
+            : '';
+        usageEl.innerHTML = `Usage: <span${usageClassAttr}>${escapeHtml(`${usagePct}%`)}</span> (${escapeHtml(`${usageCount} battles`)})${metaTooltip}`;
     }
 
     const rankingEl = document.getElementById('pokemon-ranking');
     if (rankingEl) {
         const monthlyRank = getPokemonMonthlyRank(pokemonData.pokemon, entry.pokemon_name);
-        rankingEl.textContent = monthlyRank > 0
-            ? `Monthly Ranking: #${monthlyRank}`
-            : 'Monthly Ranking: --';
+        if (monthlyRank > 0) {
+            const usageTierClass = getUsageTierClass(entry.usage_pct);
+            const rankClass = usageTierClass ? ` class="${usageTierClass}"` : '';
+            rankingEl.innerHTML = `Monthly Ranking: <span${rankClass}>#${escapeHtml(String(monthlyRank))}</span>`;
+        } else {
+            rankingEl.textContent = 'Monthly Ranking: --';
+        }
     }
 
     const backLink = document.getElementById('back-to-format');
@@ -282,31 +299,29 @@ async function loadFormatNameMap() {
 }
 
 async function populateFormatSwitcher(pokemonName, currentFormatKey, currentFormatDisplayName, rating, latestPeriod) {
-    const inputEl = document.getElementById('pokemon-format-select');
-    const listEl = document.getElementById('pokemon-format-options');
-    const currentEl = document.getElementById('pokemon-format-current');
-    if (!inputEl || !listEl) return;
+    const selectEl = document.getElementById('pokemon-format-select');
+    if (!selectEl) return;
 
-    inputEl.disabled = true;
-    inputEl.value = '';
-    inputEl.placeholder = 'Search Formats';
-    listEl.innerHTML = '<option value="Loading formats..."></option>';
-    if (currentEl) currentEl.textContent = currentFormatDisplayName;
+    selectEl.disabled = true;
+    selectEl.innerHTML = `<option value="">${escapeHtml(currentFormatDisplayName || 'Loading formats...')}</option>`;
 
     const options = await loadAllFormatOptions(latestPeriod);
     const available = options.length > 0
         ? options
         : [{ key: currentFormatKey, displayName: currentFormatDisplayName }];
 
-    listEl.innerHTML = available
-        .map(option => `<option value="${escapeHtml(option.displayName)}"></option>`)
+    selectEl.innerHTML = available
+        .map(option => `<option value="${escapeHtml(option.key)}">${escapeHtml(option.displayName)}</option>`)
         .join('');
 
-    inputEl.disabled = available.length === 0;
-    inputEl.placeholder = 'Search Formats';
+    if (available.some(option => option.key === currentFormatKey)) {
+        selectEl.value = currentFormatKey;
+    }
 
-    const navigateToSelection = () => {
-        const nextFormat = resolveFormatKeyFromInput(inputEl.value, available);
+    selectEl.disabled = available.length === 0;
+
+    selectEl.onchange = () => {
+        const nextFormat = String(selectEl.value || '').trim();
         if (!nextFormat || nextFormat === currentFormatKey) return;
 
         const params = new URLSearchParams();
@@ -319,14 +334,263 @@ async function populateFormatSwitcher(pokemonName, currentFormatKey, currentForm
         const path = window.location.pathname || 'pokemon.html';
         window.location.href = `${path}?${params.toString()}`;
     };
+}
 
-    inputEl.onchange = navigateToSelection;
+function populatePokemonSwitcher(currentPokemonName, formatName, currentRating, pokemonEntries) {
+    const inputEl = document.getElementById('pokemon-picker-select');
+    const menuEl = document.getElementById('pokemon-picker-menu');
+    if (!inputEl || !menuEl || !Array.isArray(pokemonEntries)) return;
+
+    const sortedPokemon = [...pokemonEntries].sort((a, b) => {
+        const usageDiff = Number.parseFloat(b.usage_pct) - Number.parseFloat(a.usage_pct);
+        if (usageDiff !== 0) return usageDiff;
+
+        const countDiff = Number.parseInt(b.usage_count, 10) - Number.parseInt(a.usage_count, 10);
+        if (countDiff !== 0) return countDiff;
+
+        return a.pokemon_name.localeCompare(b.pokemon_name);
+    });
+
+    inputEl.value = currentPokemonName;
+    inputEl.placeholder = 'Search Pokemon or move';
+    let hasTypedFilter = false;
+
+    const navigateToPokemon = nextPokemon => {
+        if (!nextPokemon || nextPokemon === currentPokemonName) return;
+
+        const params = new URLSearchParams();
+        params.set('format', formatName);
+        params.set('pokemon', nextPokemon);
+        if (currentRating && currentRating !== 'all') {
+            params.set('rating', currentRating);
+        }
+
+        const path = window.location.pathname || 'pokemon.html';
+        window.location.href = `${path}?${params.toString()}`;
+    };
+
+    const closeMenu = () => {
+        menuEl.classList.remove('is-open');
+        inputEl.setAttribute('aria-expanded', 'false');
+    };
+
+    const openMenu = () => {
+        if (!menuEl.childElementCount) return;
+        menuEl.classList.add('is-open');
+        inputEl.setAttribute('aria-expanded', 'true');
+    };
+
+    const renderOptions = (applyFilter) => {
+        const query = inputEl.value.trim().toLowerCase();
+        const shouldFilter = applyFilter && query.length > 0;
+        const visiblePokemon = shouldFilter
+            ? sortedPokemon.filter(pokemon => pokemonMatchesPickerQuery(pokemon, query))
+            : sortedPokemon;
+
+        menuEl.innerHTML = '';
+        if (!visiblePokemon.length) {
+            const empty = document.createElement('div');
+            empty.className = 'pokemon-picker-empty';
+            empty.textContent = 'No Pokemon found.';
+            menuEl.appendChild(empty);
+            openMenu();
+            return;
+        }
+
+        for (const pokemon of visiblePokemon) {
+            const usagePct = Number(pokemon.usage_pct) || 0;
+            const isMeta = isMetaPokemon(usagePct);
+            const isLowUsage = usagePct < 1;
+            const option = document.createElement('button');
+            option.type = 'button';
+            option.className = 'pokemon-picker-option';
+            option.setAttribute('role', 'option');
+            option.dataset.pokemon = pokemon.pokemon_name;
+
+            if (isMeta) {
+                option.classList.add('pokemon-picker-option--meta');
+            }
+
+            if (pokemon.pokemon_name === currentPokemonName) {
+                option.classList.add('is-active');
+            }
+
+            const left = document.createElement('span');
+            left.className = 'pokemon-picker-option-main pokemon-inline-cell';
+
+            const iconImg = createPokemonInlineIcon(pokemon.pokemon_name);
+            if (iconImg) {
+                left.appendChild(iconImg);
+            }
+
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'pokemon-picker-option-name';
+            nameSpan.textContent = pokemon.pokemon_name;
+            left.appendChild(nameSpan);
+
+            const usageSpan = document.createElement('span');
+            usageSpan.className = 'pokemon-picker-option-usage';
+            usageSpan.textContent = `${formatPercent(pokemon.usage_pct)}%`;
+
+            if (isMeta) {
+                usageSpan.classList.add('pokemon-picker-option-usage--meta');
+            } else if (isLowUsage) {
+                usageSpan.classList.add('pokemon-picker-option-usage--low');
+            } else {
+                usageSpan.classList.add('pokemon-picker-option-usage--mid');
+            }
+
+            option.appendChild(left);
+            option.appendChild(usageSpan);
+            menuEl.appendChild(option);
+        }
+
+        openMenu();
+    };
+
+    closeMenu();
+
+    inputEl.onfocus = () => {
+        renderOptions(hasTypedFilter);
+    };
+
+    inputEl.onclick = () => {
+        renderOptions(hasTypedFilter);
+    };
+
+    inputEl.oninput = () => {
+        hasTypedFilter = true;
+        renderOptions(true);
+    };
+
     inputEl.onkeydown = event => {
+        if (event.key === 'Escape') {
+            closeMenu();
+            return;
+        }
+
         if (event.key === 'Enter') {
             event.preventDefault();
-            navigateToSelection();
+            const exactMatch = resolvePokemonFromInput(inputEl.value, sortedPokemon);
+            if (exactMatch) {
+                navigateToPokemon(exactMatch);
+                return;
+            }
+
+            const firstOption = menuEl.querySelector('.pokemon-picker-option');
+            if (firstOption) {
+                navigateToPokemon(firstOption.dataset.pokemon || '');
+            }
         }
     };
+
+    menuEl.onmousedown = event => {
+        event.preventDefault();
+    };
+
+    menuEl.onclick = event => {
+        const option = event.target.closest('.pokemon-picker-option');
+        if (!option) return;
+        navigateToPokemon(option.dataset.pokemon || '');
+    };
+
+    if (pokemonPickerOutsideClickHandler) {
+        document.removeEventListener('click', pokemonPickerOutsideClickHandler);
+    }
+
+    pokemonPickerOutsideClickHandler = event => {
+        if (event.target === inputEl || menuEl.contains(event.target)) return;
+        closeMenu();
+    };
+
+    document.addEventListener('click', pokemonPickerOutsideClickHandler);
+}
+
+async function populateRatingFilter(formatName, currentRating, pokemonName, latestPeriod) {
+    const containerEl = document.getElementById('pokemon-rating-filter');
+    if (!containerEl) return;
+
+    containerEl.innerHTML = '';
+    containerEl.setAttribute('aria-busy', 'true');
+
+    const latestData = await loadLatestFormatsData(latestPeriod);
+    const currentFormat = latestData && Array.isArray(latestData.formats)
+        ? latestData.formats.find(format => getFormatKey(format) === formatName)
+        : null;
+
+    const ratings = currentFormat && currentFormat.by_rating
+        ? Object.keys(currentFormat.by_rating)
+        : [];
+
+    const parsedRatings = ratings
+        .map(rating => Number.parseInt(rating, 10))
+        .filter(rating => !Number.isNaN(rating) && rating > 0)
+        .sort((a, b) => a - b);
+
+    const visibleRatings = parsedRatings.length > 3
+        ? parsedRatings.slice(-3)
+        : parsedRatings;
+
+    const options = [
+        { value: 'all', label: 'All' },
+        ...visibleRatings.map(rating => ({ value: String(rating), label: `${rating}+` }))
+    ];
+
+    const targetRating = currentRating && currentRating !== '0' ? String(currentRating) : 'all';
+    const activeValue = options.some(option => option.value === targetRating)
+        ? targetRating
+        : 'all';
+
+    for (const option of options) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'pokemon-rating-btn';
+        button.dataset.value = option.value;
+        button.textContent = option.label;
+        button.setAttribute('aria-pressed', option.value === activeValue ? 'true' : 'false');
+
+        if (option.value === activeValue) {
+            button.classList.add('is-active');
+        }
+
+        button.onclick = () => {
+            const nextRating = option.value || 'all';
+            if (nextRating === activeValue) return;
+
+            const params = new URLSearchParams();
+            params.set('format', formatName);
+            params.set('pokemon', pokemonName);
+            if (nextRating !== 'all') {
+                params.set('rating', nextRating);
+            }
+
+            const path = window.location.pathname || 'pokemon.html';
+            window.location.href = `${path}?${params.toString()}`;
+        };
+
+        containerEl.appendChild(button);
+    }
+
+    containerEl.setAttribute('aria-busy', 'false');
+}
+
+async function loadLatestFormatsData(latestPeriod) {
+    const key = String(latestPeriod || '').trim();
+    if (!key) return null;
+
+    if (!latestFormatsDataCache[key]) {
+        latestFormatsDataCache[key] = fetch(`${encodeURIComponent(key)}.json`)
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .catch(error => {
+                console.error('Error loading latest formats data:', error);
+                return null;
+            });
+    }
+
+    return latestFormatsDataCache[key];
 }
 
 function resolveFormatKeyFromInput(inputValue, options) {
@@ -343,16 +607,87 @@ function resolveFormatKeyFromInput(inputValue, options) {
     return '';
 }
 
+function resolvePokemonFromInput(inputValue, options) {
+    const raw = String(inputValue || '').trim();
+    if (!raw || !Array.isArray(options)) return '';
+
+    const normalized = raw.toLowerCase();
+    const exact = options.find(pokemon => String(pokemon.pokemon_name || '').toLowerCase() === normalized);
+    return exact ? exact.pokemon_name : '';
+}
+
+function pokemonMatchesPickerQuery(pokemon, query) {
+    const rawQuery = String(query || '').trim().toLowerCase();
+    if (!rawQuery) return true;
+
+    const pokemonName = String(pokemon && pokemon.pokemon_name ? pokemon.pokemon_name : '').toLowerCase();
+    if (pokemonName.includes(rawQuery)) {
+        return true;
+    }
+
+    const queryId = toId(rawQuery);
+    if (!queryId) {
+        return false;
+    }
+
+    const moves = pokemon && pokemon.moves_json && typeof pokemon.moves_json === 'object'
+        ? Object.keys(pokemon.moves_json)
+        : [];
+
+    return moves.some(moveName => {
+        const move = String(moveName || '').toLowerCase();
+        return move.includes(rawQuery) || toId(move) === queryId;
+    });
+}
+
+function formatPercent(value) {
+    const numeric = Number.parseFloat(value);
+    if (Number.isNaN(numeric)) return '0.00';
+    return numeric.toFixed(2);
+}
+
+function createPokemonInlineIcon(pokemonName) {
+    const preferredSlug = getPokemonIconSlug(pokemonName, true);
+    const fallbackSlug = getPokemonIconSlug(pokemonName, false);
+    const candidateSources = [
+        preferredSlug ? `${iconSpriteBase}/${preferredSlug}.png` : '',
+        fallbackSlug && fallbackSlug !== preferredSlug ? `${iconSpriteBase}/${fallbackSlug}.png` : ''
+    ].filter(Boolean);
+
+    const sources = [...new Set(candidateSources)];
+    if (!sources.length) return null;
+
+    const img = document.createElement('img');
+    img.className = 'pokemon-inline-icon';
+    img.alt = String(pokemonName || 'Pokemon');
+    img.loading = 'lazy';
+    img.src = sources[0];
+
+    const fallbackSources = sources.slice(1);
+    img.dataset.fallbacks = fallbackSources.join('|');
+    img.onerror = function () {
+        const fallbacks = String(this.dataset.fallbacks || '')
+            .split('|')
+            .filter(Boolean);
+
+        if (!fallbacks.length) {
+            this.onerror = null;
+            this.style.display = 'none';
+            return;
+        }
+
+        this.src = fallbacks.shift();
+        this.dataset.fallbacks = fallbacks.join('|');
+    };
+
+    return img;
+}
+
 async function loadAllFormatOptions(latestPeriod) {
-    if (!latestPeriod) return [];
+    const latestData = await loadLatestFormatsData(latestPeriod);
+    if (!latestData || !Array.isArray(latestData.formats)) return [];
 
     try {
-        const response = await fetch(`${encodeURIComponent(latestPeriod)}.json`);
-        if (!response.ok) return [];
-
-        const latestData = await response.json();
-        if (!latestData || !Array.isArray(latestData.formats)) return [];
-
         return latestData.formats
             .map(format => ({
                 key: getFormatKey(format),
@@ -457,8 +792,8 @@ function getBstTier(bstValue) {
     if (bst < 300) return 1;
     if (bst < 400) return 2;
     if (bst < 500) return 3;
-    if (bst < 600) return 4;
-    if (bst < 700) return 5;
+    if (bst < 580) return 4;
+    if (bst < 640) return 5;
     if (bst >= highestCurrentBst) return 6;
     return 6;
 }
@@ -483,6 +818,24 @@ function getPokemonMonthlyRank(pokemonList, pokemonName) {
     return index >= 0 ? index + 1 : 0;
 }
 
+function getEncounterProbability(usagePct, battles) {
+    const p = Math.max(0, Math.min((Number(usagePct) || 0) / 100, 1));
+    return 1 - Math.pow(1 - p, battles);
+}
+
+function isMetaPokemon(usagePct) {
+    const usage = Number(usagePct) || 0;
+    if (usage < metaUsageThreshold) return false;
+    return getEncounterProbability(usage, metaEncounterBattles) >= metaEncounterProbability;
+}
+
+function getUsageTierClass(usagePct) {
+    const usage = Number(usagePct) || 0;
+    if (isMetaPokemon(usage)) return 'pokemon-meta-usage';
+    if (usage < 1) return 'pokemon-low-usage';
+    return 'pokemon-mid-usage';
+}
+
 function findPokemonEntry(pokemonList, pokemonName) {
     const exact = pokemonList.find(p => p.pokemon_name === pokemonName);
     if (exact) return exact;
@@ -496,6 +849,13 @@ function renderMapSection(title, map) {
         .map(([key, value]) => [key, Number(value)])
         .filter(([, value]) => !Number.isNaN(value))
         .sort((a, b) => b[1] - a[1]);
+
+    if (title === 'Tera Types' && entries.length === 1) {
+        const onlyType = String(entries[0][0] || '').trim().toLowerCase();
+        if (onlyType === 'nothing') {
+            return '';
+        }
+    }
 
     if (entries.length === 0) return '';
 

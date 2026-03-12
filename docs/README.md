@@ -116,7 +116,6 @@ To regenerate these name-based icon files:
 ```
 
 ## TODO
-- finish adding icons to the pokemon teammates and counter tables
 - remove pokemon list page, just put that stuff on the pokemon page and use it as a search function and have usage page link straight to pokemon page
 - add styling, background, logos, banner art stuff, copyright, contact, kofi/social media links maybe
 - bonus features for after "soft launch": viewing past months data instead of current, view current live data 

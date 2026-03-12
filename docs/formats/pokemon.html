@@ -28,13 +28,17 @@
                     </div>
                 </div>
                 <div class="pokemon-detail-actions">
-                    <div class="pokemon-format-switch">
-                        <div class="pokemon-format-meta">
-                            <label for="pokemon-format-select">Format</label>
-                            <span id="pokemon-format-current" class="pokemon-format-current">-</span>
+                    <div class="pokemon-picker-switch">
+                        <div class="pokemon-picker-input-wrap">
+                            <input id="pokemon-picker-select" type="text" aria-label="Search or select pokemon" placeholder="Search Pokemon" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="pokemon-picker-menu">
+                            <div id="pokemon-picker-menu" class="pokemon-picker-menu" role="listbox" aria-label="Pokemon options"></div>
                         </div>
-                        <input id="pokemon-format-select" type="text" list="pokemon-format-options" aria-label="Search or select format" placeholder="Search formats..." autocomplete="off">
-                        <datalist id="pokemon-format-options"></datalist>
+                    </div>
+                    <div class="pokemon-rating-switch">
+                        <div id="pokemon-rating-filter" class="pokemon-rating-segments" role="group" aria-label="Select rating"></div>
+                    </div>
+                    <div class="pokemon-format-switch">
+                        <select id="pokemon-format-select" aria-label="Select format"></select>
                     </div>
                     <a id="back-to-format" class="back-link" href="./">Back to format</a>
                 </div>

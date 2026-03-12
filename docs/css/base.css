@@ -175,6 +175,8 @@ footer a {
 
 html[data-theme='dark'] .theme-toggle-thumb {
     transform: translateX(30px);
+    background: #334155;
+    box-shadow: 0 1px 3px rgba(2, 6, 23, 0.65);
 }
 
 footer a:hover {
