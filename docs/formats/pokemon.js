@@ -883,7 +883,8 @@ function renderMapSection(title, map) {
                 : title === 'Teammates'
                     ? renderPokemonIconNameCell(key, {
                         spriteBase: mysteryDungeonSpriteBase,
-                        fallbackBase: iconSpriteBase
+                        fallbackBase: iconSpriteBase,
+                        iconClass: 'pokemon-inline-icon--boxed'
                     })
                 : title === 'Spreads'
                     ? escapeHtml(formatSpreadLabel(key))
@@ -1045,6 +1046,9 @@ function renderPokemonIconNameCell(pokemonName, options = {}) {
     const sources = [...new Set(candidateSources)];
     const iconSrc = sources[0] || '';
     const fallbackSources = sources.slice(1).join('|');
+    const iconClassName = options.iconClass
+        ? `pokemon-inline-icon ${String(options.iconClass).trim()}`
+        : 'pokemon-inline-icon';
     const onErrorCode = fallbackSources
         ? "const fallbacks=(this.dataset.fallbacks||'').split('|').filter(Boolean);if(!fallbacks.length){this.onerror=null;this.style.display='none';return;}this.src=fallbacks.shift();this.dataset.fallbacks=fallbacks.join('|');"
         : "this.style.display='none';";
@@ -1052,7 +1056,7 @@ function renderPokemonIconNameCell(pokemonName, options = {}) {
     return `
         <a class="pokemon-inline-cell pokemon-inline-link" href="${escapeHtml(href)}" aria-label="View ${escapeHtml(displayName)} details">
             ${iconSrc
-            ? `<img class="pokemon-inline-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(displayName)}" loading="lazy" data-fallbacks="${escapeHtml(fallbackSources)}" onerror="${onErrorCode}">`
+            ? `<img class="${escapeHtml(iconClassName)}" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(displayName)}" loading="lazy" data-fallbacks="${escapeHtml(fallbackSources)}" onerror="${onErrorCode}">`
             : ''}
             <span class="pokemon-inline-name">${escapeHtml(displayName)}</span>
         </a>

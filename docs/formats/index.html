@@ -34,25 +34,27 @@
             </div>
         </div>
 
-        <div id="table-container" class="table-container">
-            <table id="stats-table">
-                <thead>
-                    <tr>
-                        <th class="sortable" data-sort="format-name">Format Name</th>
-                        <th class="sortable" data-sort="percentage">Percentage</th>
-                        <th class="sortable" data-sort="battles">Total Battles</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    <tr>
-                        <td colspan="3" class="loading">Loading data...</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div class="formats-split-layout">
+            <div id="table-container" class="table-container formats-pane">
+                <table id="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-sort="format-name">Format Name</th>
+                            <th class="sortable" data-sort="percentage">Percentage</th>
+                            <th class="sortable" data-sort="battles">Total Battles</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr>
+                            <td colspan="3" class="loading">Loading data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <div id="format-detail" style="display: none;">
-            <div id="detail-content"></div>
+            <div id="format-detail" class="pokemon-pane">
+                <div id="detail-content"></div>
+            </div>
         </div>
 
         <footer>

@@ -116,10 +116,11 @@ To regenerate these name-based icon files:
 ```
 
 ## TODO
-- remove pokemon list page, just put that stuff on the pokemon page and use it as a search function and have usage page link straight to pokemon page
+- only keep previous and current usage jsons, and display change in usage based on previous month
 - add styling, background, logos, banner art stuff, copyright, contact, kofi/social media links maybe
 - bonus features for after "soft launch": viewing past months data instead of current, view current live data 
-(ur backend stuff), prepare for champions specific stuff for the launch in april
+(ur backend stuff)
+- prepare for champions specific stuff for the launch in april
 - fun shiny variations for pokemon sprites/icons/banner art to sometimes load into the site
 - team builder features: better teammate sets for team archetypes, team weakness calculator
 - dynamic stat visualizer: hovering over spreads changes the stats of the pokemon in real time

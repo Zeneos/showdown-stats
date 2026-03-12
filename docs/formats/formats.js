@@ -4,6 +4,7 @@ let statsData = null;
 let currentSort = { column: 'battles', direction: 'desc' };
 let currentRatingFilter = 'all';
 let pokemonSort = { column: 'usage_pct', direction: 'desc' };
+let selectedFormatKey = '';
 let formatNameMapPromise = null;
 let formatNameMap = null;
 const spriteShowdownBase = '../assets/sprites/showdown';
@@ -46,15 +47,13 @@ async function loadLatestData() {
         document.getElementById('total-battles').textContent = formatNumber(statsData.total_battles);
         document.getElementById('format-count').textContent = statsData.formats.length;
 
-        // Check if we should render table or detail view
-        const formatName = getFormatFromUrl();
-        if (formatName) {
-            populateRatingFilter(formatName);
-            renderFormatDetail(formatName);
-        } else {
-            populateRatingFilter();
-            renderTable();
+        const initialRating = getRatingFromUrl();
+        if (initialRating) {
+            currentRatingFilter = initialRating;
         }
+
+        populateRatingFilter();
+        renderTable();
 
     } catch (error) {
         console.error('Error loading data:', error);
@@ -187,12 +186,28 @@ function renderTable() {
         const row = document.createElement('tr');
         const formatKey = getFormatKey(format);
         const formatLink = `?format=${encodeURIComponent(formatKey)}`;
+        row.dataset.format = formatKey;
+        if (formatKey === selectedFormatKey) {
+            row.classList.add('format-row-selected');
+        }
 
         row.innerHTML = `
             <td class="format-name"><a href="${formatLink}" class="format-link">${escapeHtml(getFormatName(format))}</a></td>
             <td class="percentage">${format.percentage.toFixed(2)}%</td>
             <td class="battles">${formatNumber(format.total_battles)}</td>
         `;
+
+        row.addEventListener('click', () => {
+            selectFormat(formatKey);
+        });
+
+        const link = row.querySelector('.format-link');
+        if (link) {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                selectFormat(formatKey);
+            });
+        }
 
         tbody.appendChild(row);
     });
@@ -224,11 +239,13 @@ function setupEventListeners() {
     // Rating filter
     document.getElementById('rating-filter').addEventListener('change', (e) => {
         currentRatingFilter = e.target.value;
-        const formatName = getFormatFromUrl();
-        if (formatName) {
-            renderFormatDetail(formatName);
-        } else {
-            renderTable();
+        if (selectedFormatKey) {
+            populateRatingFilter(selectedFormatKey);
+        }
+        renderTable();
+        if (selectedFormatKey) {
+            renderFormatDetail(selectedFormatKey);
+            updateSelectionInUrl();
         }
     });
 }
@@ -298,127 +315,147 @@ function getFormatFromUrl() {
     return params.get('format');
 }
 
+function getRatingFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('rating');
+}
+
 // Handle routing based on URL
 function handleRouting() {
-    const formatName = getFormatFromUrl();
-    if (formatName) {
-        renderFormatDetail(formatName);
+    const requestedFormat = getFormatFromUrl();
+    if (requestedFormat && statsData && statsData.formats.some(format => getFormatKey(format) === requestedFormat)) {
+        selectFormat(requestedFormat, false);
+        return;
     }
+
+    const firstRow = document.querySelector('#table-body tr[data-format]');
+    if (firstRow && firstRow.dataset.format) {
+        selectFormat(firstRow.dataset.format, false);
+    }
+}
+
+function selectFormat(formatKey, updateHistory = true) {
+    if (!formatKey || !statsData) return;
+    const exists = statsData.formats.some(format => getFormatKey(format) === formatKey);
+    if (!exists) return;
+
+    selectedFormatKey = formatKey;
+    populateRatingFilter(selectedFormatKey);
+    renderTable();
+    renderFormatDetail(selectedFormatKey);
+
+    if (updateHistory) {
+        updateSelectionInUrl();
+    }
+}
+
+function updateSelectionInUrl() {
+    const params = new URLSearchParams();
+    if (selectedFormatKey) {
+        params.set('format', selectedFormatKey);
+    }
+    if (currentRatingFilter && currentRatingFilter !== 'all') {
+        params.set('rating', currentRatingFilter);
+    }
+
+    const path = window.location.pathname || 'index.html';
+    const query = params.toString();
+    const nextUrl = query ? `${path}?${query}` : path;
+    window.history.replaceState({}, '', nextUrl);
 }
 
 // Render detail view for a specific format
 async function renderFormatDetail(formatName, ratingOverride) {
     if (!statsData) return;
 
+    const detailContent = document.getElementById('detail-content');
+    if (!detailContent) return;
+
     const format = statsData.formats.find(f => getFormatKey(f) === formatName);
-    
+
     if (!format) {
-        const container = document.getElementById('table-container');
-        if (container) container.style.display = 'none';
-        const detailDiv = document.getElementById('format-detail');
-        if (detailDiv) {
-            detailDiv.style.display = 'block';
-            detailDiv.innerHTML = `
-                <div class="error">
-                    <p>Format "${escapeHtml(formatName)}" not found.</p>
-                    <a href="./">Back to all formats</a>
-                </div>
-            `;
-        }
+        detailContent.innerHTML = `
+            <div class="error">
+                <p>Format "${escapeHtml(formatName)}" not found.</p>
+            </div>
+        `;
         return;
     }
 
-    // Hide table, show detail
-    const container = document.getElementById('table-container');
-    if (container) container.style.display = 'none';
-    const detailDiv = document.getElementById('format-detail');
-    if (detailDiv) detailDiv.style.display = 'block';
-
-    // Update header
-    const periodInfo = document.getElementById('period-info');
-    if (periodInfo) periodInfo.textContent = `${escapeHtml(getFormatName(format))} - Stats Period: Latest`;
-
-    populateRatingFilter(getFormatKey(format));
     const rating = ratingOverride || currentRatingFilter || 'all';
     const pokemonData = await loadPokemonData(getFormatKey(format), rating);
 
-    // Render format detail content
-    const detailContent = document.getElementById('detail-content');
-    if (detailContent) {
-        if (!pokemonData || !Array.isArray(pokemonData.pokemon)) {
-            detailContent.innerHTML = `
-                <div class="error">
-                    <p>Pokemon data for "${escapeHtml(getFormatName(format))}" could not be loaded.</p>
-                    <a href="./" class="back-link">← Back to all formats</a>
-                </div>
-            `;
-            return;
-        }
-
-        const sortedPokemon = sortPokemonList(pokemonData.pokemon);
-        const pokemonRows = sortedPokemon
-            .map(pokemon => {
-                const spritePaths = getPokemonSpritePaths(pokemon.pokemon_name);
-                const showdownSrc = typeof spritePaths === 'string' ? spritePaths : spritePaths.showdown;
-                const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
-                const placeholderSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.placeholder;
-                const isMeta = isMetaPokemon(pokemon.usage_pct);
-                const usageClass = isMeta
-                    ? 'pokemon-meta-usage'
-                    : (pokemon.usage_pct < 1 ? 'pokemon-low-usage' : 'pokemon-mid-usage');
-                const pokemonLink = getPokemonLink(getFormatKey(format), pokemon.pokemon_name, rating);
-                return `
-                <tr class="${isMeta ? 'pokemon-meta' : ''}">
-                    <td class="pokemon-name">
-                        <a class="pokemon-link" href="${pokemonLink}">
-                            <span class="pokemon-name-cell">
-                                <img class="pokemon-sprite" src="${showdownSrc}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${placeholderSrc}';};this.src='${originalSrc}';">
-                                <span>${escapeHtml(pokemon.pokemon_name)}</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td class="pokemon-usage ${usageClass}">${pokemon.usage_pct.toFixed(2)}%</td>
-                    <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
-                </tr>
-            `;
-            })
-            .join('');
-
+    if (!pokemonData || !Array.isArray(pokemonData.pokemon)) {
         detailContent.innerHTML = `
-            <div class="format-header">
-                <h2>${escapeHtml(getFormatName(format))}</h2>
-                <p>Total Battles: <strong>${formatNumber(format.total_battles)}</strong></p>
-                <p>Overall Percentage: <strong>${format.percentage.toFixed(2)}%</strong></p>
-                <p>
-                    Pokemon Usage:
-                    <strong>${formatPokemonRatingLabel(pokemonData.elo_cutoff, rating)}</strong>
-                    <span class="help-tooltip" aria-label="Meta criteria" data-tooltip="Pokemon with at least 4.52% weighted usage are highlighted. For OU/UU/RU/NU/PU formats, a Pokemon is truly in their tier if a typical competitive player is more than 50% likely to encounter it at least once in a day of playing (15 battles)." tabindex="0">?</span>
-                </p>
-            </div>
-            <div class="pokemon-breakdown">
-                <div class="pokemon-table-wrapper">
-                    <table class="pokemon-table">
-                        <thead>
-                            <tr>
-                                <th class="pokemon-sortable" data-sort="pokemon_name">Pokemon</th>
-                                <th class="pokemon-sortable" data-sort="usage_pct">Usage %</th>
-                                <th class="pokemon-sortable" data-sort="usage_count">Usage Count</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${pokemonRows}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="detail-actions">
-                <a href="./" class="back-link">← Back to all formats</a>
+            <div class="error">
+                <p>Pokemon data for "${escapeHtml(getFormatName(format))}" could not be loaded.</p>
             </div>
         `;
-
-        setupPokemonSortListeners(getFormatKey(format), rating);
-        updatePokemonSortIndicators();
+        return;
     }
+
+    const sortedPokemon = sortPokemonList(pokemonData.pokemon);
+    const pokemonRows = sortedPokemon
+        .map((pokemon, index) => {
+            const spritePaths = getPokemonSpritePaths(pokemon.pokemon_name);
+            const showdownSrc = typeof spritePaths === 'string' ? spritePaths : spritePaths.showdown;
+            const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
+            const placeholderSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.placeholder;
+            const isMeta = isMetaPokemon(pokemon.usage_pct);
+            const usageClass = isMeta
+                ? 'pokemon-meta-usage'
+                : (pokemon.usage_pct < 1 ? 'pokemon-low-usage' : 'pokemon-mid-usage');
+            const pokemonLink = getPokemonLink(getFormatKey(format), pokemon.pokemon_name, rating);
+            return `
+            <tr class="${isMeta ? 'pokemon-meta' : ''}">
+                <td class="pokemon-name">
+                    <a class="pokemon-link" href="${pokemonLink}">
+                        <span class="pokemon-name-cell">
+                            <img class="pokemon-sprite" src="${showdownSrc}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${placeholderSrc}';};this.src='${originalSrc}';">
+                            <span>${escapeHtml(pokemon.pokemon_name)}</span>
+                        </span>
+                    </a>
+                </td>
+                <td class="pokemon-usage ${usageClass}">${pokemon.usage_pct.toFixed(2)}%</td>
+                <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
+                <td class="pokemon-rank">${index + 1}</td>
+            </tr>
+        `;
+        })
+        .join('');
+
+    detailContent.innerHTML = `
+        <div class="format-header">
+            <h2>${escapeHtml(getFormatName(format))}</h2>
+            <p>Total Battles: <strong>${formatNumber(format.total_battles)}</strong></p>
+            <p>Overall Percentage: <strong>${format.percentage.toFixed(2)}%</strong></p>
+            <p>
+                Pokemon Usage:
+                <strong>${formatPokemonRatingLabel(pokemonData.elo_cutoff, rating)}</strong>
+                <span class="help-tooltip" aria-label="Meta criteria" data-tooltip="Pokemon with at least 4.52% weighted usage are highlighted. For OU/UU/RU/NU/PU formats, a Pokemon is truly in their tier if a typical competitive player is more than 50% likely to encounter it at least once in a day of playing (15 battles)." tabindex="0">?</span>
+            </p>
+        </div>
+        <div class="pokemon-breakdown">
+            <div class="pokemon-table-wrapper">
+                <table class="pokemon-table">
+                    <thead>
+                        <tr>
+                            <th class="pokemon-sortable" data-sort="pokemon_name">Pokemon</th>
+                            <th class="pokemon-sortable" data-sort="usage_pct">Usage %</th>
+                            <th class="pokemon-sortable" data-sort="usage_count">Usage Count</th>
+                            <th>Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${pokemonRows}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+
+    setupPokemonSortListeners(getFormatKey(format), rating);
+    updatePokemonSortIndicators();
 }
 
 function getFormatName(format) {
