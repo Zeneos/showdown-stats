@@ -134,17 +134,20 @@ footer a {
     /* Visual */
     background: var(--toggle-bg);
     backdrop-filter: blur(8px);
+    opacity: 0.72;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
 .theme-toggle-btn:hover {
     transform: translateY(-1px);
+    opacity: 1;
 }
 
 .theme-toggle-btn:focus-visible {
     outline: 2px solid var(--link-color);
     outline-offset: 2px;
+    opacity: 1;
 }
 
 .theme-toggle-icon {

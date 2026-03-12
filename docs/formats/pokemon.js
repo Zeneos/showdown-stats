@@ -60,8 +60,62 @@ let pokemonPickerOutsideClickHandler = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeGlobalHelpTooltip();
+    setupShareLinkButton();
     loadPokemonDetail();
 });
+
+function setupShareLinkButton() {
+    const button = document.getElementById('share-link-btn');
+    if (!button) return;
+
+    const labelEl = button.querySelector('.share-link-label');
+    const defaultText = labelEl ? (labelEl.textContent || 'Share') : 'Share';
+
+    button.addEventListener('click', async () => {
+        const success = await copyTextToClipboard(window.location.href);
+        button.classList.toggle('is-copied', success);
+        if (labelEl) {
+            labelEl.textContent = success ? 'Copied!' : 'Copy failed';
+        }
+
+        window.setTimeout(() => {
+            button.classList.remove('is-copied');
+            if (labelEl) {
+                labelEl.textContent = defaultText;
+            }
+        }, 1400);
+    });
+}
+
+async function copyTextToClipboard(text) {
+    if (!text) return false;
+
+    if (navigator.clipboard && window.isSecureContext) {
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch (_error) {
+            // Fallback to execCommand path below.
+        }
+    }
+
+    try {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.setAttribute('readonly', '');
+        textArea.style.position = 'fixed';
+        textArea.style.top = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        const copied = document.execCommand('copy');
+        document.body.removeChild(textArea);
+        return copied;
+    } catch (_error) {
+        return false;
+    }
+}
 
 function initializeGlobalHelpTooltip() {
     if (document.getElementById('global-help-tooltip')) return;
@@ -141,6 +195,8 @@ function initializeGlobalHelpTooltip() {
 }
 
 async function loadPokemonDetail() {
+    renderPokemonDetailSkeleton();
+
     const params = new URLSearchParams(window.location.search);
     const formatName = params.get('format');
     const pokemonName = params.get('pokemon');
@@ -283,6 +339,37 @@ async function loadPokemonDetail() {
 
     attachCountersSortHandlers(entry.counters_json);
     attachPokemonRowNavigationHandlers();
+}
+
+function renderPokemonDetailSkeleton() {
+    const nameEl = document.getElementById('pokemon-name');
+    if (nameEl) {
+        nameEl.textContent = 'Loading...';
+    }
+
+    const usageEl = document.getElementById('pokemon-usage');
+    if (usageEl) {
+        usageEl.innerHTML = '<span class="skeleton-line skeleton-line--md"></span>';
+    }
+
+    const rankingEl = document.getElementById('pokemon-ranking');
+    if (rankingEl) {
+        rankingEl.innerHTML = '<span class="skeleton-line skeleton-line--sm"></span>';
+    }
+
+    const grid = document.getElementById('pokemon-detail-grid');
+    if (!grid) return;
+
+    const cards = Array.from({ length: 6 }, () => `
+        <section class="pokemon-detail-section pokemon-detail-skeleton-card" aria-hidden="true">
+            <div class="skeleton-line skeleton-line--lg"></div>
+            <div class="skeleton-line skeleton-line--md"></div>
+            <div class="skeleton-line skeleton-line--md"></div>
+            <div class="skeleton-line skeleton-line--sm"></div>
+        </section>
+    `).join('');
+
+    grid.innerHTML = cards;
 }
 
 async function loadBaseStatsForPokemon(pokemonName) {

@@ -17,10 +17,66 @@ const metaEncounterProbability = 0.5;
 // Load data on page load
 document.addEventListener('DOMContentLoaded', async () => {
     initializeGlobalHelpTooltip();
+    setupDataGuideModal();
     await loadLatestData();
     setupEventListeners();
     handleRouting();
 });
+
+function setupDataGuideModal() {
+    const trigger = document.getElementById('open-data-guide-btn');
+    if (!trigger) return;
+
+    if (!document.getElementById('data-guide-modal')) {
+        const modal = document.createElement('div');
+        modal.id = 'data-guide-modal';
+        modal.className = 'data-guide-modal';
+        modal.setAttribute('aria-hidden', 'true');
+        modal.innerHTML = `
+            <div class="data-guide-backdrop" data-close="true"></div>
+            <div class="data-guide-panel" role="dialog" aria-modal="true" aria-labelledby="data-guide-title">
+                <button class="data-guide-close" type="button" aria-label="Close guide" data-close="true">x</button>
+                <h2 id="data-guide-title">How to Read These Stats</h2>
+                <p>Usage % shows how often a Pokemon appears in teams for the selected format and rating.</p>
+                <p>Total Usage Count is the raw number of appearances in the monthly data.</p>
+                <p>Monthly Rank is ordered by Usage % (highest to lowest) for the selected format and rating.</p>
+                <p>Rating filters (for example, 1500+ or 1825+) show stats from players at or above that threshold.</p>
+                <p>Green-highlighted rows mark meta Pokemon based on weighted usage.</p>
+                <p>Meta threshold rule: a Pokemon is highlighted if its weighted usage is at least 4.52%. For OU/UU/RU/NU/PU, this corresponds to being more than 50% likely to be encountered at least once across 15 battles.</p>
+                <p class="data-guide-note">Data source: Smogon monthly usage stats.</p>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    const modal = document.getElementById('data-guide-modal');
+    if (!modal) return;
+
+    const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+    };
+
+    const openModal = () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+    };
+
+    trigger.addEventListener('click', openModal);
+
+    modal.addEventListener('click', (event) => {
+        const target = event.target;
+        if (target instanceof Element && target.closest('[data-close="true"]')) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+}
 
 function initializeGlobalHelpTooltip() {
     if (document.getElementById('global-help-tooltip')) return;
@@ -102,6 +158,11 @@ function initializeGlobalHelpTooltip() {
 // Load the latest stats data
 async function loadLatestData() {
     try {
+        const tableBody = document.getElementById('table-body');
+        if (tableBody) {
+            tableBody.innerHTML = buildFormatsTableSkeletonRows();
+        }
+
         // First, load the index to get the latest period
         const indexResponse = await fetch(`../index.json`);
         if (!indexResponse.ok) {
@@ -146,6 +207,16 @@ async function loadLatestData() {
             </tr>
         `;
     }
+}
+
+function buildFormatsTableSkeletonRows() {
+    return Array.from({ length: 8 }, () => `
+        <tr class="skeleton-row" aria-hidden="true">
+            <td><span class="skeleton-line skeleton-line--lg"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+        </tr>
+    `).join('');
 }
 
 // Populate the segmented rating filter buttons.
@@ -546,6 +617,8 @@ async function renderFormatDetail(formatName, ratingOverride) {
     const detailContent = document.getElementById('detail-content');
     if (!detailContent) return;
 
+    detailContent.innerHTML = buildPokemonTableSkeleton();
+
     const format = statsData.formats.find(f => getFormatKey(f) === formatName);
 
     if (!format) {
@@ -627,6 +700,37 @@ async function renderFormatDetail(formatName, ratingOverride) {
     setupPokemonSortListeners(getFormatKey(format), rating);
     updatePokemonSortIndicators();
     setupPokemonRowLinks(detailContent);
+}
+
+function buildPokemonTableSkeleton() {
+    const rows = Array.from({ length: 8 }, () => `
+        <tr class="skeleton-row">
+            <td><span class="skeleton-line skeleton-line--lg"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+        </tr>
+    `).join('');
+
+    return `
+        <div class="pokemon-breakdown">
+            <div class="pokemon-table-wrapper">
+                <table class="pokemon-table">
+                    <thead>
+                        <tr>
+                            <th>Pokemon</th>
+                            <th>Usage %</th>
+                            <th>Total Usage Count</th>
+                            <th>Monthly Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody class="skeleton-table-body" aria-hidden="true">
+                        ${rows}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
 }
 
 function setupPokemonRowLinks(container) {
