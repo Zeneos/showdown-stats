@@ -59,8 +59,86 @@ const latestFormatsDataCache = {};
 let pokemonPickerOutsideClickHandler = null;
 
 document.addEventListener('DOMContentLoaded', () => {
+    initializeGlobalHelpTooltip();
     loadPokemonDetail();
 });
+
+function initializeGlobalHelpTooltip() {
+    if (document.getElementById('global-help-tooltip')) return;
+
+    const tooltip = document.createElement('div');
+    tooltip.id = 'global-help-tooltip';
+    tooltip.setAttribute('role', 'tooltip');
+    document.body.appendChild(tooltip);
+
+    document.body.classList.add('js-tooltip-enabled');
+
+    const hideTooltip = () => {
+        tooltip.classList.remove('is-visible');
+        tooltip.textContent = '';
+    };
+
+    const showTooltipFor = (target) => {
+        if (!target) return;
+        const text = target.getAttribute('data-tooltip');
+        if (!text) return;
+
+        tooltip.textContent = text;
+        tooltip.classList.add('is-visible');
+
+        const rect = target.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+        const gap = 10;
+
+        let top = rect.top - tooltipRect.height - gap;
+        if (top < 8) {
+            top = rect.bottom + gap;
+        }
+
+        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+        const minLeft = 8;
+        const maxLeft = window.innerWidth - tooltipRect.width - 8;
+        left = Math.max(minLeft, Math.min(left, Math.max(minLeft, maxLeft)));
+
+        tooltip.style.top = `${Math.round(top)}px`;
+        tooltip.style.left = `${Math.round(left)}px`;
+    };
+
+    document.addEventListener('pointerover', (event) => {
+        const target = event.target && event.target.closest
+            ? event.target.closest('.help-tooltip')
+            : null;
+        if (!target) return;
+        showTooltipFor(target);
+    });
+
+    document.addEventListener('pointerout', (event) => {
+        const target = event.target && event.target.closest
+            ? event.target.closest('.help-tooltip')
+            : null;
+        if (!target) return;
+        hideTooltip();
+    });
+
+    document.addEventListener('focusin', (event) => {
+        const target = event.target && event.target.closest
+            ? event.target.closest('.help-tooltip')
+            : null;
+        if (!target) return;
+        showTooltipFor(target);
+    });
+
+    document.addEventListener('focusout', (event) => {
+        const target = event.target && event.target.closest
+            ? event.target.closest('.help-tooltip')
+            : null;
+        if (!target) return;
+        hideTooltip();
+    });
+
+    window.addEventListener('scroll', hideTooltip, true);
+    window.addEventListener('resize', hideTooltip);
+}
 
 async function loadPokemonDetail() {
     const params = new URLSearchParams(window.location.search);

@@ -269,6 +269,12 @@ function renderTable() {
             selectFormat(formatKey);
         });
 
+        row.querySelectorAll('td').forEach(cell => {
+            cell.addEventListener('click', () => {
+                selectFormat(formatKey);
+            });
+        });
+
         const link = row.querySelector('.format-link');
         if (link) {
             link.addEventListener('click', (event) => {
@@ -579,7 +585,7 @@ async function renderFormatDetail(formatName, ratingOverride) {
             const pokemonLink = getPokemonLink(getFormatKey(format), pokemon.pokemon_name, rating);
             const monthlyRank = monthlyRankMap.get(toId(pokemon.pokemon_name)) || 0;
             return `
-            <tr class="${isMeta ? 'pokemon-meta' : ''}">
+            <tr class="${isMeta ? 'pokemon-meta' : ''} pokemon-row-link" data-href="${pokemonLink}" tabindex="0" role="link" aria-label="View ${escapeHtml(pokemon.pokemon_name)} details">
                 <td class="pokemon-name">
                     <a class="pokemon-link" href="${pokemonLink}">
                         <span class="pokemon-name-cell">
@@ -597,14 +603,6 @@ async function renderFormatDetail(formatName, ratingOverride) {
         .join('');
 
     detailContent.innerHTML = `
-        <div class="format-header">
-            <h2>${escapeHtml(getFormatName(format))}</h2>
-            <p>Total Battles: <strong>${formatNumber(formatForDisplay.total_battles)}</strong></p>
-            <p>Overall Percentage: <strong>${Number(formatForDisplay.percentage || 0).toFixed(2)}%</strong></p>
-            <p>
-                Current Glicko Rating : <strong>${formatPokemonRatingLabel(pokemonData.elo_cutoff, rating)}</strong>
-            </p>
-        </div>
         <div class="pokemon-breakdown">
             <div class="pokemon-table-wrapper">
                 <table class="pokemon-table">
@@ -628,6 +626,31 @@ async function renderFormatDetail(formatName, ratingOverride) {
 
     setupPokemonSortListeners(getFormatKey(format), rating);
     updatePokemonSortIndicators();
+    setupPokemonRowLinks(detailContent);
+}
+
+function setupPokemonRowLinks(container) {
+    if (!container) return;
+
+    const rows = container.querySelectorAll('.pokemon-table tbody tr.pokemon-row-link[data-href]');
+    rows.forEach(row => {
+        row.addEventListener('click', (event) => {
+            if (event.target.closest('a, button')) return;
+            const href = row.dataset.href;
+            if (href) {
+                window.location.href = href;
+            }
+        });
+
+        row.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            event.preventDefault();
+            const href = row.dataset.href;
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    });
 }
 
 function getFormatName(format) {

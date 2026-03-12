@@ -220,9 +220,27 @@ tbody tr {
     transition: background-color 0.2s;
 }
 
+#stats-table tbody tr:nth-child(odd),
+.pokemon-table tbody tr:nth-child(odd),
+.detail-table tbody tr:nth-child(odd) {
+    /* Visual */
+    background-color: #ffffff;
+}
+
+#stats-table tbody tr:nth-child(even),
+.pokemon-table tbody tr:nth-child(even),
+.detail-table tbody tr:nth-child(even) {
+    /* Visual */
+    background-color: #f8fafc;
+}
+
 tbody tr:hover {
     /* Visual */
     background-color: #f8f9fa;
+}
+
+#stats-table tbody tr {
+    cursor: pointer;
 }
 
 .format-name {
@@ -787,6 +805,16 @@ tbody tr:hover {
 tr.pokemon-nav-row {
     /* Visual */
     cursor: pointer;
+}
+
+.detail-table tbody tr.pokemon-nav-row:hover {
+    /* Visual */
+    background-color: #e8f1ff;
+}
+
+.detail-table tbody tr.pokemon-nav-row:hover td {
+    /* Visual */
+    background-color: #e8f1ff;
 }
 
 tr.pokemon-nav-row:focus-visible {
@@ -1442,7 +1470,32 @@ body.js-tooltip-enabled .help-tooltip::before {
 
 .pokemon-meta {
     /* Visual */
-    background: #d6f5d6;
+    background: rgba(22, 163, 74, 0.26);
+}
+
+.pokemon-table tbody tr.pokemon-meta {
+    /* Visual */
+    background: rgba(22, 163, 74, 0.26);
+}
+
+.pokemon-meta:hover {
+    /* Visual */
+    background: rgba(22, 163, 74, 0.32);
+}
+
+.pokemon-table tbody tr.pokemon-meta:nth-child(2) { background: rgba(22, 163, 74, 0.22); }
+.pokemon-table tbody tr.pokemon-meta:nth-child(3) { background: rgba(22, 163, 74, 0.18); }
+.pokemon-table tbody tr.pokemon-meta:nth-child(4) { background: rgba(22, 163, 74, 0.14); }
+.pokemon-table tbody tr.pokemon-meta:nth-child(5) { background: rgba(22, 163, 74, 0.10); }
+.pokemon-table tbody tr.pokemon-meta:nth-child(6) { background: rgba(22, 163, 74, 0.06); }
+.pokemon-table tbody tr.pokemon-meta:nth-child(n+7) { background: rgba(22, 163, 74, 0.08); }
+
+.pokemon-table tbody tr.pokemon-meta:nth-child(odd) {
+    box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.02);
+}
+
+.pokemon-table tbody tr.pokemon-meta:nth-child(even) {
+    box-shadow: inset 0 0 0 999px rgba(0, 0, 0, 0.01);
 }
 
 .pokemon-name-cell {
@@ -1467,6 +1520,10 @@ body.js-tooltip-enabled .help-tooltip::before {
     text-decoration: underline;
 }
 
+.pokemon-table tbody tr.pokemon-row-link {
+    cursor: pointer;
+}
+
 .pokemon-sprite {
     /* Display & Box Model */
     width: 48px;
@@ -1477,7 +1534,12 @@ body.js-tooltip-enabled .help-tooltip::before {
     object-fit: contain;
 }
 
-.pokemon-usage,
+.pokemon-usage {
+    /* Typography */
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+}
+
 .pokemon-count {
     /* Typography */
     font-variant-numeric: tabular-nums;
@@ -1487,6 +1549,7 @@ body.js-tooltip-enabled .help-tooltip::before {
     /* Typography */
     text-align: center;
     font-variant-numeric: tabular-nums;
+    font-weight: 700;
     color: #64748b;
 }
 
@@ -1572,6 +1635,61 @@ html[data-theme='dark'] .pokemon-table tbody tr:hover {
     background-color: #1f2937;
 }
 
+html[data-theme='dark'] .detail-table tbody tr.pokemon-nav-row:hover,
+html[data-theme='dark'] .detail-table tbody tr.pokemon-nav-row:hover td {
+    background-color: #1e293b;
+}
+
+html[data-theme='dark'] #stats-table tbody tr:nth-child(odd),
+html[data-theme='dark'] .pokemon-table tbody tr:nth-child(odd),
+html[data-theme='dark'] .detail-table tbody tr:nth-child(odd) {
+    background-color: #0f172a;
+}
+
+html[data-theme='dark'] #stats-table tbody tr:nth-child(even),
+html[data-theme='dark'] .pokemon-table tbody tr:nth-child(even),
+html[data-theme='dark'] .detail-table tbody tr:nth-child(even) {
+    background-color: #111c31;
+}
+
+#stats-table tbody tr.format-row-selected,
+#stats-table tbody tr.format-row-selected:nth-child(odd),
+#stats-table tbody tr.format-row-selected:nth-child(even) {
+    background: #2563eb;
+}
+
+#stats-table tbody tr.format-row-selected:hover {
+    background: #1d4ed8;
+}
+
+#stats-table tbody tr.format-row-selected td,
+#stats-table tbody tr.format-row-selected .format-name,
+#stats-table tbody tr.format-row-selected .percentage,
+#stats-table tbody tr.format-row-selected .battles,
+#stats-table tbody tr.format-row-selected .format-link,
+#stats-table tbody tr.format-row-selected .format-link:hover {
+    color: #f8fafc;
+}
+
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected,
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected:nth-child(odd),
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected:nth-child(even) {
+    background: #3b82f6;
+}
+
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected:hover {
+    background: #2563eb;
+}
+
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected td,
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected .format-name,
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected .percentage,
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected .battles,
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected .format-link,
+html[data-theme='dark'] #stats-table tbody tr.format-row-selected .format-link:hover {
+    color: #f8fafc;
+}
+
 html[data-theme='dark'] th:hover {
     background-color: #1f2937;
 }
@@ -1618,11 +1736,30 @@ html[data-theme='dark'] .pokemon-table th {
 }
 
 html[data-theme='dark'] .pokemon-meta {
-    background: #1f3a2a;
+    background: rgba(74, 222, 128, 0.30);
+}
+
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta {
+    background: rgba(74, 222, 128, 0.30);
 }
 
 html[data-theme='dark'] .pokemon-meta:hover {
-    background: #244632;
+    background: rgba(74, 222, 128, 0.38);
+}
+
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta:nth-child(2) { background: rgba(74, 222, 128, 0.24); }
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta:nth-child(3) { background: rgba(74, 222, 128, 0.19); }
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta:nth-child(4) { background: rgba(74, 222, 128, 0.14); }
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta:nth-child(5) { background: rgba(74, 222, 128, 0.10); }
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta:nth-child(6) { background: rgba(74, 222, 128, 0.09); }
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta:nth-child(n+7) { background: rgba(74, 222, 128, 0.08); }
+
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta:nth-child(odd) {
+    box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.02);
+}
+
+html[data-theme='dark'] .pokemon-table tbody tr.pokemon-meta:nth-child(even) {
+    box-shadow: inset 0 0 0 999px rgba(2, 6, 23, 0.14);
 }
 
 html[data-theme='dark'] .pokemon-meta-usage {
@@ -1780,6 +1917,16 @@ html[data-theme='dark'] #pokemon-format-select {
 html[data-theme='dark'] .format-link,
 html[data-theme='dark'] .format-link:hover {
     color: #93c5fd;
+}
+
+html[data-theme='dark'] #stats-table th,
+html[data-theme='dark'] #stats-table td,
+html[data-theme='dark'] #stats-table .format-name,
+html[data-theme='dark'] #stats-table .percentage,
+html[data-theme='dark'] #stats-table .battles,
+html[data-theme='dark'] #stats-table .format-link,
+html[data-theme='dark'] #stats-table .format-link:hover {
+    color: #f8fafc;
 }
 
 .detail-actions {
