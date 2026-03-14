@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Detail</title>
+    <link rel="icon" type="image/png" href="../assets/Icons/poketail.png">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/formats.css">
 </head>
@@ -11,7 +12,6 @@
     <div class="container">
         <header>
             <h1>Pokemon Showdown Battle Statistics</h1>
-            <p id="period-info">Loading latest stats...</p>
         </header>
 
         <div id="pokemon-detail" class="pokemon-detail">
@@ -19,14 +19,32 @@
                 <div class="pokemon-detail-identity">
                     <img id="pokemon-sprite" class="pokemon-detail-sprite" alt="" loading="lazy">
                     <div>
-                        <h2 id="pokemon-name">Loading...</h2>
-                        <p id="pokemon-format"></p>
+                        <div class="pokemon-name-row">
+                            <h2 id="pokemon-name">Loading...</h2>
+                            <div id="pokemon-types" class="pokemon-types-row" aria-label="Pokemon types"></div>
+                        </div>
                         <p id="pokemon-usage"></p>
+                        <p id="pokemon-ranking"></p>
                     </div>
                 </div>
                 <div class="pokemon-detail-actions">
-                    <a id="back-to-format" class="back-link" href="./">Back to format</a>
-                    <a class="back-link" href="./">← Back to all formats</a>
+                    <div class="pokemon-picker-switch">
+                        <div class="pokemon-picker-input-wrap">
+                            <input id="pokemon-picker-select" type="text" aria-label="Search or select pokemon" placeholder="Search Pokemon" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="pokemon-picker-menu">
+                            <div id="pokemon-picker-menu" class="pokemon-picker-menu" role="listbox" aria-label="Pokemon options"></div>
+                        </div>
+                    </div>
+                    <div class="pokemon-rating-switch">
+                        <div id="pokemon-rating-filter" class="pokemon-rating-segments" role="group" aria-label="Select rating"></div>
+                    </div>
+                    <div class="pokemon-format-switch">
+                        <select id="pokemon-format-select" aria-label="Select format"></select>
+                    </div>
+                    <button id="share-link-btn" class="share-link-btn" type="button" aria-label="Copy link to current view">
+                        <span class="share-link-label">Share</span>
+                        <img class="share-link-icon-image" src="https://cdn-icons-png.flaticon.com/512/1358/1358023.png" alt="" aria-hidden="true" loading="lazy">
+                    </button>
+                    <a id="back-to-format" class="back-link" href="./">Back to formats</a>
                 </div>
             </div>
 
@@ -37,9 +55,18 @@
 
         <footer>
             Data from <a href="https://www.smogon.com/stats" target="_blank">Smogon Stats</a>
+            <div id="usage-stats-date">Usage stats data from -</div>
+            <div>
+                Sprites used from
+                <a href="https://github.com/PokeAPI/sprites" target="_blank">PokeAPI/sprites</a>
+                and
+                <a href="https://github.com/remokon/gen-9-sprites" target="_blank">remokon/gen-9-sprites</a>
+            </div>
+            <div>Pokemon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026</div>
         </footer>
     </div>
 
+    <script src="../theme.js"></script>
     <script src="pokemon.js"></script>
 </body>
 </html>

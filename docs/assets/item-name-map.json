@@ -1,0 +1,2734 @@
+{
+    "meta":  {
+                 "generatedAt":  "2026-03-08T04:12:07.0608219-07:00",
+                 "source":  "local-item-sprites",
+                 "spritesDir":  "docs/assets/sprites/items",
+                 "totalMappings":  908
+             },
+    "items":  {
+                  "abilitycapsule":  {
+                                         "file":  "ability-capsule.png"
+                                     },
+                  "abilityshield":  {
+                                        "file":  "ability-shield.png"
+                                    },
+                  "abilityurge":  {
+                                      "file":  "ability-urge.png"
+                                  },
+                  "abomasite":  {
+                                    "file":  "abomasite.png"
+                                },
+                  "absolite":  {
+                                   "file":  "absolite.png"
+                               },
+                  "absolitez":  {
+                                    "file":  "absolite-z.png"
+                                },
+                  "absorbbulb":  {
+                                     "file":  "absorb-bulb.png"
+                                 },
+                  "acrobike":  {
+                                   "file":  "acro-bike.png"
+                               },
+                  "adamantorb":  {
+                                     "file":  "adamant-orb.png"
+                                 },
+                  "adrenalineorb":  {
+                                        "file":  "adrenaline-orb.png"
+                                    },
+                  "adventurerules":  {
+                                         "file":  "adventure-rules.png"
+                                     },
+                  "aerodactylite":  {
+                                        "file":  "aerodactylite.png"
+                                    },
+                  "aggronite":  {
+                                    "file":  "aggronite.png"
+                                },
+                  "aguavberry":  {
+                                     "file":  "aguav-berry.png"
+                                 },
+                  "airballoon":  {
+                                     "file":  "air-balloon.png"
+                                 },
+                  "airmail":  {
+                                  "file":  "air-mail.png"
+                              },
+                  "alakazite":  {
+                                    "file":  "alakazite.png"
+                                },
+                  "aloraichiumz":  {
+                                       "file":  "aloraichium-z--held.png"
+                                   },
+                  "altarianite":  {
+                                      "file":  "altarianite.png"
+                                  },
+                  "amazemulch":  {
+                                     "file":  "amaze-mulch.png"
+                                 },
+                  "ampharosite":  {
+                                      "file":  "ampharosite.png"
+                                  },
+                  "amuletcoin":  {
+                                     "file":  "amulet-coin.png"
+                                 },
+                  "antidote":  {
+                                   "file":  "antidote.png"
+                               },
+                  "apicotberry":  {
+                                      "file":  "apicot-berry.png"
+                                  },
+                  "apricornbox":  {
+                                      "file":  "apricorn-box.png"
+                                  },
+                  "aquasuit":  {
+                                   "file":  "aqua-suit.png"
+                               },
+                  "armorfossil":  {
+                                      "file":  "armor-fossil.png"
+                                  },
+                  "aspearberry":  {
+                                      "file":  "aspear-berry.png"
+                                  },
+                  "assaultvest":  {
+                                      "file":  "assault-vest.png"
+                                  },
+                  "audinite":  {
+                                   "file":  "audinite.png"
+                               },
+                  "auroraticket":  {
+                                       "file":  "auroraticket.png"
+                                   },
+                  "awakening":  {
+                                    "file":  "awakening.png"
+                                },
+                  "azureflute":  {
+                                     "file":  "azure-flute.png"
+                                 },
+                  "babiriberry":  {
+                                      "file":  "babiri-berry.png"
+                                  },
+                  "balmmushroom":  {
+                                       "file":  "balm-mushroom.png"
+                                   },
+                  "banettite":  {
+                                    "file":  "banettite.png"
+                                },
+                  "barbaracite":  {
+                                      "file":  "barbaracite.png"
+                                  },
+                  "basementkey":  {
+                                      "file":  "basement-key.png"
+                                  },
+                  "baxcalibrite":  {
+                                       "file":  "baxcalibrite.png"
+                                   },
+                  "beadmail":  {
+                                   "file":  "bead-mail.png"
+                               },
+                  "beastball":  {
+                                    "file":  "beast-ball.png"
+                                },
+                  "beedrillite":  {
+                                      "file":  "beedrillite.png"
+                                  },
+                  "belueberry":  {
+                                     "file":  "belue-berry.png"
+                                 },
+                  "berryjuice":  {
+                                     "file":  "berry-juice.png"
+                                 },
+                  "berrypots":  {
+                                    "file":  "berry-pots.png"
+                                },
+                  "berrypouch":  {
+                                     "file":  "berry-pouch.png"
+                                 },
+                  "bicycle":  {
+                                  "file":  "bicycle.png"
+                              },
+                  "bicycleturquoise":  {
+                                           "file":  "bicycle-turquoise.png"
+                                       },
+                  "bicycleyellow":  {
+                                        "file":  "bicycle-yellow.png"
+                                    },
+                  "bigmalasada":  {
+                                      "file":  "big-malasada.png"
+                                  },
+                  "bigmushroom":  {
+                                      "file":  "big-mushroom.png"
+                                  },
+                  "bignugget":  {
+                                    "file":  "big-nugget.png"
+                                },
+                  "bigpearl":  {
+                                   "file":  "big-pearl.png"
+                               },
+                  "bigroot":  {
+                                  "file":  "big-root.png"
+                              },
+                  "bike":  {
+                               "file":  "bike--green.png"
+                           },
+                  "bikevoucher":  {
+                                      "file":  "bike-voucher.png"
+                                  },
+                  "bindingband":  {
+                                      "file":  "binding-band.png"
+                                  },
+                  "blackapricorn":  {
+                                        "file":  "black-apricorn.png"
+                                    },
+                  "blackbelt":  {
+                                    "file":  "black-belt.png"
+                                },
+                  "blackflute":  {
+                                     "file":  "black-flute.png"
+                                 },
+                  "blackglasses":  {
+                                       "file":  "black-glasses.png"
+                                   },
+                  "blacksludge":  {
+                                      "file":  "black-sludge.png"
+                                  },
+                  "blastoisinite":  {
+                                        "file":  "blastoisinite.png"
+                                    },
+                  "blazikenite":  {
+                                      "file":  "blazikenite.png"
+                                  },
+                  "bloommail":  {
+                                    "file":  "bloom-mail.png"
+                                },
+                  "blueapricorn":  {
+                                       "file":  "blue-apricorn.png"
+                                   },
+                  "bluecard":  {
+                                   "file":  "blue-card.png"
+                               },
+                  "blueflute":  {
+                                    "file":  "blue-flute.png"
+                                },
+                  "blueorb":  {
+                                  "file":  "blue-orb.png"
+                              },
+                  "bluepetal":  {
+                                    "file":  "blue-petal.png"
+                                },
+                  "bluescarf":  {
+                                    "file":  "blue-scarf.png"
+                                },
+                  "blueshard":  {
+                                    "file":  "blue-shard.png"
+                                },
+                  "blukberry":  {
+                                    "file":  "bluk-berry.png"
+                                },
+                  "blunderpolicy":  {
+                                        "file":  "blunder-policy.png"
+                                    },
+                  "boosterenergy":  {
+                                        "file":  "booster-energy.png"
+                                    },
+                  "boostmulch":  {
+                                     "file":  "boost-mulch.png"
+                                 },
+                  "bottlecap":  {
+                                    "file":  "bottle-cap.png"
+                                },
+                  "brickmail":  {
+                                    "file":  "brick-mail.png"
+                                },
+                  "bridgemaild":  {
+                                      "file":  "bridge-mail-d.png"
+                                  },
+                  "bridgemailm":  {
+                                      "file":  "bridge-mail-m.png"
+                                  },
+                  "bridgemails":  {
+                                      "file":  "bridge-mail-s.png"
+                                  },
+                  "bridgemailt":  {
+                                      "file":  "bridge-mail-t.png"
+                                  },
+                  "bridgemailv":  {
+                                      "file":  "bridge-mail-v.png"
+                                  },
+                  "brightpowder":  {
+                                       "file":  "bright-powder.png"
+                                   },
+                  "bubblemail":  {
+                                     "file":  "bubble-mail.png"
+                                 },
+                  "buggem":  {
+                                 "file":  "bug-gem.png"
+                             },
+                  "buginiumz":  {
+                                    "file":  "buginium-z--held.png"
+                                },
+                  "bugmemory":  {
+                                    "file":  "bug-memory.png"
+                                },
+                  "burndrive":  {
+                                    "file":  "burn-drive.png"
+                                },
+                  "burnheal":  {
+                                   "file":  "burn-heal.png"
+                               },
+                  "calcium":  {
+                                  "file":  "calcium.png"
+                              },
+                  "cameruptite":  {
+                                      "file":  "cameruptite.png"
+                                  },
+                  "carbos":  {
+                                 "file":  "carbos.png"
+                             },
+                  "cardkey":  {
+                                  "file":  "card-key.png"
+                              },
+                  "casteliacone":  {
+                                       "file":  "casteliacone.png"
+                                   },
+                  "cellbattery":  {
+                                      "file":  "cell-battery.png"
+                                  },
+                  "chandelurite":  {
+                                       "file":  "chandelurite.png"
+                                   },
+                  "charcoal":  {
+                                   "file":  "charcoal.png"
+                               },
+                  "charizarditex":  {
+                                        "file":  "charizardite-x.png"
+                                    },
+                  "charizarditey":  {
+                                        "file":  "charizardite-y.png"
+                                    },
+                  "chartiberry":  {
+                                      "file":  "charti-berry.png"
+                                  },
+                  "cheriberry":  {
+                                     "file":  "cheri-berry.png"
+                                 },
+                  "cherishball":  {
+                                      "file":  "cherish-ball.png"
+                                  },
+                  "chesnaughtite":  {
+                                        "file":  "chesnaughtite.png"
+                                    },
+                  "chestoberry":  {
+                                      "file":  "chesto-berry.png"
+                                  },
+                  "chilanberry":  {
+                                      "file":  "chilan-berry.png"
+                                  },
+                  "chilldrive":  {
+                                     "file":  "chill-drive.png"
+                                 },
+                  "chimechite":  {
+                                     "file":  "chimechite.png"
+                                 },
+                  "choiceband":  {
+                                     "file":  "choice-band.png"
+                                 },
+                  "choicescarf":  {
+                                      "file":  "choice-scarf.png"
+                                  },
+                  "choicespecs":  {
+                                      "file":  "choice-specs.png"
+                                  },
+                  "chopleberry":  {
+                                      "file":  "chople-berry.png"
+                                  },
+                  "clawfossil":  {
+                                     "file":  "claw-fossil.png"
+                                 },
+                  "cleansetag":  {
+                                     "file":  "cleanse-tag.png"
+                                 },
+                  "clearamulet":  {
+                                      "file":  "clear-amulet.png"
+                                  },
+                  "clearbell":  {
+                                    "file":  "clear-bell.png"
+                                },
+                  "clefablite":  {
+                                     "file":  "clefablite.png"
+                                 },
+                  "cleverwing":  {
+                                     "file":  "clever-wing.png"
+                                 },
+                  "cobaberry":  {
+                                    "file":  "coba-berry.png"
+                                },
+                  "coincase":  {
+                                   "file":  "coin-case.png"
+                               },
+                  "colburberry":  {
+                                      "file":  "colbur-berry.png"
+                                  },
+                  "colressmachine":  {
+                                         "file":  "colress-machine.png"
+                                     },
+                  "cometshard":  {
+                                     "file":  "comet-shard.png"
+                                 },
+                  "commonstone":  {
+                                      "file":  "common-stone.png"
+                                  },
+                  "contestcostume":  {
+                                         "file":  "contest-costume--dress.png"
+                                     },
+                  "contestpass":  {
+                                      "file":  "contest-pass.png"
+                                  },
+                  "cornerstonemask":  {
+                                          "file":  "cornerstone-mask.png"
+                                      },
+                  "cornnberry":  {
+                                     "file":  "cornn-berry.png"
+                                 },
+                  "coupon1":  {
+                                  "file":  "coupon-1.png"
+                              },
+                  "coupon2":  {
+                                  "file":  "coupon-2.png"
+                              },
+                  "coupon3":  {
+                                  "file":  "coupon-3.png"
+                              },
+                  "coverfossil":  {
+                                      "file":  "cover-fossil.png"
+                                  },
+                  "covertcloak":  {
+                                      "file":  "covert-cloak.png"
+                                  },
+                  "crabominite":  {
+                                      "file":  "crabominite.png"
+                                  },
+                  "custapberry":  {
+                                      "file":  "custap-berry.png"
+                                  },
+                  "dampmulch":  {
+                                    "file":  "damp-mulch.png"
+                                },
+                  "damprock":  {
+                                   "file":  "damp-rock.png"
+                               },
+                  "darkgem":  {
+                                  "file":  "dark-gem.png"
+                              },
+                  "darkiniumz":  {
+                                     "file":  "darkinium-z--held.png"
+                                 },
+                  "darkmemory":  {
+                                     "file":  "dark-memory.png"
+                                 },
+                  "darkranite":  {
+                                     "file":  "darkranite.png"
+                                 },
+                  "darkstone":  {
+                                    "file":  "dark-stone.png"
+                                },
+                  "datacard":  {
+                                   "file":  "data-card.png"
+                               },
+                  "datacard01":  {
+                                     "file":  "data-card-01.png"
+                                 },
+                  "datacard02":  {
+                                     "file":  "data-card-02.png"
+                                 },
+                  "datacard03":  {
+                                     "file":  "data-card-03.png"
+                                 },
+                  "datacard04":  {
+                                     "file":  "data-card-04.png"
+                                 },
+                  "datacard05":  {
+                                     "file":  "data-card-05.png"
+                                 },
+                  "datacard06":  {
+                                     "file":  "data-card-06.png"
+                                 },
+                  "datacard07":  {
+                                     "file":  "data-card-07.png"
+                                 },
+                  "datacard08":  {
+                                     "file":  "data-card-08.png"
+                                 },
+                  "datacard09":  {
+                                     "file":  "data-card-09.png"
+                                 },
+                  "datacard10":  {
+                                     "file":  "data-card-10.png"
+                                 },
+                  "datacard11":  {
+                                     "file":  "data-card-11.png"
+                                 },
+                  "datacard12":  {
+                                     "file":  "data-card-12.png"
+                                 },
+                  "datacard13":  {
+                                     "file":  "data-card-13.png"
+                                 },
+                  "datacard14":  {
+                                     "file":  "data-card-14.png"
+                                 },
+                  "datacard15":  {
+                                     "file":  "data-card-15.png"
+                                 },
+                  "datacard16":  {
+                                     "file":  "data-card-16.png"
+                                 },
+                  "datacard17":  {
+                                     "file":  "data-card-17.png"
+                                 },
+                  "datacard18":  {
+                                     "file":  "data-card-18.png"
+                                 },
+                  "datacard19":  {
+                                     "file":  "data-card-19.png"
+                                 },
+                  "datacard20":  {
+                                     "file":  "data-card-20.png"
+                                 },
+                  "datacard21":  {
+                                     "file":  "data-card-21.png"
+                                 },
+                  "datacard22":  {
+                                     "file":  "data-card-22.png"
+                                 },
+                  "datacard23":  {
+                                     "file":  "data-card-23.png"
+                                 },
+                  "datacard24":  {
+                                     "file":  "data-card-24.png"
+                                 },
+                  "datacard25":  {
+                                     "file":  "data-card-25.png"
+                                 },
+                  "datacard26":  {
+                                     "file":  "data-card-26.png"
+                                 },
+                  "datacard27":  {
+                                     "file":  "data-card-27.png"
+                                 },
+                  "dawnstone":  {
+                                    "file":  "dawn-stone.png"
+                                },
+                  "decidiumz":  {
+                                    "file":  "decidium-z--held.png"
+                                },
+                  "deepseascale":  {
+                                       "file":  "deep-sea-scale.png"
+                                   },
+                  "deepseatooth":  {
+                                       "file":  "deep-sea-tooth.png"
+                                   },
+                  "delphoxite":  {
+                                     "file":  "delphoxite.png"
+                                 },
+                  "destinyknot":  {
+                                      "file":  "destiny-knot.png"
+                                  },
+                  "devongoods":  {
+                                     "file":  "devon-goods.png"
+                                 },
+                  "devonparts":  {
+                                     "file":  "devon-parts.png"
+                                 },
+                  "devonscope":  {
+                                     "file":  "devon-scope.png"
+                                 },
+                  "devonscubagear":  {
+                                         "file":  "devon-scuba-gear.png"
+                                     },
+                  "diancite":  {
+                                   "file":  "diancite.png"
+                               },
+                  "direhit":  {
+                                  "file":  "dire-hit.png"
+                              },
+                  "direhit2":  {
+                                   "file":  "dire-hit-2.png"
+                               },
+                  "direhit3":  {
+                                   "file":  "dire-hit-3.png"
+                               },
+                  "discountcoupon":  {
+                                         "file":  "discount-coupon.png"
+                                     },
+                  "diveball":  {
+                                   "file":  "dive-ball.png"
+                               },
+                  "dnasplicers":  {
+                                      "file":  "dna-splicers.png"
+                                  },
+                  "domefossil":  {
+                                     "file":  "dome-fossil.png"
+                                 },
+                  "dousedrive":  {
+                                     "file":  "douse-drive.png"
+                                 },
+                  "dowsingmachine":  {
+                                         "file":  "dowsing-machine.png"
+                                     },
+                  "dracoplate":  {
+                                     "file":  "draco-plate.png"
+                                 },
+                  "dragalgite":  {
+                                     "file":  "dragalgite.png"
+                                 },
+                  "dragonfang":  {
+                                     "file":  "dragon-fang.png"
+                                 },
+                  "dragongem":  {
+                                    "file":  "dragon-gem.png"
+                                },
+                  "dragoninite":  {
+                                      "file":  "dragoninite.png"
+                                  },
+                  "dragoniumz":  {
+                                     "file":  "dragonium-z--held.png"
+                                 },
+                  "dragonmemory":  {
+                                       "file":  "dragon-memory.png"
+                                   },
+                  "dragonscale":  {
+                                      "file":  "dragon-scale.png"
+                                  },
+                  "dragonskull":  {
+                                      "file":  "dragon-skull.png"
+                                  },
+                  "drampanite":  {
+                                     "file":  "drampanite.png"
+                                 },
+                  "dreadplate":  {
+                                     "file":  "dread-plate.png"
+                                 },
+                  "dreamball":  {
+                                    "file":  "dream-ball.png"
+                                },
+                  "dreammail":  {
+                                    "file":  "dream-mail.png"
+                                },
+                  "droppeditem":  {
+                                      "file":  "dropped-item.png"
+                                  },
+                  "droppeditemred":  {
+                                         "file":  "dropped-item-red.png"
+                                     },
+                  "droppeditemyellow":  {
+                                            "file":  "dropped-item-yellow.png"
+                                        },
+                  "dubiousdisc":  {
+                                      "file":  "dubious-disc.png"
+                                  },
+                  "durinberry":  {
+                                     "file":  "durin-berry.png"
+                                 },
+                  "duskball":  {
+                                   "file":  "dusk-ball.png"
+                               },
+                  "duskstone":  {
+                                    "file":  "dusk-stone.png"
+                                },
+                  "earthplate":  {
+                                     "file":  "earth-plate.png"
+                                 },
+                  "eelektrossite":  {
+                                        "file":  "eelektrossite.png"
+                                    },
+                  "eeviumz":  {
+                                  "file":  "eevium-z--held.png"
+                              },
+                  "ejectbutton":  {
+                                      "file":  "eject-button.png"
+                                  },
+                  "ejectpack":  {
+                                    "file":  "eject-pack.png"
+                                },
+                  "electirizer":  {
+                                      "file":  "electirizer.png"
+                                  },
+                  "electricgem":  {
+                                      "file":  "electric-gem.png"
+                                  },
+                  "electricmemory":  {
+                                         "file":  "electric-memory.png"
+                                     },
+                  "electricseed":  {
+                                       "file":  "electric-seed.png"
+                                   },
+                  "electriumz":  {
+                                     "file":  "electrium-z--held.png"
+                                 },
+                  "elevatorkey":  {
+                                      "file":  "elevator-key.png"
+                                  },
+                  "elixir":  {
+                                 "file":  "elixir.png"
+                             },
+                  "emboarite":  {
+                                    "file":  "emboarite.png"
+                                },
+                  "energypowder":  {
+                                       "file":  "energy-powder.png"
+                                   },
+                  "energyroot":  {
+                                     "file":  "energy-root.png"
+                                 },
+                  "enigmaberry":  {
+                                      "file":  "enigma-berry.png"
+                                  },
+                  "enigmastone":  {
+                                      "file":  "enigma-stone.png"
+                                  },
+                  "enigmaticcard":  {
+                                        "file":  "enigmatic-card.png"
+                                    },
+                  "eonflute":  {
+                                   "file":  "eon-flute.png"
+                               },
+                  "eonticket":  {
+                                    "file":  "eon-ticket.png"
+                                },
+                  "escaperope":  {
+                                     "file":  "escape-rope.png"
+                                 },
+                  "ether":  {
+                                "file":  "ether.png"
+                            },
+                  "everstone":  {
+                                    "file":  "everstone.png"
+                                },
+                  "eviolite":  {
+                                   "file":  "eviolite.png"
+                               },
+                  "excadrite":  {
+                                    "file":  "excadrite.png"
+                                },
+                  "expertbelt":  {
+                                     "file":  "expert-belt.png"
+                                 },
+                  "explorerkit":  {
+                                      "file":  "explorer-kit.png"
+                                  },
+                  "expshare":  {
+                                   "file":  "exp-share.png"
+                               },
+                  "fabmail":  {
+                                  "file":  "fab-mail.png"
+                              },
+                  "fairiumz":  {
+                                   "file":  "fairium-z--held.png"
+                               },
+                  "fairyfeather":  {
+                                       "file":  "fairy-feather.png"
+                                   },
+                  "fairygem":  {
+                                   "file":  "fairy-gem.png"
+                               },
+                  "fairymemory":  {
+                                      "file":  "fairy-memory.png"
+                                  },
+                  "falinksite":  {
+                                     "file":  "falinksite.png"
+                                 },
+                  "famechecker":  {
+                                      "file":  "fame-checker.png"
+                                  },
+                  "fashioncase":  {
+                                      "file":  "fashion-case.png"
+                                  },
+                  "fastball":  {
+                                   "file":  "fast-ball.png"
+                               },
+                  "favoredmail":  {
+                                      "file":  "favored-mail.png"
+                                  },
+                  "feraligite":  {
+                                     "file":  "feraligite.png"
+                                 },
+                  "festivalticket":  {
+                                         "file":  "festival-ticket.png"
+                                     },
+                  "fightinggem":  {
+                                      "file":  "fighting-gem.png"
+                                  },
+                  "fightingmemory":  {
+                                         "file":  "fighting-memory.png"
+                                     },
+                  "fightiniumz":  {
+                                      "file":  "fightinium-z--held.png"
+                                  },
+                  "figyberry":  {
+                                    "file":  "figy-berry.png"
+                                },
+                  "firegem":  {
+                                  "file":  "fire-gem.png"
+                              },
+                  "firememory":  {
+                                     "file":  "fire-memory.png"
+                                 },
+                  "firestone":  {
+                                    "file":  "fire-stone.png"
+                                },
+                  "firiumz":  {
+                                  "file":  "firium-z--held.png"
+                              },
+                  "fishingrod":  {
+                                     "file":  "fishing-rod.png"
+                                 },
+                  "fistplate":  {
+                                    "file":  "fist-plate.png"
+                                },
+                  "flamemail":  {
+                                    "file":  "flame-mail.png"
+                                },
+                  "flameorb":  {
+                                   "file":  "flame-orb.png"
+                               },
+                  "flameplate":  {
+                                     "file":  "flame-plate.png"
+                                 },
+                  "floatstone":  {
+                                     "file":  "float-stone.png"
+                                 },
+                  "floettite":  {
+                                    "file":  "floettite.png"
+                                },
+                  "fluffytail":  {
+                                     "file":  "fluffy-tail.png"
+                                 },
+                  "flyinggem":  {
+                                    "file":  "flying-gem.png"
+                                },
+                  "flyingmemory":  {
+                                       "file":  "flying-memory.png"
+                                   },
+                  "flyiniumz":  {
+                                    "file":  "flyinium-z--held.png"
+                                },
+                  "focusband":  {
+                                    "file":  "focus-band.png"
+                                },
+                  "focussash":  {
+                                    "file":  "focus-sash.png"
+                                },
+                  "foragebag":  {
+                                    "file":  "forage-bag.png"
+                                },
+                  "freshwater":  {
+                                     "file":  "fresh-water.png"
+                                 },
+                  "friendball":  {
+                                     "file":  "friend-ball.png"
+                                 },
+                  "froslassite":  {
+                                      "file":  "froslassite.png"
+                                  },
+                  "fullheal":  {
+                                   "file":  "full-heal.png"
+                               },
+                  "fullincense":  {
+                                      "file":  "full-incense.png"
+                                  },
+                  "fullrestore":  {
+                                      "file":  "full-restore.png"
+                                  },
+                  "galactickey":  {
+                                      "file":  "galactic-key.png"
+                                  },
+                  "galladite":  {
+                                    "file":  "galladite.png"
+                                },
+                  "ganlonberry":  {
+                                      "file":  "ganlon-berry.png"
+                                  },
+                  "garchompite":  {
+                                      "file":  "garchompite.png"
+                                  },
+                  "garchompitez":  {
+                                       "file":  "garchompite-z.png"
+                                   },
+                  "gardevoirite":  {
+                                       "file":  "gardevoirite.png"
+                                   },
+                  "gbsounds":  {
+                                   "file":  "gb-sounds.png"
+                               },
+                  "gengarite":  {
+                                    "file":  "gengarite.png"
+                                },
+                  "geniuswing":  {
+                                     "file":  "genius-wing.png"
+                                 },
+                  "ghostgem":  {
+                                   "file":  "ghost-gem.png"
+                               },
+                  "ghostiumz":  {
+                                    "file":  "ghostium-z--held.png"
+                                },
+                  "ghostmemory":  {
+                                      "file":  "ghost-memory.png"
+                                  },
+                  "glalitite":  {
+                                    "file":  "glalitite.png"
+                                },
+                  "glimmoranite":  {
+                                       "file":  "glimmoranite.png"
+                                   },
+                  "glittermail":  {
+                                      "file":  "glitter-mail.png"
+                                  },
+                  "godstone":  {
+                                   "file":  "god-stone.png"
+                               },
+                  "gogoggles":  {
+                                    "file":  "go-goggles.png"
+                                },
+                  "goldbottlecap":  {
+                                        "file":  "gold-bottle-cap.png"
+                                    },
+                  "goldteeth":  {
+                                    "file":  "gold-teeth.png"
+                                },
+                  "golisopite":  {
+                                     "file":  "golisopite.png"
+                                 },
+                  "golurkite":  {
+                                    "file":  "golurkite.png"
+                                },
+                  "goodrod":  {
+                                  "file":  "good-rod.png"
+                              },
+                  "gooeymulch":  {
+                                     "file":  "gooey-mulch.png"
+                                 },
+                  "gracidea":  {
+                                   "file":  "gracidea.png"
+                               },
+                  "gram1":  {
+                                "file":  "gram-1.png"
+                            },
+                  "gram2":  {
+                                "file":  "gram-2.png"
+                            },
+                  "gram3":  {
+                                "file":  "gram-3.png"
+                            },
+                  "grassgem":  {
+                                   "file":  "grass-gem.png"
+                               },
+                  "grassiumz":  {
+                                    "file":  "grassium-z--held.png"
+                                },
+                  "grassmail":  {
+                                    "file":  "grass-mail.png"
+                                },
+                  "grassmemory":  {
+                                      "file":  "grass-memory.png"
+                                  },
+                  "grassyseed":  {
+                                     "file":  "grassy-seed.png"
+                                 },
+                  "greatball":  {
+                                    "file":  "great-ball.png"
+                                },
+                  "greenapricorn":  {
+                                        "file":  "green-apricorn.png"
+                                    },
+                  "greenpetal":  {
+                                     "file":  "green-petal.png"
+                                 },
+                  "greenscarf":  {
+                                     "file":  "green-scarf.png"
+                                 },
+                  "greenshard":  {
+                                     "file":  "green-shard.png"
+                                 },
+                  "greetmail":  {
+                                    "file":  "greet-mail.png"
+                                },
+                  "greninjite":  {
+                                     "file":  "greninjite.png"
+                                 },
+                  "grepaberry":  {
+                                     "file":  "grepa-berry.png"
+                                 },
+                  "gripclaw":  {
+                                   "file":  "grip-claw.png"
+                               },
+                  "griseousorb":  {
+                                      "file":  "griseous-orb.png"
+                                  },
+                  "groundgem":  {
+                                    "file":  "ground-gem.png"
+                                },
+                  "groundiumz":  {
+                                     "file":  "groundium-z--held.png"
+                                 },
+                  "groundmemory":  {
+                                       "file":  "ground-memory.png"
+                                   },
+                  "growthmulch":  {
+                                      "file":  "growth-mulch.png"
+                                  },
+                  "grubbyhanky":  {
+                                      "file":  "grubby-hanky.png"
+                                  },
+                  "guardspec":  {
+                                    "file":  "guard-spec.png"
+                                },
+                  "gyaradosite":  {
+                                      "file":  "gyaradosite.png"
+                                  },
+                  "habanberry":  {
+                                     "file":  "haban-berry.png"
+                                 },
+                  "harbormail":  {
+                                     "file":  "harbor-mail.png"
+                                 },
+                  "hardstone":  {
+                                    "file":  "hard-stone.png"
+                                },
+                  "hawluchanite":  {
+                                       "file":  "hawluchanite.png"
+                                   },
+                  "healball":  {
+                                   "file":  "heal-ball.png"
+                               },
+                  "healpowder":  {
+                                     "file":  "heal-powder.png"
+                                 },
+                  "healthwing":  {
+                                     "file":  "health-wing.png"
+                                 },
+                  "hearthflamemask":  {
+                                          "file":  "hearthflame-mask.png"
+                                      },
+                  "heartmail":  {
+                                    "file":  "heart-mail.png"
+                                },
+                  "heartscale":  {
+                                     "file":  "heart-scale.png"
+                                 },
+                  "heatranite":  {
+                                     "file":  "heatranite.png"
+                                 },
+                  "heatrock":  {
+                                   "file":  "heat-rock.png"
+                               },
+                  "heavyball":  {
+                                    "file":  "heavy-ball.png"
+                                },
+                  "heavydutyboots":  {
+                                         "file":  "heavy-duty-boots.png"
+                                     },
+                  "helixfossil":  {
+                                      "file":  "helix-fossil.png"
+                                  },
+                  "heracronite":  {
+                                      "file":  "heracronite.png"
+                                  },
+                  "hm01":  {
+                               "file":  "hm01.png"
+                           },
+                  "hm02":  {
+                               "file":  "hm02.png"
+                           },
+                  "hm03":  {
+                               "file":  "hm03.png"
+                           },
+                  "hm04":  {
+                               "file":  "hm04.png"
+                           },
+                  "hm05":  {
+                               "file":  "hm05.png"
+                           },
+                  "hm06":  {
+                               "file":  "hm06.png"
+                           },
+                  "hm07":  {
+                               "file":  "hm07.png"
+                           },
+                  "hmfighting":  {
+                                     "file":  "hm-fighting.png"
+                                 },
+                  "hmflying":  {
+                                   "file":  "hm-flying.png"
+                               },
+                  "hmnormal":  {
+                                   "file":  "hm-normal.png"
+                               },
+                  "hmwater":  {
+                                  "file":  "hm-water.png"
+                              },
+                  "holocaster":  {
+                                     "file":  "holo-caster.png"
+                                 },
+                  "holocastergreen":  {
+                                          "file":  "holo-caster-green.png"
+                                      },
+                  "holocasterred":  {
+                                        "file":  "holo-caster-red.png"
+                                    },
+                  "hondewberry":  {
+                                      "file":  "hondew-berry.png"
+                                  },
+                  "honey":  {
+                                "file":  "honey.png"
+                            },
+                  "honorofkalos":  {
+                                       "file":  "honor-of-kalos.png"
+                                   },
+                  "houndoominite":  {
+                                        "file":  "houndoominite.png"
+                                    },
+                  "hpup":  {
+                               "file":  "hp-up.png"
+                           },
+                  "hyperpotion":  {
+                                      "file":  "hyper-potion.png"
+                                  },
+                  "iapapaberry":  {
+                                      "file":  "iapapa-berry.png"
+                                  },
+                  "icegem":  {
+                                 "file":  "ice-gem.png"
+                             },
+                  "iceheal":  {
+                                  "file":  "ice-heal.png"
+                              },
+                  "icememory":  {
+                                    "file":  "ice-memory.png"
+                                },
+                  "icestone":  {
+                                   "file":  "ice-stone.png"
+                               },
+                  "icicleplate":  {
+                                      "file":  "icicle-plate.png"
+                                  },
+                  "iciumz":  {
+                                 "file":  "icium-z--held.png"
+                             },
+                  "icyrock":  {
+                                  "file":  "icy-rock.png"
+                              },
+                  "ilimasnormaliumz":  {
+                                           "file":  "ilimas-normalium-z.png"
+                                       },
+                  "inciniumz":  {
+                                    "file":  "incinium-z--held.png"
+                                },
+                  "inquirymail":  {
+                                      "file":  "inquiry-mail.png"
+                                  },
+                  "insectplate":  {
+                                      "file":  "insect-plate.png"
+                                  },
+                  "intriguingstone":  {
+                                          "file":  "intriguing-stone.png"
+                                      },
+                  "iron":  {
+                               "file":  "iron.png"
+                           },
+                  "ironball":  {
+                                   "file":  "iron-ball.png"
+                               },
+                  "ironplate":  {
+                                    "file":  "iron-plate.png"
+                                },
+                  "itemdrop":  {
+                                   "file":  "item-drop.png"
+                               },
+                  "itemurge":  {
+                                   "file":  "item-urge.png"
+                               },
+                  "jabocaberry":  {
+                                      "file":  "jaboca-berry.png"
+                                  },
+                  "jadeorb":  {
+                                  "file":  "jade-orb.png"
+                              },
+                  "jawfossil":  {
+                                    "file":  "jaw-fossil.png"
+                                },
+                  "journal":  {
+                                  "file":  "journal.png"
+                              },
+                  "kangaskhanite":  {
+                                        "file":  "kangaskhanite.png"
+                                    },
+                  "kasibberry":  {
+                                     "file":  "kasib-berry.png"
+                                 },
+                  "kebiaberry":  {
+                                     "file":  "kebia-berry.png"
+                                 },
+                  "keeberry":  {
+                                   "file":  "kee-berry.png"
+                               },
+                  "kelpsyberry":  {
+                                      "file":  "kelpsy-berry.png"
+                                  },
+                  "keystone":  {
+                                   "file":  "key-stone.png"
+                               },
+                  "keytoroom1":  {
+                                     "file":  "key-to-room-1.png"
+                                 },
+                  "keytoroom2":  {
+                                     "file":  "key-to-room-2.png"
+                                 },
+                  "keytoroom4":  {
+                                     "file":  "key-to-room-4.png"
+                                 },
+                  "keytoroom6":  {
+                                     "file":  "key-to-room-6.png"
+                                 },
+                  "kingsrock":  {
+                                    "file":  "kings-rock.png"
+                                },
+                  "kommoniumz":  {
+                                     "file":  "kommonium-z--held.png"
+                                 },
+                  "lafeatherball":  {
+                                        "file":  "lafeather-ball.png"
+                                    },
+                  "laggingtail":  {
+                                      "file":  "lagging-tail.png"
+                                  },
+                  "lagigatonball":  {
+                                        "file":  "lagigaton-ball.png"
+                                    },
+                  "lagreatball":  {
+                                      "file":  "lagreat-ball.png"
+                                  },
+                  "laheavyball":  {
+                                      "file":  "laheavy-ball.png"
+                                  },
+                  "lajetball":  {
+                                    "file":  "lajet-ball.png"
+                                },
+                  "laleadenball":  {
+                                       "file":  "laleaden-ball.png"
+                                   },
+                  "lansatberry":  {
+                                      "file":  "lansat-berry.png"
+                                  },
+                  "laoriginball":  {
+                                       "file":  "laorigin-ball.png"
+                                   },
+                  "lapokeball":  {
+                                     "file":  "lapoke-ball.png"
+                                 },
+                  "lastrangeball":  {
+                                        "file":  "lastrange-ball.png"
+                                    },
+                  "latiasite":  {
+                                    "file":  "latiasite.png"
+                                },
+                  "latiosite":  {
+                                    "file":  "latiosite.png"
+                                },
+                  "laultraball":  {
+                                      "file":  "laultra-ball.png"
+                                  },
+                  "lavacookie":  {
+                                     "file":  "lava-cookie.png"
+                                 },
+                  "lawingball":  {
+                                     "file":  "lawing-ball.png"
+                                 },
+                  "laxincense":  {
+                                     "file":  "lax-incense.png"
+                                 },
+                  "leafstone":  {
+                                    "file":  "leaf-stone.png"
+                                },
+                  "leftovers":  {
+                                    "file":  "leftovers.png"
+                                },
+                  "leftpokeball":  {
+                                       "file":  "left-poke-ball.png"
+                                   },
+                  "lemonade":  {
+                                   "file":  "lemonade.png"
+                               },
+                  "lenscase":  {
+                                   "file":  "lens-case.png"
+                               },
+                  "leppaberry":  {
+                                     "file":  "leppa-berry.png"
+                                 },
+                  "letter":  {
+                                 "file":  "letter.png"
+                             },
+                  "levelball":  {
+                                    "file":  "level-ball.png"
+                                },
+                  "libertypass":  {
+                                      "file":  "liberty-pass.png"
+                                  },
+                  "liechiberry":  {
+                                      "file":  "liechi-berry.png"
+                                  },
+                  "lifeorb":  {
+                                  "file":  "life-orb.png"
+                              },
+                  "liftkey":  {
+                                  "file":  "lift-key.png"
+                              },
+                  "lightball":  {
+                                    "file":  "light-ball.png"
+                                },
+                  "lightclay":  {
+                                    "file":  "light-clay.png"
+                                },
+                  "lightstone":  {
+                                     "file":  "light-stone.png"
+                                 },
+                  "likemail":  {
+                                   "file":  "like-mail.png"
+                               },
+                  "loadeddice":  {
+                                     "file":  "loaded-dice.png"
+                                 },
+                  "lockcapsule":  {
+                                      "file":  "lock-capsule.png"
+                                  },
+                  "lookerticket":  {
+                                       "file":  "looker-ticket.png"
+                                   },
+                  "lootsack":  {
+                                   "file":  "loot-sack.png"
+                               },
+                  "lopunnite":  {
+                                    "file":  "lopunnite.png"
+                                },
+                  "lostitem":  {
+                                   "file":  "lost-item.png"
+                               },
+                  "loveball":  {
+                                   "file":  "love-ball.png"
+                               },
+                  "lucarionite":  {
+                                      "file":  "lucarionite.png"
+                                  },
+                  "lucarionitez":  {
+                                       "file":  "lucarionite-z.png"
+                                   },
+                  "luckincense":  {
+                                      "file":  "luck-incense.png"
+                                  },
+                  "luckyegg":  {
+                                   "file":  "lucky-egg.png"
+                               },
+                  "luckypunch":  {
+                                     "file":  "lucky-punch.png"
+                                 },
+                  "lumberry":  {
+                                   "file":  "lum-berry.png"
+                               },
+                  "luminousmoss":  {
+                                       "file":  "luminous-moss.png"
+                                   },
+                  "lumiosegalette":  {
+                                         "file":  "lumiose-galette.png"
+                                     },
+                  "lunaliumz":  {
+                                    "file":  "lunalium-z--held.png"
+                                },
+                  "lunarwing":  {
+                                    "file":  "lunar-wing.png"
+                                },
+                  "lureball":  {
+                                   "file":  "lure-ball.png"
+                               },
+                  "lustrousorb":  {
+                                      "file":  "lustrous-orb.png"
+                                  },
+                  "luxuryball":  {
+                                     "file":  "luxury-ball.png"
+                                 },
+                  "lycaniumz":  {
+                                    "file":  "lycanium-z--held.png"
+                                },
+                  "machbike":  {
+                                   "file":  "mach-bike.png"
+                               },
+                  "machinepart":  {
+                                      "file":  "machine-part.png"
+                                  },
+                  "machobrace":  {
+                                     "file":  "macho-brace.png"
+                                 },
+                  "magearnite":  {
+                                     "file":  "magearnite.png"
+                                 },
+                  "magmaemblem":  {
+                                      "file":  "magma-emblem.png"
+                                  },
+                  "magmarizer":  {
+                                     "file":  "magmarizer.png"
+                                 },
+                  "magmastone":  {
+                                     "file":  "magma-stone.png"
+                                 },
+                  "magmasuit":  {
+                                    "file":  "magma-suit.png"
+                                },
+                  "magnet":  {
+                                 "file":  "magnet.png"
+                             },
+                  "magoberry":  {
+                                    "file":  "mago-berry.png"
+                                },
+                  "magostberry":  {
+                                      "file":  "magost-berry.png"
+                                  },
+                  "makeupbag":  {
+                                    "file":  "makeup-bag.png"
+                                },
+                  "malamarite":  {
+                                     "file":  "malamarite.png"
+                                 },
+                  "manectite":  {
+                                    "file":  "manectite.png"
+                                },
+                  "marangaberry":  {
+                                       "file":  "maranga-berry.png"
+                                   },
+                  "marshadiumz":  {
+                                      "file":  "marshadium-z--held.png"
+                                  },
+                  "masterball":  {
+                                     "file":  "master-ball.png"
+                                 },
+                  "mawilite":  {
+                                   "file":  "mawilite.png"
+                               },
+                  "maxelixir":  {
+                                    "file":  "max-elixir.png"
+                                },
+                  "maxether":  {
+                                   "file":  "max-ether.png"
+                               },
+                  "maxpotion":  {
+                                    "file":  "max-potion.png"
+                                },
+                  "maxrepel":  {
+                                   "file":  "max-repel.png"
+                               },
+                  "maxrevive":  {
+                                    "file":  "max-revive.png"
+                                },
+                  "meadowplate":  {
+                                      "file":  "meadow-plate.png"
+                                  },
+                  "mechmail":  {
+                                   "file":  "mech-mail.png"
+                               },
+                  "medalbox":  {
+                                   "file":  "medal-box.png"
+                               },
+                  "medichamite":  {
+                                      "file":  "medichamite.png"
+                                  },
+                  "megaanchor":  {
+                                     "file":  "mega-anchor.png"
+                                 },
+                  "megaanklet":  {
+                                     "file":  "mega-anklet.png"
+                                 },
+                  "megabracelet":  {
+                                       "file":  "mega-bracelet.png"
+                                   },
+                  "megacharm":  {
+                                    "file":  "mega-charm.png"
+                                },
+                  "megacuff":  {
+                                   "file":  "mega-cuff.png"
+                               },
+                  "megaglasses":  {
+                                      "file":  "mega-glasses.png"
+                                  },
+                  "megaglove":  {
+                                    "file":  "mega-glove.png"
+                                },
+                  "meganiumite":  {
+                                      "file":  "meganiumite.png"
+                                  },
+                  "megapendant":  {
+                                      "file":  "mega-pendant.png"
+                                  },
+                  "megaring":  {
+                                   "file":  "mega-ring.png"
+                               },
+                  "megastickpin":  {
+                                       "file":  "mega-stickpin.png"
+                                   },
+                  "megatiara":  {
+                                    "file":  "mega-tiara.png"
+                                },
+                  "membercard":  {
+                                     "file":  "member-card.png"
+                                 },
+                  "mentalherb":  {
+                                     "file":  "mental-herb.png"
+                                 },
+                  "meowsticite":  {
+                                      "file":  "meowsticite.png"
+                                  },
+                  "metagrossite":  {
+                                       "file":  "metagrossite.png"
+                                   },
+                  "metalcoat":  {
+                                    "file":  "metal-coat.png"
+                                },
+                  "metalpowder":  {
+                                      "file":  "metal-powder.png"
+                                  },
+                  "meteorite":  {
+                                    "file":  "meteorite.png"
+                                },
+                  "meteoriteshard":  {
+                                         "file":  "meteorite-shard.png"
+                                     },
+                  "metronome":  {
+                                    "file":  "metronome.png"
+                                },
+                  "mewniumz":  {
+                                   "file":  "mewnium-z--held.png"
+                               },
+                  "mewtwonitex":  {
+                                      "file":  "mewtwonite-x.png"
+                                  },
+                  "mewtwonitey":  {
+                                      "file":  "mewtwonite-y.png"
+                                  },
+                  "micleberry":  {
+                                     "file":  "micle-berry.png"
+                                 },
+                  "mimikiumz":  {
+                                    "file":  "mimikium-z--held.png"
+                                },
+                  "mindplate":  {
+                                    "file":  "mind-plate.png"
+                                },
+                  "miracleseed":  {
+                                      "file":  "miracle-seed.png"
+                                  },
+                  "mirrorherb":  {
+                                     "file":  "mirror-herb.png"
+                                 },
+                  "mistyseed":  {
+                                    "file":  "misty-seed.png"
+                                },
+                  "moomoomilk":  {
+                                     "file":  "moomoo-milk.png"
+                                 },
+                  "moonball":  {
+                                   "file":  "moon-ball.png"
+                               },
+                  "moonflute":  {
+                                    "file":  "moon-flute.png"
+                                },
+                  "moonstone":  {
+                                    "file":  "moon-stone.png"
+                                },
+                  "mosaicmail":  {
+                                     "file":  "mosaic-mail.png"
+                                 },
+                  "muscleband":  {
+                                     "file":  "muscle-band.png"
+                                 },
+                  "musclewing":  {
+                                     "file":  "muscle-wing.png"
+                                 },
+                  "mysteryegg":  {
+                                     "file":  "mystery-egg.png"
+                                 },
+                  "mysticticket":  {
+                                       "file":  "mysticticket.png"
+                                   },
+                  "mysticwater":  {
+                                      "file":  "mystic-water.png"
+                                  },
+                  "nanabberry":  {
+                                     "file":  "nanab-berry.png"
+                                 },
+                  "nestball":  {
+                                   "file":  "nest-ball.png"
+                               },
+                  "netball":  {
+                                  "file":  "net-ball.png"
+                              },
+                  "nevermeltice":  {
+                                       "file":  "never-melt-ice.png"
+                                   },
+                  "nlunarizer":  {
+                                     "file":  "n-lunarizer--split.png"
+                                 },
+                  "nomelberry":  {
+                                     "file":  "nomel-berry.png"
+                                 },
+                  "normalgem":  {
+                                    "file":  "normal-gem.png"
+                                },
+                  "normaliumz":  {
+                                     "file":  "normalium-z--held.png"
+                                 },
+                  "nsolarizer":  {
+                                     "file":  "n-solarizer--split.png"
+                                 },
+                  "nugget":  {
+                                 "file":  "nugget.png"
+                             },
+                  "oaksletter":  {
+                                     "file":  "oaks-letter.png"
+                                 },
+                  "oaksparcel":  {
+                                     "file":  "oaks-parcel.png"
+                                 },
+                  "occaberry":  {
+                                    "file":  "occa-berry.png"
+                                },
+                  "oddincense":  {
+                                     "file":  "odd-incense.png"
+                                 },
+                  "oddkeystone":  {
+                                      "file":  "odd-keystone.png"
+                                  },
+                  "oldamber":  {
+                                   "file":  "old-amber.png"
+                               },
+                  "oldcharm":  {
+                                   "file":  "old-charm.png"
+                               },
+                  "oldgateau":  {
+                                    "file":  "old-gateau.png"
+                                },
+                  "oldrod":  {
+                                 "file":  "old-rod.png"
+                             },
+                  "oldseamap":  {
+                                    "file":  "old-sea-map.png"
+                                },
+                  "oranberry":  {
+                                    "file":  "oran-berry.png"
+                                },
+                  "orangemail":  {
+                                     "file":  "orange-mail.png"
+                                 },
+                  "orangepetal":  {
+                                      "file":  "orange-petal.png"
+                                  },
+                  "ovalcharm":  {
+                                    "file":  "oval-charm.png"
+                                },
+                  "ovalstone":  {
+                                    "file":  "oval-stone.png"
+                                },
+                  "pairoftickets":  {
+                                        "file":  "pair-of-tickets.png"
+                                    },
+                  "palpad":  {
+                                 "file":  "pal-pad.png"
+                             },
+                  "pamtreberry":  {
+                                      "file":  "pamtre-berry.png"
+                                  },
+                  "paralyzeheal":  {
+                                       "file":  "paralyze-heal.png"
+                                   },
+                  "parcel":  {
+                                 "file":  "parcel.png"
+                             },
+                  "parkball":  {
+                                   "file":  "park-ball.png"
+                               },
+                  "pass":  {
+                               "file":  "pass.png"
+                           },
+                  "passhoberry":  {
+                                      "file":  "passho-berry.png"
+                                  },
+                  "passorb":  {
+                                  "file":  "pass-orb.png"
+                              },
+                  "payapaberry":  {
+                                      "file":  "payapa-berry.png"
+                                  },
+                  "pearl":  {
+                                "file":  "pearl.png"
+                            },
+                  "pearlstring":  {
+                                      "file":  "pearl-string.png"
+                                  },
+                  "pechaberry":  {
+                                     "file":  "pecha-berry.png"
+                                 },
+                  "permit":  {
+                                 "file":  "permit.png"
+                             },
+                  "persimberry":  {
+                                      "file":  "persim-berry.png"
+                                  },
+                  "petayaberry":  {
+                                      "file":  "petaya-berry.png"
+                                  },
+                  "photoalbum":  {
+                                     "file":  "photo-album.png"
+                                 },
+                  "pidgeotite":  {
+                                     "file":  "pidgeotite.png"
+                                 },
+                  "pikaniumz":  {
+                                    "file":  "pikanium-z--held.png"
+                                },
+                  "pikashuniumz":  {
+                                       "file":  "pikashunium-z--held.png"
+                                   },
+                  "pinapberry":  {
+                                     "file":  "pinap-berry.png"
+                                 },
+                  "pinkapricorn":  {
+                                       "file":  "pink-apricorn.png"
+                                   },
+                  "pinknectar":  {
+                                     "file":  "pink-nectar.png"
+                                 },
+                  "pinkpetal":  {
+                                    "file":  "pink-petal.png"
+                                },
+                  "pinkscarf":  {
+                                    "file":  "pink-scarf.png"
+                                },
+                  "pinsirite":  {
+                                    "file":  "pinsirite.png"
+                                },
+                  "pixieplate":  {
+                                     "file":  "pixie-plate.png"
+                                 },
+                  "plasmacard":  {
+                                     "file":  "plasma-card.png"
+                                 },
+                  "plumefossil":  {
+                                      "file":  "plume-fossil.png"
+                                  },
+                  "poffincase":  {
+                                     "file":  "poffin-case.png"
+                                 },
+                  "pointcard":  {
+                                    "file":  "point-card.png"
+                                },
+                  "poisonbarb":  {
+                                     "file":  "poison-barb.png"
+                                 },
+                  "poisongem":  {
+                                    "file":  "poison-gem.png"
+                                },
+                  "poisoniumz":  {
+                                     "file":  "poisonium-z--held.png"
+                                 },
+                  "poisonmemory":  {
+                                       "file":  "poison-memory.png"
+                                   },
+                  "pokeball":  {
+                                   "file":  "poke-ball.png"
+                               },
+                  "pokeblockcase":  {
+                                        "file":  "pokeblock-case.png"
+                                    },
+                  "pokeblockkit":  {
+                                       "file":  "pokeblock-kit.png"
+                                   },
+                  "pokedoll":  {
+                                   "file":  "poke-doll.png"
+                               },
+                  "pokeflute":  {
+                                    "file":  "poke-flute.png"
+                                },
+                  "pokeradar":  {
+                                    "file":  "poke-radar.png"
+                                },
+                  "poketoy":  {
+                                  "file":  "poke-toy.png"
+                              },
+                  "pomegberry":  {
+                                     "file":  "pomeg-berry.png"
+                                 },
+                  "potion":  {
+                                 "file":  "potion.png"
+                             },
+                  "powderjar":  {
+                                    "file":  "powder-jar.png"
+                                },
+                  "poweranklet":  {
+                                      "file":  "power-anklet.png"
+                                  },
+                  "powerband":  {
+                                    "file":  "power-band.png"
+                                },
+                  "powerbelt":  {
+                                    "file":  "power-belt.png"
+                                },
+                  "powerbracer":  {
+                                      "file":  "power-bracer.png"
+                                  },
+                  "powerherb":  {
+                                    "file":  "power-herb.png"
+                                },
+                  "powerlens":  {
+                                    "file":  "power-lens.png"
+                                },
+                  "powerplantpass":  {
+                                         "file":  "power-plant-pass.png"
+                                     },
+                  "powerweight":  {
+                                      "file":  "power-weight.png"
+                                  },
+                  "ppmax":  {
+                                "file":  "pp-max.png"
+                            },
+                  "ppup":  {
+                               "file":  "pp-up.png"
+                           },
+                  "premierball":  {
+                                      "file":  "premier-ball.png"
+                                  },
+                  "prettywing":  {
+                                     "file":  "pretty-wing.png"
+                                 },
+                  "primariumz":  {
+                                     "file":  "primarium-z--held.png"
+                                 },
+                  "prismscale":  {
+                                     "file":  "prism-scale.png"
+                                 },
+                  "prisonbottle":  {
+                                       "file":  "prison-bottle.png"
+                                   },
+                  "professorsmask":  {
+                                         "file":  "professors-mask.png"
+                                     },
+                  "profsletter":  {
+                                      "file":  "profs-letter.png"
+                                  },
+                  "propcase":  {
+                                   "file":  "prop-case.png"
+                               },
+                  "protectivepads":  {
+                                         "file":  "protective-pads.png"
+                                     },
+                  "protector":  {
+                                    "file":  "protector.png"
+                                },
+                  "protein":  {
+                                  "file":  "protein.png"
+                              },
+                  "psychicgem":  {
+                                     "file":  "psychic-gem.png"
+                                 },
+                  "psychicmemory":  {
+                                        "file":  "psychic-memory.png"
+                                    },
+                  "psychicseed":  {
+                                      "file":  "psychic-seed.png"
+                                  },
+                  "psychiumz":  {
+                                    "file":  "psychium-z--held.png"
+                                },
+                  "punchingglove":  {
+                                        "file":  "punching-glove.png"
+                                    },
+                  "pureincense":  {
+                                      "file":  "pure-incense.png"
+                                  },
+                  "purplenectar":  {
+                                       "file":  "purple-nectar.png"
+                                   },
+                  "purplepetal":  {
+                                      "file":  "purple-petal.png"
+                                  },
+                  "pyroarite":  {
+                                    "file":  "pyroarite.png"
+                                },
+                  "qualotberry":  {
+                                      "file":  "qualot-berry.png"
+                                  },
+                  "quickball":  {
+                                    "file":  "quick-ball.png"
+                                },
+                  "quickclaw":  {
+                                    "file":  "quick-claw.png"
+                                },
+                  "quickpowder":  {
+                                      "file":  "quick-powder.png"
+                                  },
+                  "rabutaberry":  {
+                                      "file":  "rabuta-berry.png"
+                                  },
+                  "ragecandybar":  {
+                                       "file":  "rage-candy-bar.png"
+                                   },
+                  "raichunitex":  {
+                                      "file":  "raichunite-x.png"
+                                  },
+                  "raichunitey":  {
+                                      "file":  "raichunite-y.png"
+                                  },
+                  "rainbowflower":  {
+                                        "file":  "rainbow-flower.png"
+                                    },
+                  "rainbowpass":  {
+                                      "file":  "rainbow-pass.png"
+                                  },
+                  "rainbowwing":  {
+                                      "file":  "rainbow-wing.png"
+                                  },
+                  "rarebone":  {
+                                   "file":  "rare-bone.png"
+                               },
+                  "rarecandy":  {
+                                    "file":  "rare-candy.png"
+                                },
+                  "rawstberry":  {
+                                     "file":  "rawst-berry.png"
+                                 },
+                  "razorclaw":  {
+                                    "file":  "razor-claw.png"
+                                },
+                  "razorfang":  {
+                                    "file":  "razor-fang.png"
+                                },
+                  "razzberry":  {
+                                    "file":  "razz-berry.png"
+                                },
+                  "reapercloth":  {
+                                      "file":  "reaper-cloth.png"
+                                  },
+                  "redapricorn":  {
+                                      "file":  "red-apricorn.png"
+                                  },
+                  "redcard":  {
+                                  "file":  "red-card.png"
+                              },
+                  "redchain":  {
+                                   "file":  "red-chain.png"
+                               },
+                  "redflute":  {
+                                   "file":  "red-flute.png"
+                               },
+                  "rednectar":  {
+                                    "file":  "red-nectar.png"
+                                },
+                  "redorb":  {
+                                 "file":  "red-orb.png"
+                             },
+                  "redpetal":  {
+                                   "file":  "red-petal.png"
+                               },
+                  "redscale":  {
+                                   "file":  "red-scale.png"
+                               },
+                  "redscarf":  {
+                                   "file":  "red-scarf.png"
+                               },
+                  "redshard":  {
+                                   "file":  "red-shard.png"
+                               },
+                  "relicband":  {
+                                    "file":  "relic-band.png"
+                                },
+                  "reliccopper":  {
+                                      "file":  "relic-copper.png"
+                                  },
+                  "reliccrown":  {
+                                     "file":  "relic-crown.png"
+                                 },
+                  "relicgold":  {
+                                    "file":  "relic-gold.png"
+                                },
+                  "relicsilver":  {
+                                      "file":  "relic-silver.png"
+                                  },
+                  "relicstatue":  {
+                                      "file":  "relic-statue.png"
+                                  },
+                  "relicvase":  {
+                                    "file":  "relic-vase.png"
+                                },
+                  "repeatball":  {
+                                     "file":  "repeat-ball.png"
+                                 },
+                  "repel":  {
+                                "file":  "repel.png"
+                            },
+                  "replymail":  {
+                                    "file":  "reply-mail.png"
+                                },
+                  "reseturge":  {
+                                    "file":  "reset-urge.png"
+                                },
+                  "resistwing":  {
+                                     "file":  "resist-wing.png"
+                                 },
+                  "retromail":  {
+                                    "file":  "retro-mail.png"
+                                },
+                  "revealglass":  {
+                                      "file":  "reveal-glass.png"
+                                  },
+                  "revivalherb":  {
+                                      "file":  "revival-herb.png"
+                                  },
+                  "revive":  {
+                                 "file":  "revive.png"
+                             },
+                  "richmulch":  {
+                                    "file":  "rich-mulch.png"
+                                },
+                  "ridepager":  {
+                                    "file":  "ride-pager.png"
+                                },
+                  "rindoberry":  {
+                                     "file":  "rindo-berry.png"
+                                 },
+                  "ringtarget":  {
+                                     "file":  "ring-target.png"
+                                 },
+                  "rm1key":  {
+                                 "file":  "rm-1-key.png"
+                             },
+                  "rm2key":  {
+                                 "file":  "rm-2-key.png"
+                             },
+                  "rm4key":  {
+                                 "file":  "rm-4-key.png"
+                             },
+                  "rm6key":  {
+                                 "file":  "rm-6-key.png"
+                             },
+                  "rockgem":  {
+                                  "file":  "rock-gem.png"
+                              },
+                  "rockincense":  {
+                                      "file":  "rock-incense.png"
+                                  },
+                  "rockiumz":  {
+                                   "file":  "rockium-z--held.png"
+                               },
+                  "rockmemory":  {
+                                     "file":  "rock-memory.png"
+                                 },
+                  "rockyhelmet":  {
+                                      "file":  "rocky-helmet.png"
+                                  },
+                  "rollerskates":  {
+                                       "file":  "roller-skates.png"
+                                   },
+                  "roomservice":  {
+                                      "file":  "room-service.png"
+                                  },
+                  "rootfossil":  {
+                                     "file":  "root-fossil.png"
+                                 },
+                  "roseincense":  {
+                                      "file":  "rose-incense.png"
+                                  },
+                  "roseliberry":  {
+                                      "file":  "roseli-berry.png"
+                                  },
+                  "rotobargain":  {
+                                      "file":  "roto-bargain.png"
+                                  },
+                  "rotoboost":  {
+                                    "file":  "roto-boost.png"
+                                },
+                  "rotocatch":  {
+                                    "file":  "roto-catch.png"
+                                },
+                  "rotoencounter":  {
+                                        "file":  "roto-encounter.png"
+                                    },
+                  "rotoexppoints":  {
+                                        "file":  "roto-exp-points.png"
+                                    },
+                  "rotofriendship":  {
+                                         "file":  "roto-friendship.png"
+                                     },
+                  "rotohatch":  {
+                                    "file":  "roto-hatch.png"
+                                },
+                  "rotohprestore":  {
+                                        "file":  "roto-hp-restore.png"
+                                    },
+                  "rotopprestore":  {
+                                        "file":  "roto-pp-restore.png"
+                                    },
+                  "rotoprizemoney":  {
+                                         "file":  "roto-prize-money.png"
+                                     },
+                  "rotostealth":  {
+                                      "file":  "roto-stealth.png"
+                                  },
+                  "rowapberry":  {
+                                     "file":  "rowap-berry.png"
+                                 },
+                  "rsvpmail":  {
+                                   "file":  "rsvp-mail.png"
+                               },
+                  "ruby":  {
+                               "file":  "ruby.png"
+                           },
+                  "rulebook":  {
+                                   "file":  "rule-book.png"
+                               },
+                  "rustedshield":  {
+                                       "file":  "rusted-shield.png"
+                                   },
+                  "rustedsword":  {
+                                      "file":  "rusted-sword.png"
+                                  },
+                  "sablenite":  {
+                                    "file":  "sablenite.png"
+                                },
+                  "sachet":  {
+                                 "file":  "sachet.png"
+                             },
+                  "sacredash":  {
+                                    "file":  "sacred-ash.png"
+                                },
+                  "safariball":  {
+                                     "file":  "safari-ball.png"
+                                 },
+                  "safetygoggles":  {
+                                        "file":  "safety-goggles.png"
+                                    },
+                  "sailfossil":  {
+                                     "file":  "sail-fossil.png"
+                                 },
+                  "salacberry":  {
+                                     "file":  "salac-berry.png"
+                                 },
+                  "salamencite":  {
+                                      "file":  "salamencite.png"
+                                  },
+                  "sapphire":  {
+                                   "file":  "sapphire.png"
+                               },
+                  "scanner":  {
+                                  "file":  "scanner.png"
+                              },
+                  "sceptilite":  {
+                                     "file":  "sceptilite.png"
+                                 },
+                  "scizorite":  {
+                                    "file":  "scizorite.png"
+                                },
+                  "scolipite":  {
+                                    "file":  "scolipite.png"
+                                },
+                  "scopelens":  {
+                                    "file":  "scope-lens.png"
+                                },
+                  "scovillainite":  {
+                                        "file":  "scovillainite.png"
+                                    },
+                  "scraftinite":  {
+                                      "file":  "scraftinite.png"
+                                  },
+                  "seaincense":  {
+                                     "file":  "sea-incense.png"
+                                 },
+                  "sealbag":  {
+                                  "file":  "seal-bag.png"
+                              },
+                  "sealcase":  {
+                                   "file":  "seal-case.png"
+                               },
+                  "secretkey":  {
+                                    "file":  "secret-key.png"
+                                },
+                  "secretpotion":  {
+                                       "file":  "secret-potion.png"
+                                   },
+                  "shadowmail":  {
+                                     "file":  "shadow-mail.png"
+                                 },
+                  "shaloursable":  {
+                                       "file":  "shalour-sable.png"
+                                   },
+                  "sharpbeak":  {
+                                    "file":  "sharp-beak.png"
+                                },
+                  "sharpedonite":  {
+                                       "file":  "sharpedonite.png"
+                                   },
+                  "shedshell":  {
+                                    "file":  "shed-shell.png"
+                                },
+                  "shellbell":  {
+                                    "file":  "shell-bell.png"
+                                },
+                  "shinycharm":  {
+                                     "file":  "shiny-charm.png"
+                                 },
+                  "shinystone":  {
+                                     "file":  "shiny-stone.png"
+                                 },
+                  "shoalsalt":  {
+                                    "file":  "shoal-salt.png"
+                                },
+                  "shoalshell":  {
+                                     "file":  "shoal-shell.png"
+                                 },
+                  "shockdrive":  {
+                                     "file":  "shock-drive.png"
+                                 },
+                  "shucaberry":  {
+                                     "file":  "shuca-berry.png"
+                                 },
+                  "silkscarf":  {
+                                    "file":  "silk-scarf.png"
+                                },
+                  "silphscope":  {
+                                     "file":  "silph-scope.png"
+                                 },
+                  "silverpowder":  {
+                                       "file":  "silver-powder.png"
+                                   },
+                  "silverwing":  {
+                                     "file":  "silver-wing.png"
+                                 },
+                  "sitrusberry":  {
+                                      "file":  "sitrus-berry.png"
+                                  },
+                  "skarmorite":  {
+                                     "file":  "skarmorite.png"
+                                 },
+                  "skullfossil":  {
+                                      "file":  "skull-fossil.png"
+                                  },
+                  "skyplate":  {
+                                   "file":  "sky-plate.png"
+                               },
+                  "slowbronite":  {
+                                      "file":  "slowbronite.png"
+                                  },
+                  "slowpoketail":  {
+                                       "file":  "slowpoke-tail.png"
+                                   },
+                  "smokeball":  {
+                                    "file":  "smoke-ball.png"
+                                },
+                  "smoothrock":  {
+                                     "file":  "smooth-rock.png"
+                                 },
+                  "snorliumz":  {
+                                    "file":  "snorlium-z--held.png"
+                                },
+                  "snowball":  {
+                                   "file":  "snowball.png"
+                               },
+                  "snowmail":  {
+                                   "file":  "snow-mail.png"
+                               },
+                  "sodapop":  {
+                                  "file":  "soda-pop.png"
+                              },
+                  "softsand":  {
+                                   "file":  "soft-sand.png"
+                               },
+                  "solganiumz":  {
+                                     "file":  "solganium-z--held.png"
+                                 },
+                  "soothebell":  {
+                                     "file":  "soothe-bell.png"
+                                 },
+                  "sootsack":  {
+                                   "file":  "soot-sack.png"
+                               },
+                  "souldew":  {
+                                  "file":  "soul-dew.png"
+                              },
+                  "spacemail":  {
+                                    "file":  "space-mail.png"
+                                },
+                  "sparklingstone":  {
+                                         "file":  "sparkling-stone.png"
+                                     },
+                  "spelltag":  {
+                                   "file":  "spell-tag.png"
+                               },
+                  "spelonberry":  {
+                                      "file":  "spelon-berry.png"
+                                  },
+                  "splashplate":  {
+                                      "file":  "splash-plate.png"
+                                  },
+                  "spookyplate":  {
+                                      "file":  "spooky-plate.png"
+                                  },
+                  "sportball":  {
+                                    "file":  "sport-ball.png"
+                                },
+                  "sprayduck":  {
+                                    "file":  "sprayduck.png"
+                                },
+                  "sprinklotad":  {
+                                      "file":  "sprinklotad.png"
+                                  },
+                  "squirtbottle":  {
+                                       "file":  "squirt-bottle.png"
+                                   },
+                  "ssticket":  {
+                                   "file":  "ss-ticket.png"
+                               },
+                  "stablemulch":  {
+                                      "file":  "stable-mulch.png"
+                                  },
+                  "staraptite":  {
+                                     "file":  "staraptite.png"
+                                 },
+                  "stardust":  {
+                                   "file":  "stardust.png"
+                               },
+                  "starfberry":  {
+                                     "file":  "starf-berry.png"
+                                 },
+                  "starminite":  {
+                                     "file":  "starminite.png"
+                                 },
+                  "starpiece":  {
+                                    "file":  "star-piece.png"
+                                },
+                  "steelgem":  {
+                                   "file":  "steel-gem.png"
+                               },
+                  "steeliumz":  {
+                                    "file":  "steelium-z--held.png"
+                                },
+                  "steelixite":  {
+                                     "file":  "steelixite.png"
+                                 },
+                  "steelmail":  {
+                                    "file":  "steel-mail.png"
+                                },
+                  "steelmemory":  {
+                                      "file":  "steel-memory.png"
+                                  },
+                  "stick":  {
+                                "file":  "stick.png"
+                            },
+                  "stickybarb":  {
+                                     "file":  "sticky-barb.png"
+                                 },
+                  "stoneplate":  {
+                                     "file":  "stone-plate.png"
+                                 },
+                  "storagekey":  {
+                                     "file":  "storage-key.png"
+                                 },
+                  "strangesouvenir":  {
+                                          "file":  "strange-souvenir.png"
+                                      },
+                  "suitekey":  {
+                                   "file":  "suite-key.png"
+                               },
+                  "sunflute":  {
+                                   "file":  "sun-flute.png"
+                               },
+                  "sunstone":  {
+                                   "file":  "sun-stone.png"
+                               },
+                  "superpotion":  {
+                                      "file":  "super-potion.png"
+                                  },
+                  "superrepel":  {
+                                     "file":  "super-repel.png"
+                                 },
+                  "superrod":  {
+                                   "file":  "super-rod.png"
+                               },
+                  "surgebadge":  {
+                                     "file":  "surge-badge.png"
+                                 },
+                  "surprisemulch":  {
+                                        "file":  "surprise-mulch.png"
+                                    },
+                  "swampertite":  {
+                                      "file":  "swampertite.png"
+                                  },
+                  "sweetheart":  {
+                                     "file":  "sweet-heart.png"
+                                 },
+                  "swiftwing":  {
+                                    "file":  "swift-wing.png"
+                                },
+                  "tamatoberry":  {
+                                      "file":  "tamato-berry.png"
+                                  },
+                  "tangaberry":  {
+                                     "file":  "tanga-berry.png"
+                                 },
+                  "tapuniumz":  {
+                                    "file":  "tapunium-z--held.png"
+                                },
+                  "tatsugirinite":  {
+                                        "file":  "tatsugirinite.png"
+                                    },
+                  "tea":  {
+                              "file":  "tea.png"
+                          },
+                  "teachytv":  {
+                                   "file":  "teachy-tv.png"
+                               },
+                  "terrainextender":  {
+                                          "file":  "terrain-extender.png"
+                                      },
+                  "thanksmail":  {
+                                     "file":  "thanks-mail.png"
+                                 },
+                  "thickclub":  {
+                                    "file":  "thick-club.png"
+                                },
+                  "throatspray":  {
+                                      "file":  "throat-spray.png"
+                                  },
+                  "thunderstone":  {
+                                       "file":  "thunder-stone.png"
+                                   },
+                  "tidalbell":  {
+                                    "file":  "tidal-bell.png"
+                                },
+                  "timerball":  {
+                                    "file":  "timer-ball.png"
+                                },
+                  "tinymushroom":  {
+                                       "file":  "tiny-mushroom.png"
+                                   },
+                  "tmbug":  {
+                                "file":  "tm-bug.png"
+                            },
+                  "tmcase":  {
+                                 "file":  "tm-case.png"
+                             },
+                  "tmdark":  {
+                                 "file":  "tm-dark.png"
+                             },
+                  "tmdragon":  {
+                                   "file":  "tm-dragon.png"
+                               },
+                  "tmelectric":  {
+                                     "file":  "tm-electric.png"
+                                 },
+                  "tmfairy":  {
+                                  "file":  "tm-fairy.png"
+                              },
+                  "tmfighting":  {
+                                     "file":  "tm-fighting.png"
+                                 },
+                  "tmfire":  {
+                                 "file":  "tm-fire.png"
+                             },
+                  "tmflying":  {
+                                   "file":  "tm-flying.png"
+                               },
+                  "tmghost":  {
+                                  "file":  "tm-ghost.png"
+                              },
+                  "tmgrass":  {
+                                  "file":  "tm-grass.png"
+                              },
+                  "tmground":  {
+                                   "file":  "tm-ground.png"
+                               },
+                  "tmice":  {
+                                "file":  "tm-ice.png"
+                            },
+                  "tmnormal":  {
+                                   "file":  "tm-normal.png"
+                               },
+                  "tmpoison":  {
+                                   "file":  "tm-poison.png"
+                               },
+                  "tmpsychic":  {
+                                    "file":  "tm-psychic.png"
+                                },
+                  "tmrock":  {
+                                 "file":  "tm-rock.png"
+                             },
+                  "tmsteel":  {
+                                  "file":  "tm-steel.png"
+                              },
+                  "tmvpass":  {
+                                  "file":  "tmv-pass.png"
+                              },
+                  "tmwater":  {
+                                  "file":  "tm-water.png"
+                              },
+                  "townmap":  {
+                                  "file":  "town-map.png"
+                              },
+                  "toxicorb":  {
+                                   "file":  "toxic-orb.png"
+                               },
+                  "toxicplate":  {
+                                     "file":  "toxic-plate.png"
+                                 },
+                  "traveltrunk":  {
+                                      "file":  "travel-trunk.png"
+                                  },
+                  "traveltrunkgold":  {
+                                          "file":  "travel-trunk-gold.png"
+                                      },
+                  "traveltrunksilver":  {
+                                            "file":  "travel-trunk-silver.png"
+                                        },
+                  "tripass":  {
+                                  "file":  "tri-pass.png"
+                              },
+                  "tropicmail":  {
+                                     "file":  "tropic-mail.png"
+                                 },
+                  "tunnelmail":  {
+                                     "file":  "tunnel-mail.png"
+                                 },
+                  "twistedspoon":  {
+                                       "file":  "twisted-spoon.png"
+                                   },
+                  "tyranitarite":  {
+                                       "file":  "tyranitarite.png"
+                                   },
+                  "ultraball":  {
+                                    "file":  "ultra-ball.png"
+                                },
+                  "ultranecroziumz":  {
+                                          "file":  "ultranecrozium-z--held.png"
+                                      },
+                  "unknown":  {
+                                  "file":  "unknown.png"
+                              },
+                  "unownreport":  {
+                                      "file":  "unown-report.png"
+                                  },
+                  "upgrade":  {
+                                  "file":  "up-grade.png"
+                              },
+                  "utilityumbrella":  {
+                                          "file":  "utility-umbrella.png"
+                                      },
+                  "venusaurite":  {
+                                      "file":  "venusaurite.png"
+                                  },
+                  "victreebelite":  {
+                                        "file":  "victreebelite.png"
+                                    },
+                  "vsrecorder":  {
+                                     "file":  "vs-recorder.png"
+                                 },
+                  "vsseeker":  {
+                                   "file":  "vs-seeker.png"
+                               },
+                  "wacanberry":  {
+                                     "file":  "wacan-berry.png"
+                                 },
+                  "wailmerpail":  {
+                                      "file":  "wailmer-pail.png"
+                                  },
+                  "watergem":  {
+                                   "file":  "water-gem.png"
+                               },
+                  "wateriumz":  {
+                                    "file":  "waterium-z--held.png"
+                                },
+                  "watermemory":  {
+                                      "file":  "water-memory.png"
+                                  },
+                  "waterstone":  {
+                                     "file":  "water-stone.png"
+                                 },
+                  "watmelberry":  {
+                                      "file":  "watmel-berry.png"
+                                  },
+                  "waveincense":  {
+                                      "file":  "wave-incense.png"
+                                  },
+                  "wavemail":  {
+                                   "file":  "wave-mail.png"
+                               },
+                  "weaknesspolicy":  {
+                                         "file":  "weakness-policy.png"
+                                     },
+                  "wellspringmask":  {
+                                         "file":  "wellspring-mask.png"
+                                     },
+                  "wepearberry":  {
+                                      "file":  "wepear-berry.png"
+                                  },
+                  "whippeddream":  {
+                                       "file":  "whipped-dream.png"
+                                   },
+                  "whiteapricorn":  {
+                                        "file":  "white-apricorn.png"
+                                    },
+                  "whiteflute":  {
+                                     "file":  "white-flute.png"
+                                 },
+                  "whiteherb":  {
+                                    "file":  "white-herb.png"
+                                },
+                  "widelens":  {
+                                   "file":  "wide-lens.png"
+                               },
+                  "wikiberry":  {
+                                    "file":  "wiki-berry.png"
+                                },
+                  "wiseglasses":  {
+                                      "file":  "wise-glasses.png"
+                                  },
+                  "woodmail":  {
+                                   "file":  "wood-mail.png"
+                               },
+                  "workskey":  {
+                                   "file":  "works-key.png"
+                               },
+                  "xaccuracy":  {
+                                    "file":  "x-accuracy.png"
+                                },
+                  "xaccuracy2":  {
+                                     "file":  "x-accuracy-2.png"
+                                 },
+                  "xaccuracy3":  {
+                                     "file":  "x-accuracy-3.png"
+                                 },
+                  "xaccuracy6":  {
+                                     "file":  "x-accuracy-6.png"
+                                 },
+                  "xattack":  {
+                                  "file":  "x-attack.png"
+                              },
+                  "xattack2":  {
+                                   "file":  "x-attack-2.png"
+                               },
+                  "xattack3":  {
+                                   "file":  "x-attack-3.png"
+                               },
+                  "xattack6":  {
+                                   "file":  "x-attack-6.png"
+                               },
+                  "xdefense":  {
+                                   "file":  "x-defense.png"
+                               },
+                  "xdefense2":  {
+                                    "file":  "x-defense-2.png"
+                                },
+                  "xdefense3":  {
+                                    "file":  "x-defense-3.png"
+                                },
+                  "xdefense6":  {
+                                    "file":  "x-defense-6.png"
+                                },
+                  "xspatk":  {
+                                 "file":  "x-sp-atk.png"
+                             },
+                  "xspatk2":  {
+                                  "file":  "x-sp-atk-2.png"
+                              },
+                  "xspatk3":  {
+                                  "file":  "x-sp-atk-3.png"
+                              },
+                  "xspatk6":  {
+                                  "file":  "x-sp-atk-6.png"
+                              },
+                  "xspdef":  {
+                                 "file":  "x-sp-def.png"
+                             },
+                  "xspdef2":  {
+                                  "file":  "x-sp-def-2.png"
+                              },
+                  "xspdef3":  {
+                                  "file":  "x-sp-def-3.png"
+                              },
+                  "xspdef6":  {
+                                  "file":  "x-sp-def-6.png"
+                              },
+                  "xspeed":  {
+                                 "file":  "x-speed.png"
+                             },
+                  "xspeed2":  {
+                                  "file":  "x-speed-2.png"
+                              },
+                  "xspeed3":  {
+                                  "file":  "x-speed-3.png"
+                              },
+                  "xspeed6":  {
+                                  "file":  "x-speed-6.png"
+                              },
+                  "xtranceiver":  {
+                                      "file":  "xtranceiver--red.png"
+                                  },
+                  "xtransceiver":  {
+                                       "file":  "xtransceiver.png"
+                                   },
+                  "xtransceiverred":  {
+                                          "file":  "xtransceiver-red.png"
+                                      },
+                  "xtransceiveryellow":  {
+                                             "file":  "xtransceiver-yellow.png"
+                                         },
+                  "yacheberry":  {
+                                     "file":  "yache-berry.png"
+                                 },
+                  "yellowapricorn":  {
+                                         "file":  "yellow-apricorn.png"
+                                     },
+                  "yellowflute":  {
+                                      "file":  "yellow-flute.png"
+                                  },
+                  "yellownectar":  {
+                                       "file":  "yellow-nectar.png"
+                                   },
+                  "yellowpetal":  {
+                                      "file":  "yellow-petal.png"
+                                  },
+                  "yellowscarf":  {
+                                      "file":  "yellow-scarf.png"
+                                  },
+                  "yellowshard":  {
+                                      "file":  "yellow-shard.png"
+                                  },
+                  "zapplate":  {
+                                   "file":  "zap-plate.png"
+                               },
+                  "zeraorite":  {
+                                    "file":  "zeraorite.png"
+                                },
+                  "zinc":  {
+                               "file":  "zinc.png"
+                           },
+                  "zoomlens":  {
+                                   "file":  "zoom-lens.png"
+                               },
+                  "zpowerring":  {
+                                     "file":  "z-power-ring.png"
+                                 },
+                  "zring":  {
+                                "file":  "z-ring.png"
+                            },
+                  "zygardecube":  {
+                                      "file":  "zygarde-cube.png"
+                                  },
+                  "zygardite":  {
+                                    "file":  "zygardite.png"
+                                }
+              }
+}

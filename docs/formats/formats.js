@@ -4,6 +4,9 @@ let statsData = null;
 let currentSort = { column: 'battles', direction: 'desc' };
 let currentRatingFilter = 'all';
 let pokemonSort = { column: 'usage_pct', direction: 'desc' };
+let selectedFormatKey = '';
+let formatNameMapPromise = null;
+let formatNameMap = null;
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
@@ -13,14 +16,153 @@ const metaEncounterProbability = 0.5;
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', async () => {
+    initializeGlobalHelpTooltip();
+    setupDataGuideModal();
     await loadLatestData();
     setupEventListeners();
     handleRouting();
 });
 
+function setupDataGuideModal() {
+    const trigger = document.getElementById('open-data-guide-btn');
+    if (!trigger) return;
+
+    if (!document.getElementById('data-guide-modal')) {
+        const modal = document.createElement('div');
+        modal.id = 'data-guide-modal';
+        modal.className = 'data-guide-modal';
+        modal.setAttribute('aria-hidden', 'true');
+        modal.innerHTML = `
+            <div class="data-guide-backdrop" data-close="true"></div>
+            <div class="data-guide-panel" role="dialog" aria-modal="true" aria-labelledby="data-guide-title">
+                <button class="data-guide-close" type="button" aria-label="Close guide" data-close="true">x</button>
+                <h2 id="data-guide-title">How to Read These Stats</h2>
+                <p>Usage % shows how often a Pokemon appears in teams for the selected format and rating.</p>
+                <p>Total Usage Count is the raw number of appearances in the monthly data.</p>
+                <p>Monthly Rank is ordered by Usage % (highest to lowest) for the selected format and rating.</p>
+                <p>Rating filters (for example, 1500+ or 1825+) show stats from players at or above that threshold.</p>
+                <p>Green-highlighted rows mark meta Pokemon based on weighted usage.</p>
+                <p>Meta threshold rule: a Pokemon is highlighted if its weighted usage is at least 4.52%. For OU/UU/RU/NU/PU, this corresponds to being more than 50% likely to be encountered at least once across 15 battles.</p>
+                <p class="data-guide-note">Data source: Smogon monthly usage stats.</p>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    const modal = document.getElementById('data-guide-modal');
+    if (!modal) return;
+
+    const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+    };
+
+    const openModal = () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+    };
+
+    trigger.addEventListener('click', openModal);
+
+    modal.addEventListener('click', (event) => {
+        const target = event.target;
+        if (target instanceof Element && target.closest('[data-close="true"]')) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+}
+
+function initializeGlobalHelpTooltip() {
+    if (document.getElementById('global-help-tooltip')) return;
+
+    const tooltip = document.createElement('div');
+    tooltip.id = 'global-help-tooltip';
+    tooltip.setAttribute('role', 'tooltip');
+    document.body.appendChild(tooltip);
+
+    document.body.classList.add('js-tooltip-enabled');
+
+    const hideTooltip = () => {
+        tooltip.classList.remove('is-visible');
+        tooltip.textContent = '';
+    };
+
+    const showTooltipFor = (target) => {
+        if (!target) return;
+        const text = target.getAttribute('data-tooltip');
+        if (!text) return;
+
+        tooltip.textContent = text;
+        tooltip.classList.add('is-visible');
+
+        const rect = target.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+        const gap = 10;
+
+        let top = rect.top - tooltipRect.height - gap;
+        if (top < 8) {
+            top = rect.bottom + gap;
+        }
+
+        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+        const minLeft = 8;
+        const maxLeft = window.innerWidth - tooltipRect.width - 8;
+        left = Math.max(minLeft, Math.min(left, Math.max(minLeft, maxLeft)));
+
+        tooltip.style.top = `${Math.round(top)}px`;
+        tooltip.style.left = `${Math.round(left)}px`;
+    };
+
+    document.addEventListener('pointerover', (event) => {
+        const target = event.target && event.target.closest
+            ? event.target.closest('.help-tooltip')
+            : null;
+        if (!target) return;
+        showTooltipFor(target);
+    });
+
+    document.addEventListener('pointerout', (event) => {
+        const target = event.target && event.target.closest
+            ? event.target.closest('.help-tooltip')
+            : null;
+        if (!target) return;
+        hideTooltip();
+    });
+
+    document.addEventListener('focusin', (event) => {
+        const target = event.target && event.target.closest
+            ? event.target.closest('.help-tooltip')
+            : null;
+        if (!target) return;
+        showTooltipFor(target);
+    });
+
+    document.addEventListener('focusout', (event) => {
+        const target = event.target && event.target.closest
+            ? event.target.closest('.help-tooltip')
+            : null;
+        if (!target) return;
+        hideTooltip();
+    });
+
+    window.addEventListener('scroll', hideTooltip, true);
+    window.addEventListener('resize', hideTooltip);
+}
+
 // Load the latest stats data
 async function loadLatestData() {
     try {
+        const tableBody = document.getElementById('table-body');
+        if (tableBody) {
+            tableBody.innerHTML = buildFormatsTableSkeletonRows();
+        }
+
         // First, load the index to get the latest period
         const indexResponse = await fetch(`../index.json`);
         if (!indexResponse.ok) {
@@ -37,21 +179,23 @@ async function loadLatestData() {
         }
 
         statsData = await dataResponse.json();
+        formatNameMap = await loadFormatNameMap();
 
         // Update UI
-        document.getElementById('period-info').textContent = `Stats Period: ${latestPeriod}`;
+        const usageDateEl = document.getElementById('usage-stats-date');
+        if (usageDateEl) {
+            usageDateEl.textContent = `Latest usage stats data from ${latestPeriod}`;
+        }
         document.getElementById('total-battles').textContent = formatNumber(statsData.total_battles);
         document.getElementById('format-count').textContent = statsData.formats.length;
 
-        // Check if we should render table or detail view
-        const formatName = getFormatFromUrl();
-        if (formatName) {
-            populateRatingFilter(formatName);
-            renderFormatDetail(formatName);
-        } else {
-            populateRatingFilter();
-            renderTable();
+        const initialRating = getRatingFromUrl();
+        if (initialRating) {
+            currentRatingFilter = initialRating;
         }
+
+        populateRatingFilter();
+        renderTable();
 
     } catch (error) {
         console.error('Error loading data:', error);
@@ -65,17 +209,22 @@ async function loadLatestData() {
     }
 }
 
-// Populate the rating filter dropdown
+function buildFormatsTableSkeletonRows() {
+    return Array.from({ length: 8 }, () => `
+        <tr class="skeleton-row" aria-hidden="true">
+            <td><span class="skeleton-line skeleton-line--lg"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+        </tr>
+    `).join('');
+}
+
+// Populate the segmented rating filter buttons.
 function populateRatingFilter(formatName) {
-    const filterSelect = document.getElementById('rating-filter');
-    if (!filterSelect) return;
+    const filterContainer = document.getElementById('rating-filter');
+    if (!filterContainer) return;
 
-    filterSelect.innerHTML = '';
-
-    const allOption = document.createElement('option');
-    allOption.value = 'all';
-    allOption.textContent = 'All ratings';
-    filterSelect.appendChild(allOption);
+    filterContainer.innerHTML = '';
 
     let ratings = [];
     if (formatName && statsData) {
@@ -92,70 +241,62 @@ function populateRatingFilter(formatName) {
         ratings = Array.from(ratingSet);
     }
 
-    ratings
+    const parsedRatings = ratings
         .map(rating => parseInt(rating, 10))
         .filter(rating => !Number.isNaN(rating))
-        .sort((a, b) => a - b)
-        .forEach(rating => {
-            const option = document.createElement('option');
-            option.value = String(rating);
-            option.textContent = `Rating ${rating}+`;
-            filterSelect.appendChild(option);
-        });
+        .sort((a, b) => a - b);
 
-    if (currentRatingFilter) {
-        filterSelect.value = currentRatingFilter;
-    }
+    const visibleRatings = parsedRatings.length > 3
+        ? parsedRatings.slice(-3)
+        : parsedRatings;
 
-    if (!filterSelect.value) {
-        currentRatingFilter = 'all';
-        filterSelect.value = 'all';
+    const options = [
+        { value: 'all', label: 'All' },
+        ...visibleRatings.map(rating => ({ value: String(rating), label: `${rating}+` }))
+    ];
+
+    const activeValue = options.some(option => option.value === currentRatingFilter)
+        ? currentRatingFilter
+        : 'all';
+    currentRatingFilter = activeValue;
+
+    for (const option of options) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'pokemon-rating-btn';
+        button.dataset.value = option.value;
+        button.textContent = option.label;
+        button.setAttribute('aria-pressed', option.value === activeValue ? 'true' : 'false');
+
+        if (option.value === activeValue) {
+            button.classList.add('is-active');
+        }
+
+        button.onclick = () => {
+            const nextRating = option.value || 'all';
+            if (nextRating === currentRatingFilter) return;
+
+            currentRatingFilter = nextRating;
+            if (selectedFormatKey) {
+                populateRatingFilter(selectedFormatKey);
+            } else {
+                populateRatingFilter();
+            }
+            renderTable();
+            if (selectedFormatKey) {
+                renderFormatDetail(selectedFormatKey);
+                updateSelectionInUrl();
+            }
+        };
+
+        filterContainer.appendChild(button);
     }
 }
 
 // Render the stats table
 function renderTable() {
     if (!statsData) return;
-
-    let formats = [...statsData.formats];
-
-    // Apply rating filter
-    if (currentRatingFilter !== 'all') {
-        const rating = parseInt(currentRatingFilter, 10);
-        formats = formats
-            .map(format => {
-                let battles = format.by_rating[rating];
-
-                // If exact rating doesn't exist, find closest higher rating
-                if (battles === undefined) {
-                    const availableRatings = Object.keys(format.by_rating)
-                        .map(r => parseInt(r))
-                        .filter(r => r >= rating)
-                        .sort((a, b) => a - b);
-
-                    if (availableRatings.length > 0) {
-                        battles = format.by_rating[availableRatings[0]];
-                    } else {
-                        battles = 0;
-                    }
-                }
-
-                return {
-                    ...format,
-                    total_battles: battles,
-                    percentage: 0  // Will recalculate
-                };
-            })
-            .filter(format => format.total_battles > 0);
-
-        // Recalculate percentages for filtered data
-        const totalFiltered = formats.reduce((sum, f) => sum + f.total_battles, 0);
-        formats.forEach(format => {
-            format.percentage = totalFiltered > 0
-                ? (format.total_battles / totalFiltered * 100)
-                : 0;
-        });
-    }
+    let formats = getFormatsForCurrentRating();
 
     // Apply sorting
     formats.sort((a, b) => {
@@ -184,6 +325,10 @@ function renderTable() {
         const row = document.createElement('tr');
         const formatKey = getFormatKey(format);
         const formatLink = `?format=${encodeURIComponent(formatKey)}`;
+        row.dataset.format = formatKey;
+        if (formatKey === selectedFormatKey) {
+            row.classList.add('format-row-selected');
+        }
 
         row.innerHTML = `
             <td class="format-name"><a href="${formatLink}" class="format-link">${escapeHtml(getFormatName(format))}</a></td>
@@ -191,11 +336,82 @@ function renderTable() {
             <td class="battles">${formatNumber(format.total_battles)}</td>
         `;
 
+        row.addEventListener('click', () => {
+            selectFormat(formatKey);
+        });
+
+        row.querySelectorAll('td').forEach(cell => {
+            cell.addEventListener('click', () => {
+                selectFormat(formatKey);
+            });
+        });
+
+        const link = row.querySelector('.format-link');
+        if (link) {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                selectFormat(formatKey);
+            });
+        }
+
         tbody.appendChild(row);
     });
 
     // Update sort indicators
     updateSortIndicators();
+}
+
+function getFormatsForCurrentRating() {
+    if (!statsData || !Array.isArray(statsData.formats)) {
+        return [];
+    }
+
+    const baseFormats = [...statsData.formats];
+    if (currentRatingFilter === 'all') {
+        return baseFormats;
+    }
+
+    const rating = parseInt(currentRatingFilter, 10);
+    if (Number.isNaN(rating)) {
+        return baseFormats;
+    }
+
+    const filtered = baseFormats
+        .map(format => {
+            let battles = format.by_rating && typeof format.by_rating === 'object'
+                ? format.by_rating[rating]
+                : undefined;
+
+            // If exact rating doesn't exist, find closest higher rating.
+            if (battles === undefined && format.by_rating && typeof format.by_rating === 'object') {
+                const availableRatings = Object.keys(format.by_rating)
+                    .map(r => parseInt(r, 10))
+                    .filter(r => !Number.isNaN(r) && r >= rating)
+                    .sort((a, b) => a - b);
+
+                if (availableRatings.length > 0) {
+                    battles = format.by_rating[availableRatings[0]];
+                } else {
+                    battles = 0;
+                }
+            }
+
+            return {
+                ...format,
+                total_battles: Number(battles) || 0,
+                percentage: 0
+            };
+        })
+        .filter(format => format.total_battles > 0);
+
+    const totalFiltered = filtered.reduce((sum, format) => sum + format.total_battles, 0);
+    filtered.forEach(format => {
+        format.percentage = totalFiltered > 0
+            ? (format.total_battles / totalFiltered * 100)
+            : 0;
+    });
+
+    return filtered;
 }
 
 // Setup event listeners
@@ -218,16 +434,7 @@ function setupEventListeners() {
         });
     });
 
-    // Rating filter
-    document.getElementById('rating-filter').addEventListener('change', (e) => {
-        currentRatingFilter = e.target.value;
-        const formatName = getFormatFromUrl();
-        if (formatName) {
-            renderFormatDetail(formatName);
-        } else {
-            renderTable();
-        }
-    });
+    // Rating filter uses segmented buttons built in populateRatingFilter().
 }
 
 // Update sort indicator classes on table headers
@@ -251,6 +458,12 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+function toId(text) {
+    return String(text || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '');
 }
 
 function sanitizeSpriteName(name) {
@@ -295,128 +508,259 @@ function getFormatFromUrl() {
     return params.get('format');
 }
 
+function getRatingFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('rating');
+}
+
 // Handle routing based on URL
 function handleRouting() {
-    const formatName = getFormatFromUrl();
-    if (formatName) {
-        renderFormatDetail(formatName);
+    const requestedFormat = getFormatFromUrl();
+    if (requestedFormat && statsData && statsData.formats.some(format => getFormatKey(format) === requestedFormat)) {
+        selectFormat(requestedFormat, false);
+        return;
     }
+
+    const detailContent = document.getElementById('detail-content');
+    if (detailContent) {
+        detailContent.innerHTML = `
+            <div class="loading">
+                <p>Select a format to view Pokemon usage.</p>
+            </div>
+        `;
+    }
+}
+
+function selectFormat(formatKey, updateHistory = true) {
+    if (!formatKey || !statsData) return;
+    const exists = statsData.formats.some(format => getFormatKey(format) === formatKey);
+    if (!exists) return;
+
+    selectedFormatKey = formatKey;
+    populateRatingFilter(selectedFormatKey);
+    renderTable();
+    const detailRenderPromise = renderFormatDetail(selectedFormatKey);
+
+    if (updateHistory) {
+        updateSelectionInUrl();
+
+        detailRenderPromise.finally(() => {
+            if (!isStackedFormatsLayout()) return;
+            scrollToFormatDetailTop();
+        });
+    }
+}
+
+function isStackedFormatsLayout() {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        return true;
+    }
+
+    const formatsPane = document.querySelector('.formats-pane');
+    const detailPane = document.getElementById('format-detail');
+    if (!formatsPane || !detailPane) return false;
+
+    const formatsTop = formatsPane.getBoundingClientRect().top;
+    const detailTop = detailPane.getBoundingClientRect().top;
+    return detailTop - formatsTop > 24;
+}
+
+function scrollToFormatDetailTop() {
+    const detailPane = document.getElementById('format-detail');
+    if (!detailPane) return;
+
+    const targetY = window.scrollY + detailPane.getBoundingClientRect().top - 8;
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    if (Math.abs(distance) < 2) return;
+
+    const durationMs = 420;
+    const startTime = performance.now();
+
+    const easeInOutCubic = t => (t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+    const step = now => {
+        const elapsed = now - startTime;
+        const progress = Math.min(1, elapsed / durationMs);
+        const eased = easeInOutCubic(progress);
+        window.scrollTo(0, startY + (distance * eased));
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+}
+
+function updateSelectionInUrl() {
+    const params = new URLSearchParams();
+    if (selectedFormatKey) {
+        params.set('format', selectedFormatKey);
+    }
+    if (currentRatingFilter && currentRatingFilter !== 'all') {
+        params.set('rating', currentRatingFilter);
+    }
+
+    const path = window.location.pathname || 'index.html';
+    const query = params.toString();
+    const nextUrl = query ? `${path}?${query}` : path;
+    window.history.replaceState({}, '', nextUrl);
 }
 
 // Render detail view for a specific format
 async function renderFormatDetail(formatName, ratingOverride) {
     if (!statsData) return;
 
+    const detailContent = document.getElementById('detail-content');
+    if (!detailContent) return;
+
+    detailContent.innerHTML = buildPokemonTableSkeleton();
+
     const format = statsData.formats.find(f => getFormatKey(f) === formatName);
 
     if (!format) {
-        const container = document.getElementById('table-container');
-        if (container) container.style.display = 'none';
-        const detailDiv = document.getElementById('format-detail');
-        if (detailDiv) {
-            detailDiv.style.display = 'block';
-            detailDiv.innerHTML = `
-                <div class="error">
-                    <p>Format "${escapeHtml(formatName)}" not found.</p>
-                    <a href="./">Back to all formats</a>
-                </div>
-            `;
-        }
+        detailContent.innerHTML = `
+            <div class="error">
+                <p>Format "${escapeHtml(formatName)}" not found.</p>
+            </div>
+        `;
         return;
     }
 
-    // Hide table, show detail
-    const container = document.getElementById('table-container');
-    if (container) container.style.display = 'none';
-    const detailDiv = document.getElementById('format-detail');
-    if (detailDiv) detailDiv.style.display = 'block';
-
-    // Update header
-    const periodInfo = document.getElementById('period-info');
-    if (periodInfo) periodInfo.textContent = `${escapeHtml(getFormatName(format))} - Stats Period: Latest`;
-
-    populateRatingFilter(getFormatKey(format));
     const rating = ratingOverride || currentRatingFilter || 'all';
     const pokemonData = await loadPokemonData(getFormatKey(format), rating);
+    const formatForDisplay = getFormatsForCurrentRating().find(f => getFormatKey(f) === formatName) || format;
 
-    // Render format detail content
-    const detailContent = document.getElementById('detail-content');
-    if (detailContent) {
-        if (!pokemonData || !Array.isArray(pokemonData.pokemon)) {
-            detailContent.innerHTML = `
-                <div class="error">
-                    <p>Pokemon data for "${escapeHtml(getFormatName(format))}" could not be loaded.</p>
-                    <a href="./" class="back-link">← Back to all formats</a>
-                </div>
-            `;
-            return;
-        }
-
-        const sortedPokemon = sortPokemonList(pokemonData.pokemon);
-        const pokemonRows = sortedPokemon
-            .map(pokemon => {
-                const spritePaths = getPokemonSpritePaths(pokemon.pokemon_name);
-                const showdownSrc = typeof spritePaths === 'string' ? spritePaths : spritePaths.showdown;
-                const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
-                const placeholderSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.placeholder;
-                const isMeta = isMetaPokemon(pokemon.usage_pct);
-                const pokemonLink = getPokemonLink(getFormatKey(format), pokemon.pokemon_name, rating);
-                return `
-                <tr class="${isMeta ? 'pokemon-meta' : ''}">
-                    <td class="pokemon-name">
-                        <a class="pokemon-link" href="${pokemonLink}">
-                            <span class="pokemon-name-cell">
-                                <img class="pokemon-sprite" src="${showdownSrc}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${placeholderSrc}';};this.src='${originalSrc}';">
-                                <span>${escapeHtml(pokemon.pokemon_name)}</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td class="pokemon-usage ${isMeta ? 'pokemon-meta-usage' : ''}">${pokemon.usage_pct.toFixed(2)}%</td>
-                    <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
-                </tr>
-            `;
-            })
-            .join('');
-
+    if (!pokemonData || !Array.isArray(pokemonData.pokemon)) {
         detailContent.innerHTML = `
-            <div class="format-header">
-                <h2>${escapeHtml(getFormatName(format))}</h2>
-                <p>Total Battles: <strong>${formatNumber(format.total_battles)}</strong></p>
-                <p>Overall Percentage: <strong>${format.percentage.toFixed(2)}%</strong></p>
-                <p>
-                    Pokemon Usage:
-                    <strong>${formatPokemonRatingLabel(pokemonData.elo_cutoff, rating)}</strong>
-                    <span class="help-tooltip" aria-label="Meta criteria" data-tooltip="Pokemon with at least 4.52% weighted usage are highlighted. For OU/UU/RU/NU/PU formats, a Pokemon is truly in their tier if a typical competitive player is more than 50% likely to encounter it at least once in a day of playing (15 battles)." tabindex="0">?</span>
-                </p>
-            </div>
-            <div class="pokemon-breakdown">
-                <div class="pokemon-table-wrapper">
-                    <table class="pokemon-table">
-                        <thead>
-                            <tr>
-                                <th class="pokemon-sortable" data-sort="pokemon_name">Pokemon</th>
-                                <th class="pokemon-sortable" data-sort="usage_pct">Usage %</th>
-                                <th class="pokemon-sortable" data-sort="usage_count">Usage Count</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${pokemonRows}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="detail-actions">
-                <a href="./" class="back-link">← Back to all formats</a>
+            <div class="error">
+                <p>Pokemon data for "${escapeHtml(getFormatName(format))}" could not be loaded.</p>
             </div>
         `;
-
-        setupPokemonSortListeners(getFormatKey(format), rating);
-        updatePokemonSortIndicators();
+        return;
     }
+
+    const sortedPokemon = sortPokemonList(pokemonData.pokemon);
+    const monthlyRankMap = buildMonthlyRankMapByUsagePct(pokemonData.pokemon);
+    const pokemonRows = sortedPokemon
+        .map((pokemon) => {
+            const spritePaths = getPokemonSpritePaths(pokemon.pokemon_name);
+            const showdownSrc = typeof spritePaths === 'string' ? spritePaths : spritePaths.showdown;
+            const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
+            const placeholderSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.placeholder;
+            const isMeta = isMetaPokemon(pokemon.usage_pct);
+            const usageClass = isMeta
+                ? 'pokemon-meta-usage'
+                : (pokemon.usage_pct < 1 ? 'pokemon-low-usage' : 'pokemon-mid-usage');
+            const pokemonLink = getPokemonLink(getFormatKey(format), pokemon.pokemon_name, rating);
+            const monthlyRank = monthlyRankMap.get(toId(pokemon.pokemon_name)) || 0;
+            return `
+            <tr class="${isMeta ? 'pokemon-meta' : ''} pokemon-row-link" data-href="${pokemonLink}" tabindex="0" role="link" aria-label="View ${escapeHtml(pokemon.pokemon_name)} details">
+                <td class="pokemon-name">
+                    <a class="pokemon-link" href="${pokemonLink}">
+                        <span class="pokemon-name-cell">
+                            <img class="pokemon-sprite" src="${showdownSrc}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${placeholderSrc}';};this.src='${originalSrc}';">
+                            <span>${escapeHtml(pokemon.pokemon_name)}</span>
+                        </span>
+                    </a>
+                </td>
+                <td class="pokemon-usage ${usageClass}">${pokemon.usage_pct.toFixed(2)}%</td>
+                <td class="pokemon-count">${formatNumber(pokemon.usage_count)}</td>
+                <td class="pokemon-rank ${usageClass}">#${monthlyRank > 0 ? monthlyRank : '--'}</td>
+            </tr>
+        `;
+        })
+        .join('');
+
+    detailContent.innerHTML = `
+        <div class="pokemon-breakdown">
+            <div class="pokemon-table-wrapper">
+                <table class="pokemon-table">
+                    <thead>
+                        <tr>
+                            <th class="pokemon-sortable" data-sort="pokemon_name">Pokemon</th>
+                            <th class="pokemon-sortable" data-sort="usage_pct">Usage %
+                            <span class="help-tooltip" aria-label="Meta criteria" data-tooltip="Pokemon with at least 4.52% weighted usage are highlighted. For OU/UU/RU/NU/PU formats, a Pokemon is truly in their tier if a typical competitive player is more than 50% likely to encounter it at least once in a day of playing (15 battles)." tabindex="0">?</span>
+                            </th>
+                            <th class="pokemon-sortable" data-sort="usage_count">Total Usage Count</th>
+                            <th>Monthly Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${pokemonRows}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+
+    setupPokemonSortListeners(getFormatKey(format), rating);
+    updatePokemonSortIndicators();
+    setupPokemonRowLinks(detailContent);
+}
+
+function buildPokemonTableSkeleton() {
+    const rows = Array.from({ length: 8 }, () => `
+        <tr class="skeleton-row">
+            <td><span class="skeleton-line skeleton-line--lg"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+            <td><span class="skeleton-line skeleton-line--sm"></span></td>
+        </tr>
+    `).join('');
+
+    return `
+        <div class="pokemon-breakdown">
+            <div class="pokemon-table-wrapper">
+                <table class="pokemon-table">
+                    <thead>
+                        <tr>
+                            <th>Pokemon</th>
+                            <th>Usage %</th>
+                            <th>Total Usage Count</th>
+                            <th>Monthly Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody class="skeleton-table-body" aria-hidden="true">
+                        ${rows}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+}
+
+function setupPokemonRowLinks(container) {
+    if (!container) return;
+
+    const rows = container.querySelectorAll('.pokemon-table tbody tr.pokemon-row-link[data-href]');
+    rows.forEach(row => {
+        row.addEventListener('click', (event) => {
+            if (event.target.closest('a, button')) return;
+            const href = row.dataset.href;
+            if (href) {
+                window.location.href = href;
+            }
+        });
+
+        row.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            event.preventDefault();
+            const href = row.dataset.href;
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    });
 }
 
 function getFormatName(format) {
-    return format.format_name || format.name || '';
+    const fallback = format.format_name || format.name || '';
+    const key = getFormatKey(format);
+    return getDisplayFormatName(key, fallback);
 }
 
 function getFormatKey(format) {
@@ -431,6 +775,31 @@ function getPokemonLink(formatName, pokemonName, rating) {
         params.set('rating', rating);
     }
     return `pokemon.html?${params.toString()}`;
+}
+
+async function loadFormatNameMap() {
+    if (!formatNameMapPromise) {
+        formatNameMapPromise = fetch('../assets/format-name-map.json')
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .then(data => (data && data.formats ? data.formats : null))
+            .catch(error => {
+                console.error('Error loading format name map:', error);
+                return null;
+            });
+    }
+
+    return formatNameMapPromise;
+}
+
+function getDisplayFormatName(formatKey, fallbackName = '') {
+    const key = String(formatKey || '').trim();
+    if (key && formatNameMap && formatNameMap[key]) {
+        return String(formatNameMap[key]);
+    }
+    return String(fallbackName || key);
 }
 
 async function loadPokemonData(formatName, rating) {
@@ -481,6 +850,27 @@ function sortPokemonList(pokemonList) {
     return sorted;
 }
 
+function buildMonthlyRankMapByUsagePct(pokemonList) {
+    const ranked = [...pokemonList]
+        .filter(pokemon => pokemon && typeof pokemon === 'object')
+        .sort((a, b) => {
+            const usageDiff = Number(b.usage_pct || 0) - Number(a.usage_pct || 0);
+            if (usageDiff !== 0) return usageDiff;
+
+            const countDiff = Number(b.usage_count || 0) - Number(a.usage_count || 0);
+            if (countDiff !== 0) return countDiff;
+
+            return String(a.pokemon_name || '').localeCompare(String(b.pokemon_name || ''));
+        });
+
+    const rankMap = new Map();
+    ranked.forEach((pokemon, index) => {
+        rankMap.set(toId(pokemon.pokemon_name), index + 1);
+    });
+
+    return rankMap;
+}
+
 function setupPokemonSortListeners(formatName, rating) {
     document.querySelectorAll('.pokemon-sortable').forEach(th => {
         th.addEventListener('click', () => {
@@ -512,7 +902,8 @@ function formatPokemonRatingLabel(eloCutoff, ratingFilter) {
         return 'All ratings';
     }
     if (eloCutoff === undefined || eloCutoff === null) {
-        return `Rating ${escapeHtml(String(ratingFilter))}+`;
+        return `${escapeHtml(String(ratingFilter))}+`;
     }
-    return `Rating ${escapeHtml(String(eloCutoff))}+`;
+    return `${escapeHtml(String(eloCutoff))}+`;
 }
+

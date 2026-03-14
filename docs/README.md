@@ -22,3 +22,105 @@ Then open http://localhost:8000 in your browser.
 ## Deployment
 
 This site is automatically deployed via GitHub Pages from the `docs/` directory.
+
+## Asset Attribution
+
+Pokemon sprite assets and Pokemon images used in this project are sourced from:
+
+- https://github.com/PokeAPI/sprites
+- https://github.com/remokon/gen-9-sprites
+
+
+## Refreshing Base Stats Data
+
+Pokemon base stats and types are stored locally in `docs/assets/base-stats.json`.
+
+To regenerate this file from Pokemon Showdown data:
+
+```powershell
+.\scripts\update-base-stats.ps1
+```
+
+Optional Node.js script (if Node is installed):
+
+```bash
+node ./scripts/update-base-stats.mjs
+```
+
+## Refreshing Move Data
+
+Move metadata (type, PP, base power, accuracy, priority, description) is stored locally in `docs/assets/move-data.json`.
+
+To regenerate this file from Pokemon Showdown data:
+
+```powershell
+.\scripts\update-move-data.ps1
+```
+
+Optional Node.js script (if Node is installed):
+
+```bash
+node ./scripts/update-move-data.mjs
+```
+
+## Refreshing Ability Data
+
+Ability metadata (name and description) is stored locally in `docs/assets/ability-data.json`.
+
+To regenerate this file from Pokemon Showdown data:
+
+```powershell
+.\scripts\update-ability-data.ps1
+```
+
+Optional Node.js script (if Node is installed):
+
+```bash
+node ./scripts/update-ability-data.mjs
+```
+
+## Refreshing Item Name Map
+
+Item-to-sprite mappings are stored locally in `docs/assets/item-name-map.json`.
+
+This map links normalized item IDs from stats JSON to item sprite filenames in `docs/assets/sprites/items/`.
+
+To regenerate this file from local item sprites:
+
+```powershell
+.\scripts\update-item-name-map.ps1
+```
+
+## Refreshing Format Name Map
+
+Format display-name mappings are stored locally in `docs/assets/format-name-map.json`.
+
+This map controls how format IDs are shown in the UI. The generator pulls official display names from Pokemon Showdown's `config/formats.ts` and falls back to identity mapping for unmatched entries (for example, `gen9vgc2026regf: gen9vgc2026regf`) so you can manually edit labels afterward.
+
+To regenerate this map from the latest stats period:
+
+```powershell
+.\scripts\update-format-name-map.ps1
+```
+
+## Refreshing Icon Name Sprites
+
+Pokemon icon sprites can be generated with name-based filenames in `docs/assets/sprites/icons/`.
+
+This uses `docs/assets/sprites/name-map.json` to map dex-number icon files to normalized name files (for example, `great-tusk.png`).
+
+To regenerate these name-based icon files:
+
+```powershell
+.\scripts\update-icon-name-sprites.ps1
+```
+
+## TODO
+- only keep previous and current usage jsons, and display change in usage based on previous month
+- add styling, background, logos, banner art stuff, copyright, contact, kofi/social media links maybe
+- bonus features for after "soft launch": viewing past months data instead of current, view current live data 
+(ur backend stuff)
+- prepare for champions specific stuff for the launch in april
+- fun shiny variations for pokemon sprites/icons/banner art to sometimes load into the site
+- team builder features: better teammate sets for team archetypes, team weakness calculator
+- dynamic stat visualizer: hovering over spreads changes the stats of the pokemon in real time

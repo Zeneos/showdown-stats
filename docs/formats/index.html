@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Showdown Battle Statistics</title>
+    <link rel="icon" type="image/png" href="../assets/Icons/poketail.png">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/formats.css">
 </head>
@@ -12,7 +13,6 @@
     <div class="container">
         <header>
             <h1>Pokemon Showdown Battle Statistics</h1>
-            <p id="period-info">Loading latest stats...</p>
         </header>
 
         <div class="controls">
@@ -28,38 +28,48 @@
             </div>
 
             <div class="filter-group">
-                <label for="rating-filter">Rating Filter:</label>
-                <select id="rating-filter">
-                </select>
+                <div id="rating-filter" class="pokemon-rating-segments" role="group" aria-label="Select rating"></div>
+                <button id="open-data-guide-btn" class="data-guide-btn" type="button">How to read this data</button>
             </div>
         </div>
 
-        <div id="table-container" class="table-container">
-            <table id="stats-table">
-                <thead>
-                    <tr>
-                        <th class="sortable" data-sort="format-name">Format Name</th>
-                        <th class="sortable" data-sort="percentage">Percentage</th>
-                        <th class="sortable" data-sort="battles">Total Battles</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    <tr>
-                        <td colspan="3" class="loading">Loading data...</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div class="formats-split-layout">
+            <div id="table-container" class="table-container formats-pane">
+                <table id="stats-table">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-sort="format-name">Format Name</th>
+                            <th class="sortable" data-sort="percentage">Percentage</th>
+                            <th class="sortable" data-sort="battles">Total Battles</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr>
+                            <td colspan="3" class="loading">Loading data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <div id="format-detail" style="display: none;">
-            <div id="detail-content"></div>
+            <div id="format-detail" class="pokemon-pane">
+                <div id="detail-content"></div>
+            </div>
         </div>
 
         <footer>
             Data from <a href="https://www.smogon.com/stats" target="_blank">Smogon Stats</a>
+            <div id="usage-stats-date">Usage stats data from -</div>
+            <div>
+                Sprites used from
+                <a href="https://github.com/PokeAPI/sprites" target="_blank">PokeAPI/sprites</a>
+                and
+                <a href="https://github.com/remokon/gen-9-sprites" target="_blank">remokon/gen-9-sprites</a>
+            </div>
+            <div>Pokemon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026</div>
         </footer>
     </div>
 
+    <script src="../theme.js"></script>
     <script src="formats.js"></script>
 </body>
 </html>
