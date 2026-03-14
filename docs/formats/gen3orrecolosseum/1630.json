@@ -1,0 +1,1318 @@
+{
+  "format_name": "gen3orrecolosseum",
+  "elo_cutoff": 1630,
+  "pokemon": [
+    {
+      "pokemon_name": "Aerodactyl",
+      "usage_count": 1,
+      "usage_pct": 18.33,
+      "viability_json": [
+        4,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "rockhead": 1.1798176012363633
+      },
+      "items_json": {
+        "choiceband": 1.1787532147859272,
+        "brightpowder": 0.001064386450436161
+      },
+      "spreads_json": {
+        "Jolly:52/252/0/0/0/204": 0.0006320556170255065,
+        "Jolly:0/252/0/0/4/252": 0.001064386450436161,
+        "Jolly:0/252/0/0/76/180": 1.1781211591689016,
+        "Rash:0/0/4/252/0/252": 0.0
+      },
+      "moves_json": {
+        "earthquake": 1.1798176012363633,
+        "hiddenpowerrock": 1.1787532147859272,
+        "doubleedge": 1.1798176012363633,
+        "rockslide": 1.1798176012363633,
+        "substitute": 0.001064386450436161,
+        "dragonclaw": 0.0,
+        "flamethrower": 0.0,
+        "ancientpower": 0.0
+      },
+      "tera_json": {
+        "nothing": 1.1798176012363633
+      },
+      "happiness_json": {
+        "255": 1.1798176012363633
+      },
+      "teammates_json": {
+        "Latios": 0.0006320556170255065,
+        "Latias": 1.1787532147859272,
+        "Snorlax": 0.0006320556170255065,
+        "Metagross": 1.1798176012363633,
+        "Swampert": 0.0016964420674616676,
+        "Exeggutor": 0.001064386450436161,
+        "Suicune": 1.1791855456193376,
+        "Tauros": 0.001064386450436161,
+        "Marowak": 1.1781211591689016,
+        "Raikou": 1.1781211591689016,
+        "Gengar": 0.0,
+        "Tyranitar": 0.0,
+        "Lapras": 0.0,
+        "Blaziken": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Arcanine",
+      "usage_count": 6,
+      "usage_pct": 64.8,
+      "viability_json": [
+        3,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "intimidate": 6.1026366917999315
+      },
+      "items_json": {
+        "whiteherb": 6.1026366917999315
+      },
+      "spreads_json": {
+        "Modest:168/0/0/16/132/192": 5.7714312941046675,
+        "Rash:96/148/0/12/0/252": 0.3312053976952632,
+        "Mild:104/0/0/252/0/152": 0.0
+      },
+      "moves_json": {
+        "overheat": 6.1026366917999315,
+        "extremespeed": 6.1026366917999315,
+        "protect": 6.1026366917999315,
+        "charm": 6.1026366917999315,
+        "crunch": 0.0,
+        "hiddenpowergrass": 0.0
+      },
+      "tera_json": {
+        "nothing": 6.1026366917999315
+      },
+      "happiness_json": {
+        "255": 6.1026366917999315
+      },
+      "teammates_json": {
+        "Zapdos": 4.170750179885909,
+        "Metagross": 3.8395447821906457,
+        "Latias": 4.170750179885909,
+        "Snorlax": 4.170750179885909,
+        "Latios": 3.8395447821906457,
+        "Regirock": 0.3312053976952632,
+        "Tyranitar": 0.3312053976952632,
+        "Gengar": 0.0,
+        "empty": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Articuno",
+      "usage_count": 0,
+      "usage_pct": 1.15,
+      "viability_json": [
+        2,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "pressure": 0.07377139809279748
+      },
+      "items_json": {
+        "starfberry": 0.0,
+        "nevermeltice": 0.07377139809279748
+      },
+      "spreads_json": {
+        "Timid:252/0/0/4/0/252": 0.0,
+        "Modest:16/0/0/252/0/240": 0.07377139809279748
+      },
+      "moves_json": {
+        "substitute": 0.0,
+        "protect": 0.07377139809279748,
+        "icywind": 0.0,
+        "icebeam": 0.07377139809279748,
+        "hiddenpowergrass": 0.07377139809279748,
+        "haze": 0.07377139809279748
+      },
+      "tera_json": {
+        "nothing": 0.07377139809279748
+      },
+      "happiness_json": {
+        "255": 0.07377139809279748
+      },
+      "teammates_json": {
+        "Registeel": 0.0,
+        "Dusclops": 0.0,
+        "Charizard": 0.0,
+        "Kangaskhan": 0.0,
+        "Vaporeon": 0.0,
+        "Golem": 0.07377139809279748,
+        "Togetic": 0.07377139809279748,
+        "Gengar": 0.07377139809279748,
+        "Moltres": 0.07377139809279748,
+        "Metagross": 0.07377139809279748
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Exeggutor",
+      "usage_count": 0,
+      "usage_pct": 0.02,
+      "viability_json": [
+        1,
+        47,
+        47,
+        47
+      ],
+      "abilities_json": {
+        "chlorophyll": 0.001064386450436161
+      },
+      "items_json": {
+        "salacberry": 0.001064386450436161
+      },
+      "spreads_json": {
+        "Jolly:4/252/0/0/0/252": 0.001064386450436161
+      },
+      "moves_json": {
+        "endure": 0.001064386450436161,
+        "sleeppowder": 0.001064386450436161,
+        "explosion": 0.001064386450436161,
+        "protect": 0.001064386450436161
+      },
+      "tera_json": {
+        "nothing": 0.001064386450436161
+      },
+      "happiness_json": {
+        "255": 0.001064386450436161
+      },
+      "teammates_json": {
+        "Metagross": 0.001064386450436161,
+        "Swampert": 0.001064386450436161,
+        "Aerodactyl": 0.001064386450436161,
+        "Suicune": 0.001064386450436161,
+        "Tauros": 0.001064386450436161
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Gengar",
+      "usage_count": 2,
+      "usage_pct": 7.76,
+      "viability_json": [
+        6,
+        79,
+        79,
+        63
+      ],
+      "abilities_json": {
+        "levitate": 1.6749398480888629
+      },
+      "items_json": {
+        "salacberry": 0.6072836257138612,
+        "whiteherb": 1.0676562223750017,
+        "lumberry": 0.0,
+        "petayaberry": 0.0
+      },
+      "spreads_json": {
+        "Timid:252/0/0/80/0/176": 0.6072836257138612,
+        "Jolly:4/252/0/0/0/252": 0.9938848242822043,
+        "Jolly:64/180/0/0/12/252": 0.07377139809279748,
+        "Jolly:72/184/0/0/0/252": 0.0,
+        "Lonely:4/252/0/0/0/252": 0.0,
+        "Timid:0/0/0/252/4/252": 0.0
+      },
+      "moves_json": {
+        "icepunch": 0.6072836257138612,
+        "firepunch": 0.6072836257138612,
+        "perishsong": 0.6072836257138612,
+        "destinybond": 0.6072836257138612,
+        "substitute": 0.9938848242822043,
+        "shadowball": 0.9938848242822043,
+        "explosion": 1.0676562223750017,
+        "swagger": 1.0676562223750017,
+        "protect": 0.07377139809279748,
+        "curse": 0.07377139809279748,
+        "focuspunch": 0.0,
+        "hypnosis": 0.0
+      },
+      "tera_json": {
+        "nothing": 1.6749398480888629
+      },
+      "happiness_json": {
+        "255": 1.6749398480888629
+      },
+      "teammates_json": {
+        "Ludicolo": 0.42553641754044846,
+        "Kingdra": 0.42553641754044846,
+        "Zapdos": 0.42553641754044846,
+        "Lapras": 0.42553641754044846,
+        "Metagross": 0.49930781563324594,
+        "Golem": 0.07377139809279748,
+        "Togetic": 0.07377139809279748,
+        "Moltres": 0.07377139809279748,
+        "Articuno": 0.07377139809279748,
+        "Latios": 0.0,
+        "Salamence": 0.0,
+        "Regirock": 0.0,
+        "Aerodactyl": 0.0,
+        "Tyranitar": 0.0,
+        "Blaziken": 0.0,
+        "Latias": 0.0,
+        "Arcanine": 0.0,
+        "empty": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Golem",
+      "usage_count": 0,
+      "usage_pct": 1.15,
+      "viability_json": [
+        1,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "rockhead": 0.07377139809279748
+      },
+      "items_json": {
+        "choiceband": 0.07377139809279748
+      },
+      "spreads_json": {
+        "Jolly:16/248/12/0/0/232": 0.07377139809279748
+      },
+      "moves_json": {
+        "earthquake": 0.07377139809279748,
+        "explosion": 0.07377139809279748,
+        "rockblast": 0.07377139809279748,
+        "doubleedge": 0.07377139809279748
+      },
+      "tera_json": {
+        "nothing": 0.07377139809279748
+      },
+      "happiness_json": {
+        "255": 0.07377139809279748
+      },
+      "teammates_json": {
+        "Togetic": 0.07377139809279748,
+        "Gengar": 0.07377139809279748,
+        "Moltres": 0.07377139809279748,
+        "Metagross": 0.07377139809279748,
+        "Articuno": 0.07377139809279748
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Gyarados",
+      "usage_count": 0,
+      "usage_pct": 0.01,
+      "viability_json": [
+        1,
+        37,
+        37,
+        37
+      ],
+      "abilities_json": {
+        "intimidate": 0.0006967632471869822
+      },
+      "items_json": {
+        "lumberry": 0.0006967632471869822
+      },
+      "spreads_json": {
+        "Adamant:0/252/0/0/4/252": 0.0006967632471869822
+      },
+      "moves_json": {
+        "protect": 0.0006967632471869822,
+        "hiddenpowerflying": 0.0006967632471869822,
+        "dragondance": 0.0006967632471869822,
+        "earthquake": 0.0006967632471869822
+      },
+      "tera_json": {
+        "nothing": 0.0006967632471869822
+      },
+      "happiness_json": {
+        "255": 0.0006967632471869822
+      },
+      "teammates_json": {
+        "Zapdos": 0.0006967632471869822,
+        "Tauros": 0.0006967632471869822,
+        "Metagross": 0.0006967632471869822,
+        "Swampert": 0.0006967632471869822,
+        "Marowak": 0.0006967632471869822
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Heracross",
+      "usage_count": 1,
+      "usage_pct": 9.1,
+      "viability_json": [
+        1,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "guts": 0.5856470177102552
+      },
+      "items_json": {
+        "persimberry": 0.5856470177102552
+      },
+      "spreads_json": {
+        "Adamant:252/16/8/0/4/228": 0.5856470177102552
+      },
+      "moves_json": {
+        "protect": 0.5856470177102552,
+        "brickbreak": 0.5856470177102552,
+        "megahorn": 0.5856470177102552,
+        "earthquake": 0.5856470177102552
+      },
+      "tera_json": {
+        "nothing": 0.5856470177102552
+      },
+      "happiness_json": {
+        "255": 0.5856470177102552
+      },
+      "teammates_json": {
+        "Tauros": 0.5856470177102552,
+        "Latias": 0.5856470177102552,
+        "Starmie": 0.5856470177102552,
+        "Tyranitar": 0.5856470177102552,
+        "Zapdos": 0.5856470177102552
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Kingdra",
+      "usage_count": 1,
+      "usage_pct": 6.61,
+      "viability_json": [
+        1,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "swiftswim": 0.6072836257138612
+      },
+      "items_json": {
+        "lumberry": 0.6072836257138612
+      },
+      "spreads_json": {
+        "Modest:252/0/0/252/4/0": 0.6072836257138612
+      },
+      "moves_json": {
+        "hydropump": 0.6072836257138612,
+        "icebeam": 0.6072836257138612,
+        "raindance": 0.6072836257138612,
+        "protect": 0.6072836257138612
+      },
+      "tera_json": {
+        "nothing": 0.6072836257138612
+      },
+      "happiness_json": {
+        "255": 0.6072836257138612
+      },
+      "teammates_json": {
+        "Ludicolo": 0.42553641754044846,
+        "Zapdos": 0.42553641754044846,
+        "Lapras": 0.42553641754044846,
+        "Metagross": 0.42553641754044846,
+        "Gengar": 0.42553641754044846
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Lapras",
+      "usage_count": 1,
+      "usage_pct": 6.61,
+      "viability_json": [
+        2,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "waterabsorb": 0.6072836257138612,
+        "shellarmor": 0.0
+      },
+      "items_json": {
+        "leftovers": 0.6072836257138612,
+        "nevermeltice": 0.0
+      },
+      "spreads_json": {
+        "Sassy:220/0/36/0/252/0": 0.6072836257138612,
+        "Rash:120/0/0/252/0/136": 0.0
+      },
+      "moves_json": {
+        "perishsong": 0.6072836257138612,
+        "protect": 0.6072836257138612,
+        "substitute": 0.6072836257138612,
+        "icebeam": 0.6072836257138612,
+        "blizzard": 0.0,
+        "dragondance": 0.0,
+        "bodyslam": 0.0,
+        "surf": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.6072836257138612
+      },
+      "happiness_json": {
+        "255": 0.6072836257138612
+      },
+      "teammates_json": {
+        "Ludicolo": 0.42553641754044846,
+        "Kingdra": 0.42553641754044846,
+        "Zapdos": 0.42553641754044846,
+        "Metagross": 0.42553641754044846,
+        "Gengar": 0.42553641754044846,
+        "Aerodactyl": 0.0,
+        "Tyranitar": 0.0,
+        "Blaziken": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Latias",
+      "usage_count": 9,
+      "usage_pct": 92.21,
+      "viability_json": [
+        6,
+        79,
+        79,
+        74
+      ],
+      "abilities_json": {
+        "levitate": 8.860921748578317
+      },
+      "items_json": {
+        "cheriberry": 6.765948174003897,
+        "brightpowder": 2.09497357457442,
+        "lumberry": 0.0
+      },
+      "spreads_json": {
+        "Timid:240/0/0/16/0/252": 5.7714312941046675,
+        "Timid:252/0/0/4/0/252": 1.325722277594493,
+        "Timid:228/0/0/28/0/252": 1.7637681768791569,
+        "Calm:248/0/0/0/228/32": 0.0
+      },
+      "moves_json": {
+        "reflect": 7.281389906585859,
+        "dragonclaw": 7.682800589409417,
+        "thunderwave": 6.765316118386872,
+        "protect": 7.097153571699161,
+        "swagger": 3.0888583988566243,
+        "lightscreen": 1.7644002324961825,
+        "icebeam": 1.1781211591689016,
+        "icywind": 0.5856470177102552,
+        "dragonbreath": 0.0,
+        "recover": 0.0
+      },
+      "tera_json": {
+        "nothing": 8.860921748578317
+      },
+      "happiness_json": {
+        "255": 8.860921748578317
+      },
+      "teammates_json": {
+        "Zapdos": 4.756397197596164,
+        "Metagross": 5.018297996976573,
+        "Arcanine": 4.170750179885909,
+        "Snorlax": 4.171382235502934,
+        "Latios": 3.840176837807671,
+        "Regirock": 0.3312053976952632,
+        "Tyranitar": 0.9168524154055184,
+        "Aerodactyl": 1.1787532147859272,
+        "Swampert": 0.0006320556170255065,
+        "Suicune": 1.1781211591689016,
+        "Marowak": 1.1781211591689016,
+        "Raikou": 1.1781211591689016,
+        "Heracross": 0.5856470177102552,
+        "Tauros": 0.5856470177102552,
+        "Starmie": 0.5856470177102552,
+        "Gengar": 0.0,
+        "empty": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Latios",
+      "usage_count": 6,
+      "usage_pct": 59.67,
+      "viability_json": [
+        4,
+        74,
+        74,
+        74
+      ],
+      "abilities_json": {
+        "levitate": 5.772063349721694
+      },
+      "items_json": {
+        "leftovers": 5.7714312941046675,
+        "lumberry": 0.0006320556170255065,
+        "cheriberry": 0.0
+      },
+      "spreads_json": {
+        "Timid:76/0/0/180/0/252": 5.7714312941046675,
+        "Modest:124/0/40/244/60/40": 0.0006320556170255065,
+        "Timid:4/0/0/252/0/252": 0.0
+      },
+      "moves_json": {
+        "calmmind": 5.772063349721694,
+        "protect": 5.772063349721694,
+        "dragonclaw": 5.772063349721694,
+        "substitute": 5.7714312941046675,
+        "hiddenpowerfire": 0.0006320556170255065,
+        "psychic": 0.0,
+        "icebeam": 0.0,
+        "thunderbolt": 0.0
+      },
+      "tera_json": {
+        "nothing": 5.772063349721694
+      },
+      "happiness_json": {
+        "255": 5.772063349721694
+      },
+      "teammates_json": {
+        "Zapdos": 3.8395447821906457,
+        "Metagross": 3.840176837807671,
+        "Latias": 3.840176837807671,
+        "Arcanine": 3.8395447821906457,
+        "Snorlax": 3.840176837807671,
+        "Aerodactyl": 0.0006320556170255065,
+        "Swampert": 0.0006320556170255065,
+        "Gengar": 0.0,
+        "Salamence": 0.0,
+        "Regirock": 0.0,
+        "Starmie": 0.0,
+        "Tauros": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Ludicolo",
+      "usage_count": 1,
+      "usage_pct": 6.61,
+      "viability_json": [
+        2,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "swiftswim": 0.6072836257138612
+      },
+      "items_json": {
+        "petayaberry": 0.6072836257138612,
+        "lumberry": 0.0
+      },
+      "spreads_json": {
+        "Modest:168/0/0/252/0/88": 0.6072836257138612,
+        "Mild:0/4/0/252/0/252": 0.0
+      },
+      "moves_json": {
+        "fakeout": 0.6072836257138612,
+        "protect": 0.6072836257138612,
+        "gigadrain": 0.6072836257138612,
+        "surf": 0.6072836257138612,
+        "leechseed": 0.0,
+        "hydropump": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.6072836257138612
+      },
+      "happiness_json": {
+        "255": 0.6072836257138612
+      },
+      "teammates_json": {
+        "Kingdra": 0.42553641754044846,
+        "Zapdos": 0.42553641754044846,
+        "Lapras": 0.42553641754044846,
+        "Metagross": 0.42553641754044846,
+        "Gengar": 0.42553641754044846
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Marowak",
+      "usage_count": 1,
+      "usage_pct": 18.32,
+      "viability_json": [
+        2,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "lightningrod": 0.0006967632471869822,
+        "rockhead": 1.1781211591689016
+      },
+      "items_json": {
+        "thickclub": 1.1788179224160884
+      },
+      "spreads_json": {
+        "Careful:252/36/0/0/220/0": 0.0006967632471869822,
+        "Adamant:196/236/0/0/0/76": 1.1781211591689016
+      },
+      "moves_json": {
+        "protect": 1.1788179224160884,
+        "earthquake": 1.1788179224160884,
+        "substitute": 0.0006967632471869822,
+        "ancientpower": 0.0006967632471869822,
+        "bonemerang": 1.1781211591689016,
+        "hiddenpowerghost": 1.1781211591689016
+      },
+      "tera_json": {
+        "nothing": 1.1788179224160884
+      },
+      "happiness_json": {
+        "255": 1.1788179224160884
+      },
+      "teammates_json": {
+        "Zapdos": 0.0006967632471869822,
+        "Tauros": 0.0006967632471869822,
+        "Metagross": 1.1788179224160884,
+        "Swampert": 0.0006967632471869822,
+        "Gyarados": 0.0006967632471869822,
+        "Suicune": 1.1781211591689016,
+        "Latias": 1.1781211591689016,
+        "Raikou": 1.1781211591689016,
+        "Aerodactyl": 1.1781211591689016
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Metagross",
+      "usage_count": 9,
+      "usage_pct": 85.75,
+      "viability_json": [
+        13,
+        79,
+        79,
+        68
+      ],
+      "abilities_json": {
+        "clearbody": 8.62688550667708
+      },
+      "items_json": {
+        "lumberry": 8.017208675648572,
+        "brightpowder": 0.6072836257138612,
+        "chestoberry": 0.0,
+        "quickclaw": 0.0016964420674616676,
+        "salacberry": 0.0006967632471869822,
+        "choiceband": 0.0,
+        "focusband": 0.0
+      },
+      "spreads_json": {
+        "Adamant:252/96/52/0/80/28": 5.7714312941046675,
+        "Adamant:252/252/0/0/0/4": 0.6079156813308868,
+        "Adamant:0/252/0/0/4/252": 0.0,
+        "Jolly:0/252/0/0/4/252": 0.0006967632471869822,
+        "Jolly:4/252/0/0/0/252": 1.0676562223750017,
+        "Adamant:252/0/4/0/252/0": 0.001064386450436161,
+        "Jolly:24/232/0/0/0/252": 1.1781211591689016,
+        "Adamant:164/252/0/0/0/92": 0.0,
+        "Sassy:0/0/0/252/0/252": 0.0,
+        "Adamant:248/252/0/0/4/4": 0.0
+      },
+      "moves_json": {
+        "meteormash": 8.62688550667708,
+        "earthquake": 8.62688550667708,
+        "protect": 8.553114108584284,
+        "explosion": 8.626188743429895,
+        "agility": 0.07377139809279748,
+        "rest": 0.0,
+        "hiddenpowerrock": 0.0006967632471869822,
+        "shadowball": 0.0,
+        "psychic": 0.0
+      },
+      "tera_json": {
+        "nothing": 8.62688550667708
+      },
+      "happiness_json": {
+        "255": 8.62688550667708
+      },
+      "teammates_json": {
+        "Zapdos": 4.26577796297828,
+        "Latias": 5.018297996976573,
+        "Arcanine": 3.8395447821906457,
+        "Snorlax": 3.840176837807671,
+        "Latios": 3.840176837807671,
+        "Ludicolo": 0.42553641754044846,
+        "Kingdra": 0.42553641754044846,
+        "Lapras": 0.42553641754044846,
+        "Gengar": 0.49930781563324594,
+        "Aerodactyl": 1.1798176012363633,
+        "Swampert": 0.00239320531464865,
+        "Tauros": 0.0017611496976231433,
+        "Gyarados": 0.0006967632471869822,
+        "Marowak": 1.1788179224160884,
+        "Exeggutor": 0.001064386450436161,
+        "Suicune": 1.1791855456193376,
+        "Raikou": 1.1781211591689016,
+        "Golem": 0.07377139809279748,
+        "Togetic": 0.07377139809279748,
+        "Moltres": 0.07377139809279748,
+        "Articuno": 0.07377139809279748,
+        "Salamence": 0.0,
+        "Regirock": 0.0,
+        "Tyranitar": 0.0,
+        "Blaziken": 0.0,
+        "empty": 0.0,
+        "Starmie": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Moltres",
+      "usage_count": 0,
+      "usage_pct": 1.15,
+      "viability_json": [
+        1,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "pressure": 0.07377139809279748
+      },
+      "items_json": {
+        "charcoal": 0.07377139809279748
+      },
+      "spreads_json": {
+        "Modest:0/0/0/252/0/0": 0.07377139809279748
+      },
+      "moves_json": {
+        "overheat": 0.07377139809279748,
+        "hiddenpowergrass": 0.07377139809279748,
+        "willowisp": 0.07377139809279748,
+        "protect": 0.07377139809279748
+      },
+      "tera_json": {
+        "nothing": 0.07377139809279748
+      },
+      "happiness_json": {
+        "255": 0.07377139809279748
+      },
+      "teammates_json": {
+        "Golem": 0.07377139809279748,
+        "Togetic": 0.07377139809279748,
+        "Gengar": 0.07377139809279748,
+        "Metagross": 0.07377139809279748,
+        "Articuno": 0.07377139809279748
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Raikou",
+      "usage_count": 1,
+      "usage_pct": 18.3,
+      "viability_json": [
+        1,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "pressure": 1.1781211591689016
+      },
+      "items_json": {
+        "cheriberry": 1.1781211591689016
+      },
+      "spreads_json": {
+        "Timid:0/0/4/252/0/252": 1.1781211591689016
+      },
+      "moves_json": {
+        "protect": 1.1781211591689016,
+        "calmmind": 1.1781211591689016,
+        "thunderbolt": 1.1781211591689016,
+        "crunch": 1.1781211591689016
+      },
+      "tera_json": {
+        "nothing": 1.1781211591689016
+      },
+      "happiness_json": {
+        "255": 1.1781211591689016
+      },
+      "teammates_json": {
+        "Suicune": 1.1781211591689016,
+        "Marowak": 1.1781211591689016,
+        "Latias": 1.1781211591689016,
+        "Metagross": 1.1781211591689016,
+        "Aerodactyl": 1.1781211591689016
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Regirock",
+      "usage_count": 0,
+      "usage_pct": 5.15,
+      "viability_json": [
+        2,
+        63,
+        63,
+        63
+      ],
+      "abilities_json": {
+        "clearbody": 0.3312053976952632
+      },
+      "items_json": {
+        "quickclaw": 0.3312053976952632,
+        "leftovers": 0.0
+      },
+      "spreads_json": {
+        "Careful:252/164/0/0/64/28": 0.3312053976952632,
+        "Adamant:208/252/0/0/32/16": 0.0
+      },
+      "moves_json": {
+        "hiddenpowerrock": 0.3312053976952632,
+        "explosion": 0.3312053976952632,
+        "protect": 0.3312053976952632,
+        "thunderwave": 0.3312053976952632,
+        "earthquake": 0.0,
+        "ancientpower": 0.0
+      },
+      "tera_json": {
+        "nothing": 0.3312053976952632
+      },
+      "happiness_json": {
+        "255": 0.3312053976952632
+      },
+      "teammates_json": {
+        "Latias": 0.3312053976952632,
+        "Zapdos": 0.3312053976952632,
+        "Arcanine": 0.3312053976952632,
+        "Snorlax": 0.3312053976952632,
+        "Tyranitar": 0.3312053976952632,
+        "Metagross": 0.0,
+        "Gengar": 0.0,
+        "Latios": 0.0,
+        "Salamence": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Snorlax",
+      "usage_count": 7,
+      "usage_pct": 64.81,
+      "viability_json": [
+        5,
+        79,
+        79,
+        79
+      ],
+      "abilities_json": {
+        "thickfat": 7.097153571699161
+      },
+      "items_json": {
+        "choiceband": 7.096521516082136,
+        "silkscarf": 0.0006320556170255065,
+        "leftovers": 0.0
+      },
+      "spreads_json": {
+        "Adamant:4/200/252/0/0/52": 5.7714312941046675,
+        "Adamant:148/96/252/0/0/12": 0.3312053976952632,
+        "Adamant:252/252/0/0/4/0": 0.0006320556170255065,
+        "Adamant:88/176/228/0/0/16": 0.9938848242822043,
+        "Adamant:0/252/252/0/0/4": 0.0
+      },
+      "moves_json": {
+        "doubleedge": 7.097153571699161,
+        "selfdestruct": 7.097153571699161,
+        "earthquake": 7.097153571699161,
+        "shadowball": 6.1026366917999315,
+        "protect": 0.9945168798992299,
+        "return": 0.0
+      },
+      "tera_json": {
+        "nothing": 7.097153571699161
+      },
+      "happiness_json": {
+        "255": 7.097153571699161
+      },
+      "teammates_json": {
+        "Zapdos": 4.170750179885909,
+        "Metagross": 3.840176837807671,
+        "Latias": 4.171382235502934,
+        "Arcanine": 4.170750179885909,
+        "Latios": 3.840176837807671,
+        "Regirock": 0.3312053976952632,
+        "Tyranitar": 0.3312053976952632,
+        "Aerodactyl": 0.0006320556170255065,
+        "Swampert": 0.0006320556170255065,
+        "Starmie": 0.0,
+        "Tauros": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Starmie",
+      "usage_count": 1,
+      "usage_pct": 9.1,
+      "viability_json": [
+        2,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "naturalcure": 0.5856470177102552
+      },
+      "items_json": {
+        "leftovers": 0.5856470177102552,
+        "mysticwater": 0.0
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.5856470177102552,
+        "Timid:4/0/0/252/0/252": 0.0
+      },
+      "moves_json": {
+        "protect": 0.5856470177102552,
+        "psychic": 0.5856470177102552,
+        "hydropump": 0.5856470177102552,
+        "icebeam": 0.5856470177102552
+      },
+      "tera_json": {
+        "nothing": 0.5856470177102552
+      },
+      "happiness_json": {
+        "255": 0.5856470177102552
+      },
+      "teammates_json": {
+        "Heracross": 0.5856470177102552,
+        "Tauros": 0.5856470177102552,
+        "Latias": 0.5856470177102552,
+        "Tyranitar": 0.5856470177102552,
+        "Zapdos": 0.5856470177102552,
+        "Metagross": 0.0,
+        "Latios": 0.0,
+        "Snorlax": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Suicune",
+      "usage_count": 1,
+      "usage_pct": 18.32,
+      "viability_json": [
+        2,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "pressure": 1.1791855456193376
+      },
+      "items_json": {
+        "chestoberry": 0.001064386450436161,
+        "leftovers": 1.1781211591689016
+      },
+      "spreads_json": {
+        "Timid:0/0/0/252/4/252": 0.001064386450436161,
+        "Modest:236/0/0/252/0/20": 1.1781211591689016
+      },
+      "moves_json": {
+        "hydropump": 1.1791855456193376,
+        "icebeam": 1.1791855456193376,
+        "calmmind": 1.1791855456193376,
+        "rest": 0.001064386450436161,
+        "protect": 1.1781211591689016
+      },
+      "tera_json": {
+        "nothing": 1.1791855456193376
+      },
+      "happiness_json": {
+        "255": 1.1791855456193376
+      },
+      "teammates_json": {
+        "Exeggutor": 0.001064386450436161,
+        "Metagross": 1.1791855456193376,
+        "Swampert": 0.001064386450436161,
+        "Aerodactyl": 1.1791855456193376,
+        "Tauros": 0.001064386450436161,
+        "Marowak": 1.1781211591689016,
+        "Latias": 1.1781211591689016,
+        "Raikou": 1.1781211591689016
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Swampert",
+      "usage_count": 1,
+      "usage_pct": 0.04,
+      "viability_json": [
+        4,
+        79,
+        79,
+        79
+      ],
+      "abilities_json": {
+        "torrent": 0.996278029596853
+      },
+      "items_json": {
+        "leftovers": 0.996278029596853
+      },
+      "spreads_json": {
+        "Quiet:252/84/0/128/44/0": 0.0013288188642124887,
+        "Quiet:252/32/0/100/120/4": 0.9938848242822043,
+        "Quiet:252/0/0/116/140/0": 0.001064386450436161
+      },
+      "moves_json": {
+        "earthquake": 0.996278029596853,
+        "icywind": 0.00239320531464865,
+        "hydropump": 0.996278029596853,
+        "protect": 0.996278029596853,
+        "icebeam": 0.9938848242822043
+      },
+      "tera_json": {
+        "nothing": 0.996278029596853
+      },
+      "happiness_json": {
+        "255": 0.996278029596853
+      },
+      "teammates_json": {
+        "Latios": 0.0006320556170255065,
+        "Latias": 0.0006320556170255065,
+        "Snorlax": 0.0006320556170255065,
+        "Aerodactyl": 0.0016964420674616676,
+        "Metagross": 0.00239320531464865,
+        "Zapdos": 0.0006967632471869822,
+        "Tauros": 0.0017611496976231433,
+        "Gyarados": 0.0006967632471869822,
+        "Marowak": 0.0006967632471869822,
+        "Exeggutor": 0.001064386450436161,
+        "Suicune": 0.001064386450436161
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tauros",
+      "usage_count": 1,
+      "usage_pct": 9.13,
+      "viability_json": [
+        4,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "intimidate": 0.5874081674078784
+      },
+      "items_json": {
+        "choiceband": 0.5863437809574421,
+        "silkscarf": 0.001064386450436161
+      },
+      "spreads_json": {
+        "Jolly:0/252/0/0/4/252": 0.0017611496976231433,
+        "Jolly:4/252/0/0/0/252": 0.5856470177102552
+      },
+      "moves_json": {
+        "doubleedge": 0.5874081674078784,
+        "return": 0.5863437809574421,
+        "hiddenpowerghost": 0.5874081674078784,
+        "earthquake": 0.5874081674078784,
+        "protect": 0.001064386450436161
+      },
+      "tera_json": {
+        "nothing": 0.5874081674078784
+      },
+      "happiness_json": {
+        "255": 0.5874081674078784
+      },
+      "teammates_json": {
+        "Zapdos": 0.5863437809574421,
+        "Metagross": 0.0017611496976231433,
+        "Swampert": 0.0017611496976231433,
+        "Gyarados": 0.0006967632471869822,
+        "Marowak": 0.0006967632471869822,
+        "Exeggutor": 0.001064386450436161,
+        "Aerodactyl": 0.001064386450436161,
+        "Suicune": 0.001064386450436161,
+        "Heracross": 0.5856470177102552,
+        "Latias": 0.5856470177102552,
+        "Starmie": 0.5856470177102552,
+        "Tyranitar": 0.5856470177102552,
+        "Latios": 0.0,
+        "Snorlax": 0.0
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Togetic",
+      "usage_count": 0,
+      "usage_pct": 1.15,
+      "viability_json": [
+        1,
+        59,
+        59,
+        59
+      ],
+      "abilities_json": {
+        "serenegrace": 0.07377139809279748
+      },
+      "items_json": {
+        "brightpowder": 0.07377139809279748
+      },
+      "spreads_json": {
+        "Calm:252/0/160/0/96/0": 0.07377139809279748
+      },
+      "moves_json": {
+        "protect": 0.07377139809279748,
+        "followme": 0.07377139809279748,
+        "helpinghand": 0.07377139809279748,
+        "encore": 0.07377139809279748
+      },
+      "tera_json": {
+        "nothing": 0.07377139809279748
+      },
+      "happiness_json": {
+        "255": 0.07377139809279748
+      },
+      "teammates_json": {
+        "Golem": 0.07377139809279748,
+        "Gengar": 0.07377139809279748,
+        "Moltres": 0.07377139809279748,
+        "Metagross": 0.07377139809279748,
+        "Articuno": 0.07377139809279748
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Tyranitar",
+      "usage_count": 1,
+      "usage_pct": 14.25,
+      "viability_json": [
+        4,
+        68,
+        68,
+        68
+      ],
+      "abilities_json": {
+        "sandstream": 0.9168524154108106
+      },
+      "items_json": {
+        "lumberry": 0.9168524154108106,
+        "softsand": 0.0
+      },
+      "spreads_json": {
+        "Jolly:52/196/40/0/0/220": 0.3312053976952632,
+        "Quiet:252/0/0/0/0/252": 0.0,
+        "Jolly:112/144/0/0/0/252": 0.5856470177102552,
+        "Impish:252/0/252/0/0/4": 5.2922666249344275e-12
+      },
+      "moves_json": {
+        "earthquake": 0.9168524154108106,
+        "rockslide": 0.3312053976952632,
+        "dragondance": 0.9168524154055184,
+        "protect": 0.9168524154108106,
+        "blizzard": 0.0,
+        "crunch": 0.0,
+        "dragonclaw": 0.0,
+        "hiddenpowerrock": 0.5856470177102552,
+        "ancientpower": 5.2922666249344275e-12,
+        "thunderwave": 5.2922666249344275e-12
+      },
+      "tera_json": {
+        "nothing": 0.9168524154108106
+      },
+      "happiness_json": {
+        "255": 0.9168524154108106
+      },
+      "teammates_json": {
+        "Regirock": 0.3312053976952632,
+        "Latias": 0.9168524154055184,
+        "Zapdos": 0.9168524154055184,
+        "Arcanine": 0.3312053976952632,
+        "Snorlax": 0.3312053976952632,
+        "Aerodactyl": 0.0,
+        "Gengar": 0.0,
+        "Lapras": 0.0,
+        "Blaziken": 0.0,
+        "Metagross": 0.0,
+        "Heracross": 0.5856470177102552,
+        "Tauros": 0.5856470177102552,
+        "Starmie": 0.5856470177102552,
+        "Gligar": 5.2922666249344275e-12,
+        "Cacturne": 5.2922666249344275e-12,
+        "Dugtrio": 5.2922666249344275e-12,
+        "Smeargle": 5.2922666249344275e-12,
+        "Dusclops": 5.2922666249344275e-12
+      },
+      "counters_json": {}
+    },
+    {
+      "pokemon_name": "Zapdos",
+      "usage_count": 8,
+      "usage_pct": 80.52,
+      "viability_json": [
+        9,
+        79,
+        79,
+        74
+      ],
+      "abilities_json": {
+        "pressure": 8.29014892275344
+      },
+      "items_json": {
+        "magnet": 7.372599744100734,
+        "leftovers": 0.3312053976952632,
+        "brightpowder": 0.0006967632471869822,
+        "cheriberry": 0.5856470177102552
+      },
+      "spreads_json": {
+        "Timid:4/0/16/236/0/252": 5.7714312941046675,
+        "Timid:252/0/0/4/0/252": 0.6072836257138612,
+        "Timid:44/0/0/212/0/252": 0.3312053976952632,
+        "Modest:168/0/0/220/0/120": 0.0006967632471869822,
+        "Timid:4/0/0/252/0/252": 0.9938848242822043,
+        "Timid:0/0/4/252/0/252": 0.5856470177102552,
+        "Modest:144/0/0/252/0/112": 0.0
+      },
+      "moves_json": {
+        "thunderbolt": 7.682865297039577,
+        "substitute": 7.704501905043184,
+        "detect": 7.295567335224047,
+        "hiddenpowergrass": 5.772128057351855,
+        "thunder": 0.6072836257138612,
+        "drillpeck": 0.6072836257138612,
+        "hiddenpowerice": 1.9107372396877227,
+        "protect": 0.9945815875293913,
+        "lightscreen": 0.0,
+        "swagger": 0.5856470177102552,
+        "thunderwave": 0.0
+      },
+      "tera_json": {
+        "nothing": 8.29014892275344
+      },
+      "happiness_json": {
+        "255": 8.29014892275344
+      },
+      "teammates_json": {
+        "Metagross": 4.26577796297828,
+        "Latias": 4.756397197596164,
+        "Arcanine": 4.170750179885909,
+        "Snorlax": 4.170750179885909,
+        "Latios": 3.8395447821906457,
+        "Ludicolo": 0.42553641754044846,
+        "Kingdra": 0.42553641754044846,
+        "Lapras": 0.42553641754044846,
+        "Gengar": 0.42553641754044846,
+        "Regirock": 0.3312053976952632,
+        "Tyranitar": 0.9168524154055184,
+        "Tauros": 0.5863437809574421,
+        "Swampert": 0.0006967632471869822,
+        "Gyarados": 0.0006967632471869822,
+        "Marowak": 0.0006967632471869822,
+        "Salamence": 0.0,
+        "Heracross": 0.5856470177102552,
+        "Starmie": 0.5856470177102552,
+        "empty": 0.0
+      },
+      "counters_json": {}
+    }
+  ]
+}

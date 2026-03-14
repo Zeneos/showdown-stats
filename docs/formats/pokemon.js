@@ -1507,7 +1507,7 @@ function encodePathSegment(path) {
 
 async function loadPokemonData(formatName, rating) {
     const ratingValue = rating === 'all' ? '0' : rating || '0';
-    const requestedPath = `formats/${encodeURIComponent(formatName)}/${ratingValue}.json`;
+    const requestedPath = `${encodeURIComponent(formatName)}/${ratingValue}.json`;
 
     try {
         const response = await fetch(requestedPath);
@@ -1520,7 +1520,7 @@ async function loadPokemonData(formatName, rating) {
 
     if (ratingValue !== '0') {
         try {
-            const fallbackResponse = await fetch(`formats/${encodeURIComponent(formatName)}/0.json`);
+            const fallbackResponse = await fetch(`${encodeURIComponent(formatName)}/0.json`);
             if (fallbackResponse.ok) {
                 return await fallbackResponse.json();
             }
