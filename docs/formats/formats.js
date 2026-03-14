@@ -174,7 +174,7 @@ async function loadLatestData() {
         const latestPeriod = index.latest;
 
         // Load the data for the latest period
-        const dataResponse = await fetch(`${latestPeriod}.json`);
+        const dataResponse = await fetch(`../data/${latestPeriod}.json`);
         if (!dataResponse.ok) {
             throw new Error('Failed to load data');
         }
@@ -805,7 +805,7 @@ function getDisplayFormatName(formatKey, fallbackName = '') {
 
 async function loadFormatData(formatName) {
     if (!formatDataCache[formatName]) {
-        formatDataCache[formatName] = fetch(`${encodeURIComponent(formatName)}.json`)
+        formatDataCache[formatName] = fetch(`../data/${encodeURIComponent(formatName)}.json`)
             .then(response => {
                 if (!response.ok) return null;
                 return response.json();

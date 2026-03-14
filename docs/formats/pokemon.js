@@ -757,7 +757,7 @@ async function loadLatestFormatsData(latestPeriod) {
     if (!key) return null;
 
     if (!latestFormatsDataCache[key]) {
-        latestFormatsDataCache[key] = fetch(`${encodeURIComponent(key)}.json`)
+        latestFormatsDataCache[key] = fetch(`../data/${encodeURIComponent(key)}.json`)
             .then(response => {
                 if (!response.ok) return null;
                 return response.json();
@@ -1508,7 +1508,7 @@ function encodePathSegment(path) {
 
 async function loadFormatData(formatName) {
     if (!formatDataCache[formatName]) {
-        formatDataCache[formatName] = fetch(`${encodeURIComponent(formatName)}.json`)
+        formatDataCache[formatName] = fetch(`../data/${encodeURIComponent(formatName)}.json`)
             .then(response => {
                 if (!response.ok) return null;
                 return response.json();
