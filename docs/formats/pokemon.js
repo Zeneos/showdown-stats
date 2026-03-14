@@ -56,6 +56,7 @@ let itemNameMap = null;
 let formatNameMapPromise = null;
 let formatNameMap = null;
 const latestFormatsDataCache = {};
+const formatDataCache = {};
 let pokemonPickerOutsideClickHandler = null;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -690,19 +691,19 @@ async function populateRatingFilter(formatName, currentRating, pokemonName, late
     containerEl.innerHTML = '';
     containerEl.setAttribute('aria-busy', 'true');
 
-    const latestData = await loadLatestFormatsData(latestPeriod);
-    const currentFormat = latestData && Array.isArray(latestData.formats)
-        ? latestData.formats.find(format => getFormatKey(format) === formatName)
-        : null;
+    const formatData = await loadFormatData(formatName);
 
-    const ratings = currentFormat && currentFormat.by_rating
-        ? Object.keys(currentFormat.by_rating)
-        : [];
-
-    const parsedRatings = ratings
-        .map(rating => Number.parseInt(rating, 10))
-        .filter(rating => !Number.isNaN(rating) && rating > 0)
-        .sort((a, b) => a - b);
+    let parsedRatings = [];
+    if (formatData && Array.isArray(formatData.available_ratings)) {
+        parsedRatings = formatData.available_ratings
+            .filter(rating => !Number.isNaN(rating) && rating > 0)
+            .sort((a, b) => a - b);
+    } else if (formatData && formatData.by_rating) {
+        parsedRatings = Object.keys(formatData.by_rating)
+            .map(rating => Number.parseInt(rating, 10))
+            .filter(rating => !Number.isNaN(rating) && rating > 0)
+            .sort((a, b) => a - b);
+    }
 
     const visibleRatings = parsedRatings.length > 3
         ? parsedRatings.slice(-3)
@@ -1505,31 +1506,33 @@ function encodePathSegment(path) {
         .join('/');
 }
 
+async function loadFormatData(formatName) {
+    if (!formatDataCache[formatName]) {
+        formatDataCache[formatName] = fetch(`${encodeURIComponent(formatName)}.json`)
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .catch(error => {
+                console.error('Error loading format data:', error);
+                return null;
+            });
+    }
+    return formatDataCache[formatName];
+}
+
 async function loadPokemonData(formatName, rating) {
+    const formatData = await loadFormatData(formatName);
+    if (!formatData || !formatData.by_rating) return null;
+
     const ratingValue = rating === 'all' ? '0' : rating || '0';
-    const requestedPath = `${encodeURIComponent(formatName)}/${ratingValue}.json`;
+    let ratingData = formatData.by_rating[ratingValue];
 
-    try {
-        const response = await fetch(requestedPath);
-        if (response.ok) {
-            return await response.json();
-        }
-    } catch (error) {
-        console.error('Error loading pokemon data:', error);
+    if (!ratingData && ratingValue !== '0') {
+        ratingData = formatData.by_rating['0'];
     }
 
-    if (ratingValue !== '0') {
-        try {
-            const fallbackResponse = await fetch(`${encodeURIComponent(formatName)}/0.json`);
-            if (fallbackResponse.ok) {
-                return await fallbackResponse.json();
-            }
-        } catch (error) {
-            console.error('Error loading fallback pokemon data:', error);
-        }
-    }
-
-    return null;
+    return ratingData || null;
 }
 
 function showError(message) {

@@ -7,6 +7,7 @@ let pokemonSort = { column: 'usage_pct', direction: 'desc' };
 let selectedFormatKey = '';
 let formatNameMapPromise = null;
 let formatNameMap = null;
+const formatDataCache = {};
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
 const spritePlaceholder = `${spriteOriginalBase}/0.png`;
@@ -802,31 +803,33 @@ function getDisplayFormatName(formatKey, fallbackName = '') {
     return String(fallbackName || key);
 }
 
+async function loadFormatData(formatName) {
+    if (!formatDataCache[formatName]) {
+        formatDataCache[formatName] = fetch(`${encodeURIComponent(formatName)}.json`)
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .catch(error => {
+                console.error('Error loading format data:', error);
+                return null;
+            });
+    }
+    return formatDataCache[formatName];
+}
+
 async function loadPokemonData(formatName, rating) {
+    const formatData = await loadFormatData(formatName);
+    if (!formatData || !formatData.by_rating) return null;
+
     const ratingValue = rating === 'all' ? '0' : rating || '0';
-    const requestedPath = `${encodeURIComponent(formatName)}/${ratingValue}.json`;
+    let ratingData = formatData.by_rating[ratingValue];
 
-    try {
-        const response = await fetch(requestedPath);
-        if (response.ok) {
-            return await response.json();
-        }
-    } catch (error) {
-        console.error('Error loading pokemon data:', error);
+    if (!ratingData && ratingValue !== '0') {
+        ratingData = formatData.by_rating['0'];
     }
 
-    if (ratingValue !== '0') {
-        try {
-            const fallbackResponse = await fetch(`${encodeURIComponent(formatName)}/0.json`);
-            if (fallbackResponse.ok) {
-                return await fallbackResponse.json();
-            }
-        } catch (error) {
-            console.error('Error loading fallback pokemon data:', error);
-        }
-    }
-
-    return null;
+    return ratingData || null;
 }
 
 function sortPokemonList(pokemonList) {
