@@ -1,19 +1,10 @@
-// Pokemon Showdown Stats Visualizer - JavaScript
+// Pokemon Showdown Stats Visualizer - Formats page
 
 let statsData = null;
 let currentSort = { column: 'battles', direction: 'desc' };
 let currentRatingFilter = 'all';
 let pokemonSort = { column: 'usage_pct', direction: 'desc' };
 let selectedFormatKey = '';
-let formatNameMapPromise = null;
-let formatNameMap = null;
-const formatDataCache = {};
-const spriteShowdownBase = '../assets/sprites/showdown';
-const spriteOriginalBase = '../assets/sprites/original';
-const spritePlaceholder = `${spriteOriginalBase}/0.png`;
-const metaUsageThreshold = 4.52;
-const metaEncounterBattles = 15;
-const metaEncounterProbability = 0.5;
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', async () => {
@@ -77,83 +68,6 @@ function setupDataGuideModal() {
             closeModal();
         }
     });
-}
-
-function initializeGlobalHelpTooltip() {
-    if (document.getElementById('global-help-tooltip')) return;
-
-    const tooltip = document.createElement('div');
-    tooltip.id = 'global-help-tooltip';
-    tooltip.setAttribute('role', 'tooltip');
-    document.body.appendChild(tooltip);
-
-    document.body.classList.add('js-tooltip-enabled');
-
-    const hideTooltip = () => {
-        tooltip.classList.remove('is-visible');
-        tooltip.textContent = '';
-    };
-
-    const showTooltipFor = (target) => {
-        if (!target) return;
-        const text = target.getAttribute('data-tooltip');
-        if (!text) return;
-
-        tooltip.textContent = text;
-        tooltip.classList.add('is-visible');
-
-        const rect = target.getBoundingClientRect();
-        const tooltipRect = tooltip.getBoundingClientRect();
-        const gap = 10;
-
-        let top = rect.top - tooltipRect.height - gap;
-        if (top < 8) {
-            top = rect.bottom + gap;
-        }
-
-        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
-        const minLeft = 8;
-        const maxLeft = window.innerWidth - tooltipRect.width - 8;
-        left = Math.max(minLeft, Math.min(left, Math.max(minLeft, maxLeft)));
-
-        tooltip.style.top = `${Math.round(top)}px`;
-        tooltip.style.left = `${Math.round(left)}px`;
-    };
-
-    document.addEventListener('pointerover', (event) => {
-        const target = event.target && event.target.closest
-            ? event.target.closest('.help-tooltip')
-            : null;
-        if (!target) return;
-        showTooltipFor(target);
-    });
-
-    document.addEventListener('pointerout', (event) => {
-        const target = event.target && event.target.closest
-            ? event.target.closest('.help-tooltip')
-            : null;
-        if (!target) return;
-        hideTooltip();
-    });
-
-    document.addEventListener('focusin', (event) => {
-        const target = event.target && event.target.closest
-            ? event.target.closest('.help-tooltip')
-            : null;
-        if (!target) return;
-        showTooltipFor(target);
-    });
-
-    document.addEventListener('focusout', (event) => {
-        const target = event.target && event.target.closest
-            ? event.target.closest('.help-tooltip')
-            : null;
-        if (!target) return;
-        hideTooltip();
-    });
-
-    window.addEventListener('scroll', hideTooltip, true);
-    window.addEventListener('resize', hideTooltip);
 }
 
 // Load the latest stats data
@@ -449,60 +363,6 @@ function updateSortIndicators() {
     });
 }
 
-// Format number with commas
-function formatNumber(num) {
-    return num.toLocaleString('en-US');
-}
-
-// Escape HTML to prevent XSS
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
-
-function toId(text) {
-    return String(text || '')
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '');
-}
-
-function sanitizeSpriteName(name) {
-    if (!name) return '';
-    return name
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/[<>:"/\\|?*]/g, '-')
-        .replace(/[\s.]+$/g, '')
-        .trim();
-}
-
-function encodePathSegment(path) {
-    return path
-        .split('/')
-        .map(segment => encodeURIComponent(segment))
-        .join('/');
-}
-
-function getPokemonSpritePaths(pokemonName) {
-    const safeName = sanitizeSpriteName(pokemonName);
-    if (!safeName) return spritePlaceholder;
-
-    const showdown = `${spriteShowdownBase}/${encodePathSegment(`${safeName}.gif`)}`;
-    const original = `${spriteOriginalBase}/${encodePathSegment(`${safeName}.png`)}`;
-    return { showdown, original, placeholder: spritePlaceholder };
-}
-
-function getEncounterProbability(usagePct, battles) {
-    const p = Math.max(0, Math.min(usagePct / 100, 1));
-    return 1 - Math.pow(1 - p, battles);
-}
-
-function isMetaPokemon(usagePct) {
-    if (usagePct < metaUsageThreshold) return false;
-    return getEncounterProbability(usagePct, metaEncounterBattles) >= metaEncounterProbability;
-}
-
 // Get format name from URL query parameter
 function getFormatFromUrl() {
     const params = new URLSearchParams(window.location.search);
@@ -649,9 +509,6 @@ async function renderFormatDetail(formatName, ratingOverride) {
     const pokemonRows = sortedPokemon
         .map((pokemon) => {
             const spritePaths = getPokemonSpritePaths(pokemon.pokemon_name);
-            const showdownSrc = typeof spritePaths === 'string' ? spritePaths : spritePaths.showdown;
-            const originalSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.original;
-            const placeholderSrc = typeof spritePaths === 'string' ? spritePlaceholder : spritePaths.placeholder;
             const isMeta = isMetaPokemon(pokemon.usage_pct);
             const usageClass = isMeta
                 ? 'pokemon-meta-usage'
@@ -663,7 +520,7 @@ async function renderFormatDetail(formatName, ratingOverride) {
                 <td class="pokemon-name">
                     <a class="pokemon-link" href="${pokemonLink}">
                         <span class="pokemon-name-cell">
-                            <img class="pokemon-sprite" src="${showdownSrc}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${placeholderSrc}';};this.src='${originalSrc}';">
+                            <img class="pokemon-sprite" src="${spritePaths.showdown}" alt="" loading="lazy" onerror="this.onerror=function(){this.onerror=null;this.src='${spritePaths.placeholder}';};this.src='${spritePaths.original}';">
                             <span>${escapeHtml(pokemon.pokemon_name)}</span>
                         </span>
                     </a>
@@ -764,10 +621,6 @@ function getFormatName(format) {
     return getDisplayFormatName(key, fallback);
 }
 
-function getFormatKey(format) {
-    return format.format_name || format.name || '';
-}
-
 function getPokemonLink(formatName, pokemonName, rating) {
     const params = new URLSearchParams();
     params.set('format', formatName);
@@ -776,60 +629,6 @@ function getPokemonLink(formatName, pokemonName, rating) {
         params.set('rating', rating);
     }
     return `pokemon.html?${params.toString()}`;
-}
-
-async function loadFormatNameMap() {
-    if (!formatNameMapPromise) {
-        formatNameMapPromise = fetch('../assets/format-name-map.json')
-            .then(response => {
-                if (!response.ok) return null;
-                return response.json();
-            })
-            .then(data => (data && data.formats ? data.formats : null))
-            .catch(error => {
-                console.error('Error loading format name map:', error);
-                return null;
-            });
-    }
-
-    return formatNameMapPromise;
-}
-
-function getDisplayFormatName(formatKey, fallbackName = '') {
-    const key = String(formatKey || '').trim();
-    if (key && formatNameMap && formatNameMap[key]) {
-        return String(formatNameMap[key]);
-    }
-    return String(fallbackName || key);
-}
-
-async function loadFormatData(formatName) {
-    if (!formatDataCache[formatName]) {
-        formatDataCache[formatName] = fetch(`../data/${encodeURIComponent(formatName)}.json`)
-            .then(response => {
-                if (!response.ok) return null;
-                return response.json();
-            })
-            .catch(error => {
-                console.error('Error loading format data:', error);
-                return null;
-            });
-    }
-    return formatDataCache[formatName];
-}
-
-async function loadPokemonData(formatName, rating) {
-    const formatData = await loadFormatData(formatName);
-    if (!formatData || !formatData.by_rating) return null;
-
-    const ratingValue = rating === 'all' ? '0' : rating || '0';
-    let ratingData = formatData.by_rating[ratingValue];
-
-    if (!ratingData && ratingValue !== '0') {
-        ratingData = formatData.by_rating['0'];
-    }
-
-    return ratingData || null;
 }
 
 function sortPokemonList(pokemonList) {
@@ -909,4 +708,3 @@ function formatPokemonRatingLabel(eloCutoff, ratingFilter) {
     }
     return `${escapeHtml(String(eloCutoff))}+`;
 }
-

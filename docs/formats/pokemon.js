@@ -1,8 +1,5 @@
 // Pokemon Showdown Stats Visualizer - Pokemon detail page
 
-const spriteShowdownBase = '../assets/sprites/showdown';
-const spriteOriginalBase = '../assets/sprites/original';
-const spritePlaceholder = `${spriteOriginalBase}/0.png`;
 const iconSpriteBase = '../assets/sprites/icons';
 const mysteryDungeonSpriteBase = '../assets/sprites/mystery-dungeon';
 const typeSpriteBase = '../assets/sprites/types';
@@ -43,9 +40,6 @@ const countersSortState = {
     key: 'rate',
     direction: 'desc'
 };
-const metaUsageThreshold = 4.52;
-const metaEncounterBattles = 15;
-const metaEncounterProbability = 0.5;
 let baseStatsMapPromise = null;
 let moveDataMapPromise = null;
 let moveDataMap = null;
@@ -53,10 +47,7 @@ let abilityDataMapPromise = null;
 let abilityDataMap = null;
 let itemNameMapPromise = null;
 let itemNameMap = null;
-let formatNameMapPromise = null;
-let formatNameMap = null;
 const latestFormatsDataCache = {};
-const formatDataCache = {};
 let pokemonPickerOutsideClickHandler = null;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -116,83 +107,6 @@ async function copyTextToClipboard(text) {
     } catch (_error) {
         return false;
     }
-}
-
-function initializeGlobalHelpTooltip() {
-    if (document.getElementById('global-help-tooltip')) return;
-
-    const tooltip = document.createElement('div');
-    tooltip.id = 'global-help-tooltip';
-    tooltip.setAttribute('role', 'tooltip');
-    document.body.appendChild(tooltip);
-
-    document.body.classList.add('js-tooltip-enabled');
-
-    const hideTooltip = () => {
-        tooltip.classList.remove('is-visible');
-        tooltip.textContent = '';
-    };
-
-    const showTooltipFor = (target) => {
-        if (!target) return;
-        const text = target.getAttribute('data-tooltip');
-        if (!text) return;
-
-        tooltip.textContent = text;
-        tooltip.classList.add('is-visible');
-
-        const rect = target.getBoundingClientRect();
-        const tooltipRect = tooltip.getBoundingClientRect();
-        const gap = 10;
-
-        let top = rect.top - tooltipRect.height - gap;
-        if (top < 8) {
-            top = rect.bottom + gap;
-        }
-
-        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
-        const minLeft = 8;
-        const maxLeft = window.innerWidth - tooltipRect.width - 8;
-        left = Math.max(minLeft, Math.min(left, Math.max(minLeft, maxLeft)));
-
-        tooltip.style.top = `${Math.round(top)}px`;
-        tooltip.style.left = `${Math.round(left)}px`;
-    };
-
-    document.addEventListener('pointerover', (event) => {
-        const target = event.target && event.target.closest
-            ? event.target.closest('.help-tooltip')
-            : null;
-        if (!target) return;
-        showTooltipFor(target);
-    });
-
-    document.addEventListener('pointerout', (event) => {
-        const target = event.target && event.target.closest
-            ? event.target.closest('.help-tooltip')
-            : null;
-        if (!target) return;
-        hideTooltip();
-    });
-
-    document.addEventListener('focusin', (event) => {
-        const target = event.target && event.target.closest
-            ? event.target.closest('.help-tooltip')
-            : null;
-        if (!target) return;
-        showTooltipFor(target);
-    });
-
-    document.addEventListener('focusout', (event) => {
-        const target = event.target && event.target.closest
-            ? event.target.closest('.help-tooltip')
-            : null;
-        if (!target) return;
-        hideTooltip();
-    });
-
-    window.addEventListener('scroll', hideTooltip, true);
-    window.addEventListener('resize', hideTooltip);
 }
 
 async function loadPokemonDetail() {
@@ -445,23 +359,6 @@ async function loadAbilityDataMap() {
     }
 
     return abilityDataMapPromise;
-}
-
-async function loadFormatNameMap() {
-    if (!formatNameMapPromise) {
-        formatNameMapPromise = fetch('../assets/format-name-map.json')
-            .then(response => {
-                if (!response.ok) return null;
-                return response.json();
-            })
-            .then(data => (data && data.formats ? data.formats : null))
-            .catch(error => {
-                console.error('Error loading format name map:', error);
-                return null;
-            });
-    }
-
-    return formatNameMapPromise;
 }
 
 async function populateFormatSwitcher(pokemonName, currentFormatKey, currentFormatDisplayName, rating, latestPeriod) {
@@ -771,20 +668,6 @@ async function loadLatestFormatsData(latestPeriod) {
     return latestFormatsDataCache[key];
 }
 
-function resolveFormatKeyFromInput(inputValue, options) {
-    const raw = String(inputValue || '').trim();
-    if (!raw || !Array.isArray(options)) return '';
-
-    const normalized = raw.toLowerCase();
-    const byDisplay = options.find(option => String(option.displayName || '').toLowerCase() === normalized);
-    if (byDisplay) return byDisplay.key;
-
-    const byKey = options.find(option => String(option.key || '').toLowerCase() === normalized);
-    if (byKey) return byKey.key;
-
-    return '';
-}
-
 function resolvePokemonFromInput(inputValue, options) {
     const raw = String(inputValue || '').trim();
     if (!raw || !Array.isArray(options)) return '';
@@ -899,19 +782,6 @@ function getMostUsedPokemonEntry(pokemonList) {
         })[0] || null;
 }
 
-function getFormatKey(format) {
-    if (!format || typeof format !== 'object') return '';
-    return String(format.format_name || format.name || '').trim();
-}
-
-function getDisplayFormatName(formatName) {
-    const key = String(formatName || '').trim();
-    if (key && formatNameMap && formatNameMap[key]) {
-        return String(formatNameMap[key]);
-    }
-    return key;
-}
-
 function renderBaseStatsSection(title, baseStats) {
     if (!baseStats || typeof baseStats !== 'object') return '';
 
@@ -966,7 +836,6 @@ function getBaseStatTier(percentage) {
 
 function getBstTier(bstValue) {
     const bst = Math.max(0, Number(bstValue) || 0);
-    // Use BST-specific tiers: 600 is pseudo/legendary territory and ~780 is current highest.
     if (bst < 300) return 1;
     if (bst < 400) return 2;
     if (bst < 500) return 3;
@@ -994,17 +863,6 @@ function getPokemonMonthlyRank(pokemonList, pokemonName) {
     const targetName = String(pokemonName || '').toLowerCase();
     const index = ranked.findIndex(p => String(p.pokemon_name || '').toLowerCase() === targetName);
     return index >= 0 ? index + 1 : 0;
-}
-
-function getEncounterProbability(usagePct, battles) {
-    const p = Math.max(0, Math.min((Number(usagePct) || 0) / 100, 1));
-    return 1 - Math.pow(1 - p, battles);
-}
-
-function isMetaPokemon(usagePct) {
-    const usage = Number(usagePct) || 0;
-    if (usage < metaUsageThreshold) return false;
-    return getEncounterProbability(usage, metaEncounterBattles) >= metaEncounterProbability;
 }
 
 function getUsageTierClass(usagePct) {
@@ -1472,69 +1330,6 @@ function getSortArrow(sortState, key) {
     return sortState.direction === 'asc' ? '↑' : '↓';
 }
 
-function getPokemonSpritePaths(pokemonName) {
-    const safeName = sanitizeSpriteName(pokemonName);
-    if (!safeName) {
-        return {
-            showdown: spritePlaceholder,
-            original: spritePlaceholder,
-            placeholder: spritePlaceholder
-        };
-    }
-
-    return {
-        showdown: `${spriteShowdownBase}/${encodePathSegment(`${safeName}.gif`)}`,
-        original: `${spriteOriginalBase}/${encodePathSegment(`${safeName}.png`)}`,
-        placeholder: spritePlaceholder
-    };
-}
-
-function sanitizeSpriteName(name) {
-    if (!name) return '';
-    return name
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/[<>:"/\\|\?\*]/g, '-')
-        .replace(/[\s.]+$/g, '')
-        .trim();
-}
-
-function encodePathSegment(path) {
-    return path
-        .split('/')
-        .map(segment => encodeURIComponent(segment))
-        .join('/');
-}
-
-async function loadFormatData(formatName) {
-    if (!formatDataCache[formatName]) {
-        formatDataCache[formatName] = fetch(`../data/${encodeURIComponent(formatName)}.json`)
-            .then(response => {
-                if (!response.ok) return null;
-                return response.json();
-            })
-            .catch(error => {
-                console.error('Error loading format data:', error);
-                return null;
-            });
-    }
-    return formatDataCache[formatName];
-}
-
-async function loadPokemonData(formatName, rating) {
-    const formatData = await loadFormatData(formatName);
-    if (!formatData || !formatData.by_rating) return null;
-
-    const ratingValue = rating === 'all' ? '0' : rating || '0';
-    let ratingData = formatData.by_rating[ratingValue];
-
-    if (!ratingData && ratingValue !== '0') {
-        ratingData = formatData.by_rating['0'];
-    }
-
-    return ratingData || null;
-}
-
 function showError(message) {
     const detail = document.getElementById('pokemon-detail');
     if (detail) detail.style.display = 'none';
@@ -1543,20 +1338,4 @@ function showError(message) {
         errorEl.style.display = 'block';
         errorEl.textContent = message;
     }
-}
-
-function formatNumber(num) {
-    return Number(num).toLocaleString('en-US');
-}
-
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
-
-function toId(text) {
-    return String(text || '')
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '');
 }
