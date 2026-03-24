@@ -121,6 +121,37 @@ async function loadFormatData(formatName) {
     return formatDataCache[formatName];
 }
 
+const formatUsageDataCache = {};
+
+async function loadFormatUsageData(formatName) {
+    if (!formatUsageDataCache[formatName]) {
+        formatUsageDataCache[formatName] = fetch(`../data/${encodeURIComponent(formatName)}.usage.json`)
+            .then(response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+            .catch(error => {
+                console.error('Error loading format usage data:', error);
+                return null;
+            });
+    }
+    return formatUsageDataCache[formatName];
+}
+
+async function loadPokemonUsageData(formatName, rating) {
+    const formatData = await loadFormatUsageData(formatName);
+    if (!formatData || !formatData.by_rating) return null;
+
+    const ratingValue = rating === 'all' ? '0' : rating || '0';
+    let ratingData = formatData.by_rating[ratingValue];
+
+    if (!ratingData && ratingValue !== '0') {
+        ratingData = formatData.by_rating['0'];
+    }
+
+    return ratingData || null;
+}
+
 async function loadPokemonData(formatName, rating) {
     const formatData = await loadFormatData(formatName);
     if (!formatData || !formatData.by_rating) return null;

@@ -492,7 +492,7 @@ async function renderFormatDetail(formatName, ratingOverride) {
     }
 
     const rating = ratingOverride || currentRatingFilter || 'all';
-    const pokemonData = await loadPokemonData(getFormatKey(format), rating);
+    const pokemonData = await loadPokemonUsageData(getFormatKey(format), rating);
     const formatForDisplay = getFormatsForCurrentRating().find(f => getFormatKey(f) === formatName) || format;
 
     if (!pokemonData || !Array.isArray(pokemonData.pokemon)) {
