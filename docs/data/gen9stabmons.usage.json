@@ -1,0 +1,5251 @@
+{
+  "format_name": "gen9stabmons",
+  "available_ratings": [
+    0,
+    1500,
+    1630,
+    1760
+  ],
+  "by_rating": {
+    "0": {
+      "elo_cutoff": 0,
+      "pokemon": [
+        {
+          "pokemon_name": "Abomasnow",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Alomomola",
+          "usage_count": 51,
+          "usage_pct": 1.59
+        },
+        {
+          "pokemon_name": "Altaria",
+          "usage_count": 10,
+          "usage_pct": 0.33
+        },
+        {
+          "pokemon_name": "Ambipom",
+          "usage_count": 135,
+          "usage_pct": 4.34
+        },
+        {
+          "pokemon_name": "Amoonguss",
+          "usage_count": 18,
+          "usage_pct": 0.63
+        },
+        {
+          "pokemon_name": "Annihilape",
+          "usage_count": 45,
+          "usage_pct": 1.33
+        },
+        {
+          "pokemon_name": "Araquanid",
+          "usage_count": 145,
+          "usage_pct": 4.74
+        },
+        {
+          "pokemon_name": "Arboliva",
+          "usage_count": 25,
+          "usage_pct": 0.85
+        },
+        {
+          "pokemon_name": "Arcanine",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Arcanine-Hisui",
+          "usage_count": 35,
+          "usage_pct": 1.15
+        },
+        {
+          "pokemon_name": "Archaludon",
+          "usage_count": 130,
+          "usage_pct": 4.37
+        },
+        {
+          "pokemon_name": "Ariados",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Armarouge",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Articuno",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Articuno-Galar",
+          "usage_count": 6,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Avalugg",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Avalugg-Hisui",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Barraskewda",
+          "usage_count": 35,
+          "usage_pct": 1.15
+        },
+        {
+          "pokemon_name": "Basculegion",
+          "usage_count": 85,
+          "usage_pct": 2.74
+        },
+        {
+          "pokemon_name": "Basculegion-F",
+          "usage_count": 32,
+          "usage_pct": 1.15
+        },
+        {
+          "pokemon_name": "Basculin",
+          "usage_count": 5,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Bastiodon",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Beartic",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Bellibolt",
+          "usage_count": 9,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Bisharp",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Blastoise",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Blaziken",
+          "usage_count": 290,
+          "usage_pct": 9.64
+        },
+        {
+          "pokemon_name": "Blissey",
+          "usage_count": 119,
+          "usage_pct": 3.93
+        },
+        {
+          "pokemon_name": "Brambleghast",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Braviary",
+          "usage_count": 22,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Braviary-Hisui",
+          "usage_count": 7,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Breloom",
+          "usage_count": 42,
+          "usage_pct": 1.52
+        },
+        {
+          "pokemon_name": "Bronzong",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Brute Bonnet",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Bruxish",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Buizel",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Cacturne",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Carbink",
+          "usage_count": 5,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Ceruledge",
+          "usage_count": 61,
+          "usage_pct": 2.15
+        },
+        {
+          "pokemon_name": "Cetitan",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Chandelure",
+          "usage_count": 119,
+          "usage_pct": 3.93
+        },
+        {
+          "pokemon_name": "Chansey",
+          "usage_count": 35,
+          "usage_pct": 1.19
+        },
+        {
+          "pokemon_name": "Charizard",
+          "usage_count": 5,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Chesnaught",
+          "usage_count": 30,
+          "usage_pct": 1.0
+        },
+        {
+          "pokemon_name": "Cinccino",
+          "usage_count": 20,
+          "usage_pct": 0.7
+        },
+        {
+          "pokemon_name": "Cinderace",
+          "usage_count": 31,
+          "usage_pct": 1.0
+        },
+        {
+          "pokemon_name": "Clawitzer",
+          "usage_count": 17,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Clefable",
+          "usage_count": 32,
+          "usage_pct": 1.11
+        },
+        {
+          "pokemon_name": "Clodsire",
+          "usage_count": 183,
+          "usage_pct": 6.12
+        },
+        {
+          "pokemon_name": "Cloyster",
+          "usage_count": 31,
+          "usage_pct": 1.0
+        },
+        {
+          "pokemon_name": "Coalossal",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Cobalion",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Conkeldurr",
+          "usage_count": 6,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Corviknight",
+          "usage_count": 312,
+          "usage_pct": 10.71
+        },
+        {
+          "pokemon_name": "Cosmoem",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Crabominable",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Cramorant",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Crawdaunt",
+          "usage_count": 162,
+          "usage_pct": 5.49
+        },
+        {
+          "pokemon_name": "Cresselia",
+          "usage_count": 23,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Cyclizar",
+          "usage_count": 57,
+          "usage_pct": 1.78
+        },
+        {
+          "pokemon_name": "Dachsbun",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Darkrai",
+          "usage_count": 129,
+          "usage_pct": 4.08
+        },
+        {
+          "pokemon_name": "Decidueye",
+          "usage_count": 3,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Decidueye-Hisui",
+          "usage_count": 8,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Delphox",
+          "usage_count": 10,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Deoxys-Defense",
+          "usage_count": 8,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Deoxys-Speed",
+          "usage_count": 29,
+          "usage_pct": 1.04
+        },
+        {
+          "pokemon_name": "Diancie",
+          "usage_count": 3,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Ditto",
+          "usage_count": 11,
+          "usage_pct": 0.37
+        },
+        {
+          "pokemon_name": "Dodrio",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Dondozo",
+          "usage_count": 52,
+          "usage_pct": 1.74
+        },
+        {
+          "pokemon_name": "Donphan",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Dragalge",
+          "usage_count": 38,
+          "usage_pct": 1.3
+        },
+        {
+          "pokemon_name": "Drednaw",
+          "usage_count": 5,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Drifblim",
+          "usage_count": 5,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Dudunsparce",
+          "usage_count": 9,
+          "usage_pct": 0.33
+        },
+        {
+          "pokemon_name": "Dugtrio-Alola",
+          "usage_count": 12,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Dusclops",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Eelektross",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Eevee",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Eiscue",
+          "usage_count": 3,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Electabuzz",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Electivire",
+          "usage_count": 12,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Electrode-Hisui",
+          "usage_count": 10,
+          "usage_pct": 0.37
+        },
+        {
+          "pokemon_name": "Emboar",
+          "usage_count": 43,
+          "usage_pct": 1.37
+        },
+        {
+          "pokemon_name": "Empoleon",
+          "usage_count": 12,
+          "usage_pct": 0.41
+        },
+        {
+          "pokemon_name": "Enamorus-Therian",
+          "usage_count": 11,
+          "usage_pct": 0.41
+        },
+        {
+          "pokemon_name": "Entei",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Espathra",
+          "usage_count": 86,
+          "usage_pct": 2.82
+        },
+        {
+          "pokemon_name": "Espeon",
+          "usage_count": 15,
+          "usage_pct": 0.56
+        },
+        {
+          "pokemon_name": "Excadrill",
+          "usage_count": 297,
+          "usage_pct": 10.08
+        },
+        {
+          "pokemon_name": "Exeggutor",
+          "usage_count": 8,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Exeggutor-Alola",
+          "usage_count": 17,
+          "usage_pct": 0.56
+        },
+        {
+          "pokemon_name": "Falinks",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Farigiraf",
+          "usage_count": 19,
+          "usage_pct": 0.63
+        },
+        {
+          "pokemon_name": "Fezandipiti",
+          "usage_count": 27,
+          "usage_pct": 0.85
+        },
+        {
+          "pokemon_name": "Flapple",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Flareon",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Florges",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Flygon",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Forretress",
+          "usage_count": 46,
+          "usage_pct": 1.52
+        },
+        {
+          "pokemon_name": "Froslass",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Frosmoth",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Gallade",
+          "usage_count": 16,
+          "usage_pct": 0.52
+        },
+        {
+          "pokemon_name": "Galvantula",
+          "usage_count": 19,
+          "usage_pct": 0.7
+        },
+        {
+          "pokemon_name": "Gardevoir",
+          "usage_count": 6,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Garganacl",
+          "usage_count": 48,
+          "usage_pct": 1.52
+        },
+        {
+          "pokemon_name": "Gastrodon",
+          "usage_count": 15,
+          "usage_pct": 0.48
+        },
+        {
+          "pokemon_name": "Gengar",
+          "usage_count": 104,
+          "usage_pct": 3.52
+        },
+        {
+          "pokemon_name": "Gholdengo",
+          "usage_count": 601,
+          "usage_pct": 20.46
+        },
+        {
+          "pokemon_name": "Glaceon",
+          "usage_count": 2,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Glastrier",
+          "usage_count": 3,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Glimmora",
+          "usage_count": 92,
+          "usage_pct": 2.89
+        },
+        {
+          "pokemon_name": "Gliscor",
+          "usage_count": 250,
+          "usage_pct": 7.93
+        },
+        {
+          "pokemon_name": "Gloom",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Gogoat",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Golem-Alola",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Golurk",
+          "usage_count": 23,
+          "usage_pct": 0.78
+        },
+        {
+          "pokemon_name": "Goodra-Hisui",
+          "usage_count": 23,
+          "usage_pct": 0.7
+        },
+        {
+          "pokemon_name": "Grafaiai",
+          "usage_count": 93,
+          "usage_pct": 3.0
+        },
+        {
+          "pokemon_name": "Granbull",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Great Tusk",
+          "usage_count": 130,
+          "usage_pct": 4.56
+        },
+        {
+          "pokemon_name": "Greedent",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Greninja",
+          "usage_count": 169,
+          "usage_pct": 5.56
+        },
+        {
+          "pokemon_name": "Grimmsnarl",
+          "usage_count": 39,
+          "usage_pct": 1.3
+        },
+        {
+          "pokemon_name": "Hariyama",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Hatterene",
+          "usage_count": 92,
+          "usage_pct": 2.89
+        },
+        {
+          "pokemon_name": "Haunter",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Hawlucha",
+          "usage_count": 14,
+          "usage_pct": 0.52
+        },
+        {
+          "pokemon_name": "Haxorus",
+          "usage_count": 45,
+          "usage_pct": 1.56
+        },
+        {
+          "pokemon_name": "Heatran",
+          "usage_count": 112,
+          "usage_pct": 3.63
+        },
+        {
+          "pokemon_name": "Heracross",
+          "usage_count": 30,
+          "usage_pct": 0.93
+        },
+        {
+          "pokemon_name": "Hippowdon",
+          "usage_count": 9,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Hitmonlee",
+          "usage_count": 2,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Hoopa",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Hoopa-Unbound",
+          "usage_count": 168,
+          "usage_pct": 5.63
+        },
+        {
+          "pokemon_name": "Houndstone",
+          "usage_count": 2,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Hydrapple",
+          "usage_count": 120,
+          "usage_pct": 3.89
+        },
+        {
+          "pokemon_name": "Hydreigon",
+          "usage_count": 14,
+          "usage_pct": 0.52
+        },
+        {
+          "pokemon_name": "Illumise",
+          "usage_count": 9,
+          "usage_pct": 0.33
+        },
+        {
+          "pokemon_name": "Incineroar",
+          "usage_count": 66,
+          "usage_pct": 2.11
+        },
+        {
+          "pokemon_name": "Indeedee",
+          "usage_count": 42,
+          "usage_pct": 1.48
+        },
+        {
+          "pokemon_name": "Indeedee-F",
+          "usage_count": 5,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Infernape",
+          "usage_count": 7,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Inteleon",
+          "usage_count": 34,
+          "usage_pct": 1.15
+        },
+        {
+          "pokemon_name": "Iron Boulder",
+          "usage_count": 116,
+          "usage_pct": 3.48
+        },
+        {
+          "pokemon_name": "Iron Crown",
+          "usage_count": 72,
+          "usage_pct": 2.37
+        },
+        {
+          "pokemon_name": "Iron Hands",
+          "usage_count": 104,
+          "usage_pct": 3.45
+        },
+        {
+          "pokemon_name": "Iron Jugulis",
+          "usage_count": 56,
+          "usage_pct": 1.96
+        },
+        {
+          "pokemon_name": "Iron Leaves",
+          "usage_count": 20,
+          "usage_pct": 0.67
+        },
+        {
+          "pokemon_name": "Iron Moth",
+          "usage_count": 276,
+          "usage_pct": 9.45
+        },
+        {
+          "pokemon_name": "Iron Thorns",
+          "usage_count": 14,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Iron Treads",
+          "usage_count": 61,
+          "usage_pct": 1.93
+        },
+        {
+          "pokemon_name": "Iron Valiant",
+          "usage_count": 551,
+          "usage_pct": 18.5
+        },
+        {
+          "pokemon_name": "Jirachi",
+          "usage_count": 10,
+          "usage_pct": 0.33
+        },
+        {
+          "pokemon_name": "Jolteon",
+          "usage_count": 24,
+          "usage_pct": 0.78
+        },
+        {
+          "pokemon_name": "Keldeo",
+          "usage_count": 114,
+          "usage_pct": 3.78
+        },
+        {
+          "pokemon_name": "Kilowattrel",
+          "usage_count": 19,
+          "usage_pct": 0.63
+        },
+        {
+          "pokemon_name": "Kingambit",
+          "usage_count": 320,
+          "usage_pct": 10.3
+        },
+        {
+          "pokemon_name": "Kingdra",
+          "usage_count": 217,
+          "usage_pct": 6.82
+        },
+        {
+          "pokemon_name": "Klawf",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Kleavor",
+          "usage_count": 86,
+          "usage_pct": 2.85
+        },
+        {
+          "pokemon_name": "Kommo-o",
+          "usage_count": 60,
+          "usage_pct": 1.93
+        },
+        {
+          "pokemon_name": "Krookodile",
+          "usage_count": 6,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Landorus-Therian",
+          "usage_count": 835,
+          "usage_pct": 28.02
+        },
+        {
+          "pokemon_name": "Lapras",
+          "usage_count": 7,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Latias",
+          "usage_count": 19,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Latios",
+          "usage_count": 201,
+          "usage_pct": 6.78
+        },
+        {
+          "pokemon_name": "Leafeon",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Leavanny",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Lilligant",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Lilligant-Hisui",
+          "usage_count": 20,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Lokix",
+          "usage_count": 22,
+          "usage_pct": 0.78
+        },
+        {
+          "pokemon_name": "Lucario",
+          "usage_count": 21,
+          "usage_pct": 0.7
+        },
+        {
+          "pokemon_name": "Lurantis",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Lycanroc",
+          "usage_count": 3,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Lycanroc-Dusk",
+          "usage_count": 24,
+          "usage_pct": 0.82
+        },
+        {
+          "pokemon_name": "Lycanroc-Midnight",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Magmortar",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Magneton",
+          "usage_count": 7,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Magnezone",
+          "usage_count": 141,
+          "usage_pct": 4.93
+        },
+        {
+          "pokemon_name": "Malamar",
+          "usage_count": 88,
+          "usage_pct": 3.08
+        },
+        {
+          "pokemon_name": "Mamoswine",
+          "usage_count": 174,
+          "usage_pct": 5.78
+        },
+        {
+          "pokemon_name": "Manaphy",
+          "usage_count": 15,
+          "usage_pct": 0.48
+        },
+        {
+          "pokemon_name": "Mandibuzz",
+          "usage_count": 15,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Masquerain",
+          "usage_count": 12,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Maushold",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Medicham",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Meditite",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Meowscarada",
+          "usage_count": 51,
+          "usage_pct": 1.78
+        },
+        {
+          "pokemon_name": "Meowstic",
+          "usage_count": 14,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Metagross",
+          "usage_count": 32,
+          "usage_pct": 1.15
+        },
+        {
+          "pokemon_name": "Mew",
+          "usage_count": 3,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Mienshao",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Milotic",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Mimikyu",
+          "usage_count": 47,
+          "usage_pct": 1.56
+        },
+        {
+          "pokemon_name": "Minior",
+          "usage_count": 11,
+          "usage_pct": 0.37
+        },
+        {
+          "pokemon_name": "Moltres",
+          "usage_count": 60,
+          "usage_pct": 2.0
+        },
+        {
+          "pokemon_name": "Moltres-Galar",
+          "usage_count": 22,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Morpeko",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Mudsdale",
+          "usage_count": 7,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Muk-Alola",
+          "usage_count": 83,
+          "usage_pct": 2.85
+        },
+        {
+          "pokemon_name": "Munkidori",
+          "usage_count": 28,
+          "usage_pct": 0.89
+        },
+        {
+          "pokemon_name": "Necrozma",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Ninetales",
+          "usage_count": 29,
+          "usage_pct": 1.04
+        },
+        {
+          "pokemon_name": "Ninetales-Alola",
+          "usage_count": 57,
+          "usage_pct": 1.82
+        },
+        {
+          "pokemon_name": "Noctowl",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Noivern",
+          "usage_count": 23,
+          "usage_pct": 0.78
+        },
+        {
+          "pokemon_name": "Numel",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Ogerpon",
+          "usage_count": 66,
+          "usage_pct": 2.34
+        },
+        {
+          "pokemon_name": "Ogerpon-Cornerstone",
+          "usage_count": 308,
+          "usage_pct": 10.34
+        },
+        {
+          "pokemon_name": "Okidogi",
+          "usage_count": 29,
+          "usage_pct": 0.89
+        },
+        {
+          "pokemon_name": "Oranguru",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Oricorio",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Oricorio-Pom-Pom",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Oricorio-Sensu",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Orthworm",
+          "usage_count": 5,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Overqwil",
+          "usage_count": 23,
+          "usage_pct": 0.82
+        },
+        {
+          "pokemon_name": "Palafin",
+          "usage_count": 91,
+          "usage_pct": 2.97
+        },
+        {
+          "pokemon_name": "Palossand",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Pawmot",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Pecharunt",
+          "usage_count": 189,
+          "usage_pct": 6.19
+        },
+        {
+          "pokemon_name": "Pelipper",
+          "usage_count": 113,
+          "usage_pct": 3.78
+        },
+        {
+          "pokemon_name": "Perrserker",
+          "usage_count": 18,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Persian-Alola",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Pikachu",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Pincurchin",
+          "usage_count": 33,
+          "usage_pct": 1.15
+        },
+        {
+          "pokemon_name": "Pineco",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Politoed",
+          "usage_count": 23,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Poliwrath",
+          "usage_count": 25,
+          "usage_pct": 0.82
+        },
+        {
+          "pokemon_name": "Polteageist",
+          "usage_count": 47,
+          "usage_pct": 1.59
+        },
+        {
+          "pokemon_name": "Popplio",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Porygon2",
+          "usage_count": 91,
+          "usage_pct": 2.89
+        },
+        {
+          "pokemon_name": "Primarina",
+          "usage_count": 200,
+          "usage_pct": 6.67
+        },
+        {
+          "pokemon_name": "Probopass",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Pyroar",
+          "usage_count": 14,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Quagsire",
+          "usage_count": 2,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Quaquaval",
+          "usage_count": 41,
+          "usage_pct": 1.19
+        },
+        {
+          "pokemon_name": "Qwilfish-Hisui",
+          "usage_count": 2,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Rabsca",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Raging Bolt",
+          "usage_count": 267,
+          "usage_pct": 9.19
+        },
+        {
+          "pokemon_name": "Raichu",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Raichu-Alola",
+          "usage_count": 7,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Raikou",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Rampardos",
+          "usage_count": 12,
+          "usage_pct": 0.41
+        },
+        {
+          "pokemon_name": "Regice",
+          "usage_count": 7,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Regidrago",
+          "usage_count": 6,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Regieleki",
+          "usage_count": 44,
+          "usage_pct": 1.48
+        },
+        {
+          "pokemon_name": "Regigigas",
+          "usage_count": 27,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Regirock",
+          "usage_count": 6,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Registeel",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Reuniclus",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Revavroom",
+          "usage_count": 20,
+          "usage_pct": 0.67
+        },
+        {
+          "pokemon_name": "Rhydon",
+          "usage_count": 7,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Rhyperior",
+          "usage_count": 51,
+          "usage_pct": 1.67
+        },
+        {
+          "pokemon_name": "Ribombee",
+          "usage_count": 104,
+          "usage_pct": 3.3
+        },
+        {
+          "pokemon_name": "Rillaboom",
+          "usage_count": 150,
+          "usage_pct": 5.04
+        },
+        {
+          "pokemon_name": "Rotom-Fan",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Rotom-Frost",
+          "usage_count": 5,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Rotom-Heat",
+          "usage_count": 82,
+          "usage_pct": 2.82
+        },
+        {
+          "pokemon_name": "Rotom-Mow",
+          "usage_count": 37,
+          "usage_pct": 1.26
+        },
+        {
+          "pokemon_name": "Rotom-Wash",
+          "usage_count": 229,
+          "usage_pct": 7.86
+        },
+        {
+          "pokemon_name": "Sableye",
+          "usage_count": 12,
+          "usage_pct": 0.33
+        },
+        {
+          "pokemon_name": "Salamence",
+          "usage_count": 133,
+          "usage_pct": 4.52
+        },
+        {
+          "pokemon_name": "Salazzle",
+          "usage_count": 24,
+          "usage_pct": 0.82
+        },
+        {
+          "pokemon_name": "Samurott-Hisui",
+          "usage_count": 165,
+          "usage_pct": 5.71
+        },
+        {
+          "pokemon_name": "Sandaconda",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Sandslash-Alola",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Sandy Shocks",
+          "usage_count": 22,
+          "usage_pct": 0.78
+        },
+        {
+          "pokemon_name": "Sawsbuck",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Sceptile",
+          "usage_count": 22,
+          "usage_pct": 0.78
+        },
+        {
+          "pokemon_name": "Scizor",
+          "usage_count": 114,
+          "usage_pct": 3.97
+        },
+        {
+          "pokemon_name": "Scovillain",
+          "usage_count": 8,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Scrafty",
+          "usage_count": 15,
+          "usage_pct": 0.56
+        },
+        {
+          "pokemon_name": "Scream Tail",
+          "usage_count": 38,
+          "usage_pct": 1.37
+        },
+        {
+          "pokemon_name": "Scyther",
+          "usage_count": 42,
+          "usage_pct": 1.45
+        },
+        {
+          "pokemon_name": "Serperior",
+          "usage_count": 19,
+          "usage_pct": 0.67
+        },
+        {
+          "pokemon_name": "Shiftry",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Sinistcha",
+          "usage_count": 50,
+          "usage_pct": 1.67
+        },
+        {
+          "pokemon_name": "Skarmory",
+          "usage_count": 100,
+          "usage_pct": 3.3
+        },
+        {
+          "pokemon_name": "Skeledirge",
+          "usage_count": 28,
+          "usage_pct": 1.0
+        },
+        {
+          "pokemon_name": "Skuntank",
+          "usage_count": 7,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Slaking",
+          "usage_count": 14,
+          "usage_pct": 0.48
+        },
+        {
+          "pokemon_name": "Slither Wing",
+          "usage_count": 36,
+          "usage_pct": 1.3
+        },
+        {
+          "pokemon_name": "Slowbro",
+          "usage_count": 36,
+          "usage_pct": 1.26
+        },
+        {
+          "pokemon_name": "Slowbro-Galar",
+          "usage_count": 2,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Slowking",
+          "usage_count": 75,
+          "usage_pct": 2.56
+        },
+        {
+          "pokemon_name": "Slowking-Galar",
+          "usage_count": 163,
+          "usage_pct": 5.45
+        },
+        {
+          "pokemon_name": "Sneasler",
+          "usage_count": 54,
+          "usage_pct": 1.82
+        },
+        {
+          "pokemon_name": "Snom",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Snorlax",
+          "usage_count": 16,
+          "usage_pct": 0.52
+        },
+        {
+          "pokemon_name": "Spiritomb",
+          "usage_count": 7,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Squawkabilly",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Staraptor",
+          "usage_count": 18,
+          "usage_pct": 0.56
+        },
+        {
+          "pokemon_name": "Sudowoodo",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Swampert",
+          "usage_count": 26,
+          "usage_pct": 0.89
+        },
+        {
+          "pokemon_name": "Sylveon",
+          "usage_count": 256,
+          "usage_pct": 8.52
+        },
+        {
+          "pokemon_name": "Talonflame",
+          "usage_count": 100,
+          "usage_pct": 3.19
+        },
+        {
+          "pokemon_name": "Tatsugiri",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Tauros",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Tauros-Paldea-Aqua",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Tauros-Paldea-Blaze",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Tentacruel",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Terrakion",
+          "usage_count": 19,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Thundurus",
+          "usage_count": 88,
+          "usage_pct": 2.78
+        },
+        {
+          "pokemon_name": "Thundurus-Therian",
+          "usage_count": 235,
+          "usage_pct": 7.82
+        },
+        {
+          "pokemon_name": "Ting-Lu",
+          "usage_count": 525,
+          "usage_pct": 17.53
+        },
+        {
+          "pokemon_name": "Tinkaton",
+          "usage_count": 30,
+          "usage_pct": 1.0
+        },
+        {
+          "pokemon_name": "Toedscruel",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Torkoal",
+          "usage_count": 32,
+          "usage_pct": 1.11
+        },
+        {
+          "pokemon_name": "Tornadus-Therian",
+          "usage_count": 49,
+          "usage_pct": 1.63
+        },
+        {
+          "pokemon_name": "Torterra",
+          "usage_count": 14,
+          "usage_pct": 0.48
+        },
+        {
+          "pokemon_name": "Toxapex",
+          "usage_count": 629,
+          "usage_pct": 21.35
+        },
+        {
+          "pokemon_name": "Toxicroak",
+          "usage_count": 8,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Toxtricity",
+          "usage_count": 6,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Trevenant",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Typhlosion-Hisui",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Tyranitar",
+          "usage_count": 450,
+          "usage_pct": 15.27
+        },
+        {
+          "pokemon_name": "Umbreon",
+          "usage_count": 10,
+          "usage_pct": 0.33
+        },
+        {
+          "pokemon_name": "Ursaring",
+          "usage_count": 21,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Urshifu-Rapid-Strike",
+          "usage_count": 148,
+          "usage_pct": 4.86
+        },
+        {
+          "pokemon_name": "Veluza",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Venomoth",
+          "usage_count": 10,
+          "usage_pct": 0.37
+        },
+        {
+          "pokemon_name": "Venusaur",
+          "usage_count": 64,
+          "usage_pct": 2.15
+        },
+        {
+          "pokemon_name": "Vespiquen",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Vikavolt",
+          "usage_count": 94,
+          "usage_pct": 3.0
+        },
+        {
+          "pokemon_name": "Vileplume",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Vivillon",
+          "usage_count": 51,
+          "usage_pct": 1.78
+        },
+        {
+          "pokemon_name": "Volbeat",
+          "usage_count": 13,
+          "usage_pct": 0.48
+        },
+        {
+          "pokemon_name": "Volcanion",
+          "usage_count": 73,
+          "usage_pct": 2.41
+        },
+        {
+          "pokemon_name": "Volcarona",
+          "usage_count": 185,
+          "usage_pct": 6.12
+        },
+        {
+          "pokemon_name": "Walking Wake",
+          "usage_count": 222,
+          "usage_pct": 7.34
+        },
+        {
+          "pokemon_name": "Weavile",
+          "usage_count": 182,
+          "usage_pct": 5.82
+        },
+        {
+          "pokemon_name": "Weezing-Galar",
+          "usage_count": 84,
+          "usage_pct": 2.82
+        },
+        {
+          "pokemon_name": "Whimsicott",
+          "usage_count": 6,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Wo-Chien",
+          "usage_count": 15,
+          "usage_pct": 0.52
+        },
+        {
+          "pokemon_name": "Wyrdeer",
+          "usage_count": 4,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Yanmega",
+          "usage_count": 231,
+          "usage_pct": 7.52
+        },
+        {
+          "pokemon_name": "Zamazenta",
+          "usage_count": 161,
+          "usage_pct": 5.26
+        },
+        {
+          "pokemon_name": "Zangoose",
+          "usage_count": 9,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Zapdos",
+          "usage_count": 90,
+          "usage_pct": 2.89
+        },
+        {
+          "pokemon_name": "Zapdos-Galar",
+          "usage_count": 29,
+          "usage_pct": 0.89
+        },
+        {
+          "pokemon_name": "Zarude",
+          "usage_count": 33,
+          "usage_pct": 1.0
+        },
+        {
+          "pokemon_name": "Zebstrika",
+          "usage_count": 3,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Zoroark",
+          "usage_count": 9,
+          "usage_pct": 0.33
+        },
+        {
+          "pokemon_name": "Zorua-Hisui",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        }
+      ]
+    },
+    "1500": {
+      "elo_cutoff": 1500,
+      "pokemon": [
+        {
+          "pokemon_name": "Abomasnow",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Alomomola",
+          "usage_count": 32,
+          "usage_pct": 1.65
+        },
+        {
+          "pokemon_name": "Altaria",
+          "usage_count": 6,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Ambipom",
+          "usage_count": 96,
+          "usage_pct": 4.87
+        },
+        {
+          "pokemon_name": "Amoonguss",
+          "usage_count": 6,
+          "usage_pct": 0.29
+        },
+        {
+          "pokemon_name": "Annihilape",
+          "usage_count": 17,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Araquanid",
+          "usage_count": 91,
+          "usage_pct": 4.65
+        },
+        {
+          "pokemon_name": "Arboliva",
+          "usage_count": 10,
+          "usage_pct": 0.5
+        },
+        {
+          "pokemon_name": "Arcanine",
+          "usage_count": 1,
+          "usage_pct": 0.09
+        },
+        {
+          "pokemon_name": "Arcanine-Hisui",
+          "usage_count": 21,
+          "usage_pct": 1.08
+        },
+        {
+          "pokemon_name": "Archaludon",
+          "usage_count": 81,
+          "usage_pct": 4.38
+        },
+        {
+          "pokemon_name": "Ariados",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Articuno",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Articuno-Galar",
+          "usage_count": 2,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Avalugg",
+          "usage_count": 2,
+          "usage_pct": 0.1
+        },
+        {
+          "pokemon_name": "Avalugg-Hisui",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Barraskewda",
+          "usage_count": 21,
+          "usage_pct": 1.13
+        },
+        {
+          "pokemon_name": "Basculegion",
+          "usage_count": 53,
+          "usage_pct": 2.69
+        },
+        {
+          "pokemon_name": "Basculegion-F",
+          "usage_count": 12,
+          "usage_pct": 0.71
+        },
+        {
+          "pokemon_name": "Basculin",
+          "usage_count": 4,
+          "usage_pct": 0.21
+        },
+        {
+          "pokemon_name": "Bastiodon",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Beartic",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Bellibolt",
+          "usage_count": 3,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Blastoise",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Blaziken",
+          "usage_count": 194,
+          "usage_pct": 10.17
+        },
+        {
+          "pokemon_name": "Blissey",
+          "usage_count": 63,
+          "usage_pct": 3.23
+        },
+        {
+          "pokemon_name": "Brambleghast",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Braviary",
+          "usage_count": 7,
+          "usage_pct": 0.43
+        },
+        {
+          "pokemon_name": "Braviary-Hisui",
+          "usage_count": 3,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Breloom",
+          "usage_count": 16,
+          "usage_pct": 0.94
+        },
+        {
+          "pokemon_name": "Bronzong",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Brute Bonnet",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Bruxish",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Buizel",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Cacturne",
+          "usage_count": 1,
+          "usage_pct": 0.08
+        },
+        {
+          "pokemon_name": "Carbink",
+          "usage_count": 3,
+          "usage_pct": 0.2
+        },
+        {
+          "pokemon_name": "Ceruledge",
+          "usage_count": 22,
+          "usage_pct": 1.21
+        },
+        {
+          "pokemon_name": "Cetitan",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Chandelure",
+          "usage_count": 56,
+          "usage_pct": 2.92
+        },
+        {
+          "pokemon_name": "Chansey",
+          "usage_count": 23,
+          "usage_pct": 1.22
+        },
+        {
+          "pokemon_name": "Charizard",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Chesnaught",
+          "usage_count": 21,
+          "usage_pct": 1.11
+        },
+        {
+          "pokemon_name": "Cinccino",
+          "usage_count": 9,
+          "usage_pct": 0.52
+        },
+        {
+          "pokemon_name": "Cinderace",
+          "usage_count": 19,
+          "usage_pct": 0.98
+        },
+        {
+          "pokemon_name": "Clawitzer",
+          "usage_count": 8,
+          "usage_pct": 0.45
+        },
+        {
+          "pokemon_name": "Clefable",
+          "usage_count": 20,
+          "usage_pct": 1.06
+        },
+        {
+          "pokemon_name": "Clodsire",
+          "usage_count": 146,
+          "usage_pct": 7.72
+        },
+        {
+          "pokemon_name": "Cloyster",
+          "usage_count": 18,
+          "usage_pct": 0.95
+        },
+        {
+          "pokemon_name": "Coalossal",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Cobalion",
+          "usage_count": 1,
+          "usage_pct": 0.09
+        },
+        {
+          "pokemon_name": "Conkeldurr",
+          "usage_count": 4,
+          "usage_pct": 0.18
+        },
+        {
+          "pokemon_name": "Corviknight",
+          "usage_count": 227,
+          "usage_pct": 12.32
+        },
+        {
+          "pokemon_name": "Cosmoem",
+          "usage_count": 1,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Crabominable",
+          "usage_count": 3,
+          "usage_pct": 0.18
+        },
+        {
+          "pokemon_name": "Cramorant",
+          "usage_count": 2,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Crawdaunt",
+          "usage_count": 100,
+          "usage_pct": 5.39
+        },
+        {
+          "pokemon_name": "Cresselia",
+          "usage_count": 14,
+          "usage_pct": 0.79
+        },
+        {
+          "pokemon_name": "Cyclizar",
+          "usage_count": 31,
+          "usage_pct": 1.57
+        },
+        {
+          "pokemon_name": "Dachsbun",
+          "usage_count": 1,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Darkrai",
+          "usage_count": 92,
+          "usage_pct": 4.6
+        },
+        {
+          "pokemon_name": "Decidueye",
+          "usage_count": 1,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Decidueye-Hisui",
+          "usage_count": 4,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Delphox",
+          "usage_count": 5,
+          "usage_pct": 0.27
+        },
+        {
+          "pokemon_name": "Deoxys-Defense",
+          "usage_count": 4,
+          "usage_pct": 0.21
+        },
+        {
+          "pokemon_name": "Deoxys-Speed",
+          "usage_count": 14,
+          "usage_pct": 0.79
+        },
+        {
+          "pokemon_name": "Ditto",
+          "usage_count": 10,
+          "usage_pct": 0.55
+        },
+        {
+          "pokemon_name": "Dodrio",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Dondozo",
+          "usage_count": 27,
+          "usage_pct": 1.46
+        },
+        {
+          "pokemon_name": "Donphan",
+          "usage_count": 1,
+          "usage_pct": 0.09
+        },
+        {
+          "pokemon_name": "Dragalge",
+          "usage_count": 22,
+          "usage_pct": 1.2
+        },
+        {
+          "pokemon_name": "Drednaw",
+          "usage_count": 3,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Drifblim",
+          "usage_count": 2,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Dudunsparce",
+          "usage_count": 3,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Dugtrio-Alola",
+          "usage_count": 6,
+          "usage_pct": 0.38
+        },
+        {
+          "pokemon_name": "Dusclops",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Eelektross",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Eevee",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Eiscue",
+          "usage_count": 1,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Electabuzz",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Electivire",
+          "usage_count": 4,
+          "usage_pct": 0.21
+        },
+        {
+          "pokemon_name": "Electrode-Hisui",
+          "usage_count": 3,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Emboar",
+          "usage_count": 42,
+          "usage_pct": 2.15
+        },
+        {
+          "pokemon_name": "Empoleon",
+          "usage_count": 4,
+          "usage_pct": 0.18
+        },
+        {
+          "pokemon_name": "Enamorus-Therian",
+          "usage_count": 4,
+          "usage_pct": 0.23
+        },
+        {
+          "pokemon_name": "Entei",
+          "usage_count": 3,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Espathra",
+          "usage_count": 75,
+          "usage_pct": 3.87
+        },
+        {
+          "pokemon_name": "Espeon",
+          "usage_count": 7,
+          "usage_pct": 0.4
+        },
+        {
+          "pokemon_name": "Excadrill",
+          "usage_count": 209,
+          "usage_pct": 11.13
+        },
+        {
+          "pokemon_name": "Exeggutor",
+          "usage_count": 4,
+          "usage_pct": 0.23
+        },
+        {
+          "pokemon_name": "Exeggutor-Alola",
+          "usage_count": 16,
+          "usage_pct": 0.8
+        },
+        {
+          "pokemon_name": "Falinks",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Farigiraf",
+          "usage_count": 7,
+          "usage_pct": 0.37
+        },
+        {
+          "pokemon_name": "Fezandipiti",
+          "usage_count": 13,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Flapple",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Flareon",
+          "usage_count": 2,
+          "usage_pct": 0.1
+        },
+        {
+          "pokemon_name": "Florges",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Flygon",
+          "usage_count": 1,
+          "usage_pct": 0.09
+        },
+        {
+          "pokemon_name": "Forretress",
+          "usage_count": 22,
+          "usage_pct": 1.23
+        },
+        {
+          "pokemon_name": "Frosmoth",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Gallade",
+          "usage_count": 7,
+          "usage_pct": 0.34
+        },
+        {
+          "pokemon_name": "Galvantula",
+          "usage_count": 8,
+          "usage_pct": 0.49
+        },
+        {
+          "pokemon_name": "Gardevoir",
+          "usage_count": 3,
+          "usage_pct": 0.2
+        },
+        {
+          "pokemon_name": "Garganacl",
+          "usage_count": 25,
+          "usage_pct": 1.2
+        },
+        {
+          "pokemon_name": "Gastrodon",
+          "usage_count": 12,
+          "usage_pct": 0.62
+        },
+        {
+          "pokemon_name": "Gengar",
+          "usage_count": 68,
+          "usage_pct": 3.65
+        },
+        {
+          "pokemon_name": "Gholdengo",
+          "usage_count": 446,
+          "usage_pct": 24.2
+        },
+        {
+          "pokemon_name": "Glastrier",
+          "usage_count": 2,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Glimmora",
+          "usage_count": 44,
+          "usage_pct": 2.23
+        },
+        {
+          "pokemon_name": "Gliscor",
+          "usage_count": 158,
+          "usage_pct": 8.03
+        },
+        {
+          "pokemon_name": "Gloom",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Gogoat",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Golem-Alola",
+          "usage_count": 1,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Golurk",
+          "usage_count": 8,
+          "usage_pct": 0.41
+        },
+        {
+          "pokemon_name": "Goodra-Hisui",
+          "usage_count": 11,
+          "usage_pct": 0.55
+        },
+        {
+          "pokemon_name": "Grafaiai",
+          "usage_count": 64,
+          "usage_pct": 3.21
+        },
+        {
+          "pokemon_name": "Granbull",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Great Tusk",
+          "usage_count": 75,
+          "usage_pct": 4.16
+        },
+        {
+          "pokemon_name": "Greedent",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Greninja",
+          "usage_count": 128,
+          "usage_pct": 6.69
+        },
+        {
+          "pokemon_name": "Grimmsnarl",
+          "usage_count": 18,
+          "usage_pct": 0.9
+        },
+        {
+          "pokemon_name": "Hariyama",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Hatterene",
+          "usage_count": 49,
+          "usage_pct": 2.51
+        },
+        {
+          "pokemon_name": "Haunter",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Hawlucha",
+          "usage_count": 6,
+          "usage_pct": 0.34
+        },
+        {
+          "pokemon_name": "Haxorus",
+          "usage_count": 17,
+          "usage_pct": 0.94
+        },
+        {
+          "pokemon_name": "Heatran",
+          "usage_count": 67,
+          "usage_pct": 3.47
+        },
+        {
+          "pokemon_name": "Heracross",
+          "usage_count": 17,
+          "usage_pct": 0.82
+        },
+        {
+          "pokemon_name": "Hippowdon",
+          "usage_count": 3,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Hitmonlee",
+          "usage_count": 1,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Hoopa",
+          "usage_count": 1,
+          "usage_pct": 0.09
+        },
+        {
+          "pokemon_name": "Hoopa-Unbound",
+          "usage_count": 102,
+          "usage_pct": 5.46
+        },
+        {
+          "pokemon_name": "Houndstone",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Hydrapple",
+          "usage_count": 73,
+          "usage_pct": 3.75
+        },
+        {
+          "pokemon_name": "Hydreigon",
+          "usage_count": 7,
+          "usage_pct": 0.4
+        },
+        {
+          "pokemon_name": "Illumise",
+          "usage_count": 3,
+          "usage_pct": 0.18
+        },
+        {
+          "pokemon_name": "Incineroar",
+          "usage_count": 45,
+          "usage_pct": 2.31
+        },
+        {
+          "pokemon_name": "Indeedee",
+          "usage_count": 18,
+          "usage_pct": 0.96
+        },
+        {
+          "pokemon_name": "Indeedee-F",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Infernape",
+          "usage_count": 3,
+          "usage_pct": 0.17
+        },
+        {
+          "pokemon_name": "Inteleon",
+          "usage_count": 17,
+          "usage_pct": 0.96
+        },
+        {
+          "pokemon_name": "Iron Boulder",
+          "usage_count": 66,
+          "usage_pct": 3.19
+        },
+        {
+          "pokemon_name": "Iron Crown",
+          "usage_count": 46,
+          "usage_pct": 2.41
+        },
+        {
+          "pokemon_name": "Iron Hands",
+          "usage_count": 65,
+          "usage_pct": 3.42
+        },
+        {
+          "pokemon_name": "Iron Jugulis",
+          "usage_count": 36,
+          "usage_pct": 2.01
+        },
+        {
+          "pokemon_name": "Iron Leaves",
+          "usage_count": 11,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Iron Moth",
+          "usage_count": 178,
+          "usage_pct": 9.72
+        },
+        {
+          "pokemon_name": "Iron Thorns",
+          "usage_count": 8,
+          "usage_pct": 0.39
+        },
+        {
+          "pokemon_name": "Iron Treads",
+          "usage_count": 39,
+          "usage_pct": 1.94
+        },
+        {
+          "pokemon_name": "Iron Valiant",
+          "usage_count": 366,
+          "usage_pct": 19.63
+        },
+        {
+          "pokemon_name": "Jirachi",
+          "usage_count": 5,
+          "usage_pct": 0.28
+        },
+        {
+          "pokemon_name": "Jolteon",
+          "usage_count": 12,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Keldeo",
+          "usage_count": 75,
+          "usage_pct": 3.95
+        },
+        {
+          "pokemon_name": "Kilowattrel",
+          "usage_count": 5,
+          "usage_pct": 0.25
+        },
+        {
+          "pokemon_name": "Kingambit",
+          "usage_count": 210,
+          "usage_pct": 10.67
+        },
+        {
+          "pokemon_name": "Kingdra",
+          "usage_count": 136,
+          "usage_pct": 6.63
+        },
+        {
+          "pokemon_name": "Kleavor",
+          "usage_count": 64,
+          "usage_pct": 3.34
+        },
+        {
+          "pokemon_name": "Kommo-o",
+          "usage_count": 35,
+          "usage_pct": 1.84
+        },
+        {
+          "pokemon_name": "Krookodile",
+          "usage_count": 2,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Landorus-Therian",
+          "usage_count": 607,
+          "usage_pct": 32.65
+        },
+        {
+          "pokemon_name": "Lapras",
+          "usage_count": 2,
+          "usage_pct": 0.08
+        },
+        {
+          "pokemon_name": "Latias",
+          "usage_count": 8,
+          "usage_pct": 0.42
+        },
+        {
+          "pokemon_name": "Latios",
+          "usage_count": 146,
+          "usage_pct": 7.91
+        },
+        {
+          "pokemon_name": "Leafeon",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Leavanny",
+          "usage_count": 1,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Lilligant-Hisui",
+          "usage_count": 6,
+          "usage_pct": 0.36
+        },
+        {
+          "pokemon_name": "Lokix",
+          "usage_count": 8,
+          "usage_pct": 0.4
+        },
+        {
+          "pokemon_name": "Lucario",
+          "usage_count": 8,
+          "usage_pct": 0.48
+        },
+        {
+          "pokemon_name": "Lurantis",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Lycanroc",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Lycanroc-Dusk",
+          "usage_count": 7,
+          "usage_pct": 0.39
+        },
+        {
+          "pokemon_name": "Lycanroc-Midnight",
+          "usage_count": 1,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Magmortar",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Magneton",
+          "usage_count": 5,
+          "usage_pct": 0.31
+        },
+        {
+          "pokemon_name": "Magnezone",
+          "usage_count": 107,
+          "usage_pct": 5.87
+        },
+        {
+          "pokemon_name": "Malamar",
+          "usage_count": 36,
+          "usage_pct": 2.0
+        },
+        {
+          "pokemon_name": "Mamoswine",
+          "usage_count": 145,
+          "usage_pct": 7.71
+        },
+        {
+          "pokemon_name": "Manaphy",
+          "usage_count": 6,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Mandibuzz",
+          "usage_count": 6,
+          "usage_pct": 0.32
+        },
+        {
+          "pokemon_name": "Masquerain",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Maushold",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Medicham",
+          "usage_count": 1,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Meditite",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Meowscarada",
+          "usage_count": 20,
+          "usage_pct": 1.1
+        },
+        {
+          "pokemon_name": "Meowstic",
+          "usage_count": 2,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Metagross",
+          "usage_count": 14,
+          "usage_pct": 0.75
+        },
+        {
+          "pokemon_name": "Mew",
+          "usage_count": 1,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Mienshao",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Milotic",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Mimikyu",
+          "usage_count": 40,
+          "usage_pct": 2.15
+        },
+        {
+          "pokemon_name": "Minior",
+          "usage_count": 3,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Moltres",
+          "usage_count": 50,
+          "usage_pct": 2.64
+        },
+        {
+          "pokemon_name": "Moltres-Galar",
+          "usage_count": 7,
+          "usage_pct": 0.31
+        },
+        {
+          "pokemon_name": "Morpeko",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Mudsdale",
+          "usage_count": 1,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Muk-Alola",
+          "usage_count": 58,
+          "usage_pct": 3.08
+        },
+        {
+          "pokemon_name": "Munkidori",
+          "usage_count": 21,
+          "usage_pct": 1.08
+        },
+        {
+          "pokemon_name": "Necrozma",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Ninetales",
+          "usage_count": 16,
+          "usage_pct": 0.89
+        },
+        {
+          "pokemon_name": "Ninetales-Alola",
+          "usage_count": 42,
+          "usage_pct": 2.11
+        },
+        {
+          "pokemon_name": "Noctowl",
+          "usage_count": 1,
+          "usage_pct": 0.08
+        },
+        {
+          "pokemon_name": "Noivern",
+          "usage_count": 9,
+          "usage_pct": 0.43
+        },
+        {
+          "pokemon_name": "Numel",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Ogerpon",
+          "usage_count": 42,
+          "usage_pct": 2.36
+        },
+        {
+          "pokemon_name": "Ogerpon-Cornerstone",
+          "usage_count": 194,
+          "usage_pct": 10.37
+        },
+        {
+          "pokemon_name": "Okidogi",
+          "usage_count": 12,
+          "usage_pct": 0.59
+        },
+        {
+          "pokemon_name": "Oranguru",
+          "usage_count": 1,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Oricorio",
+          "usage_count": 1,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Oricorio-Pom-Pom",
+          "usage_count": 1,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Oricorio-Sensu",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Orthworm",
+          "usage_count": 2,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Overqwil",
+          "usage_count": 9,
+          "usage_pct": 0.5
+        },
+        {
+          "pokemon_name": "Palafin",
+          "usage_count": 42,
+          "usage_pct": 2.13
+        },
+        {
+          "pokemon_name": "Pawmot",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Pecharunt",
+          "usage_count": 103,
+          "usage_pct": 5.26
+        },
+        {
+          "pokemon_name": "Pelipper",
+          "usage_count": 51,
+          "usage_pct": 2.59
+        },
+        {
+          "pokemon_name": "Perrserker",
+          "usage_count": 7,
+          "usage_pct": 0.37
+        },
+        {
+          "pokemon_name": "Persian-Alola",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Pikachu",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Pincurchin",
+          "usage_count": 12,
+          "usage_pct": 0.6
+        },
+        {
+          "pokemon_name": "Pineco",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Politoed",
+          "usage_count": 7,
+          "usage_pct": 0.34
+        },
+        {
+          "pokemon_name": "Poliwrath",
+          "usage_count": 21,
+          "usage_pct": 1.06
+        },
+        {
+          "pokemon_name": "Polteageist",
+          "usage_count": 20,
+          "usage_pct": 1.06
+        },
+        {
+          "pokemon_name": "Popplio",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Porygon2",
+          "usage_count": 74,
+          "usage_pct": 3.77
+        },
+        {
+          "pokemon_name": "Primarina",
+          "usage_count": 122,
+          "usage_pct": 6.33
+        },
+        {
+          "pokemon_name": "Pyroar",
+          "usage_count": 9,
+          "usage_pct": 0.46
+        },
+        {
+          "pokemon_name": "Quagsire",
+          "usage_count": 1,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Quaquaval",
+          "usage_count": 16,
+          "usage_pct": 0.76
+        },
+        {
+          "pokemon_name": "Qwilfish-Hisui",
+          "usage_count": 1,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Rabsca",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Raging Bolt",
+          "usage_count": 186,
+          "usage_pct": 10.21
+        },
+        {
+          "pokemon_name": "Raichu",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Raichu-Alola",
+          "usage_count": 3,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Rampardos",
+          "usage_count": 6,
+          "usage_pct": 0.31
+        },
+        {
+          "pokemon_name": "Regice",
+          "usage_count": 5,
+          "usage_pct": 0.24
+        },
+        {
+          "pokemon_name": "Regidrago",
+          "usage_count": 3,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Regieleki",
+          "usage_count": 21,
+          "usage_pct": 1.11
+        },
+        {
+          "pokemon_name": "Regigigas",
+          "usage_count": 11,
+          "usage_pct": 0.53
+        },
+        {
+          "pokemon_name": "Regirock",
+          "usage_count": 3,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Registeel",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Reuniclus",
+          "usage_count": 2,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Revavroom",
+          "usage_count": 8,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Rhydon",
+          "usage_count": 5,
+          "usage_pct": 0.32
+        },
+        {
+          "pokemon_name": "Rhyperior",
+          "usage_count": 23,
+          "usage_pct": 1.16
+        },
+        {
+          "pokemon_name": "Ribombee",
+          "usage_count": 84,
+          "usage_pct": 4.27
+        },
+        {
+          "pokemon_name": "Rillaboom",
+          "usage_count": 95,
+          "usage_pct": 5.07
+        },
+        {
+          "pokemon_name": "Rotom-Fan",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Rotom-Frost",
+          "usage_count": 3,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Rotom-Heat",
+          "usage_count": 49,
+          "usage_pct": 2.62
+        },
+        {
+          "pokemon_name": "Rotom-Mow",
+          "usage_count": 28,
+          "usage_pct": 1.53
+        },
+        {
+          "pokemon_name": "Rotom-Wash",
+          "usage_count": 162,
+          "usage_pct": 8.93
+        },
+        {
+          "pokemon_name": "Sableye",
+          "usage_count": 4,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Salamence",
+          "usage_count": 78,
+          "usage_pct": 4.33
+        },
+        {
+          "pokemon_name": "Salazzle",
+          "usage_count": 7,
+          "usage_pct": 0.35
+        },
+        {
+          "pokemon_name": "Samurott-Hisui",
+          "usage_count": 118,
+          "usage_pct": 6.43
+        },
+        {
+          "pokemon_name": "Sandslash-Alola",
+          "usage_count": 1,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Sandy Shocks",
+          "usage_count": 13,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Sawsbuck",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Sceptile",
+          "usage_count": 9,
+          "usage_pct": 0.51
+        },
+        {
+          "pokemon_name": "Scizor",
+          "usage_count": 58,
+          "usage_pct": 3.2
+        },
+        {
+          "pokemon_name": "Scovillain",
+          "usage_count": 2,
+          "usage_pct": 0.13
+        },
+        {
+          "pokemon_name": "Scrafty",
+          "usage_count": 5,
+          "usage_pct": 0.28
+        },
+        {
+          "pokemon_name": "Scream Tail",
+          "usage_count": 14,
+          "usage_pct": 0.75
+        },
+        {
+          "pokemon_name": "Scyther",
+          "usage_count": 17,
+          "usage_pct": 0.92
+        },
+        {
+          "pokemon_name": "Serperior",
+          "usage_count": 11,
+          "usage_pct": 0.61
+        },
+        {
+          "pokemon_name": "Shiftry",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Sinistcha",
+          "usage_count": 36,
+          "usage_pct": 1.91
+        },
+        {
+          "pokemon_name": "Skarmory",
+          "usage_count": 71,
+          "usage_pct": 3.7
+        },
+        {
+          "pokemon_name": "Skeledirge",
+          "usage_count": 15,
+          "usage_pct": 0.87
+        },
+        {
+          "pokemon_name": "Skuntank",
+          "usage_count": 2,
+          "usage_pct": 0.12
+        },
+        {
+          "pokemon_name": "Slaking",
+          "usage_count": 6,
+          "usage_pct": 0.31
+        },
+        {
+          "pokemon_name": "Slither Wing",
+          "usage_count": 20,
+          "usage_pct": 1.15
+        },
+        {
+          "pokemon_name": "Slowbro",
+          "usage_count": 29,
+          "usage_pct": 1.61
+        },
+        {
+          "pokemon_name": "Slowking",
+          "usage_count": 29,
+          "usage_pct": 1.54
+        },
+        {
+          "pokemon_name": "Slowking-Galar",
+          "usage_count": 107,
+          "usage_pct": 5.71
+        },
+        {
+          "pokemon_name": "Sneasler",
+          "usage_count": 21,
+          "usage_pct": 1.1
+        },
+        {
+          "pokemon_name": "Snom",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Snorlax",
+          "usage_count": 6,
+          "usage_pct": 0.35
+        },
+        {
+          "pokemon_name": "Spiritomb",
+          "usage_count": 4,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Squawkabilly",
+          "usage_count": 3,
+          "usage_pct": 0.18
+        },
+        {
+          "pokemon_name": "Staraptor",
+          "usage_count": 9,
+          "usage_pct": 0.4
+        },
+        {
+          "pokemon_name": "Swampert",
+          "usage_count": 14,
+          "usage_pct": 0.7
+        },
+        {
+          "pokemon_name": "Sylveon",
+          "usage_count": 146,
+          "usage_pct": 7.79
+        },
+        {
+          "pokemon_name": "Talonflame",
+          "usage_count": 56,
+          "usage_pct": 2.81
+        },
+        {
+          "pokemon_name": "Tatsugiri",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Tauros",
+          "usage_count": 2,
+          "usage_pct": 0.1
+        },
+        {
+          "pokemon_name": "Tauros-Paldea-Aqua",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Tauros-Paldea-Blaze",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Tentacruel",
+          "usage_count": 1,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Terrakion",
+          "usage_count": 15,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Thundurus",
+          "usage_count": 71,
+          "usage_pct": 3.59
+        },
+        {
+          "pokemon_name": "Thundurus-Therian",
+          "usage_count": 149,
+          "usage_pct": 7.84
+        },
+        {
+          "pokemon_name": "Ting-Lu",
+          "usage_count": 373,
+          "usage_pct": 19.91
+        },
+        {
+          "pokemon_name": "Tinkaton",
+          "usage_count": 14,
+          "usage_pct": 0.76
+        },
+        {
+          "pokemon_name": "Toedscruel",
+          "usage_count": 1,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Torkoal",
+          "usage_count": 20,
+          "usage_pct": 1.11
+        },
+        {
+          "pokemon_name": "Tornadus-Therian",
+          "usage_count": 30,
+          "usage_pct": 1.54
+        },
+        {
+          "pokemon_name": "Torterra",
+          "usage_count": 8,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Toxapex",
+          "usage_count": 488,
+          "usage_pct": 26.57
+        },
+        {
+          "pokemon_name": "Toxicroak",
+          "usage_count": 5,
+          "usage_pct": 0.23
+        },
+        {
+          "pokemon_name": "Toxtricity",
+          "usage_count": 2,
+          "usage_pct": 0.13
+        },
+        {
+          "pokemon_name": "Trevenant",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Typhlosion-Hisui",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Tyranitar",
+          "usage_count": 304,
+          "usage_pct": 16.43
+        },
+        {
+          "pokemon_name": "Umbreon",
+          "usage_count": 3,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Ursaring",
+          "usage_count": 8,
+          "usage_pct": 0.47
+        },
+        {
+          "pokemon_name": "Urshifu-Rapid-Strike",
+          "usage_count": 106,
+          "usage_pct": 5.47
+        },
+        {
+          "pokemon_name": "Veluza",
+          "usage_count": 1,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Venomoth",
+          "usage_count": 3,
+          "usage_pct": 0.2
+        },
+        {
+          "pokemon_name": "Venusaur",
+          "usage_count": 49,
+          "usage_pct": 2.58
+        },
+        {
+          "pokemon_name": "Vespiquen",
+          "usage_count": 1,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Vikavolt",
+          "usage_count": 47,
+          "usage_pct": 2.39
+        },
+        {
+          "pokemon_name": "Vileplume",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Vivillon",
+          "usage_count": 11,
+          "usage_pct": 0.61
+        },
+        {
+          "pokemon_name": "Volbeat",
+          "usage_count": 4,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Volcanion",
+          "usage_count": 47,
+          "usage_pct": 2.4
+        },
+        {
+          "pokemon_name": "Volcarona",
+          "usage_count": 107,
+          "usage_pct": 5.71
+        },
+        {
+          "pokemon_name": "Walking Wake",
+          "usage_count": 152,
+          "usage_pct": 8.2
+        },
+        {
+          "pokemon_name": "Weavile",
+          "usage_count": 135,
+          "usage_pct": 6.92
+        },
+        {
+          "pokemon_name": "Weezing-Galar",
+          "usage_count": 56,
+          "usage_pct": 2.93
+        },
+        {
+          "pokemon_name": "Whimsicott",
+          "usage_count": 2,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Wo-Chien",
+          "usage_count": 8,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Wyrdeer",
+          "usage_count": 3,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Yanmega",
+          "usage_count": 150,
+          "usage_pct": 7.79
+        },
+        {
+          "pokemon_name": "Zamazenta",
+          "usage_count": 106,
+          "usage_pct": 5.61
+        },
+        {
+          "pokemon_name": "Zangoose",
+          "usage_count": 3,
+          "usage_pct": 0.13
+        },
+        {
+          "pokemon_name": "Zapdos",
+          "usage_count": 54,
+          "usage_pct": 2.66
+        },
+        {
+          "pokemon_name": "Zapdos-Galar",
+          "usage_count": 19,
+          "usage_pct": 0.94
+        },
+        {
+          "pokemon_name": "Zarude",
+          "usage_count": 19,
+          "usage_pct": 0.92
+        },
+        {
+          "pokemon_name": "Zebstrika",
+          "usage_count": 1,
+          "usage_pct": 0.08
+        },
+        {
+          "pokemon_name": "Zoroark",
+          "usage_count": 3,
+          "usage_pct": 0.18
+        }
+      ]
+    },
+    "1630": {
+      "elo_cutoff": 1630,
+      "pokemon": [
+        {
+          "pokemon_name": "Alomomola",
+          "usage_count": 9,
+          "usage_pct": 1.29
+        },
+        {
+          "pokemon_name": "Altaria",
+          "usage_count": 1,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Ambipom",
+          "usage_count": 28,
+          "usage_pct": 3.97
+        },
+        {
+          "pokemon_name": "Amoonguss",
+          "usage_count": 1,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Annihilape",
+          "usage_count": 1,
+          "usage_pct": 0.08
+        },
+        {
+          "pokemon_name": "Araquanid",
+          "usage_count": 19,
+          "usage_pct": 2.5
+        },
+        {
+          "pokemon_name": "Arboliva",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Arcanine-Hisui",
+          "usage_count": 4,
+          "usage_pct": 0.68
+        },
+        {
+          "pokemon_name": "Archaludon",
+          "usage_count": 27,
+          "usage_pct": 3.99
+        },
+        {
+          "pokemon_name": "Articuno-Galar",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Avalugg",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Barraskewda",
+          "usage_count": 5,
+          "usage_pct": 0.84
+        },
+        {
+          "pokemon_name": "Basculegion",
+          "usage_count": 23,
+          "usage_pct": 3.37
+        },
+        {
+          "pokemon_name": "Basculegion-F",
+          "usage_count": 2,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Beartic",
+          "usage_count": 1,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Blaziken",
+          "usage_count": 71,
+          "usage_pct": 10.06
+        },
+        {
+          "pokemon_name": "Blissey",
+          "usage_count": 14,
+          "usage_pct": 1.86
+        },
+        {
+          "pokemon_name": "Braviary",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Braviary-Hisui",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Breloom",
+          "usage_count": 0,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Carbink",
+          "usage_count": 0,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Ceruledge",
+          "usage_count": 1,
+          "usage_pct": 0.2
+        },
+        {
+          "pokemon_name": "Chandelure",
+          "usage_count": 11,
+          "usage_pct": 1.63
+        },
+        {
+          "pokemon_name": "Chansey",
+          "usage_count": 10,
+          "usage_pct": 1.4
+        },
+        {
+          "pokemon_name": "Chesnaught",
+          "usage_count": 14,
+          "usage_pct": 2.06
+        },
+        {
+          "pokemon_name": "Cinccino",
+          "usage_count": 1,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Cinderace",
+          "usage_count": 4,
+          "usage_pct": 0.6
+        },
+        {
+          "pokemon_name": "Clawitzer",
+          "usage_count": 1,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Clefable",
+          "usage_count": 1,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Clodsire",
+          "usage_count": 85,
+          "usage_pct": 12.3
+        },
+        {
+          "pokemon_name": "Cloyster",
+          "usage_count": 8,
+          "usage_pct": 1.34
+        },
+        {
+          "pokemon_name": "Conkeldurr",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Corviknight",
+          "usage_count": 116,
+          "usage_pct": 17.44
+        },
+        {
+          "pokemon_name": "Crabominable",
+          "usage_count": 3,
+          "usage_pct": 0.47
+        },
+        {
+          "pokemon_name": "Cramorant",
+          "usage_count": 1,
+          "usage_pct": 0.1
+        },
+        {
+          "pokemon_name": "Crawdaunt",
+          "usage_count": 32,
+          "usage_pct": 4.76
+        },
+        {
+          "pokemon_name": "Cresselia",
+          "usage_count": 2,
+          "usage_pct": 0.38
+        },
+        {
+          "pokemon_name": "Cyclizar",
+          "usage_count": 10,
+          "usage_pct": 1.49
+        },
+        {
+          "pokemon_name": "Darkrai",
+          "usage_count": 45,
+          "usage_pct": 6.06
+        },
+        {
+          "pokemon_name": "Deoxys-Speed",
+          "usage_count": 5,
+          "usage_pct": 0.74
+        },
+        {
+          "pokemon_name": "Ditto",
+          "usage_count": 9,
+          "usage_pct": 1.33
+        },
+        {
+          "pokemon_name": "Dondozo",
+          "usage_count": 2,
+          "usage_pct": 0.27
+        },
+        {
+          "pokemon_name": "Dragalge",
+          "usage_count": 4,
+          "usage_pct": 0.69
+        },
+        {
+          "pokemon_name": "Drednaw",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Dugtrio-Alola",
+          "usage_count": 0,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Electivire",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Electrode-Hisui",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Emboar",
+          "usage_count": 32,
+          "usage_pct": 4.57
+        },
+        {
+          "pokemon_name": "Empoleon",
+          "usage_count": 2,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Enamorus-Therian",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Entei",
+          "usage_count": 1,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Espathra",
+          "usage_count": 46,
+          "usage_pct": 6.36
+        },
+        {
+          "pokemon_name": "Espeon",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Excadrill",
+          "usage_count": 92,
+          "usage_pct": 13.47
+        },
+        {
+          "pokemon_name": "Exeggutor",
+          "usage_count": 0,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Exeggutor-Alola",
+          "usage_count": 10,
+          "usage_pct": 1.34
+        },
+        {
+          "pokemon_name": "Farigiraf",
+          "usage_count": 1,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Fezandipiti",
+          "usage_count": 1,
+          "usage_pct": 0.09
+        },
+        {
+          "pokemon_name": "Forretress",
+          "usage_count": 7,
+          "usage_pct": 1.02
+        },
+        {
+          "pokemon_name": "Galvantula",
+          "usage_count": 1,
+          "usage_pct": 0.13
+        },
+        {
+          "pokemon_name": "Gardevoir",
+          "usage_count": 1,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Garganacl",
+          "usage_count": 2,
+          "usage_pct": 0.25
+        },
+        {
+          "pokemon_name": "Gastrodon",
+          "usage_count": 4,
+          "usage_pct": 0.46
+        },
+        {
+          "pokemon_name": "Gengar",
+          "usage_count": 20,
+          "usage_pct": 2.84
+        },
+        {
+          "pokemon_name": "Gholdengo",
+          "usage_count": 218,
+          "usage_pct": 32.55
+        },
+        {
+          "pokemon_name": "Glastrier",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Glimmora",
+          "usage_count": 3,
+          "usage_pct": 0.44
+        },
+        {
+          "pokemon_name": "Gliscor",
+          "usage_count": 62,
+          "usage_pct": 8.81
+        },
+        {
+          "pokemon_name": "Golurk",
+          "usage_count": 1,
+          "usage_pct": 0.12
+        },
+        {
+          "pokemon_name": "Grafaiai",
+          "usage_count": 15,
+          "usage_pct": 2.1
+        },
+        {
+          "pokemon_name": "Great Tusk",
+          "usage_count": 17,
+          "usage_pct": 2.57
+        },
+        {
+          "pokemon_name": "Greninja",
+          "usage_count": 65,
+          "usage_pct": 9.33
+        },
+        {
+          "pokemon_name": "Grimmsnarl",
+          "usage_count": 2,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Hatterene",
+          "usage_count": 7,
+          "usage_pct": 1.09
+        },
+        {
+          "pokemon_name": "Haxorus",
+          "usage_count": 1,
+          "usage_pct": 0.13
+        },
+        {
+          "pokemon_name": "Heatran",
+          "usage_count": 27,
+          "usage_pct": 3.93
+        },
+        {
+          "pokemon_name": "Heracross",
+          "usage_count": 6,
+          "usage_pct": 0.72
+        },
+        {
+          "pokemon_name": "Hitmonlee",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Hoopa-Unbound",
+          "usage_count": 21,
+          "usage_pct": 3.31
+        },
+        {
+          "pokemon_name": "Hydrapple",
+          "usage_count": 15,
+          "usage_pct": 2.22
+        },
+        {
+          "pokemon_name": "Hydreigon",
+          "usage_count": 2,
+          "usage_pct": 0.27
+        },
+        {
+          "pokemon_name": "Illumise",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Incineroar",
+          "usage_count": 9,
+          "usage_pct": 1.29
+        },
+        {
+          "pokemon_name": "Indeedee",
+          "usage_count": 1,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Inteleon",
+          "usage_count": 2,
+          "usage_pct": 0.36
+        },
+        {
+          "pokemon_name": "Iron Boulder",
+          "usage_count": 12,
+          "usage_pct": 1.5
+        },
+        {
+          "pokemon_name": "Iron Crown",
+          "usage_count": 17,
+          "usage_pct": 2.51
+        },
+        {
+          "pokemon_name": "Iron Hands",
+          "usage_count": 15,
+          "usage_pct": 2.19
+        },
+        {
+          "pokemon_name": "Iron Jugulis",
+          "usage_count": 15,
+          "usage_pct": 2.32
+        },
+        {
+          "pokemon_name": "Iron Leaves",
+          "usage_count": 1,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Iron Moth",
+          "usage_count": 59,
+          "usage_pct": 9.1
+        },
+        {
+          "pokemon_name": "Iron Thorns",
+          "usage_count": 2,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Iron Treads",
+          "usage_count": 7,
+          "usage_pct": 0.91
+        },
+        {
+          "pokemon_name": "Iron Valiant",
+          "usage_count": 124,
+          "usage_pct": 18.15
+        },
+        {
+          "pokemon_name": "Jolteon",
+          "usage_count": 3,
+          "usage_pct": 0.45
+        },
+        {
+          "pokemon_name": "Keldeo",
+          "usage_count": 33,
+          "usage_pct": 4.93
+        },
+        {
+          "pokemon_name": "Kilowattrel",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Kingambit",
+          "usage_count": 70,
+          "usage_pct": 10.03
+        },
+        {
+          "pokemon_name": "Kingdra",
+          "usage_count": 62,
+          "usage_pct": 8.5
+        },
+        {
+          "pokemon_name": "Kleavor",
+          "usage_count": 36,
+          "usage_pct": 4.95
+        },
+        {
+          "pokemon_name": "Kommo-o",
+          "usage_count": 7,
+          "usage_pct": 1.1
+        },
+        {
+          "pokemon_name": "Krookodile",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Landorus-Therian",
+          "usage_count": 249,
+          "usage_pct": 36.95
+        },
+        {
+          "pokemon_name": "Latias",
+          "usage_count": 1,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Latios",
+          "usage_count": 74,
+          "usage_pct": 10.85
+        },
+        {
+          "pokemon_name": "Lilligant-Hisui",
+          "usage_count": 1,
+          "usage_pct": 0.13
+        },
+        {
+          "pokemon_name": "Lucario",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Lycanroc-Dusk",
+          "usage_count": 0,
+          "usage_pct": 0.08
+        },
+        {
+          "pokemon_name": "Magneton",
+          "usage_count": 1,
+          "usage_pct": 0.23
+        },
+        {
+          "pokemon_name": "Magnezone",
+          "usage_count": 29,
+          "usage_pct": 4.3
+        },
+        {
+          "pokemon_name": "Malamar",
+          "usage_count": 1,
+          "usage_pct": 0.12
+        },
+        {
+          "pokemon_name": "Mamoswine",
+          "usage_count": 92,
+          "usage_pct": 13.44
+        },
+        {
+          "pokemon_name": "Manaphy",
+          "usage_count": 1,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Mandibuzz",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Meowscarada",
+          "usage_count": 1,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Metagross",
+          "usage_count": 2,
+          "usage_pct": 0.23
+        },
+        {
+          "pokemon_name": "Mimikyu",
+          "usage_count": 24,
+          "usage_pct": 3.54
+        },
+        {
+          "pokemon_name": "Moltres",
+          "usage_count": 23,
+          "usage_pct": 3.44
+        },
+        {
+          "pokemon_name": "Moltres-Galar",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Muk-Alola",
+          "usage_count": 31,
+          "usage_pct": 4.3
+        },
+        {
+          "pokemon_name": "Munkidori",
+          "usage_count": 5,
+          "usage_pct": 0.75
+        },
+        {
+          "pokemon_name": "Ninetales",
+          "usage_count": 3,
+          "usage_pct": 0.46
+        },
+        {
+          "pokemon_name": "Ninetales-Alola",
+          "usage_count": 23,
+          "usage_pct": 3.16
+        },
+        {
+          "pokemon_name": "Noivern",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Ogerpon",
+          "usage_count": 23,
+          "usage_pct": 3.58
+        },
+        {
+          "pokemon_name": "Ogerpon-Cornerstone",
+          "usage_count": 70,
+          "usage_pct": 10.28
+        },
+        {
+          "pokemon_name": "Okidogi",
+          "usage_count": 1,
+          "usage_pct": 0.1
+        },
+        {
+          "pokemon_name": "Orthworm",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Overqwil",
+          "usage_count": 2,
+          "usage_pct": 0.27
+        },
+        {
+          "pokemon_name": "Palafin",
+          "usage_count": 4,
+          "usage_pct": 0.42
+        },
+        {
+          "pokemon_name": "Pecharunt",
+          "usage_count": 19,
+          "usage_pct": 2.6
+        },
+        {
+          "pokemon_name": "Pelipper",
+          "usage_count": 8,
+          "usage_pct": 1.12
+        },
+        {
+          "pokemon_name": "Perrserker",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Pincurchin",
+          "usage_count": 1,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Politoed",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Poliwrath",
+          "usage_count": 7,
+          "usage_pct": 0.94
+        },
+        {
+          "pokemon_name": "Polteageist",
+          "usage_count": 1,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Porygon2",
+          "usage_count": 38,
+          "usage_pct": 5.44
+        },
+        {
+          "pokemon_name": "Primarina",
+          "usage_count": 35,
+          "usage_pct": 5.05
+        },
+        {
+          "pokemon_name": "Pyroar",
+          "usage_count": 3,
+          "usage_pct": 0.43
+        },
+        {
+          "pokemon_name": "Quaquaval",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Raging Bolt",
+          "usage_count": 75,
+          "usage_pct": 11.19
+        },
+        {
+          "pokemon_name": "Rampardos",
+          "usage_count": 1,
+          "usage_pct": 0.1
+        },
+        {
+          "pokemon_name": "Regice",
+          "usage_count": 2,
+          "usage_pct": 0.28
+        },
+        {
+          "pokemon_name": "Regieleki",
+          "usage_count": 1,
+          "usage_pct": 0.2
+        },
+        {
+          "pokemon_name": "Regigigas",
+          "usage_count": 2,
+          "usage_pct": 0.21
+        },
+        {
+          "pokemon_name": "Ribombee",
+          "usage_count": 64,
+          "usage_pct": 8.89
+        },
+        {
+          "pokemon_name": "Rillaboom",
+          "usage_count": 23,
+          "usage_pct": 3.39
+        },
+        {
+          "pokemon_name": "Rotom-Heat",
+          "usage_count": 24,
+          "usage_pct": 3.41
+        },
+        {
+          "pokemon_name": "Rotom-Mow",
+          "usage_count": 10,
+          "usage_pct": 1.44
+        },
+        {
+          "pokemon_name": "Rotom-Wash",
+          "usage_count": 80,
+          "usage_pct": 12.15
+        },
+        {
+          "pokemon_name": "Salamence",
+          "usage_count": 35,
+          "usage_pct": 5.45
+        },
+        {
+          "pokemon_name": "Salazzle",
+          "usage_count": 2,
+          "usage_pct": 0.25
+        },
+        {
+          "pokemon_name": "Samurott-Hisui",
+          "usage_count": 62,
+          "usage_pct": 9.14
+        },
+        {
+          "pokemon_name": "Sandslash-Alola",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Sandy Shocks",
+          "usage_count": 5,
+          "usage_pct": 0.8
+        },
+        {
+          "pokemon_name": "Scizor",
+          "usage_count": 7,
+          "usage_pct": 1.15
+        },
+        {
+          "pokemon_name": "Scovillain",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Scream Tail",
+          "usage_count": 2,
+          "usage_pct": 0.29
+        },
+        {
+          "pokemon_name": "Serperior",
+          "usage_count": 4,
+          "usage_pct": 0.64
+        },
+        {
+          "pokemon_name": "Sinistcha",
+          "usage_count": 7,
+          "usage_pct": 0.96
+        },
+        {
+          "pokemon_name": "Skarmory",
+          "usage_count": 16,
+          "usage_pct": 2.33
+        },
+        {
+          "pokemon_name": "Skeledirge",
+          "usage_count": 9,
+          "usage_pct": 1.44
+        },
+        {
+          "pokemon_name": "Slither Wing",
+          "usage_count": 8,
+          "usage_pct": 1.24
+        },
+        {
+          "pokemon_name": "Slowbro",
+          "usage_count": 18,
+          "usage_pct": 2.71
+        },
+        {
+          "pokemon_name": "Slowking",
+          "usage_count": 7,
+          "usage_pct": 1.01
+        },
+        {
+          "pokemon_name": "Slowking-Galar",
+          "usage_count": 42,
+          "usage_pct": 6.08
+        },
+        {
+          "pokemon_name": "Sneasler",
+          "usage_count": 1,
+          "usage_pct": 0.09
+        },
+        {
+          "pokemon_name": "Snorlax",
+          "usage_count": 0,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Squawkabilly",
+          "usage_count": 1,
+          "usage_pct": 0.13
+        },
+        {
+          "pokemon_name": "Staraptor",
+          "usage_count": 1,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Swampert",
+          "usage_count": 2,
+          "usage_pct": 0.31
+        },
+        {
+          "pokemon_name": "Sylveon",
+          "usage_count": 29,
+          "usage_pct": 4.44
+        },
+        {
+          "pokemon_name": "Talonflame",
+          "usage_count": 7,
+          "usage_pct": 1.0
+        },
+        {
+          "pokemon_name": "Tatsugiri",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Tauros",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Terrakion",
+          "usage_count": 6,
+          "usage_pct": 1.02
+        },
+        {
+          "pokemon_name": "Thundurus",
+          "usage_count": 34,
+          "usage_pct": 4.84
+        },
+        {
+          "pokemon_name": "Thundurus-Therian",
+          "usage_count": 76,
+          "usage_pct": 10.89
+        },
+        {
+          "pokemon_name": "Ting-Lu",
+          "usage_count": 184,
+          "usage_pct": 27.02
+        },
+        {
+          "pokemon_name": "Tinkaton",
+          "usage_count": 9,
+          "usage_pct": 1.26
+        },
+        {
+          "pokemon_name": "Torkoal",
+          "usage_count": 7,
+          "usage_pct": 1.13
+        },
+        {
+          "pokemon_name": "Tornadus-Therian",
+          "usage_count": 9,
+          "usage_pct": 1.33
+        },
+        {
+          "pokemon_name": "Torterra",
+          "usage_count": 2,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Toxapex",
+          "usage_count": 244,
+          "usage_pct": 36.81
+        },
+        {
+          "pokemon_name": "Tyranitar",
+          "usage_count": 109,
+          "usage_pct": 16.43
+        },
+        {
+          "pokemon_name": "Umbreon",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Ursaring",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Urshifu-Rapid-Strike",
+          "usage_count": 45,
+          "usage_pct": 6.22
+        },
+        {
+          "pokemon_name": "Venusaur",
+          "usage_count": 32,
+          "usage_pct": 4.57
+        },
+        {
+          "pokemon_name": "Vespiquen",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Vikavolt",
+          "usage_count": 3,
+          "usage_pct": 0.47
+        },
+        {
+          "pokemon_name": "Vivillon",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Volbeat",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Volcanion",
+          "usage_count": 17,
+          "usage_pct": 2.45
+        },
+        {
+          "pokemon_name": "Volcarona",
+          "usage_count": 30,
+          "usage_pct": 4.4
+        },
+        {
+          "pokemon_name": "Walking Wake",
+          "usage_count": 41,
+          "usage_pct": 6.4
+        },
+        {
+          "pokemon_name": "Weavile",
+          "usage_count": 72,
+          "usage_pct": 10.27
+        },
+        {
+          "pokemon_name": "Weezing-Galar",
+          "usage_count": 23,
+          "usage_pct": 3.3
+        },
+        {
+          "pokemon_name": "Wo-Chien",
+          "usage_count": 1,
+          "usage_pct": 0.19
+        },
+        {
+          "pokemon_name": "Wyrdeer",
+          "usage_count": 1,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Yanmega",
+          "usage_count": 43,
+          "usage_pct": 6.12
+        },
+        {
+          "pokemon_name": "Zamazenta",
+          "usage_count": 24,
+          "usage_pct": 3.76
+        },
+        {
+          "pokemon_name": "Zapdos",
+          "usage_count": 17,
+          "usage_pct": 2.39
+        },
+        {
+          "pokemon_name": "Zapdos-Galar",
+          "usage_count": 8,
+          "usage_pct": 1.35
+        },
+        {
+          "pokemon_name": "Zarude",
+          "usage_count": 8,
+          "usage_pct": 1.04
+        }
+      ]
+    },
+    "1760": {
+      "elo_cutoff": 1760,
+      "pokemon": [
+        {
+          "pokemon_name": "Alomomola",
+          "usage_count": 1,
+          "usage_pct": 0.4
+        },
+        {
+          "pokemon_name": "Ambipom",
+          "usage_count": 1,
+          "usage_pct": 0.54
+        },
+        {
+          "pokemon_name": "Amoonguss",
+          "usage_count": 1,
+          "usage_pct": 0.36
+        },
+        {
+          "pokemon_name": "Annihilape",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Araquanid",
+          "usage_count": 2,
+          "usage_pct": 0.57
+        },
+        {
+          "pokemon_name": "Arcanine-Hisui",
+          "usage_count": 0,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Archaludon",
+          "usage_count": 3,
+          "usage_pct": 1.59
+        },
+        {
+          "pokemon_name": "Barraskewda",
+          "usage_count": 1,
+          "usage_pct": 0.45
+        },
+        {
+          "pokemon_name": "Basculegion",
+          "usage_count": 4,
+          "usage_pct": 1.98
+        },
+        {
+          "pokemon_name": "Basculegion-F",
+          "usage_count": 1,
+          "usage_pct": 0.35
+        },
+        {
+          "pokemon_name": "Beartic",
+          "usage_count": 0,
+          "usage_pct": 0.21
+        },
+        {
+          "pokemon_name": "Blaziken",
+          "usage_count": 7,
+          "usage_pct": 3.3
+        },
+        {
+          "pokemon_name": "Blissey",
+          "usage_count": 2,
+          "usage_pct": 0.73
+        },
+        {
+          "pokemon_name": "Ceruledge",
+          "usage_count": 0,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Chandelure",
+          "usage_count": 1,
+          "usage_pct": 0.27
+        },
+        {
+          "pokemon_name": "Chansey",
+          "usage_count": 1,
+          "usage_pct": 0.26
+        },
+        {
+          "pokemon_name": "Chesnaught",
+          "usage_count": 2,
+          "usage_pct": 1.17
+        },
+        {
+          "pokemon_name": "Cinccino",
+          "usage_count": 1,
+          "usage_pct": 0.3
+        },
+        {
+          "pokemon_name": "Cinderace",
+          "usage_count": 0,
+          "usage_pct": 0.18
+        },
+        {
+          "pokemon_name": "Clawitzer",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Clefable",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Clodsire",
+          "usage_count": 14,
+          "usage_pct": 7.41
+        },
+        {
+          "pokemon_name": "Cloyster",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Corviknight",
+          "usage_count": 33,
+          "usage_pct": 18.33
+        },
+        {
+          "pokemon_name": "Crabominable",
+          "usage_count": 2,
+          "usage_pct": 0.92
+        },
+        {
+          "pokemon_name": "Cramorant",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Crawdaunt",
+          "usage_count": 6,
+          "usage_pct": 3.24
+        },
+        {
+          "pokemon_name": "Cresselia",
+          "usage_count": 0,
+          "usage_pct": 0.25
+        },
+        {
+          "pokemon_name": "Cyclizar",
+          "usage_count": 4,
+          "usage_pct": 2.24
+        },
+        {
+          "pokemon_name": "Darkrai",
+          "usage_count": 17,
+          "usage_pct": 8.01
+        },
+        {
+          "pokemon_name": "Deoxys-Speed",
+          "usage_count": 1,
+          "usage_pct": 0.31
+        },
+        {
+          "pokemon_name": "Ditto",
+          "usage_count": 1,
+          "usage_pct": 0.32
+        },
+        {
+          "pokemon_name": "Dondozo",
+          "usage_count": 0,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Dragalge",
+          "usage_count": 0,
+          "usage_pct": 0.22
+        },
+        {
+          "pokemon_name": "Emboar",
+          "usage_count": 0,
+          "usage_pct": 0.2
+        },
+        {
+          "pokemon_name": "Empoleon",
+          "usage_count": 1,
+          "usage_pct": 0.34
+        },
+        {
+          "pokemon_name": "Entei",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Espathra",
+          "usage_count": 1,
+          "usage_pct": 0.6
+        },
+        {
+          "pokemon_name": "Excadrill",
+          "usage_count": 14,
+          "usage_pct": 7.72
+        },
+        {
+          "pokemon_name": "Exeggutor-Alola",
+          "usage_count": 1,
+          "usage_pct": 0.25
+        },
+        {
+          "pokemon_name": "Forretress",
+          "usage_count": 0,
+          "usage_pct": 0.21
+        },
+        {
+          "pokemon_name": "Galvantula",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Gardevoir",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Garganacl",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Gastrodon",
+          "usage_count": 1,
+          "usage_pct": 0.25
+        },
+        {
+          "pokemon_name": "Gengar",
+          "usage_count": 1,
+          "usage_pct": 0.5
+        },
+        {
+          "pokemon_name": "Gholdengo",
+          "usage_count": 80,
+          "usage_pct": 42.21
+        },
+        {
+          "pokemon_name": "Glimmora",
+          "usage_count": 0,
+          "usage_pct": 0.1
+        },
+        {
+          "pokemon_name": "Gliscor",
+          "usage_count": 24,
+          "usage_pct": 13.37
+        },
+        {
+          "pokemon_name": "Golurk",
+          "usage_count": 0,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Grafaiai",
+          "usage_count": 1,
+          "usage_pct": 0.34
+        },
+        {
+          "pokemon_name": "Great Tusk",
+          "usage_count": 6,
+          "usage_pct": 3.34
+        },
+        {
+          "pokemon_name": "Greninja",
+          "usage_count": 6,
+          "usage_pct": 3.51
+        },
+        {
+          "pokemon_name": "Grimmsnarl",
+          "usage_count": 0,
+          "usage_pct": 0.08
+        },
+        {
+          "pokemon_name": "Hatterene",
+          "usage_count": 1,
+          "usage_pct": 0.62
+        },
+        {
+          "pokemon_name": "Haxorus",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Heatran",
+          "usage_count": 15,
+          "usage_pct": 7.42
+        },
+        {
+          "pokemon_name": "Hoopa-Unbound",
+          "usage_count": 2,
+          "usage_pct": 1.26
+        },
+        {
+          "pokemon_name": "Hydrapple",
+          "usage_count": 3,
+          "usage_pct": 1.36
+        },
+        {
+          "pokemon_name": "Hydreigon",
+          "usage_count": 1,
+          "usage_pct": 0.41
+        },
+        {
+          "pokemon_name": "Incineroar",
+          "usage_count": 0,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Indeedee",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Inteleon",
+          "usage_count": 0,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Iron Boulder",
+          "usage_count": 1,
+          "usage_pct": 0.31
+        },
+        {
+          "pokemon_name": "Iron Crown",
+          "usage_count": 2,
+          "usage_pct": 1.2
+        },
+        {
+          "pokemon_name": "Iron Hands",
+          "usage_count": 2,
+          "usage_pct": 0.98
+        },
+        {
+          "pokemon_name": "Iron Jugulis",
+          "usage_count": 0,
+          "usage_pct": 0.12
+        },
+        {
+          "pokemon_name": "Iron Leaves",
+          "usage_count": 0,
+          "usage_pct": 0.08
+        },
+        {
+          "pokemon_name": "Iron Moth",
+          "usage_count": 24,
+          "usage_pct": 13.4
+        },
+        {
+          "pokemon_name": "Iron Thorns",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Iron Treads",
+          "usage_count": 0,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Iron Valiant",
+          "usage_count": 44,
+          "usage_pct": 23.05
+        },
+        {
+          "pokemon_name": "Jolteon",
+          "usage_count": 0,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Keldeo",
+          "usage_count": 1,
+          "usage_pct": 0.51
+        },
+        {
+          "pokemon_name": "Kingambit",
+          "usage_count": 34,
+          "usage_pct": 18.21
+        },
+        {
+          "pokemon_name": "Kingdra",
+          "usage_count": 12,
+          "usage_pct": 5.8
+        },
+        {
+          "pokemon_name": "Kleavor",
+          "usage_count": 21,
+          "usage_pct": 10.2
+        },
+        {
+          "pokemon_name": "Kommo-o",
+          "usage_count": 0,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Landorus-Therian",
+          "usage_count": 102,
+          "usage_pct": 53.58
+        },
+        {
+          "pokemon_name": "Latias",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Latios",
+          "usage_count": 29,
+          "usage_pct": 16.04
+        },
+        {
+          "pokemon_name": "Lilligant-Hisui",
+          "usage_count": 0,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Lycanroc-Dusk",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Magneton",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Magnezone",
+          "usage_count": 1,
+          "usage_pct": 0.66
+        },
+        {
+          "pokemon_name": "Mamoswine",
+          "usage_count": 22,
+          "usage_pct": 12.38
+        },
+        {
+          "pokemon_name": "Manaphy",
+          "usage_count": 0,
+          "usage_pct": 0.07
+        },
+        {
+          "pokemon_name": "Meowscarada",
+          "usage_count": 0,
+          "usage_pct": 0.02
+        },
+        {
+          "pokemon_name": "Metagross",
+          "usage_count": 0,
+          "usage_pct": 0.11
+        },
+        {
+          "pokemon_name": "Mimikyu",
+          "usage_count": 4,
+          "usage_pct": 2.33
+        },
+        {
+          "pokemon_name": "Moltres",
+          "usage_count": 1,
+          "usage_pct": 0.6
+        },
+        {
+          "pokemon_name": "Muk-Alola",
+          "usage_count": 6,
+          "usage_pct": 2.96
+        },
+        {
+          "pokemon_name": "Munkidori",
+          "usage_count": 0,
+          "usage_pct": 0.12
+        },
+        {
+          "pokemon_name": "Ninetales",
+          "usage_count": 1,
+          "usage_pct": 0.54
+        },
+        {
+          "pokemon_name": "Ninetales-Alola",
+          "usage_count": 5,
+          "usage_pct": 2.51
+        },
+        {
+          "pokemon_name": "Ogerpon",
+          "usage_count": 0,
+          "usage_pct": 0.16
+        },
+        {
+          "pokemon_name": "Ogerpon-Cornerstone",
+          "usage_count": 17,
+          "usage_pct": 8.62
+        },
+        {
+          "pokemon_name": "Okidogi",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Overqwil",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Palafin",
+          "usage_count": 0,
+          "usage_pct": 0.15
+        },
+        {
+          "pokemon_name": "Pecharunt",
+          "usage_count": 2,
+          "usage_pct": 0.99
+        },
+        {
+          "pokemon_name": "Pelipper",
+          "usage_count": 1,
+          "usage_pct": 0.58
+        },
+        {
+          "pokemon_name": "Pincurchin",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Poliwrath",
+          "usage_count": 0,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Porygon2",
+          "usage_count": 7,
+          "usage_pct": 3.56
+        },
+        {
+          "pokemon_name": "Primarina",
+          "usage_count": 9,
+          "usage_pct": 4.6
+        },
+        {
+          "pokemon_name": "Pyroar",
+          "usage_count": 1,
+          "usage_pct": 0.65
+        },
+        {
+          "pokemon_name": "Raging Bolt",
+          "usage_count": 22,
+          "usage_pct": 12.28
+        },
+        {
+          "pokemon_name": "Rampardos",
+          "usage_count": 0,
+          "usage_pct": 0.04
+        },
+        {
+          "pokemon_name": "Regice",
+          "usage_count": 0,
+          "usage_pct": 0.1
+        },
+        {
+          "pokemon_name": "Regieleki",
+          "usage_count": 0,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Regigigas",
+          "usage_count": 0,
+          "usage_pct": 0.05
+        },
+        {
+          "pokemon_name": "Ribombee",
+          "usage_count": 1,
+          "usage_pct": 0.29
+        },
+        {
+          "pokemon_name": "Rillaboom",
+          "usage_count": 7,
+          "usage_pct": 3.81
+        },
+        {
+          "pokemon_name": "Rotom-Heat",
+          "usage_count": 6,
+          "usage_pct": 2.05
+        },
+        {
+          "pokemon_name": "Rotom-Mow",
+          "usage_count": 0,
+          "usage_pct": 0.23
+        },
+        {
+          "pokemon_name": "Rotom-Wash",
+          "usage_count": 19,
+          "usage_pct": 10.62
+        },
+        {
+          "pokemon_name": "Salamence",
+          "usage_count": 23,
+          "usage_pct": 12.45
+        },
+        {
+          "pokemon_name": "Salazzle",
+          "usage_count": 0,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Samurott-Hisui",
+          "usage_count": 1,
+          "usage_pct": 0.73
+        },
+        {
+          "pokemon_name": "Sandy Shocks",
+          "usage_count": 1,
+          "usage_pct": 0.42
+        },
+        {
+          "pokemon_name": "Scizor",
+          "usage_count": 0,
+          "usage_pct": 0.14
+        },
+        {
+          "pokemon_name": "Scream Tail",
+          "usage_count": 1,
+          "usage_pct": 0.4
+        },
+        {
+          "pokemon_name": "Serperior",
+          "usage_count": 0,
+          "usage_pct": 0.27
+        },
+        {
+          "pokemon_name": "Sinistcha",
+          "usage_count": 0,
+          "usage_pct": 0.12
+        },
+        {
+          "pokemon_name": "Skarmory",
+          "usage_count": 4,
+          "usage_pct": 2.36
+        },
+        {
+          "pokemon_name": "Skeledirge",
+          "usage_count": 7,
+          "usage_pct": 3.73
+        },
+        {
+          "pokemon_name": "Slither Wing",
+          "usage_count": 1,
+          "usage_pct": 0.38
+        },
+        {
+          "pokemon_name": "Slowbro",
+          "usage_count": 2,
+          "usage_pct": 1.0
+        },
+        {
+          "pokemon_name": "Slowking",
+          "usage_count": 1,
+          "usage_pct": 0.39
+        },
+        {
+          "pokemon_name": "Slowking-Galar",
+          "usage_count": 8,
+          "usage_pct": 3.8
+        },
+        {
+          "pokemon_name": "Squawkabilly",
+          "usage_count": 0,
+          "usage_pct": 0.01
+        },
+        {
+          "pokemon_name": "Swampert",
+          "usage_count": 0,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Sylveon",
+          "usage_count": 9,
+          "usage_pct": 5.12
+        },
+        {
+          "pokemon_name": "Talonflame",
+          "usage_count": 1,
+          "usage_pct": 0.42
+        },
+        {
+          "pokemon_name": "Terrakion",
+          "usage_count": 3,
+          "usage_pct": 1.62
+        },
+        {
+          "pokemon_name": "Thundurus",
+          "usage_count": 13,
+          "usage_pct": 5.89
+        },
+        {
+          "pokemon_name": "Thundurus-Therian",
+          "usage_count": 32,
+          "usage_pct": 16.51
+        },
+        {
+          "pokemon_name": "Ting-Lu",
+          "usage_count": 75,
+          "usage_pct": 38.48
+        },
+        {
+          "pokemon_name": "Tinkaton",
+          "usage_count": 4,
+          "usage_pct": 2.23
+        },
+        {
+          "pokemon_name": "Torkoal",
+          "usage_count": 1,
+          "usage_pct": 0.8
+        },
+        {
+          "pokemon_name": "Tornadus-Therian",
+          "usage_count": 6,
+          "usage_pct": 2.88
+        },
+        {
+          "pokemon_name": "Torterra",
+          "usage_count": 0,
+          "usage_pct": 0.03
+        },
+        {
+          "pokemon_name": "Toxapex",
+          "usage_count": 134,
+          "usage_pct": 71.78
+        },
+        {
+          "pokemon_name": "Tyranitar",
+          "usage_count": 47,
+          "usage_pct": 25.78
+        },
+        {
+          "pokemon_name": "Urshifu-Rapid-Strike",
+          "usage_count": 22,
+          "usage_pct": 11.47
+        },
+        {
+          "pokemon_name": "Venusaur",
+          "usage_count": 0,
+          "usage_pct": 0.2
+        },
+        {
+          "pokemon_name": "Vikavolt",
+          "usage_count": 1,
+          "usage_pct": 0.68
+        },
+        {
+          "pokemon_name": "Volcanion",
+          "usage_count": 1,
+          "usage_pct": 0.53
+        },
+        {
+          "pokemon_name": "Volcarona",
+          "usage_count": 3,
+          "usage_pct": 1.77
+        },
+        {
+          "pokemon_name": "Walking Wake",
+          "usage_count": 13,
+          "usage_pct": 6.88
+        },
+        {
+          "pokemon_name": "Weavile",
+          "usage_count": 21,
+          "usage_pct": 10.8
+        },
+        {
+          "pokemon_name": "Weezing-Galar",
+          "usage_count": 7,
+          "usage_pct": 3.26
+        },
+        {
+          "pokemon_name": "Wo-Chien",
+          "usage_count": 0,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Wyrdeer",
+          "usage_count": 0,
+          "usage_pct": 0.06
+        },
+        {
+          "pokemon_name": "Yanmega",
+          "usage_count": 2,
+          "usage_pct": 1.22
+        },
+        {
+          "pokemon_name": "Zamazenta",
+          "usage_count": 10,
+          "usage_pct": 5.37
+        },
+        {
+          "pokemon_name": "Zapdos",
+          "usage_count": 3,
+          "usage_pct": 1.82
+        },
+        {
+          "pokemon_name": "Zapdos-Galar",
+          "usage_count": 4,
+          "usage_pct": 2.3
+        },
+        {
+          "pokemon_name": "Zarude",
+          "usage_count": 3,
+          "usage_pct": 1.24
+        }
+      ]
+    }
+  }
+}
