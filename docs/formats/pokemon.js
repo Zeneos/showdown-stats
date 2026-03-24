@@ -54,7 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeGlobalHelpTooltip();
     setupShareLinkButton();
     loadPokemonDetail();
+
+    window.addEventListener('popstate', () => {
+        loadPokemonDetail();
+    });
 });
+
+function spaNavigate(params) {
+    const path = window.location.pathname || 'pokemon.html';
+    const query = params.toString();
+    const nextUrl = query ? `${path}?${query}` : path;
+    window.history.pushState({}, '', nextUrl);
+    loadPokemonDetail();
+}
 
 function setupShareLinkButton() {
     const button = document.getElementById('share-link-btn');
@@ -252,28 +264,26 @@ async function loadPokemonDetail() {
         .filter(Boolean)
         .join('');
 
+    grid.style.opacity = '';
+    grid.style.pointerEvents = '';
+    grid.style.transition = '';
+
     attachCountersSortHandlers(entry.counters_json);
     attachPokemonRowNavigationHandlers();
 }
 
 function renderPokemonDetailSkeleton() {
-    const nameEl = document.getElementById('pokemon-name');
-    if (nameEl) {
-        nameEl.textContent = 'Loading...';
-    }
-
-    const usageEl = document.getElementById('pokemon-usage');
-    if (usageEl) {
-        usageEl.innerHTML = '<span class="skeleton-line skeleton-line--md"></span>';
-    }
-
-    const rankingEl = document.getElementById('pokemon-ranking');
-    if (rankingEl) {
-        rankingEl.innerHTML = '<span class="skeleton-line skeleton-line--sm"></span>';
-    }
-
     const grid = document.getElementById('pokemon-detail-grid');
     if (!grid) return;
+
+    // If content already exists, dim it instead of replacing with skeleton cards.
+    // This avoids layout flashing on fast SPA navigations.
+    if (grid.children.length > 0) {
+        grid.style.opacity = '0.45';
+        grid.style.pointerEvents = 'none';
+        grid.style.transition = 'opacity 0.15s ease';
+        return;
+    }
 
     const cards = Array.from({ length: 6 }, () => `
         <section class="pokemon-detail-section pokemon-detail-skeleton-card" aria-hidden="true">
@@ -394,8 +404,7 @@ async function populateFormatSwitcher(pokemonName, currentFormatKey, currentForm
             params.set('rating', rating);
         }
 
-        const path = window.location.pathname || 'pokemon.html';
-        window.location.href = `${path}?${params.toString()}`;
+        spaNavigate(params);
     };
 }
 
@@ -428,8 +437,7 @@ function populatePokemonSwitcher(currentPokemonName, formatName, currentRating, 
             params.set('rating', currentRating);
         }
 
-        const path = window.location.pathname || 'pokemon.html';
-        window.location.href = `${path}?${params.toString()}`;
+        spaNavigate(params);
     };
 
     const closeMenu = () => {
@@ -639,8 +647,7 @@ async function populateRatingFilter(formatName, currentRating, pokemonName, late
                 params.set('rating', nextRating);
             }
 
-            const path = window.location.pathname || 'pokemon.html';
-            window.location.href = `${path}?${params.toString()}`;
+            spaNavigate(params);
         };
 
         containerEl.appendChild(button);
@@ -1308,7 +1315,7 @@ function attachPokemonRowNavigationHandlers() {
         const navigate = () => {
             const href = row.dataset.href;
             if (!href) return;
-            window.location.href = href;
+            spaNavigateFromHref(href);
         };
 
         row.addEventListener('click', event => {
@@ -1323,6 +1330,26 @@ function attachPokemonRowNavigationHandlers() {
             }
         });
     });
+
+    // Intercept <a> clicks inside nav rows for SPA navigation
+    const links = document.querySelectorAll('tr.pokemon-nav-row a.pokemon-inline-link');
+    links.forEach(link => {
+        if (link.dataset.spaBound === '1') return;
+        link.dataset.spaBound = '1';
+
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const href = link.getAttribute('href');
+            if (href) spaNavigateFromHref(href);
+        });
+    });
+}
+
+function spaNavigateFromHref(href) {
+    const queryString = href.includes('?') ? href.split('?')[1] : '';
+    if (!queryString) return;
+    const params = new URLSearchParams(queryString);
+    spaNavigate(params);
 }
 
 function getSortArrow(sortState, key) {
