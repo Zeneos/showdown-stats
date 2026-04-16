@@ -8,9 +8,9 @@
 }
 
 :root {
-    --page-parallax-image: url('../assets/Backgrounds/EX.jpg');
-    --page-bg: linear-gradient(135deg, rgba(102, 126, 234, 0.38) 0%, rgba(118, 75, 162, 0.38) 100%);
-    --page-tint: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(244, 247, 255, 0) 100%);
+    --page-parallax-image: url('../assets/Backgrounds/banner.png');
+    --page-bg: transparent;
+    --page-tint: transparent;
     --container-bg: linear-gradient(165deg, rgba(255, 255, 255, 0.74) 0%, rgba(247, 250, 255, 0.64) 52%, rgba(241, 246, 255, 0.72) 100%);
     --container-border: transparent;
     --container-inner-glow: rgba(255, 255, 255, 0.34);
@@ -25,11 +25,15 @@
     --toggle-bg: rgba(255, 255, 255, 0.92);
     --toggle-text: #1f2937;
     --toggle-border: rgba(31, 41, 55, 0.18);
+    --page-image-filter: none;
+    --page-image-opacity: 0.92;
 }
 
 html[data-theme='dark'] {
     --page-bg: linear-gradient(135deg, rgba(15, 23, 42, 0.48) 0%, rgba(30, 41, 59, 0.52) 100%);
     --page-tint: linear-gradient(135deg, rgba(2, 6, 23, 0.36) 0%, rgba(15, 23, 42, 0.42) 100%);
+    --page-image-filter: brightness(0.7) saturate(0.9);
+    --page-image-opacity: 1;
     --container-bg: linear-gradient(165deg, rgba(15, 23, 42, 0.68) 0%, rgba(15, 23, 42, 0.6) 52%, rgba(17, 28, 49, 0.66) 100%);
     --container-border: rgba(100, 116, 139, 0.38);
     --container-inner-glow: rgba(148, 163, 184, 0.08);
@@ -59,13 +63,32 @@ body {
 
     /* Visual */
     background-color: #667eea;
-    background-image: var(--page-tint), var(--page-bg), var(--page-parallax-image);
-    background-size: cover, cover, 420px 420px;
-    background-position: center center, center center, center top;
-    background-repeat: no-repeat, no-repeat, repeat;
-    background-attachment: fixed, fixed, fixed;
+    background-image: var(--page-tint), var(--page-bg);
+    background-size: cover, cover;
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
     color: var(--text-primary);
     transition: background 0.25s ease, color 0.25s ease;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: var(--page-parallax-image);
+    background-size: 920px auto;
+    background-position: center top;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    opacity: var(--page-image-opacity);
+    filter: var(--page-image-filter);
+}
+
+html:not([data-theme='dark']) body {
+    filter: none;
 }
 
 .container {
