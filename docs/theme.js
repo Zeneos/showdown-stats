@@ -6,8 +6,8 @@
     const scriptUrl = document.currentScript && document.currentScript.src
         ? document.currentScript.src
         : window.location.href;
-    const sunIconSrc = new URL('./assets/icons/Sun-Logo.png', scriptUrl).href;
-    const moonIconSrc = new URL('./assets/icons/Moon-Logo.png', scriptUrl).href;
+    const sunIconSrc = new URL('./assets/icons/sun.png', scriptUrl).href;
+    const moonIconSrc = new URL('./assets/icons/moon.png', scriptUrl).href;
     const saved = localStorage.getItem(storageKey);
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initial = saved === 'light' || saved === 'dark' ? saved : (prefersDark ? 'dark' : 'light');

@@ -111,6 +111,7 @@ async function loadLatestData() {
 
         populateRatingFilter();
         renderTable();
+        setupGlobalPokemonSearch();
 
     } catch (error) {
         console.error('Error loading data:', error);
@@ -707,4 +708,226 @@ function formatPokemonRatingLabel(eloCutoff, ratingFilter) {
         return `${escapeHtml(String(ratingFilter))}+`;
     }
     return `${escapeHtml(String(eloCutoff))}+`;
+}
+
+// Global Pokemon search functionality
+let globalPokemonIndex = null;
+let pokemonSearchOutsideClickHandler = null;
+const iconSpriteBase = '../assets/sprites/icons';
+
+function createSearchPokemonIcon(pokemonName) {
+    if (!pokemonName) return null;
+    const iconSlug = getPokemonIconSlugForSearch(pokemonName);
+    const img = document.createElement('img');
+    img.className = 'pokemon-inline-icon';
+    img.alt = String(pokemonName || 'Pokemon');
+    img.loading = 'lazy';
+    img.src = `${iconSpriteBase}/${iconSlug}.png`;
+    img.onerror = function () {
+        this.onerror = null;
+        this.style.display = 'none';
+    };
+    return img;
+}
+
+function getPokemonIconSlugForSearch(pokemonName) {
+    const base = toKebabCaseForSearch(pokemonName);
+    if (!base) return '';
+
+    // Replace short form with full form names
+    return base
+        .replace(/-hisui/g, '-hisuian')
+        .replace(/-alola/g, '-alolan')
+        .replace(/-galar/g, '-galarian')
+        .replace(/-paldea/g, '-paldean');
+}
+
+function toKebabCaseForSearch(text) {
+    return String(text || '')
+        .replace(/[\u2019'`,]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+async function setupGlobalPokemonSearch() {
+    const searchInput = document.getElementById('global-pokemon-search');
+    const dropdown = document.getElementById('pokemon-search-dropdown');
+    
+    if (!searchInput || !dropdown) return;
+
+    // Build the Pokemon index on first interaction
+    searchInput.addEventListener('focus', async () => {
+        if (!globalPokemonIndex) {
+            globalPokemonIndex = await buildGlobalPokemonIndex();
+        }
+    });
+
+    // Handle focus - show all Pokemon alphabetically
+    searchInput.addEventListener('focus', () => {
+        if (!globalPokemonIndex) return;
+        performPokemonSearch('');
+    });
+
+    // Handle click - show all Pokemon alphabetically
+    searchInput.addEventListener('click', () => {
+        if (!globalPokemonIndex) return;
+        performPokemonSearch('');
+    });
+
+    // Handle search input
+    searchInput.addEventListener('input', (event) => {
+        const query = event.target.value.trim();
+        if (!query) {
+            performPokemonSearch('');
+            return;
+        }
+
+        if (!globalPokemonIndex) {
+            dropdown.innerHTML = '<div class="pokemon-search-empty">Loading Pokemon data...</div>';
+            dropdown.style.display = 'block';
+            return;
+        }
+
+        performPokemonSearch(query);
+    });
+
+    // Close dropdown when clicking outside
+    pokemonSearchOutsideClickHandler = (event) => {
+        if (!searchInput.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.style.display = 'none';
+            searchInput.value = '';
+        }
+    };
+
+    document.addEventListener('click', pokemonSearchOutsideClickHandler);
+
+    // Handle Escape key
+    searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            dropdown.style.display = 'none';
+            searchInput.value = '';
+        }
+    });
+}
+
+async function buildGlobalPokemonIndex() {
+    const index = new Map(); // Maps pokemon name to their formats
+
+    try {
+        // Collect a list of key formats to build the index
+        // We'll use the first format and gen9ou if available
+        const priorityFormats = ['gen9ou'];
+        const formatsToLoad = [];
+
+        if (statsData && statsData.formats) {
+            // Add gen9ou if it exists
+            if (statsData.formats.some(f => getFormatKey(f) === 'gen9ou')) {
+                formatsToLoad.push('gen9ou');
+            }
+            // Add the first format if not already added
+            const firstKey = getFormatKey(statsData.formats[0]);
+            if (!formatsToLoad.includes(firstKey)) {
+                formatsToLoad.push(firstKey);
+            }
+        }
+
+        // If no formats found yet, just use a default
+        if (formatsToLoad.length === 0) {
+            formatsToLoad.push('gen9ou');
+        }
+
+        // Load Pokemon data from selected formats
+        for (const formatKey of formatsToLoad) {
+            try {
+                const pokemonData = await loadPokemonData(formatKey, '0');
+                if (pokemonData && Array.isArray(pokemonData.pokemon)) {
+                    pokemonData.pokemon.forEach(poke => {
+                        const name = poke.pokemon_name;
+                        if (name && !index.has(name)) {
+                            index.set(name, formatKey);
+                        }
+                    });
+                }
+            } catch (error) {
+                console.warn(`Failed to load Pokemon data for format ${formatKey}:`, error);
+            }
+        }
+
+        return index;
+    } catch (error) {
+        console.error('Error building Pokemon index:', error);
+        return new Map();
+    }
+}
+
+function performPokemonSearch(query) {
+    const dropdown = document.getElementById('pokemon-search-dropdown');
+    if (!dropdown || !globalPokemonIndex) {
+        dropdown.innerHTML = '<div class="pokemon-search-empty">No data</div>';
+        dropdown.style.display = 'block';
+        return;
+    }
+
+    // Filter Pokemon based on query
+    const queryLower = query.toLowerCase();
+    let results = Array.from(globalPokemonIndex.entries())
+        .filter(([name]) => name.toLowerCase().includes(queryLower));
+
+    // Sort alphabetically
+    results.sort((a, b) => a[0].localeCompare(b[0]));
+
+    // Limit to 8 results for display
+    results = results.slice(0, 8);
+
+    if (results.length === 0) {
+        dropdown.innerHTML = '<div class="pokemon-search-empty">No Pokemon found</div>';
+        dropdown.style.display = 'block';
+        return;
+    }
+
+    // Build dropdown options with sprite icons
+    dropdown.innerHTML = '';
+    results.forEach(([name, format]) => {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'pokemon-search-option';
+        option.dataset.pokemon = name;
+        option.dataset.format = format;
+
+        // Left side with icon and name
+        const left = document.createElement('span');
+        left.className = 'pokemon-search-option-main pokemon-inline-cell';
+
+        const iconImg = createSearchPokemonIcon(name);
+        if (iconImg) {
+            left.appendChild(iconImg);
+        }
+
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'pokemon-search-option-name';
+        nameSpan.textContent = name;
+        left.appendChild(nameSpan);
+
+        option.appendChild(left);
+        option.addEventListener('click', () => {
+            navigateToPokemon(name, format);
+        });
+
+        dropdown.appendChild(option);
+    });
+
+    dropdown.style.display = 'block';
+}
+
+function navigateToPokemon(pokemonName, formatKey) {
+    if (!pokemonName || !formatKey) return;
+
+    const params = new URLSearchParams();
+    params.set('format', formatKey);
+    params.set('pokemon', pokemonName);
+    params.set('rating', '0');
+
+    const pokemonUrl = `pokemon.html?${params.toString()}`;
+    window.location.href = pokemonUrl;
 }
