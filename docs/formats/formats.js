@@ -95,6 +95,7 @@ async function loadLatestData() {
 
         statsData = await dataResponse.json();
         formatNameMap = await loadFormatNameMap();
+        loadLocalBaseStatsMap();
 
         // Update UI
         const usageDateEl = document.getElementById('usage-stats-date');
@@ -712,7 +713,9 @@ function formatPokemonRatingLabel(eloCutoff, ratingFilter) {
 
 // Global Pokemon search functionality
 let globalPokemonIndex = null;
+let globalPokemonIndexLoadingPromise = null;
 let pokemonSearchOutsideClickHandler = null;
+let baseStatsMapPromise = null;
 const iconSpriteBase = '../assets/sprites/icons';
 
 function createSearchPokemonIcon(pokemonName) {
@@ -756,29 +759,36 @@ async function setupGlobalPokemonSearch() {
     
     if (!searchInput || !dropdown) return;
 
-    // Build the Pokemon index on first interaction
-    searchInput.addEventListener('focus', async () => {
+    async function ensureGlobalPokemonIndexLoaded() {
         if (!globalPokemonIndex) {
-            globalPokemonIndex = await buildGlobalPokemonIndex();
+            if (!globalPokemonIndexLoadingPromise) {
+                globalPokemonIndexLoadingPromise = buildGlobalPokemonIndex();
+            }
+            globalPokemonIndex = await globalPokemonIndexLoadingPromise;
         }
-    });
+        return globalPokemonIndex;
+    }
+
+    async function loadAndShowAllPokemon() {
+        if (!globalPokemonIndex) {
+            dropdown.innerHTML = '<div class="pokemon-search-empty">Loading Pokemon data...</div>';
+            dropdown.style.display = 'block';
+            await ensureGlobalPokemonIndexLoaded();
+        }
+        performPokemonSearch('');
+    }
 
     // Handle focus - show all Pokemon alphabetically
-    searchInput.addEventListener('focus', () => {
-        if (!globalPokemonIndex) return;
-        performPokemonSearch('');
-    });
+    searchInput.addEventListener('focus', loadAndShowAllPokemon);
 
     // Handle click - show all Pokemon alphabetically
-    searchInput.addEventListener('click', () => {
-        if (!globalPokemonIndex) return;
-        performPokemonSearch('');
-    });
+    searchInput.addEventListener('click', loadAndShowAllPokemon);
 
     // Handle search input
-    searchInput.addEventListener('input', (event) => {
+    searchInput.addEventListener('input', async (event) => {
         const query = event.target.value.trim();
         if (!query) {
+            await ensureGlobalPokemonIndexLoaded();
             performPokemonSearch('');
             return;
         }
@@ -811,45 +821,83 @@ async function setupGlobalPokemonSearch() {
     });
 }
 
+async function loadLocalBaseStatsMap() {
+    if (!baseStatsMapPromise) {
+        baseStatsMapPromise = fetch('../assets/base-stats.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load base stats');
+                }
+                return response.json();
+            })
+            .catch(error => {
+                console.warn('Failed to load local base stats:', error);
+                return null;
+            });
+    }
+    return baseStatsMapPromise;
+}
+
+function getPreferredPokemonSearchFormat() {
+    if (statsData && Array.isArray(statsData.formats)) {
+        const preferredFormats = [
+            'gen9nationaldex',
+            'gen8nationaldex',
+            'gen9ou',
+            'gen8ou',
+            'gen7ou'
+        ];
+
+        for (const formatKey of preferredFormats) {
+            if (statsData.formats.some(f => getFormatKey(f) === formatKey)) {
+                return formatKey;
+            }
+        }
+
+        return getFormatKey(statsData.formats[0]) || 'gen9ou';
+    }
+    return 'gen9ou';
+}
+
 async function buildGlobalPokemonIndex() {
     const index = new Map(); // Maps pokemon name to their formats
 
     try {
-        // Collect a list of key formats to build the index
-        // Include formats from different generations to capture more Pokemon
-        const priorityFormats = [
-            'gen9ou', 'gen8ou', 'gen7ou', 'gen6ou', 'gen5ou', 'gen4ou', 'gen3ou', 'gen2ou', 'gen1ou',
-            'gen9nationaldex', 'gen8nationaldex', 'gen7anythinggoes', 'gen6anythinggoes'
-        ];
+        const preferredFormat = getPreferredPokemonSearchFormat();
+        const baseStats = await loadLocalBaseStatsMap();
+
+        if (baseStats && baseStats.pokemon && typeof baseStats.pokemon === 'object') {
+            Object.values(baseStats.pokemon).forEach(entry => {
+                const name = String(entry?.name || '').trim();
+                if (name && !index.has(name)) {
+                    index.set(name, preferredFormat);
+                }
+            });
+        }
+
+        if (index.size > 0) {
+            console.log(`Built Pokemon index from local base-stats.json with ${index.size} entries`);
+            return index;
+        }
+
+        // Fallback to slower format-based index if local base stats couldn't be used
+        const priorityFormats = ['gen9ou'];
         const formatsToLoad = [];
 
         if (statsData && statsData.formats) {
-            // Add priority formats that exist in the data
-            priorityFormats.forEach(formatKey => {
-                if (statsData.formats.some(f => getFormatKey(f) === formatKey)) {
-                    formatsToLoad.push(formatKey);
-                }
-            });
-
-            // If we don't have enough formats, add more from the available list
-            if (formatsToLoad.length < 10) {
-                statsData.formats.forEach(format => {
-                    const key = getFormatKey(format);
-                    if (!formatsToLoad.includes(key) && formatsToLoad.length < 15) {
-                        formatsToLoad.push(key);
-                    }
-                });
+            if (statsData.formats.some(f => getFormatKey(f) === 'gen9ou')) {
+                formatsToLoad.push('gen9ou');
+            }
+            const firstKey = getFormatKey(statsData.formats[0]);
+            if (!formatsToLoad.includes(firstKey)) {
+                formatsToLoad.push(firstKey);
             }
         }
 
-        // If no formats found yet, just use a default
         if (formatsToLoad.length === 0) {
             formatsToLoad.push('gen9ou');
         }
 
-        console.log(`Loading Pokemon index from ${formatsToLoad.length} formats:`, formatsToLoad);
-
-        // Load Pokemon data from selected formats
         for (const formatKey of formatsToLoad) {
             try {
                 const pokemonData = await loadPokemonData(formatKey, '0');
@@ -866,7 +914,6 @@ async function buildGlobalPokemonIndex() {
             }
         }
 
-        console.log(`Built Pokemon index with ${index.size} unique Pokemon`);
         return index;
     } catch (error) {
         console.error('Error building Pokemon index:', error);

@@ -5,19 +5,6 @@
                  "totalPokemon":  1478
              },
     "pokemon":  {
-                    "ababo":  {
-                                  "name":  "Ababo",
-                                  "types":  [
-                                                "Fairy"
-                                            ],
-                                  "hp":  42,
-                                  "atk":  35,
-                                  "def":  27,
-                                  "spa":  35,
-                                  "spd":  35,
-                                  "spe":  38,
-                                  "bst":  212
-                              },
                     "abomasnow":  {
                                       "name":  "Abomasnow",
                                       "types":  [
@@ -11837,20 +11824,6 @@
                                               "spe":  110,
                                               "bst":  550
                                           },
-                    "ogerponwellspringtera":  {
-                                                  "name":  "Ogerpon-Wellspring-Tera",
-                                                  "types":  [
-                                                                "Grass",
-                                                                "Water"
-                                                            ],
-                                                  "hp":  80,
-                                                  "atk":  120,
-                                                  "def":  84,
-                                                  "spa":  60,
-                                                  "spd":  96,
-                                                  "spe":  110,
-                                                  "bst":  550
-                                              },
                     "oinkologne":  {
                                        "name":  "Oinkologne",
                                        "types":  [
