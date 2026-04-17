@@ -816,19 +816,29 @@ async function buildGlobalPokemonIndex() {
 
     try {
         // Collect a list of key formats to build the index
-        // We'll use the first format and gen9ou if available
-        const priorityFormats = ['gen9ou'];
+        // Include formats from different generations to capture more Pokemon
+        const priorityFormats = [
+            'gen9ou', 'gen8ou', 'gen7ou', 'gen6ou', 'gen5ou', 'gen4ou', 'gen3ou', 'gen2ou', 'gen1ou',
+            'gen9nationaldex', 'gen8nationaldex', 'gen7anythinggoes', 'gen6anythinggoes'
+        ];
         const formatsToLoad = [];
 
         if (statsData && statsData.formats) {
-            // Add gen9ou if it exists
-            if (statsData.formats.some(f => getFormatKey(f) === 'gen9ou')) {
-                formatsToLoad.push('gen9ou');
-            }
-            // Add the first format if not already added
-            const firstKey = getFormatKey(statsData.formats[0]);
-            if (!formatsToLoad.includes(firstKey)) {
-                formatsToLoad.push(firstKey);
+            // Add priority formats that exist in the data
+            priorityFormats.forEach(formatKey => {
+                if (statsData.formats.some(f => getFormatKey(f) === formatKey)) {
+                    formatsToLoad.push(formatKey);
+                }
+            });
+
+            // If we don't have enough formats, add more from the available list
+            if (formatsToLoad.length < 10) {
+                statsData.formats.forEach(format => {
+                    const key = getFormatKey(format);
+                    if (!formatsToLoad.includes(key) && formatsToLoad.length < 15) {
+                        formatsToLoad.push(key);
+                    }
+                });
             }
         }
 
@@ -836,6 +846,8 @@ async function buildGlobalPokemonIndex() {
         if (formatsToLoad.length === 0) {
             formatsToLoad.push('gen9ou');
         }
+
+        console.log(`Loading Pokemon index from ${formatsToLoad.length} formats:`, formatsToLoad);
 
         // Load Pokemon data from selected formats
         for (const formatKey of formatsToLoad) {
@@ -854,6 +866,7 @@ async function buildGlobalPokemonIndex() {
             }
         }
 
+        console.log(`Built Pokemon index with ${index.size} unique Pokemon`);
         return index;
     } catch (error) {
         console.error('Error building Pokemon index:', error);
