@@ -68,7 +68,7 @@
         kofiIcon.className = 'support-us-icon';
         kofiIcon.alt = '';
         kofiIcon.decoding = 'async';
-        kofiIcon.src = new URL('../assets/Icons/kofi.png', scriptUrl).href;
+        kofiIcon.src = "../assets/Icons/kofi.png";
         supportLink.appendChild(kofiIcon);
 
         const supportText = document.createElement('span');
