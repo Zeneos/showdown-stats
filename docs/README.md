@@ -116,11 +116,16 @@ To regenerate these name-based icon files:
 ```
 
 ## TODO
-- only keep previous and current usage jsons, and display change in usage based on previous month
-- add styling, background, logos, banner art stuff, copyright, contact, kofi/social media links maybe
-- bonus features for after "soft launch": viewing past months data instead of current, view current live data 
-(ur backend stuff)
-- prepare for champions specific stuff for the launch in april
+- bar at the top, multiple tabs
+- top left most: website icon that redirects to home
+- replays search for teams (using live data from recent replays)
+    - live replays + teams
+    - advanced filter, search for a specific pokemon on a team, against a pokemon, leads, etc.
+- champions page
+    - format rules ?
+    - balance patch changes
+    - specific data from tourneys
+    - specific data from Champions game
 - fun shiny variations for pokemon sprites/icons/banner art to sometimes load into the site
 - team builder features: better teammate sets for team archetypes, team weakness calculator
 - dynamic stat visualizer: hovering over spreads changes the stats of the pokemon in real time

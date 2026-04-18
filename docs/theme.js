@@ -55,6 +55,27 @@
         });
 
         refreshLabel();
+
+        const supportLink = document.createElement('a');
+        supportLink.className = 'support-us-btn';
+        supportLink.href = 'https://ko-fi.com/pokechumps';
+        supportLink.target = '_blank';
+        supportLink.rel = 'noopener noreferrer';
+        supportLink.setAttribute('aria-label', 'Support us on Ko-fi');
+        supportLink.title = 'Support us on Ko-fi';
+
+        const kofiIcon = document.createElement('img');
+        kofiIcon.className = 'support-us-icon';
+        kofiIcon.alt = '';
+        kofiIcon.decoding = 'async';
+        kofiIcon.src = new URL('./assets/icons/kofi.png', scriptUrl).href;
+        supportLink.appendChild(kofiIcon);
+
+        const supportText = document.createElement('span');
+        supportText.textContent = 'Support Us <3';
+        supportLink.appendChild(supportText);
+
+        document.body.appendChild(supportLink);
         document.body.appendChild(button);
     }
 })();

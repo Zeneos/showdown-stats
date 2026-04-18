@@ -218,6 +218,44 @@ html[data-theme='dark'] .theme-toggle-thumb {
     box-shadow: 0 1px 3px rgba(2, 6, 23, 0.65);
 }
 
+.support-us-btn {
+    position: fixed;
+    top: 14px;
+    right: 102px;
+    z-index: 1100;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #f8a5a5;
+    background: #ffe5e5;
+    color: #7a0b0b;
+    font-size: 0.88rem;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.support-us-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+.support-us-btn:hover,
+.support-us-btn:focus-visible {
+    transform: translateY(-1px);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .support-us-btn {
+        display: none;
+    }
+}
+
 footer a:hover {
     /* Typography */
     text-decoration: underline;
