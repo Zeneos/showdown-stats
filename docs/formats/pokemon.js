@@ -1178,8 +1178,16 @@ function renderCountersSection(title, counters, sortState) {
 
     const entries = Object.entries(counters)
         .map(([name, values]) => {
-            if (!Array.isArray(values) || values.length < 3) return null;
-            const [count, rate, variance] = values.map(Number);
+            let count, rate, variance;
+            if (Array.isArray(values) && values.length >= 3) {
+                [count, rate, variance] = values.map(Number);
+            } else if (values && typeof values === 'object') {
+                count = Number(values.n);
+                rate = Number(values.p);
+                variance = Number(values.d);
+            } else {
+                return null;
+            }
             if ([count, rate, variance].some(Number.isNaN)) return null;
             return { name, count, rate, variance };
         })
