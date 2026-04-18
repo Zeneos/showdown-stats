@@ -78,22 +78,16 @@ async function loadLatestData() {
             tableBody.innerHTML = buildFormatsTableSkeletonRows();
         }
 
-        // First, load the index to get the latest period
-        const indexResponse = await fetch(`../index.json`);
-        if (!indexResponse.ok) {
-            throw new Error('Failed to load index');
+        const periods = await loadPeriods();
+        if (!periods || !periods.latest) {
+            throw new Error('Failed to load periods');
         }
+        const latestPeriod = String(periods.latest);
 
-        const index = await indexResponse.json();
-        const latestPeriod = index.latest;
-
-        // Load the data for the latest period
-        const dataResponse = await fetch(`../data/${latestPeriod}.json`);
-        if (!dataResponse.ok) {
-            throw new Error('Failed to load data');
+        statsData = await loadFormatSummary(latestPeriod);
+        if (!statsData) {
+            throw new Error('Failed to load format summary');
         }
-
-        statsData = await dataResponse.json();
         formatNameMap = await loadFormatNameMap();
         loadLocalBaseStatsMap();
 
@@ -900,7 +894,7 @@ async function buildGlobalPokemonIndex() {
 
         for (const formatKey of formatsToLoad) {
             try {
-                const pokemonData = await loadPokemonData(formatKey, '0');
+                const pokemonData = await loadPokemonUsageData(formatKey, '0');
                 if (pokemonData && Array.isArray(pokemonData.pokemon)) {
                     pokemonData.pokemon.forEach(poke => {
                         const name = poke.pokemon_name;

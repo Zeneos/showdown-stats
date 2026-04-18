@@ -1,5 +1,8 @@
 // Shared utilities, constants, and data loading for Pokemon Showdown Stats
 
+// API configuration
+const API_BASE = 'https://pokechumps-api.s3.us-east-2.amazonaws.com/v1';
+
 // Sprite paths
 const spriteShowdownBase = '../assets/sprites/showdown';
 const spriteOriginalBase = '../assets/sprites/original';
@@ -11,7 +14,9 @@ const metaEncounterBattles = 15;
 const metaEncounterProbability = 0.5;
 
 // Shared data caches
-const formatDataCache = {};
+const apiResponseCache = {};
+const formatSummaryCache = {};
+let periodsPromise = null;
 let formatNameMapPromise = null;
 let formatNameMap = null;
 
@@ -106,64 +111,91 @@ async function loadFormatNameMap() {
     return formatNameMapPromise;
 }
 
-async function loadFormatData(formatName) {
-    if (!formatDataCache[formatName]) {
-        formatDataCache[formatName] = fetch(`../data/${encodeURIComponent(formatName)}.json`)
-            .then(response => {
-                if (!response.ok) return null;
-                return response.json();
-            })
+function apiFetch(path) {
+    const url = `${API_BASE}${path}`;
+    if (!apiResponseCache[url]) {
+        apiResponseCache[url] = fetch(url)
+            .then(response => response.ok ? response.json() : null)
             .catch(error => {
-                console.error('Error loading format data:', error);
+                console.error('API fetch failed:', url, error);
                 return null;
             });
     }
-    return formatDataCache[formatName];
+    return apiResponseCache[url];
 }
 
-const formatUsageDataCache = {};
+function resolveApiRating(rating) {
+    // API does not expose an "all" aggregate yet — map to "0".
+    if (!rating || rating === 'all') return '0';
+    return String(rating);
+}
 
-async function loadFormatUsageData(formatName) {
-    if (!formatUsageDataCache[formatName]) {
-        formatUsageDataCache[formatName] = fetch(`../data/${encodeURIComponent(formatName)}.usage.json`)
-            .then(response => {
-                if (!response.ok) return null;
-                return response.json();
-            })
-            .catch(error => {
-                console.error('Error loading format usage data:', error);
-                return null;
-            });
+async function fetchWithRatingFallback(buildPath, requestedRating) {
+    const ratingKey = resolveApiRating(requestedRating);
+    const primary = await apiFetch(buildPath(ratingKey));
+    if (primary) return primary;
+    if (ratingKey === '0') return null;
+    return apiFetch(buildPath('0'));
+}
+
+async function loadPeriods() {
+    if (!periodsPromise) {
+        periodsPromise = apiFetch('/periods.json');
     }
-    return formatUsageDataCache[formatName];
+    return periodsPromise;
+}
+
+async function loadLatestPeriod() {
+    const periods = await loadPeriods();
+    return periods && periods.latest ? String(periods.latest) : '';
+}
+
+async function loadFormatSummary(period) {
+    const key = String(period || '').trim();
+    if (!key) return null;
+    if (!formatSummaryCache[key]) {
+        formatSummaryCache[key] = apiFetch(`/periods/${encodeURIComponent(key)}/formats.json`);
+    }
+    return formatSummaryCache[key];
 }
 
 async function loadPokemonUsageData(formatName, rating) {
-    const formatData = await loadFormatUsageData(formatName);
-    if (!formatData || !formatData.by_rating) return null;
-
-    const ratingValue = rating === 'all' ? '0' : rating || '0';
-    let ratingData = formatData.by_rating[ratingValue];
-
-    if (!ratingData && ratingValue !== '0') {
-        ratingData = formatData.by_rating['0'];
-    }
-
-    return ratingData || null;
+    const period = await loadLatestPeriod();
+    if (!period || !formatName) return null;
+    const buildPath = r =>
+        `/periods/${encodeURIComponent(period)}/formats/${encodeURIComponent(formatName)}/usage/${encodeURIComponent(r)}.json`;
+    return fetchWithRatingFallback(buildPath, rating);
 }
 
-async function loadPokemonData(formatName, rating) {
-    const formatData = await loadFormatData(formatName);
-    if (!formatData || !formatData.by_rating) return null;
+async function loadPokemonEntry(formatName, pokemonName, rating) {
+    const period = await loadLatestPeriod();
+    if (!period || !formatName || !pokemonName) return null;
+    const pokemonId = toId(pokemonName);
+    if (!pokemonId) return null;
+    const buildPath = r =>
+        `/periods/${encodeURIComponent(period)}/formats/${encodeURIComponent(formatName)}/pokemon/${encodeURIComponent(pokemonId)}/${encodeURIComponent(r)}.json`;
+    return fetchWithRatingFallback(buildPath, rating);
+}
 
-    const ratingValue = rating === 'all' ? '0' : rating || '0';
-    let ratingData = formatData.by_rating[ratingValue];
+async function loadPokemonCrossFormats(pokemonName, period) {
+    const resolvedPeriod = period ? String(period).trim() : await loadLatestPeriod();
+    if (!resolvedPeriod || !pokemonName) return null;
+    const pokemonId = toId(pokemonName);
+    if (!pokemonId) return null;
+    return apiFetch(`/pokemon/${encodeURIComponent(pokemonId)}/formats/${encodeURIComponent(resolvedPeriod)}.json`);
+}
 
-    if (!ratingData && ratingValue !== '0') {
-        ratingData = formatData.by_rating['0'];
-    }
-
-    return ratingData || null;
+async function getFormatRatings(formatName) {
+    const period = await loadLatestPeriod();
+    if (!period) return [];
+    const summary = await loadFormatSummary(period);
+    if (!summary || !Array.isArray(summary.formats)) return [];
+    const entry = summary.formats.find(f => getFormatKey(f) === formatName);
+    if (!entry || !entry.by_rating) return [];
+    return Object.keys(entry.by_rating)
+        .map(r => Number.parseInt(r, 10))
+        .filter(r => !Number.isNaN(r))
+        .sort((a, b) => a - b);
 }
 
 function initializeGlobalHelpTooltip() {
