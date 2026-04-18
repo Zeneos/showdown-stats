@@ -47,7 +47,6 @@ let abilityDataMapPromise = null;
 let abilityDataMap = null;
 let itemNameMapPromise = null;
 let itemNameMap = null;
-const latestFormatsDataCache = {};
 let pokemonPickerOutsideClickHandler = null;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -135,30 +134,33 @@ async function loadPokemonDetail() {
     }
 
     let latestPeriod = '';
-
     try {
-        const indexResponse = await fetch('../index.json');
-        if (indexResponse.ok) {
-            const index = await indexResponse.json();
-            latestPeriod = String(index.latest || '');
+        const periods = await loadPeriods();
+        if (periods && periods.latest) {
+            latestPeriod = String(periods.latest);
             const usageDateEl = document.getElementById('usage-stats-date');
             if (usageDateEl) {
-                usageDateEl.textContent = `Usage stats data from ${index.latest}`;
+                usageDateEl.textContent = `Usage stats data from ${latestPeriod}`;
             }
         }
     } catch (error) {
-        console.error('Error loading index:', error);
+        console.error('Error loading periods:', error);
     }
 
-    const pokemonData = await loadPokemonData(formatName, rating);
-    if (!pokemonData || !Array.isArray(pokemonData.pokemon)) {
+    const pokemonUsage = await loadPokemonUsageData(formatName, rating);
+    if (!pokemonUsage || !Array.isArray(pokemonUsage.pokemon)) {
         showError(`Pokemon data for "${escapeHtml(pokemonName)}" could not be loaded.`);
         return;
     }
 
-    let entry = findPokemonEntry(pokemonData.pokemon, pokemonName);
+    const pokemonList = pokemonUsage.pokemon;
+
+    let entry = await loadPokemonEntry(formatName, pokemonName, rating);
     if (!entry) {
-        entry = getMostUsedPokemonEntry(pokemonData.pokemon);
+        const fallbackListEntry = getMostUsedPokemonEntry(pokemonList);
+        if (fallbackListEntry) {
+            entry = await loadPokemonEntry(formatName, fallbackListEntry.pokemon_name, rating);
+        }
         if (!entry) {
             showError(`Pokemon data for format "${escapeHtml(formatName)}" is empty.`);
             return;
@@ -209,7 +211,7 @@ async function loadPokemonDetail() {
         typesEl.innerHTML = renderPokemonHeaderTypes(types);
     }
 
-    populatePokemonSwitcher(entry.pokemon_name, formatName, rating, pokemonData.pokemon);
+    populatePokemonSwitcher(entry.pokemon_name, formatName, rating, pokemonList);
     await populateRatingFilter(formatName, rating, entry.pokemon_name, latestPeriod);
     await populateFormatSwitcher(entry.pokemon_name, formatName, displayFormatName, rating, latestPeriod);
 
@@ -228,7 +230,7 @@ async function loadPokemonDetail() {
 
     const rankingEl = document.getElementById('pokemon-ranking');
     if (rankingEl) {
-        const monthlyRank = getPokemonMonthlyRank(pokemonData.pokemon, entry.pokemon_name);
+        const monthlyRank = Number(entry.monthly_rank) || getPokemonMonthlyRank(pokemonList, entry.pokemon_name);
         if (monthlyRank > 0) {
             const usageTierClass = getUsageTierClass(entry.usage_pct);
             const rankClass = usageTierClass ? ` class="${usageTierClass}"` : '';
@@ -596,19 +598,8 @@ async function populateRatingFilter(formatName, currentRating, pokemonName, late
     containerEl.innerHTML = '';
     containerEl.setAttribute('aria-busy', 'true');
 
-    const formatData = await loadFormatData(formatName);
-
-    let parsedRatings = [];
-    if (formatData && Array.isArray(formatData.available_ratings)) {
-        parsedRatings = formatData.available_ratings
-            .filter(rating => !Number.isNaN(rating) && rating > 0)
-            .sort((a, b) => a - b);
-    } else if (formatData && formatData.by_rating) {
-        parsedRatings = Object.keys(formatData.by_rating)
-            .map(rating => Number.parseInt(rating, 10))
-            .filter(rating => !Number.isNaN(rating) && rating > 0)
-            .sort((a, b) => a - b);
-    }
+    const parsedRatings = await getFormatRatings(formatName)
+        .then(ratings => ratings.filter(rating => rating > 0));
 
     const visibleRatings = parsedRatings.length > 3
         ? parsedRatings.slice(-3)
@@ -659,20 +650,7 @@ async function populateRatingFilter(formatName, currentRating, pokemonName, late
 async function loadLatestFormatsData(latestPeriod) {
     const key = String(latestPeriod || '').trim();
     if (!key) return null;
-
-    if (!latestFormatsDataCache[key]) {
-        latestFormatsDataCache[key] = fetch(`../data/${encodeURIComponent(key)}.json`)
-            .then(response => {
-                if (!response.ok) return null;
-                return response.json();
-            })
-            .catch(error => {
-                console.error('Error loading latest formats data:', error);
-                return null;
-            });
-    }
-
-    return latestFormatsDataCache[key];
+    return loadFormatSummary(key);
 }
 
 function resolvePokemonFromInput(inputValue, options) {
@@ -689,23 +667,7 @@ function pokemonMatchesPickerQuery(pokemon, query) {
     if (!rawQuery) return true;
 
     const pokemonName = String(pokemon && pokemon.pokemon_name ? pokemon.pokemon_name : '').toLowerCase();
-    if (pokemonName.includes(rawQuery)) {
-        return true;
-    }
-
-    const queryId = toId(rawQuery);
-    if (!queryId) {
-        return false;
-    }
-
-    const moves = pokemon && pokemon.moves_json && typeof pokemon.moves_json === 'object'
-        ? Object.keys(pokemon.moves_json)
-        : [];
-
-    return moves.some(moveName => {
-        const move = String(moveName || '').toLowerCase();
-        return move.includes(rawQuery) || toId(move) === queryId;
-    });
+    return pokemonName.includes(rawQuery);
 }
 
 function formatPercent(value) {
@@ -1216,8 +1178,16 @@ function renderCountersSection(title, counters, sortState) {
 
     const entries = Object.entries(counters)
         .map(([name, values]) => {
-            if (!Array.isArray(values) || values.length < 3) return null;
-            const [count, rate, variance] = values.map(Number);
+            let count, rate, variance;
+            if (Array.isArray(values) && values.length >= 3) {
+                [count, rate, variance] = values.map(Number);
+            } else if (values && typeof values === 'object') {
+                count = Number(values.n);
+                rate = Number(values.p);
+                variance = Number(values.d);
+            } else {
+                return null;
+            }
             if ([count, rate, variance].some(Number.isNaN)) return null;
             return { name, count, rate, variance };
         })
