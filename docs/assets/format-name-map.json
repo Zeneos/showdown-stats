@@ -1,12 +1,12 @@
 {
     "meta":  {
-                 "generatedAt":  "2026-03-08T06:54:27.4272392-07:00",
+                 "generatedAt":  "2026-05-02T00:00:00.0000000-07:00",
                  "source":  {
                                 "latestStats":  "docs/formats/2025-12.json",
                                 "displayNames":  "https://raw.githubusercontent.com/smogon/pokemon-showdown/master/config/formats.ts"
                             },
-                 "totalFormats":  60,
-                 "matchedFromShowdown":  56,
+                 "totalFormats":  67,
+                 "matchedFromShowdown":  63,
                  "fallbackIdentity":  4,
                  "note":  "Matched formats use official Showdown display names. Unmatched formats fallback to identity and can be edited manually."
              },
@@ -34,9 +34,14 @@
                     "gen9almostanyability":  "[Gen 9] Almost Any Ability",
                     "gen9anythinggoes":  "[Gen 9] Anything Goes",
                     "gen9balancedhackmons":  "[Gen 9] Balanced Hackmons",
+                    "gen9bssregi":  "[Gen 9] BSS Reg I",
                     "gen9bssregj":  "[Gen 9] BSS Reg J",
                     "gen9camomons":  "[Gen 9] Camomons",
                     "gen9cap":  "[Gen 9] CAP",
+                    "gen9championsbssregma":  "[Gen 9 Champions] BSS Reg M-A",
+                    "gen9championsou":  "[Gen 9 Champions] OU",
+                    "gen9championsvgc2026regma":  "[Gen 9 Champions] VGC 2026 Reg M-A",
+                    "gen9championsvgc2026regmabo3":  "[Gen 9 Champions] VGC 2026 Reg M-A (Bo3)",
                     "gen9chatbats":  "[Gen 9] ChatBats",
                     "gen9convergence":  "[Gen 9] Convergence",
                     "gen9doublesou":  "[Gen 9] Doubles OU",
@@ -69,6 +74,8 @@
                     "gen9vgc2025regj":  "[Gen 9] VGC 2025 Reg J",
                     "gen9vgc2026regf":  "[Gen 9] VGC 2026 Reg F",
                     "gen9vgc2026regfbo3":  "[Gen 9] VGC 2026 Reg F (Bo3)",
+                    "gen9vgc2026regi":  "[Gen 9] VGC 2026 Reg I",
+                    "gen9vgc2026regibo3":  "[Gen 9] VGC 2026 Reg I (Bo3)",
                     "gen9voltturnmayhem":  "[Gen 9] VoltTurn Mayhem",
                     "gen9zu":  "[Gen 9] ZU"
                 }
