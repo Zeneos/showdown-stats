@@ -5411,7 +5411,7 @@
                                         "bst":  570
                                     },
                     "farfetchd":  {
-                                      "name":  "Farfetchâd",
+                                      "name":  "Farfetch’d",
                                       "types":  [
                                                     "Normal",
                                                     "Flying"
@@ -5425,7 +5425,7 @@
                                       "bst":  377
                                   },
                     "farfetchdgalar":  {
-                                           "name":  "Farfetchâd-Galar",
+                                           "name":  "Farfetch’d-Galar",
                                            "types":  [
                                                          "Fighting"
                                                      ],
@@ -15826,7 +15826,7 @@
                                             "bst":  308
                                         },
                     "sirfetchd":  {
-                                      "name":  "Sirfetchâd",
+                                      "name":  "Sirfetch’d",
                                       "types":  [
                                                     "Fighting"
                                                 ],

@@ -36,8 +36,25 @@ function formatNumber(num) {
     return Number(num).toLocaleString('en-US');
 }
 
+// Case overrides for Pokemon whose names arrive lowercase from the API
+// but whose sprite files on the case-sensitive server use mixed case.
+const spriteCaseOverrides = {
+    'ogerpon-wellspring': 'Ogerpon-Wellspring',
+    'ogerpon-hearthflame': 'Ogerpon-Hearthflame',
+    'ogerpon-cornerstone': 'Ogerpon-Cornerstone',
+    'ogerpon-teal-tera': 'Ogerpon',
+    'ogerpon-wellspring-tera': 'Ogerpon-Wellspring',
+    'ogerpon-hearthflame-tera': 'Ogerpon-Hearthflame',
+    'ogerpon-cornerstone-tera': 'Ogerpon-Cornerstone',
+    'tauros-paldea-aqua': 'tauros-paldea-aqua-breed',
+    'tauros-paldea-blaze': 'tauros-paldea-blaze-breed',
+    'tauros-paldea-combat': 'tauros-paldea-combat-breed',
+};
+
 function sanitizeSpriteName(name) {
     if (!name) return '';
+    const override = spriteCaseOverrides[name.toLowerCase()];
+    if (override) return override;
     return name
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
