@@ -148,33 +148,14 @@ async function loadPokemonDetail() {
     }
 
     const pokemonUsage = await loadPokemonUsageData(formatName, rating);
-    if (!pokemonUsage || !Array.isArray(pokemonUsage.pokemon)) {
-        showError(`Pokemon data for "${escapeHtml(pokemonName)}" could not be loaded.`);
-        return;
-    }
+    const pokemonList = pokemonUsage && Array.isArray(pokemonUsage.pokemon)
+        ? pokemonUsage.pokemon
+        : [];
 
-    const pokemonList = pokemonUsage.pokemon;
-
-    let entry = await loadPokemonEntry(formatName, pokemonName, rating);
+    const entry = await loadPokemonEntry(formatName, pokemonName, rating);
     if (!entry) {
-        const fallbackListEntry = getMostUsedPokemonEntry(pokemonList);
-        if (fallbackListEntry) {
-            entry = await loadPokemonEntry(formatName, fallbackListEntry.pokemon_name, rating);
-        }
-        if (!entry) {
-            showError(`Pokemon data for format "${escapeHtml(formatName)}" is empty.`);
-            return;
-        }
-
-        // Keep URL in sync when we auto-fallback to the most-used Pokemon.
-        const nextParams = new URLSearchParams();
-        nextParams.set('format', formatName);
-        nextParams.set('pokemon', entry.pokemon_name);
-        if (rating && rating !== 'all') {
-            nextParams.set('rating', rating);
-        }
-        const nextUrl = `${window.location.pathname || 'pokemon.html'}?${nextParams.toString()}`;
-        window.history.replaceState({}, '', nextUrl);
+        await showPokemonNoData(pokemonName, formatName, rating, latestPeriod, pokemonList);
+        return;
     }
 
     const baseStats = await loadBaseStatsForPokemon(entry.pokemon_name);
@@ -735,21 +716,6 @@ async function loadAllFormatOptions(latestPeriod) {
     }
 }
 
-function getMostUsedPokemonEntry(pokemonList) {
-    if (!Array.isArray(pokemonList) || pokemonList.length === 0) return null;
-
-    return [...pokemonList]
-        .filter(p => p && typeof p === 'object')
-        .sort((a, b) => {
-            const usageDiff = Number(b.usage_pct || 0) - Number(a.usage_pct || 0);
-            if (usageDiff !== 0) return usageDiff;
-
-            const countDiff = Number(b.usage_count || 0) - Number(a.usage_count || 0);
-            if (countDiff !== 0) return countDiff;
-
-            return String(a.pokemon_name || '').localeCompare(String(b.pokemon_name || ''));
-        })[0] || null;
-}
 
 function renderBaseStatsSection(title, baseStats) {
     if (!baseStats || typeof baseStats !== 'object') return '';
@@ -1325,6 +1291,96 @@ function spaNavigateFromHref(href) {
 function getSortArrow(sortState, key) {
     if (sortState.key !== key) return '⇅';
     return sortState.direction === 'asc' ? '↑' : '↓';
+}
+
+async function showPokemonNoData(pokemonName, formatName, rating, latestPeriod, pokemonList) {
+    const [baseStats, crossFormats] = await Promise.all([
+        loadBaseStatsForPokemon(pokemonName),
+        loadPokemonCrossFormats(pokemonName, latestPeriod),
+    ]);
+    moveDataMap = await loadMoveDataMap();
+    abilityDataMap = await loadAbilityDataMap();
+    itemNameMap = await loadItemNameMap();
+    formatNameMap = await loadFormatNameMap();
+    const displayFormatName = getDisplayFormatName(formatName);
+
+    // Find the best alternate format entry for moves/spreads/abilities.
+    let altEntry = null;
+    let altFormatKey = null;
+    if (crossFormats && Array.isArray(crossFormats.formats) && crossFormats.formats.length > 0) {
+        const candidates = crossFormats.formats
+            .map(f => getFormatKey(f))
+            .filter(k => k && k !== formatName);
+        for (const candidate of candidates) {
+            const e = await loadPokemonEntry(candidate, pokemonName, '0');
+            if (e) { altEntry = e; altFormatKey = candidate; break; }
+        }
+    }
+
+    const detail = document.getElementById('pokemon-detail');
+    if (detail) detail.style.display = 'block';
+
+    document.title = `${pokemonName} - ${displayFormatName}`;
+
+    const sprite = document.getElementById('pokemon-sprite');
+    const spritePaths = getPokemonSpritePaths(pokemonName);
+    if (sprite) {
+        sprite.src = spritePaths.showdown;
+        sprite.onerror = function () {
+            this.onerror = function () {
+                this.onerror = null;
+                this.src = spritePaths.placeholder;
+            };
+            this.src = spritePaths.original;
+        };
+    }
+
+    const nameEl = document.getElementById('pokemon-name');
+    if (nameEl) nameEl.textContent = pokemonName;
+
+    const typesEl = document.getElementById('pokemon-types');
+    if (typesEl) {
+        const types = baseStats && Array.isArray(baseStats.types) ? baseStats.types : [];
+        typesEl.innerHTML = renderPokemonHeaderTypes(types);
+    }
+
+    const usageEl = document.getElementById('pokemon-usage');
+    if (usageEl) usageEl.textContent = 'Usage: N/A';
+
+    const rankingEl = document.getElementById('pokemon-ranking');
+    if (rankingEl) rankingEl.textContent = 'Monthly Ranking: N/A';
+
+    const backLink = document.getElementById('back-to-format');
+    if (backLink) {
+        const bp = new URLSearchParams();
+        bp.set('format', formatName);
+        if (rating && rating !== 'all') bp.set('rating', rating);
+        backLink.href = `index.html?${bp.toString()}`;
+    }
+
+    if (pokemonList.length > 0) {
+        populatePokemonSwitcher(pokemonName, formatName, rating, pokemonList);
+    }
+    await populateRatingFilter(formatName, rating, pokemonName, latestPeriod);
+    await populateFormatSwitcher(pokemonName, formatName, displayFormatName, rating, latestPeriod);
+
+    const altFormatLabel = altFormatKey
+        ? ` <span class="pokemon-no-data-source">(from ${escapeHtml(getDisplayFormatName(altFormatKey))})</span>`
+        : '';
+
+    const grid = document.getElementById('pokemon-detail-grid');
+    if (grid) {
+        grid.innerHTML = [
+            `<section class="pokemon-detail-section pokemon-no-data pokemon-detail-section--full"><p>No usage data for ${escapeHtml(pokemonName)} in ${escapeHtml(displayFormatName)} this month.${altEntry ? ` Showing data from ${escapeHtml(getDisplayFormatName(altFormatKey))}.` : ''}</p></section>`,
+            renderBaseStatsSection('Base Stats', baseStats),
+            altEntry ? renderMapSection(`Moves${altFormatLabel}`, altEntry.moves_json) : '',
+            altEntry ? renderMapSection(`Spreads${altFormatLabel}`, altEntry.spreads_json) : '',
+            altEntry ? renderMapSection(`Abilities${altFormatLabel}`, altEntry.abilities_json) : '',
+        ].filter(Boolean).join('');
+        grid.style.opacity = '';
+        grid.style.pointerEvents = '';
+        grid.style.transition = '';
+    }
 }
 
 function showError(message) {

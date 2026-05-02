@@ -728,6 +728,20 @@ tbody tr:hover {
     color: #212529;
 }
 
+.pokemon-no-data {
+    flex: 0 1 100%;
+    width: 100%;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.pokemon-no-data-source {
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #9ca3af;
+    font-style: italic;
+}
+
 .detail-table {
     /* Display & Box Model */
     width: 100%;
@@ -1770,6 +1784,10 @@ html[data-theme='dark'] .pokemon-detail-skeleton-card {
 html[data-theme='dark'] .pokemon-detail-section {
     background: #0b1220;
     border-color: #334155;
+}
+
+html[data-theme='dark'] .pokemon-no-data {
+    color: #9ca3af;
 }
 
 html[data-theme='dark'] .pokemon-detail-sprite {

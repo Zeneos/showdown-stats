@@ -710,6 +710,9 @@ let globalPokemonIndex = null;
 let globalPokemonIndexLoadingPromise = null;
 let pokemonSearchOutsideClickHandler = null;
 let baseStatsMapPromise = null;
+let searchResultsAll = [];
+let searchResultsOffset = 0;
+const SEARCH_PAGE_SIZE = 15;
 const iconSpriteBase = '../assets/sprites/icons';
 
 function createSearchPokemonIcon(pokemonName) {
@@ -806,6 +809,14 @@ async function setupGlobalPokemonSearch() {
 
     document.addEventListener('click', pokemonSearchOutsideClickHandler);
 
+    // Load more results when the user scrolls near the bottom of the dropdown.
+    dropdown.addEventListener('scroll', () => {
+        if (searchResultsOffset >= searchResultsAll.length) return;
+        if (dropdown.scrollTop + dropdown.clientHeight >= dropdown.scrollHeight - 40) {
+            appendSearchPage(dropdown);
+        }
+    });
+
     // Handle Escape key
     searchInput.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
@@ -854,65 +865,89 @@ function getPreferredPokemonSearchFormat() {
 }
 
 async function buildGlobalPokemonIndex() {
-    const index = new Map(); // Maps pokemon name to their formats
+    const index = new Map(); // Maps pokemon name to their best format
 
     try {
-        const preferredFormat = getPreferredPokemonSearchFormat();
+        const fallbackFormat = getPreferredPokemonSearchFormat();
         const baseStats = await loadLocalBaseStatsMap();
 
+        // Seed index with every known Pokemon pointing at the fallback format.
+        // This guarantees all Pokemon are searchable even if usage data is missing.
         if (baseStats && baseStats.pokemon && typeof baseStats.pokemon === 'object') {
             Object.values(baseStats.pokemon).forEach(entry => {
                 const name = String(entry?.name || '').trim();
-                if (name && !index.has(name)) {
-                    index.set(name, preferredFormat);
-                }
+                if (name) index.set(name, fallbackFormat);
             });
         }
 
-        if (index.size > 0) {
-            console.log(`Built Pokemon index from local base-stats.json with ${index.size} entries`);
-            return index;
-        }
+        // Sort all formats by battle count descending so the most-played format wins.
+        const sortedFormats = Array.isArray(statsData?.formats)
+            ? [...statsData.formats].sort((a, b) => {
+                const ba = Number(a.by_rating?.['0']) || 0;
+                const bb = Number(b.by_rating?.['0']) || 0;
+                return bb - ba;
+            })
+            : [];
 
-        // Fallback to slower format-based index if local base stats couldn't be used
-        const priorityFormats = ['gen9ou'];
-        const formatsToLoad = [];
+        const formatKeys = sortedFormats.map(f => getFormatKey(f)).filter(Boolean);
 
-        if (statsData && statsData.formats) {
-            if (statsData.formats.some(f => getFormatKey(f) === 'gen9ou')) {
-                formatsToLoad.push('gen9ou');
-            }
-            const firstKey = getFormatKey(statsData.formats[0]);
-            if (!formatsToLoad.includes(firstKey)) {
-                formatsToLoad.push(firstKey);
-            }
-        }
+        // Fetch usage data for every format in parallel.
+        const results = await Promise.all(
+            formatKeys.map(fmt =>
+                loadPokemonUsageData(fmt, '0')
+                    .then(data => ({ fmt, data }))
+                    .catch(() => ({ fmt, data: null }))
+            )
+        );
 
-        if (formatsToLoad.length === 0) {
-            formatsToLoad.push('gen9ou');
-        }
-
-        for (const formatKey of formatsToLoad) {
-            try {
-                const pokemonData = await loadPokemonUsageData(formatKey, '0');
-                if (pokemonData && Array.isArray(pokemonData.pokemon)) {
-                    pokemonData.pokemon.forEach(poke => {
-                        const name = poke.pokemon_name;
-                        if (name && !index.has(name)) {
-                            index.set(name, formatKey);
-                        }
-                    });
-                }
-            } catch (error) {
-                console.warn(`Failed to load Pokemon data for format ${formatKey}:`, error);
+        // Process least-played first so the most-played format overwrites and wins.
+        // Each Pokemon ends up pointing to the highest-traffic format it appears in.
+        for (let i = results.length - 1; i >= 0; i--) {
+            const { fmt, data } = results[i];
+            if (!data || !Array.isArray(data.pokemon)) continue;
+            for (const poke of data.pokemon) {
+                if (poke.pokemon_name) index.set(poke.pokemon_name, fmt);
             }
         }
 
+        console.log(`Built Pokemon index with ${index.size} entries across ${formatKeys.length} formats`);
         return index;
     } catch (error) {
         console.error('Error building Pokemon index:', error);
         return new Map();
     }
+}
+
+function buildSearchOptionEl(name, format) {
+    const option = document.createElement('button');
+    option.type = 'button';
+    option.className = 'pokemon-search-option';
+    option.dataset.pokemon = name;
+    option.dataset.format = format;
+
+    const left = document.createElement('span');
+    left.className = 'pokemon-search-option-main pokemon-inline-cell';
+
+    const iconImg = createSearchPokemonIcon(name);
+    if (iconImg) left.appendChild(iconImg);
+
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'pokemon-search-option-name';
+    nameSpan.textContent = name;
+    left.appendChild(nameSpan);
+
+    option.appendChild(left);
+    option.addEventListener('click', () => navigateToPokemon(name, format));
+    return option;
+}
+
+function appendSearchPage(dropdown) {
+    const page = searchResultsAll.slice(searchResultsOffset, searchResultsOffset + SEARCH_PAGE_SIZE);
+    if (page.length === 0) return;
+    const frag = document.createDocumentFragment();
+    page.forEach(([name, format]) => frag.appendChild(buildSearchOptionEl(name, format)));
+    dropdown.appendChild(frag);
+    searchResultsOffset += page.length;
 }
 
 function performPokemonSearch(query) {
@@ -923,54 +958,20 @@ function performPokemonSearch(query) {
         return;
     }
 
-    // Filter Pokemon based on query
     const queryLower = query.toLowerCase();
-    let results = Array.from(globalPokemonIndex.entries())
-        .filter(([name]) => name.toLowerCase().includes(queryLower));
+    searchResultsAll = Array.from(globalPokemonIndex.entries())
+        .filter(([name]) => name.toLowerCase().includes(queryLower))
+        .sort((a, b) => a[0].localeCompare(b[0]));
+    searchResultsOffset = 0;
 
-    // Sort alphabetically
-    results.sort((a, b) => a[0].localeCompare(b[0]));
-
-    // Limit to 8 results for display
-    results = results.slice(0, 8);
-
-    if (results.length === 0) {
+    if (searchResultsAll.length === 0) {
         dropdown.innerHTML = '<div class="pokemon-search-empty">No Pokemon found</div>';
         dropdown.style.display = 'block';
         return;
     }
 
-    // Build dropdown options with sprite icons
     dropdown.innerHTML = '';
-    results.forEach(([name, format]) => {
-        const option = document.createElement('button');
-        option.type = 'button';
-        option.className = 'pokemon-search-option';
-        option.dataset.pokemon = name;
-        option.dataset.format = format;
-
-        // Left side with icon and name
-        const left = document.createElement('span');
-        left.className = 'pokemon-search-option-main pokemon-inline-cell';
-
-        const iconImg = createSearchPokemonIcon(name);
-        if (iconImg) {
-            left.appendChild(iconImg);
-        }
-
-        const nameSpan = document.createElement('span');
-        nameSpan.className = 'pokemon-search-option-name';
-        nameSpan.textContent = name;
-        left.appendChild(nameSpan);
-
-        option.appendChild(left);
-        option.addEventListener('click', () => {
-            navigateToPokemon(name, format);
-        });
-
-        dropdown.appendChild(option);
-    });
-
+    appendSearchPage(dropdown);
     dropdown.style.display = 'block';
 }
 
