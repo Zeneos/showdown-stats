@@ -7,25 +7,7 @@
     <link rel="icon" type="image/png" href="../assets/Icons/poketail.png">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/formats.css">
-    <style>
-        .coming-soon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 30px;
-            text-align: center;
-            color: var(--text-muted);
-            gap: 12px;
-        }
-        .coming-soon h2 {
-            font-size: 1.6rem;
-            color: var(--text-secondary);
-        }
-        .coming-soon p {
-            font-size: 0.95rem;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/champions.css">
 </head>
 <body>
     <nav class="site-nav">
@@ -38,17 +20,406 @@
     </nav>
 
     <div class="container">
-        <div class="coming-soon">
-            <h2>Pokemon Champions</h2>
-            <p>Coming soon.</p>
+        <div class="champ-page">
+
+            <!-- ── Regulation M-A Overview ── -->
+            <section class="champ-section">
+                <h2 class="champ-section-title">
+                    Regulation M-A
+                    <span class="champ-tag champ-tag--reg">Current</span>
+                </h2>
+                <div class="champ-reg-grid">
+                    <div class="champ-reg-card">
+                        <div class="champ-reg-card-label">Format</div>
+                        <div class="champ-reg-card-value">Double Battles<br>Pick 4 of 6</div>
+                    </div>
+                    <div class="champ-reg-card">
+                        <div class="champ-reg-card-label">Active Period</div>
+                        <div class="champ-reg-card-value">Apr 8 – Jun 17, 2026</div>
+                    </div>
+                    <div class="champ-reg-card">
+                        <div class="champ-reg-card-label">Level Cap</div>
+                        <div class="champ-reg-card-value">Auto-levelled to 50</div>
+                    </div>
+                    <div class="champ-reg-card">
+                        <div class="champ-reg-card-label">Clauses</div>
+                        <div class="champ-reg-card-value">Species Clause<br>Item Clause</div>
+                    </div>
+                    <div class="champ-reg-card">
+                        <div class="champ-reg-card-label">Gimmick</div>
+                        <div class="champ-reg-card-value">Mega Evolution ✓<br>Terastallization ✓</div>
+                    </div>
+                    <div class="champ-reg-card">
+                        <div class="champ-reg-card-label">Timer</div>
+                        <div class="champ-reg-card-value">90s preview · 45s/move<br>7 min total · 20 min game</div>
+                    </div>
+                    <div class="champ-reg-card">
+                        <div class="champ-reg-card-label">Banned</div>
+                        <div class="champ-reg-card-value">Paradox Pokémon, Treasures of Ruin, Koraidon, Miraidon</div>
+                    </div>
+                    <div class="champ-reg-card">
+                        <div class="champ-reg-card-label">Pokédex</div>
+                        <div class="champ-reg-card-value">Paldean Regional Dex + event distributions</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── Status & Mechanic Changes ── -->
+            <section class="champ-section">
+                <h2 class="champ-section-title">Game Mechanic Changes</h2>
+
+                <div class="champ-subsection-title">Status Conditions</div>
+                <div class="champ-change-list">
+                    <div class="champ-change-row champ-change-row--nerf">
+                        <span class="champ-change-label">Paralysis</span>
+                        <span class="champ-change-desc">
+                            Immobilization chance <span class="champ-old">25%</span><span class="champ-arrow">→</span><span class="champ-new">12.5%</span>. Speed reduction unchanged.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--nerf">
+                        <span class="champ-change-label">Sleep</span>
+                        <span class="champ-change-desc">
+                            Capped at <span class="champ-new">3 turns</span> maximum. <span class="champ-new">33%</span> chance to wake on turn 2.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--nerf">
+                        <span class="champ-change-label">Freeze</span>
+                        <span class="champ-change-desc">
+                            Guaranteed thaw by turn 3. <span class="champ-new">25%</span> self-thaw chance each turn before the cap. Freeze-Dry can no longer inflict Freeze.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="champ-subsection-title">Battle Mechanics</div>
+                <div class="champ-change-list">
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Time Expiry</span>
+                        <span class="champ-change-desc">
+                            Match automatically ends in a <span class="champ-new">draw</span> when time runs out. Previously determined by remaining Pokémon count and HP.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--buff">
+                        <span class="champ-change-label">Intimidate</span>
+                        <span class="champ-change-desc">
+                            Now drops the Attack of <span class="champ-new">both opposing Pokémon simultaneously</span> instead of one at a time.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--nerf">
+                        <span class="champ-change-label">Fake Out</span>
+                        <span class="champ-change-desc">
+                            Greyed out and unselectable after turn 1 or after switching in. If Encore locks a Pokémon into Fake Out outside its window, that Pokémon uses Struggle instead.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--nerf">
+                        <span class="champ-change-label">Protect</span>
+                        <span class="champ-change-desc">
+                            PP <span class="champ-old">16</span><span class="champ-arrow">→</span><span class="champ-new">8</span>.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Mega Evolution</span>
+                        <span class="champ-change-desc">
+                            Mega Evolving and switching out occur within the same priority bracket.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Stat Readout</span>
+                        <span class="champ-change-desc">
+                            Stat change screen now shows the exact multiplier applied, not just stage count.
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── Move Changes ── -->
+            <section class="champ-section">
+                <h2 class="champ-section-title">Move Changes</h2>
+
+                <div class="champ-subsection-title">Power / Accuracy Buffs</div>
+                <div style="overflow-x: auto;">
+                <table class="champ-moves-table">
+                    <thead>
+                        <tr>
+                            <th>Move</th>
+                            <th>Stat</th>
+                            <th>Old</th>
+                            <th>New</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="champ-move-name">Apple Acid</td><td>Power</td><td class="champ-old">80</td><td class="champ-new">90</td></tr>
+                        <tr><td class="champ-move-name">Beak Blast</td><td>Power</td><td class="champ-old">100</td><td class="champ-new">120</td></tr>
+                        <tr><td class="champ-move-name">Bone Rush</td><td>Power (per hit)</td><td class="champ-old">25</td><td class="champ-new">30</td></tr>
+                        <tr><td class="champ-move-name">Crabhammer</td><td>Accuracy</td><td class="champ-old">90%</td><td class="champ-new">95%</td></tr>
+                        <tr><td class="champ-move-name">Dire Claw</td><td>Status chance</td><td class="champ-old">30%</td><td class="champ-new">50%</td></tr>
+                        <tr><td class="champ-move-name">Fire Lash</td><td>Power</td><td class="champ-old">80</td><td class="champ-new">90</td></tr>
+                        <tr><td class="champ-move-name">First Impression</td><td>Power</td><td class="champ-old">90</td><td class="champ-new">100</td></tr>
+                        <tr><td class="champ-move-name">Grav Apple</td><td>Power</td><td class="champ-old">80</td><td class="champ-new">90</td></tr>
+                        <tr><td class="champ-move-name">Infernal Parade</td><td>Power</td><td class="champ-old">60</td><td class="champ-new">65</td></tr>
+                        <tr><td class="champ-move-name">Mountain Gale</td><td>Power</td><td class="champ-old">100</td><td class="champ-new">120</td></tr>
+                        <tr><td class="champ-move-name">Night Daze</td><td>Power</td><td class="champ-old">85</td><td class="champ-new">90</td></tr>
+                        <tr><td class="champ-move-name">Psyshield Bash</td><td>Power</td><td class="champ-old">70</td><td class="champ-new">90</td></tr>
+                        <tr><td class="champ-move-name">Spirit Shackle</td><td>Power</td><td class="champ-old">80</td><td class="champ-new">90</td></tr>
+                        <tr><td class="champ-move-name">Syrup Bomb</td><td>Accuracy</td><td class="champ-old">85%</td><td class="champ-new">90%</td></tr>
+                        <tr><td class="champ-move-name">Trop Kick</td><td>Power</td><td class="champ-old">70</td><td class="champ-new">85</td></tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="champ-subsection-title">Nerfs</div>
+                <div style="overflow-x: auto;">
+                <table class="champ-moves-table">
+                    <thead>
+                        <tr>
+                            <th>Move</th>
+                            <th>Stat</th>
+                            <th>Old</th>
+                            <th>New</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="champ-move-name">Freeze-Dry</td><td>Effect</td><td class="champ-old">Can freeze</td><td class="champ-new">Cannot freeze</td></tr>
+                        <tr><td class="champ-move-name">Iron Head</td><td>Flinch chance</td><td class="champ-old">30%</td><td class="champ-new">20%</td></tr>
+                        <tr><td class="champ-move-name">Moonblast</td><td>SpAtk drop chance</td><td class="champ-old">30%</td><td class="champ-new">10%</td></tr>
+                        <tr><td class="champ-move-name">Salt Cure</td><td>Residual damage</td><td class="champ-old">1/8 HP (1/4 Water/Steel)</td><td class="champ-new">1/16 HP (1/8 Water/Steel)</td></tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="champ-subsection-title">Other Changes</div>
+                <div class="champ-change-list">
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Crabhammer</span>
+                        <span class="champ-change-desc">Gains +1 critical-hit ratio boost.</span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Dragon Claw</span>
+                        <span class="champ-change-desc">Reclassified as a <strong>Slicing move</strong> (benefits from Sharpness ability).</span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Shadow Claw</span>
+                        <span class="champ-change-desc">Reclassified as a <strong>Slicing move</strong>.</span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Dragon Cheer</span>
+                        <span class="champ-change-desc">Reclassified as a <strong>Sound move</strong>.</span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--buff">
+                        <span class="champ-change-label">Growth</span>
+                        <span class="champ-change-desc">Type changed <span class="champ-old">Normal</span><span class="champ-arrow">→</span><span class="champ-new">Grass</span>.</span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Poltergeist</span>
+                        <span class="champ-change-desc">Now works on Pokémon holding Mega Stones.</span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--buff">
+                        <span class="champ-change-label">Toxic Thread</span>
+                        <span class="champ-change-desc">Speed drop increased from <span class="champ-old">−1</span><span class="champ-arrow">→</span><span class="champ-new">−2</span> stages.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── Ability Changes ── -->
+            <section class="champ-section">
+                <h2 class="champ-section-title">Ability Changes</h2>
+                <div class="champ-change-list">
+                    <div class="champ-change-row champ-change-row--nerf">
+                        <span class="champ-change-label">Unseen Fist</span>
+                        <span class="champ-change-desc">
+                            Damage dealt through Protect/Detect/King's Shield reduced from <span class="champ-old">100%</span><span class="champ-arrow">→</span><span class="champ-new">25%</span>.
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── Pokemon Changes ── -->
+            <section class="champ-section">
+                <h2 class="champ-section-title">Pokémon-Specific Changes</h2>
+
+                <div class="champ-subsection-title">Buffed</div>
+                <div class="champ-pokemon-grid" id="poke-buffed"></div>
+
+                <div class="champ-subsection-title" style="margin-top: 8px;">Nerfed</div>
+                <div class="champ-pokemon-grid" id="poke-nerfed"></div>
+            </section>
+
+            <!-- ── Patch Notes ── -->
+            <section class="champ-section">
+                <h2 class="champ-section-title">
+                    Patch Notes
+                    <span class="champ-tag champ-tag--patch">Bug Fixes</span>
+                </h2>
+
+                <div class="champ-patch">
+                    <div class="champ-patch-header">
+                        <span class="champ-patch-version">Version 1.0.3</span>
+                        <span class="champ-patch-date">April 22, 2026</span>
+                    </div>
+                    <div class="champ-patch-body">
+                        <div class="champ-patch-item"><strong>Leech Seed</strong> — Corrected an inaccurate in-game description.</div>
+                        <div class="champ-patch-item"><strong>Gallade gender display</strong> — Tutorial incorrectly showed Gallade as female; now correctly shows male.</div>
+                        <div class="champ-patch-item"><strong>Mega Evolution UI</strong> — Fixed an issue where hovering Mega Evolution details and pressing B prevented move selection.</div>
+                        <div class="champ-patch-item"><strong>Unnerve</strong> — Now consistently prevents opposing Pokémon from consuming Berries. Previously some Pokémon could bypass this. Notably affects Aerodactyl's Tailwind + Rock Slide setups.</div>
+                        <div class="champ-patch-item"><strong>Held item speed interactions</strong> — Speed changes from held items are now correctly reflected in the order that abilities activate.</div>
+                        <div class="champ-patch-item"><strong>Networking &amp; visuals</strong> — Various networking glitches and visual appearance issues during battles resolved.</div>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
         <footer>
-            Data from <a href="https://www.smogon.com/stats" target="_blank">Smogon Stats</a>
+            Data from <a href="https://www.serebii.net/pokemonchampions/" target="_blank">Serebii</a>,
+            <a href="https://game8.co/games/Pokemon-Champions" target="_blank">Game8</a>,
+            and <a href="https://victoryroad.pro/champions-regulations/" target="_blank">Victory Road</a>
             <div>Pokemon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026</div>
         </footer>
     </div>
 
     <script src="../theme.js"></script>
+    <script>
+    // Pokemon change data
+    const ICON_BASE = '../assets/sprites/icons/';
+
+    const BUFFED = [
+        { name: 'Mega Blastoise', sprite: 'blastoise-mega', changes: [
+            { type: 'add', text: '+Shell Smash' }
+        ]},
+        { name: 'Mega Lopunny', sprite: 'lopunny-mega', changes: [
+            { type: 'add', text: '+Close Combat, +Mach Punch, +U-turn, +Triple Axel' },
+            { type: 'rem', text: '−Return' }
+        ]},
+        { name: 'Aegislash', sprite: 'aegislash', changes: [
+            { type: 'add', text: '+Poltergeist, +Air Slash (Shield forme)' }
+        ]},
+        { name: 'Armarouge', sprite: 'armarouge', changes: [
+            { type: 'add', text: '+Burn Up' }
+        ]},
+        { name: 'Ceruledge', sprite: 'ceruledge', changes: [
+            { type: 'add', text: '+Burn Up' }
+        ]},
+        { name: 'Charizard', sprite: 'charizard', changes: [
+            { type: 'add', text: '+Roost, +Beat Up' },
+            { type: 'rem', text: '−Blaze Kick, −Dual Wingbeat' }
+        ]},
+        { name: 'Tyranitar', sprite: 'tyranitar', changes: [
+            { type: 'add', text: '+Superpower, +Iron Tail' },
+            { type: 'rem', text: '−Scale Shot, −Scorching Sands' }
+        ]},
+        { name: 'Dragonite', sprite: 'dragonite', changes: [
+            { type: 'add', text: '+Superpower, +Iron Tail' },
+            { type: 'rem', text: '−Encore, −Dual Wingbeat, −Vacuum Wave, −Whirlpool' }
+        ]},
+        { name: 'Sableye', sprite: 'sableye', changes: [
+            { type: 'add', text: '+Payback' },
+            { type: 'rem', text: '−Parting Shot' }
+        ]},
+        { name: 'Sylveon', sprite: 'sylveon', changes: [
+            { type: 'add', text: '+Mystical Fire, +Safeguard' },
+            { type: 'rem', text: '−Taunt, −Iron Tail' }
+        ]},
+        { name: 'Whimsicott', sprite: 'whimsicott', changes: [
+            { type: 'add', text: '+Attract, +Safeguard' }
+        ]},
+        { name: 'Hippowdon', sprite: 'hippowdon', changes: [
+            { type: 'add', text: '+Superpower' }
+        ]},
+        { name: 'Dragapult', sprite: 'dragapult', changes: [
+            { type: 'add', text: '+Beat Up' }
+        ]},
+        { name: 'Scizor', sprite: 'scizor', changes: [
+            { type: 'add', text: '+Roost' }
+        ]},
+        { name: 'Drampa', sprite: 'drampa', changes: [
+            { type: 'add', text: '+Roost' }
+        ]},
+    ];
+
+    const NERFED = [
+        { name: 'Archaludon', sprite: 'archaludon', changes: [
+            { type: 'rem', text: '−Body Press' }
+        ]},
+        { name: 'Kangaskhan', sprite: 'kangaskhan', changes: [
+            { type: 'rem', text: '−Power-Up Punch' }
+        ]},
+        { name: 'Incineroar', sprite: 'incineroar', changes: [
+            { type: 'rem', text: '−Knock Off, −U-turn' }
+        ]},
+        { name: 'Gengar', sprite: 'gengar', changes: [
+            { type: 'rem', text: '−Encore, −Shadow Sneak' }
+        ]},
+        { name: 'Rotom', sprite: 'rotom', changes: [
+            { type: 'rem', text: '−Parting Shot, −Parabolic Charge' }
+        ]},
+        { name: 'Machamp', sprite: 'machamp', changes: [
+            { type: 'rem', text: '−Fissure, −Power-Up Punch' }
+        ]},
+        { name: 'Blastoise', sprite: 'blastoise', changes: [
+            { type: 'rem', text: '−Scald' }
+        ]},
+        { name: 'Greninja', sprite: 'greninja', changes: [
+            { type: 'rem', text: '−Nasty Plot' }
+        ]},
+        { name: 'Milotic', sprite: 'milotic', changes: [
+            { type: 'rem', text: '−Calm Mind' },
+            { type: 'rem', text: 'Marvel Scale: nerfed (Flame Orb unavailable)' }
+        ]},
+        { name: 'Gliscor', sprite: 'gliscor', changes: [
+            { type: 'rem', text: '−Taunt' },
+            { type: 'rem', text: 'Poison Heal: nerfed (Toxic Orb unavailable)' }
+        ]},
+        { name: 'Garganacl', sprite: 'garganacl', changes: [
+            { type: 'rem', text: 'Salt Cure damage halved (see Move Changes)' }
+        ]},
+        { name: 'Sneasler', sprite: 'sneasler', changes: [
+            { type: 'rem', text: 'Dire Claw: status chance 50% → 30%' }
+        ]},
+    ];
+
+    function buildCard(poke) {
+        const card = document.createElement('div');
+        card.className = 'champ-poke-card';
+
+        const header = document.createElement('div');
+        header.className = 'champ-poke-header';
+
+        const img = document.createElement('img');
+        img.className = 'champ-poke-sprite';
+        img.alt = poke.name;
+        img.src = ICON_BASE + poke.sprite + '.png';
+        img.onerror = function() {
+            this.onerror = null;
+            this.src = 'https://play.pokemonshowdown.com/sprites/gen5/' + poke.sprite + '.png';
+        };
+
+        const nameEl = document.createElement('div');
+        nameEl.className = 'champ-poke-name';
+        nameEl.textContent = poke.name;
+
+        header.appendChild(img);
+        header.appendChild(nameEl);
+
+        const changes = document.createElement('div');
+        changes.className = 'champ-poke-changes';
+        poke.changes.forEach(c => {
+            const row = document.createElement('div');
+            row.className = 'champ-poke-change';
+            const span = document.createElement('span');
+            span.className = c.type;
+            span.textContent = c.text;
+            row.appendChild(span);
+            changes.appendChild(row);
+        });
+
+        card.appendChild(header);
+        card.appendChild(changes);
+        return card;
+    }
+
+    const buffedGrid = document.getElementById('poke-buffed');
+    const nerfedGrid = document.getElementById('poke-nerfed');
+    BUFFED.forEach(p => buffedGrid.appendChild(buildCard(p)));
+    NERFED.forEach(p => nerfedGrid.appendChild(buildCard(p)));
+    </script>
 </body>
 </html>
