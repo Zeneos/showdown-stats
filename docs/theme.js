@@ -72,6 +72,7 @@
         supportLink.appendChild(kofiIcon);
 
         const supportText = document.createElement('span');
+        supportText.className = 'support-us-label';
         supportText.textContent = 'Support Us <3';
         supportLink.appendChild(supportText);
 

@@ -36,8 +36,7 @@ function formatNumber(num) {
     return Number(num).toLocaleString('en-US');
 }
 
-// Case overrides for Pokemon whose names arrive lowercase from the API
-// but whose sprite files on the case-sensitive server use mixed case.
+// Case overrides for Pokemon whose names are different depending on the formats
 const spriteCaseOverrides = {
     'ogerpon-wellspring': 'Ogerpon-Wellspring',
     'ogerpon-hearthflame': 'Ogerpon-Hearthflame',
