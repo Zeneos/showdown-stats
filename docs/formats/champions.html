@@ -22,6 +22,12 @@
     <div class="container">
         <div class="champ-page">
 
+            <!-- ── Disclaimer 
+            <div class="champ-disclaimer">
+                All mechanic, move, and Pokémon changes listed below reflect differences from <strong>Pokémon Scarlet &amp; Violet</strong>. Changes introduced in Legends: Z-A are not included.
+            </div>
+            ── -->
+
             <!-- ── Regulation M-A Overview ── -->
             <section class="champ-section">
                 <h2 class="champ-section-title">
@@ -39,7 +45,7 @@
                     </div>
                     <div class="champ-reg-card">
                         <div class="champ-reg-card-label">Level Cap</div>
-                        <div class="champ-reg-card-value">Auto-levelled to 50</div>
+                        <div class="champ-reg-card-value">Auto-levelled to lvl 50</div>
                     </div>
                     <div class="champ-reg-card">
                         <div class="champ-reg-card-label">Clauses</div>
@@ -47,7 +53,7 @@
                     </div>
                     <div class="champ-reg-card">
                         <div class="champ-reg-card-label">Gimmick</div>
-                        <div class="champ-reg-card-value">Mega Evolution ✓<br>Terastallization ✓</div>
+                        <div class="champ-reg-card-value">Mega Evolution <span class="champ-new">✓</span><br>Terastallization <span class="champ-old">X</span><br>Dynamax <span class="champ-old">X</span></div>
                     </div>
                     <div class="champ-reg-card">
                         <div class="champ-reg-card-label">Timer</div>
@@ -85,13 +91,19 @@
                     <div class="champ-change-row champ-change-row--nerf">
                         <span class="champ-change-label">Freeze</span>
                         <span class="champ-change-desc">
-                            Guaranteed thaw by turn 3. <span class="champ-new">25%</span> self-thaw chance each turn before the cap. Freeze-Dry can no longer inflict Freeze.
+                            Guaranteed thaw by turn 3. <span class="champ-old">20%</span><span class="champ-arrow">→</span><span class="champ-new">25%</span> self-thaw chance each turn before the cap.
                         </span>
                     </div>
                 </div>
 
                 <div class="champ-subsection-title">Battle Mechanics</div>
                 <div class="champ-change-list">
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">PP System</span>
+                        <span class="champ-change-desc">
+                            All moves capped at <span class="champ-new">20 max PP</span> using the formula <em>maxPP = 4 × (basePP ÷ 5 + 1)</em>.
+                        </span>
+                    </div>
                     <div class="champ-change-row champ-change-row--neutral">
                         <span class="champ-change-label">Time Expiry</span>
                         <span class="champ-change-desc">
@@ -104,16 +116,17 @@
                             Now drops the Attack of <span class="champ-new">both opposing Pokémon simultaneously</span> instead of one at a time.
                         </span>
                     </div>
-                    <div class="champ-change-row champ-change-row--nerf">
-                        <span class="champ-change-label">Fake Out</span>
+
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Port Priority</span>
                         <span class="champ-change-desc">
-                            Greyed out and unselectable after turn 1 or after switching in. If Encore locks a Pokémon into Fake Out outside its window, that Pokémon uses Struggle instead.
+                            In Doubles, the priority of which side goes first is now <span class="champ-new">randomized</span> rather than deterministic.
                         </span>
                     </div>
-                    <div class="champ-change-row champ-change-row--nerf">
-                        <span class="champ-change-label">Protect</span>
+                    <div class="champ-change-row champ-change-row--neutral">
+                        <span class="champ-change-label">Team Preview</span>
                         <span class="champ-change-desc">
-                            PP <span class="champ-old">16</span><span class="champ-arrow">→</span><span class="champ-new">8</span>.
+                            Shiny Pokémon are now <span class="champ-new">visible to both players</span> during team preview.
                         </span>
                     </div>
                     <div class="champ-change-row champ-change-row--neutral">
@@ -134,99 +147,58 @@
             <!-- ── Move Changes ── -->
             <section class="champ-section">
                 <h2 class="champ-section-title">Move Changes</h2>
-
-                <div class="champ-subsection-title">Power / Accuracy Buffs</div>
-                <div style="overflow-x: auto;">
-                <table class="champ-moves-table">
-                    <thead>
-                        <tr>
-                            <th>Move</th>
-                            <th>Stat</th>
-                            <th>Old</th>
-                            <th>New</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td class="champ-move-name">Apple Acid</td><td>Power</td><td class="champ-old">80</td><td class="champ-new">90</td></tr>
-                        <tr><td class="champ-move-name">Beak Blast</td><td>Power</td><td class="champ-old">100</td><td class="champ-new">120</td></tr>
-                        <tr><td class="champ-move-name">Bone Rush</td><td>Power (per hit)</td><td class="champ-old">25</td><td class="champ-new">30</td></tr>
-                        <tr><td class="champ-move-name">Crabhammer</td><td>Accuracy</td><td class="champ-old">90%</td><td class="champ-new">95%</td></tr>
-                        <tr><td class="champ-move-name">Dire Claw</td><td>Status chance</td><td class="champ-old">30%</td><td class="champ-new">50%</td></tr>
-                        <tr><td class="champ-move-name">Fire Lash</td><td>Power</td><td class="champ-old">80</td><td class="champ-new">90</td></tr>
-                        <tr><td class="champ-move-name">First Impression</td><td>Power</td><td class="champ-old">90</td><td class="champ-new">100</td></tr>
-                        <tr><td class="champ-move-name">Grav Apple</td><td>Power</td><td class="champ-old">80</td><td class="champ-new">90</td></tr>
-                        <tr><td class="champ-move-name">Infernal Parade</td><td>Power</td><td class="champ-old">60</td><td class="champ-new">65</td></tr>
-                        <tr><td class="champ-move-name">Mountain Gale</td><td>Power</td><td class="champ-old">100</td><td class="champ-new">120</td></tr>
-                        <tr><td class="champ-move-name">Night Daze</td><td>Power</td><td class="champ-old">85</td><td class="champ-new">90</td></tr>
-                        <tr><td class="champ-move-name">Psyshield Bash</td><td>Power</td><td class="champ-old">70</td><td class="champ-new">90</td></tr>
-                        <tr><td class="champ-move-name">Spirit Shackle</td><td>Power</td><td class="champ-old">80</td><td class="champ-new">90</td></tr>
-                        <tr><td class="champ-move-name">Syrup Bomb</td><td>Accuracy</td><td class="champ-old">85%</td><td class="champ-new">90%</td></tr>
-                        <tr><td class="champ-move-name">Trop Kick</td><td>Power</td><td class="champ-old">70</td><td class="champ-new">85</td></tr>
-                    </tbody>
-                </table>
-                </div>
-
-                <div class="champ-subsection-title">Nerfs</div>
-                <div style="overflow-x: auto;">
-                <table class="champ-moves-table">
-                    <thead>
-                        <tr>
-                            <th>Move</th>
-                            <th>Stat</th>
-                            <th>Old</th>
-                            <th>New</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td class="champ-move-name">Freeze-Dry</td><td>Effect</td><td class="champ-old">Can freeze</td><td class="champ-new">Cannot freeze</td></tr>
-                        <tr><td class="champ-move-name">Iron Head</td><td>Flinch chance</td><td class="champ-old">30%</td><td class="champ-new">20%</td></tr>
-                        <tr><td class="champ-move-name">Moonblast</td><td>SpAtk drop chance</td><td class="champ-old">30%</td><td class="champ-new">10%</td></tr>
-                        <tr><td class="champ-move-name">Salt Cure</td><td>Residual damage</td><td class="champ-old">1/8 HP (1/4 Water/Steel)</td><td class="champ-new">1/16 HP (1/8 Water/Steel)</td></tr>
-                    </tbody>
-                </table>
-                </div>
-
-                <div class="champ-subsection-title">Other Changes</div>
-                <div class="champ-change-list">
-                    <div class="champ-change-row champ-change-row--neutral">
-                        <span class="champ-change-label">Crabhammer</span>
-                        <span class="champ-change-desc">Gains +1 critical-hit ratio boost.</span>
-                    </div>
-                    <div class="champ-change-row champ-change-row--neutral">
-                        <span class="champ-change-label">Dragon Claw</span>
-                        <span class="champ-change-desc">Reclassified as a <strong>Slicing move</strong> (benefits from Sharpness ability).</span>
-                    </div>
-                    <div class="champ-change-row champ-change-row--neutral">
-                        <span class="champ-change-label">Shadow Claw</span>
-                        <span class="champ-change-desc">Reclassified as a <strong>Slicing move</strong>.</span>
-                    </div>
-                    <div class="champ-change-row champ-change-row--neutral">
-                        <span class="champ-change-label">Dragon Cheer</span>
-                        <span class="champ-change-desc">Reclassified as a <strong>Sound move</strong>.</span>
-                    </div>
-                    <div class="champ-change-row champ-change-row--buff">
-                        <span class="champ-change-label">Growth</span>
-                        <span class="champ-change-desc">Type changed <span class="champ-old">Normal</span><span class="champ-arrow">→</span><span class="champ-new">Grass</span>.</span>
-                    </div>
-                    <div class="champ-change-row champ-change-row--neutral">
-                        <span class="champ-change-label">Poltergeist</span>
-                        <span class="champ-change-desc">Now works on Pokémon holding Mega Stones.</span>
-                    </div>
-                    <div class="champ-change-row champ-change-row--buff">
-                        <span class="champ-change-label">Toxic Thread</span>
-                        <span class="champ-change-desc">Speed drop increased from <span class="champ-old">−1</span><span class="champ-arrow">→</span><span class="champ-new">−2</span> stages.</span>
-                    </div>
-                </div>
+                <div class="champ-subsection-title">Buffs</div>
+                <div id="moves-buffs" class="champ-change-list"></div>
+                <div class="champ-subsection-title" style="margin-top:8px">Nerfs</div>
+                <div id="moves-nerfs" class="champ-change-list"></div>
+                <div class="champ-subsection-title" style="margin-top:8px">Other Changes</div>
+                <div id="moves-other" class="champ-change-list"></div>
             </section>
 
             <!-- ── Ability Changes ── -->
             <section class="champ-section">
                 <h2 class="champ-section-title">Ability Changes</h2>
+
+                <div class="champ-subsection-title">New Abilities</div>
+                <div class="champ-change-list">
+                    <div class="champ-change-row champ-change-row--buff">
+                        <span class="champ-change-label">Dragonize</span>
+                        <span class="champ-change-desc">
+                            Converts Normal-type moves to Dragon-type with a 1.2× power multiplier.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--buff">
+                        <span class="champ-change-label">Mega Sol</span>
+                        <span class="champ-change-desc">
+                            Treats weather as permanently sunny for the purpose of the user's moves, regardless of actual weather.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--buff">
+                        <span class="champ-change-label">Piercing Drill</span>
+                        <span class="champ-change-desc">
+                            Contact moves ignore protection (Protect, Detect, King's Shield), but deal only ¼ normal damage when doing so.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--buff">
+                        <span class="champ-change-label">Spicy Spray</span>
+                        <span class="champ-change-desc">
+                            Burns attackers on contact, even if the ability-holder faints from the hit.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="champ-subsection-title" style="margin-top:8px">Changed Abilities</div>
                 <div class="champ-change-list">
                     <div class="champ-change-row champ-change-row--nerf">
                         <span class="champ-change-label">Unseen Fist</span>
                         <span class="champ-change-desc">
                             Damage dealt through Protect/Detect/King's Shield reduced from <span class="champ-old">100%</span><span class="champ-arrow">→</span><span class="champ-new">25%</span>.
+                        </span>
+                    </div>
+                    <div class="champ-change-row champ-change-row--nerf">
+                        <span class="champ-change-label">Healer</span>
+                        <span class="champ-change-desc">
+                            The Pokémon has a <span class="champ-old">30%</span><span class="champ-arrow">→</span><span class="champ-new">50%</span> chance of curing the status conditions of its allies at the end of every turn. 
                         </span>
                     </div>
                 </div>
@@ -269,9 +241,12 @@
         </div>
 
         <footer>
-            Data from <a href="https://www.serebii.net/pokemonchampions/" target="_blank">Serebii</a>,
+            Data from <a href="https://docs.google.com/spreadsheets/d/1DeXjzohTUdKNERu6dsHsnznneva8MDJjglI3lqDLgm4/htmlview#gid=945860250" target="_blank">Community Spreadsheet</a>,
+            <a href="https://www.serebii.net/pokemonchampions/" target="_blank">Serebii</a>,
             <a href="https://game8.co/games/Pokemon-Champions" target="_blank">Game8</a>,
-            and <a href="https://victoryroad.pro/champions-regulations/" target="_blank">Victory Road</a>
+            <a href="https://victoryroad.pro/champions-regulations/" target="_blank">Victory Road</a>,
+            and <a href="https://www.smogon.com/forums/threads/champions-battle-mechanics-research.3780372/" target="_blank">Smogon Research</a>,
+
             <div>Pokemon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026</div>
         </footer>
     </div>
@@ -281,9 +256,9 @@
     // Pokemon change data
     const ICON_BASE = '../assets/sprites/icons/';
 
-    const BUFFED = [
-        { name: 'Mega Blastoise', sprite: 'blastoise-mega', changes: [
-            { type: 'add', text: '+Shell Smash' }
+const BUFFED = [
+        { name: 'Blastoise', sprite: 'blastoise', changes: [
+            { type: 'add', text: '+Iron Head' }
         ]},
         { name: 'Mega Lopunny', sprite: 'lopunny-mega', changes: [
             { type: 'add', text: '+Close Combat, +Mach Punch, +U-turn, +Triple Axel' },
@@ -420,6 +395,121 @@
     const nerfedGrid = document.getElementById('poke-nerfed');
     BUFFED.forEach(p => buffedGrid.appendChild(buildCard(p)));
     NERFED.forEach(p => nerfedGrid.appendChild(buildCard(p)));
+
+    // ── Move changes ──
+    const TYPE_SPRITE_INDEX = {
+        normal:1, fighting:2, flying:3, poison:4, ground:5, rock:6,
+        bug:7, ghost:8, steel:9, fire:10, water:11, grass:12,
+        electric:13, psychic:14, ice:15, dragon:16, dark:17, fairy:18
+    };
+    const TYPE_SPRITE_BASE = '../assets/sprites/types';
+
+    const MOVE_CHANGES = {
+        buffs: [
+            { id:'appleacid',       stat:'Power',          old:'80',                  nw:'90' },
+            { id:'beakblast',       stat:'Power / PP',          old:'100 / 16',                 nw:'120 / 8' },
+            { id:'bonerush',        stat:'Power (per hit)',old:'25',                  nw:'30' },
+            { id:'crabhammer',      stat:'Accuracy / Crit',old:'90%, no crit boost', nw:'95%, +1 crit ratio' },
+            { id:'firelash',        stat:'Power',          old:'80',                  nw:'90' },
+            { id:'firstimpression', stat:'Power',          old:'90',                  nw:'100' },
+            { id:'gravapple',       stat:'Power',          old:'80',                  nw:'90' },
+            { id:'infernalparade',  stat:'Power',          old:'60',                  nw:'65' },
+            { id:'mountaingale',    stat:'Power',          old:'100',                 nw:'120' },
+            { id:'nightdaze',       stat:'Power',          old:'85',                  nw:'90' },
+            { id:'psyshieldbash',   stat:'Power',          old:'70',                  nw:'90' },
+            { id:'spiritshackle',   stat:'Power',          old:'80',                  nw:'90' },
+            { id:'syrupbomb',       stat:'Accuracy',       old:'85%',                 nw:'90%' },
+            { id:'tropkick',        stat:'Power',          old:'70',                  nw:'85' },
+            { id:'toxicthread',     stat:'Speed drop',     old:'−1 stage',            nw:'−2 stages' },
+        ],
+        nerfs: [
+            { id:'direclaw',   stat:'Status chance',   old:'50%',                     nw:'30%' },
+            { id:'fakeout',    stat:'Usability',       old:'Any turn',                nw:'Turn 1 / switch-in only; Encore into Fake Out → Struggle' },
+            { id:'freezedry',  stat:'Effect',          old:'Can freeze',              nw:'Cannot freeze' },
+            { id:'ironhead',   stat:'Flinch chance',   old:'30%',                     nw:'20%' },
+            { id:'moonblast',  stat:'SpAtk drop',      old:'30%',                     nw:'10%' },
+            { id:'protect',    stat:'PP',              old:'16',                       nw:'8' },
+            { id:'saltcure',   stat:'Residual damage', old:'1/8 HP (1/4 Water/Steel)',nw:'1/16 HP (1/8 Water/Steel)' },
+        ],
+        other: [
+            { id:'bulletseed',   stat:'Classification', old:'Standard',    nw:'Ball & Bomb move' },
+            { id:'dragoncheer',  stat:'Classification', old:'Standard',    nw:'Sound move' },
+            { id:'dragonclaw',   stat:'Classification', old:'Standard',    nw:'Slicing move (Sharpness boost)' },
+            { id:'growth',       stat:'Type',           old:'Normal',      nw:'Grass' },
+            { id:'poltergeist',  stat:'Effect',         old:'Fails vs. no held item', nw:'Also works vs. Mega Stone holders' },
+            { id:'rockblast',    stat:'Classification', old:'Standard',    nw:'Ball & Bomb move' },
+            { id:'shadowclaw',   stat:'Classification', old:'Standard',    nw:'Slicing move' },
+            { id:'snaptrap',     stat:'Type',           old:'Grass',      nw:'Steel' },
+        ],
+    };
+
+    function toMoveId(str) {
+        return str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    }
+
+    function typeBadge(typeName) {
+        if (!typeName) return '';
+        const id = typeName.toLowerCase();
+        const idx = TYPE_SPRITE_INDEX[id];
+        if (idx) {
+            return `<img class="move-type-sprite" src="${TYPE_SPRITE_BASE}/${idx}.png" alt="${typeName}" loading="lazy" style="height:17px;width:auto;">`;
+        }
+        return `<span class="move-type-icon move-type-${id}">${typeName}</span>`;
+    }
+
+    function buildMoveRow(entry, moveData, kind) {
+        const info = moveData[entry.id] || moveData[toMoveId(entry.id)] || null;
+        const displayName = info ? info.name : entry.id;
+        const typeName = info ? info.type : '';
+        const desc = info ? info.description : '';
+
+        const row = document.createElement('div');
+        row.className = `champ-move-row champ-move-row--${kind}`;
+
+        const identity = document.createElement('div');
+        identity.className = 'champ-move-identity';
+        identity.innerHTML = typeBadge(typeName);
+        const title = document.createElement('span');
+        title.className = 'champ-move-title';
+        title.textContent = displayName;
+        identity.appendChild(title);
+
+        const info_div = document.createElement('div');
+        info_div.className = 'champ-move-info';
+
+        const change = document.createElement('div');
+        change.className = 'champ-move-change';
+        change.innerHTML = `${entry.stat}: <span class="champ-old">${entry.old}</span><span class="champ-arrow"> → </span><span class="champ-new">${entry.nw}</span>`;
+
+        info_div.appendChild(change);
+        if (desc) {
+            const descEl = document.createElement('div');
+            descEl.className = 'champ-move-desc';
+            descEl.textContent = desc;
+            info_div.appendChild(descEl);
+        }
+
+        row.appendChild(identity);
+        row.appendChild(info_div);
+        return row;
+    }
+
+    (async () => {
+        let moveData = {};
+        try {
+            const res = await fetch('../assets/move-data.json');
+            const json = await res.json();
+            moveData = json.moves || {};
+        } catch(e) {}
+
+        const buffsCont  = document.getElementById('moves-buffs');
+        const nerfsCont  = document.getElementById('moves-nerfs');
+        const otherCont  = document.getElementById('moves-other');
+
+        MOVE_CHANGES.buffs.forEach(m => buffsCont.appendChild(buildMoveRow(m, moveData, 'buff')));
+        MOVE_CHANGES.nerfs.forEach(m => nerfsCont.appendChild(buildMoveRow(m, moveData, 'nerf')));
+        MOVE_CHANGES.other.forEach(m => otherCont.appendChild(buildMoveRow(m, moveData, 'neutral')));
+    })();
     </script>
 </body>
 </html>

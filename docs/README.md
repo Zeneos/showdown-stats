@@ -116,7 +116,6 @@ To regenerate these name-based icon files:
 ```
 
 ## TODO
-- bar at the top, multiple tabs
 - top left most: website icon that redirects to home
 - replays search for teams (using live data from recent replays)
     - live replays + teams
@@ -129,3 +128,4 @@ To regenerate these name-based icon files:
 - fun shiny variations for pokemon sprites/icons/banner art to sometimes load into the site
 - team builder features: better teammate sets for team archetypes, team weakness calculator
 - dynamic stat visualizer: hovering over spreads changes the stats of the pokemon in real time
+    - speed tier visualizer: all pokmeon on a line graph based on each stat + weight

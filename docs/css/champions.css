@@ -1,5 +1,22 @@
 /* Champions page styles */
 
+.champ-disclaimer {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid var(--link-color);
+    border-radius: 8px;
+    padding: 10px 14px;
+    line-height: 1.5;
+}
+
+html[data-theme='dark'] .champ-disclaimer {
+    background: #0b1220;
+    border-color: #334155;
+    border-left-color: var(--link-color);
+}
+
 .champ-page {
     padding: 24px 28px 32px;
     display: flex;
@@ -63,15 +80,15 @@ html[data-theme='dark'] .champ-tag--patch {
 }
 
 .champ-reg-card {
-    background: rgba(102, 126, 234, 0.07);
-    border: 1px solid rgba(102, 126, 234, 0.18);
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
     border-radius: 10px;
     padding: 12px 14px;
 }
 
 html[data-theme='dark'] .champ-reg-card {
-    background: rgba(99, 102, 241, 0.1);
-    border-color: rgba(99, 102, 241, 0.22);
+    background: #0b1220;
+    border-color: #334155;
 }
 
 .champ-reg-card-label {
@@ -139,7 +156,86 @@ html[data-theme='dark'] .champ-change-label {
 .champ-new { color: #22c55e; font-weight: 600; }
 .champ-arrow { color: var(--text-muted); margin: 0 3px; }
 
+/* ── Move change rows ── */
+.champ-move-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid transparent;
+}
+
+html[data-theme='dark'] .champ-move-row {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-move-row--buff { border-left-color: #22c55e; }
+.champ-move-row--nerf { border-left-color: #ef4444; }
+.champ-move-row--neutral { border-left-color: #94a3b8; }
+
+.champ-move-identity {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 160px;
+    flex-shrink: 0;
+}
+
+.champ-move-identity .move-type-icon {
+    font-size: 0.62rem;
+    min-width: 34px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.champ-move-title {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #1f2937;
+    white-space: nowrap;
+}
+
+html[data-theme='dark'] .champ-move-title {
+    color: #ffffff;
+}
+
+.champ-move-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.champ-move-change {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.champ-move-desc {
+    font-size: 0.77rem;
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.4;
+}
+
 /* ── Moves table ── */
+.champ-moves-wrap {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fdfdfd;
+}
+
+html[data-theme='dark'] .champ-moves-wrap {
+    background: #0b1220;
+    border-color: #334155;
+}
+
 .champ-moves-table {
     width: 100%;
     border-collapse: collapse;
@@ -154,8 +250,14 @@ html[data-theme='dark'] .champ-change-label {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--text-muted);
-    border-bottom: 2px solid var(--border-color);
+    background: #f3f4f6;
+    border-bottom: 2px solid #e5e7eb;
     white-space: nowrap;
+}
+
+html[data-theme='dark'] .champ-moves-table th {
+    background: #111827;
+    border-bottom-color: #334155;
 }
 
 .champ-moves-table td {
@@ -208,8 +310,8 @@ html[data-theme='dark'] .champ-badge--change { background: rgba(234, 179, 8, 0.1
 
 .champ-poke-card {
     border-radius: 10px;
-    border: 1px solid var(--border-color);
-    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid #e5e7eb;
+    background: #fdfdfd;
     padding: 12px 14px 14px;
     display: flex;
     flex-direction: column;
@@ -217,7 +319,8 @@ html[data-theme='dark'] .champ-badge--change { background: rgba(234, 179, 8, 0.1
 }
 
 html[data-theme='dark'] .champ-poke-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: #0b1220;
+    border-color: #334155;
 }
 
 .champ-poke-header {
@@ -231,6 +334,8 @@ html[data-theme='dark'] .champ-poke-card {
     height: 40px;
     object-fit: contain;
     image-rendering: pixelated;
+    animation: pokemon-icon-bounce 0.8s linear infinite;
+    will-change: transform;
 }
 
 .champ-poke-name {
@@ -263,9 +368,15 @@ html[data-theme='dark'] .champ-poke-change .rem { color: #f87171; }
 
 /* ── Patch notes ── */
 .champ-patch {
-    border: 1px solid var(--border-color);
+    border: 1px solid #e5e7eb;
     border-radius: 10px;
     overflow: hidden;
+    background: #fdfdfd;
+}
+
+html[data-theme='dark'] .champ-patch {
+    background: #0b1220;
+    border-color: #334155;
 }
 
 .champ-patch-header {
@@ -273,12 +384,13 @@ html[data-theme='dark'] .champ-poke-change .rem { color: #f87171; }
     align-items: center;
     gap: 10px;
     padding: 12px 16px;
-    background: rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid var(--border-color);
+    background: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 html[data-theme='dark'] .champ-patch-header {
-    background: rgba(255, 255, 255, 0.04);
+    background: #111827;
+    border-bottom-color: #334155;
 }
 
 .champ-patch-version {
