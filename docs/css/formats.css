@@ -2439,6 +2439,14 @@ html[data-theme='dark'] .data-guide-close:focus-visible {
     background: none;
 }
 
+.formats-banner-image.banner-square {
+    width: min(300px, 100%);
+}
+
+.formats-banner-image.banner-wide {
+    width: min(700px, 100%);
+}
+
 .banner-header {
     /* Display & Box Model */
     position: relative;
@@ -2448,9 +2456,17 @@ html[data-theme='dark'] .data-guide-close:focus-visible {
     text-align: center;
     width: 100%;
     max-width: 860px;
-    margin: -120px auto 22px;
+    margin: -70px auto 22px;
     gap: 8px;
     z-index: 1;
+}
+
+.banner-header.banner-square {
+    margin: -120px auto 22px;
+}
+
+.banner-header.banner-wide {
+    margin: -40px auto 22px;
 }
 
 .banner-header h1 {

@@ -17,6 +17,55 @@ html[data-theme='dark'] .champ-disclaimer {
     border-left-color: var(--link-color);
 }
 
+/* ── Table of contents ── */
+.champ-toc {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    width: fit-content;
+    align-self: center;
+}
+
+html[data-theme='dark'] .champ-toc {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-toc-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    padding: 0 4px;
+    margin-bottom: 4px;
+}
+
+.champ-toc-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.champ-toc-link:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+html[data-theme='dark'] .champ-toc-link:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.35);
+}
+
 .champ-page {
     padding: 24px 28px 32px;
     display: flex;

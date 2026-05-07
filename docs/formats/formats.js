@@ -1,5 +1,19 @@
 // Pokemon Showdown Stats Visualizer - Formats page
 
+const BANNERS = [
+    { src: '../assets/Icons/banner_1.png', cssClass: 'banner-square' },
+    { src: '../assets/Icons/banner_2.png', cssClass: 'banner-wide' },
+];
+
+function loadRandomBanner() {
+    const banner = BANNERS[Math.floor(Math.random() * BANNERS.length)];
+    const img = document.querySelector('.formats-banner-image');
+    if (!img) return;
+    img.src = banner.src;
+    img.classList.add(banner.cssClass);
+    document.querySelector('.banner-header')?.classList.add(banner.cssClass);
+}
+
 let statsData = null;
 let currentSort = { column: 'battles', direction: 'desc' };
 let currentRatingFilter = 'all';
@@ -8,6 +22,7 @@ let selectedFormatKey = '';
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', async () => {
+    loadRandomBanner();
     initializeGlobalHelpTooltip();
     setupDataGuideModal();
     await loadLatestData();
