@@ -4,73 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeChumps - Page Not Found</title>
-    <link rel="icon" type="image/png" href="./assets/Icons/poketail.png">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/formats.css">
+    <link rel="icon" type="image/png" href="/assets/Icons/poketail.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/formats.css">
     <style>
-        .error-container {
+        .not-found {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 30px;
             text-align: center;
-            padding: 40px 20px;
+            color: var(--text-muted);
+            gap: 12px;
         }
-        
-        .error-message {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 20px;
+        .not-found h2 {
+            font-size: 1.6rem;
+            color: var(--text-secondary);
         }
-        
-        html[data-theme='dark'] .error-message {
-            color: #aaa;
+        .not-found p {
+            font-size: 0.95rem;
         }
-        
-        .error-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        
-        .error-link:hover {
-            background: #5568d3;
+        .not-found a {
+            font-size: 0.95rem;
+            color: var(--link-color);
         }
     </style>
 </head>
 <body>
+    <nav class="site-nav">
+        <a href="/formats/" class="site-nav-link">
+            <img src="/assets/Icons/poketail.png" class="site-nav-home-icon" alt="Home">
+            <span class="site-nav-home-label">Home</span>
+        </a>
+        <a href="/formats/champions/" class="site-nav-link"><span class="site-nav-full-text">Pokemon </span>Champions</a>
+        <a href="/formats/teams.html" class="site-nav-link"><span class="site-nav-full-text">Live </span>Teams</a>
+    </nav>
+
     <div class="container">
-        <div class="controls">
-            <div class="banner-container">
-                <img src="./assets/icons/banner_1.png" alt="PokeChumps banner" class="formats-banner-image">
-            </div>
-
-            <div class="banner-header">
-                <h1>PokeChumps</h1>
-                <p>competitive pokemon battle statistics and analytics</p>
-            </div>
-        </div>
-
-        <div class="error-container">
-            <div class="error-message">
-                <h2>404 - Page Not Found</h2>
-                <p>Sorry, that page doesn't exist. Head back to the formats.</p>
-            </div>
-            <a href="./formats/" class="error-link">Back to PokeChumps</a>
+        <div class="not-found">
+            <h2>404 — Page Not Found</h2>
+            <p>Sorry, that page doesn't exist.</p>
+            <a href="/formats/">Back to PokeChumps</a>
         </div>
 
         <footer>
             Data from <a href="https://www.smogon.com/stats" target="_blank">Smogon Stats</a>
-            <div>
-                Sprites used from
-                <a href="https://github.com/PokeAPI/sprites" target="_blank">PokeAPI/sprites</a>
-                and
-                <a href="https://github.com/remokon/gen-9-sprites" target="_blank">remokon/gen-9-sprites</a>
-            </div>
             <div>Pokemon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026</div>
         </footer>
     </div>
 
-    <script src="./theme.js"></script>
+    <script src="/theme.js"></script>
 </body>
 </html>
