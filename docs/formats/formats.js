@@ -3,6 +3,7 @@
 const BANNERS = [
     { src: '../assets/Icons/banner_1.png', cssClass: 'banner-square' },
     { src: '../assets/Icons/banner_2.png', cssClass: 'banner-wide' },
+    { src: '../assets/Icons/banner_3.png', cssClass: 'banner-square-3' },
 ];
 
 function loadRandomBanner() {

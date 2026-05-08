@@ -2447,6 +2447,14 @@ html[data-theme='dark'] .data-guide-close:focus-visible {
     width: min(700px, 100%);
 }
 
+.formats-banner-image.banner-square-3 {
+    width: min(300px, 100%);
+}
+
+.banner-header.banner-square-3 {
+    margin: -50px auto 48px;
+}
+
 .banner-header {
     /* Display & Box Model */
     position: relative;
