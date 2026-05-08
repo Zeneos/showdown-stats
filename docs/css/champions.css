@@ -1,5 +1,16 @@
 /* Champions page styles */
 
+.champ-logo-wrap {
+    text-align: center;
+    margin: 16px 0 4px;
+}
+
+.champ-logo {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
 .champ-disclaimer {
     font-size: 0.82rem;
     color: var(--text-secondary);
@@ -124,8 +135,9 @@ html[data-theme='dark'] .champ-tag--patch {
 /* ── Reg overview card ── */
 .champ-reg-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 220px));
     gap: 10px;
+    justify-content: center;
 }
 
 .champ-reg-card {
@@ -391,10 +403,22 @@ html[data-theme='dark'] .champ-poke-card {
     font-weight: 700;
     font-size: 0.88rem;
     color: #1f2937;
+    text-decoration: none;
 }
-
+a.champ-poke-name:not([href]) {
+    cursor: default;
+    text-decoration: none;
+    pointer-events: none;
+}
+a.champ-poke-name[href]:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
 html[data-theme='dark'] .champ-poke-name {
     color: #ffffff;
+}
+html[data-theme='dark'] a.champ-poke-name:hover {
+    color: var(--link-color);
 }
 
 .champ-poke-changes {

@@ -6,8 +6,9 @@
     const scriptUrl = document.currentScript && document.currentScript.src
         ? document.currentScript.src
         : window.location.href;
-    const sunIconSrc = "../assets/Icons/sun.png";
-    const moonIconSrc = "../assets/Icons/moon.png";
+    const assetsBase = scriptUrl.replace(/\/[^/]*$/, '/') + 'assets/Icons/';
+    const sunIconSrc = assetsBase + 'sun.png';
+    const moonIconSrc = assetsBase + 'moon.png';
     const saved = localStorage.getItem(storageKey);
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initial = saved === 'light' || saved === 'dark' ? saved : (prefersDark ? 'dark' : 'light');
@@ -68,7 +69,7 @@
         kofiIcon.className = 'support-us-icon';
         kofiIcon.alt = '';
         kofiIcon.decoding = 'async';
-        kofiIcon.src = "../assets/Icons/kofi.png";
+        kofiIcon.src = assetsBase + 'kofi.png';
         supportLink.appendChild(kofiIcon);
 
         const supportText = document.createElement('span');

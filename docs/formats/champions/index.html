@@ -1,29 +1,34 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeChumps - Pokemon Champions</title>
-    <link rel="icon" type="image/png" href="../assets/Icons/poketail.png">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/formats.css">
-    <link rel="stylesheet" href="../css/champions.css">
+    <link rel="icon" type="image/png" href="../../assets/Icons/poketail.png">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/formats.css">
+    <link rel="stylesheet" href="../../css/champions.css">
 </head>
 <body>
     <nav class="site-nav">
-        <a href="./" class="site-nav-link">
-            <img src="../assets/Icons/poketail.png" class="site-nav-home-icon" alt="Home">
+        <a href="../" class="site-nav-link">
+            <img src="../../assets/Icons/poketail.png" class="site-nav-home-icon" alt="Home">
             <span class="site-nav-home-label">Home</span>
         </a>
-        <a href="champions.html" class="site-nav-link active"><span class="site-nav-full-text">Pokemon </span>Champions</a>
-        <a href="teams.html" class="site-nav-link"><span class="site-nav-full-text">Live </span>Teams</a>
+        <a href="./" class="site-nav-link active"><span class="site-nav-full-text">Pokemon </span>Champions</a>
+        <a href="../teams.html" class="site-nav-link"><span class="site-nav-full-text">Live </span>Teams</a>
     </nav>
 
     <div class="container">
         <div class="champ-page">
             <!-- ── Disclaimer ── -->
             <div class="champ-disclaimer">
-                This information is community-sourced and may be incomplete or subject to change at any time. <strong>Last updated: May 4, 2026.</strong>
+            The following changes are based on Gen 9 Scarlet Violet VGC to Gen 9 Champions. This information is community-sourced and may be incomplete or subject to change at any time. <strong>Last updated: May 8, 2026.</strong>
+            </div>
+
+            <!-- ── Champions Logo ── -->
+            <div class="champ-logo-wrap">
+                <img src="../../assets/Icons/champs_logo.png" alt="Pokemon Champions" class="champ-logo">
             </div>
 
             <!-- ── Regulation M-A Overview ── -->
@@ -57,14 +62,7 @@
                         <div class="champ-reg-card-label">Timer</div>
                         <div class="champ-reg-card-value">90s preview · 45s/move<br>7 min total · 20 min game</div>
                     </div>
-                    <div class="champ-reg-card">
-                        <div class="champ-reg-card-label">Banned</div>
-                        <div class="champ-reg-card-value">Paradox Pokémon, Treasures of Ruin, Koraidon, Miraidon</div>
-                    </div>
-                    <div class="champ-reg-card">
-                        <div class="champ-reg-card-label">Pokédex</div>
-                        <div class="champ-reg-card-value">Paldean Regional Dex + event distributions</div>
-                    </div>
+
                 </div>
             </section>
 
@@ -72,7 +70,7 @@
             <nav class="champ-toc" aria-label="Page sections">
                 <span class="champ-toc-header">Change Overview</span>
                 <a href="#toc-mechanics" class="champ-toc-link">Game Mechanics</a>
-                <a href="#toc-moves" class="champ-toc-link">Move Changes</a>
+<a href="#toc-moves" class="champ-toc-link">Move Changes</a>
                 <a href="#toc-abilities" class="champ-toc-link">Ability Changes</a>
                 <a href="#toc-pokemon" class="champ-toc-link">Pokémon Changes</a>
                 <a href="#toc-patches" class="champ-toc-link">Patch Notes</a>
@@ -93,7 +91,7 @@
                     <div class="champ-change-row champ-change-row--nerf">
                         <span class="champ-change-label">Sleep</span>
                         <span class="champ-change-desc">
-                            Capped at <span class="champ-new">3 turns</span> maximum. <span class="champ-new">33%</span> chance to wake on turn 2.
+                            Caps at <span class="champ-new">1–2 turns</span>. Turn 1: asleep. Turn 2: <span class="champ-new">1/3</span> chance to wake up. Turn 3: guaranteed wake up.
                         </span>
                     </div>
                     <div class="champ-change-row champ-change-row--nerf">
@@ -216,11 +214,7 @@
             <section id="toc-pokemon" class="champ-section">
                 <h2 class="champ-section-title">Pokémon-Specific Changes</h2>
 
-                <div class="champ-subsection-title">Buffed</div>
-                <div class="champ-pokemon-grid" id="poke-buffed"></div>
-
-                <div class="champ-subsection-title" style="margin-top: 8px;">Nerfed</div>
-                <div class="champ-pokemon-grid" id="poke-nerfed"></div>
+                <div class="champ-pokemon-grid" id="poke-all"></div>
             </section>
 
             <!-- ── Patch Notes ── -->
@@ -251,235 +245,228 @@
         <footer>
             Data from <a href="https://docs.google.com/spreadsheets/d/1DeXjzohTUdKNERu6dsHsnznneva8MDJjglI3lqDLgm4/htmlview#gid=945860250" target="_blank">Community Spreadsheet</a>,
             <a href="https://www.serebii.net/pokemonchampions/" target="_blank">Serebii</a>,
-            <a href="https://game8.co/games/Pokemon-Champions" target="_blank">Game8</a>,
-            <a href="https://victoryroad.pro/champions-regulations/" target="_blank">Victory Road</a>,
+            Pokémon Showdown team builder,
             and <a href="https://www.smogon.com/forums/threads/champions-battle-mechanics-research.3780372/" target="_blank">Smogon Research</a>,
 
             <div>Pokemon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026</div>
         </footer>
     </div>
 
-    <script src="../theme.js"></script>
+    <script src="../../theme.js"></script>
+    <script src="../shared.js"></script>
     <script>
     // Pokemon change data
-    const ICON_BASE = '../assets/sprites/icons/';
+    const ICON_BASE = '../../assets/sprites/icons/';
 
-const BUFFED = [
-        // ── Gen 1 ──
-        { name: 'Venusaur', sprite: 'venusaur', changes: [
-            { type: 'add', text: '+Sludge Wave, +Light Screen, +Outrage, +Terrain Pulse' },
-        ]},
-        { name: 'Charizard', sprite: 'charizard', changes: [
-            { type: 'add', text: '+Beat Up, +Roost, +Scale Shot' },
-        ]},
-        { name: 'Blastoise', sprite: 'blastoise', changes: [
-            { type: 'add', text: '+Iron Head, +Iron Tail, +Waterfall, +Outrage, +Terrain Pulse, +Bulldoze' },
-        ]},
-        { name: 'Beedrill', sprite: 'beedrill', changes: [
-            { type: 'add', text: '+Bug Buzz, +Cross Poison, +Dual Wingbeat, +Lunge, +Pollen Puff, +Skitter Smack, +Defog, +Roost, +Tailwind' },
-        ]},
-        { name: 'Arcanine', sprite: 'arcanine', changes: [
-            { type: 'add', text: '+Burn Up, +Iron Tail, +Flame Wheel' },
-        ]},
-        { name: 'Slowbro', sprite: 'slowbro', changes: [
-            { type: 'add', text: '+Iron Tail, +Safeguard, +Tri Attack, +Ancient Power, +Power Gem' },
-        ]},
-        { name: 'Machamp', sprite: 'machamp', changes: [
-            { type: 'add', text: '+Drain Punch, +Power-Up Punch, +Focus Punch, +Vacuum Wave' },
-        ]},
-        { name: 'Kangaskhan', sprite: 'kangaskhan', changes: [
-            { type: 'add', text: '+Aerial Ace, +Aqua Tail, +Focus Punch, +Power-Up Punch, +Wish, +Work Up, +Yawn, +Toxic, +Seismic Toss, +Sing' },
-        ]},
-        { name: 'Starmie', sprite: 'starmie', changes: [
-            { type: 'add', text: '+Aqua Jet, +Bulk Up, +Ice Spinner, +Liquidation, +Safeguard, +Zen Headbutt, +Triple Axel' },
-            { type: 'rem', text: '−Attract, −Teleport, −Pain Split, −Reflect Type' },
-        ]},
-        { name: 'Gyarados', sprite: 'gyarados', changes: [
-            { type: 'add', text: '+Dragon Rush, +Iron Tail, +Payback, +Power Whip' },
-        ]},
-        { name: 'Dragonite', sprite: 'dragonite', changes: [
-            { type: 'add', text: '+Iron Tail, +Superpower, +Whirlwind' },
-            { type: 'rem', text: '−Encore, −Vacuum Wave' },
-        ]},
-        { name: 'Umbreon', sprite: 'umbreon', changes: [
-            { type: 'add', text: '+Knock Off, +Payback' },
-        ]},
-        // ── Gen 2 ──
-        { name: 'Tyranitar', sprite: 'tyranitar', changes: [
-            { type: 'add', text: '+Iron Tail, +Superpower, +Scale Shot, +Scorching Sands' },
-        ]},
-        { name: 'Scizor', sprite: 'scizor', changes: [
-            { type: 'add', text: '+Roost, +Psycho Cut, +Superpower' },
-        ]},
-        // ── Gen 3 ──
-        { name: 'Gardevoir', sprite: 'gardevoir', changes: [
-            { type: 'add', text: '+Teleport, +Safeguard' },
-        ]},
-        { name: 'Sharpedo', sprite: 'sharpedo', changes: [
-            { type: 'add', text: '+Super Fang, +Thief, +Roar, +Toxic' },
-        ]},
-        { name: 'Milotic', sprite: 'milotic', changes: [
-            { type: 'add', text: '+Calm Mind, +Dazzling Gleam, +Liquidation, +Iron Tail' },
+const POKEMON_CHANGES = [
+        { name: 'Abomasnow', sprite: 'abomasnow', changes: [
+            { type: 'add', text: '+Ice Hammer, +Frost Breath, +Iron Tail, +Shadow Ball' },
         ]},
         { name: 'Absol', sprite: 'absol', changes: [
             { type: 'add', text: '+Phantom Force, +Shadow Sneak, +Trailblaze' },
         ]},
-        { name: 'Glalie', sprite: 'glalie', changes: [
-            { type: 'add', text: '+Explosion, +Payback, +Self-Destruct, +Steel Roller' },
-        ]},
-        // ── Gen 4 ──
-        { name: 'Garchomp', sprite: 'garchomp', changes: [
-            { type: 'add', text: '+Iron Tail, +Nasty Plot, +Vacuum Wave' },
-        ]},
-        { name: 'Hippowdon', sprite: 'hippowdon', changes: [
-            { type: 'add', text: '+Superpower, +Double-Edge' },
-        ]},
-        { name: 'Lucario', sprite: 'lucario', changes: [
-            { type: 'add', text: '+Blaze Kick, +Iron Tail, +Payback, +Terrain Pulse' },
-        ]},
-        { name: 'Weavile', sprite: 'weavile', changes: [
-            { type: 'add', text: '+Payback, +Psycho Cut, +Reflect, +Hone Claws' },
-        ]},
-        { name: 'Abomasnow', sprite: 'abomasnow', changes: [
-            { type: 'add', text: '+Ice Hammer, +Frost Breath, +Iron Tail, +Shadow Ball' },
-        ]},
-        { name: 'Mamoswine', sprite: 'mamoswine', changes: [
-            { type: 'add', text: '+Attract, +Superpower' },
-        ]},
-        { name: 'Rampardos', sprite: 'rampardos', changes: [
-            { type: 'add', text: '+Meteor Beam, +Attract, +Iron Tail, +Payback, +Superpower' },
-        ]},
-        { name: 'Bastiodon', sprite: 'bastiodon', changes: [
-            { type: 'add', text: '+Steel Roller, +Attract, +Iron Tail' },
-        ]},
-        { name: 'Froslass', sprite: 'froslass', changes: [
-            { type: 'add', text: '+Nasty Plot, +Phantom Force, +Payback, +Safeguard' },
-        ]},
-        { name: 'Lopunny', sprite: 'lopunny', changes: [
-            { type: 'add', text: '+Cotton Guard, +Draining Kiss, +Mach Punch, +Swords Dance, +Trailblaze' },
-        ]},
-        // ── Gen 5 ──
-        { name: 'Rotom', sprite: 'rotom', changes: [
-            { type: 'add', text: '+Rising Voltage, +Parting Shot, +Taunt, +Agility, +Parabolic Charge' },
-        ]},
-        { name: 'Emolga', sprite: 'emolga', changes: [
-            { type: 'add', text: '+Knock Off, +Tailwind, +Aerial Ace' },
-        ]},
-        { name: 'Reuniclus', sprite: 'reuniclus', changes: [
-            { type: 'add', text: '+Attract, +Safeguard, +Steel Roller, +Superpower' },
-        ]},
-        { name: 'Chandelure', sprite: 'chandelure', changes: [
-            { type: 'add', text: '+Mystical Fire, +Payback, +Safeguard, +Flame Wheel' },
-        ]},
-        { name: 'Hydreigon', sprite: 'hydreigon', changes: [
-            { type: 'add', text: '+Beat Up, +Iron Tail, +Payback, +Superpower' },
-        ]},
-        { name: 'Volcarona', sprite: 'volcarona', changes: [
-            { type: 'add', text: '+Mystical Fire, +Safeguard, +Flame Wheel' },
-        ]},
-        // ── Gen 6 ──
-        { name: 'Greninja', sprite: 'greninja', changes: [
-            { type: 'add', text: '+Flip Turn, +Skitter Smack, +Nasty Plot, +Psyshock, +Vacuum Wave' },
-        ]},
-        { name: 'Talonflame', sprite: 'talonflame', changes: [
-            { type: 'add', text: '+Blaze Kick, +Sky Attack, +Whirlwind, +Flame Wheel, +Vacuum Wave' },
-        ]},
         { name: 'Aegislash', sprite: 'aegislash', changes: [
             { type: 'add', text: '+Poltergeist, +Zen Headbutt' },
         ]},
-        { name: 'Heliolisk', sprite: 'heliolisk', changes: [
-            { type: 'add', text: '+Shed Tail, +Morning Sun, +Trailblaze, +Seed Bomb' },
-        ]},
-        // ── Gen 7 ──
-        { name: 'Toxapex', sprite: 'toxapex', changes: [
-            { type: 'add', text: '+Cross Poison, +Light Screen, +Payback' },
-        ]},
-        { name: 'Salazzle', sprite: 'salazzle', changes: [
-            { type: 'add', text: '+Beat Up, +Corrosive Gas, +Cross Poison, +Iron Tail, +Payback' },
-        ]},
-        { name: 'Drampa', sprite: 'drampa', changes: [
-            { type: 'add', text: '+Body Slam, +Earth Power, +Tri Attack, +Whirlwind, +Charge Beam' },
-        ]},
-        // ── Gen 8/9 ──
-        { name: 'Sylveon', sprite: 'sylveon', changes: [
-            { type: 'add', text: '+Mystical Fire, +Safeguard' },
-            { type: 'rem', text: '−Taunt' },
-        ]},
-        { name: 'Dragapult', sprite: 'dragapult', changes: [
-            { type: 'add', text: '+Beat Up, +Tri Attack' },
-        ]},
-        { name: 'Whimsicott', sprite: 'whimsicott', changes: [
-            { type: 'add', text: '+Attract, +Safeguard' },
+        { name: 'Arcanine', sprite: 'arcanine', changes: [
+            { type: 'add', text: '+Burn Up, +Iron Tail' },
+            { type: 'rem', text: '−Flame Wheel' },
         ]},
         { name: 'Archaludon', sprite: 'archaludon', changes: [
-            { type: 'add', text: '+Body Press, +Dragon Claw, +Hone Claws' },
-        ]},
-    ];
-
-    const NERFED = [
-        { name: 'Gengar', sprite: 'gengar', changes: [
-            { type: 'add', text: '+Corrosive Gas, +Self-Destruct, +Shadow Sneak' },
-            { type: 'rem', text: '−Encore' },
-        ]},
-        { name: 'Pinsir', sprite: 'pinsir', changes: [
-            { type: 'add', text: '+Aerial Ace, +Hard Press, +Lunge, +Dual Wingbeat' },
-            { type: 'rem', text: '−Knock Off, −Focus Punch, −Outrage, −Smack Down' },
-        ]},
-        { name: 'Vaporeon', sprite: 'vaporeon', changes: [
-            { type: 'add', text: '+Iron Tail, +Taunt' },
-            { type: 'rem', text: '−Wish' },
-        ]},
-        { name: 'Sableye', sprite: 'sableye', changes: [
-            { type: 'add', text: '+Night Slash, +Safeguard, +Payback' },
-            { type: 'rem', text: '−Parting Shot' },
-        ]},
-        { name: 'Gliscor', sprite: 'gliscor', changes: [
-            { type: 'add', text: '+Pin Missile, +Power Whip, +Attract, +Dig, +Iron Tail, +Payback' },
-            { type: 'rem', text: '−Taunt, −Poison Tail' },
-        ]},
-        { name: 'Incineroar', sprite: 'incineroar', changes: [
-            { type: 'add', text: '+Blaze Kick, +Superpower, +Attract' },
-            { type: 'rem', text: '−Knock Off, −U-turn' },
-        ]},
-        { name: 'Excadrill', sprite: 'excadrill', changes: [
-            { type: 'add', text: '+Megahorn, +Sludge Bomb' },
-            { type: 'rem', text: '−Agility, −Hone Claws' },
-        ]},
-        { name: 'Corviknight', sprite: 'corviknight', changes: [
-            { type: 'add', text: '+Feather Dance' },
-            { type: 'rem', text: '−Payback, −Hone Claws' },
+                        { type: 'add', text: '+Dragon Claw' },
+            { type: 'rem', text: '−Body Press, −Hone Claws' },
         ]},
         { name: 'Aromatisse', sprite: 'aromatisse', changes: [
             { type: 'add', text: '+Alluring Voice, +Hypnosis' },
             { type: 'rem', text: '−Aromatherapy, −Heal Bell' },
         ]},
-        { name: 'Slurpuff', sprite: 'slurpuff', changes: [
-            { type: 'add', text: '+Self-Destruct, +Swords Dance' },
-            { type: 'rem', text: '−Belly Drum, −Aromatherapy, −Heal Bell' },
+        { name: 'Bastiodon', sprite: 'bastiodon', changes: [
+            { type: 'add', text: '+Steel Roller, +Attract, +Iron Tail' },
+        ]},
+        { name: 'Beedrill', sprite: 'beedrill', changes: [
+            { type: 'add', text: '+Bug Buzz, +Cross Poison, +Dual Wingbeat, +Lunge, +Pollen Puff, +Skitter Smack' },
+            { type: 'rem', text: '−Defog, −Roost, −Tailwind' },
+        ]},
+        { name: 'Blastoise', sprite: 'blastoise', changes: [
+            { type: 'add', text: '+Iron Head, +Bulldoze, +Iron Tail, +Outrage, +Terrain Pulse, +Waterfall' },
+        ]},
+        { name: 'Chandelure', sprite: 'chandelure', changes: [
+            { type: 'add', text: '+Mystical Fire, +Payback, +Safeguard' },
+        ]},
+        { name: 'Charizard', sprite: 'charizard', changes: [
+            { type: 'add', text: '+Beat Up, +Roost, +Scale Shot' },
+        ]},
+        { name: 'Corviknight', sprite: 'corviknight', changes: [
+            { type: 'add', text: '+Feather Dance, +Payback' },
+            { type: 'rem', text: '−Hone Claws' },
+        ]},
+        { name: 'Dragapult', sprite: 'dragapult', changes: [
+            { type: 'add', text: '+Beat Up, +Tri Attack' },
+        ]},
+        { name: 'Drampa', sprite: 'drampa', changes: [
+            { type: 'add', text: '+Body Slam, +Earth Power, +Tri Attack, +Whirlwind' },
+        ]},
+        { name: 'Dragonite', sprite: 'dragonite', changes: [
+            { type: 'add', text: '+Whirlwind, +Iron Tail, +Superpower' },
+            { type: 'rem', text: '−Encore' },
+        ]},
+        { name: 'Emolga', sprite: 'emolga', changes: [
+            { type: 'rem', text: '−Aerial Ace, −Knock Off, −Tailwind' },
+        ]},
+        { name: 'Excadrill', sprite: 'excadrill', changes: [
+            { type: 'add', text: '+Megahorn, +Sludge Bomb' },
+            { type: 'rem', text: '−Hone Claws' },
+        ]},
+        { name: 'Froslass', sprite: 'froslass', changes: [
+            { type: 'add', text: '+Nasty Plot, +Phantom Force, +Payback, +Safeguard' },
+        ]},
+        { name: 'Garchomp', sprite: 'garchomp', changes: [
+            { type: 'add', text: '+Iron Tail' },
+        ]},
+        { name: 'Gardevoir', sprite: 'gardevoir', changes: [
+            { type: 'add', text: '+Safeguard' },
+            { type: 'rem', text: '−Teleport' },
+        ]},
+        { name: 'Gengar', sprite: 'gengar', changes: [
+            { type: 'add', text: '+Corrosive Gas, +Self-Destruct' },
+            { type: 'rem', text: '−Encore' },
+        ]},
+        { name: 'Glalie', sprite: 'glalie', changes: [
+            { type: 'add', text: '+Explosion, +Payback, +Self-Destruct, +Steel Roller' },
+        ]},
+        { name: 'Gliscor', sprite: 'gliscor', changes: [
+            { type: 'add', text: '+Pin Missile, +Power Whip, +Attract, +Dig, +Iron Tail, +Payback' },
+            { type: 'rem', text: '−Poison Tail, −Taunt' },
         ]},
         { name: 'Goodra', sprite: 'goodra', changes: [
-            { type: 'add', text: '+Giga Drain' },
-            { type: 'rem', text: '−Iron Tail, −Superpower, −Poison Tail' },
+            { type: 'add', text: '+Giga Drain, +Iron Tail, +Superpower' },
+            { type: 'rem', text: '−Poison Tail' },
         ]},
-        { name: 'Hawlucha', sprite: 'hawlucha', changes: [
-            { type: 'add', text: '+Air Slash' },
-            { type: 'rem', text: '−Superpower, −Payback' },
+        { name: 'Greninja', sprite: 'greninja', changes: [
+            { type: 'add', text: '+Flip Turn, +Skitter Smack' },
         ]},
-        { name: 'Noivern', sprite: 'noivern', changes: [
-            { type: 'add', text: '+Iron Tail, +Sky Attack' },
-            { type: 'rem', text: '−Scale Shot, −Dragon Tail' },
-        ]},
-        { name: 'Mimikyu', sprite: 'mimikyu', changes: [
-            { type: 'add', text: '+Night Slash' },
-            { type: 'rem', text: '−Beat Up, −Payback, −Safeguard, −Hone Claws' },
+        { name: 'Gyarados', sprite: 'gyarados', changes: [
+            { type: 'add', text: '+Dragon Rush, +Iron Tail, +Payback, +Power Whip' },
         ]},
         { name: 'Hatterene', sprite: 'hatterene', changes: [
             { type: 'add', text: '+Power Whip, +Safeguard' },
             { type: 'rem', text: '−Trick' },
         ]},
+        { name: 'Hawlucha', sprite: 'hawlucha', changes: [
+            { type: 'add', text: '+Air Slash, +Payback, +Superpower' },
+        ]},
+        { name: 'Heliolisk', sprite: 'heliolisk', changes: [
+            { type: 'add', text: '+Morning Sun, +Shed Tail, +Trailblaze' },
+        ]},
+        { name: 'Hippowdon', sprite: 'hippowdon', changes: [
+            { type: 'add', text: '+Superpower' },
+            { type: 'rem', text: '−Double-Edge' },
+        ]},
+        { name: 'Hydreigon', sprite: 'hydreigon', changes: [
+            { type: 'add', text: '+Beat Up, +Iron Tail, +Payback, +Superpower' },
+        ]},
+        { name: 'Incineroar', sprite: 'incineroar', changes: [
+            { type: 'add', text: '+Attract, +Blaze Kick, +Superpower' },
+            { type: 'rem', text: '−Knock Off, −U-turn' },
+        ]},
+        { name: 'Kangaskhan', sprite: 'kangaskhan', changes: [
+            { type: 'rem', text: '−Aerial Ace, −Aqua Tail, −Focus Punch, −Power-Up Punch, −Seismic Toss, −Sing, −Wish, −Work Up, −Yawn' },
+        ]},
+        { name: 'Lopunny', sprite: 'lopunny', changes: [
+            { type: 'add', text: '+Cotton Guard, +Draining Kiss, +Dynamic Punch, +Mach Punch, +Swords Dance, +Trailblaze' },
+        ]},
+        { name: 'Lucario', sprite: 'lucario', changes: [
+            { type: 'add', text: '+Blaze Kick, +Iron Tail, +Payback, +Terrain Pulse' },
+        ]},
+        { name: 'Machamp', sprite: 'machamp', changes: [
+            { type: 'add', text: '+Drain Punch' },
+            { type: 'rem', text: '−Focus Punch, −Power-Up Punch, −Vacuum Wave' },
+        ]},
+        { name: 'Mamoswine', sprite: 'mamoswine', changes: [
+            { type: 'add', text: '+Attract, +Superpower' },
+        ]},
+        { name: 'Milotic', sprite: 'milotic', changes: [
+            { type: 'add', text: '+Iron Tail' },
+        ]},
+        { name: 'Mimikyu', sprite: 'mimikyu', changes: [
+            { type: 'add', text: '+Night Slash, +Beat Up, +Payback, +Safeguard' },
+            { type: 'rem', text: '−Hone Claws' },
+        ]},
+        { name: 'Noivern', sprite: 'noivern', changes: [
+            { type: 'add', text: '+Iron Tail, +Sky Attack' },
+            { type: 'rem', text: '−Dragon Tail' },
+        ]},
+        { name: 'Pinsir', sprite: 'pinsir', changes: [
+            { type: 'add', text: '+Aerial Ace, +Hard Press, +Lunge' },
+            { type: 'rem', text: '−Focus Punch, −Knock Off, −Outrage, −Smack Down' },
+        ]},
+        { name: 'Rampardos', sprite: 'rampardos', changes: [
+            { type: 'add', text: '+Meteor Beam, +Attract, +Iron Tail, +Payback, +Superpower' },
+        ]},
+        { name: 'Reuniclus', sprite: 'reuniclus', changes: [
+            { type: 'add', text: '+Attract, +Safeguard, +Steel Roller, +Superpower' },
+        ]},
+        { name: 'Rotom', sprite: 'rotom', changes: [
+            { type: 'add', text: '+Rising Voltage' },
+            { type: 'rem', text: '−Hyper Voice' },
+        ]},
+        { name: 'Sableye', sprite: 'sableye', changes: [
+            { type: 'add', text: '+Night Slash, +Safeguard, +Payback' },
+        ]},
+        { name: 'Salazzle', sprite: 'salazzle', changes: [
+            { type: 'add', text: '+Beat Up, +Corrosive Gas, +Cross Poison, +Iron Tail, +Payback' },
+        ]},
+        { name: 'Scizor', sprite: 'scizor', changes: [
+            { type: 'add', text: '+Psycho Cut, +Roost, +Superpower' },
+        ]},
+        { name: 'Sharpedo', sprite: 'sharpedo', changes: [
+            { type: 'rem', text: '−Roar, −Super Fang, −Thief' },
+        ]},
+        { name: 'Slowbro', sprite: 'slowbro', changes: [
+            { type: 'add', text: '+Iron Tail, +Safeguard, +Tri Attack' },
+        ]},
+        { name: 'Slurpuff', sprite: 'slurpuff', changes: [
+            { type: 'rem', text: '−Aromatherapy, −Belly Drum, −Heal Bell' },
+        ]},
+        { name: 'Starmie', sprite: 'starmie', changes: [
+            { type: 'add', text: '+Ancient Power, +Aqua Jet, +Bulk Up, +Charge Beam, +Ice Spinner, +Liquidation, +Safeguard, +Self-Destruct, +Zen Headbutt' },
+            { type: 'rem', text: '−Attract, −Pain Split, −Reflect Type, −Teleport' },
+        ]},
+        { name: 'Sylveon', sprite: 'sylveon', changes: [
+            { type: 'add', text: '+Mystical Fire, +Safeguard' },
+        ]},
+        { name: 'Talonflame', sprite: 'talonflame', changes: [
+            { type: 'add', text: '+Blaze Kick, +Sky Attack, +Whirlwind' },
+        ]},
+        { name: 'Toxapex', sprite: 'toxapex', changes: [
+            { type: 'add', text: '+Cross Poison, +Light Screen, +Payback' },
+        ]},
+        { name: 'Tyranitar', sprite: 'tyranitar', changes: [
+            { type: 'add', text: '+Iron Tail, +Superpower' },
+        ]},
+        { name: 'Umbreon', sprite: 'umbreon', changes: [
+            { type: 'add', text: '+Payback' },
+        ]},
+        { name: 'Vaporeon', sprite: 'vaporeon', changes: [
+            { type: 'add', text: '+Iron Tail' },
+            { type: 'rem', text: '−Wish' },
+        ]},
+        { name: 'Venusaur', sprite: 'venusaur', changes: [
+            { type: 'add', text: '+Sludge Wave, +Light Screen, +Outrage, +Terrain Pulse' },
+        ]},
         { name: 'Vivillon', sprite: 'vivillon', changes: [
-            { type: 'add', text: '+Whirlwind' },
-            { type: 'rem', text: '−Calm Mind, −Dual Wingbeat, −Dazzling Gleam' },
+            { type: 'add', text: '+Whirlwind, +Calm Mind' },
+        ]},
+        { name: 'Volcarona', sprite: 'volcarona', changes: [
+            { type: 'add', text: '+Mystical Fire, +Safeguard' },
+            { type: 'rem', text: '−Flame Wheel' },
+        ]},
+        { name: 'Weavile', sprite: 'weavile', changes: [
+            { type: 'add', text: '+Payback, +Psycho Cut, +Reflect' },
+            { type: 'rem', text: '−Hone Claws' },
+        ]},
+        { name: 'Whimsicott', sprite: 'whimsicott', changes: [
+            { type: 'add', text: '+Attract, +Safeguard' },
         ]},
     ];
 
@@ -499,9 +486,10 @@ const BUFFED = [
             this.src = 'https://play.pokemonshowdown.com/sprites/gen5/' + poke.sprite + '.png';
         };
 
-        const nameEl = document.createElement('div');
+        const nameEl = document.createElement('a');
         nameEl.className = 'champ-poke-name';
         nameEl.textContent = poke.name;
+        nameEl.dataset.pokemon = poke.sprite;
 
         header.appendChild(img);
         header.appendChild(nameEl);
@@ -523,10 +511,25 @@ const BUFFED = [
         return card;
     }
 
-    const buffedGrid = document.getElementById('poke-buffed');
-    const nerfedGrid = document.getElementById('poke-nerfed');
-    BUFFED.forEach(p => buffedGrid.appendChild(buildCard(p)));
-    NERFED.forEach(p => nerfedGrid.appendChild(buildCard(p)));
+    const pokeGrid = document.getElementById('poke-all');
+    POKEMON_CHANGES.forEach(p => pokeGrid.appendChild(buildCard(p)));
+
+    (async () => {
+        try {
+            const periods = await loadPeriods();
+            if (!periods || !periods.latest) return;
+            const statsData = await loadFormatSummary(periods.latest);
+            if (!statsData) return;
+            const champFormat = statsData.formats
+                .filter(f => getFormatKey(f).includes('champion'))
+                .sort((a, b) => b.total_battles - a.total_battles)[0];
+            if (!champFormat) return;
+            const formatKey = getFormatKey(champFormat);
+            document.querySelectorAll('.champ-poke-name[data-pokemon]').forEach(el => {
+                el.href = `../pokemon.html?format=${encodeURIComponent(formatKey)}&pokemon=${encodeURIComponent(el.dataset.pokemon)}`;
+            });
+        } catch(e) {}
+    })();
 
     // ── Move changes ──
     const TYPE_SPRITE_INDEX = {
@@ -534,12 +537,12 @@ const BUFFED = [
         bug:7, ghost:8, steel:9, fire:10, water:11, grass:12,
         electric:13, psychic:14, ice:15, dragon:16, dark:17, fairy:18
     };
-    const TYPE_SPRITE_BASE = '../assets/sprites/types';
+    const TYPE_SPRITE_BASE = '../../assets/sprites/types';
 
     const MOVE_CHANGES = {
         buffs: [
-            { id:'appleacid',       stat:'Power',             old:'80',                   nw:'90' },
             { id:'anchorshot',      stat:'Power',             old:'80',                   nw:'90' },
+            { id:'appleacid',       stat:'Power',             old:'80',                   nw:'90' },
             { id:'beakblast',       stat:'Power / PP',        old:'100 / 16',             nw:'120 / 8' },
             { id:'bonerush',        stat:'Power (per hit)',   old:'25',                   nw:'30' },
             { id:'clangoroussoul',  stat:'Accuracy',          old:'100%',                 nw:'never misses' },
@@ -578,12 +581,12 @@ const BUFFED = [
             { id:'kingsshield',     stat:'PP',                old:'12',                   nw:'8' },
             { id:'makeitrain',      stat:'Accuracy',          old:'100%',                 nw:'95%' },
             { id:'moonblast',       stat:'SpAtk drop',        old:'30%',                  nw:'10%' },
-            { id:'nihillight',      stat:'PP',                old:'12',                   nw:'8' },
             { id:'obstruct',        stat:'PP',                old:'12',                   nw:'8' },
-            { id:'protect',         stat:'PP',                old:'16',                   nw:'8' },
+            { id:'protect',         stat:'PP',                old:'12',                   nw:'8' },
             { id:'purify',          stat:'PP',                old:'20',                   nw:'8' },
             { id:'saltcure',        stat:'Residual damage',   old:'1/8 HP (1/4 Water/Steel)', nw:'1/16 HP (1/8 Water/Steel)' },
             { id:'sandstorm',       stat:'PP',                old:'12',                   nw:'8' },
+            { id:'snowscape',       stat:'PP',                old:'12',                   nw:'8' },
             { id:'spikyshield',     stat:'PP',                old:'12',                   nw:'8' },
         ],
         other: [
@@ -655,7 +658,7 @@ const BUFFED = [
     (async () => {
         let moveData = {};
         try {
-            const res = await fetch('../assets/move-data.json');
+            const res = await fetch('../../assets/move-data.json');
             const json = await res.json();
             moveData = json.moves || {};
         } catch(e) {}
@@ -671,3 +674,4 @@ const BUFFED = [
     </script>
 </body>
 </html>
+

@@ -5174,11 +5174,11 @@
                   "nihillight":  {
                                      "name":  "Nihil Light",
                                      "type":  "Dragon",
-                                     "pp":  10,
-                                     "basePower":  100,
+                                     "pp":  5,
+                                     "basePower":  200,
                                      "accuracy":  100,
                                      "priority":  0,
-                                     "description":  ""
+                                     "description":  "Unleashes a powerful light that defies all laws of nature. Strikes Fairy types and ignores any stat changes affecting the target."
                                  },
                   "nobleroar":  {
                                     "name":  "Noble Roar",

@@ -1294,28 +1294,13 @@ function getSortArrow(sortState, key) {
 }
 
 async function showPokemonNoData(pokemonName, formatName, rating, latestPeriod, pokemonList) {
-    const [baseStats, crossFormats] = await Promise.all([
-        loadBaseStatsForPokemon(pokemonName),
-        loadPokemonCrossFormats(pokemonName, latestPeriod),
-    ]);
+    const baseStats = await loadBaseStatsForPokemon(pokemonName);
     moveDataMap = await loadMoveDataMap();
     abilityDataMap = await loadAbilityDataMap();
     itemNameMap = await loadItemNameMap();
     formatNameMap = await loadFormatNameMap();
     const displayFormatName = getDisplayFormatName(formatName);
 
-    // Find the best alternate format entry for moves/spreads/abilities.
-    let altEntry = null;
-    let altFormatKey = null;
-    if (crossFormats && Array.isArray(crossFormats.formats) && crossFormats.formats.length > 0) {
-        const candidates = crossFormats.formats
-            .map(f => getFormatKey(f))
-            .filter(k => k && k !== formatName);
-        for (const candidate of candidates) {
-            const e = await loadPokemonEntry(candidate, pokemonName, '0');
-            if (e) { altEntry = e; altFormatKey = candidate; break; }
-        }
-    }
 
     const detail = document.getElementById('pokemon-detail');
     if (detail) detail.style.display = 'block';
@@ -1364,18 +1349,11 @@ async function showPokemonNoData(pokemonName, formatName, rating, latestPeriod, 
     await populateRatingFilter(formatName, rating, pokemonName, latestPeriod);
     await populateFormatSwitcher(pokemonName, formatName, displayFormatName, rating, latestPeriod);
 
-    const altFormatLabel = altFormatKey
-        ? ` <span class="pokemon-no-data-source">(from ${escapeHtml(getDisplayFormatName(altFormatKey))})</span>`
-        : '';
-
     const grid = document.getElementById('pokemon-detail-grid');
     if (grid) {
         grid.innerHTML = [
-            `<section class="pokemon-detail-section pokemon-no-data pokemon-detail-section--full"><p>No usage data for ${escapeHtml(pokemonName)} in ${escapeHtml(displayFormatName)} this month.${altEntry ? ` Showing data from ${escapeHtml(getDisplayFormatName(altFormatKey))}.` : ''}</p></section>`,
+            `<section class="pokemon-detail-section pokemon-no-data pokemon-detail-section--full"><p>No usage data for ${escapeHtml(pokemonName)} in ${escapeHtml(displayFormatName)} this month.</p></section>`,
             renderBaseStatsSection('Base Stats', baseStats),
-            altEntry ? renderMapSection(`Moves${altFormatLabel}`, altEntry.moves_json) : '',
-            altEntry ? renderMapSection(`Spreads${altFormatLabel}`, altEntry.spreads_json) : '',
-            altEntry ? renderMapSection(`Abilities${altFormatLabel}`, altEntry.abilities_json) : '',
         ].filter(Boolean).join('');
         grid.style.opacity = '';
         grid.style.pointerEvents = '';
