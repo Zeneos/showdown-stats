@@ -1,0 +1,556 @@
+/* Champions page styles */
+
+.champ-disclaimer {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid var(--link-color);
+    border-radius: 8px;
+    padding: 10px 14px;
+    line-height: 1.5;
+}
+
+html[data-theme='dark'] .champ-disclaimer {
+    background: #0b1220;
+    border-color: #334155;
+    border-left-color: var(--link-color);
+}
+
+/* ── Table of contents ── */
+.champ-toc {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    width: fit-content;
+    align-self: center;
+}
+
+html[data-theme='dark'] .champ-toc {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-toc-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    padding: 0 4px;
+    margin-bottom: 4px;
+}
+
+.champ-toc-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.champ-toc-link:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+html[data-theme='dark'] .champ-toc-link:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.35);
+}
+
+.champ-formats-section {
+    gap: 16px;
+}
+
+.champ-format-buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.champ-format-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #1f2937;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.champ-format-button:hover,
+.champ-format-button:focus-visible {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.champ-format-button.is-active {
+    border-color: #1d4ed8;
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+html[data-theme='dark'] .champ-format-button {
+    background: #111827;
+    color: #e5e7eb;
+    border-color: #334155;
+}
+
+html[data-theme='dark'] .champ-format-button:hover,
+html[data-theme='dark'] .champ-format-button:focus-visible {
+    background: #1e293b;
+    border-color: #6366f1;
+    color: #ffffff;
+}
+
+.champ-page {
+    padding: 24px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* ── Section wrapper ── */
+.champ-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.champ-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1f2937;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+html[data-theme='dark'] .champ-section-title {
+    color: #ffffff;
+}
+
+.champ-section-title .champ-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.champ-tag--reg {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+.champ-tag--patch {
+    background: rgba(34, 197, 94, 0.15);
+    color: #15803d;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+html[data-theme='dark'] .champ-tag--patch {
+    background: rgba(34, 197, 94, 0.12);
+    color: #4ade80;
+    border-color: rgba(34, 197, 94, 0.25);
+}
+
+/* ── Reg overview card ── */
+.champ-reg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.champ-reg-card {
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+html[data-theme='dark'] .champ-reg-card {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-reg-card-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.champ-reg-card-value {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+/* ── Change rows (status / mechanics) ── */
+.champ-change-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.champ-change-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid transparent;
+}
+
+html[data-theme='dark'] .champ-change-row {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-change-row--nerf { border-left-color: #ef4444; }
+.champ-change-row--buff { border-left-color: #22c55e; }
+.champ-change-row--neutral { border-left-color: #94a3b8; }
+
+.champ-change-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #1f2937;
+    min-width: 130px;
+    flex-shrink: 0;
+}
+
+html[data-theme='dark'] .champ-change-label {
+    color: #ffffff;
+}
+
+.champ-change-desc {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.champ-old { color: #ef4444; font-weight: 600; }
+.champ-new { color: #22c55e; font-weight: 600; }
+.champ-arrow { color: var(--text-muted); margin: 0 3px; }
+
+/* ── Move change rows ── */
+.champ-move-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fdfdfd;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid transparent;
+}
+
+html[data-theme='dark'] .champ-move-row {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-move-row--buff { border-left-color: #22c55e; }
+.champ-move-row--nerf { border-left-color: #ef4444; }
+.champ-move-row--neutral { border-left-color: #94a3b8; }
+
+.champ-move-identity {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 160px;
+    flex-shrink: 0;
+}
+
+.champ-move-identity .move-type-icon {
+    font-size: 0.62rem;
+    min-width: 34px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.champ-move-title {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #1f2937;
+    white-space: nowrap;
+}
+
+html[data-theme='dark'] .champ-move-title {
+    color: #ffffff;
+}
+
+.champ-move-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.champ-move-change {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.champ-move-desc {
+    font-size: 0.77rem;
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* ── Moves table ── */
+.champ-moves-wrap {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fdfdfd;
+}
+
+html[data-theme='dark'] .champ-moves-wrap {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-moves-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+}
+
+.champ-moves-table th {
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    background: #f3f4f6;
+    border-bottom: 2px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+html[data-theme='dark'] .champ-moves-table th {
+    background: #111827;
+    border-bottom-color: #334155;
+}
+
+.champ-moves-table td {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    vertical-align: middle;
+}
+
+.champ-moves-table tr:last-child td { border-bottom: none; }
+
+.champ-moves-table tr:hover td {
+    background: rgba(102, 126, 234, 0.04);
+}
+
+html[data-theme='dark'] .champ-moves-table tr:hover td {
+    background: rgba(99, 102, 241, 0.07);
+}
+
+.champ-move-name {
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.champ-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.champ-badge--buff { background: rgba(34, 197, 94, 0.15); color: #15803d; }
+.champ-badge--nerf { background: rgba(239, 68, 68, 0.13); color: #b91c1c; }
+.champ-badge--change { background: rgba(234, 179, 8, 0.15); color: #92400e; }
+
+html[data-theme='dark'] .champ-badge--buff { background: rgba(34, 197, 94, 0.12); color: #4ade80; }
+html[data-theme='dark'] .champ-badge--nerf { background: rgba(239, 68, 68, 0.12); color: #f87171; }
+html[data-theme='dark'] .champ-badge--change { background: rgba(234, 179, 8, 0.12); color: #fbbf24; }
+
+/* ── Pokemon change cards ── */
+.champ-pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.champ-poke-card {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fdfdfd;
+    padding: 12px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+html[data-theme='dark'] .champ-poke-card {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-poke-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.champ-poke-sprite {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    animation: pokemon-icon-bounce 0.8s linear infinite;
+    will-change: transform;
+}
+
+.champ-poke-name {
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: #1f2937;
+}
+
+html[data-theme='dark'] .champ-poke-name {
+    color: #ffffff;
+}
+
+.champ-poke-changes {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.champ-poke-change {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.champ-poke-change .add { color: #16a34a; font-weight: 600; }
+.champ-poke-change .rem { color: #dc2626; font-weight: 600; }
+
+html[data-theme='dark'] .champ-poke-change .add { color: #4ade80; }
+html[data-theme='dark'] .champ-poke-change .rem { color: #f87171; }
+
+/* ── Patch notes ── */
+.champ-patch {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fdfdfd;
+}
+
+html[data-theme='dark'] .champ-patch {
+    background: #0b1220;
+    border-color: #334155;
+}
+
+.champ-patch-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+html[data-theme='dark'] .champ-patch-header {
+    background: #111827;
+    border-bottom-color: #334155;
+}
+
+.champ-patch-version {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.champ-patch-date {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-left: auto;
+}
+
+.champ-patch-body {
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.champ-patch-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.champ-patch-item::before {
+    content: '•';
+    color: var(--link-color);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.champ-patch-item strong {
+    color: var(--text-primary);
+}
+
+/* ── Subsection headers ── */
+.champ-subsection-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+html[data-theme='dark'] .champ-subsection-title {
+    color: #9ca3af;
+}
+
+@media (max-width: 600px) {
+    .champ-page { padding: 16px 14px 24px; gap: 24px; }
+    .champ-reg-grid { grid-template-columns: repeat(2, 1fr); }
+    .champ-pokemon-grid { grid-template-columns: repeat(2, 1fr); }
+    .champ-change-label { min-width: 100px; }
+    .champ-moves-table th:nth-child(3),
+    .champ-moves-table td:nth-child(3) { display: none; }
+}
