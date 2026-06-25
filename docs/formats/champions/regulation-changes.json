@@ -42,40 +42,430 @@
       },
       "itemChanges": {
         "new": [
-          { "label": "Wide Lens", "description": "Newly added item." },
-          { "label": "Muscle Band", "description": "Newly added item." },
-          { "label": "Wise Glasses", "description": "Newly added item." },
-          { "label": "Expert Belt", "description": "Newly added item." },
-          { "label": "Light Clay", "description": "Newly added item." },
-          { "label": "Life Orb", "description": "Newly added item." },
-          { "label": "Zoom Lens", "description": "Newly added item." },
-          { "label": "Metronome", "description": "Newly added item." },
-          { "label": "Iron Ball", "description": "Newly added item." },
-          { "label": "Icy Rock", "description": "Newly added item." },
-          { "label": "Smooth Rock", "description": "Newly added item." },
-          { "label": "Heat Rock", "description": "Newly added item." },
-          { "label": "Damp Rock", "description": "Newly added item." },
-          { "label": "Shed Shell", "description": "Newly added item." },
-          { "label": "Big Root", "description": "Newly added item." },
-          { "label": "Raichunite X", "description": "Newly added item." },
-          { "label": "Raichunite Y", "description": "Newly added item." },
-          { "label": "Sceptilite", "description": "Newly added item." },
-          { "label": "Blazikenite", "description": "Newly added item." },
-          { "label": "Swampertite", "description": "Newly added item." },
-          { "label": "Mawilite", "description": "Newly added item." },
-          { "label": "Metagrossite", "description": "Newly added item." },
-          { "label": "Staraptite", "description": "Newly added item." },
-          { "label": "Scolipite", "description": "Newly added item." },
-          { "label": "Scraftinite", "description": "Newly added item." },
-          { "label": "Eelektrossite", "description": "Newly added item." },
-          { "label": "Pyroarite", "description": "Newly added item." },
-          { "label": "Malamarite", "description": "Newly added item." },
-          { "label": "Barbaracite", "description": "Newly added item." },
-          { "label": "Dragalgite", "description": "Newly added item." },
-          { "label": "Falinksite", "description": "Newly added item." }
+          {
+            "label": "Wide Lens",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Muscle Band",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Wise Glasses",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Expert Belt",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Light Clay",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Life Orb",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Zoom Lens",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Metronome",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Iron Ball",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Icy Rock",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Smooth Rock",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Heat Rock",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Damp Rock",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Shed Shell",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Big Root",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Raichunite X",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Raichunite Y",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Sceptilite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Blazikenite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Swampertite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Mawilite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Metagrossite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Staraptite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Scolipite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Scraftinite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Eelektrossite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Pyroarite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Malamarite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Barbaracite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Dragalgite",
+            "description": "Newly added item."
+          },
+          {
+            "label": "Falinksite",
+            "description": "Newly added item."
+          }
         ]
       },
-      "pokemonChanges": []
+      "pokemonChanges": [
+        {
+          "name": "Annihilape",
+          "sprite": "annihilape",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Dynamic Punch"
+            },
+            {
+              "type": "rem",
+              "text": "-Knock Off, -Roar, -Covet, -Final Gambit, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Barbaracle",
+          "sprite": "barbaracle",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Aqua Cutter, +Close Combat, +Waterfall"
+            },
+            {
+              "type": "rem",
+              "text": "-Aerial Ace, -Endeavor, -Hone Claws, -Infestation, -Laser Focus, -Nature Power, -Power-Up Punch, -Smack Down, -Swagger, -Toxic, -Water Pulse"
+            }
+          ]
+        },
+        {
+          "name": "Blaziken",
+          "sprite": "blaziken",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+High Jump Kick, +Superpower"
+            },
+            {
+              "type": "rem",
+              "text": "-Drain Punch, -Fire Pledge, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Dragalge",
+          "sprite": "dragalge",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Poison Jab, +Iron Tail"
+            },
+            {
+              "type": "rem",
+              "text": "-Poison Tail, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Eelektross",
+          "sprite": "eelektross",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Psychic Fangs, +Rising Voltage, +Waterfall, +Iron Tail, +Superpower"
+            },
+            {
+              "type": "rem",
+              "text": "-Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Falinks",
+          "sprite": "falinks",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Seed Bomb, +Beat Up, +Payback, +Superpower"
+            },
+            {
+              "type": "rem",
+              "text": "-Fake Out, -Low Sweep, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Gholdengo",
+          "sprite": "gholdengo",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Surf"
+            },
+            {
+              "type": "rem",
+              "text": "-Facade, -Tera Blast, -Thunder Wave"
+            }
+          ]
+        },
+        {
+          "name": "Grimmsnarl",
+          "sprite": "grimmsnarl",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Power Whip, +Superpower"
+            },
+            {
+              "type": "rem",
+              "text": "-Tera Blast, -Thunder Wave"
+            }
+          ]
+        },
+        {
+          "name": "Houndstone",
+          "sprite": "houndstone",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Swagger, +Zen Headbutt"
+            },
+            {
+              "type": "rem",
+              "text": "-Seed Bomb, -Shadow Claw, -Work Up, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Malamar",
+          "sprite": "malamar",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Poison Jab, +Zen Headbutt"
+            },
+            {
+              "type": "rem",
+              "text": "-Bulk Up, -Close Combat, -Octolock, -Stealth Rock, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Mawile",
+          "sprite": "mawile",
+          "changes": [
+            {
+              "type": "rem",
+              "text": "-Dazzling Gleam, -Charge Beam, -Counter, -Focus Punch, -Laser Focus, -Magnet Rise, -Metal Burst, -Pain Split, -Power-Up Punch, -Psych Up, -Sing, -Super Fang, -Toxic"
+            }
+          ]
+        },
+        {
+          "name": "Metagross",
+          "sprite": "metagross",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Cosmic Power, +Psycho Cut, +Self-Destruct, +Steel Roller, +Swagger"
+            },
+            {
+              "type": "rem",
+              "text": "-Heavy Slam, -Hone Claws, -Knock Off, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Musharna",
+          "sprite": "musharna",
+          "changes": [
+            {
+              "type": "rem",
+              "text": "-Tri Attack, -After You, -Baton Pass, -Gravity, -Heal Bell, -Magic Coat, -Pain Split, -Psych Up, -Swagger, -Toxic"
+            }
+          ]
+        },
+        {
+          "name": "Overqwil",
+          "sprite": "overqwil",
+          "changes": [
+            {
+              "type": "rem",
+              "text": "-Mortal Spin, -Thunder Wave, -Brine, -Poison Tail, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Pyroar",
+          "sprite": "pyroar",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Scorching Sands, +Iron Tail, +Payback"
+            },
+            {
+              "type": "rem",
+              "text": "-Earth Power, -Tera Blast, -Work Up"
+            }
+          ]
+        },
+        {
+          "name": "Qwilfish",
+          "sprite": "qwilfish",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Payback, +Steel Roller"
+            },
+            {
+              "type": "rem",
+              "text": "-Brine, -Poison Tail, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Sceptile",
+          "sprite": "sceptile",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Dragon Rush, +Earth Power, +Cross Poison, +Iron Tail"
+            },
+            {
+              "type": "rem",
+              "text": "-Grass Pledge, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Scolipede",
+          "sprite": "scolipede",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Gunk Shot, +Leech Life, +Trailblaze"
+            },
+            {
+              "type": "rem",
+              "text": "-First Impression, -Mortal Spin, -U-turn, -Aqua Tail, -Endeavor, -Infestation, -Poison Tail, -Swagger, -Venom Drench"
+            }
+          ]
+        },
+        {
+          "name": "Scrafty",
+          "sprite": "scrafty",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Dynamic Punch, +Iron Tail"
+            },
+            {
+              "type": "rem",
+              "text": "-Parting Shot, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Staraptor",
+          "sprite": "staraptor",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Blaze Kick, +Brick Break, +Bulk Up, +Focus Blast, +Roost, +Sky Attack, +Swagger"
+            },
+            {
+              "type": "rem",
+              "text": "-Knock Off, -Low Sweep, -Outrage, -Vacuum Wave, -Tera Blast"
+            }
+          ]
+        },
+        {
+          "name": "Swampert",
+          "sprite": "swampert",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Sludge Bomb, +Wave Crash, +Iron Tail, +Superpower"
+            },
+            {
+              "type": "rem",
+              "text": "-Fissure, -Tera Blast, -Water Pledge"
+            }
+          ]
+        },
+        {
+          "name": "Vileplume",
+          "sprite": "vileplume",
+          "changes": [
+            {
+              "type": "add",
+              "text": "+Attract, +Corrosive Gas"
+            },
+            {
+              "type": "rem",
+              "text": "-Tera Blast"
+            }
+          ]
+        }
+      ]
     }
   }
 }

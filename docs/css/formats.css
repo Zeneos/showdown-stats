@@ -825,7 +825,8 @@ tbody tr:hover {
 }
 
 .move-cell,
-.ability-cell {
+.ability-cell,
+.item-info {
     /* Display & Box Model */
     display: flex;
     flex-direction: column;
@@ -835,7 +836,7 @@ tbody tr:hover {
 .item-cell {
     /* Display & Box Model */
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
 }
 
@@ -990,7 +991,8 @@ tr.pokemon-nav-row:focus-visible {
 }
 
 .move-description,
-.ability-description {
+.ability-description,
+.item-description {
     /* Typography */
     font-size: 0.79em;
     line-height: 1.2;
@@ -1877,6 +1879,7 @@ html[data-theme='dark'] .base-stats-bst,
 html[data-theme='dark'] .move-meta,
 html[data-theme='dark'] .move-description,
 html[data-theme='dark'] .ability-description,
+html[data-theme='dark'] .item-description,
 html[data-theme='dark'] .detail-list {
     color: #94a3b8;
 }

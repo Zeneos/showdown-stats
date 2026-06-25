@@ -68,15 +68,15 @@
                 <!-- ── Table of Contents ── -->
             <nav class="champ-toc" aria-label="Page sections">
                 <span class="champ-toc-header">Change Overview</span>
-                <a href="#toc-mechanics" class="champ-toc-link">Game Mechanics</a>
-<a href="#toc-moves" class="champ-toc-link">Move Changes</a>
-                <a href="#toc-abilities" class="champ-toc-link">Ability Changes</a>
-                <a href="#toc-pokemon" class="champ-toc-link">Pokémon Changes</a>
-                <a href="#toc-patches" class="champ-toc-link">Patch Notes</a>
+                <a href="#ma-mechanics" class="champ-toc-link">Game Mechanics</a>
+<a href="#ma-moves" class="champ-toc-link">Move Changes</a>
+                <a href="#ma-abilities" class="champ-toc-link">Ability Changes</a>
+                <a href="#ma-pokemon" class="champ-toc-link">Pokémon Changes</a>
+                <a href="#ma-patches" class="champ-toc-link">Patch Notes</a>
             </nav>
 
             <!-- ── Status & Mechanic Changes ── -->
-            <section id="toc-mechanics" class="champ-section">
+            <section id="ma-mechanics" class="champ-section">
                 <h2 class="champ-section-title">Game Mechanic Changes</h2>
 
                 <div class="champ-subsection-title">Status Conditions</div>
@@ -144,7 +144,7 @@
             </section>
 
             <!-- ── Move Changes ── -->
-            <section id="toc-moves" class="champ-section">
+            <section id="ma-moves" class="champ-section">
                 <h2 class="champ-section-title">Move Changes</h2>
                 <div class="champ-subsection-title">Buffs</div>
                 <div id="moves-buffs" class="champ-change-list"></div>
@@ -155,7 +155,7 @@
             </section>
 
             <!-- ── Ability Changes ── -->
-            <section id="toc-abilities" class="champ-section">
+            <section id="ma-abilities" class="champ-section">
                 <h2 class="champ-section-title">Ability Changes</h2>
 
                 <div class="champ-subsection-title">New Abilities</div>
@@ -204,14 +204,14 @@
             </section>
 
             <!-- ── Pokemon Changes ── -->
-            <section id="toc-pokemon" class="champ-section">
+            <section id="ma-pokemon" class="champ-section">
                 <h2 class="champ-section-title">Pokémon-Specific Changes</h2>
 
                 <div class="champ-pokemon-grid" id="poke-all"></div>
             </section>
 
             <!-- ── Patch Notes ── -->
-            <section id="toc-patches" class="champ-section">
+            <section id="ma-patches" class="champ-section">
                 <h2 class="champ-section-title">
                     Patch Notes
                     <span class="champ-tag champ-tag--patch">Bug Fixes</span>
@@ -268,8 +268,9 @@
                 <nav class="champ-toc" aria-label="M-B page sections">
                     <span class="champ-toc-header">Change Overview</span>
                     <a href="#mb-moves" class="champ-toc-link">Move Changes</a>
-                    <a href="#mb-abilities" class="champ-toc-link">Ability Changes</a>
-                    <a href="#mb-items" class="champ-toc-link">Item Changes</a>
+                    <a href="#mb-abilities-section" class="champ-toc-link">Ability Changes</a>
+                    <a href="#mb-items-section" class="champ-toc-link">Item Changes</a>
+                    <a href="#mb-pokemon-section" class="champ-toc-link">Pokémon Changes</a>
                 </nav>
 
                 <section id="mb-moves" class="champ-section">
@@ -369,7 +370,14 @@
         }
 
         function viewFromHash() {
-            return window.location.hash === '#regulation-m-a' ? 'ma' : 'mb';
+            const hash = window.location.hash || '#regulation-m-b';
+            if (hash === '#regulation-m-a' || hash.startsWith('#ma-') || hash.startsWith('#toc-')) {
+                return 'ma';
+            }
+            if (hash === '#regulation-m-b' || hash.startsWith('#mb-')) {
+                return 'mb';
+            }
+            return 'mb';
         }
 
         tabMb.addEventListener('click', () => setView('mb'));
@@ -446,7 +454,7 @@
                 return itemMapCache;
             }
             try {
-                const response = await fetch('../../assets/item-name-map.json');
+                const response = await fetch('../../assets/item-name-map.json', { cache: 'no-store' });
                 const json = await response.json();
                 itemMapCache = json && json.items ? json.items : {};
             } catch (error) {
@@ -539,6 +547,7 @@
         function renderRows(containerId, changes, rowKind) {
             const container = document.getElementById(containerId);
             if (!container) return;
+            container.className = 'champ-change-list';
             container.innerHTML = '';
 
             (changes || []).forEach(change => {
@@ -559,12 +568,75 @@
             });
         }
 
+        function buildPokemonCard(pokemon) {
+            const card = document.createElement('div');
+            card.className = 'champ-poke-card';
+
+            const header = document.createElement('div');
+            header.className = 'champ-poke-header';
+
+            const img = document.createElement('img');
+            img.className = 'champ-poke-sprite';
+            img.alt = pokemon.name || 'Pokemon';
+            img.src = `${ICON_BASE}${pokemon.sprite}.png`;
+            img.onerror = function() {
+                this.onerror = null;
+                this.src = `https://play.pokemonshowdown.com/sprites/gen5/${pokemon.sprite}.png`;
+            };
+
+            const nameEl = document.createElement('a');
+            nameEl.className = 'champ-poke-name';
+            nameEl.textContent = pokemon.name || 'Pokemon';
+            nameEl.dataset.pokemon = pokemon.sprite || '';
+            if (pokemon.sprite) {
+                nameEl.href = `../pokemon.html?pokemon=${encodeURIComponent(pokemon.sprite)}`;
+            }
+
+            header.appendChild(img);
+            header.appendChild(nameEl);
+
+            const changes = document.createElement('div');
+            changes.className = 'champ-poke-changes';
+
+            (pokemon.changes || []).forEach(change => {
+                const row = document.createElement('div');
+                row.className = 'champ-poke-change';
+
+                const span = document.createElement('span');
+                span.className = change.type || 'add';
+                span.textContent = change.text || '';
+
+                row.appendChild(span);
+                changes.appendChild(row);
+            });
+
+            card.appendChild(header);
+            card.appendChild(changes);
+            return card;
+        }
+
+        function renderPokemonCards(containerId, pokemonChanges) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.className = 'champ-pokemon-grid';
+            container.innerHTML = '';
+
+            (pokemonChanges || []).forEach(pokemon => {
+                container.appendChild(buildPokemonCard(pokemon));
+            });
+        }
+
         function renderItemRows(containerId, items, rowKind, itemMap) {
             const container = document.getElementById(containerId);
             if (!container) return;
             container.innerHTML = '';
 
             (items || []).forEach(item => {
+                const itemName = item.label || item.name || 'Item';
+                const itemEntry = itemMap[toItemId(itemName)] || null;
+                const mappedDescription = itemEntry && itemEntry.description ? String(itemEntry.description) : '';
+                const descriptionText = mappedDescription || item.description || '';
+
                 const row = document.createElement('div');
                 row.className = `champ-change-row champ-change-row--${rowKind} champ-item-row`;
 
@@ -573,23 +645,23 @@
 
                 const icon = document.createElement('img');
                 icon.className = 'champ-item-icon';
-                icon.alt = `${item.label || item.name || 'Item'} icon`;
+                icon.alt = `${itemName} icon`;
                 icon.loading = 'lazy';
-                icon.src = getItemIconPath(item.label || item.name, itemMap);
+                icon.src = getItemIconPath(itemName, itemMap);
                 icon.onerror = function() {
                     this.onerror = null;
                     this.src = ITEM_ICON_FALLBACK;
                 };
 
                 const text = document.createElement('span');
-                text.textContent = item.label || item.name || 'Item';
+                text.textContent = itemName;
 
                 label.appendChild(icon);
                 label.appendChild(text);
 
                 const description = document.createElement('span');
                 description.className = 'champ-change-desc';
-                description.textContent = item.description || '';
+                description.textContent = descriptionText;
 
                 row.appendChild(label);
                 row.appendChild(description);
@@ -646,7 +718,12 @@
             const hasItemChanges = Array.isArray(items.new) && items.new.length > 0;
             setVisible(nodeId('items-section'), hasItemChanges);
 
-            renderRows(nodeId('pokemon-changes'), pokemon, 'neutral');
+            const hasPokemonCards = Array.isArray(pokemon) && pokemon.some(entry => entry && Array.isArray(entry.changes));
+            if (hasPokemonCards) {
+                renderPokemonCards(nodeId('pokemon-changes'), pokemon);
+            } else {
+                renderRows(nodeId('pokemon-changes'), pokemon, 'neutral');
+            }
             setVisible(nodeId('pokemon-section'), Array.isArray(pokemon) && pokemon.length > 0);
         }
 
@@ -900,6 +977,9 @@ const POKEMON_CHANGES = [
         nameEl.className = 'champ-poke-name';
         nameEl.textContent = poke.name;
         nameEl.dataset.pokemon = poke.sprite;
+        if (poke.sprite) {
+            nameEl.href = `../pokemon.html?pokemon=${encodeURIComponent(poke.sprite)}`;
+        }
 
         header.appendChild(img);
         header.appendChild(nameEl);

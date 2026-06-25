@@ -322,7 +322,7 @@ async function loadMoveDataMap() {
 
 async function loadItemNameMap() {
     if (!itemNameMapPromise) {
-        itemNameMapPromise = fetch('../assets/item-name-map.json')
+        itemNameMapPromise = fetch('../assets/item-name-map.json', { cache: 'no-store' })
             .then(response => {
                 if (!response.ok) return null;
                 return response.json();
@@ -978,11 +978,15 @@ function renderItemNameCell(itemName) {
     const spriteFile = itemInfo && itemInfo.file ? String(itemInfo.file) : `${toKebabCase(itemName)}.png`;
     const displayName = formatItemNameFromFile(spriteFile) || String(itemName);
     const spriteSrc = `${itemSpriteBase}/${spriteFile}`;
+    const description = itemInfo && itemInfo.description ? String(itemInfo.description) : '';
 
     return `
         <div class="item-cell">
             <img class="item-sprite" src="${escapeHtml(spriteSrc)}" alt="${escapeHtml(displayName)}" loading="lazy" onerror="this.onerror=null;this.src='${escapeHtml(itemSpriteFallback)}';">
-            <span class="item-name">${escapeHtml(displayName)}</span>
+            <div class="item-info">
+                <span class="item-name">${escapeHtml(displayName)}</span>
+                ${description ? `<div class="item-description" title="${escapeHtml(description)}">${escapeHtml(description)}</div>` : ''}
+            </div>
         </div>
     `;
 }
