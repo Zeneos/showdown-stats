@@ -38,6 +38,7 @@ html[data-theme='dark'] .champ-disclaimer {
     border: 1px solid #e5e7eb;
     border-radius: 10px;
     width: fit-content;
+    margin: 0 auto;
     align-self: center;
 }
 
@@ -77,11 +78,74 @@ html[data-theme='dark'] .champ-toc-link:hover {
     border-color: rgba(99, 102, 241, 0.35);
 }
 
+/* ── Format buttons (tabs) ── */
+.champ-format-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.champ-format-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #fdfdfd;
+    color: var(--text-primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.champ-format-btn:hover {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+.champ-format-btn.is-active {
+    background: var(--link-color);
+    color: #ffffff;
+    border-color: var(--link-color);
+}
+
+html[data-theme='dark'] .champ-format-btn {
+    background: #1f2937;
+    border-color: #374151;
+    color: #e5e7eb;
+}
+
+html[data-theme='dark'] .champ-format-btn:hover {
+    background: #374151;
+    border-color: #4b5563;
+}
+
+html[data-theme='dark'] .champ-format-btn.is-active {
+    background: var(--link-color);
+    border-color: var(--link-color);
+    color: #ffffff;
+}
+
 .champ-page {
     padding: 24px 28px 32px;
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.champ-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.champ-panel[hidden] {
+    display: none !important;
+}
+
+.champ-page [hidden] {
+    display: none !important;
 }
 
 /* ── Section wrapper ── */

@@ -1,0 +1,38 @@
+{
+  "formats": {
+    "regulation-m-b": {
+      "updated": "Jun 24, 2026",
+      "moveChanges": {
+        "newMoves": [
+          {
+            "label": "New Move Additions",
+            "description": "See the full new move list at",
+            "source": {
+              "label": "Game8 Move Changes",
+              "url": "https://game8.co/games/Pokemon-Champions/archives/605655"
+            }
+          }
+        ],
+        "nerfs": [
+          {
+            "label": "Make It Rain",
+            "description": "Accuracy changed from 100% to 95%, and the user's Special Attack drop changed from 1 stage to 2 stages."
+          },
+          {
+            "label": "Rage Fist",
+            "description": "Does not reset on switch out -> now resets on switch out."
+          }
+        ],
+        "buffs": [],
+        "other": []
+      },
+      "abilityChanges": {
+        "new": [],
+        "buffs": [],
+        "nerfs": [],
+        "other": []
+      },
+      "pokemonChanges": []
+    }
+  }
+}

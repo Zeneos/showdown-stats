@@ -15,58 +15,57 @@
             <img src="../../assets/Icons/poketail.png" class="site-nav-home-icon" alt="Home">
             <span class="site-nav-home-label">Home</span>
         </a>
-        <a href="./" class="site-nav-link active"><span class="site-nav-full-text">Pokemon </span>Champions</a>
+        <a href="./champions.html#regulation-m-b" class="site-nav-link active"><span class="site-nav-full-text">Pokemon </span>Champions</a>
         <a href="../teams.html" class="site-nav-link"><span class="site-nav-full-text">Live </span>Teams</a>
     </nav>
 
     <div class="container">
         <div class="champ-page">
-            <!-- ── Disclaimer ── -->
-            <div class="champ-disclaimer">
-            The following changes are based on Gen 9 Scarlet Violet VGC to Gen 9 Champions. This information is community-sourced and may be incomplete or subject to change at any time. <strong>Last updated: May 8, 2026.</strong>
+            <div id="champ-disclaimer" class="champ-disclaimer">
+                The following changes are based on Gen 9 Scarlet Violet VGC to Gen 9 Champions. This information is community-sourced and may be incomplete or subject to change at any time. <strong>Last updated: Jun 24, 2026.</strong>
             </div>
 
-            <!-- ── Champions Logo ── -->
             <div class="champ-logo-wrap">
                 <img src="../../assets/Icons/champs_logo.png" alt="Pokemon Champions" class="champ-logo">
             </div>
 
-            <!-- ── Regulation M-A Overview ── -->
-            <section id="toc-regulation" class="champ-section">
-                <h2 class="champ-section-title">
-                    Regulation M-A
-                    <span class="champ-tag champ-tag--reg">Current</span>
-                </h2>
-                <div class="champ-reg-grid">
-                    <div class="champ-reg-card">
-                        <div class="champ-reg-card-label">Format</div>
-                        <div class="champ-reg-card-value">Double Battles<br>Pick 4 of 6</div>
-                    </div>
-                    <div class="champ-reg-card">
-                        <div class="champ-reg-card-label">Active Period</div>
-                        <div class="champ-reg-card-value">Apr 8 – Jun 17, 2026</div>
-                    </div>
-                    <div class="champ-reg-card">
-                        <div class="champ-reg-card-label">Level Cap</div>
-                        <div class="champ-reg-card-value">Auto-levelled to lvl 50</div>
-                    </div>
-                    <div class="champ-reg-card">
-                        <div class="champ-reg-card-label">Clauses</div>
-                        <div class="champ-reg-card-value">Species Clause<br>Item Clause</div>
-                    </div>
-                    <div class="champ-reg-card">
-                        <div class="champ-reg-card-label">Gimmick</div>
-                        <div class="champ-reg-card-value">Mega Evolution <span class="champ-new">✓</span><br>Terastallization <span class="champ-old">X</span><br>Dynamax <span class="champ-old">X</span></div>
-                    </div>
-                    <div class="champ-reg-card">
-                        <div class="champ-reg-card-label">Timer</div>
-                        <div class="champ-reg-card-value">90s preview · 45s/move<br>7 min total · 20 min game</div>
-                    </div>
+            <div class="champ-format-buttons" role="tablist" aria-label="Champion formats">
+                <a href="#regulation-m-b" id="champ-tab-mb" class="champ-format-btn is-active" role="tab" aria-selected="true">Regulation M-B</a>
+                <a href="#regulation-m-a" id="champ-tab-ma" class="champ-format-btn" role="tab" aria-selected="false">Regulation M-A</a>
+            </div>
 
-                </div>
-            </section>
+            <div id="champ-panel-ma" class="champ-panel" hidden>
+                <section class="champ-section">
+                    <h2 class="champ-section-title">Regulation M-A</h2>
+                    <div class="champ-reg-grid">
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Format</div>
+                            <div class="champ-reg-card-value">Double Battles<br>Pick 4 of 6</div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Active Period</div>
+                            <div class="champ-reg-card-value">Apr 8 – Jun 17, 2026</div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Level Cap</div>
+                            <div class="champ-reg-card-value">Auto-levelled to lvl 50</div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Clauses</div>
+                            <div class="champ-reg-card-value">Species Clause<br>Item Clause</div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Gimmick</div>
+                            <div class="champ-reg-card-value">Mega Evolution <span class="champ-new">✓</span><br>Terastallization <span class="champ-old">X</span><br>Dynamax <span class="champ-old">X</span></div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Timer</div>
+                            <div class="champ-reg-card-value">90s preview · 45s/move<br>7 min total · 20 min game</div>
+                        </div>
+                    </div>
+                </section>
 
-            <!-- ── Table of Contents ── -->
+                <!-- ── Table of Contents ── -->
             <nav class="champ-toc" aria-label="Page sections">
                 <span class="champ-toc-header">Change Overview</span>
                 <a href="#toc-mechanics" class="champ-toc-link">Game Mechanics</a>
@@ -233,21 +232,249 @@
                     </div>
                 </div>
             </section>
+            </div>
 
+            <div id="champ-panel-mb" class="champ-panel">
+                <section class="champ-section">
+                    <h2 class="champ-section-title">Regulation M-B <span class="champ-tag champ-tag--reg">Current</span></h2>
+                    <div class="champ-reg-grid">
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Format</div>
+                            <div class="champ-reg-card-value">Double Battles<br>Pick 4 of 6</div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Active Period</div>
+                            <div class="champ-reg-card-value">June 17 - September 2, 2026</div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Level Cap</div>
+                            <div class="champ-reg-card-value">Auto-levelled to lvl 50</div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Clauses</div>
+                            <div class="champ-reg-card-value">Species Clause<br>Item Clause</div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Gimmick</div>
+                            <div class="champ-reg-card-value">Mega Evolution <span class="champ-new">✓</span><br>Terastallization <span class="champ-old">X</span><br>Dynamax <span class="champ-old">X</span></div>
+                        </div>
+                        <div class="champ-reg-card">
+                            <div class="champ-reg-card-label">Timer</div>
+                            <div class="champ-reg-card-value">90s preview · 45s/move<br>7 min total · 20 min game</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="champ-section">
+                    <h2 class="champ-section-title">Move Changes</h2>
+
+                    <div class="champ-subsection-title">New Moves</div>
+                    <div id="mb-moves-new" class="champ-change-list"></div>
+
+                    <div class="champ-subsection-title" style="margin-top:8px">Nerfs</div>
+                    <div id="mb-moves-nerfs" class="champ-change-list"></div>
+
+                    <section id="mb-moves-buffs-section" hidden>
+                        <div class="champ-subsection-title" style="margin-top:8px">Buffs</div>
+                        <div id="mb-moves-buffs" class="champ-change-list"></div>
+                    </section>
+
+                    <section id="mb-moves-other-section" hidden>
+                        <div class="champ-subsection-title" style="margin-top:8px">Other Changes</div>
+                        <div id="mb-moves-other" class="champ-change-list"></div>
+                    </section>
+                </section>
+
+                <section id="mb-abilities-section" class="champ-section" hidden>
+                    <h2 class="champ-section-title">Ability Changes</h2>
+
+                    <section id="mb-abilities-new-section" hidden>
+                        <div class="champ-subsection-title">New Abilities</div>
+                        <div id="mb-abilities-new" class="champ-change-list"></div>
+                    </section>
+
+                    <section id="mb-abilities-buffs-section" hidden>
+                        <div class="champ-subsection-title" style="margin-top:8px">Buffs</div>
+                        <div id="mb-abilities-buffs" class="champ-change-list"></div>
+                    </section>
+
+                    <section id="mb-abilities-nerfs-section" hidden>
+                        <div class="champ-subsection-title" style="margin-top:8px">Nerfs</div>
+                        <div id="mb-abilities-nerfs" class="champ-change-list"></div>
+                    </section>
+
+                    <section id="mb-abilities-other-section" hidden>
+                        <div class="champ-subsection-title" style="margin-top:8px">Other Changes</div>
+                        <div id="mb-abilities-other" class="champ-change-list"></div>
+                    </section>
+                </section>
+
+                <section id="mb-pokemon-section" class="champ-section" hidden>
+                    <h2 class="champ-section-title">Pokemon Changes</h2>
+                    <div id="mb-pokemon-changes" class="champ-change-list"></div>
+                </section>
+            </div>
         </div>
 
         <footer>
             Data from <a href="https://docs.google.com/spreadsheets/d/1DeXjzohTUdKNERu6dsHsnznneva8MDJjglI3lqDLgm4/htmlview#gid=945860250" target="_blank">Community Spreadsheet</a>,
             <a href="https://www.serebii.net/pokemonchampions/" target="_blank">Serebii</a>,
-            Pokémon Showdown team builder,
+            Pokemon Showdown team builder,
             and <a href="https://www.smogon.com/forums/threads/champions-battle-mechanics-research.3780372/" target="_blank">Smogon Research</a>,
-
             <div>Pokemon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026</div>
         </footer>
     </div>
 
     <script src="../../theme.js"></script>
+    <script>
+    (function() {
+        const tabMb = document.getElementById('champ-tab-mb');
+        const tabMa = document.getElementById('champ-tab-ma');
+        const panelMb = document.getElementById('champ-panel-mb');
+        const panelMa = document.getElementById('champ-panel-ma');
+        const disclaimer = document.getElementById('champ-disclaimer');
+
+        const MB_DISCLAIMER = 'The following changes are based on Gen 9 Scarlet Violet VGC to Gen 9 Champions. This information is community-sourced and may be incomplete or subject to change at any time. <strong>Last updated: Jun 24, 2026.</strong>';
+        const MA_DISCLAIMER = 'The following changes are based on Gen 9 Scarlet Violet VGC to Gen 9 Champions. This information is community-sourced and may be incomplete or subject to change at any time. <strong>Last updated: May 8, 2026.</strong>';
+
+        function setView(view) {
+            const showMa = view === 'ma';
+            panelMb.hidden = showMa;
+            panelMa.hidden = !showMa;
+            disclaimer.innerHTML = showMa ? MA_DISCLAIMER : MB_DISCLAIMER;
+
+            tabMb.classList.toggle('is-active', !showMa);
+            tabMa.classList.toggle('is-active', showMa);
+            tabMb.setAttribute('aria-selected', String(!showMa));
+            tabMa.setAttribute('aria-selected', String(showMa));
+        }
+
+        function viewFromHash() {
+            return window.location.hash === '#regulation-m-a' ? 'ma' : 'mb';
+        }
+
+        tabMb.addEventListener('click', () => setView('mb'));
+        tabMa.addEventListener('click', () => setView('ma'));
+        window.addEventListener('hashchange', () => setView(viewFromHash()));
+
+        setView(viewFromHash());
+    })();
+    </script>
     <script src="../shared.js"></script>
+    <script>
+    (async function initRegulationChanges() {
+        const DATA_URL = './regulation-changes.json';
+
+        function escapeText(value) {
+            if (typeof escapeHtml === 'function') {
+                return escapeHtml(String(value || ''));
+            }
+            return String(value || '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function setVisible(sectionId, visible) {
+            const section = document.getElementById(sectionId);
+            if (!section) return;
+            section.hidden = !visible;
+        }
+
+        function buildDescription(change) {
+            const description = escapeText(change.description || '');
+            const source = change.source || null;
+            if (!source || !source.url || !source.label) {
+                return description;
+            }
+            return `${description} <a href="${escapeText(source.url)}" target="_blank" rel="noopener noreferrer">${escapeText(source.label)}</a>.`;
+        }
+
+        function renderRows(containerId, changes, rowKind) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = '';
+
+            (changes || []).forEach(change => {
+                const row = document.createElement('div');
+                row.className = `champ-change-row champ-change-row--${rowKind}`;
+
+                const label = document.createElement('span');
+                label.className = 'champ-change-label';
+                label.textContent = change.label || change.name || 'Change';
+
+                const description = document.createElement('span');
+                description.className = 'champ-change-desc';
+                description.innerHTML = buildDescription(change);
+
+                row.appendChild(label);
+                row.appendChild(description);
+                container.appendChild(row);
+            });
+        }
+
+        async function renderRegulation(formatId, prefix) {
+            const response = await fetch(DATA_URL);
+            if (!response.ok) {
+                throw new Error(`Failed to load ${DATA_URL}`);
+            }
+            const allData = await response.json();
+            const formatData = allData && allData.formats ? allData.formats[formatId] : null;
+            if (!formatData) {
+                throw new Error(`Missing format data for ${formatId}`);
+            }
+
+            const moves = formatData.moveChanges || {};
+            const abilities = formatData.abilityChanges || {};
+            const pokemon = formatData.pokemonChanges || [];
+
+            const nodeId = suffix => `${prefix}-${suffix}`;
+
+            renderRows(nodeId('moves-new'), moves.newMoves || [], 'buff');
+            renderRows(nodeId('moves-nerfs'), moves.nerfs || [], 'nerf');
+            renderRows(nodeId('moves-buffs'), moves.buffs || [], 'buff');
+            renderRows(nodeId('moves-other'), moves.other || [], 'neutral');
+
+            setVisible(nodeId('moves-buffs-section'), Array.isArray(moves.buffs) && moves.buffs.length > 0);
+            setVisible(nodeId('moves-other-section'), Array.isArray(moves.other) && moves.other.length > 0);
+
+            renderRows(nodeId('abilities-new'), abilities.new || [], 'buff');
+            renderRows(nodeId('abilities-buffs'), abilities.buffs || [], 'buff');
+            renderRows(nodeId('abilities-nerfs'), abilities.nerfs || [], 'nerf');
+            renderRows(nodeId('abilities-other'), abilities.other || [], 'neutral');
+
+            setVisible(nodeId('abilities-new-section'), Array.isArray(abilities.new) && abilities.new.length > 0);
+            setVisible(nodeId('abilities-buffs-section'), Array.isArray(abilities.buffs) && abilities.buffs.length > 0);
+            setVisible(nodeId('abilities-nerfs-section'), Array.isArray(abilities.nerfs) && abilities.nerfs.length > 0);
+            setVisible(nodeId('abilities-other-section'), Array.isArray(abilities.other) && abilities.other.length > 0);
+
+            const hasAbilityChanges =
+                (Array.isArray(abilities.new) && abilities.new.length > 0) ||
+                (Array.isArray(abilities.buffs) && abilities.buffs.length > 0) ||
+                (Array.isArray(abilities.nerfs) && abilities.nerfs.length > 0) ||
+                (Array.isArray(abilities.other) && abilities.other.length > 0);
+            setVisible(nodeId('abilities-section'), hasAbilityChanges);
+
+            renderRows(nodeId('pokemon-changes'), pokemon, 'neutral');
+            setVisible(nodeId('pokemon-section'), Array.isArray(pokemon) && pokemon.length > 0);
+        }
+
+        try {
+            await renderRegulation('regulation-m-b', 'mb');
+        } catch (error) {
+            console.error('Unable to load M-B regulation changes:', error);
+            renderRows('mb-moves-new', [
+                {
+                    label: 'Data Unavailable',
+                    description: 'Regulation data failed to load. Please verify regulation-changes.json.'
+                }
+            ], 'neutral');
+        }
+    })();
+
+    </script>
     <script>
     // Pokemon change data
     const ICON_BASE = '../../assets/sprites/icons/';
