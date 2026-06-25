@@ -3,34 +3,77 @@
     "regulation-m-b": {
       "updated": "Jun 24, 2026",
       "moveChanges": {
-        "newMoves": [
-          {
-            "label": "New Move Additions",
-            "description": "See the full new move list at",
-            "source": {
-              "label": "Game8 Move Changes",
-              "url": "https://game8.co/games/Pokemon-Champions/archives/605655"
-            }
-          }
-        ],
+        "newMoves": [],
         "nerfs": [
           {
+            "id": "makeitrain",
             "label": "Make It Rain",
-            "description": "Accuracy changed from 100% to 95%, and the user's Special Attack drop changed from 1 stage to 2 stages."
+            "stat": "Accuracy / Self Sp. Atk drop",
+            "old": "100% / -1 stage",
+            "nw": "95% / -2 stages"
           },
           {
+            "id": "ragefist",
             "label": "Rage Fist",
-            "description": "Does not reset on switch out -> now resets on switch out."
+            "stat": "Reset on switch",
+            "old": "Does not reset on switch out",
+            "nw": "Now resets on switch out"
           }
         ],
         "buffs": [],
         "other": []
       },
       "abilityChanges": {
-        "new": [],
+        "new": [
+          {
+            "label": "Eelevate",
+            "description": "The Pokemon floats off the ground, making it immune to Ground-type moves and Spikes, Toxic Spikes, and Sticky Web. When it knocks out a target with an attack, its highest stat is boosted by 1 stage.",
+            "owner": "Eelektross-Mega"
+          },
+          {
+            "label": "Fire Mane",
+            "description": "Boosts the power of the Pokemon's Fire-type moves by 50%.",
+            "owner": "Pyroar-Mega"
+          }
+        ],
         "buffs": [],
         "nerfs": [],
         "other": []
+      },
+      "itemChanges": {
+        "new": [
+          { "label": "Wide Lens", "description": "Newly added item." },
+          { "label": "Muscle Band", "description": "Newly added item." },
+          { "label": "Wise Glasses", "description": "Newly added item." },
+          { "label": "Expert Belt", "description": "Newly added item." },
+          { "label": "Light Clay", "description": "Newly added item." },
+          { "label": "Life Orb", "description": "Newly added item." },
+          { "label": "Zoom Lens", "description": "Newly added item." },
+          { "label": "Metronome", "description": "Newly added item." },
+          { "label": "Iron Ball", "description": "Newly added item." },
+          { "label": "Icy Rock", "description": "Newly added item." },
+          { "label": "Smooth Rock", "description": "Newly added item." },
+          { "label": "Heat Rock", "description": "Newly added item." },
+          { "label": "Damp Rock", "description": "Newly added item." },
+          { "label": "Shed Shell", "description": "Newly added item." },
+          { "label": "Big Root", "description": "Newly added item." },
+          { "label": "Raichunite X", "description": "Newly added item." },
+          { "label": "Raichunite Y", "description": "Newly added item." },
+          { "label": "Sceptilite", "description": "Newly added item." },
+          { "label": "Blazikenite", "description": "Newly added item." },
+          { "label": "Swampertite", "description": "Newly added item." },
+          { "label": "Mawilite", "description": "Newly added item." },
+          { "label": "Metagrossite", "description": "Newly added item." },
+          { "label": "Staraptite", "description": "Newly added item." },
+          { "label": "Scolipite", "description": "Newly added item." },
+          { "label": "Scraftinite", "description": "Newly added item." },
+          { "label": "Eelektrossite", "description": "Newly added item." },
+          { "label": "Pyroarite", "description": "Newly added item." },
+          { "label": "Malamarite", "description": "Newly added item." },
+          { "label": "Barbaracite", "description": "Newly added item." },
+          { "label": "Dragalgite", "description": "Newly added item." },
+          { "label": "Falinksite", "description": "Newly added item." }
+        ]
       },
       "pokemonChanges": []
     }

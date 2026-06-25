@@ -277,6 +277,20 @@ html[data-theme='dark'] .champ-change-label {
     line-height: 1.5;
 }
 
+.champ-item-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.champ-item-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+}
+
 .champ-old { color: #ef4444; font-weight: 600; }
 .champ-new { color: #22c55e; font-weight: 600; }
 .champ-arrow { color: var(--text-muted); margin: 0 3px; }
@@ -582,6 +596,10 @@ html[data-theme='dark'] .champ-patch-header {
 
 html[data-theme='dark'] .champ-subsection-title {
     color: #9ca3af;
+}
+
+#mb-abilities-new-section .champ-subsection-title {
+    margin-bottom: 6px;
 }
 
 @media (max-width: 600px) {

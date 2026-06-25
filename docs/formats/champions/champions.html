@@ -265,11 +265,15 @@
                     </div>
                 </section>
 
-                <section class="champ-section">
-                    <h2 class="champ-section-title">Move Changes</h2>
+                <nav class="champ-toc" aria-label="M-B page sections">
+                    <span class="champ-toc-header">Change Overview</span>
+                    <a href="#mb-moves" class="champ-toc-link">Move Changes</a>
+                    <a href="#mb-abilities" class="champ-toc-link">Ability Changes</a>
+                    <a href="#mb-items" class="champ-toc-link">Item Changes</a>
+                </nav>
 
-                    <div class="champ-subsection-title">New Moves</div>
-                    <div id="mb-moves-new" class="champ-change-list"></div>
+                <section id="mb-moves" class="champ-section">
+                    <h2 class="champ-section-title">Move Changes</h2>
 
                     <div class="champ-subsection-title" style="margin-top:8px">Nerfs</div>
                     <div id="mb-moves-nerfs" class="champ-change-list"></div>
@@ -286,6 +290,7 @@
                 </section>
 
                 <section id="mb-abilities-section" class="champ-section" hidden>
+                    <div id="mb-abilities"></div>
                     <h2 class="champ-section-title">Ability Changes</h2>
 
                     <section id="mb-abilities-new-section" hidden>
@@ -306,6 +311,16 @@
                     <section id="mb-abilities-other-section" hidden>
                         <div class="champ-subsection-title" style="margin-top:8px">Other Changes</div>
                         <div id="mb-abilities-other" class="champ-change-list"></div>
+                    </section>
+                </section>
+
+                <section id="mb-items-section" class="champ-section" hidden>
+                    <div id="mb-items"></div>
+                    <h2 class="champ-section-title">Item Changes</h2>
+
+                    <section id="mb-items-new-section" hidden>
+                        <div class="champ-subsection-title">New Items</div>
+                        <div id="mb-items-new" class="champ-change-list"></div>
                     </section>
                 </section>
 
@@ -341,6 +356,10 @@
             const showMa = view === 'ma';
             panelMb.hidden = showMa;
             panelMa.hidden = !showMa;
+            panelMb.style.display = showMa ? 'none' : '';
+            panelMa.style.display = showMa ? '' : 'none';
+            panelMb.setAttribute('aria-hidden', String(showMa));
+            panelMa.setAttribute('aria-hidden', String(!showMa));
             disclaimer.innerHTML = showMa ? MA_DISCLAIMER : MB_DISCLAIMER;
 
             tabMb.classList.toggle('is-active', !showMa);
@@ -364,6 +383,16 @@
     <script>
     (async function initRegulationChanges() {
         const DATA_URL = './regulation-changes.json';
+        const TYPE_SPRITE_INDEX = {
+            normal:1, fighting:2, flying:3, poison:4, ground:5, rock:6,
+            bug:7, ghost:8, steel:9, fire:10, water:11, grass:12,
+            electric:13, psychic:14, ice:15, dragon:16, dark:17, fairy:18
+        };
+        const TYPE_SPRITE_BASE = '../../assets/sprites/types';
+        const ITEM_ICON_BASE = '../../assets/sprites/items';
+        const ITEM_ICON_FALLBACK = `${ITEM_ICON_BASE}/unknown.png`;
+        let moveDataCache = null;
+        let itemMapCache = null;
 
         function escapeText(value) {
             if (typeof escapeHtml === 'function') {
@@ -381,6 +410,8 @@
             const section = document.getElementById(sectionId);
             if (!section) return;
             section.hidden = !visible;
+            section.style.display = visible ? '' : 'none';
+            section.setAttribute('aria-hidden', String(!visible));
         }
 
         function buildDescription(change) {
@@ -390,6 +421,119 @@
                 return description;
             }
             return `${description} <a href="${escapeText(source.url)}" target="_blank" rel="noopener noreferrer">${escapeText(source.label)}</a>.`;
+        }
+
+        function toMoveId(value) {
+            return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        }
+
+        async function loadMoveData() {
+            if (moveDataCache) {
+                return moveDataCache;
+            }
+            try {
+                const response = await fetch('../../assets/move-data.json');
+                const json = await response.json();
+                moveDataCache = json && json.moves ? json.moves : {};
+            } catch (error) {
+                moveDataCache = {};
+            }
+            return moveDataCache;
+        }
+
+        async function loadItemNameMap() {
+            if (itemMapCache) {
+                return itemMapCache;
+            }
+            try {
+                const response = await fetch('../../assets/item-name-map.json');
+                const json = await response.json();
+                itemMapCache = json && json.items ? json.items : {};
+            } catch (error) {
+                itemMapCache = {};
+            }
+            return itemMapCache;
+        }
+
+        function toItemId(value) {
+            if (typeof toId === 'function') {
+                return toId(value);
+            }
+            return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        }
+
+        function getItemIconPath(itemName, itemMap) {
+            const itemId = toItemId(itemName);
+            const entry = itemMap[itemId];
+            if (!entry || !entry.file) {
+                return ITEM_ICON_FALLBACK;
+            }
+            return `${ITEM_ICON_BASE}/${entry.file}`;
+        }
+
+        function typeBadge(typeName) {
+            if (!typeName) return '';
+            const id = String(typeName).toLowerCase();
+            const idx = TYPE_SPRITE_INDEX[id];
+            if (idx) {
+                return `<img class="move-type-sprite" src="${TYPE_SPRITE_BASE}/${idx}.png" alt="${escapeText(typeName)}" loading="lazy" style="height:17px;width:auto;">`;
+            }
+            return `<span class="move-type-icon move-type-${id}">${escapeText(typeName)}</span>`;
+        }
+
+        function buildMoveRow(change, moveData, kind) {
+            const moveId = change.id || toMoveId(change.label || change.name);
+            const info = moveData[moveId] || null;
+            const moveName = change.label || (info ? info.name : 'Move');
+            const typeName = info ? info.type : '';
+            const fallbackDesc = info ? info.description : '';
+
+            const row = document.createElement('div');
+            row.className = `champ-move-row champ-move-row--${kind}`;
+
+            const identity = document.createElement('div');
+            identity.className = 'champ-move-identity';
+            identity.innerHTML = typeBadge(typeName);
+
+            const title = document.createElement('span');
+            title.className = 'champ-move-title';
+            title.textContent = moveName;
+            identity.appendChild(title);
+
+            const infoWrap = document.createElement('div');
+            infoWrap.className = 'champ-move-info';
+
+            const changeLine = document.createElement('div');
+            changeLine.className = 'champ-move-change';
+            if (change.stat && change.old !== undefined && change.nw !== undefined) {
+                const fromClass = kind === 'nerf' ? 'champ-new' : 'champ-old';
+                const toClass = kind === 'nerf' ? 'champ-old' : 'champ-new';
+                changeLine.innerHTML = `${escapeText(change.stat)}: <span class="${fromClass}">${escapeText(change.old)}</span><span class="champ-arrow"> → </span><span class="${toClass}">${escapeText(change.nw)}</span>`;
+            } else {
+                changeLine.textContent = change.description || '';
+            }
+            infoWrap.appendChild(changeLine);
+
+            const desc = change.description || fallbackDesc;
+            if (desc) {
+                const descEl = document.createElement('div');
+                descEl.className = 'champ-move-desc';
+                descEl.textContent = desc;
+                infoWrap.appendChild(descEl);
+            }
+
+            row.appendChild(identity);
+            row.appendChild(infoWrap);
+            return row;
+        }
+
+        function renderMoveRows(containerId, changes, kind, moveData) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = '';
+            (changes || []).forEach(change => {
+                container.appendChild(buildMoveRow(change, moveData, kind));
+            });
         }
 
         function renderRows(containerId, changes, rowKind) {
@@ -415,6 +559,44 @@
             });
         }
 
+        function renderItemRows(containerId, items, rowKind, itemMap) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = '';
+
+            (items || []).forEach(item => {
+                const row = document.createElement('div');
+                row.className = `champ-change-row champ-change-row--${rowKind} champ-item-row`;
+
+                const label = document.createElement('span');
+                label.className = 'champ-change-label champ-item-label';
+
+                const icon = document.createElement('img');
+                icon.className = 'champ-item-icon';
+                icon.alt = `${item.label || item.name || 'Item'} icon`;
+                icon.loading = 'lazy';
+                icon.src = getItemIconPath(item.label || item.name, itemMap);
+                icon.onerror = function() {
+                    this.onerror = null;
+                    this.src = ITEM_ICON_FALLBACK;
+                };
+
+                const text = document.createElement('span');
+                text.textContent = item.label || item.name || 'Item';
+
+                label.appendChild(icon);
+                label.appendChild(text);
+
+                const description = document.createElement('span');
+                description.className = 'champ-change-desc';
+                description.textContent = item.description || '';
+
+                row.appendChild(label);
+                row.appendChild(description);
+                container.appendChild(row);
+            });
+        }
+
         async function renderRegulation(formatId, prefix) {
             const response = await fetch(DATA_URL);
             if (!response.ok) {
@@ -428,14 +610,16 @@
 
             const moves = formatData.moveChanges || {};
             const abilities = formatData.abilityChanges || {};
+            const items = formatData.itemChanges || {};
             const pokemon = formatData.pokemonChanges || [];
+            const moveData = await loadMoveData();
+            const itemMap = await loadItemNameMap();
 
             const nodeId = suffix => `${prefix}-${suffix}`;
 
-            renderRows(nodeId('moves-new'), moves.newMoves || [], 'buff');
-            renderRows(nodeId('moves-nerfs'), moves.nerfs || [], 'nerf');
-            renderRows(nodeId('moves-buffs'), moves.buffs || [], 'buff');
-            renderRows(nodeId('moves-other'), moves.other || [], 'neutral');
+            renderMoveRows(nodeId('moves-nerfs'), moves.nerfs || [], 'nerf', moveData);
+            renderMoveRows(nodeId('moves-buffs'), moves.buffs || [], 'buff', moveData);
+            renderMoveRows(nodeId('moves-other'), moves.other || [], 'neutral', moveData);
 
             setVisible(nodeId('moves-buffs-section'), Array.isArray(moves.buffs) && moves.buffs.length > 0);
             setVisible(nodeId('moves-other-section'), Array.isArray(moves.other) && moves.other.length > 0);
@@ -457,6 +641,11 @@
                 (Array.isArray(abilities.other) && abilities.other.length > 0);
             setVisible(nodeId('abilities-section'), hasAbilityChanges);
 
+            renderItemRows(nodeId('items-new'), items.new || [], 'buff', itemMap);
+            setVisible(nodeId('items-new-section'), Array.isArray(items.new) && items.new.length > 0);
+            const hasItemChanges = Array.isArray(items.new) && items.new.length > 0;
+            setVisible(nodeId('items-section'), hasItemChanges);
+
             renderRows(nodeId('pokemon-changes'), pokemon, 'neutral');
             setVisible(nodeId('pokemon-section'), Array.isArray(pokemon) && pokemon.length > 0);
         }
@@ -465,7 +654,7 @@
             await renderRegulation('regulation-m-b', 'mb');
         } catch (error) {
             console.error('Unable to load M-B regulation changes:', error);
-            renderRows('mb-moves-new', [
+            renderRows('mb-moves-nerfs', [
                 {
                     label: 'Data Unavailable',
                     description: 'Regulation data failed to load. Please verify regulation-changes.json.'
