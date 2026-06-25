@@ -602,6 +602,10 @@ html[data-theme='dark'] .champ-subsection-title {
     margin-bottom: 6px;
 }
 
+#mb-items-new-section .champ-subsection-title {
+    margin-bottom: 6px;
+}
+
 @media (max-width: 600px) {
     .champ-page { padding: 16px 14px 24px; gap: 24px; }
     .champ-reg-grid { grid-template-columns: repeat(2, 1fr); }
