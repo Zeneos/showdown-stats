@@ -389,6 +389,33 @@
     </script>
     <script src="../shared.js"></script>
     <script>
+    let currentChampionFormatKey = '';
+
+    function buildChampionPokemonHref(pokemonId) {
+        const safePokemonId = String(pokemonId || '').trim();
+        if (!safePokemonId) {
+            return '../pokemon.html';
+        }
+
+        if (currentChampionFormatKey) {
+            return `../pokemon.html?format=${encodeURIComponent(currentChampionFormatKey)}&pokemon=${encodeURIComponent(safePokemonId)}`;
+        }
+
+        return `../pokemon.html?pokemon=${encodeURIComponent(safePokemonId)}`;
+    }
+
+    function applyChampionFormatKey(formatKey) {
+        const safeFormatKey = String(formatKey || '').trim();
+        if (!safeFormatKey) {
+            return;
+        }
+
+        currentChampionFormatKey = safeFormatKey;
+        document.querySelectorAll('.champ-poke-name[data-pokemon]').forEach(el => {
+            el.href = buildChampionPokemonHref(el.dataset.pokemon);
+        });
+    }
+
     (async function initRegulationChanges() {
         const DATA_URL = './regulation-changes.json';
         const TYPE_SPRITE_INDEX = {
@@ -589,7 +616,7 @@
             nameEl.textContent = pokemon.name || 'Pokemon';
             nameEl.dataset.pokemon = pokemon.sprite || '';
             if (pokemon.sprite) {
-                nameEl.href = `../pokemon.html?pokemon=${encodeURIComponent(pokemon.sprite)}`;
+                nameEl.href = buildChampionPokemonHref(pokemon.sprite);
             }
 
             header.appendChild(img);
@@ -978,7 +1005,7 @@ const POKEMON_CHANGES = [
         nameEl.textContent = poke.name;
         nameEl.dataset.pokemon = poke.sprite;
         if (poke.sprite) {
-            nameEl.href = `../pokemon.html?pokemon=${encodeURIComponent(poke.sprite)}`;
+            nameEl.href = buildChampionPokemonHref(poke.sprite);
         }
 
         header.appendChild(img);
@@ -1015,9 +1042,7 @@ const POKEMON_CHANGES = [
                 .sort((a, b) => b.total_battles - a.total_battles)[0];
             if (!champFormat) return;
             const formatKey = getFormatKey(champFormat);
-            document.querySelectorAll('.champ-poke-name[data-pokemon]').forEach(el => {
-                el.href = `../pokemon.html?format=${encodeURIComponent(formatKey)}&pokemon=${encodeURIComponent(el.dataset.pokemon)}`;
-            });
+            applyChampionFormatKey(formatKey);
         } catch(e) {}
     })();
 
