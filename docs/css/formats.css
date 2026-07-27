@@ -2458,6 +2458,14 @@ html[data-theme='dark'] .data-guide-close:focus-visible {
     margin: -50px auto 48px;
 }
 
+.formats-banner-image.banner-square-4 {
+    width: min(400px, 100%);
+}
+
+.banner-header.banner-square-4 {
+    margin: -50px auto 16px;
+}
+
 .banner-header {
     /* Display & Box Model */
     position: relative;
